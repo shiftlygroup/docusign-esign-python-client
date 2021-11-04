@@ -1,0 +1,3506 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.tabs API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.tabs</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class Tabs(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;approve_tabs&#39;: &#39;list[Approve]&#39;,
+        &#39;checkbox_tabs&#39;: &#39;list[Checkbox]&#39;,
+        &#39;comment_thread_tabs&#39;: &#39;list[CommentThread]&#39;,
+        &#39;commission_county_tabs&#39;: &#39;list[CommissionCounty]&#39;,
+        &#39;commission_expiration_tabs&#39;: &#39;list[CommissionExpiration]&#39;,
+        &#39;commission_number_tabs&#39;: &#39;list[CommissionNumber]&#39;,
+        &#39;commission_state_tabs&#39;: &#39;list[CommissionState]&#39;,
+        &#39;company_tabs&#39;: &#39;list[Company]&#39;,
+        &#39;currency_tabs&#39;: &#39;list[Currency]&#39;,
+        &#39;date_signed_tabs&#39;: &#39;list[DateSigned]&#39;,
+        &#39;date_tabs&#39;: &#39;list[Date]&#39;,
+        &#39;decline_tabs&#39;: &#39;list[Decline]&#39;,
+        &#39;draw_tabs&#39;: &#39;list[Draw]&#39;,
+        &#39;email_address_tabs&#39;: &#39;list[EmailAddress]&#39;,
+        &#39;email_tabs&#39;: &#39;list[Email]&#39;,
+        &#39;envelope_id_tabs&#39;: &#39;list[EnvelopeId]&#39;,
+        &#39;first_name_tabs&#39;: &#39;list[FirstName]&#39;,
+        &#39;formula_tabs&#39;: &#39;list[FormulaTab]&#39;,
+        &#39;full_name_tabs&#39;: &#39;list[FullName]&#39;,
+        &#39;initial_here_tabs&#39;: &#39;list[InitialHere]&#39;,
+        &#39;last_name_tabs&#39;: &#39;list[LastName]&#39;,
+        &#39;list_tabs&#39;: &#39;list[List]&#39;,
+        &#39;notarize_tabs&#39;: &#39;list[Notarize]&#39;,
+        &#39;notary_seal_tabs&#39;: &#39;list[NotarySeal]&#39;,
+        &#39;note_tabs&#39;: &#39;list[Note]&#39;,
+        &#39;number_tabs&#39;: &#39;list[Number]&#39;,
+        &#39;phone_number_tabs&#39;: &#39;list[PhoneNumber]&#39;,
+        &#39;poly_line_overlay_tabs&#39;: &#39;list[PolyLineOverlay]&#39;,
+        &#39;prefill_tabs&#39;: &#39;PrefillTabs&#39;,
+        &#39;radio_group_tabs&#39;: &#39;list[RadioGroup]&#39;,
+        &#39;signer_attachment_tabs&#39;: &#39;list[SignerAttachment]&#39;,
+        &#39;sign_here_tabs&#39;: &#39;list[SignHere]&#39;,
+        &#39;smart_section_tabs&#39;: &#39;list[SmartSection]&#39;,
+        &#39;ssn_tabs&#39;: &#39;list[Ssn]&#39;,
+        &#39;tab_groups&#39;: &#39;list[TabGroup]&#39;,
+        &#39;text_tabs&#39;: &#39;list[Text]&#39;,
+        &#39;title_tabs&#39;: &#39;list[Title]&#39;,
+        &#39;view_tabs&#39;: &#39;list[View]&#39;,
+        &#39;zip_tabs&#39;: &#39;list[Zip]&#39;
+    }
+
+    attribute_map = {
+        &#39;approve_tabs&#39;: &#39;approveTabs&#39;,
+        &#39;checkbox_tabs&#39;: &#39;checkboxTabs&#39;,
+        &#39;comment_thread_tabs&#39;: &#39;commentThreadTabs&#39;,
+        &#39;commission_county_tabs&#39;: &#39;commissionCountyTabs&#39;,
+        &#39;commission_expiration_tabs&#39;: &#39;commissionExpirationTabs&#39;,
+        &#39;commission_number_tabs&#39;: &#39;commissionNumberTabs&#39;,
+        &#39;commission_state_tabs&#39;: &#39;commissionStateTabs&#39;,
+        &#39;company_tabs&#39;: &#39;companyTabs&#39;,
+        &#39;currency_tabs&#39;: &#39;currencyTabs&#39;,
+        &#39;date_signed_tabs&#39;: &#39;dateSignedTabs&#39;,
+        &#39;date_tabs&#39;: &#39;dateTabs&#39;,
+        &#39;decline_tabs&#39;: &#39;declineTabs&#39;,
+        &#39;draw_tabs&#39;: &#39;drawTabs&#39;,
+        &#39;email_address_tabs&#39;: &#39;emailAddressTabs&#39;,
+        &#39;email_tabs&#39;: &#39;emailTabs&#39;,
+        &#39;envelope_id_tabs&#39;: &#39;envelopeIdTabs&#39;,
+        &#39;first_name_tabs&#39;: &#39;firstNameTabs&#39;,
+        &#39;formula_tabs&#39;: &#39;formulaTabs&#39;,
+        &#39;full_name_tabs&#39;: &#39;fullNameTabs&#39;,
+        &#39;initial_here_tabs&#39;: &#39;initialHereTabs&#39;,
+        &#39;last_name_tabs&#39;: &#39;lastNameTabs&#39;,
+        &#39;list_tabs&#39;: &#39;listTabs&#39;,
+        &#39;notarize_tabs&#39;: &#39;notarizeTabs&#39;,
+        &#39;notary_seal_tabs&#39;: &#39;notarySealTabs&#39;,
+        &#39;note_tabs&#39;: &#39;noteTabs&#39;,
+        &#39;number_tabs&#39;: &#39;numberTabs&#39;,
+        &#39;phone_number_tabs&#39;: &#39;phoneNumberTabs&#39;,
+        &#39;poly_line_overlay_tabs&#39;: &#39;polyLineOverlayTabs&#39;,
+        &#39;prefill_tabs&#39;: &#39;prefillTabs&#39;,
+        &#39;radio_group_tabs&#39;: &#39;radioGroupTabs&#39;,
+        &#39;signer_attachment_tabs&#39;: &#39;signerAttachmentTabs&#39;,
+        &#39;sign_here_tabs&#39;: &#39;signHereTabs&#39;,
+        &#39;smart_section_tabs&#39;: &#39;smartSectionTabs&#39;,
+        &#39;ssn_tabs&#39;: &#39;ssnTabs&#39;,
+        &#39;tab_groups&#39;: &#39;tabGroups&#39;,
+        &#39;text_tabs&#39;: &#39;textTabs&#39;,
+        &#39;title_tabs&#39;: &#39;titleTabs&#39;,
+        &#39;view_tabs&#39;: &#39;viewTabs&#39;,
+        &#39;zip_tabs&#39;: &#39;zipTabs&#39;
+    }
+
+    def __init__(self, approve_tabs=None, checkbox_tabs=None, comment_thread_tabs=None, commission_county_tabs=None, commission_expiration_tabs=None, commission_number_tabs=None, commission_state_tabs=None, company_tabs=None, currency_tabs=None, date_signed_tabs=None, date_tabs=None, decline_tabs=None, draw_tabs=None, email_address_tabs=None, email_tabs=None, envelope_id_tabs=None, first_name_tabs=None, formula_tabs=None, full_name_tabs=None, initial_here_tabs=None, last_name_tabs=None, list_tabs=None, notarize_tabs=None, notary_seal_tabs=None, note_tabs=None, number_tabs=None, phone_number_tabs=None, poly_line_overlay_tabs=None, prefill_tabs=None, radio_group_tabs=None, signer_attachment_tabs=None, sign_here_tabs=None, smart_section_tabs=None, ssn_tabs=None, tab_groups=None, text_tabs=None, title_tabs=None, view_tabs=None, zip_tabs=None):  # noqa: E501
+        &#34;&#34;&#34;Tabs - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._approve_tabs = None
+        self._checkbox_tabs = None
+        self._comment_thread_tabs = None
+        self._commission_county_tabs = None
+        self._commission_expiration_tabs = None
+        self._commission_number_tabs = None
+        self._commission_state_tabs = None
+        self._company_tabs = None
+        self._currency_tabs = None
+        self._date_signed_tabs = None
+        self._date_tabs = None
+        self._decline_tabs = None
+        self._draw_tabs = None
+        self._email_address_tabs = None
+        self._email_tabs = None
+        self._envelope_id_tabs = None
+        self._first_name_tabs = None
+        self._formula_tabs = None
+        self._full_name_tabs = None
+        self._initial_here_tabs = None
+        self._last_name_tabs = None
+        self._list_tabs = None
+        self._notarize_tabs = None
+        self._notary_seal_tabs = None
+        self._note_tabs = None
+        self._number_tabs = None
+        self._phone_number_tabs = None
+        self._poly_line_overlay_tabs = None
+        self._prefill_tabs = None
+        self._radio_group_tabs = None
+        self._signer_attachment_tabs = None
+        self._sign_here_tabs = None
+        self._smart_section_tabs = None
+        self._ssn_tabs = None
+        self._tab_groups = None
+        self._text_tabs = None
+        self._title_tabs = None
+        self._view_tabs = None
+        self._zip_tabs = None
+        self.discriminator = None
+
+        if approve_tabs is not None:
+            self.approve_tabs = approve_tabs
+        if checkbox_tabs is not None:
+            self.checkbox_tabs = checkbox_tabs
+        if comment_thread_tabs is not None:
+            self.comment_thread_tabs = comment_thread_tabs
+        if commission_county_tabs is not None:
+            self.commission_county_tabs = commission_county_tabs
+        if commission_expiration_tabs is not None:
+            self.commission_expiration_tabs = commission_expiration_tabs
+        if commission_number_tabs is not None:
+            self.commission_number_tabs = commission_number_tabs
+        if commission_state_tabs is not None:
+            self.commission_state_tabs = commission_state_tabs
+        if company_tabs is not None:
+            self.company_tabs = company_tabs
+        if currency_tabs is not None:
+            self.currency_tabs = currency_tabs
+        if date_signed_tabs is not None:
+            self.date_signed_tabs = date_signed_tabs
+        if date_tabs is not None:
+            self.date_tabs = date_tabs
+        if decline_tabs is not None:
+            self.decline_tabs = decline_tabs
+        if draw_tabs is not None:
+            self.draw_tabs = draw_tabs
+        if email_address_tabs is not None:
+            self.email_address_tabs = email_address_tabs
+        if email_tabs is not None:
+            self.email_tabs = email_tabs
+        if envelope_id_tabs is not None:
+            self.envelope_id_tabs = envelope_id_tabs
+        if first_name_tabs is not None:
+            self.first_name_tabs = first_name_tabs
+        if formula_tabs is not None:
+            self.formula_tabs = formula_tabs
+        if full_name_tabs is not None:
+            self.full_name_tabs = full_name_tabs
+        if initial_here_tabs is not None:
+            self.initial_here_tabs = initial_here_tabs
+        if last_name_tabs is not None:
+            self.last_name_tabs = last_name_tabs
+        if list_tabs is not None:
+            self.list_tabs = list_tabs
+        if notarize_tabs is not None:
+            self.notarize_tabs = notarize_tabs
+        if notary_seal_tabs is not None:
+            self.notary_seal_tabs = notary_seal_tabs
+        if note_tabs is not None:
+            self.note_tabs = note_tabs
+        if number_tabs is not None:
+            self.number_tabs = number_tabs
+        if phone_number_tabs is not None:
+            self.phone_number_tabs = phone_number_tabs
+        if poly_line_overlay_tabs is not None:
+            self.poly_line_overlay_tabs = poly_line_overlay_tabs
+        if prefill_tabs is not None:
+            self.prefill_tabs = prefill_tabs
+        if radio_group_tabs is not None:
+            self.radio_group_tabs = radio_group_tabs
+        if signer_attachment_tabs is not None:
+            self.signer_attachment_tabs = signer_attachment_tabs
+        if sign_here_tabs is not None:
+            self.sign_here_tabs = sign_here_tabs
+        if smart_section_tabs is not None:
+            self.smart_section_tabs = smart_section_tabs
+        if ssn_tabs is not None:
+            self.ssn_tabs = ssn_tabs
+        if tab_groups is not None:
+            self.tab_groups = tab_groups
+        if text_tabs is not None:
+            self.text_tabs = text_tabs
+        if title_tabs is not None:
+            self.title_tabs = title_tabs
+        if view_tabs is not None:
+            self.view_tabs = view_tabs
+        if zip_tabs is not None:
+            self.zip_tabs = zip_tabs
+
+    @property
+    def approve_tabs(self):
+        &#34;&#34;&#34;Gets the approve_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to approve documents in an envelope without placing a signature or initials on the document. If the recipient clicks the Approve tag during the signing process, the recipient is considered to have signed the document. No information is shown on the document for the approval, but it is recorded as a signature in the envelope history.  # noqa: E501
+
+        :return: The approve_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Approve]
+        &#34;&#34;&#34;
+        return self._approve_tabs
+
+    @approve_tabs.setter
+    def approve_tabs(self, approve_tabs):
+        &#34;&#34;&#34;Sets the approve_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient to approve documents in an envelope without placing a signature or initials on the document. If the recipient clicks the Approve tag during the signing process, the recipient is considered to have signed the document. No information is shown on the document for the approval, but it is recorded as a signature in the envelope history.  # noqa: E501
+
+        :param approve_tabs: The approve_tabs of this Tabs.  # noqa: E501
+        :type: list[Approve]
+        &#34;&#34;&#34;
+
+        self._approve_tabs = approve_tabs
+
+    @property
+    def checkbox_tabs(self):
+        &#34;&#34;&#34;Gets the checkbox_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document in a location where the recipient can select an option.  # noqa: E501
+
+        :return: The checkbox_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Checkbox]
+        &#34;&#34;&#34;
+        return self._checkbox_tabs
+
+    @checkbox_tabs.setter
+    def checkbox_tabs(self, checkbox_tabs):
+        &#34;&#34;&#34;Sets the checkbox_tabs of this Tabs.
+
+        Specifies a tag on the document in a location where the recipient can select an option.  # noqa: E501
+
+        :param checkbox_tabs: The checkbox_tabs of this Tabs.  # noqa: E501
+        :type: list[Checkbox]
+        &#34;&#34;&#34;
+
+        self._checkbox_tabs = checkbox_tabs
+
+    @property
+    def comment_thread_tabs(self):
+        &#34;&#34;&#34;Gets the comment_thread_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The comment_thread_tabs of this Tabs.  # noqa: E501
+        :rtype: list[CommentThread]
+        &#34;&#34;&#34;
+        return self._comment_thread_tabs
+
+    @comment_thread_tabs.setter
+    def comment_thread_tabs(self, comment_thread_tabs):
+        &#34;&#34;&#34;Sets the comment_thread_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param comment_thread_tabs: The comment_thread_tabs of this Tabs.  # noqa: E501
+        :type: list[CommentThread]
+        &#34;&#34;&#34;
+
+        self._comment_thread_tabs = comment_thread_tabs
+
+    @property
+    def commission_county_tabs(self):
+        &#34;&#34;&#34;Gets the commission_county_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The commission_county_tabs of this Tabs.  # noqa: E501
+        :rtype: list[CommissionCounty]
+        &#34;&#34;&#34;
+        return self._commission_county_tabs
+
+    @commission_county_tabs.setter
+    def commission_county_tabs(self, commission_county_tabs):
+        &#34;&#34;&#34;Sets the commission_county_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param commission_county_tabs: The commission_county_tabs of this Tabs.  # noqa: E501
+        :type: list[CommissionCounty]
+        &#34;&#34;&#34;
+
+        self._commission_county_tabs = commission_county_tabs
+
+    @property
+    def commission_expiration_tabs(self):
+        &#34;&#34;&#34;Gets the commission_expiration_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The commission_expiration_tabs of this Tabs.  # noqa: E501
+        :rtype: list[CommissionExpiration]
+        &#34;&#34;&#34;
+        return self._commission_expiration_tabs
+
+    @commission_expiration_tabs.setter
+    def commission_expiration_tabs(self, commission_expiration_tabs):
+        &#34;&#34;&#34;Sets the commission_expiration_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param commission_expiration_tabs: The commission_expiration_tabs of this Tabs.  # noqa: E501
+        :type: list[CommissionExpiration]
+        &#34;&#34;&#34;
+
+        self._commission_expiration_tabs = commission_expiration_tabs
+
+    @property
+    def commission_number_tabs(self):
+        &#34;&#34;&#34;Gets the commission_number_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The commission_number_tabs of this Tabs.  # noqa: E501
+        :rtype: list[CommissionNumber]
+        &#34;&#34;&#34;
+        return self._commission_number_tabs
+
+    @commission_number_tabs.setter
+    def commission_number_tabs(self, commission_number_tabs):
+        &#34;&#34;&#34;Sets the commission_number_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param commission_number_tabs: The commission_number_tabs of this Tabs.  # noqa: E501
+        :type: list[CommissionNumber]
+        &#34;&#34;&#34;
+
+        self._commission_number_tabs = commission_number_tabs
+
+    @property
+    def commission_state_tabs(self):
+        &#34;&#34;&#34;Gets the commission_state_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The commission_state_tabs of this Tabs.  # noqa: E501
+        :rtype: list[CommissionState]
+        &#34;&#34;&#34;
+        return self._commission_state_tabs
+
+    @commission_state_tabs.setter
+    def commission_state_tabs(self, commission_state_tabs):
+        &#34;&#34;&#34;Sets the commission_state_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param commission_state_tabs: The commission_state_tabs of this Tabs.  # noqa: E501
+        :type: list[CommissionState]
+        &#34;&#34;&#34;
+
+        self._commission_state_tabs = commission_state_tabs
+
+    @property
+    def company_tabs(self):
+        &#34;&#34;&#34;Gets the company_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient&#39;s company name to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The company_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Company]
+        &#34;&#34;&#34;
+        return self._company_tabs
+
+    @company_tabs.setter
+    def company_tabs(self, company_tabs):
+        &#34;&#34;&#34;Sets the company_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient&#39;s company name to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param company_tabs: The company_tabs of this Tabs.  # noqa: E501
+        :type: list[Company]
+        &#34;&#34;&#34;
+
+        self._company_tabs = company_tabs
+
+    @property
+    def currency_tabs(self):
+        &#34;&#34;&#34;Gets the currency_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The currency_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Currency]
+        &#34;&#34;&#34;
+        return self._currency_tabs
+
+    @currency_tabs.setter
+    def currency_tabs(self, currency_tabs):
+        &#34;&#34;&#34;Sets the currency_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param currency_tabs: The currency_tabs of this Tabs.  # noqa: E501
+        :type: list[Currency]
+        &#34;&#34;&#34;
+
+        self._currency_tabs = currency_tabs
+
+    @property
+    def date_signed_tabs(self):
+        &#34;&#34;&#34;Gets the date_signed_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tab on the document where the date the document was signed will automatically appear.  # noqa: E501
+
+        :return: The date_signed_tabs of this Tabs.  # noqa: E501
+        :rtype: list[DateSigned]
+        &#34;&#34;&#34;
+        return self._date_signed_tabs
+
+    @date_signed_tabs.setter
+    def date_signed_tabs(self, date_signed_tabs):
+        &#34;&#34;&#34;Sets the date_signed_tabs of this Tabs.
+
+        Specifies a tab on the document where the date the document was signed will automatically appear.  # noqa: E501
+
+        :param date_signed_tabs: The date_signed_tabs of this Tabs.  # noqa: E501
+        :type: list[DateSigned]
+        &#34;&#34;&#34;
+
+        self._date_signed_tabs = date_signed_tabs
+
+    @property
+    def date_tabs(self):
+        &#34;&#34;&#34;Gets the date_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.  # noqa: E501
+
+        :return: The date_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Date]
+        &#34;&#34;&#34;
+        return self._date_tabs
+
+    @date_tabs.setter
+    def date_tabs(self, date_tabs):
+        &#34;&#34;&#34;Sets the date_tabs of this Tabs.
+
+        Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.  # noqa: E501
+
+        :param date_tabs: The date_tabs of this Tabs.  # noqa: E501
+        :type: list[Date]
+        &#34;&#34;&#34;
+
+        self._date_tabs = date_tabs
+
+    @property
+    def decline_tabs(self):
+        &#34;&#34;&#34;Gets the decline_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want to give the recipient the option of declining an envelope. If the recipient clicks the Decline tag during the signing process, the envelope is voided.  # noqa: E501
+
+        :return: The decline_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Decline]
+        &#34;&#34;&#34;
+        return self._decline_tabs
+
+    @decline_tabs.setter
+    def decline_tabs(self, decline_tabs):
+        &#34;&#34;&#34;Sets the decline_tabs of this Tabs.
+
+        Specifies a tag on the document where you want to give the recipient the option of declining an envelope. If the recipient clicks the Decline tag during the signing process, the envelope is voided.  # noqa: E501
+
+        :param decline_tabs: The decline_tabs of this Tabs.  # noqa: E501
+        :type: list[Decline]
+        &#34;&#34;&#34;
+
+        self._decline_tabs = decline_tabs
+
+    @property
+    def draw_tabs(self):
+        &#34;&#34;&#34;Gets the draw_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The draw_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Draw]
+        &#34;&#34;&#34;
+        return self._draw_tabs
+
+    @draw_tabs.setter
+    def draw_tabs(self, draw_tabs):
+        &#34;&#34;&#34;Sets the draw_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param draw_tabs: The draw_tabs of this Tabs.  # noqa: E501
+        :type: list[Draw]
+        &#34;&#34;&#34;
+
+        self._draw_tabs = draw_tabs
+
+    @property
+    def email_address_tabs(self):
+        &#34;&#34;&#34;Gets the email_address_tabs of this Tabs.  # noqa: E501
+
+        Specifies a location on the document where you want where you want the recipient&#39;s email, as entered in the recipient information, to display.  # noqa: E501
+
+        :return: The email_address_tabs of this Tabs.  # noqa: E501
+        :rtype: list[EmailAddress]
+        &#34;&#34;&#34;
+        return self._email_address_tabs
+
+    @email_address_tabs.setter
+    def email_address_tabs(self, email_address_tabs):
+        &#34;&#34;&#34;Sets the email_address_tabs of this Tabs.
+
+        Specifies a location on the document where you want where you want the recipient&#39;s email, as entered in the recipient information, to display.  # noqa: E501
+
+        :param email_address_tabs: The email_address_tabs of this Tabs.  # noqa: E501
+        :type: list[EmailAddress]
+        &#34;&#34;&#34;
+
+        self._email_address_tabs = email_address_tabs
+
+    @property
+    def email_tabs(self):
+        &#34;&#34;&#34;Gets the email_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The email_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Email]
+        &#34;&#34;&#34;
+        return self._email_tabs
+
+    @email_tabs.setter
+    def email_tabs(self, email_tabs):
+        &#34;&#34;&#34;Sets the email_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param email_tabs: The email_tabs of this Tabs.  # noqa: E501
+        :type: list[Email]
+        &#34;&#34;&#34;
+
+        self._email_tabs = email_tabs
+
+    @property
+    def envelope_id_tabs(self):
+        &#34;&#34;&#34;Gets the envelope_id_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the envelope ID for to appear. Recipients cannot enter or change the information in this tab, it is for informational purposes only.  # noqa: E501
+
+        :return: The envelope_id_tabs of this Tabs.  # noqa: E501
+        :rtype: list[EnvelopeId]
+        &#34;&#34;&#34;
+        return self._envelope_id_tabs
+
+    @envelope_id_tabs.setter
+    def envelope_id_tabs(self, envelope_id_tabs):
+        &#34;&#34;&#34;Sets the envelope_id_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the envelope ID for to appear. Recipients cannot enter or change the information in this tab, it is for informational purposes only.  # noqa: E501
+
+        :param envelope_id_tabs: The envelope_id_tabs of this Tabs.  # noqa: E501
+        :type: list[EnvelopeId]
+        &#34;&#34;&#34;
+
+        self._envelope_id_tabs = envelope_id_tabs
+
+    @property
+    def first_name_tabs(self):
+        &#34;&#34;&#34;Gets the first_name_tabs of this Tabs.  # noqa: E501
+
+        Specifies tag on a document where you want the recipient&#39;s first name to appear. This tag takes the recipient&#39;s name, as entered in the recipient information, splits it into sections based on spaces and uses the first section as the first name.  # noqa: E501
+
+        :return: The first_name_tabs of this Tabs.  # noqa: E501
+        :rtype: list[FirstName]
+        &#34;&#34;&#34;
+        return self._first_name_tabs
+
+    @first_name_tabs.setter
+    def first_name_tabs(self, first_name_tabs):
+        &#34;&#34;&#34;Sets the first_name_tabs of this Tabs.
+
+        Specifies tag on a document where you want the recipient&#39;s first name to appear. This tag takes the recipient&#39;s name, as entered in the recipient information, splits it into sections based on spaces and uses the first section as the first name.  # noqa: E501
+
+        :param first_name_tabs: The first_name_tabs of this Tabs.  # noqa: E501
+        :type: list[FirstName]
+        &#34;&#34;&#34;
+
+        self._first_name_tabs = first_name_tabs
+
+    @property
+    def formula_tabs(self):
+        &#34;&#34;&#34;Gets the formula_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag that is used to add a calculated field to a document. Envelope recipients cannot directly enter information into the tag; the formula tab calculates and displays a new value when changes are made to the reference tag values. The reference tag information and calculation operations are entered in the \&#34;formula\&#34; element. See the [ML:Using the Calculated Fields Feature] quick start guide or [ML:DocuSign Service User Guide] for more information about formulas.  # noqa: E501
+
+        :return: The formula_tabs of this Tabs.  # noqa: E501
+        :rtype: list[FormulaTab]
+        &#34;&#34;&#34;
+        return self._formula_tabs
+
+    @formula_tabs.setter
+    def formula_tabs(self, formula_tabs):
+        &#34;&#34;&#34;Sets the formula_tabs of this Tabs.
+
+        Specifies a tag that is used to add a calculated field to a document. Envelope recipients cannot directly enter information into the tag; the formula tab calculates and displays a new value when changes are made to the reference tag values. The reference tag information and calculation operations are entered in the \&#34;formula\&#34; element. See the [ML:Using the Calculated Fields Feature] quick start guide or [ML:DocuSign Service User Guide] for more information about formulas.  # noqa: E501
+
+        :param formula_tabs: The formula_tabs of this Tabs.  # noqa: E501
+        :type: list[FormulaTab]
+        &#34;&#34;&#34;
+
+        self._formula_tabs = formula_tabs
+
+    @property
+    def full_name_tabs(self):
+        &#34;&#34;&#34;Gets the full_name_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient&#39;s name to appear.  # noqa: E501
+
+        :return: The full_name_tabs of this Tabs.  # noqa: E501
+        :rtype: list[FullName]
+        &#34;&#34;&#34;
+        return self._full_name_tabs
+
+    @full_name_tabs.setter
+    def full_name_tabs(self, full_name_tabs):
+        &#34;&#34;&#34;Sets the full_name_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient&#39;s name to appear.  # noqa: E501
+
+        :param full_name_tabs: The full_name_tabs of this Tabs.  # noqa: E501
+        :type: list[FullName]
+        &#34;&#34;&#34;
+
+        self._full_name_tabs = full_name_tabs
+
+    @property
+    def initial_here_tabs(self):
+        &#34;&#34;&#34;Gets the initial_here_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag location in the document at which a recipient will place their initials. The `optional` parameter specifies whether the initials are required or optional.  # noqa: E501
+
+        :return: The initial_here_tabs of this Tabs.  # noqa: E501
+        :rtype: list[InitialHere]
+        &#34;&#34;&#34;
+        return self._initial_here_tabs
+
+    @initial_here_tabs.setter
+    def initial_here_tabs(self, initial_here_tabs):
+        &#34;&#34;&#34;Sets the initial_here_tabs of this Tabs.
+
+        Specifies a tag location in the document at which a recipient will place their initials. The `optional` parameter specifies whether the initials are required or optional.  # noqa: E501
+
+        :param initial_here_tabs: The initial_here_tabs of this Tabs.  # noqa: E501
+        :type: list[InitialHere]
+        &#34;&#34;&#34;
+
+        self._initial_here_tabs = initial_here_tabs
+
+    @property
+    def last_name_tabs(self):
+        &#34;&#34;&#34;Gets the last_name_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on a document where you want the recipient&#39;s last name to appear. This tag takes the recipient&#39;s name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.  # noqa: E501
+
+        :return: The last_name_tabs of this Tabs.  # noqa: E501
+        :rtype: list[LastName]
+        &#34;&#34;&#34;
+        return self._last_name_tabs
+
+    @last_name_tabs.setter
+    def last_name_tabs(self, last_name_tabs):
+        &#34;&#34;&#34;Sets the last_name_tabs of this Tabs.
+
+        Specifies a tag on a document where you want the recipient&#39;s last name to appear. This tag takes the recipient&#39;s name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.  # noqa: E501
+
+        :param last_name_tabs: The last_name_tabs of this Tabs.  # noqa: E501
+        :type: list[LastName]
+        &#34;&#34;&#34;
+
+        self._last_name_tabs = last_name_tabs
+
+    @property
+    def list_tabs(self):
+        &#34;&#34;&#34;Gets the list_tabs of this Tabs.  # noqa: E501
+
+        Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.  # noqa: E501
+
+        :return: The list_tabs of this Tabs.  # noqa: E501
+        :rtype: list[List]
+        &#34;&#34;&#34;
+        return self._list_tabs
+
+    @list_tabs.setter
+    def list_tabs(self, list_tabs):
+        &#34;&#34;&#34;Sets the list_tabs of this Tabs.
+
+        Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.  # noqa: E501
+
+        :param list_tabs: The list_tabs of this Tabs.  # noqa: E501
+        :type: list[List]
+        &#34;&#34;&#34;
+
+        self._list_tabs = list_tabs
+
+    @property
+    def notarize_tabs(self):
+        &#34;&#34;&#34;Gets the notarize_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The notarize_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Notarize]
+        &#34;&#34;&#34;
+        return self._notarize_tabs
+
+    @notarize_tabs.setter
+    def notarize_tabs(self, notarize_tabs):
+        &#34;&#34;&#34;Sets the notarize_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param notarize_tabs: The notarize_tabs of this Tabs.  # noqa: E501
+        :type: list[Notarize]
+        &#34;&#34;&#34;
+
+        self._notarize_tabs = notarize_tabs
+
+    @property
+    def notary_seal_tabs(self):
+        &#34;&#34;&#34;Gets the notary_seal_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The notary_seal_tabs of this Tabs.  # noqa: E501
+        :rtype: list[NotarySeal]
+        &#34;&#34;&#34;
+        return self._notary_seal_tabs
+
+    @notary_seal_tabs.setter
+    def notary_seal_tabs(self, notary_seal_tabs):
+        &#34;&#34;&#34;Sets the notary_seal_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param notary_seal_tabs: The notary_seal_tabs of this Tabs.  # noqa: E501
+        :type: list[NotarySeal]
+        &#34;&#34;&#34;
+
+        self._notary_seal_tabs = notary_seal_tabs
+
+    @property
+    def note_tabs(self):
+        &#34;&#34;&#34;Gets the note_tabs of this Tabs.  # noqa: E501
+
+        Specifies a location on the document where you want to place additional information, in the form of a note, for a recipient.  # noqa: E501
+
+        :return: The note_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Note]
+        &#34;&#34;&#34;
+        return self._note_tabs
+
+    @note_tabs.setter
+    def note_tabs(self, note_tabs):
+        &#34;&#34;&#34;Sets the note_tabs of this Tabs.
+
+        Specifies a location on the document where you want to place additional information, in the form of a note, for a recipient.  # noqa: E501
+
+        :param note_tabs: The note_tabs of this Tabs.  # noqa: E501
+        :type: list[Note]
+        &#34;&#34;&#34;
+
+        self._note_tabs = note_tabs
+
+    @property
+    def number_tabs(self):
+        &#34;&#34;&#34;Gets the number_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.   # noqa: E501
+
+        :return: The number_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Number]
+        &#34;&#34;&#34;
+        return self._number_tabs
+
+    @number_tabs.setter
+    def number_tabs(self, number_tabs):
+        &#34;&#34;&#34;Sets the number_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.   # noqa: E501
+
+        :param number_tabs: The number_tabs of this Tabs.  # noqa: E501
+        :type: list[Number]
+        &#34;&#34;&#34;
+
+        self._number_tabs = number_tabs
+
+    @property
+    def phone_number_tabs(self):
+        &#34;&#34;&#34;Gets the phone_number_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The phone_number_tabs of this Tabs.  # noqa: E501
+        :rtype: list[PhoneNumber]
+        &#34;&#34;&#34;
+        return self._phone_number_tabs
+
+    @phone_number_tabs.setter
+    def phone_number_tabs(self, phone_number_tabs):
+        &#34;&#34;&#34;Sets the phone_number_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param phone_number_tabs: The phone_number_tabs of this Tabs.  # noqa: E501
+        :type: list[PhoneNumber]
+        &#34;&#34;&#34;
+
+        self._phone_number_tabs = phone_number_tabs
+
+    @property
+    def poly_line_overlay_tabs(self):
+        &#34;&#34;&#34;Gets the poly_line_overlay_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The poly_line_overlay_tabs of this Tabs.  # noqa: E501
+        :rtype: list[PolyLineOverlay]
+        &#34;&#34;&#34;
+        return self._poly_line_overlay_tabs
+
+    @poly_line_overlay_tabs.setter
+    def poly_line_overlay_tabs(self, poly_line_overlay_tabs):
+        &#34;&#34;&#34;Sets the poly_line_overlay_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param poly_line_overlay_tabs: The poly_line_overlay_tabs of this Tabs.  # noqa: E501
+        :type: list[PolyLineOverlay]
+        &#34;&#34;&#34;
+
+        self._poly_line_overlay_tabs = poly_line_overlay_tabs
+
+    @property
+    def prefill_tabs(self):
+        &#34;&#34;&#34;Gets the prefill_tabs of this Tabs.  # noqa: E501
+
+
+        :return: The prefill_tabs of this Tabs.  # noqa: E501
+        :rtype: PrefillTabs
+        &#34;&#34;&#34;
+        return self._prefill_tabs
+
+    @prefill_tabs.setter
+    def prefill_tabs(self, prefill_tabs):
+        &#34;&#34;&#34;Sets the prefill_tabs of this Tabs.
+
+
+        :param prefill_tabs: The prefill_tabs of this Tabs.  # noqa: E501
+        :type: PrefillTabs
+        &#34;&#34;&#34;
+
+        self._prefill_tabs = prefill_tabs
+
+    @property
+    def radio_group_tabs(self):
+        &#34;&#34;&#34;Gets the radio_group_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document.  # noqa: E501
+
+        :return: The radio_group_tabs of this Tabs.  # noqa: E501
+        :rtype: list[RadioGroup]
+        &#34;&#34;&#34;
+        return self._radio_group_tabs
+
+    @radio_group_tabs.setter
+    def radio_group_tabs(self, radio_group_tabs):
+        &#34;&#34;&#34;Sets the radio_group_tabs of this Tabs.
+
+        Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document.  # noqa: E501
+
+        :param radio_group_tabs: The radio_group_tabs of this Tabs.  # noqa: E501
+        :type: list[RadioGroup]
+        &#34;&#34;&#34;
+
+        self._radio_group_tabs = radio_group_tabs
+
+    @property
+    def signer_attachment_tabs(self):
+        &#34;&#34;&#34;Gets the signer_attachment_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document when you want the recipient to add supporting documents to an envelope.  # noqa: E501
+
+        :return: The signer_attachment_tabs of this Tabs.  # noqa: E501
+        :rtype: list[SignerAttachment]
+        &#34;&#34;&#34;
+        return self._signer_attachment_tabs
+
+    @signer_attachment_tabs.setter
+    def signer_attachment_tabs(self, signer_attachment_tabs):
+        &#34;&#34;&#34;Sets the signer_attachment_tabs of this Tabs.
+
+        Specifies a tag on the document when you want the recipient to add supporting documents to an envelope.  # noqa: E501
+
+        :param signer_attachment_tabs: The signer_attachment_tabs of this Tabs.  # noqa: E501
+        :type: list[SignerAttachment]
+        &#34;&#34;&#34;
+
+        self._signer_attachment_tabs = signer_attachment_tabs
+
+    @property
+    def sign_here_tabs(self):
+        &#34;&#34;&#34;Gets the sign_here_tabs of this Tabs.  # noqa: E501
+
+        A complex type the contains information about the tag that specifies where the recipient places their signature in the document. The \&#34;optional\&#34; parameter sets if the signature is required or optional.   # noqa: E501
+
+        :return: The sign_here_tabs of this Tabs.  # noqa: E501
+        :rtype: list[SignHere]
+        &#34;&#34;&#34;
+        return self._sign_here_tabs
+
+    @sign_here_tabs.setter
+    def sign_here_tabs(self, sign_here_tabs):
+        &#34;&#34;&#34;Sets the sign_here_tabs of this Tabs.
+
+        A complex type the contains information about the tag that specifies where the recipient places their signature in the document. The \&#34;optional\&#34; parameter sets if the signature is required or optional.   # noqa: E501
+
+        :param sign_here_tabs: The sign_here_tabs of this Tabs.  # noqa: E501
+        :type: list[SignHere]
+        &#34;&#34;&#34;
+
+        self._sign_here_tabs = sign_here_tabs
+
+    @property
+    def smart_section_tabs(self):
+        &#34;&#34;&#34;Gets the smart_section_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The smart_section_tabs of this Tabs.  # noqa: E501
+        :rtype: list[SmartSection]
+        &#34;&#34;&#34;
+        return self._smart_section_tabs
+
+    @smart_section_tabs.setter
+    def smart_section_tabs(self, smart_section_tabs):
+        &#34;&#34;&#34;Sets the smart_section_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param smart_section_tabs: The smart_section_tabs of this Tabs.  # noqa: E501
+        :type: list[SmartSection]
+        &#34;&#34;&#34;
+
+        self._smart_section_tabs = smart_section_tabs
+
+    @property
+    def ssn_tabs(self):
+        &#34;&#34;&#34;Gets the ssn_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The ssn_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Ssn]
+        &#34;&#34;&#34;
+        return self._ssn_tabs
+
+    @ssn_tabs.setter
+    def ssn_tabs(self, ssn_tabs):
+        &#34;&#34;&#34;Sets the ssn_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param ssn_tabs: The ssn_tabs of this Tabs.  # noqa: E501
+        :type: list[Ssn]
+        &#34;&#34;&#34;
+
+        self._ssn_tabs = ssn_tabs
+
+    @property
+    def tab_groups(self):
+        &#34;&#34;&#34;Gets the tab_groups of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tab_groups of this Tabs.  # noqa: E501
+        :rtype: list[TabGroup]
+        &#34;&#34;&#34;
+        return self._tab_groups
+
+    @tab_groups.setter
+    def tab_groups(self, tab_groups):
+        &#34;&#34;&#34;Sets the tab_groups of this Tabs.
+
+          # noqa: E501
+
+        :param tab_groups: The tab_groups of this Tabs.  # noqa: E501
+        :type: list[TabGroup]
+        &#34;&#34;&#34;
+
+        self._tab_groups = tab_groups
+
+    @property
+    def text_tabs(self):
+        &#34;&#34;&#34;Gets the text_tabs of this Tabs.  # noqa: E501
+
+        Specifies a that that is an adaptable field that allows the recipient to enter different text information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The text_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Text]
+        &#34;&#34;&#34;
+        return self._text_tabs
+
+    @text_tabs.setter
+    def text_tabs(self, text_tabs):
+        &#34;&#34;&#34;Sets the text_tabs of this Tabs.
+
+        Specifies a that that is an adaptable field that allows the recipient to enter different text information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param text_tabs: The text_tabs of this Tabs.  # noqa: E501
+        :type: list[Text]
+        &#34;&#34;&#34;
+
+        self._text_tabs = text_tabs
+
+    @property
+    def title_tabs(self):
+        &#34;&#34;&#34;Gets the title_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient&#39;s title to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The title_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Title]
+        &#34;&#34;&#34;
+        return self._title_tabs
+
+    @title_tabs.setter
+    def title_tabs(self, title_tabs):
+        &#34;&#34;&#34;Sets the title_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient&#39;s title to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param title_tabs: The title_tabs of this Tabs.  # noqa: E501
+        :type: list[Title]
+        &#34;&#34;&#34;
+
+        self._title_tabs = title_tabs
+
+    @property
+    def view_tabs(self):
+        &#34;&#34;&#34;Gets the view_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The view_tabs of this Tabs.  # noqa: E501
+        :rtype: list[View]
+        &#34;&#34;&#34;
+        return self._view_tabs
+
+    @view_tabs.setter
+    def view_tabs(self, view_tabs):
+        &#34;&#34;&#34;Sets the view_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param view_tabs: The view_tabs of this Tabs.  # noqa: E501
+        :type: list[View]
+        &#34;&#34;&#34;
+
+        self._view_tabs = view_tabs
+
+    @property
+    def zip_tabs(self):
+        &#34;&#34;&#34;Gets the zip_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The zip_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Zip]
+        &#34;&#34;&#34;
+        return self._zip_tabs
+
+    @zip_tabs.setter
+    def zip_tabs(self, zip_tabs):
+        &#34;&#34;&#34;Sets the zip_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param zip_tabs: The zip_tabs of this Tabs.  # noqa: E501
+        :type: list[Zip]
+        &#34;&#34;&#34;
+
+        self._zip_tabs = zip_tabs
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(Tabs, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, Tabs):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.tabs.Tabs"><code class="flex name class">
+<span>class <span class="ident">Tabs</span></span>
+<span>(</span><span>approve_tabs=None, checkbox_tabs=None, comment_thread_tabs=None, commission_county_tabs=None, commission_expiration_tabs=None, commission_number_tabs=None, commission_state_tabs=None, company_tabs=None, currency_tabs=None, date_signed_tabs=None, date_tabs=None, decline_tabs=None, draw_tabs=None, email_address_tabs=None, email_tabs=None, envelope_id_tabs=None, first_name_tabs=None, formula_tabs=None, full_name_tabs=None, initial_here_tabs=None, last_name_tabs=None, list_tabs=None, notarize_tabs=None, notary_seal_tabs=None, note_tabs=None, number_tabs=None, phone_number_tabs=None, poly_line_overlay_tabs=None, prefill_tabs=None, radio_group_tabs=None, signer_attachment_tabs=None, sign_here_tabs=None, smart_section_tabs=None, ssn_tabs=None, tab_groups=None, text_tabs=None, title_tabs=None, view_tabs=None, zip_tabs=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>Tabs - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Tabs(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;approve_tabs&#39;: &#39;list[Approve]&#39;,
+        &#39;checkbox_tabs&#39;: &#39;list[Checkbox]&#39;,
+        &#39;comment_thread_tabs&#39;: &#39;list[CommentThread]&#39;,
+        &#39;commission_county_tabs&#39;: &#39;list[CommissionCounty]&#39;,
+        &#39;commission_expiration_tabs&#39;: &#39;list[CommissionExpiration]&#39;,
+        &#39;commission_number_tabs&#39;: &#39;list[CommissionNumber]&#39;,
+        &#39;commission_state_tabs&#39;: &#39;list[CommissionState]&#39;,
+        &#39;company_tabs&#39;: &#39;list[Company]&#39;,
+        &#39;currency_tabs&#39;: &#39;list[Currency]&#39;,
+        &#39;date_signed_tabs&#39;: &#39;list[DateSigned]&#39;,
+        &#39;date_tabs&#39;: &#39;list[Date]&#39;,
+        &#39;decline_tabs&#39;: &#39;list[Decline]&#39;,
+        &#39;draw_tabs&#39;: &#39;list[Draw]&#39;,
+        &#39;email_address_tabs&#39;: &#39;list[EmailAddress]&#39;,
+        &#39;email_tabs&#39;: &#39;list[Email]&#39;,
+        &#39;envelope_id_tabs&#39;: &#39;list[EnvelopeId]&#39;,
+        &#39;first_name_tabs&#39;: &#39;list[FirstName]&#39;,
+        &#39;formula_tabs&#39;: &#39;list[FormulaTab]&#39;,
+        &#39;full_name_tabs&#39;: &#39;list[FullName]&#39;,
+        &#39;initial_here_tabs&#39;: &#39;list[InitialHere]&#39;,
+        &#39;last_name_tabs&#39;: &#39;list[LastName]&#39;,
+        &#39;list_tabs&#39;: &#39;list[List]&#39;,
+        &#39;notarize_tabs&#39;: &#39;list[Notarize]&#39;,
+        &#39;notary_seal_tabs&#39;: &#39;list[NotarySeal]&#39;,
+        &#39;note_tabs&#39;: &#39;list[Note]&#39;,
+        &#39;number_tabs&#39;: &#39;list[Number]&#39;,
+        &#39;phone_number_tabs&#39;: &#39;list[PhoneNumber]&#39;,
+        &#39;poly_line_overlay_tabs&#39;: &#39;list[PolyLineOverlay]&#39;,
+        &#39;prefill_tabs&#39;: &#39;PrefillTabs&#39;,
+        &#39;radio_group_tabs&#39;: &#39;list[RadioGroup]&#39;,
+        &#39;signer_attachment_tabs&#39;: &#39;list[SignerAttachment]&#39;,
+        &#39;sign_here_tabs&#39;: &#39;list[SignHere]&#39;,
+        &#39;smart_section_tabs&#39;: &#39;list[SmartSection]&#39;,
+        &#39;ssn_tabs&#39;: &#39;list[Ssn]&#39;,
+        &#39;tab_groups&#39;: &#39;list[TabGroup]&#39;,
+        &#39;text_tabs&#39;: &#39;list[Text]&#39;,
+        &#39;title_tabs&#39;: &#39;list[Title]&#39;,
+        &#39;view_tabs&#39;: &#39;list[View]&#39;,
+        &#39;zip_tabs&#39;: &#39;list[Zip]&#39;
+    }
+
+    attribute_map = {
+        &#39;approve_tabs&#39;: &#39;approveTabs&#39;,
+        &#39;checkbox_tabs&#39;: &#39;checkboxTabs&#39;,
+        &#39;comment_thread_tabs&#39;: &#39;commentThreadTabs&#39;,
+        &#39;commission_county_tabs&#39;: &#39;commissionCountyTabs&#39;,
+        &#39;commission_expiration_tabs&#39;: &#39;commissionExpirationTabs&#39;,
+        &#39;commission_number_tabs&#39;: &#39;commissionNumberTabs&#39;,
+        &#39;commission_state_tabs&#39;: &#39;commissionStateTabs&#39;,
+        &#39;company_tabs&#39;: &#39;companyTabs&#39;,
+        &#39;currency_tabs&#39;: &#39;currencyTabs&#39;,
+        &#39;date_signed_tabs&#39;: &#39;dateSignedTabs&#39;,
+        &#39;date_tabs&#39;: &#39;dateTabs&#39;,
+        &#39;decline_tabs&#39;: &#39;declineTabs&#39;,
+        &#39;draw_tabs&#39;: &#39;drawTabs&#39;,
+        &#39;email_address_tabs&#39;: &#39;emailAddressTabs&#39;,
+        &#39;email_tabs&#39;: &#39;emailTabs&#39;,
+        &#39;envelope_id_tabs&#39;: &#39;envelopeIdTabs&#39;,
+        &#39;first_name_tabs&#39;: &#39;firstNameTabs&#39;,
+        &#39;formula_tabs&#39;: &#39;formulaTabs&#39;,
+        &#39;full_name_tabs&#39;: &#39;fullNameTabs&#39;,
+        &#39;initial_here_tabs&#39;: &#39;initialHereTabs&#39;,
+        &#39;last_name_tabs&#39;: &#39;lastNameTabs&#39;,
+        &#39;list_tabs&#39;: &#39;listTabs&#39;,
+        &#39;notarize_tabs&#39;: &#39;notarizeTabs&#39;,
+        &#39;notary_seal_tabs&#39;: &#39;notarySealTabs&#39;,
+        &#39;note_tabs&#39;: &#39;noteTabs&#39;,
+        &#39;number_tabs&#39;: &#39;numberTabs&#39;,
+        &#39;phone_number_tabs&#39;: &#39;phoneNumberTabs&#39;,
+        &#39;poly_line_overlay_tabs&#39;: &#39;polyLineOverlayTabs&#39;,
+        &#39;prefill_tabs&#39;: &#39;prefillTabs&#39;,
+        &#39;radio_group_tabs&#39;: &#39;radioGroupTabs&#39;,
+        &#39;signer_attachment_tabs&#39;: &#39;signerAttachmentTabs&#39;,
+        &#39;sign_here_tabs&#39;: &#39;signHereTabs&#39;,
+        &#39;smart_section_tabs&#39;: &#39;smartSectionTabs&#39;,
+        &#39;ssn_tabs&#39;: &#39;ssnTabs&#39;,
+        &#39;tab_groups&#39;: &#39;tabGroups&#39;,
+        &#39;text_tabs&#39;: &#39;textTabs&#39;,
+        &#39;title_tabs&#39;: &#39;titleTabs&#39;,
+        &#39;view_tabs&#39;: &#39;viewTabs&#39;,
+        &#39;zip_tabs&#39;: &#39;zipTabs&#39;
+    }
+
+    def __init__(self, approve_tabs=None, checkbox_tabs=None, comment_thread_tabs=None, commission_county_tabs=None, commission_expiration_tabs=None, commission_number_tabs=None, commission_state_tabs=None, company_tabs=None, currency_tabs=None, date_signed_tabs=None, date_tabs=None, decline_tabs=None, draw_tabs=None, email_address_tabs=None, email_tabs=None, envelope_id_tabs=None, first_name_tabs=None, formula_tabs=None, full_name_tabs=None, initial_here_tabs=None, last_name_tabs=None, list_tabs=None, notarize_tabs=None, notary_seal_tabs=None, note_tabs=None, number_tabs=None, phone_number_tabs=None, poly_line_overlay_tabs=None, prefill_tabs=None, radio_group_tabs=None, signer_attachment_tabs=None, sign_here_tabs=None, smart_section_tabs=None, ssn_tabs=None, tab_groups=None, text_tabs=None, title_tabs=None, view_tabs=None, zip_tabs=None):  # noqa: E501
+        &#34;&#34;&#34;Tabs - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._approve_tabs = None
+        self._checkbox_tabs = None
+        self._comment_thread_tabs = None
+        self._commission_county_tabs = None
+        self._commission_expiration_tabs = None
+        self._commission_number_tabs = None
+        self._commission_state_tabs = None
+        self._company_tabs = None
+        self._currency_tabs = None
+        self._date_signed_tabs = None
+        self._date_tabs = None
+        self._decline_tabs = None
+        self._draw_tabs = None
+        self._email_address_tabs = None
+        self._email_tabs = None
+        self._envelope_id_tabs = None
+        self._first_name_tabs = None
+        self._formula_tabs = None
+        self._full_name_tabs = None
+        self._initial_here_tabs = None
+        self._last_name_tabs = None
+        self._list_tabs = None
+        self._notarize_tabs = None
+        self._notary_seal_tabs = None
+        self._note_tabs = None
+        self._number_tabs = None
+        self._phone_number_tabs = None
+        self._poly_line_overlay_tabs = None
+        self._prefill_tabs = None
+        self._radio_group_tabs = None
+        self._signer_attachment_tabs = None
+        self._sign_here_tabs = None
+        self._smart_section_tabs = None
+        self._ssn_tabs = None
+        self._tab_groups = None
+        self._text_tabs = None
+        self._title_tabs = None
+        self._view_tabs = None
+        self._zip_tabs = None
+        self.discriminator = None
+
+        if approve_tabs is not None:
+            self.approve_tabs = approve_tabs
+        if checkbox_tabs is not None:
+            self.checkbox_tabs = checkbox_tabs
+        if comment_thread_tabs is not None:
+            self.comment_thread_tabs = comment_thread_tabs
+        if commission_county_tabs is not None:
+            self.commission_county_tabs = commission_county_tabs
+        if commission_expiration_tabs is not None:
+            self.commission_expiration_tabs = commission_expiration_tabs
+        if commission_number_tabs is not None:
+            self.commission_number_tabs = commission_number_tabs
+        if commission_state_tabs is not None:
+            self.commission_state_tabs = commission_state_tabs
+        if company_tabs is not None:
+            self.company_tabs = company_tabs
+        if currency_tabs is not None:
+            self.currency_tabs = currency_tabs
+        if date_signed_tabs is not None:
+            self.date_signed_tabs = date_signed_tabs
+        if date_tabs is not None:
+            self.date_tabs = date_tabs
+        if decline_tabs is not None:
+            self.decline_tabs = decline_tabs
+        if draw_tabs is not None:
+            self.draw_tabs = draw_tabs
+        if email_address_tabs is not None:
+            self.email_address_tabs = email_address_tabs
+        if email_tabs is not None:
+            self.email_tabs = email_tabs
+        if envelope_id_tabs is not None:
+            self.envelope_id_tabs = envelope_id_tabs
+        if first_name_tabs is not None:
+            self.first_name_tabs = first_name_tabs
+        if formula_tabs is not None:
+            self.formula_tabs = formula_tabs
+        if full_name_tabs is not None:
+            self.full_name_tabs = full_name_tabs
+        if initial_here_tabs is not None:
+            self.initial_here_tabs = initial_here_tabs
+        if last_name_tabs is not None:
+            self.last_name_tabs = last_name_tabs
+        if list_tabs is not None:
+            self.list_tabs = list_tabs
+        if notarize_tabs is not None:
+            self.notarize_tabs = notarize_tabs
+        if notary_seal_tabs is not None:
+            self.notary_seal_tabs = notary_seal_tabs
+        if note_tabs is not None:
+            self.note_tabs = note_tabs
+        if number_tabs is not None:
+            self.number_tabs = number_tabs
+        if phone_number_tabs is not None:
+            self.phone_number_tabs = phone_number_tabs
+        if poly_line_overlay_tabs is not None:
+            self.poly_line_overlay_tabs = poly_line_overlay_tabs
+        if prefill_tabs is not None:
+            self.prefill_tabs = prefill_tabs
+        if radio_group_tabs is not None:
+            self.radio_group_tabs = radio_group_tabs
+        if signer_attachment_tabs is not None:
+            self.signer_attachment_tabs = signer_attachment_tabs
+        if sign_here_tabs is not None:
+            self.sign_here_tabs = sign_here_tabs
+        if smart_section_tabs is not None:
+            self.smart_section_tabs = smart_section_tabs
+        if ssn_tabs is not None:
+            self.ssn_tabs = ssn_tabs
+        if tab_groups is not None:
+            self.tab_groups = tab_groups
+        if text_tabs is not None:
+            self.text_tabs = text_tabs
+        if title_tabs is not None:
+            self.title_tabs = title_tabs
+        if view_tabs is not None:
+            self.view_tabs = view_tabs
+        if zip_tabs is not None:
+            self.zip_tabs = zip_tabs
+
+    @property
+    def approve_tabs(self):
+        &#34;&#34;&#34;Gets the approve_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to approve documents in an envelope without placing a signature or initials on the document. If the recipient clicks the Approve tag during the signing process, the recipient is considered to have signed the document. No information is shown on the document for the approval, but it is recorded as a signature in the envelope history.  # noqa: E501
+
+        :return: The approve_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Approve]
+        &#34;&#34;&#34;
+        return self._approve_tabs
+
+    @approve_tabs.setter
+    def approve_tabs(self, approve_tabs):
+        &#34;&#34;&#34;Sets the approve_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient to approve documents in an envelope without placing a signature or initials on the document. If the recipient clicks the Approve tag during the signing process, the recipient is considered to have signed the document. No information is shown on the document for the approval, but it is recorded as a signature in the envelope history.  # noqa: E501
+
+        :param approve_tabs: The approve_tabs of this Tabs.  # noqa: E501
+        :type: list[Approve]
+        &#34;&#34;&#34;
+
+        self._approve_tabs = approve_tabs
+
+    @property
+    def checkbox_tabs(self):
+        &#34;&#34;&#34;Gets the checkbox_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document in a location where the recipient can select an option.  # noqa: E501
+
+        :return: The checkbox_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Checkbox]
+        &#34;&#34;&#34;
+        return self._checkbox_tabs
+
+    @checkbox_tabs.setter
+    def checkbox_tabs(self, checkbox_tabs):
+        &#34;&#34;&#34;Sets the checkbox_tabs of this Tabs.
+
+        Specifies a tag on the document in a location where the recipient can select an option.  # noqa: E501
+
+        :param checkbox_tabs: The checkbox_tabs of this Tabs.  # noqa: E501
+        :type: list[Checkbox]
+        &#34;&#34;&#34;
+
+        self._checkbox_tabs = checkbox_tabs
+
+    @property
+    def comment_thread_tabs(self):
+        &#34;&#34;&#34;Gets the comment_thread_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The comment_thread_tabs of this Tabs.  # noqa: E501
+        :rtype: list[CommentThread]
+        &#34;&#34;&#34;
+        return self._comment_thread_tabs
+
+    @comment_thread_tabs.setter
+    def comment_thread_tabs(self, comment_thread_tabs):
+        &#34;&#34;&#34;Sets the comment_thread_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param comment_thread_tabs: The comment_thread_tabs of this Tabs.  # noqa: E501
+        :type: list[CommentThread]
+        &#34;&#34;&#34;
+
+        self._comment_thread_tabs = comment_thread_tabs
+
+    @property
+    def commission_county_tabs(self):
+        &#34;&#34;&#34;Gets the commission_county_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The commission_county_tabs of this Tabs.  # noqa: E501
+        :rtype: list[CommissionCounty]
+        &#34;&#34;&#34;
+        return self._commission_county_tabs
+
+    @commission_county_tabs.setter
+    def commission_county_tabs(self, commission_county_tabs):
+        &#34;&#34;&#34;Sets the commission_county_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param commission_county_tabs: The commission_county_tabs of this Tabs.  # noqa: E501
+        :type: list[CommissionCounty]
+        &#34;&#34;&#34;
+
+        self._commission_county_tabs = commission_county_tabs
+
+    @property
+    def commission_expiration_tabs(self):
+        &#34;&#34;&#34;Gets the commission_expiration_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The commission_expiration_tabs of this Tabs.  # noqa: E501
+        :rtype: list[CommissionExpiration]
+        &#34;&#34;&#34;
+        return self._commission_expiration_tabs
+
+    @commission_expiration_tabs.setter
+    def commission_expiration_tabs(self, commission_expiration_tabs):
+        &#34;&#34;&#34;Sets the commission_expiration_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param commission_expiration_tabs: The commission_expiration_tabs of this Tabs.  # noqa: E501
+        :type: list[CommissionExpiration]
+        &#34;&#34;&#34;
+
+        self._commission_expiration_tabs = commission_expiration_tabs
+
+    @property
+    def commission_number_tabs(self):
+        &#34;&#34;&#34;Gets the commission_number_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The commission_number_tabs of this Tabs.  # noqa: E501
+        :rtype: list[CommissionNumber]
+        &#34;&#34;&#34;
+        return self._commission_number_tabs
+
+    @commission_number_tabs.setter
+    def commission_number_tabs(self, commission_number_tabs):
+        &#34;&#34;&#34;Sets the commission_number_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param commission_number_tabs: The commission_number_tabs of this Tabs.  # noqa: E501
+        :type: list[CommissionNumber]
+        &#34;&#34;&#34;
+
+        self._commission_number_tabs = commission_number_tabs
+
+    @property
+    def commission_state_tabs(self):
+        &#34;&#34;&#34;Gets the commission_state_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The commission_state_tabs of this Tabs.  # noqa: E501
+        :rtype: list[CommissionState]
+        &#34;&#34;&#34;
+        return self._commission_state_tabs
+
+    @commission_state_tabs.setter
+    def commission_state_tabs(self, commission_state_tabs):
+        &#34;&#34;&#34;Sets the commission_state_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param commission_state_tabs: The commission_state_tabs of this Tabs.  # noqa: E501
+        :type: list[CommissionState]
+        &#34;&#34;&#34;
+
+        self._commission_state_tabs = commission_state_tabs
+
+    @property
+    def company_tabs(self):
+        &#34;&#34;&#34;Gets the company_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient&#39;s company name to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The company_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Company]
+        &#34;&#34;&#34;
+        return self._company_tabs
+
+    @company_tabs.setter
+    def company_tabs(self, company_tabs):
+        &#34;&#34;&#34;Sets the company_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient&#39;s company name to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param company_tabs: The company_tabs of this Tabs.  # noqa: E501
+        :type: list[Company]
+        &#34;&#34;&#34;
+
+        self._company_tabs = company_tabs
+
+    @property
+    def currency_tabs(self):
+        &#34;&#34;&#34;Gets the currency_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The currency_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Currency]
+        &#34;&#34;&#34;
+        return self._currency_tabs
+
+    @currency_tabs.setter
+    def currency_tabs(self, currency_tabs):
+        &#34;&#34;&#34;Sets the currency_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param currency_tabs: The currency_tabs of this Tabs.  # noqa: E501
+        :type: list[Currency]
+        &#34;&#34;&#34;
+
+        self._currency_tabs = currency_tabs
+
+    @property
+    def date_signed_tabs(self):
+        &#34;&#34;&#34;Gets the date_signed_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tab on the document where the date the document was signed will automatically appear.  # noqa: E501
+
+        :return: The date_signed_tabs of this Tabs.  # noqa: E501
+        :rtype: list[DateSigned]
+        &#34;&#34;&#34;
+        return self._date_signed_tabs
+
+    @date_signed_tabs.setter
+    def date_signed_tabs(self, date_signed_tabs):
+        &#34;&#34;&#34;Sets the date_signed_tabs of this Tabs.
+
+        Specifies a tab on the document where the date the document was signed will automatically appear.  # noqa: E501
+
+        :param date_signed_tabs: The date_signed_tabs of this Tabs.  # noqa: E501
+        :type: list[DateSigned]
+        &#34;&#34;&#34;
+
+        self._date_signed_tabs = date_signed_tabs
+
+    @property
+    def date_tabs(self):
+        &#34;&#34;&#34;Gets the date_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.  # noqa: E501
+
+        :return: The date_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Date]
+        &#34;&#34;&#34;
+        return self._date_tabs
+
+    @date_tabs.setter
+    def date_tabs(self, date_tabs):
+        &#34;&#34;&#34;Sets the date_tabs of this Tabs.
+
+        Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.  # noqa: E501
+
+        :param date_tabs: The date_tabs of this Tabs.  # noqa: E501
+        :type: list[Date]
+        &#34;&#34;&#34;
+
+        self._date_tabs = date_tabs
+
+    @property
+    def decline_tabs(self):
+        &#34;&#34;&#34;Gets the decline_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want to give the recipient the option of declining an envelope. If the recipient clicks the Decline tag during the signing process, the envelope is voided.  # noqa: E501
+
+        :return: The decline_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Decline]
+        &#34;&#34;&#34;
+        return self._decline_tabs
+
+    @decline_tabs.setter
+    def decline_tabs(self, decline_tabs):
+        &#34;&#34;&#34;Sets the decline_tabs of this Tabs.
+
+        Specifies a tag on the document where you want to give the recipient the option of declining an envelope. If the recipient clicks the Decline tag during the signing process, the envelope is voided.  # noqa: E501
+
+        :param decline_tabs: The decline_tabs of this Tabs.  # noqa: E501
+        :type: list[Decline]
+        &#34;&#34;&#34;
+
+        self._decline_tabs = decline_tabs
+
+    @property
+    def draw_tabs(self):
+        &#34;&#34;&#34;Gets the draw_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The draw_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Draw]
+        &#34;&#34;&#34;
+        return self._draw_tabs
+
+    @draw_tabs.setter
+    def draw_tabs(self, draw_tabs):
+        &#34;&#34;&#34;Sets the draw_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param draw_tabs: The draw_tabs of this Tabs.  # noqa: E501
+        :type: list[Draw]
+        &#34;&#34;&#34;
+
+        self._draw_tabs = draw_tabs
+
+    @property
+    def email_address_tabs(self):
+        &#34;&#34;&#34;Gets the email_address_tabs of this Tabs.  # noqa: E501
+
+        Specifies a location on the document where you want where you want the recipient&#39;s email, as entered in the recipient information, to display.  # noqa: E501
+
+        :return: The email_address_tabs of this Tabs.  # noqa: E501
+        :rtype: list[EmailAddress]
+        &#34;&#34;&#34;
+        return self._email_address_tabs
+
+    @email_address_tabs.setter
+    def email_address_tabs(self, email_address_tabs):
+        &#34;&#34;&#34;Sets the email_address_tabs of this Tabs.
+
+        Specifies a location on the document where you want where you want the recipient&#39;s email, as entered in the recipient information, to display.  # noqa: E501
+
+        :param email_address_tabs: The email_address_tabs of this Tabs.  # noqa: E501
+        :type: list[EmailAddress]
+        &#34;&#34;&#34;
+
+        self._email_address_tabs = email_address_tabs
+
+    @property
+    def email_tabs(self):
+        &#34;&#34;&#34;Gets the email_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The email_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Email]
+        &#34;&#34;&#34;
+        return self._email_tabs
+
+    @email_tabs.setter
+    def email_tabs(self, email_tabs):
+        &#34;&#34;&#34;Sets the email_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param email_tabs: The email_tabs of this Tabs.  # noqa: E501
+        :type: list[Email]
+        &#34;&#34;&#34;
+
+        self._email_tabs = email_tabs
+
+    @property
+    def envelope_id_tabs(self):
+        &#34;&#34;&#34;Gets the envelope_id_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the envelope ID for to appear. Recipients cannot enter or change the information in this tab, it is for informational purposes only.  # noqa: E501
+
+        :return: The envelope_id_tabs of this Tabs.  # noqa: E501
+        :rtype: list[EnvelopeId]
+        &#34;&#34;&#34;
+        return self._envelope_id_tabs
+
+    @envelope_id_tabs.setter
+    def envelope_id_tabs(self, envelope_id_tabs):
+        &#34;&#34;&#34;Sets the envelope_id_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the envelope ID for to appear. Recipients cannot enter or change the information in this tab, it is for informational purposes only.  # noqa: E501
+
+        :param envelope_id_tabs: The envelope_id_tabs of this Tabs.  # noqa: E501
+        :type: list[EnvelopeId]
+        &#34;&#34;&#34;
+
+        self._envelope_id_tabs = envelope_id_tabs
+
+    @property
+    def first_name_tabs(self):
+        &#34;&#34;&#34;Gets the first_name_tabs of this Tabs.  # noqa: E501
+
+        Specifies tag on a document where you want the recipient&#39;s first name to appear. This tag takes the recipient&#39;s name, as entered in the recipient information, splits it into sections based on spaces and uses the first section as the first name.  # noqa: E501
+
+        :return: The first_name_tabs of this Tabs.  # noqa: E501
+        :rtype: list[FirstName]
+        &#34;&#34;&#34;
+        return self._first_name_tabs
+
+    @first_name_tabs.setter
+    def first_name_tabs(self, first_name_tabs):
+        &#34;&#34;&#34;Sets the first_name_tabs of this Tabs.
+
+        Specifies tag on a document where you want the recipient&#39;s first name to appear. This tag takes the recipient&#39;s name, as entered in the recipient information, splits it into sections based on spaces and uses the first section as the first name.  # noqa: E501
+
+        :param first_name_tabs: The first_name_tabs of this Tabs.  # noqa: E501
+        :type: list[FirstName]
+        &#34;&#34;&#34;
+
+        self._first_name_tabs = first_name_tabs
+
+    @property
+    def formula_tabs(self):
+        &#34;&#34;&#34;Gets the formula_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag that is used to add a calculated field to a document. Envelope recipients cannot directly enter information into the tag; the formula tab calculates and displays a new value when changes are made to the reference tag values. The reference tag information and calculation operations are entered in the \&#34;formula\&#34; element. See the [ML:Using the Calculated Fields Feature] quick start guide or [ML:DocuSign Service User Guide] for more information about formulas.  # noqa: E501
+
+        :return: The formula_tabs of this Tabs.  # noqa: E501
+        :rtype: list[FormulaTab]
+        &#34;&#34;&#34;
+        return self._formula_tabs
+
+    @formula_tabs.setter
+    def formula_tabs(self, formula_tabs):
+        &#34;&#34;&#34;Sets the formula_tabs of this Tabs.
+
+        Specifies a tag that is used to add a calculated field to a document. Envelope recipients cannot directly enter information into the tag; the formula tab calculates and displays a new value when changes are made to the reference tag values. The reference tag information and calculation operations are entered in the \&#34;formula\&#34; element. See the [ML:Using the Calculated Fields Feature] quick start guide or [ML:DocuSign Service User Guide] for more information about formulas.  # noqa: E501
+
+        :param formula_tabs: The formula_tabs of this Tabs.  # noqa: E501
+        :type: list[FormulaTab]
+        &#34;&#34;&#34;
+
+        self._formula_tabs = formula_tabs
+
+    @property
+    def full_name_tabs(self):
+        &#34;&#34;&#34;Gets the full_name_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient&#39;s name to appear.  # noqa: E501
+
+        :return: The full_name_tabs of this Tabs.  # noqa: E501
+        :rtype: list[FullName]
+        &#34;&#34;&#34;
+        return self._full_name_tabs
+
+    @full_name_tabs.setter
+    def full_name_tabs(self, full_name_tabs):
+        &#34;&#34;&#34;Sets the full_name_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient&#39;s name to appear.  # noqa: E501
+
+        :param full_name_tabs: The full_name_tabs of this Tabs.  # noqa: E501
+        :type: list[FullName]
+        &#34;&#34;&#34;
+
+        self._full_name_tabs = full_name_tabs
+
+    @property
+    def initial_here_tabs(self):
+        &#34;&#34;&#34;Gets the initial_here_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag location in the document at which a recipient will place their initials. The `optional` parameter specifies whether the initials are required or optional.  # noqa: E501
+
+        :return: The initial_here_tabs of this Tabs.  # noqa: E501
+        :rtype: list[InitialHere]
+        &#34;&#34;&#34;
+        return self._initial_here_tabs
+
+    @initial_here_tabs.setter
+    def initial_here_tabs(self, initial_here_tabs):
+        &#34;&#34;&#34;Sets the initial_here_tabs of this Tabs.
+
+        Specifies a tag location in the document at which a recipient will place their initials. The `optional` parameter specifies whether the initials are required or optional.  # noqa: E501
+
+        :param initial_here_tabs: The initial_here_tabs of this Tabs.  # noqa: E501
+        :type: list[InitialHere]
+        &#34;&#34;&#34;
+
+        self._initial_here_tabs = initial_here_tabs
+
+    @property
+    def last_name_tabs(self):
+        &#34;&#34;&#34;Gets the last_name_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on a document where you want the recipient&#39;s last name to appear. This tag takes the recipient&#39;s name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.  # noqa: E501
+
+        :return: The last_name_tabs of this Tabs.  # noqa: E501
+        :rtype: list[LastName]
+        &#34;&#34;&#34;
+        return self._last_name_tabs
+
+    @last_name_tabs.setter
+    def last_name_tabs(self, last_name_tabs):
+        &#34;&#34;&#34;Sets the last_name_tabs of this Tabs.
+
+        Specifies a tag on a document where you want the recipient&#39;s last name to appear. This tag takes the recipient&#39;s name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.  # noqa: E501
+
+        :param last_name_tabs: The last_name_tabs of this Tabs.  # noqa: E501
+        :type: list[LastName]
+        &#34;&#34;&#34;
+
+        self._last_name_tabs = last_name_tabs
+
+    @property
+    def list_tabs(self):
+        &#34;&#34;&#34;Gets the list_tabs of this Tabs.  # noqa: E501
+
+        Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.  # noqa: E501
+
+        :return: The list_tabs of this Tabs.  # noqa: E501
+        :rtype: list[List]
+        &#34;&#34;&#34;
+        return self._list_tabs
+
+    @list_tabs.setter
+    def list_tabs(self, list_tabs):
+        &#34;&#34;&#34;Sets the list_tabs of this Tabs.
+
+        Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.  # noqa: E501
+
+        :param list_tabs: The list_tabs of this Tabs.  # noqa: E501
+        :type: list[List]
+        &#34;&#34;&#34;
+
+        self._list_tabs = list_tabs
+
+    @property
+    def notarize_tabs(self):
+        &#34;&#34;&#34;Gets the notarize_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The notarize_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Notarize]
+        &#34;&#34;&#34;
+        return self._notarize_tabs
+
+    @notarize_tabs.setter
+    def notarize_tabs(self, notarize_tabs):
+        &#34;&#34;&#34;Sets the notarize_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param notarize_tabs: The notarize_tabs of this Tabs.  # noqa: E501
+        :type: list[Notarize]
+        &#34;&#34;&#34;
+
+        self._notarize_tabs = notarize_tabs
+
+    @property
+    def notary_seal_tabs(self):
+        &#34;&#34;&#34;Gets the notary_seal_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The notary_seal_tabs of this Tabs.  # noqa: E501
+        :rtype: list[NotarySeal]
+        &#34;&#34;&#34;
+        return self._notary_seal_tabs
+
+    @notary_seal_tabs.setter
+    def notary_seal_tabs(self, notary_seal_tabs):
+        &#34;&#34;&#34;Sets the notary_seal_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param notary_seal_tabs: The notary_seal_tabs of this Tabs.  # noqa: E501
+        :type: list[NotarySeal]
+        &#34;&#34;&#34;
+
+        self._notary_seal_tabs = notary_seal_tabs
+
+    @property
+    def note_tabs(self):
+        &#34;&#34;&#34;Gets the note_tabs of this Tabs.  # noqa: E501
+
+        Specifies a location on the document where you want to place additional information, in the form of a note, for a recipient.  # noqa: E501
+
+        :return: The note_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Note]
+        &#34;&#34;&#34;
+        return self._note_tabs
+
+    @note_tabs.setter
+    def note_tabs(self, note_tabs):
+        &#34;&#34;&#34;Sets the note_tabs of this Tabs.
+
+        Specifies a location on the document where you want to place additional information, in the form of a note, for a recipient.  # noqa: E501
+
+        :param note_tabs: The note_tabs of this Tabs.  # noqa: E501
+        :type: list[Note]
+        &#34;&#34;&#34;
+
+        self._note_tabs = note_tabs
+
+    @property
+    def number_tabs(self):
+        &#34;&#34;&#34;Gets the number_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.   # noqa: E501
+
+        :return: The number_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Number]
+        &#34;&#34;&#34;
+        return self._number_tabs
+
+    @number_tabs.setter
+    def number_tabs(self, number_tabs):
+        &#34;&#34;&#34;Sets the number_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.   # noqa: E501
+
+        :param number_tabs: The number_tabs of this Tabs.  # noqa: E501
+        :type: list[Number]
+        &#34;&#34;&#34;
+
+        self._number_tabs = number_tabs
+
+    @property
+    def phone_number_tabs(self):
+        &#34;&#34;&#34;Gets the phone_number_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The phone_number_tabs of this Tabs.  # noqa: E501
+        :rtype: list[PhoneNumber]
+        &#34;&#34;&#34;
+        return self._phone_number_tabs
+
+    @phone_number_tabs.setter
+    def phone_number_tabs(self, phone_number_tabs):
+        &#34;&#34;&#34;Sets the phone_number_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param phone_number_tabs: The phone_number_tabs of this Tabs.  # noqa: E501
+        :type: list[PhoneNumber]
+        &#34;&#34;&#34;
+
+        self._phone_number_tabs = phone_number_tabs
+
+    @property
+    def poly_line_overlay_tabs(self):
+        &#34;&#34;&#34;Gets the poly_line_overlay_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The poly_line_overlay_tabs of this Tabs.  # noqa: E501
+        :rtype: list[PolyLineOverlay]
+        &#34;&#34;&#34;
+        return self._poly_line_overlay_tabs
+
+    @poly_line_overlay_tabs.setter
+    def poly_line_overlay_tabs(self, poly_line_overlay_tabs):
+        &#34;&#34;&#34;Sets the poly_line_overlay_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param poly_line_overlay_tabs: The poly_line_overlay_tabs of this Tabs.  # noqa: E501
+        :type: list[PolyLineOverlay]
+        &#34;&#34;&#34;
+
+        self._poly_line_overlay_tabs = poly_line_overlay_tabs
+
+    @property
+    def prefill_tabs(self):
+        &#34;&#34;&#34;Gets the prefill_tabs of this Tabs.  # noqa: E501
+
+
+        :return: The prefill_tabs of this Tabs.  # noqa: E501
+        :rtype: PrefillTabs
+        &#34;&#34;&#34;
+        return self._prefill_tabs
+
+    @prefill_tabs.setter
+    def prefill_tabs(self, prefill_tabs):
+        &#34;&#34;&#34;Sets the prefill_tabs of this Tabs.
+
+
+        :param prefill_tabs: The prefill_tabs of this Tabs.  # noqa: E501
+        :type: PrefillTabs
+        &#34;&#34;&#34;
+
+        self._prefill_tabs = prefill_tabs
+
+    @property
+    def radio_group_tabs(self):
+        &#34;&#34;&#34;Gets the radio_group_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document.  # noqa: E501
+
+        :return: The radio_group_tabs of this Tabs.  # noqa: E501
+        :rtype: list[RadioGroup]
+        &#34;&#34;&#34;
+        return self._radio_group_tabs
+
+    @radio_group_tabs.setter
+    def radio_group_tabs(self, radio_group_tabs):
+        &#34;&#34;&#34;Sets the radio_group_tabs of this Tabs.
+
+        Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document.  # noqa: E501
+
+        :param radio_group_tabs: The radio_group_tabs of this Tabs.  # noqa: E501
+        :type: list[RadioGroup]
+        &#34;&#34;&#34;
+
+        self._radio_group_tabs = radio_group_tabs
+
+    @property
+    def signer_attachment_tabs(self):
+        &#34;&#34;&#34;Gets the signer_attachment_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document when you want the recipient to add supporting documents to an envelope.  # noqa: E501
+
+        :return: The signer_attachment_tabs of this Tabs.  # noqa: E501
+        :rtype: list[SignerAttachment]
+        &#34;&#34;&#34;
+        return self._signer_attachment_tabs
+
+    @signer_attachment_tabs.setter
+    def signer_attachment_tabs(self, signer_attachment_tabs):
+        &#34;&#34;&#34;Sets the signer_attachment_tabs of this Tabs.
+
+        Specifies a tag on the document when you want the recipient to add supporting documents to an envelope.  # noqa: E501
+
+        :param signer_attachment_tabs: The signer_attachment_tabs of this Tabs.  # noqa: E501
+        :type: list[SignerAttachment]
+        &#34;&#34;&#34;
+
+        self._signer_attachment_tabs = signer_attachment_tabs
+
+    @property
+    def sign_here_tabs(self):
+        &#34;&#34;&#34;Gets the sign_here_tabs of this Tabs.  # noqa: E501
+
+        A complex type the contains information about the tag that specifies where the recipient places their signature in the document. The \&#34;optional\&#34; parameter sets if the signature is required or optional.   # noqa: E501
+
+        :return: The sign_here_tabs of this Tabs.  # noqa: E501
+        :rtype: list[SignHere]
+        &#34;&#34;&#34;
+        return self._sign_here_tabs
+
+    @sign_here_tabs.setter
+    def sign_here_tabs(self, sign_here_tabs):
+        &#34;&#34;&#34;Sets the sign_here_tabs of this Tabs.
+
+        A complex type the contains information about the tag that specifies where the recipient places their signature in the document. The \&#34;optional\&#34; parameter sets if the signature is required or optional.   # noqa: E501
+
+        :param sign_here_tabs: The sign_here_tabs of this Tabs.  # noqa: E501
+        :type: list[SignHere]
+        &#34;&#34;&#34;
+
+        self._sign_here_tabs = sign_here_tabs
+
+    @property
+    def smart_section_tabs(self):
+        &#34;&#34;&#34;Gets the smart_section_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The smart_section_tabs of this Tabs.  # noqa: E501
+        :rtype: list[SmartSection]
+        &#34;&#34;&#34;
+        return self._smart_section_tabs
+
+    @smart_section_tabs.setter
+    def smart_section_tabs(self, smart_section_tabs):
+        &#34;&#34;&#34;Sets the smart_section_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param smart_section_tabs: The smart_section_tabs of this Tabs.  # noqa: E501
+        :type: list[SmartSection]
+        &#34;&#34;&#34;
+
+        self._smart_section_tabs = smart_section_tabs
+
+    @property
+    def ssn_tabs(self):
+        &#34;&#34;&#34;Gets the ssn_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The ssn_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Ssn]
+        &#34;&#34;&#34;
+        return self._ssn_tabs
+
+    @ssn_tabs.setter
+    def ssn_tabs(self, ssn_tabs):
+        &#34;&#34;&#34;Sets the ssn_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param ssn_tabs: The ssn_tabs of this Tabs.  # noqa: E501
+        :type: list[Ssn]
+        &#34;&#34;&#34;
+
+        self._ssn_tabs = ssn_tabs
+
+    @property
+    def tab_groups(self):
+        &#34;&#34;&#34;Gets the tab_groups of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tab_groups of this Tabs.  # noqa: E501
+        :rtype: list[TabGroup]
+        &#34;&#34;&#34;
+        return self._tab_groups
+
+    @tab_groups.setter
+    def tab_groups(self, tab_groups):
+        &#34;&#34;&#34;Sets the tab_groups of this Tabs.
+
+          # noqa: E501
+
+        :param tab_groups: The tab_groups of this Tabs.  # noqa: E501
+        :type: list[TabGroup]
+        &#34;&#34;&#34;
+
+        self._tab_groups = tab_groups
+
+    @property
+    def text_tabs(self):
+        &#34;&#34;&#34;Gets the text_tabs of this Tabs.  # noqa: E501
+
+        Specifies a that that is an adaptable field that allows the recipient to enter different text information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The text_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Text]
+        &#34;&#34;&#34;
+        return self._text_tabs
+
+    @text_tabs.setter
+    def text_tabs(self, text_tabs):
+        &#34;&#34;&#34;Sets the text_tabs of this Tabs.
+
+        Specifies a that that is an adaptable field that allows the recipient to enter different text information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param text_tabs: The text_tabs of this Tabs.  # noqa: E501
+        :type: list[Text]
+        &#34;&#34;&#34;
+
+        self._text_tabs = text_tabs
+
+    @property
+    def title_tabs(self):
+        &#34;&#34;&#34;Gets the title_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient&#39;s title to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The title_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Title]
+        &#34;&#34;&#34;
+        return self._title_tabs
+
+    @title_tabs.setter
+    def title_tabs(self, title_tabs):
+        &#34;&#34;&#34;Sets the title_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient&#39;s title to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param title_tabs: The title_tabs of this Tabs.  # noqa: E501
+        :type: list[Title]
+        &#34;&#34;&#34;
+
+        self._title_tabs = title_tabs
+
+    @property
+    def view_tabs(self):
+        &#34;&#34;&#34;Gets the view_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The view_tabs of this Tabs.  # noqa: E501
+        :rtype: list[View]
+        &#34;&#34;&#34;
+        return self._view_tabs
+
+    @view_tabs.setter
+    def view_tabs(self, view_tabs):
+        &#34;&#34;&#34;Sets the view_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param view_tabs: The view_tabs of this Tabs.  # noqa: E501
+        :type: list[View]
+        &#34;&#34;&#34;
+
+        self._view_tabs = view_tabs
+
+    @property
+    def zip_tabs(self):
+        &#34;&#34;&#34;Gets the zip_tabs of this Tabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The zip_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Zip]
+        &#34;&#34;&#34;
+        return self._zip_tabs
+
+    @zip_tabs.setter
+    def zip_tabs(self, zip_tabs):
+        &#34;&#34;&#34;Sets the zip_tabs of this Tabs.
+
+        Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param zip_tabs: The zip_tabs of this Tabs.  # noqa: E501
+        :type: list[Zip]
+        &#34;&#34;&#34;
+
+        self._zip_tabs = zip_tabs
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(Tabs, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, Tabs):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.tabs.Tabs.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.tabs.Tabs.approve_tabs"><code class="name">var <span class="ident">approve_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the approve_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on the document where you want the recipient to approve documents in an envelope without placing a signature or initials on the document. If the recipient clicks the Approve tag during the signing process, the recipient is considered to have signed the document. No information is shown on the document for the approval, but it is recorded as a signature in the envelope history.
+# noqa: E501</p>
+<p>:return: The approve_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Approve]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def approve_tabs(self):
+    &#34;&#34;&#34;Gets the approve_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on the document where you want the recipient to approve documents in an envelope without placing a signature or initials on the document. If the recipient clicks the Approve tag during the signing process, the recipient is considered to have signed the document. No information is shown on the document for the approval, but it is recorded as a signature in the envelope history.  # noqa: E501
+
+    :return: The approve_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Approve]
+    &#34;&#34;&#34;
+    return self._approve_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.checkbox_tabs"><code class="name">var <span class="ident">checkbox_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the checkbox_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on the document in a location where the recipient can select an option.
+# noqa: E501</p>
+<p>:return: The checkbox_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Checkbox]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def checkbox_tabs(self):
+    &#34;&#34;&#34;Gets the checkbox_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on the document in a location where the recipient can select an option.  # noqa: E501
+
+    :return: The checkbox_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Checkbox]
+    &#34;&#34;&#34;
+    return self._checkbox_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.comment_thread_tabs"><code class="name">var <span class="ident">comment_thread_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the comment_thread_tabs of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The comment_thread_tabs of this Tabs.
+# noqa: E501
+:rtype: list[CommentThread]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def comment_thread_tabs(self):
+    &#34;&#34;&#34;Gets the comment_thread_tabs of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The comment_thread_tabs of this Tabs.  # noqa: E501
+    :rtype: list[CommentThread]
+    &#34;&#34;&#34;
+    return self._comment_thread_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.commission_county_tabs"><code class="name">var <span class="ident">commission_county_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the commission_county_tabs of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The commission_county_tabs of this Tabs.
+# noqa: E501
+:rtype: list[CommissionCounty]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def commission_county_tabs(self):
+    &#34;&#34;&#34;Gets the commission_county_tabs of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The commission_county_tabs of this Tabs.  # noqa: E501
+    :rtype: list[CommissionCounty]
+    &#34;&#34;&#34;
+    return self._commission_county_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.commission_expiration_tabs"><code class="name">var <span class="ident">commission_expiration_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the commission_expiration_tabs of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The commission_expiration_tabs of this Tabs.
+# noqa: E501
+:rtype: list[CommissionExpiration]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def commission_expiration_tabs(self):
+    &#34;&#34;&#34;Gets the commission_expiration_tabs of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The commission_expiration_tabs of this Tabs.  # noqa: E501
+    :rtype: list[CommissionExpiration]
+    &#34;&#34;&#34;
+    return self._commission_expiration_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.commission_number_tabs"><code class="name">var <span class="ident">commission_number_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the commission_number_tabs of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The commission_number_tabs of this Tabs.
+# noqa: E501
+:rtype: list[CommissionNumber]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def commission_number_tabs(self):
+    &#34;&#34;&#34;Gets the commission_number_tabs of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The commission_number_tabs of this Tabs.  # noqa: E501
+    :rtype: list[CommissionNumber]
+    &#34;&#34;&#34;
+    return self._commission_number_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.commission_state_tabs"><code class="name">var <span class="ident">commission_state_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the commission_state_tabs of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The commission_state_tabs of this Tabs.
+# noqa: E501
+:rtype: list[CommissionState]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def commission_state_tabs(self):
+    &#34;&#34;&#34;Gets the commission_state_tabs of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The commission_state_tabs of this Tabs.  # noqa: E501
+    :rtype: list[CommissionState]
+    &#34;&#34;&#34;
+    return self._commission_state_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.company_tabs"><code class="name">var <span class="ident">company_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the company_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on the document where you want the recipient's company name to appear.
+When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.
+# noqa: E501</p>
+<p>:return: The company_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Company]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def company_tabs(self):
+    &#34;&#34;&#34;Gets the company_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on the document where you want the recipient&#39;s company name to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+    :return: The company_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Company]
+    &#34;&#34;&#34;
+    return self._company_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.currency_tabs"><code class="name">var <span class="ident">currency_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the currency_tabs of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The currency_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Currency]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def currency_tabs(self):
+    &#34;&#34;&#34;Gets the currency_tabs of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The currency_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Currency]
+    &#34;&#34;&#34;
+    return self._currency_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.date_signed_tabs"><code class="name">var <span class="ident">date_signed_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the date_signed_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tab on the document where the date the document was signed will automatically appear.
+# noqa: E501</p>
+<p>:return: The date_signed_tabs of this Tabs.
+# noqa: E501
+:rtype: list[DateSigned]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def date_signed_tabs(self):
+    &#34;&#34;&#34;Gets the date_signed_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tab on the document where the date the document was signed will automatically appear.  # noqa: E501
+
+    :return: The date_signed_tabs of this Tabs.  # noqa: E501
+    :rtype: list[DateSigned]
+    &#34;&#34;&#34;
+    return self._date_signed_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.date_tabs"><code class="name">var <span class="ident">date_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the date_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.
+If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.
+# noqa: E501</p>
+<p>:return: The date_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Date]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def date_tabs(self):
+    &#34;&#34;&#34;Gets the date_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.  # noqa: E501
+
+    :return: The date_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Date]
+    &#34;&#34;&#34;
+    return self._date_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.decline_tabs"><code class="name">var <span class="ident">decline_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the decline_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on the document where you want to give the recipient the option of declining an envelope. If the recipient clicks the Decline tag during the signing process, the envelope is voided.
+# noqa: E501</p>
+<p>:return: The decline_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Decline]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def decline_tabs(self):
+    &#34;&#34;&#34;Gets the decline_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on the document where you want to give the recipient the option of declining an envelope. If the recipient clicks the Decline tag during the signing process, the envelope is voided.  # noqa: E501
+
+    :return: The decline_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Decline]
+    &#34;&#34;&#34;
+    return self._decline_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.draw_tabs"><code class="name">var <span class="ident">draw_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the draw_tabs of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The draw_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Draw]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def draw_tabs(self):
+    &#34;&#34;&#34;Gets the draw_tabs of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The draw_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Draw]
+    &#34;&#34;&#34;
+    return self._draw_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.email_address_tabs"><code class="name">var <span class="ident">email_address_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the email_address_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a location on the document where you want where you want the recipient's email, as entered in the recipient information, to display.
+# noqa: E501</p>
+<p>:return: The email_address_tabs of this Tabs.
+# noqa: E501
+:rtype: list[EmailAddress]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def email_address_tabs(self):
+    &#34;&#34;&#34;Gets the email_address_tabs of this Tabs.  # noqa: E501
+
+    Specifies a location on the document where you want where you want the recipient&#39;s email, as entered in the recipient information, to display.  # noqa: E501
+
+    :return: The email_address_tabs of this Tabs.  # noqa: E501
+    :rtype: list[EmailAddress]
+    &#34;&#34;&#34;
+    return self._email_address_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.email_tabs"><code class="name">var <span class="ident">email_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the email_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.
+When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.
+# noqa: E501</p>
+<p>:return: The email_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Email]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def email_tabs(self):
+    &#34;&#34;&#34;Gets the email_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+    :return: The email_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Email]
+    &#34;&#34;&#34;
+    return self._email_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.envelope_id_tabs"><code class="name">var <span class="ident">envelope_id_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_id_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on the document where you want the envelope ID for to appear. Recipients cannot enter or change the information in this tab, it is for informational purposes only.
+# noqa: E501</p>
+<p>:return: The envelope_id_tabs of this Tabs.
+# noqa: E501
+:rtype: list[EnvelopeId]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_id_tabs(self):
+    &#34;&#34;&#34;Gets the envelope_id_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on the document where you want the envelope ID for to appear. Recipients cannot enter or change the information in this tab, it is for informational purposes only.  # noqa: E501
+
+    :return: The envelope_id_tabs of this Tabs.  # noqa: E501
+    :rtype: list[EnvelopeId]
+    &#34;&#34;&#34;
+    return self._envelope_id_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.first_name_tabs"><code class="name">var <span class="ident">first_name_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the first_name_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies tag on a document where you want the recipient's first name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the first section as the first name.
+# noqa: E501</p>
+<p>:return: The first_name_tabs of this Tabs.
+# noqa: E501
+:rtype: list[FirstName]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def first_name_tabs(self):
+    &#34;&#34;&#34;Gets the first_name_tabs of this Tabs.  # noqa: E501
+
+    Specifies tag on a document where you want the recipient&#39;s first name to appear. This tag takes the recipient&#39;s name, as entered in the recipient information, splits it into sections based on spaces and uses the first section as the first name.  # noqa: E501
+
+    :return: The first_name_tabs of this Tabs.  # noqa: E501
+    :rtype: list[FirstName]
+    &#34;&#34;&#34;
+    return self._first_name_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.formula_tabs"><code class="name">var <span class="ident">formula_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the formula_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag that is used to add a calculated field to a document. Envelope recipients cannot directly enter information into the tag; the formula tab calculates and displays a new value when changes are made to the reference tag values. The reference tag information and calculation operations are entered in the "formula" element. See the [ML:Using the Calculated Fields Feature] quick start guide or [ML:DocuSign Service User Guide] for more information about formulas.
+# noqa: E501</p>
+<p>:return: The formula_tabs of this Tabs.
+# noqa: E501
+:rtype: list[FormulaTab]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def formula_tabs(self):
+    &#34;&#34;&#34;Gets the formula_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag that is used to add a calculated field to a document. Envelope recipients cannot directly enter information into the tag; the formula tab calculates and displays a new value when changes are made to the reference tag values. The reference tag information and calculation operations are entered in the \&#34;formula\&#34; element. See the [ML:Using the Calculated Fields Feature] quick start guide or [ML:DocuSign Service User Guide] for more information about formulas.  # noqa: E501
+
+    :return: The formula_tabs of this Tabs.  # noqa: E501
+    :rtype: list[FormulaTab]
+    &#34;&#34;&#34;
+    return self._formula_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.full_name_tabs"><code class="name">var <span class="ident">full_name_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the full_name_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on the document where you want the recipient's name to appear.
+# noqa: E501</p>
+<p>:return: The full_name_tabs of this Tabs.
+# noqa: E501
+:rtype: list[FullName]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def full_name_tabs(self):
+    &#34;&#34;&#34;Gets the full_name_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on the document where you want the recipient&#39;s name to appear.  # noqa: E501
+
+    :return: The full_name_tabs of this Tabs.  # noqa: E501
+    :rtype: list[FullName]
+    &#34;&#34;&#34;
+    return self._full_name_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.initial_here_tabs"><code class="name">var <span class="ident">initial_here_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the initial_here_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag location in the document at which a recipient will place their initials. The <code>optional</code> parameter specifies whether the initials are required or optional.
+# noqa: E501</p>
+<p>:return: The initial_here_tabs of this Tabs.
+# noqa: E501
+:rtype: list[InitialHere]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def initial_here_tabs(self):
+    &#34;&#34;&#34;Gets the initial_here_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag location in the document at which a recipient will place their initials. The `optional` parameter specifies whether the initials are required or optional.  # noqa: E501
+
+    :return: The initial_here_tabs of this Tabs.  # noqa: E501
+    :rtype: list[InitialHere]
+    &#34;&#34;&#34;
+    return self._initial_here_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.last_name_tabs"><code class="name">var <span class="ident">last_name_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_name_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on a document where you want the recipient's last name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.
+# noqa: E501</p>
+<p>:return: The last_name_tabs of this Tabs.
+# noqa: E501
+:rtype: list[LastName]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_name_tabs(self):
+    &#34;&#34;&#34;Gets the last_name_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on a document where you want the recipient&#39;s last name to appear. This tag takes the recipient&#39;s name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.  # noqa: E501
+
+    :return: The last_name_tabs of this Tabs.  # noqa: E501
+    :rtype: list[LastName]
+    &#34;&#34;&#34;
+    return self._last_name_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.list_tabs"><code class="name">var <span class="ident">list_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the list_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.
+# noqa: E501</p>
+<p>:return: The list_tabs of this Tabs.
+# noqa: E501
+:rtype: list[List]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def list_tabs(self):
+    &#34;&#34;&#34;Gets the list_tabs of this Tabs.  # noqa: E501
+
+    Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.  # noqa: E501
+
+    :return: The list_tabs of this Tabs.  # noqa: E501
+    :rtype: list[List]
+    &#34;&#34;&#34;
+    return self._list_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.notarize_tabs"><code class="name">var <span class="ident">notarize_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the notarize_tabs of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The notarize_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Notarize]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def notarize_tabs(self):
+    &#34;&#34;&#34;Gets the notarize_tabs of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The notarize_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Notarize]
+    &#34;&#34;&#34;
+    return self._notarize_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.notary_seal_tabs"><code class="name">var <span class="ident">notary_seal_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the notary_seal_tabs of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The notary_seal_tabs of this Tabs.
+# noqa: E501
+:rtype: list[NotarySeal]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def notary_seal_tabs(self):
+    &#34;&#34;&#34;Gets the notary_seal_tabs of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The notary_seal_tabs of this Tabs.  # noqa: E501
+    :rtype: list[NotarySeal]
+    &#34;&#34;&#34;
+    return self._notary_seal_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.note_tabs"><code class="name">var <span class="ident">note_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the note_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a location on the document where you want to place additional information, in the form of a note, for a recipient.
+# noqa: E501</p>
+<p>:return: The note_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Note]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def note_tabs(self):
+    &#34;&#34;&#34;Gets the note_tabs of this Tabs.  # noqa: E501
+
+    Specifies a location on the document where you want to place additional information, in the form of a note, for a recipient.  # noqa: E501
+
+    :return: The note_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Note]
+    &#34;&#34;&#34;
+    return self._note_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.number_tabs"><code class="name">var <span class="ident">number_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the number_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.
+When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.
+# noqa: E501</p>
+<p>:return: The number_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Number]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def number_tabs(self):
+    &#34;&#34;&#34;Gets the number_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.   # noqa: E501
+
+    :return: The number_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Number]
+    &#34;&#34;&#34;
+    return self._number_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.phone_number_tabs"><code class="name">var <span class="ident">phone_number_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the phone_number_tabs of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The phone_number_tabs of this Tabs.
+# noqa: E501
+:rtype: list[PhoneNumber]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def phone_number_tabs(self):
+    &#34;&#34;&#34;Gets the phone_number_tabs of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The phone_number_tabs of this Tabs.  # noqa: E501
+    :rtype: list[PhoneNumber]
+    &#34;&#34;&#34;
+    return self._phone_number_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.poly_line_overlay_tabs"><code class="name">var <span class="ident">poly_line_overlay_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the poly_line_overlay_tabs of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The poly_line_overlay_tabs of this Tabs.
+# noqa: E501
+:rtype: list[PolyLineOverlay]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def poly_line_overlay_tabs(self):
+    &#34;&#34;&#34;Gets the poly_line_overlay_tabs of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The poly_line_overlay_tabs of this Tabs.  # noqa: E501
+    :rtype: list[PolyLineOverlay]
+    &#34;&#34;&#34;
+    return self._poly_line_overlay_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.prefill_tabs"><code class="name">var <span class="ident">prefill_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the prefill_tabs of this Tabs.
+# noqa: E501</p>
+<p>:return: The prefill_tabs of this Tabs.
+# noqa: E501
+:rtype: PrefillTabs</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def prefill_tabs(self):
+    &#34;&#34;&#34;Gets the prefill_tabs of this Tabs.  # noqa: E501
+
+
+    :return: The prefill_tabs of this Tabs.  # noqa: E501
+    :rtype: PrefillTabs
+    &#34;&#34;&#34;
+    return self._prefill_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.radio_group_tabs"><code class="name">var <span class="ident">radio_group_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the radio_group_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document.
+# noqa: E501</p>
+<p>:return: The radio_group_tabs of this Tabs.
+# noqa: E501
+:rtype: list[RadioGroup]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def radio_group_tabs(self):
+    &#34;&#34;&#34;Gets the radio_group_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document.  # noqa: E501
+
+    :return: The radio_group_tabs of this Tabs.  # noqa: E501
+    :rtype: list[RadioGroup]
+    &#34;&#34;&#34;
+    return self._radio_group_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.sign_here_tabs"><code class="name">var <span class="ident">sign_here_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sign_here_tabs of this Tabs.
+# noqa: E501</p>
+<p>A complex type the contains information about the tag that specifies where the recipient places their signature in the document. The "optional" parameter sets if the signature is required or optional.
+# noqa: E501</p>
+<p>:return: The sign_here_tabs of this Tabs.
+# noqa: E501
+:rtype: list[SignHere]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sign_here_tabs(self):
+    &#34;&#34;&#34;Gets the sign_here_tabs of this Tabs.  # noqa: E501
+
+    A complex type the contains information about the tag that specifies where the recipient places their signature in the document. The \&#34;optional\&#34; parameter sets if the signature is required or optional.   # noqa: E501
+
+    :return: The sign_here_tabs of this Tabs.  # noqa: E501
+    :rtype: list[SignHere]
+    &#34;&#34;&#34;
+    return self._sign_here_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.signer_attachment_tabs"><code class="name">var <span class="ident">signer_attachment_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signer_attachment_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on the document when you want the recipient to add supporting documents to an envelope.
+# noqa: E501</p>
+<p>:return: The signer_attachment_tabs of this Tabs.
+# noqa: E501
+:rtype: list[SignerAttachment]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signer_attachment_tabs(self):
+    &#34;&#34;&#34;Gets the signer_attachment_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on the document when you want the recipient to add supporting documents to an envelope.  # noqa: E501
+
+    :return: The signer_attachment_tabs of this Tabs.  # noqa: E501
+    :rtype: list[SignerAttachment]
+    &#34;&#34;&#34;
+    return self._signer_attachment_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.smart_section_tabs"><code class="name">var <span class="ident">smart_section_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the smart_section_tabs of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The smart_section_tabs of this Tabs.
+# noqa: E501
+:rtype: list[SmartSection]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def smart_section_tabs(self):
+    &#34;&#34;&#34;Gets the smart_section_tabs of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The smart_section_tabs of this Tabs.  # noqa: E501
+    :rtype: list[SmartSection]
+    &#34;&#34;&#34;
+    return self._smart_section_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.ssn_tabs"><code class="name">var <span class="ident">ssn_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the ssn_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.
+When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.
+# noqa: E501</p>
+<p>:return: The ssn_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Ssn]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def ssn_tabs(self):
+    &#34;&#34;&#34;Gets the ssn_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+    :return: The ssn_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Ssn]
+    &#34;&#34;&#34;
+    return self._ssn_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.tab_groups"><code class="name">var <span class="ident">tab_groups</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the tab_groups of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The tab_groups of this Tabs.
+# noqa: E501
+:rtype: list[TabGroup]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def tab_groups(self):
+    &#34;&#34;&#34;Gets the tab_groups of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The tab_groups of this Tabs.  # noqa: E501
+    :rtype: list[TabGroup]
+    &#34;&#34;&#34;
+    return self._tab_groups</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.text_tabs"><code class="name">var <span class="ident">text_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the text_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a that that is an adaptable field that allows the recipient to enter different text information.
+When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.
+# noqa: E501</p>
+<p>:return: The text_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Text]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def text_tabs(self):
+    &#34;&#34;&#34;Gets the text_tabs of this Tabs.  # noqa: E501
+
+    Specifies a that that is an adaptable field that allows the recipient to enter different text information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+    :return: The text_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Text]
+    &#34;&#34;&#34;
+    return self._text_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.title_tabs"><code class="name">var <span class="ident">title_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the title_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on the document where you want the recipient's title to appear.
+When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.
+# noqa: E501</p>
+<p>:return: The title_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Title]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def title_tabs(self):
+    &#34;&#34;&#34;Gets the title_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on the document where you want the recipient&#39;s title to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+    :return: The title_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Title]
+    &#34;&#34;&#34;
+    return self._title_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.view_tabs"><code class="name">var <span class="ident">view_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the view_tabs of this Tabs.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The view_tabs of this Tabs.
+# noqa: E501
+:rtype: list[View]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def view_tabs(self):
+    &#34;&#34;&#34;Gets the view_tabs of this Tabs.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The view_tabs of this Tabs.  # noqa: E501
+    :rtype: list[View]
+    &#34;&#34;&#34;
+    return self._view_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.zip_tabs"><code class="name">var <span class="ident">zip_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the zip_tabs of this Tabs.
+# noqa: E501</p>
+<p>Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.
+When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.
+# noqa: E501</p>
+<p>:return: The zip_tabs of this Tabs.
+# noqa: E501
+:rtype: list[Zip]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def zip_tabs(self):
+    &#34;&#34;&#34;Gets the zip_tabs of this Tabs.  # noqa: E501
+
+    Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+    :return: The zip_tabs of this Tabs.  # noqa: E501
+    :rtype: list[Zip]
+    &#34;&#34;&#34;
+    return self._zip_tabs</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.tabs.Tabs.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(Tabs, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tabs.Tabs.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.tabs.Tabs" href="#docusign_esign.models.tabs.Tabs">Tabs</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.tabs.Tabs.approve_tabs" href="#docusign_esign.models.tabs.Tabs.approve_tabs">approve_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.attribute_map" href="#docusign_esign.models.tabs.Tabs.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.checkbox_tabs" href="#docusign_esign.models.tabs.Tabs.checkbox_tabs">checkbox_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.comment_thread_tabs" href="#docusign_esign.models.tabs.Tabs.comment_thread_tabs">comment_thread_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.commission_county_tabs" href="#docusign_esign.models.tabs.Tabs.commission_county_tabs">commission_county_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.commission_expiration_tabs" href="#docusign_esign.models.tabs.Tabs.commission_expiration_tabs">commission_expiration_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.commission_number_tabs" href="#docusign_esign.models.tabs.Tabs.commission_number_tabs">commission_number_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.commission_state_tabs" href="#docusign_esign.models.tabs.Tabs.commission_state_tabs">commission_state_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.company_tabs" href="#docusign_esign.models.tabs.Tabs.company_tabs">company_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.currency_tabs" href="#docusign_esign.models.tabs.Tabs.currency_tabs">currency_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.date_signed_tabs" href="#docusign_esign.models.tabs.Tabs.date_signed_tabs">date_signed_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.date_tabs" href="#docusign_esign.models.tabs.Tabs.date_tabs">date_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.decline_tabs" href="#docusign_esign.models.tabs.Tabs.decline_tabs">decline_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.draw_tabs" href="#docusign_esign.models.tabs.Tabs.draw_tabs">draw_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.email_address_tabs" href="#docusign_esign.models.tabs.Tabs.email_address_tabs">email_address_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.email_tabs" href="#docusign_esign.models.tabs.Tabs.email_tabs">email_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.envelope_id_tabs" href="#docusign_esign.models.tabs.Tabs.envelope_id_tabs">envelope_id_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.first_name_tabs" href="#docusign_esign.models.tabs.Tabs.first_name_tabs">first_name_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.formula_tabs" href="#docusign_esign.models.tabs.Tabs.formula_tabs">formula_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.full_name_tabs" href="#docusign_esign.models.tabs.Tabs.full_name_tabs">full_name_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.initial_here_tabs" href="#docusign_esign.models.tabs.Tabs.initial_here_tabs">initial_here_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.last_name_tabs" href="#docusign_esign.models.tabs.Tabs.last_name_tabs">last_name_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.list_tabs" href="#docusign_esign.models.tabs.Tabs.list_tabs">list_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.notarize_tabs" href="#docusign_esign.models.tabs.Tabs.notarize_tabs">notarize_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.notary_seal_tabs" href="#docusign_esign.models.tabs.Tabs.notary_seal_tabs">notary_seal_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.note_tabs" href="#docusign_esign.models.tabs.Tabs.note_tabs">note_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.number_tabs" href="#docusign_esign.models.tabs.Tabs.number_tabs">number_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.phone_number_tabs" href="#docusign_esign.models.tabs.Tabs.phone_number_tabs">phone_number_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.poly_line_overlay_tabs" href="#docusign_esign.models.tabs.Tabs.poly_line_overlay_tabs">poly_line_overlay_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.prefill_tabs" href="#docusign_esign.models.tabs.Tabs.prefill_tabs">prefill_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.radio_group_tabs" href="#docusign_esign.models.tabs.Tabs.radio_group_tabs">radio_group_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.sign_here_tabs" href="#docusign_esign.models.tabs.Tabs.sign_here_tabs">sign_here_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.signer_attachment_tabs" href="#docusign_esign.models.tabs.Tabs.signer_attachment_tabs">signer_attachment_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.smart_section_tabs" href="#docusign_esign.models.tabs.Tabs.smart_section_tabs">smart_section_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.ssn_tabs" href="#docusign_esign.models.tabs.Tabs.ssn_tabs">ssn_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.swagger_types" href="#docusign_esign.models.tabs.Tabs.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.tab_groups" href="#docusign_esign.models.tabs.Tabs.tab_groups">tab_groups</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.text_tabs" href="#docusign_esign.models.tabs.Tabs.text_tabs">text_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.title_tabs" href="#docusign_esign.models.tabs.Tabs.title_tabs">title_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.to_dict" href="#docusign_esign.models.tabs.Tabs.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.to_str" href="#docusign_esign.models.tabs.Tabs.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.view_tabs" href="#docusign_esign.models.tabs.Tabs.view_tabs">view_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.tabs.Tabs.zip_tabs" href="#docusign_esign.models.tabs.Tabs.zip_tabs">zip_tabs</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

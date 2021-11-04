@@ -1,0 +1,1218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.sender_email_notifications API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.sender_email_notifications</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class SenderEmailNotifications(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;changed_signer&#39;: &#39;str&#39;,
+        &#39;comments_only_private_and_mention&#39;: &#39;str&#39;,
+        &#39;comments_receive_all&#39;: &#39;str&#39;,
+        &#39;delivery_failed&#39;: &#39;str&#39;,
+        &#39;envelope_complete&#39;: &#39;str&#39;,
+        &#39;offline_signing_failed&#39;: &#39;str&#39;,
+        &#39;powerform_responses_limit_notification_email&#39;: &#39;str&#39;,
+        &#39;purge_documents&#39;: &#39;str&#39;,
+        &#39;recipient_viewed&#39;: &#39;str&#39;,
+        &#39;sender_envelope_declined&#39;: &#39;str&#39;,
+        &#39;withdrawn_consent&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;changed_signer&#39;: &#39;changedSigner&#39;,
+        &#39;comments_only_private_and_mention&#39;: &#39;commentsOnlyPrivateAndMention&#39;,
+        &#39;comments_receive_all&#39;: &#39;commentsReceiveAll&#39;,
+        &#39;delivery_failed&#39;: &#39;deliveryFailed&#39;,
+        &#39;envelope_complete&#39;: &#39;envelopeComplete&#39;,
+        &#39;offline_signing_failed&#39;: &#39;offlineSigningFailed&#39;,
+        &#39;powerform_responses_limit_notification_email&#39;: &#39;powerformResponsesLimitNotificationEmail&#39;,
+        &#39;purge_documents&#39;: &#39;purgeDocuments&#39;,
+        &#39;recipient_viewed&#39;: &#39;recipientViewed&#39;,
+        &#39;sender_envelope_declined&#39;: &#39;senderEnvelopeDeclined&#39;,
+        &#39;withdrawn_consent&#39;: &#39;withdrawnConsent&#39;
+    }
+
+    def __init__(self, changed_signer=None, comments_only_private_and_mention=None, comments_receive_all=None, delivery_failed=None, envelope_complete=None, offline_signing_failed=None, powerform_responses_limit_notification_email=None, purge_documents=None, recipient_viewed=None, sender_envelope_declined=None, withdrawn_consent=None):  # noqa: E501
+        &#34;&#34;&#34;SenderEmailNotifications - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._changed_signer = None
+        self._comments_only_private_and_mention = None
+        self._comments_receive_all = None
+        self._delivery_failed = None
+        self._envelope_complete = None
+        self._offline_signing_failed = None
+        self._powerform_responses_limit_notification_email = None
+        self._purge_documents = None
+        self._recipient_viewed = None
+        self._sender_envelope_declined = None
+        self._withdrawn_consent = None
+        self.discriminator = None
+
+        if changed_signer is not None:
+            self.changed_signer = changed_signer
+        if comments_only_private_and_mention is not None:
+            self.comments_only_private_and_mention = comments_only_private_and_mention
+        if comments_receive_all is not None:
+            self.comments_receive_all = comments_receive_all
+        if delivery_failed is not None:
+            self.delivery_failed = delivery_failed
+        if envelope_complete is not None:
+            self.envelope_complete = envelope_complete
+        if offline_signing_failed is not None:
+            self.offline_signing_failed = offline_signing_failed
+        if powerform_responses_limit_notification_email is not None:
+            self.powerform_responses_limit_notification_email = powerform_responses_limit_notification_email
+        if purge_documents is not None:
+            self.purge_documents = purge_documents
+        if recipient_viewed is not None:
+            self.recipient_viewed = recipient_viewed
+        if sender_envelope_declined is not None:
+            self.sender_envelope_declined = sender_envelope_declined
+        if withdrawn_consent is not None:
+            self.withdrawn_consent = withdrawn_consent
+
+    @property
+    def changed_signer(self):
+        &#34;&#34;&#34;Gets the changed_signer of this SenderEmailNotifications.  # noqa: E501
+
+        When set to **true**, the sender receives notification if the signer changes.  # noqa: E501
+
+        :return: The changed_signer of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._changed_signer
+
+    @changed_signer.setter
+    def changed_signer(self, changed_signer):
+        &#34;&#34;&#34;Sets the changed_signer of this SenderEmailNotifications.
+
+        When set to **true**, the sender receives notification if the signer changes.  # noqa: E501
+
+        :param changed_signer: The changed_signer of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._changed_signer = changed_signer
+
+    @property
+    def comments_only_private_and_mention(self):
+        &#34;&#34;&#34;Gets the comments_only_private_and_mention of this SenderEmailNotifications.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The comments_only_private_and_mention of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._comments_only_private_and_mention
+
+    @comments_only_private_and_mention.setter
+    def comments_only_private_and_mention(self, comments_only_private_and_mention):
+        &#34;&#34;&#34;Sets the comments_only_private_and_mention of this SenderEmailNotifications.
+
+          # noqa: E501
+
+        :param comments_only_private_and_mention: The comments_only_private_and_mention of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._comments_only_private_and_mention = comments_only_private_and_mention
+
+    @property
+    def comments_receive_all(self):
+        &#34;&#34;&#34;Gets the comments_receive_all of this SenderEmailNotifications.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The comments_receive_all of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._comments_receive_all
+
+    @comments_receive_all.setter
+    def comments_receive_all(self, comments_receive_all):
+        &#34;&#34;&#34;Sets the comments_receive_all of this SenderEmailNotifications.
+
+          # noqa: E501
+
+        :param comments_receive_all: The comments_receive_all of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._comments_receive_all = comments_receive_all
+
+    @property
+    def delivery_failed(self):
+        &#34;&#34;&#34;Gets the delivery_failed of this SenderEmailNotifications.  # noqa: E501
+
+        When set to **true**, the sender receives notification if the delivery of the envelope fails.  # noqa: E501
+
+        :return: The delivery_failed of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._delivery_failed
+
+    @delivery_failed.setter
+    def delivery_failed(self, delivery_failed):
+        &#34;&#34;&#34;Sets the delivery_failed of this SenderEmailNotifications.
+
+        When set to **true**, the sender receives notification if the delivery of the envelope fails.  # noqa: E501
+
+        :param delivery_failed: The delivery_failed of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._delivery_failed = delivery_failed
+
+    @property
+    def envelope_complete(self):
+        &#34;&#34;&#34;Gets the envelope_complete of this SenderEmailNotifications.  # noqa: E501
+
+        When set to **true**, the user receives notification that the envelope has been completed.  # noqa: E501
+
+        :return: The envelope_complete of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_complete
+
+    @envelope_complete.setter
+    def envelope_complete(self, envelope_complete):
+        &#34;&#34;&#34;Sets the envelope_complete of this SenderEmailNotifications.
+
+        When set to **true**, the user receives notification that the envelope has been completed.  # noqa: E501
+
+        :param envelope_complete: The envelope_complete of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_complete = envelope_complete
+
+    @property
+    def offline_signing_failed(self):
+        &#34;&#34;&#34;Gets the offline_signing_failed of this SenderEmailNotifications.  # noqa: E501
+
+        When set to **true**, the user receives notification if the offline signing failed.  # noqa: E501
+
+        :return: The offline_signing_failed of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._offline_signing_failed
+
+    @offline_signing_failed.setter
+    def offline_signing_failed(self, offline_signing_failed):
+        &#34;&#34;&#34;Sets the offline_signing_failed of this SenderEmailNotifications.
+
+        When set to **true**, the user receives notification if the offline signing failed.  # noqa: E501
+
+        :param offline_signing_failed: The offline_signing_failed of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._offline_signing_failed = offline_signing_failed
+
+    @property
+    def powerform_responses_limit_notification_email(self):
+        &#34;&#34;&#34;Gets the powerform_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The powerform_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._powerform_responses_limit_notification_email
+
+    @powerform_responses_limit_notification_email.setter
+    def powerform_responses_limit_notification_email(self, powerform_responses_limit_notification_email):
+        &#34;&#34;&#34;Sets the powerform_responses_limit_notification_email of this SenderEmailNotifications.
+
+          # noqa: E501
+
+        :param powerform_responses_limit_notification_email: The powerform_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._powerform_responses_limit_notification_email = powerform_responses_limit_notification_email
+
+    @property
+    def purge_documents(self):
+        &#34;&#34;&#34;Gets the purge_documents of this SenderEmailNotifications.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The purge_documents of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._purge_documents
+
+    @purge_documents.setter
+    def purge_documents(self, purge_documents):
+        &#34;&#34;&#34;Sets the purge_documents of this SenderEmailNotifications.
+
+          # noqa: E501
+
+        :param purge_documents: The purge_documents of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._purge_documents = purge_documents
+
+    @property
+    def recipient_viewed(self):
+        &#34;&#34;&#34;Gets the recipient_viewed of this SenderEmailNotifications.  # noqa: E501
+
+        When set to **true**, the sender receives notification that the recipient viewed the enveloper.  # noqa: E501
+
+        :return: The recipient_viewed of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_viewed
+
+    @recipient_viewed.setter
+    def recipient_viewed(self, recipient_viewed):
+        &#34;&#34;&#34;Sets the recipient_viewed of this SenderEmailNotifications.
+
+        When set to **true**, the sender receives notification that the recipient viewed the enveloper.  # noqa: E501
+
+        :param recipient_viewed: The recipient_viewed of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_viewed = recipient_viewed
+
+    @property
+    def sender_envelope_declined(self):
+        &#34;&#34;&#34;Gets the sender_envelope_declined of this SenderEmailNotifications.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sender_envelope_declined of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sender_envelope_declined
+
+    @sender_envelope_declined.setter
+    def sender_envelope_declined(self, sender_envelope_declined):
+        &#34;&#34;&#34;Sets the sender_envelope_declined of this SenderEmailNotifications.
+
+          # noqa: E501
+
+        :param sender_envelope_declined: The sender_envelope_declined of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sender_envelope_declined = sender_envelope_declined
+
+    @property
+    def withdrawn_consent(self):
+        &#34;&#34;&#34;Gets the withdrawn_consent of this SenderEmailNotifications.  # noqa: E501
+
+        When set to **true**, the user receives notification if consent is withdrawn.  # noqa: E501
+
+        :return: The withdrawn_consent of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdrawn_consent
+
+    @withdrawn_consent.setter
+    def withdrawn_consent(self, withdrawn_consent):
+        &#34;&#34;&#34;Sets the withdrawn_consent of this SenderEmailNotifications.
+
+        When set to **true**, the user receives notification if consent is withdrawn.  # noqa: E501
+
+        :param withdrawn_consent: The withdrawn_consent of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdrawn_consent = withdrawn_consent
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(SenderEmailNotifications, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, SenderEmailNotifications):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications"><code class="flex name class">
+<span>class <span class="ident">SenderEmailNotifications</span></span>
+<span>(</span><span>changed_signer=None, comments_only_private_and_mention=None, comments_receive_all=None, delivery_failed=None, envelope_complete=None, offline_signing_failed=None, powerform_responses_limit_notification_email=None, purge_documents=None, recipient_viewed=None, sender_envelope_declined=None, withdrawn_consent=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>SenderEmailNotifications - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SenderEmailNotifications(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;changed_signer&#39;: &#39;str&#39;,
+        &#39;comments_only_private_and_mention&#39;: &#39;str&#39;,
+        &#39;comments_receive_all&#39;: &#39;str&#39;,
+        &#39;delivery_failed&#39;: &#39;str&#39;,
+        &#39;envelope_complete&#39;: &#39;str&#39;,
+        &#39;offline_signing_failed&#39;: &#39;str&#39;,
+        &#39;powerform_responses_limit_notification_email&#39;: &#39;str&#39;,
+        &#39;purge_documents&#39;: &#39;str&#39;,
+        &#39;recipient_viewed&#39;: &#39;str&#39;,
+        &#39;sender_envelope_declined&#39;: &#39;str&#39;,
+        &#39;withdrawn_consent&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;changed_signer&#39;: &#39;changedSigner&#39;,
+        &#39;comments_only_private_and_mention&#39;: &#39;commentsOnlyPrivateAndMention&#39;,
+        &#39;comments_receive_all&#39;: &#39;commentsReceiveAll&#39;,
+        &#39;delivery_failed&#39;: &#39;deliveryFailed&#39;,
+        &#39;envelope_complete&#39;: &#39;envelopeComplete&#39;,
+        &#39;offline_signing_failed&#39;: &#39;offlineSigningFailed&#39;,
+        &#39;powerform_responses_limit_notification_email&#39;: &#39;powerformResponsesLimitNotificationEmail&#39;,
+        &#39;purge_documents&#39;: &#39;purgeDocuments&#39;,
+        &#39;recipient_viewed&#39;: &#39;recipientViewed&#39;,
+        &#39;sender_envelope_declined&#39;: &#39;senderEnvelopeDeclined&#39;,
+        &#39;withdrawn_consent&#39;: &#39;withdrawnConsent&#39;
+    }
+
+    def __init__(self, changed_signer=None, comments_only_private_and_mention=None, comments_receive_all=None, delivery_failed=None, envelope_complete=None, offline_signing_failed=None, powerform_responses_limit_notification_email=None, purge_documents=None, recipient_viewed=None, sender_envelope_declined=None, withdrawn_consent=None):  # noqa: E501
+        &#34;&#34;&#34;SenderEmailNotifications - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._changed_signer = None
+        self._comments_only_private_and_mention = None
+        self._comments_receive_all = None
+        self._delivery_failed = None
+        self._envelope_complete = None
+        self._offline_signing_failed = None
+        self._powerform_responses_limit_notification_email = None
+        self._purge_documents = None
+        self._recipient_viewed = None
+        self._sender_envelope_declined = None
+        self._withdrawn_consent = None
+        self.discriminator = None
+
+        if changed_signer is not None:
+            self.changed_signer = changed_signer
+        if comments_only_private_and_mention is not None:
+            self.comments_only_private_and_mention = comments_only_private_and_mention
+        if comments_receive_all is not None:
+            self.comments_receive_all = comments_receive_all
+        if delivery_failed is not None:
+            self.delivery_failed = delivery_failed
+        if envelope_complete is not None:
+            self.envelope_complete = envelope_complete
+        if offline_signing_failed is not None:
+            self.offline_signing_failed = offline_signing_failed
+        if powerform_responses_limit_notification_email is not None:
+            self.powerform_responses_limit_notification_email = powerform_responses_limit_notification_email
+        if purge_documents is not None:
+            self.purge_documents = purge_documents
+        if recipient_viewed is not None:
+            self.recipient_viewed = recipient_viewed
+        if sender_envelope_declined is not None:
+            self.sender_envelope_declined = sender_envelope_declined
+        if withdrawn_consent is not None:
+            self.withdrawn_consent = withdrawn_consent
+
+    @property
+    def changed_signer(self):
+        &#34;&#34;&#34;Gets the changed_signer of this SenderEmailNotifications.  # noqa: E501
+
+        When set to **true**, the sender receives notification if the signer changes.  # noqa: E501
+
+        :return: The changed_signer of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._changed_signer
+
+    @changed_signer.setter
+    def changed_signer(self, changed_signer):
+        &#34;&#34;&#34;Sets the changed_signer of this SenderEmailNotifications.
+
+        When set to **true**, the sender receives notification if the signer changes.  # noqa: E501
+
+        :param changed_signer: The changed_signer of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._changed_signer = changed_signer
+
+    @property
+    def comments_only_private_and_mention(self):
+        &#34;&#34;&#34;Gets the comments_only_private_and_mention of this SenderEmailNotifications.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The comments_only_private_and_mention of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._comments_only_private_and_mention
+
+    @comments_only_private_and_mention.setter
+    def comments_only_private_and_mention(self, comments_only_private_and_mention):
+        &#34;&#34;&#34;Sets the comments_only_private_and_mention of this SenderEmailNotifications.
+
+          # noqa: E501
+
+        :param comments_only_private_and_mention: The comments_only_private_and_mention of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._comments_only_private_and_mention = comments_only_private_and_mention
+
+    @property
+    def comments_receive_all(self):
+        &#34;&#34;&#34;Gets the comments_receive_all of this SenderEmailNotifications.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The comments_receive_all of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._comments_receive_all
+
+    @comments_receive_all.setter
+    def comments_receive_all(self, comments_receive_all):
+        &#34;&#34;&#34;Sets the comments_receive_all of this SenderEmailNotifications.
+
+          # noqa: E501
+
+        :param comments_receive_all: The comments_receive_all of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._comments_receive_all = comments_receive_all
+
+    @property
+    def delivery_failed(self):
+        &#34;&#34;&#34;Gets the delivery_failed of this SenderEmailNotifications.  # noqa: E501
+
+        When set to **true**, the sender receives notification if the delivery of the envelope fails.  # noqa: E501
+
+        :return: The delivery_failed of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._delivery_failed
+
+    @delivery_failed.setter
+    def delivery_failed(self, delivery_failed):
+        &#34;&#34;&#34;Sets the delivery_failed of this SenderEmailNotifications.
+
+        When set to **true**, the sender receives notification if the delivery of the envelope fails.  # noqa: E501
+
+        :param delivery_failed: The delivery_failed of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._delivery_failed = delivery_failed
+
+    @property
+    def envelope_complete(self):
+        &#34;&#34;&#34;Gets the envelope_complete of this SenderEmailNotifications.  # noqa: E501
+
+        When set to **true**, the user receives notification that the envelope has been completed.  # noqa: E501
+
+        :return: The envelope_complete of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_complete
+
+    @envelope_complete.setter
+    def envelope_complete(self, envelope_complete):
+        &#34;&#34;&#34;Sets the envelope_complete of this SenderEmailNotifications.
+
+        When set to **true**, the user receives notification that the envelope has been completed.  # noqa: E501
+
+        :param envelope_complete: The envelope_complete of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_complete = envelope_complete
+
+    @property
+    def offline_signing_failed(self):
+        &#34;&#34;&#34;Gets the offline_signing_failed of this SenderEmailNotifications.  # noqa: E501
+
+        When set to **true**, the user receives notification if the offline signing failed.  # noqa: E501
+
+        :return: The offline_signing_failed of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._offline_signing_failed
+
+    @offline_signing_failed.setter
+    def offline_signing_failed(self, offline_signing_failed):
+        &#34;&#34;&#34;Sets the offline_signing_failed of this SenderEmailNotifications.
+
+        When set to **true**, the user receives notification if the offline signing failed.  # noqa: E501
+
+        :param offline_signing_failed: The offline_signing_failed of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._offline_signing_failed = offline_signing_failed
+
+    @property
+    def powerform_responses_limit_notification_email(self):
+        &#34;&#34;&#34;Gets the powerform_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The powerform_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._powerform_responses_limit_notification_email
+
+    @powerform_responses_limit_notification_email.setter
+    def powerform_responses_limit_notification_email(self, powerform_responses_limit_notification_email):
+        &#34;&#34;&#34;Sets the powerform_responses_limit_notification_email of this SenderEmailNotifications.
+
+          # noqa: E501
+
+        :param powerform_responses_limit_notification_email: The powerform_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._powerform_responses_limit_notification_email = powerform_responses_limit_notification_email
+
+    @property
+    def purge_documents(self):
+        &#34;&#34;&#34;Gets the purge_documents of this SenderEmailNotifications.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The purge_documents of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._purge_documents
+
+    @purge_documents.setter
+    def purge_documents(self, purge_documents):
+        &#34;&#34;&#34;Sets the purge_documents of this SenderEmailNotifications.
+
+          # noqa: E501
+
+        :param purge_documents: The purge_documents of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._purge_documents = purge_documents
+
+    @property
+    def recipient_viewed(self):
+        &#34;&#34;&#34;Gets the recipient_viewed of this SenderEmailNotifications.  # noqa: E501
+
+        When set to **true**, the sender receives notification that the recipient viewed the enveloper.  # noqa: E501
+
+        :return: The recipient_viewed of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_viewed
+
+    @recipient_viewed.setter
+    def recipient_viewed(self, recipient_viewed):
+        &#34;&#34;&#34;Sets the recipient_viewed of this SenderEmailNotifications.
+
+        When set to **true**, the sender receives notification that the recipient viewed the enveloper.  # noqa: E501
+
+        :param recipient_viewed: The recipient_viewed of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_viewed = recipient_viewed
+
+    @property
+    def sender_envelope_declined(self):
+        &#34;&#34;&#34;Gets the sender_envelope_declined of this SenderEmailNotifications.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sender_envelope_declined of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sender_envelope_declined
+
+    @sender_envelope_declined.setter
+    def sender_envelope_declined(self, sender_envelope_declined):
+        &#34;&#34;&#34;Sets the sender_envelope_declined of this SenderEmailNotifications.
+
+          # noqa: E501
+
+        :param sender_envelope_declined: The sender_envelope_declined of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sender_envelope_declined = sender_envelope_declined
+
+    @property
+    def withdrawn_consent(self):
+        &#34;&#34;&#34;Gets the withdrawn_consent of this SenderEmailNotifications.  # noqa: E501
+
+        When set to **true**, the user receives notification if consent is withdrawn.  # noqa: E501
+
+        :return: The withdrawn_consent of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdrawn_consent
+
+    @withdrawn_consent.setter
+    def withdrawn_consent(self, withdrawn_consent):
+        &#34;&#34;&#34;Sets the withdrawn_consent of this SenderEmailNotifications.
+
+        When set to **true**, the user receives notification if consent is withdrawn.  # noqa: E501
+
+        :param withdrawn_consent: The withdrawn_consent of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdrawn_consent = withdrawn_consent
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(SenderEmailNotifications, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, SenderEmailNotifications):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.changed_signer"><code class="name">var <span class="ident">changed_signer</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the changed_signer of this SenderEmailNotifications.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the sender receives notification if the signer changes.
+# noqa: E501</p>
+<p>:return: The changed_signer of this SenderEmailNotifications.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def changed_signer(self):
+    &#34;&#34;&#34;Gets the changed_signer of this SenderEmailNotifications.  # noqa: E501
+
+    When set to **true**, the sender receives notification if the signer changes.  # noqa: E501
+
+    :return: The changed_signer of this SenderEmailNotifications.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._changed_signer</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.comments_only_private_and_mention"><code class="name">var <span class="ident">comments_only_private_and_mention</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the comments_only_private_and_mention of this SenderEmailNotifications.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The comments_only_private_and_mention of this SenderEmailNotifications.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def comments_only_private_and_mention(self):
+    &#34;&#34;&#34;Gets the comments_only_private_and_mention of this SenderEmailNotifications.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The comments_only_private_and_mention of this SenderEmailNotifications.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._comments_only_private_and_mention</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.comments_receive_all"><code class="name">var <span class="ident">comments_receive_all</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the comments_receive_all of this SenderEmailNotifications.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The comments_receive_all of this SenderEmailNotifications.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def comments_receive_all(self):
+    &#34;&#34;&#34;Gets the comments_receive_all of this SenderEmailNotifications.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The comments_receive_all of this SenderEmailNotifications.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._comments_receive_all</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.delivery_failed"><code class="name">var <span class="ident">delivery_failed</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the delivery_failed of this SenderEmailNotifications.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the sender receives notification if the delivery of the envelope fails.
+# noqa: E501</p>
+<p>:return: The delivery_failed of this SenderEmailNotifications.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def delivery_failed(self):
+    &#34;&#34;&#34;Gets the delivery_failed of this SenderEmailNotifications.  # noqa: E501
+
+    When set to **true**, the sender receives notification if the delivery of the envelope fails.  # noqa: E501
+
+    :return: The delivery_failed of this SenderEmailNotifications.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._delivery_failed</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.envelope_complete"><code class="name">var <span class="ident">envelope_complete</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_complete of this SenderEmailNotifications.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the user receives notification that the envelope has been completed.
+# noqa: E501</p>
+<p>:return: The envelope_complete of this SenderEmailNotifications.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_complete(self):
+    &#34;&#34;&#34;Gets the envelope_complete of this SenderEmailNotifications.  # noqa: E501
+
+    When set to **true**, the user receives notification that the envelope has been completed.  # noqa: E501
+
+    :return: The envelope_complete of this SenderEmailNotifications.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._envelope_complete</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.offline_signing_failed"><code class="name">var <span class="ident">offline_signing_failed</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the offline_signing_failed of this SenderEmailNotifications.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the user receives notification if the offline signing failed.
+# noqa: E501</p>
+<p>:return: The offline_signing_failed of this SenderEmailNotifications.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def offline_signing_failed(self):
+    &#34;&#34;&#34;Gets the offline_signing_failed of this SenderEmailNotifications.  # noqa: E501
+
+    When set to **true**, the user receives notification if the offline signing failed.  # noqa: E501
+
+    :return: The offline_signing_failed of this SenderEmailNotifications.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._offline_signing_failed</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.powerform_responses_limit_notification_email"><code class="name">var <span class="ident">powerform_responses_limit_notification_email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the powerform_responses_limit_notification_email of this SenderEmailNotifications.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The powerform_responses_limit_notification_email of this SenderEmailNotifications.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def powerform_responses_limit_notification_email(self):
+    &#34;&#34;&#34;Gets the powerform_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The powerform_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._powerform_responses_limit_notification_email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.purge_documents"><code class="name">var <span class="ident">purge_documents</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the purge_documents of this SenderEmailNotifications.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The purge_documents of this SenderEmailNotifications.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def purge_documents(self):
+    &#34;&#34;&#34;Gets the purge_documents of this SenderEmailNotifications.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The purge_documents of this SenderEmailNotifications.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._purge_documents</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.recipient_viewed"><code class="name">var <span class="ident">recipient_viewed</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the recipient_viewed of this SenderEmailNotifications.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the sender receives notification that the recipient viewed the enveloper.
+# noqa: E501</p>
+<p>:return: The recipient_viewed of this SenderEmailNotifications.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def recipient_viewed(self):
+    &#34;&#34;&#34;Gets the recipient_viewed of this SenderEmailNotifications.  # noqa: E501
+
+    When set to **true**, the sender receives notification that the recipient viewed the enveloper.  # noqa: E501
+
+    :return: The recipient_viewed of this SenderEmailNotifications.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._recipient_viewed</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.sender_envelope_declined"><code class="name">var <span class="ident">sender_envelope_declined</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sender_envelope_declined of this SenderEmailNotifications.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The sender_envelope_declined of this SenderEmailNotifications.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sender_envelope_declined(self):
+    &#34;&#34;&#34;Gets the sender_envelope_declined of this SenderEmailNotifications.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The sender_envelope_declined of this SenderEmailNotifications.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sender_envelope_declined</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.withdrawn_consent"><code class="name">var <span class="ident">withdrawn_consent</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the withdrawn_consent of this SenderEmailNotifications.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the user receives notification if consent is withdrawn.
+# noqa: E501</p>
+<p>:return: The withdrawn_consent of this SenderEmailNotifications.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def withdrawn_consent(self):
+    &#34;&#34;&#34;Gets the withdrawn_consent of this SenderEmailNotifications.  # noqa: E501
+
+    When set to **true**, the user receives notification if consent is withdrawn.  # noqa: E501
+
+    :return: The withdrawn_consent of this SenderEmailNotifications.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._withdrawn_consent</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(SenderEmailNotifications, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications">SenderEmailNotifications</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.attribute_map" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.changed_signer" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.changed_signer">changed_signer</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.comments_only_private_and_mention" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.comments_only_private_and_mention">comments_only_private_and_mention</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.comments_receive_all" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.comments_receive_all">comments_receive_all</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.delivery_failed" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.delivery_failed">delivery_failed</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.envelope_complete" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.envelope_complete">envelope_complete</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.offline_signing_failed" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.offline_signing_failed">offline_signing_failed</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.powerform_responses_limit_notification_email" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.powerform_responses_limit_notification_email">powerform_responses_limit_notification_email</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.purge_documents" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.purge_documents">purge_documents</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.recipient_viewed" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.recipient_viewed">recipient_viewed</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.sender_envelope_declined" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.sender_envelope_declined">sender_envelope_declined</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.swagger_types" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.to_dict" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.to_str" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.sender_email_notifications.SenderEmailNotifications.withdrawn_consent" href="#docusign_esign.models.sender_email_notifications.SenderEmailNotifications.withdrawn_consent">withdrawn_consent</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,1546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.billing_plan API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.billing_plan</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class BillingPlan(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;app_store_products&#39;: &#39;list[AppStoreProduct]&#39;,
+        &#39;currency_plan_prices&#39;: &#39;list[CurrencyPlanPrice]&#39;,
+        &#39;enable_support&#39;: &#39;str&#39;,
+        &#39;included_seats&#39;: &#39;str&#39;,
+        &#39;other_discount_percent&#39;: &#39;str&#39;,
+        &#39;payment_cycle&#39;: &#39;str&#39;,
+        &#39;payment_method&#39;: &#39;str&#39;,
+        &#39;per_seat_price&#39;: &#39;str&#39;,
+        &#39;plan_classification&#39;: &#39;str&#39;,
+        &#39;plan_feature_sets&#39;: &#39;list[FeatureSet]&#39;,
+        &#39;plan_id&#39;: &#39;str&#39;,
+        &#39;plan_name&#39;: &#39;str&#39;,
+        &#39;seat_discounts&#39;: &#39;list[SeatDiscount]&#39;,
+        &#39;support_incident_fee&#39;: &#39;str&#39;,
+        &#39;support_plan_fee&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;app_store_products&#39;: &#39;appStoreProducts&#39;,
+        &#39;currency_plan_prices&#39;: &#39;currencyPlanPrices&#39;,
+        &#39;enable_support&#39;: &#39;enableSupport&#39;,
+        &#39;included_seats&#39;: &#39;includedSeats&#39;,
+        &#39;other_discount_percent&#39;: &#39;otherDiscountPercent&#39;,
+        &#39;payment_cycle&#39;: &#39;paymentCycle&#39;,
+        &#39;payment_method&#39;: &#39;paymentMethod&#39;,
+        &#39;per_seat_price&#39;: &#39;perSeatPrice&#39;,
+        &#39;plan_classification&#39;: &#39;planClassification&#39;,
+        &#39;plan_feature_sets&#39;: &#39;planFeatureSets&#39;,
+        &#39;plan_id&#39;: &#39;planId&#39;,
+        &#39;plan_name&#39;: &#39;planName&#39;,
+        &#39;seat_discounts&#39;: &#39;seatDiscounts&#39;,
+        &#39;support_incident_fee&#39;: &#39;supportIncidentFee&#39;,
+        &#39;support_plan_fee&#39;: &#39;supportPlanFee&#39;
+    }
+
+    def __init__(self, app_store_products=None, currency_plan_prices=None, enable_support=None, included_seats=None, other_discount_percent=None, payment_cycle=None, payment_method=None, per_seat_price=None, plan_classification=None, plan_feature_sets=None, plan_id=None, plan_name=None, seat_discounts=None, support_incident_fee=None, support_plan_fee=None):  # noqa: E501
+        &#34;&#34;&#34;BillingPlan - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._app_store_products = None
+        self._currency_plan_prices = None
+        self._enable_support = None
+        self._included_seats = None
+        self._other_discount_percent = None
+        self._payment_cycle = None
+        self._payment_method = None
+        self._per_seat_price = None
+        self._plan_classification = None
+        self._plan_feature_sets = None
+        self._plan_id = None
+        self._plan_name = None
+        self._seat_discounts = None
+        self._support_incident_fee = None
+        self._support_plan_fee = None
+        self.discriminator = None
+
+        if app_store_products is not None:
+            self.app_store_products = app_store_products
+        if currency_plan_prices is not None:
+            self.currency_plan_prices = currency_plan_prices
+        if enable_support is not None:
+            self.enable_support = enable_support
+        if included_seats is not None:
+            self.included_seats = included_seats
+        if other_discount_percent is not None:
+            self.other_discount_percent = other_discount_percent
+        if payment_cycle is not None:
+            self.payment_cycle = payment_cycle
+        if payment_method is not None:
+            self.payment_method = payment_method
+        if per_seat_price is not None:
+            self.per_seat_price = per_seat_price
+        if plan_classification is not None:
+            self.plan_classification = plan_classification
+        if plan_feature_sets is not None:
+            self.plan_feature_sets = plan_feature_sets
+        if plan_id is not None:
+            self.plan_id = plan_id
+        if plan_name is not None:
+            self.plan_name = plan_name
+        if seat_discounts is not None:
+            self.seat_discounts = seat_discounts
+        if support_incident_fee is not None:
+            self.support_incident_fee = support_incident_fee
+        if support_plan_fee is not None:
+            self.support_plan_fee = support_plan_fee
+
+    @property
+    def app_store_products(self):
+        &#34;&#34;&#34;Gets the app_store_products of this BillingPlan.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The app_store_products of this BillingPlan.  # noqa: E501
+        :rtype: list[AppStoreProduct]
+        &#34;&#34;&#34;
+        return self._app_store_products
+
+    @app_store_products.setter
+    def app_store_products(self, app_store_products):
+        &#34;&#34;&#34;Sets the app_store_products of this BillingPlan.
+
+        Reserved: TBD  # noqa: E501
+
+        :param app_store_products: The app_store_products of this BillingPlan.  # noqa: E501
+        :type: list[AppStoreProduct]
+        &#34;&#34;&#34;
+
+        self._app_store_products = app_store_products
+
+    @property
+    def currency_plan_prices(self):
+        &#34;&#34;&#34;Gets the currency_plan_prices of this BillingPlan.  # noqa: E501
+
+        Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, and seatFee that are configured for this plan feature set.  # noqa: E501
+
+        :return: The currency_plan_prices of this BillingPlan.  # noqa: E501
+        :rtype: list[CurrencyPlanPrice]
+        &#34;&#34;&#34;
+        return self._currency_plan_prices
+
+    @currency_plan_prices.setter
+    def currency_plan_prices(self, currency_plan_prices):
+        &#34;&#34;&#34;Sets the currency_plan_prices of this BillingPlan.
+
+        Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, and seatFee that are configured for this plan feature set.  # noqa: E501
+
+        :param currency_plan_prices: The currency_plan_prices of this BillingPlan.  # noqa: E501
+        :type: list[CurrencyPlanPrice]
+        &#34;&#34;&#34;
+
+        self._currency_plan_prices = currency_plan_prices
+
+    @property
+    def enable_support(self):
+        &#34;&#34;&#34;Gets the enable_support of this BillingPlan.  # noqa: E501
+
+        When set to **true**, then customer support is provided as part of the account plan.  # noqa: E501
+
+        :return: The enable_support of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._enable_support
+
+    @enable_support.setter
+    def enable_support(self, enable_support):
+        &#34;&#34;&#34;Sets the enable_support of this BillingPlan.
+
+        When set to **true**, then customer support is provided as part of the account plan.  # noqa: E501
+
+        :param enable_support: The enable_support of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._enable_support = enable_support
+
+    @property
+    def included_seats(self):
+        &#34;&#34;&#34;Gets the included_seats of this BillingPlan.  # noqa: E501
+
+        The number of seats (users) included.  # noqa: E501
+
+        :return: The included_seats of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._included_seats
+
+    @included_seats.setter
+    def included_seats(self, included_seats):
+        &#34;&#34;&#34;Sets the included_seats of this BillingPlan.
+
+        The number of seats (users) included.  # noqa: E501
+
+        :param included_seats: The included_seats of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._included_seats = included_seats
+
+    @property
+    def other_discount_percent(self):
+        &#34;&#34;&#34;Gets the other_discount_percent of this BillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The other_discount_percent of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._other_discount_percent
+
+    @other_discount_percent.setter
+    def other_discount_percent(self, other_discount_percent):
+        &#34;&#34;&#34;Sets the other_discount_percent of this BillingPlan.
+
+          # noqa: E501
+
+        :param other_discount_percent: The other_discount_percent of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._other_discount_percent = other_discount_percent
+
+    @property
+    def payment_cycle(self):
+        &#34;&#34;&#34;Gets the payment_cycle of this BillingPlan.  # noqa: E501
+
+         The payment cycle associated with the plan. The possible values are: Monthly or Annually.   # noqa: E501
+
+        :return: The payment_cycle of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._payment_cycle
+
+    @payment_cycle.setter
+    def payment_cycle(self, payment_cycle):
+        &#34;&#34;&#34;Sets the payment_cycle of this BillingPlan.
+
+         The payment cycle associated with the plan. The possible values are: Monthly or Annually.   # noqa: E501
+
+        :param payment_cycle: The payment_cycle of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._payment_cycle = payment_cycle
+
+    @property
+    def payment_method(self):
+        &#34;&#34;&#34;Gets the payment_method of this BillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The payment_method of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._payment_method
+
+    @payment_method.setter
+    def payment_method(self, payment_method):
+        &#34;&#34;&#34;Sets the payment_method of this BillingPlan.
+
+          # noqa: E501
+
+        :param payment_method: The payment_method of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._payment_method = payment_method
+
+    @property
+    def per_seat_price(self):
+        &#34;&#34;&#34;Gets the per_seat_price of this BillingPlan.  # noqa: E501
+
+        The per seat price for the plan.  # noqa: E501
+
+        :return: The per_seat_price of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._per_seat_price
+
+    @per_seat_price.setter
+    def per_seat_price(self, per_seat_price):
+        &#34;&#34;&#34;Sets the per_seat_price of this BillingPlan.
+
+        The per seat price for the plan.  # noqa: E501
+
+        :param per_seat_price: The per_seat_price of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._per_seat_price = per_seat_price
+
+    @property
+    def plan_classification(self):
+        &#34;&#34;&#34;Gets the plan_classification of this BillingPlan.  # noqa: E501
+
+        Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.  # noqa: E501
+
+        :return: The plan_classification of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_classification
+
+    @plan_classification.setter
+    def plan_classification(self, plan_classification):
+        &#34;&#34;&#34;Sets the plan_classification of this BillingPlan.
+
+        Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.  # noqa: E501
+
+        :param plan_classification: The plan_classification of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_classification = plan_classification
+
+    @property
+    def plan_feature_sets(self):
+        &#34;&#34;&#34;Gets the plan_feature_sets of this BillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The plan_feature_sets of this BillingPlan.  # noqa: E501
+        :rtype: list[FeatureSet]
+        &#34;&#34;&#34;
+        return self._plan_feature_sets
+
+    @plan_feature_sets.setter
+    def plan_feature_sets(self, plan_feature_sets):
+        &#34;&#34;&#34;Sets the plan_feature_sets of this BillingPlan.
+
+          # noqa: E501
+
+        :param plan_feature_sets: The plan_feature_sets of this BillingPlan.  # noqa: E501
+        :type: list[FeatureSet]
+        &#34;&#34;&#34;
+
+        self._plan_feature_sets = plan_feature_sets
+
+    @property
+    def plan_id(self):
+        &#34;&#34;&#34;Gets the plan_id of this BillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The plan_id of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_id
+
+    @plan_id.setter
+    def plan_id(self, plan_id):
+        &#34;&#34;&#34;Sets the plan_id of this BillingPlan.
+
+          # noqa: E501
+
+        :param plan_id: The plan_id of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_id = plan_id
+
+    @property
+    def plan_name(self):
+        &#34;&#34;&#34;Gets the plan_name of this BillingPlan.  # noqa: E501
+
+        The name of the Billing Plan.  # noqa: E501
+
+        :return: The plan_name of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_name
+
+    @plan_name.setter
+    def plan_name(self, plan_name):
+        &#34;&#34;&#34;Sets the plan_name of this BillingPlan.
+
+        The name of the Billing Plan.  # noqa: E501
+
+        :param plan_name: The plan_name of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_name = plan_name
+
+    @property
+    def seat_discounts(self):
+        &#34;&#34;&#34;Gets the seat_discounts of this BillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The seat_discounts of this BillingPlan.  # noqa: E501
+        :rtype: list[SeatDiscount]
+        &#34;&#34;&#34;
+        return self._seat_discounts
+
+    @seat_discounts.setter
+    def seat_discounts(self, seat_discounts):
+        &#34;&#34;&#34;Sets the seat_discounts of this BillingPlan.
+
+          # noqa: E501
+
+        :param seat_discounts: The seat_discounts of this BillingPlan.  # noqa: E501
+        :type: list[SeatDiscount]
+        &#34;&#34;&#34;
+
+        self._seat_discounts = seat_discounts
+
+    @property
+    def support_incident_fee(self):
+        &#34;&#34;&#34;Gets the support_incident_fee of this BillingPlan.  # noqa: E501
+
+        The support incident fee charged for each support incident.  # noqa: E501
+
+        :return: The support_incident_fee of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._support_incident_fee
+
+    @support_incident_fee.setter
+    def support_incident_fee(self, support_incident_fee):
+        &#34;&#34;&#34;Sets the support_incident_fee of this BillingPlan.
+
+        The support incident fee charged for each support incident.  # noqa: E501
+
+        :param support_incident_fee: The support_incident_fee of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._support_incident_fee = support_incident_fee
+
+    @property
+    def support_plan_fee(self):
+        &#34;&#34;&#34;Gets the support_plan_fee of this BillingPlan.  # noqa: E501
+
+        The support plan fee charged for this plan.  # noqa: E501
+
+        :return: The support_plan_fee of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._support_plan_fee
+
+    @support_plan_fee.setter
+    def support_plan_fee(self, support_plan_fee):
+        &#34;&#34;&#34;Sets the support_plan_fee of this BillingPlan.
+
+        The support plan fee charged for this plan.  # noqa: E501
+
+        :param support_plan_fee: The support_plan_fee of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._support_plan_fee = support_plan_fee
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(BillingPlan, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, BillingPlan):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.billing_plan.BillingPlan"><code class="flex name class">
+<span>class <span class="ident">BillingPlan</span></span>
+<span>(</span><span>app_store_products=None, currency_plan_prices=None, enable_support=None, included_seats=None, other_discount_percent=None, payment_cycle=None, payment_method=None, per_seat_price=None, plan_classification=None, plan_feature_sets=None, plan_id=None, plan_name=None, seat_discounts=None, support_incident_fee=None, support_plan_fee=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>BillingPlan - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class BillingPlan(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;app_store_products&#39;: &#39;list[AppStoreProduct]&#39;,
+        &#39;currency_plan_prices&#39;: &#39;list[CurrencyPlanPrice]&#39;,
+        &#39;enable_support&#39;: &#39;str&#39;,
+        &#39;included_seats&#39;: &#39;str&#39;,
+        &#39;other_discount_percent&#39;: &#39;str&#39;,
+        &#39;payment_cycle&#39;: &#39;str&#39;,
+        &#39;payment_method&#39;: &#39;str&#39;,
+        &#39;per_seat_price&#39;: &#39;str&#39;,
+        &#39;plan_classification&#39;: &#39;str&#39;,
+        &#39;plan_feature_sets&#39;: &#39;list[FeatureSet]&#39;,
+        &#39;plan_id&#39;: &#39;str&#39;,
+        &#39;plan_name&#39;: &#39;str&#39;,
+        &#39;seat_discounts&#39;: &#39;list[SeatDiscount]&#39;,
+        &#39;support_incident_fee&#39;: &#39;str&#39;,
+        &#39;support_plan_fee&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;app_store_products&#39;: &#39;appStoreProducts&#39;,
+        &#39;currency_plan_prices&#39;: &#39;currencyPlanPrices&#39;,
+        &#39;enable_support&#39;: &#39;enableSupport&#39;,
+        &#39;included_seats&#39;: &#39;includedSeats&#39;,
+        &#39;other_discount_percent&#39;: &#39;otherDiscountPercent&#39;,
+        &#39;payment_cycle&#39;: &#39;paymentCycle&#39;,
+        &#39;payment_method&#39;: &#39;paymentMethod&#39;,
+        &#39;per_seat_price&#39;: &#39;perSeatPrice&#39;,
+        &#39;plan_classification&#39;: &#39;planClassification&#39;,
+        &#39;plan_feature_sets&#39;: &#39;planFeatureSets&#39;,
+        &#39;plan_id&#39;: &#39;planId&#39;,
+        &#39;plan_name&#39;: &#39;planName&#39;,
+        &#39;seat_discounts&#39;: &#39;seatDiscounts&#39;,
+        &#39;support_incident_fee&#39;: &#39;supportIncidentFee&#39;,
+        &#39;support_plan_fee&#39;: &#39;supportPlanFee&#39;
+    }
+
+    def __init__(self, app_store_products=None, currency_plan_prices=None, enable_support=None, included_seats=None, other_discount_percent=None, payment_cycle=None, payment_method=None, per_seat_price=None, plan_classification=None, plan_feature_sets=None, plan_id=None, plan_name=None, seat_discounts=None, support_incident_fee=None, support_plan_fee=None):  # noqa: E501
+        &#34;&#34;&#34;BillingPlan - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._app_store_products = None
+        self._currency_plan_prices = None
+        self._enable_support = None
+        self._included_seats = None
+        self._other_discount_percent = None
+        self._payment_cycle = None
+        self._payment_method = None
+        self._per_seat_price = None
+        self._plan_classification = None
+        self._plan_feature_sets = None
+        self._plan_id = None
+        self._plan_name = None
+        self._seat_discounts = None
+        self._support_incident_fee = None
+        self._support_plan_fee = None
+        self.discriminator = None
+
+        if app_store_products is not None:
+            self.app_store_products = app_store_products
+        if currency_plan_prices is not None:
+            self.currency_plan_prices = currency_plan_prices
+        if enable_support is not None:
+            self.enable_support = enable_support
+        if included_seats is not None:
+            self.included_seats = included_seats
+        if other_discount_percent is not None:
+            self.other_discount_percent = other_discount_percent
+        if payment_cycle is not None:
+            self.payment_cycle = payment_cycle
+        if payment_method is not None:
+            self.payment_method = payment_method
+        if per_seat_price is not None:
+            self.per_seat_price = per_seat_price
+        if plan_classification is not None:
+            self.plan_classification = plan_classification
+        if plan_feature_sets is not None:
+            self.plan_feature_sets = plan_feature_sets
+        if plan_id is not None:
+            self.plan_id = plan_id
+        if plan_name is not None:
+            self.plan_name = plan_name
+        if seat_discounts is not None:
+            self.seat_discounts = seat_discounts
+        if support_incident_fee is not None:
+            self.support_incident_fee = support_incident_fee
+        if support_plan_fee is not None:
+            self.support_plan_fee = support_plan_fee
+
+    @property
+    def app_store_products(self):
+        &#34;&#34;&#34;Gets the app_store_products of this BillingPlan.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The app_store_products of this BillingPlan.  # noqa: E501
+        :rtype: list[AppStoreProduct]
+        &#34;&#34;&#34;
+        return self._app_store_products
+
+    @app_store_products.setter
+    def app_store_products(self, app_store_products):
+        &#34;&#34;&#34;Sets the app_store_products of this BillingPlan.
+
+        Reserved: TBD  # noqa: E501
+
+        :param app_store_products: The app_store_products of this BillingPlan.  # noqa: E501
+        :type: list[AppStoreProduct]
+        &#34;&#34;&#34;
+
+        self._app_store_products = app_store_products
+
+    @property
+    def currency_plan_prices(self):
+        &#34;&#34;&#34;Gets the currency_plan_prices of this BillingPlan.  # noqa: E501
+
+        Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, and seatFee that are configured for this plan feature set.  # noqa: E501
+
+        :return: The currency_plan_prices of this BillingPlan.  # noqa: E501
+        :rtype: list[CurrencyPlanPrice]
+        &#34;&#34;&#34;
+        return self._currency_plan_prices
+
+    @currency_plan_prices.setter
+    def currency_plan_prices(self, currency_plan_prices):
+        &#34;&#34;&#34;Sets the currency_plan_prices of this BillingPlan.
+
+        Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, and seatFee that are configured for this plan feature set.  # noqa: E501
+
+        :param currency_plan_prices: The currency_plan_prices of this BillingPlan.  # noqa: E501
+        :type: list[CurrencyPlanPrice]
+        &#34;&#34;&#34;
+
+        self._currency_plan_prices = currency_plan_prices
+
+    @property
+    def enable_support(self):
+        &#34;&#34;&#34;Gets the enable_support of this BillingPlan.  # noqa: E501
+
+        When set to **true**, then customer support is provided as part of the account plan.  # noqa: E501
+
+        :return: The enable_support of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._enable_support
+
+    @enable_support.setter
+    def enable_support(self, enable_support):
+        &#34;&#34;&#34;Sets the enable_support of this BillingPlan.
+
+        When set to **true**, then customer support is provided as part of the account plan.  # noqa: E501
+
+        :param enable_support: The enable_support of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._enable_support = enable_support
+
+    @property
+    def included_seats(self):
+        &#34;&#34;&#34;Gets the included_seats of this BillingPlan.  # noqa: E501
+
+        The number of seats (users) included.  # noqa: E501
+
+        :return: The included_seats of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._included_seats
+
+    @included_seats.setter
+    def included_seats(self, included_seats):
+        &#34;&#34;&#34;Sets the included_seats of this BillingPlan.
+
+        The number of seats (users) included.  # noqa: E501
+
+        :param included_seats: The included_seats of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._included_seats = included_seats
+
+    @property
+    def other_discount_percent(self):
+        &#34;&#34;&#34;Gets the other_discount_percent of this BillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The other_discount_percent of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._other_discount_percent
+
+    @other_discount_percent.setter
+    def other_discount_percent(self, other_discount_percent):
+        &#34;&#34;&#34;Sets the other_discount_percent of this BillingPlan.
+
+          # noqa: E501
+
+        :param other_discount_percent: The other_discount_percent of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._other_discount_percent = other_discount_percent
+
+    @property
+    def payment_cycle(self):
+        &#34;&#34;&#34;Gets the payment_cycle of this BillingPlan.  # noqa: E501
+
+         The payment cycle associated with the plan. The possible values are: Monthly or Annually.   # noqa: E501
+
+        :return: The payment_cycle of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._payment_cycle
+
+    @payment_cycle.setter
+    def payment_cycle(self, payment_cycle):
+        &#34;&#34;&#34;Sets the payment_cycle of this BillingPlan.
+
+         The payment cycle associated with the plan. The possible values are: Monthly or Annually.   # noqa: E501
+
+        :param payment_cycle: The payment_cycle of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._payment_cycle = payment_cycle
+
+    @property
+    def payment_method(self):
+        &#34;&#34;&#34;Gets the payment_method of this BillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The payment_method of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._payment_method
+
+    @payment_method.setter
+    def payment_method(self, payment_method):
+        &#34;&#34;&#34;Sets the payment_method of this BillingPlan.
+
+          # noqa: E501
+
+        :param payment_method: The payment_method of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._payment_method = payment_method
+
+    @property
+    def per_seat_price(self):
+        &#34;&#34;&#34;Gets the per_seat_price of this BillingPlan.  # noqa: E501
+
+        The per seat price for the plan.  # noqa: E501
+
+        :return: The per_seat_price of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._per_seat_price
+
+    @per_seat_price.setter
+    def per_seat_price(self, per_seat_price):
+        &#34;&#34;&#34;Sets the per_seat_price of this BillingPlan.
+
+        The per seat price for the plan.  # noqa: E501
+
+        :param per_seat_price: The per_seat_price of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._per_seat_price = per_seat_price
+
+    @property
+    def plan_classification(self):
+        &#34;&#34;&#34;Gets the plan_classification of this BillingPlan.  # noqa: E501
+
+        Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.  # noqa: E501
+
+        :return: The plan_classification of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_classification
+
+    @plan_classification.setter
+    def plan_classification(self, plan_classification):
+        &#34;&#34;&#34;Sets the plan_classification of this BillingPlan.
+
+        Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.  # noqa: E501
+
+        :param plan_classification: The plan_classification of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_classification = plan_classification
+
+    @property
+    def plan_feature_sets(self):
+        &#34;&#34;&#34;Gets the plan_feature_sets of this BillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The plan_feature_sets of this BillingPlan.  # noqa: E501
+        :rtype: list[FeatureSet]
+        &#34;&#34;&#34;
+        return self._plan_feature_sets
+
+    @plan_feature_sets.setter
+    def plan_feature_sets(self, plan_feature_sets):
+        &#34;&#34;&#34;Sets the plan_feature_sets of this BillingPlan.
+
+          # noqa: E501
+
+        :param plan_feature_sets: The plan_feature_sets of this BillingPlan.  # noqa: E501
+        :type: list[FeatureSet]
+        &#34;&#34;&#34;
+
+        self._plan_feature_sets = plan_feature_sets
+
+    @property
+    def plan_id(self):
+        &#34;&#34;&#34;Gets the plan_id of this BillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The plan_id of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_id
+
+    @plan_id.setter
+    def plan_id(self, plan_id):
+        &#34;&#34;&#34;Sets the plan_id of this BillingPlan.
+
+          # noqa: E501
+
+        :param plan_id: The plan_id of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_id = plan_id
+
+    @property
+    def plan_name(self):
+        &#34;&#34;&#34;Gets the plan_name of this BillingPlan.  # noqa: E501
+
+        The name of the Billing Plan.  # noqa: E501
+
+        :return: The plan_name of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_name
+
+    @plan_name.setter
+    def plan_name(self, plan_name):
+        &#34;&#34;&#34;Sets the plan_name of this BillingPlan.
+
+        The name of the Billing Plan.  # noqa: E501
+
+        :param plan_name: The plan_name of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_name = plan_name
+
+    @property
+    def seat_discounts(self):
+        &#34;&#34;&#34;Gets the seat_discounts of this BillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The seat_discounts of this BillingPlan.  # noqa: E501
+        :rtype: list[SeatDiscount]
+        &#34;&#34;&#34;
+        return self._seat_discounts
+
+    @seat_discounts.setter
+    def seat_discounts(self, seat_discounts):
+        &#34;&#34;&#34;Sets the seat_discounts of this BillingPlan.
+
+          # noqa: E501
+
+        :param seat_discounts: The seat_discounts of this BillingPlan.  # noqa: E501
+        :type: list[SeatDiscount]
+        &#34;&#34;&#34;
+
+        self._seat_discounts = seat_discounts
+
+    @property
+    def support_incident_fee(self):
+        &#34;&#34;&#34;Gets the support_incident_fee of this BillingPlan.  # noqa: E501
+
+        The support incident fee charged for each support incident.  # noqa: E501
+
+        :return: The support_incident_fee of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._support_incident_fee
+
+    @support_incident_fee.setter
+    def support_incident_fee(self, support_incident_fee):
+        &#34;&#34;&#34;Sets the support_incident_fee of this BillingPlan.
+
+        The support incident fee charged for each support incident.  # noqa: E501
+
+        :param support_incident_fee: The support_incident_fee of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._support_incident_fee = support_incident_fee
+
+    @property
+    def support_plan_fee(self):
+        &#34;&#34;&#34;Gets the support_plan_fee of this BillingPlan.  # noqa: E501
+
+        The support plan fee charged for this plan.  # noqa: E501
+
+        :return: The support_plan_fee of this BillingPlan.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._support_plan_fee
+
+    @support_plan_fee.setter
+    def support_plan_fee(self, support_plan_fee):
+        &#34;&#34;&#34;Sets the support_plan_fee of this BillingPlan.
+
+        The support plan fee charged for this plan.  # noqa: E501
+
+        :param support_plan_fee: The support_plan_fee of this BillingPlan.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._support_plan_fee = support_plan_fee
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(BillingPlan, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, BillingPlan):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.app_store_products"><code class="name">var <span class="ident">app_store_products</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the app_store_products of this BillingPlan.
+# noqa: E501</p>
+<p>Reserved: TBD
+# noqa: E501</p>
+<p>:return: The app_store_products of this BillingPlan.
+# noqa: E501
+:rtype: list[AppStoreProduct]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def app_store_products(self):
+    &#34;&#34;&#34;Gets the app_store_products of this BillingPlan.  # noqa: E501
+
+    Reserved: TBD  # noqa: E501
+
+    :return: The app_store_products of this BillingPlan.  # noqa: E501
+    :rtype: list[AppStoreProduct]
+    &#34;&#34;&#34;
+    return self._app_store_products</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.currency_plan_prices"><code class="name">var <span class="ident">currency_plan_prices</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the currency_plan_prices of this BillingPlan.
+# noqa: E501</p>
+<p>Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, and seatFee that are configured for this plan feature set.
+# noqa: E501</p>
+<p>:return: The currency_plan_prices of this BillingPlan.
+# noqa: E501
+:rtype: list[CurrencyPlanPrice]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def currency_plan_prices(self):
+    &#34;&#34;&#34;Gets the currency_plan_prices of this BillingPlan.  # noqa: E501
+
+    Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, and seatFee that are configured for this plan feature set.  # noqa: E501
+
+    :return: The currency_plan_prices of this BillingPlan.  # noqa: E501
+    :rtype: list[CurrencyPlanPrice]
+    &#34;&#34;&#34;
+    return self._currency_plan_prices</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.enable_support"><code class="name">var <span class="ident">enable_support</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the enable_support of this BillingPlan.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, then customer support is provided as part of the account plan.
+# noqa: E501</p>
+<p>:return: The enable_support of this BillingPlan.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def enable_support(self):
+    &#34;&#34;&#34;Gets the enable_support of this BillingPlan.  # noqa: E501
+
+    When set to **true**, then customer support is provided as part of the account plan.  # noqa: E501
+
+    :return: The enable_support of this BillingPlan.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._enable_support</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.included_seats"><code class="name">var <span class="ident">included_seats</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the included_seats of this BillingPlan.
+# noqa: E501</p>
+<p>The number of seats (users) included.
+# noqa: E501</p>
+<p>:return: The included_seats of this BillingPlan.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def included_seats(self):
+    &#34;&#34;&#34;Gets the included_seats of this BillingPlan.  # noqa: E501
+
+    The number of seats (users) included.  # noqa: E501
+
+    :return: The included_seats of this BillingPlan.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._included_seats</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.other_discount_percent"><code class="name">var <span class="ident">other_discount_percent</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the other_discount_percent of this BillingPlan.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The other_discount_percent of this BillingPlan.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def other_discount_percent(self):
+    &#34;&#34;&#34;Gets the other_discount_percent of this BillingPlan.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The other_discount_percent of this BillingPlan.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._other_discount_percent</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.payment_cycle"><code class="name">var <span class="ident">payment_cycle</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the payment_cycle of this BillingPlan.
+# noqa: E501</p>
+<p>The payment cycle associated with the plan. The possible values are: Monthly or Annually.
+# noqa: E501</p>
+<p>:return: The payment_cycle of this BillingPlan.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def payment_cycle(self):
+    &#34;&#34;&#34;Gets the payment_cycle of this BillingPlan.  # noqa: E501
+
+     The payment cycle associated with the plan. The possible values are: Monthly or Annually.   # noqa: E501
+
+    :return: The payment_cycle of this BillingPlan.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._payment_cycle</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.payment_method"><code class="name">var <span class="ident">payment_method</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the payment_method of this BillingPlan.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The payment_method of this BillingPlan.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def payment_method(self):
+    &#34;&#34;&#34;Gets the payment_method of this BillingPlan.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The payment_method of this BillingPlan.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._payment_method</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.per_seat_price"><code class="name">var <span class="ident">per_seat_price</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the per_seat_price of this BillingPlan.
+# noqa: E501</p>
+<p>The per seat price for the plan.
+# noqa: E501</p>
+<p>:return: The per_seat_price of this BillingPlan.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def per_seat_price(self):
+    &#34;&#34;&#34;Gets the per_seat_price of this BillingPlan.  # noqa: E501
+
+    The per seat price for the plan.  # noqa: E501
+
+    :return: The per_seat_price of this BillingPlan.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._per_seat_price</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.plan_classification"><code class="name">var <span class="ident">plan_classification</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the plan_classification of this BillingPlan.
+# noqa: E501</p>
+<p>Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
+# noqa: E501</p>
+<p>:return: The plan_classification of this BillingPlan.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def plan_classification(self):
+    &#34;&#34;&#34;Gets the plan_classification of this BillingPlan.  # noqa: E501
+
+    Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.  # noqa: E501
+
+    :return: The plan_classification of this BillingPlan.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._plan_classification</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.plan_feature_sets"><code class="name">var <span class="ident">plan_feature_sets</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the plan_feature_sets of this BillingPlan.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The plan_feature_sets of this BillingPlan.
+# noqa: E501
+:rtype: list[FeatureSet]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def plan_feature_sets(self):
+    &#34;&#34;&#34;Gets the plan_feature_sets of this BillingPlan.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The plan_feature_sets of this BillingPlan.  # noqa: E501
+    :rtype: list[FeatureSet]
+    &#34;&#34;&#34;
+    return self._plan_feature_sets</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.plan_id"><code class="name">var <span class="ident">plan_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the plan_id of this BillingPlan.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The plan_id of this BillingPlan.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def plan_id(self):
+    &#34;&#34;&#34;Gets the plan_id of this BillingPlan.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The plan_id of this BillingPlan.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._plan_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.plan_name"><code class="name">var <span class="ident">plan_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the plan_name of this BillingPlan.
+# noqa: E501</p>
+<p>The name of the Billing Plan.
+# noqa: E501</p>
+<p>:return: The plan_name of this BillingPlan.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def plan_name(self):
+    &#34;&#34;&#34;Gets the plan_name of this BillingPlan.  # noqa: E501
+
+    The name of the Billing Plan.  # noqa: E501
+
+    :return: The plan_name of this BillingPlan.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._plan_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.seat_discounts"><code class="name">var <span class="ident">seat_discounts</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the seat_discounts of this BillingPlan.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The seat_discounts of this BillingPlan.
+# noqa: E501
+:rtype: list[SeatDiscount]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def seat_discounts(self):
+    &#34;&#34;&#34;Gets the seat_discounts of this BillingPlan.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The seat_discounts of this BillingPlan.  # noqa: E501
+    :rtype: list[SeatDiscount]
+    &#34;&#34;&#34;
+    return self._seat_discounts</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.support_incident_fee"><code class="name">var <span class="ident">support_incident_fee</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the support_incident_fee of this BillingPlan.
+# noqa: E501</p>
+<p>The support incident fee charged for each support incident.
+# noqa: E501</p>
+<p>:return: The support_incident_fee of this BillingPlan.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def support_incident_fee(self):
+    &#34;&#34;&#34;Gets the support_incident_fee of this BillingPlan.  # noqa: E501
+
+    The support incident fee charged for each support incident.  # noqa: E501
+
+    :return: The support_incident_fee of this BillingPlan.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._support_incident_fee</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.support_plan_fee"><code class="name">var <span class="ident">support_plan_fee</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the support_plan_fee of this BillingPlan.
+# noqa: E501</p>
+<p>The support plan fee charged for this plan.
+# noqa: E501</p>
+<p>:return: The support_plan_fee of this BillingPlan.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def support_plan_fee(self):
+    &#34;&#34;&#34;Gets the support_plan_fee of this BillingPlan.  # noqa: E501
+
+    The support plan fee charged for this plan.  # noqa: E501
+
+    :return: The support_plan_fee of this BillingPlan.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._support_plan_fee</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(BillingPlan, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.billing_plan.BillingPlan.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.billing_plan.BillingPlan" href="#docusign_esign.models.billing_plan.BillingPlan">BillingPlan</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.app_store_products" href="#docusign_esign.models.billing_plan.BillingPlan.app_store_products">app_store_products</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.attribute_map" href="#docusign_esign.models.billing_plan.BillingPlan.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.currency_plan_prices" href="#docusign_esign.models.billing_plan.BillingPlan.currency_plan_prices">currency_plan_prices</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.enable_support" href="#docusign_esign.models.billing_plan.BillingPlan.enable_support">enable_support</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.included_seats" href="#docusign_esign.models.billing_plan.BillingPlan.included_seats">included_seats</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.other_discount_percent" href="#docusign_esign.models.billing_plan.BillingPlan.other_discount_percent">other_discount_percent</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.payment_cycle" href="#docusign_esign.models.billing_plan.BillingPlan.payment_cycle">payment_cycle</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.payment_method" href="#docusign_esign.models.billing_plan.BillingPlan.payment_method">payment_method</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.per_seat_price" href="#docusign_esign.models.billing_plan.BillingPlan.per_seat_price">per_seat_price</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.plan_classification" href="#docusign_esign.models.billing_plan.BillingPlan.plan_classification">plan_classification</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.plan_feature_sets" href="#docusign_esign.models.billing_plan.BillingPlan.plan_feature_sets">plan_feature_sets</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.plan_id" href="#docusign_esign.models.billing_plan.BillingPlan.plan_id">plan_id</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.plan_name" href="#docusign_esign.models.billing_plan.BillingPlan.plan_name">plan_name</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.seat_discounts" href="#docusign_esign.models.billing_plan.BillingPlan.seat_discounts">seat_discounts</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.support_incident_fee" href="#docusign_esign.models.billing_plan.BillingPlan.support_incident_fee">support_incident_fee</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.support_plan_fee" href="#docusign_esign.models.billing_plan.BillingPlan.support_plan_fee">support_plan_fee</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.swagger_types" href="#docusign_esign.models.billing_plan.BillingPlan.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.to_dict" href="#docusign_esign.models.billing_plan.BillingPlan.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.billing_plan.BillingPlan.to_str" href="#docusign_esign.models.billing_plan.BillingPlan.to_str">to_str</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

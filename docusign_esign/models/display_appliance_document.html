@@ -1,0 +1,1352 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.display_appliance_document API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.display_appliance_document</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+from pprint import pformat
+from six import iteritems
+import re
+
+
+class DisplayApplianceDocument(object):
+    &#34;&#34;&#34;
+    NOTE: This class is auto generated by the swagger code generator program.
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+    def __init__(self, attachment_date=None, attachment_description=None, copy_pdf_id=None, document_id=None, document_type=None, envelope_id=None, external_document_id=None, latest_pdf_id=None, name=None, original_pdf_id=None, pages=None, row_state=None, sequence=None, status=None):
+        &#34;&#34;&#34;
+        DisplayApplianceDocument - a model defined in Swagger
+
+        :param dict swaggerTypes: The key is attribute name
+                                  and the value is attribute type.
+        :param dict attributeMap: The key is attribute name
+                                  and the value is json key in definition.
+        &#34;&#34;&#34;
+        self.swagger_types = {
+            &#39;attachment_date&#39;: &#39;str&#39;,
+            &#39;attachment_description&#39;: &#39;str&#39;,
+            &#39;copy_pdf_id&#39;: &#39;str&#39;,
+            &#39;document_id&#39;: &#39;str&#39;,
+            &#39;document_type&#39;: &#39;str&#39;,
+            &#39;envelope_id&#39;: &#39;str&#39;,
+            &#39;external_document_id&#39;: &#39;str&#39;,
+            &#39;latest_pdf_id&#39;: &#39;str&#39;,
+            &#39;name&#39;: &#39;str&#39;,
+            &#39;original_pdf_id&#39;: &#39;str&#39;,
+            &#39;pages&#39;: &#39;str&#39;,
+            &#39;row_state&#39;: &#39;str&#39;,
+            &#39;sequence&#39;: &#39;str&#39;,
+            &#39;status&#39;: &#39;str&#39;
+        }
+
+        self.attribute_map = {
+            &#39;attachment_date&#39;: &#39;attachmentDate&#39;,
+            &#39;attachment_description&#39;: &#39;attachmentDescription&#39;,
+            &#39;copy_pdf_id&#39;: &#39;copyPDFId&#39;,
+            &#39;document_id&#39;: &#39;documentId&#39;,
+            &#39;document_type&#39;: &#39;documentType&#39;,
+            &#39;envelope_id&#39;: &#39;envelopeId&#39;,
+            &#39;external_document_id&#39;: &#39;externalDocumentId&#39;,
+            &#39;latest_pdf_id&#39;: &#39;latestPDFId&#39;,
+            &#39;name&#39;: &#39;name&#39;,
+            &#39;original_pdf_id&#39;: &#39;originalPDFId&#39;,
+            &#39;pages&#39;: &#39;pages&#39;,
+            &#39;row_state&#39;: &#39;rowState&#39;,
+            &#39;sequence&#39;: &#39;sequence&#39;,
+            &#39;status&#39;: &#39;status&#39;
+        }
+
+        self._attachment_date = attachment_date
+        self._attachment_description = attachment_description
+        self._copy_pdf_id = copy_pdf_id
+        self._document_id = document_id
+        self._document_type = document_type
+        self._envelope_id = envelope_id
+        self._external_document_id = external_document_id
+        self._latest_pdf_id = latest_pdf_id
+        self._name = name
+        self._original_pdf_id = original_pdf_id
+        self._pages = pages
+        self._row_state = row_state
+        self._sequence = sequence
+        self._status = status
+
+    @property
+    def attachment_date(self):
+        &#34;&#34;&#34;
+        Gets the attachment_date of this DisplayApplianceDocument.
+        
+
+        :return: The attachment_date of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._attachment_date
+
+    @attachment_date.setter
+    def attachment_date(self, attachment_date):
+        &#34;&#34;&#34;
+        Sets the attachment_date of this DisplayApplianceDocument.
+        
+
+        :param attachment_date: The attachment_date of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._attachment_date = attachment_date
+
+    @property
+    def attachment_description(self):
+        &#34;&#34;&#34;
+        Gets the attachment_description of this DisplayApplianceDocument.
+        
+
+        :return: The attachment_description of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._attachment_description
+
+    @attachment_description.setter
+    def attachment_description(self, attachment_description):
+        &#34;&#34;&#34;
+        Sets the attachment_description of this DisplayApplianceDocument.
+        
+
+        :param attachment_description: The attachment_description of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._attachment_description = attachment_description
+
+    @property
+    def copy_pdf_id(self):
+        &#34;&#34;&#34;
+        Gets the copy_pdf_id of this DisplayApplianceDocument.
+        
+
+        :return: The copy_pdf_id of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._copy_pdf_id
+
+    @copy_pdf_id.setter
+    def copy_pdf_id(self, copy_pdf_id):
+        &#34;&#34;&#34;
+        Sets the copy_pdf_id of this DisplayApplianceDocument.
+        
+
+        :param copy_pdf_id: The copy_pdf_id of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._copy_pdf_id = copy_pdf_id
+
+    @property
+    def document_id(self):
+        &#34;&#34;&#34;
+        Gets the document_id of this DisplayApplianceDocument.
+        Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.
+
+        :return: The document_id of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        &#34;&#34;&#34;
+        Sets the document_id of this DisplayApplianceDocument.
+        Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.
+
+        :param document_id: The document_id of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._document_id = document_id
+
+    @property
+    def document_type(self):
+        &#34;&#34;&#34;
+        Gets the document_type of this DisplayApplianceDocument.
+        
+
+        :return: The document_type of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._document_type
+
+    @document_type.setter
+    def document_type(self, document_type):
+        &#34;&#34;&#34;
+        Sets the document_type of this DisplayApplianceDocument.
+        
+
+        :param document_type: The document_type of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._document_type = document_type
+
+    @property
+    def envelope_id(self):
+        &#34;&#34;&#34;
+        Gets the envelope_id of this DisplayApplianceDocument.
+        The envelope ID of the envelope status that failed to post.
+
+        :return: The envelope_id of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_id
+
+    @envelope_id.setter
+    def envelope_id(self, envelope_id):
+        &#34;&#34;&#34;
+        Sets the envelope_id of this DisplayApplianceDocument.
+        The envelope ID of the envelope status that failed to post.
+
+        :param envelope_id: The envelope_id of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_id = envelope_id
+
+    @property
+    def external_document_id(self):
+        &#34;&#34;&#34;
+        Gets the external_document_id of this DisplayApplianceDocument.
+        
+
+        :return: The external_document_id of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._external_document_id
+
+    @external_document_id.setter
+    def external_document_id(self, external_document_id):
+        &#34;&#34;&#34;
+        Sets the external_document_id of this DisplayApplianceDocument.
+        
+
+        :param external_document_id: The external_document_id of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._external_document_id = external_document_id
+
+    @property
+    def latest_pdf_id(self):
+        &#34;&#34;&#34;
+        Gets the latest_pdf_id of this DisplayApplianceDocument.
+        
+
+        :return: The latest_pdf_id of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._latest_pdf_id
+
+    @latest_pdf_id.setter
+    def latest_pdf_id(self, latest_pdf_id):
+        &#34;&#34;&#34;
+        Sets the latest_pdf_id of this DisplayApplianceDocument.
+        
+
+        :param latest_pdf_id: The latest_pdf_id of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._latest_pdf_id = latest_pdf_id
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;
+        Gets the name of this DisplayApplianceDocument.
+        
+
+        :return: The name of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;
+        Sets the name of this DisplayApplianceDocument.
+        
+
+        :param name: The name of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def original_pdf_id(self):
+        &#34;&#34;&#34;
+        Gets the original_pdf_id of this DisplayApplianceDocument.
+        
+
+        :return: The original_pdf_id of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._original_pdf_id
+
+    @original_pdf_id.setter
+    def original_pdf_id(self, original_pdf_id):
+        &#34;&#34;&#34;
+        Sets the original_pdf_id of this DisplayApplianceDocument.
+        
+
+        :param original_pdf_id: The original_pdf_id of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._original_pdf_id = original_pdf_id
+
+    @property
+    def pages(self):
+        &#34;&#34;&#34;
+        Gets the pages of this DisplayApplianceDocument.
+        
+
+        :return: The pages of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._pages
+
+    @pages.setter
+    def pages(self, pages):
+        &#34;&#34;&#34;
+        Sets the pages of this DisplayApplianceDocument.
+        
+
+        :param pages: The pages of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._pages = pages
+
+    @property
+    def row_state(self):
+        &#34;&#34;&#34;
+        Gets the row_state of this DisplayApplianceDocument.
+        
+
+        :return: The row_state of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._row_state
+
+    @row_state.setter
+    def row_state(self, row_state):
+        &#34;&#34;&#34;
+        Sets the row_state of this DisplayApplianceDocument.
+        
+
+        :param row_state: The row_state of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._row_state = row_state
+
+    @property
+    def sequence(self):
+        &#34;&#34;&#34;
+        Gets the sequence of this DisplayApplianceDocument.
+        
+
+        :return: The sequence of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sequence
+
+    @sequence.setter
+    def sequence(self, sequence):
+        &#34;&#34;&#34;
+        Sets the sequence of this DisplayApplianceDocument.
+        
+
+        :param sequence: The sequence of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sequence = sequence
+
+    @property
+    def status(self):
+        &#34;&#34;&#34;
+        Gets the status of this DisplayApplianceDocument.
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+        :return: The status of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        &#34;&#34;&#34;
+        Sets the status of this DisplayApplianceDocument.
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+        :param status: The status of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._status = status
+
+    def to_dict(self):
+        &#34;&#34;&#34;
+        Returns the model properties as a dict
+        &#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;
+        Returns the string representation of the model
+        &#34;&#34;&#34;
+        return pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;
+        For `print` and `pprint`
+        &#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are equal
+        &#34;&#34;&#34;
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are not equal
+        &#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument"><code class="flex name class">
+<span>class <span class="ident">DisplayApplianceDocument</span></span>
+<span>(</span><span>attachment_date=None, attachment_description=None, copy_pdf_id=None, document_id=None, document_type=None, envelope_id=None, external_document_id=None, latest_pdf_id=None, name=None, original_pdf_id=None, pages=None, row_state=None, sequence=None, status=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.
+Do not edit the class manually.</p>
+<p>DisplayApplianceDocument - a model defined in Swagger</p>
+<p>:param dict swaggerTypes: The key is attribute name
+and the value is attribute type.
+:param dict attributeMap: The key is attribute name
+and the value is json key in definition.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DisplayApplianceDocument(object):
+    &#34;&#34;&#34;
+    NOTE: This class is auto generated by the swagger code generator program.
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+    def __init__(self, attachment_date=None, attachment_description=None, copy_pdf_id=None, document_id=None, document_type=None, envelope_id=None, external_document_id=None, latest_pdf_id=None, name=None, original_pdf_id=None, pages=None, row_state=None, sequence=None, status=None):
+        &#34;&#34;&#34;
+        DisplayApplianceDocument - a model defined in Swagger
+
+        :param dict swaggerTypes: The key is attribute name
+                                  and the value is attribute type.
+        :param dict attributeMap: The key is attribute name
+                                  and the value is json key in definition.
+        &#34;&#34;&#34;
+        self.swagger_types = {
+            &#39;attachment_date&#39;: &#39;str&#39;,
+            &#39;attachment_description&#39;: &#39;str&#39;,
+            &#39;copy_pdf_id&#39;: &#39;str&#39;,
+            &#39;document_id&#39;: &#39;str&#39;,
+            &#39;document_type&#39;: &#39;str&#39;,
+            &#39;envelope_id&#39;: &#39;str&#39;,
+            &#39;external_document_id&#39;: &#39;str&#39;,
+            &#39;latest_pdf_id&#39;: &#39;str&#39;,
+            &#39;name&#39;: &#39;str&#39;,
+            &#39;original_pdf_id&#39;: &#39;str&#39;,
+            &#39;pages&#39;: &#39;str&#39;,
+            &#39;row_state&#39;: &#39;str&#39;,
+            &#39;sequence&#39;: &#39;str&#39;,
+            &#39;status&#39;: &#39;str&#39;
+        }
+
+        self.attribute_map = {
+            &#39;attachment_date&#39;: &#39;attachmentDate&#39;,
+            &#39;attachment_description&#39;: &#39;attachmentDescription&#39;,
+            &#39;copy_pdf_id&#39;: &#39;copyPDFId&#39;,
+            &#39;document_id&#39;: &#39;documentId&#39;,
+            &#39;document_type&#39;: &#39;documentType&#39;,
+            &#39;envelope_id&#39;: &#39;envelopeId&#39;,
+            &#39;external_document_id&#39;: &#39;externalDocumentId&#39;,
+            &#39;latest_pdf_id&#39;: &#39;latestPDFId&#39;,
+            &#39;name&#39;: &#39;name&#39;,
+            &#39;original_pdf_id&#39;: &#39;originalPDFId&#39;,
+            &#39;pages&#39;: &#39;pages&#39;,
+            &#39;row_state&#39;: &#39;rowState&#39;,
+            &#39;sequence&#39;: &#39;sequence&#39;,
+            &#39;status&#39;: &#39;status&#39;
+        }
+
+        self._attachment_date = attachment_date
+        self._attachment_description = attachment_description
+        self._copy_pdf_id = copy_pdf_id
+        self._document_id = document_id
+        self._document_type = document_type
+        self._envelope_id = envelope_id
+        self._external_document_id = external_document_id
+        self._latest_pdf_id = latest_pdf_id
+        self._name = name
+        self._original_pdf_id = original_pdf_id
+        self._pages = pages
+        self._row_state = row_state
+        self._sequence = sequence
+        self._status = status
+
+    @property
+    def attachment_date(self):
+        &#34;&#34;&#34;
+        Gets the attachment_date of this DisplayApplianceDocument.
+        
+
+        :return: The attachment_date of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._attachment_date
+
+    @attachment_date.setter
+    def attachment_date(self, attachment_date):
+        &#34;&#34;&#34;
+        Sets the attachment_date of this DisplayApplianceDocument.
+        
+
+        :param attachment_date: The attachment_date of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._attachment_date = attachment_date
+
+    @property
+    def attachment_description(self):
+        &#34;&#34;&#34;
+        Gets the attachment_description of this DisplayApplianceDocument.
+        
+
+        :return: The attachment_description of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._attachment_description
+
+    @attachment_description.setter
+    def attachment_description(self, attachment_description):
+        &#34;&#34;&#34;
+        Sets the attachment_description of this DisplayApplianceDocument.
+        
+
+        :param attachment_description: The attachment_description of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._attachment_description = attachment_description
+
+    @property
+    def copy_pdf_id(self):
+        &#34;&#34;&#34;
+        Gets the copy_pdf_id of this DisplayApplianceDocument.
+        
+
+        :return: The copy_pdf_id of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._copy_pdf_id
+
+    @copy_pdf_id.setter
+    def copy_pdf_id(self, copy_pdf_id):
+        &#34;&#34;&#34;
+        Sets the copy_pdf_id of this DisplayApplianceDocument.
+        
+
+        :param copy_pdf_id: The copy_pdf_id of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._copy_pdf_id = copy_pdf_id
+
+    @property
+    def document_id(self):
+        &#34;&#34;&#34;
+        Gets the document_id of this DisplayApplianceDocument.
+        Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.
+
+        :return: The document_id of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        &#34;&#34;&#34;
+        Sets the document_id of this DisplayApplianceDocument.
+        Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.
+
+        :param document_id: The document_id of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._document_id = document_id
+
+    @property
+    def document_type(self):
+        &#34;&#34;&#34;
+        Gets the document_type of this DisplayApplianceDocument.
+        
+
+        :return: The document_type of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._document_type
+
+    @document_type.setter
+    def document_type(self, document_type):
+        &#34;&#34;&#34;
+        Sets the document_type of this DisplayApplianceDocument.
+        
+
+        :param document_type: The document_type of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._document_type = document_type
+
+    @property
+    def envelope_id(self):
+        &#34;&#34;&#34;
+        Gets the envelope_id of this DisplayApplianceDocument.
+        The envelope ID of the envelope status that failed to post.
+
+        :return: The envelope_id of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_id
+
+    @envelope_id.setter
+    def envelope_id(self, envelope_id):
+        &#34;&#34;&#34;
+        Sets the envelope_id of this DisplayApplianceDocument.
+        The envelope ID of the envelope status that failed to post.
+
+        :param envelope_id: The envelope_id of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_id = envelope_id
+
+    @property
+    def external_document_id(self):
+        &#34;&#34;&#34;
+        Gets the external_document_id of this DisplayApplianceDocument.
+        
+
+        :return: The external_document_id of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._external_document_id
+
+    @external_document_id.setter
+    def external_document_id(self, external_document_id):
+        &#34;&#34;&#34;
+        Sets the external_document_id of this DisplayApplianceDocument.
+        
+
+        :param external_document_id: The external_document_id of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._external_document_id = external_document_id
+
+    @property
+    def latest_pdf_id(self):
+        &#34;&#34;&#34;
+        Gets the latest_pdf_id of this DisplayApplianceDocument.
+        
+
+        :return: The latest_pdf_id of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._latest_pdf_id
+
+    @latest_pdf_id.setter
+    def latest_pdf_id(self, latest_pdf_id):
+        &#34;&#34;&#34;
+        Sets the latest_pdf_id of this DisplayApplianceDocument.
+        
+
+        :param latest_pdf_id: The latest_pdf_id of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._latest_pdf_id = latest_pdf_id
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;
+        Gets the name of this DisplayApplianceDocument.
+        
+
+        :return: The name of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;
+        Sets the name of this DisplayApplianceDocument.
+        
+
+        :param name: The name of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def original_pdf_id(self):
+        &#34;&#34;&#34;
+        Gets the original_pdf_id of this DisplayApplianceDocument.
+        
+
+        :return: The original_pdf_id of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._original_pdf_id
+
+    @original_pdf_id.setter
+    def original_pdf_id(self, original_pdf_id):
+        &#34;&#34;&#34;
+        Sets the original_pdf_id of this DisplayApplianceDocument.
+        
+
+        :param original_pdf_id: The original_pdf_id of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._original_pdf_id = original_pdf_id
+
+    @property
+    def pages(self):
+        &#34;&#34;&#34;
+        Gets the pages of this DisplayApplianceDocument.
+        
+
+        :return: The pages of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._pages
+
+    @pages.setter
+    def pages(self, pages):
+        &#34;&#34;&#34;
+        Sets the pages of this DisplayApplianceDocument.
+        
+
+        :param pages: The pages of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._pages = pages
+
+    @property
+    def row_state(self):
+        &#34;&#34;&#34;
+        Gets the row_state of this DisplayApplianceDocument.
+        
+
+        :return: The row_state of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._row_state
+
+    @row_state.setter
+    def row_state(self, row_state):
+        &#34;&#34;&#34;
+        Sets the row_state of this DisplayApplianceDocument.
+        
+
+        :param row_state: The row_state of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._row_state = row_state
+
+    @property
+    def sequence(self):
+        &#34;&#34;&#34;
+        Gets the sequence of this DisplayApplianceDocument.
+        
+
+        :return: The sequence of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sequence
+
+    @sequence.setter
+    def sequence(self, sequence):
+        &#34;&#34;&#34;
+        Sets the sequence of this DisplayApplianceDocument.
+        
+
+        :param sequence: The sequence of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sequence = sequence
+
+    @property
+    def status(self):
+        &#34;&#34;&#34;
+        Gets the status of this DisplayApplianceDocument.
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+        :return: The status of this DisplayApplianceDocument.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        &#34;&#34;&#34;
+        Sets the status of this DisplayApplianceDocument.
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+        :param status: The status of this DisplayApplianceDocument.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._status = status
+
+    def to_dict(self):
+        &#34;&#34;&#34;
+        Returns the model properties as a dict
+        &#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;
+        Returns the string representation of the model
+        &#34;&#34;&#34;
+        return pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;
+        For `print` and `pprint`
+        &#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are equal
+        &#34;&#34;&#34;
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are not equal
+        &#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.attachment_date"><code class="name">var <span class="ident">attachment_date</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the attachment_date of this DisplayApplianceDocument.</p>
+<p>:return: The attachment_date of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def attachment_date(self):
+    &#34;&#34;&#34;
+    Gets the attachment_date of this DisplayApplianceDocument.
+    
+
+    :return: The attachment_date of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._attachment_date</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.attachment_description"><code class="name">var <span class="ident">attachment_description</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the attachment_description of this DisplayApplianceDocument.</p>
+<p>:return: The attachment_description of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def attachment_description(self):
+    &#34;&#34;&#34;
+    Gets the attachment_description of this DisplayApplianceDocument.
+    
+
+    :return: The attachment_description of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._attachment_description</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.copy_pdf_id"><code class="name">var <span class="ident">copy_pdf_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the copy_pdf_id of this DisplayApplianceDocument.</p>
+<p>:return: The copy_pdf_id of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def copy_pdf_id(self):
+    &#34;&#34;&#34;
+    Gets the copy_pdf_id of this DisplayApplianceDocument.
+    
+
+    :return: The copy_pdf_id of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._copy_pdf_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.document_id"><code class="name">var <span class="ident">document_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the document_id of this DisplayApplianceDocument.
+Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.</p>
+<p>:return: The document_id of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def document_id(self):
+    &#34;&#34;&#34;
+    Gets the document_id of this DisplayApplianceDocument.
+    Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.
+
+    :return: The document_id of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._document_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.document_type"><code class="name">var <span class="ident">document_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the document_type of this DisplayApplianceDocument.</p>
+<p>:return: The document_type of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def document_type(self):
+    &#34;&#34;&#34;
+    Gets the document_type of this DisplayApplianceDocument.
+    
+
+    :return: The document_type of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._document_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.envelope_id"><code class="name">var <span class="ident">envelope_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_id of this DisplayApplianceDocument.
+The envelope ID of the envelope status that failed to post.</p>
+<p>:return: The envelope_id of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_id(self):
+    &#34;&#34;&#34;
+    Gets the envelope_id of this DisplayApplianceDocument.
+    The envelope ID of the envelope status that failed to post.
+
+    :return: The envelope_id of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._envelope_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.external_document_id"><code class="name">var <span class="ident">external_document_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the external_document_id of this DisplayApplianceDocument.</p>
+<p>:return: The external_document_id of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def external_document_id(self):
+    &#34;&#34;&#34;
+    Gets the external_document_id of this DisplayApplianceDocument.
+    
+
+    :return: The external_document_id of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._external_document_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.latest_pdf_id"><code class="name">var <span class="ident">latest_pdf_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the latest_pdf_id of this DisplayApplianceDocument.</p>
+<p>:return: The latest_pdf_id of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def latest_pdf_id(self):
+    &#34;&#34;&#34;
+    Gets the latest_pdf_id of this DisplayApplianceDocument.
+    
+
+    :return: The latest_pdf_id of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._latest_pdf_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the name of this DisplayApplianceDocument.</p>
+<p>:return: The name of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name(self):
+    &#34;&#34;&#34;
+    Gets the name of this DisplayApplianceDocument.
+    
+
+    :return: The name of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.original_pdf_id"><code class="name">var <span class="ident">original_pdf_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the original_pdf_id of this DisplayApplianceDocument.</p>
+<p>:return: The original_pdf_id of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def original_pdf_id(self):
+    &#34;&#34;&#34;
+    Gets the original_pdf_id of this DisplayApplianceDocument.
+    
+
+    :return: The original_pdf_id of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._original_pdf_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.pages"><code class="name">var <span class="ident">pages</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the pages of this DisplayApplianceDocument.</p>
+<p>:return: The pages of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def pages(self):
+    &#34;&#34;&#34;
+    Gets the pages of this DisplayApplianceDocument.
+    
+
+    :return: The pages of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._pages</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.row_state"><code class="name">var <span class="ident">row_state</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the row_state of this DisplayApplianceDocument.</p>
+<p>:return: The row_state of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def row_state(self):
+    &#34;&#34;&#34;
+    Gets the row_state of this DisplayApplianceDocument.
+    
+
+    :return: The row_state of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._row_state</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.sequence"><code class="name">var <span class="ident">sequence</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sequence of this DisplayApplianceDocument.</p>
+<p>:return: The sequence of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sequence(self):
+    &#34;&#34;&#34;
+    Gets the sequence of this DisplayApplianceDocument.
+    
+
+    :return: The sequence of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sequence</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.status"><code class="name">var <span class="ident">status</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the status of this DisplayApplianceDocument.
+Indicates the envelope status. Valid values are:
+* sent - The envelope is sent to the recipients.
+* created - The envelope is saved as a draft and can be modified and sent later.</p>
+<p>:return: The status of this DisplayApplianceDocument.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def status(self):
+    &#34;&#34;&#34;
+    Gets the status of this DisplayApplianceDocument.
+    Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+    :return: The status of this DisplayApplianceDocument.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._status</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;
+    Returns the model properties as a dict
+    &#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;
+    Returns the string representation of the model
+    &#34;&#34;&#34;
+    return pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument">DisplayApplianceDocument</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.attachment_date" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.attachment_date">attachment_date</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.attachment_description" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.attachment_description">attachment_description</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.copy_pdf_id" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.copy_pdf_id">copy_pdf_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.document_id" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.document_id">document_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.document_type" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.document_type">document_type</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.envelope_id" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.envelope_id">envelope_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.external_document_id" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.external_document_id">external_document_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.latest_pdf_id" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.latest_pdf_id">latest_pdf_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.name" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.name">name</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.original_pdf_id" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.original_pdf_id">original_pdf_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.pages" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.pages">pages</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.row_state" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.row_state">row_state</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.sequence" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.sequence">sequence</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.status" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.status">status</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.to_dict" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document.DisplayApplianceDocument.to_str" href="#docusign_esign.models.display_appliance_document.DisplayApplianceDocument.to_str">to_str</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

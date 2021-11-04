@@ -1,0 +1,4396 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.tab_metadata API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.tab_metadata</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class TabMetadata(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;anchor&#39;: &#39;str&#39;,
+        &#39;anchor_case_sensitive&#39;: &#39;str&#39;,
+        &#39;anchor_horizontal_alignment&#39;: &#39;str&#39;,
+        &#39;anchor_ignore_if_not_present&#39;: &#39;str&#39;,
+        &#39;anchor_match_whole_word&#39;: &#39;str&#39;,
+        &#39;anchor_units&#39;: &#39;str&#39;,
+        &#39;anchor_x_offset&#39;: &#39;str&#39;,
+        &#39;anchor_y_offset&#39;: &#39;str&#39;,
+        &#39;bold&#39;: &#39;str&#39;,
+        &#39;collaborative&#39;: &#39;str&#39;,
+        &#39;conceal_value_on_document&#39;: &#39;str&#39;,
+        &#39;created_by_display_name&#39;: &#39;str&#39;,
+        &#39;created_by_user_id&#39;: &#39;str&#39;,
+        &#39;custom_tab_id&#39;: &#39;str&#39;,
+        &#39;disable_auto_size&#39;: &#39;str&#39;,
+        &#39;editable&#39;: &#39;str&#39;,
+        &#39;font&#39;: &#39;str&#39;,
+        &#39;font_color&#39;: &#39;str&#39;,
+        &#39;font_size&#39;: &#39;str&#39;,
+        &#39;height&#39;: &#39;str&#39;,
+        &#39;included_in_email&#39;: &#39;str&#39;,
+        &#39;initial_value&#39;: &#39;str&#39;,
+        &#39;italic&#39;: &#39;str&#39;,
+        &#39;items&#39;: &#39;list[str]&#39;,
+        &#39;last_modified&#39;: &#39;str&#39;,
+        &#39;last_modified_by_display_name&#39;: &#39;str&#39;,
+        &#39;last_modified_by_user_id&#39;: &#39;str&#39;,
+        &#39;locale_policy&#39;: &#39;LocalePolicyTab&#39;,
+        &#39;locked&#39;: &#39;str&#39;,
+        &#39;maximum_length&#39;: &#39;str&#39;,
+        &#39;merge_field&#39;: &#39;MergeField&#39;,
+        &#39;name&#39;: &#39;str&#39;,
+        &#39;numerical_value&#39;: &#39;str&#39;,
+        &#39;payment_item_code&#39;: &#39;str&#39;,
+        &#39;payment_item_description&#39;: &#39;str&#39;,
+        &#39;payment_item_name&#39;: &#39;str&#39;,
+        &#39;require_all&#39;: &#39;str&#39;,
+        &#39;required&#39;: &#39;str&#39;,
+        &#39;require_initial_on_shared_change&#39;: &#39;str&#39;,
+        &#39;scale_value&#39;: &#39;str&#39;,
+        &#39;selected&#39;: &#39;str&#39;,
+        &#39;shared&#39;: &#39;str&#39;,
+        &#39;stamp_type&#39;: &#39;str&#39;,
+        &#39;stamp_type_metadata&#39;: &#39;PropertyMetadata&#39;,
+        &#39;tab_label&#39;: &#39;str&#39;,
+        &#39;type&#39;: &#39;str&#39;,
+        &#39;underline&#39;: &#39;str&#39;,
+        &#39;validation_message&#39;: &#39;str&#39;,
+        &#39;validation_pattern&#39;: &#39;str&#39;,
+        &#39;width&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;anchor&#39;: &#39;anchor&#39;,
+        &#39;anchor_case_sensitive&#39;: &#39;anchorCaseSensitive&#39;,
+        &#39;anchor_horizontal_alignment&#39;: &#39;anchorHorizontalAlignment&#39;,
+        &#39;anchor_ignore_if_not_present&#39;: &#39;anchorIgnoreIfNotPresent&#39;,
+        &#39;anchor_match_whole_word&#39;: &#39;anchorMatchWholeWord&#39;,
+        &#39;anchor_units&#39;: &#39;anchorUnits&#39;,
+        &#39;anchor_x_offset&#39;: &#39;anchorXOffset&#39;,
+        &#39;anchor_y_offset&#39;: &#39;anchorYOffset&#39;,
+        &#39;bold&#39;: &#39;bold&#39;,
+        &#39;collaborative&#39;: &#39;collaborative&#39;,
+        &#39;conceal_value_on_document&#39;: &#39;concealValueOnDocument&#39;,
+        &#39;created_by_display_name&#39;: &#39;createdByDisplayName&#39;,
+        &#39;created_by_user_id&#39;: &#39;createdByUserId&#39;,
+        &#39;custom_tab_id&#39;: &#39;customTabId&#39;,
+        &#39;disable_auto_size&#39;: &#39;disableAutoSize&#39;,
+        &#39;editable&#39;: &#39;editable&#39;,
+        &#39;font&#39;: &#39;font&#39;,
+        &#39;font_color&#39;: &#39;fontColor&#39;,
+        &#39;font_size&#39;: &#39;fontSize&#39;,
+        &#39;height&#39;: &#39;height&#39;,
+        &#39;included_in_email&#39;: &#39;includedInEmail&#39;,
+        &#39;initial_value&#39;: &#39;initialValue&#39;,
+        &#39;italic&#39;: &#39;italic&#39;,
+        &#39;items&#39;: &#39;items&#39;,
+        &#39;last_modified&#39;: &#39;lastModified&#39;,
+        &#39;last_modified_by_display_name&#39;: &#39;lastModifiedByDisplayName&#39;,
+        &#39;last_modified_by_user_id&#39;: &#39;lastModifiedByUserId&#39;,
+        &#39;locale_policy&#39;: &#39;localePolicy&#39;,
+        &#39;locked&#39;: &#39;locked&#39;,
+        &#39;maximum_length&#39;: &#39;maximumLength&#39;,
+        &#39;merge_field&#39;: &#39;mergeField&#39;,
+        &#39;name&#39;: &#39;name&#39;,
+        &#39;numerical_value&#39;: &#39;numericalValue&#39;,
+        &#39;payment_item_code&#39;: &#39;paymentItemCode&#39;,
+        &#39;payment_item_description&#39;: &#39;paymentItemDescription&#39;,
+        &#39;payment_item_name&#39;: &#39;paymentItemName&#39;,
+        &#39;require_all&#39;: &#39;requireAll&#39;,
+        &#39;required&#39;: &#39;required&#39;,
+        &#39;require_initial_on_shared_change&#39;: &#39;requireInitialOnSharedChange&#39;,
+        &#39;scale_value&#39;: &#39;scaleValue&#39;,
+        &#39;selected&#39;: &#39;selected&#39;,
+        &#39;shared&#39;: &#39;shared&#39;,
+        &#39;stamp_type&#39;: &#39;stampType&#39;,
+        &#39;stamp_type_metadata&#39;: &#39;stampTypeMetadata&#39;,
+        &#39;tab_label&#39;: &#39;tabLabel&#39;,
+        &#39;type&#39;: &#39;type&#39;,
+        &#39;underline&#39;: &#39;underline&#39;,
+        &#39;validation_message&#39;: &#39;validationMessage&#39;,
+        &#39;validation_pattern&#39;: &#39;validationPattern&#39;,
+        &#39;width&#39;: &#39;width&#39;
+    }
+
+    def __init__(self, anchor=None, anchor_case_sensitive=None, anchor_horizontal_alignment=None, anchor_ignore_if_not_present=None, anchor_match_whole_word=None, anchor_units=None, anchor_x_offset=None, anchor_y_offset=None, bold=None, collaborative=None, conceal_value_on_document=None, created_by_display_name=None, created_by_user_id=None, custom_tab_id=None, disable_auto_size=None, editable=None, font=None, font_color=None, font_size=None, height=None, included_in_email=None, initial_value=None, italic=None, items=None, last_modified=None, last_modified_by_display_name=None, last_modified_by_user_id=None, locale_policy=None, locked=None, maximum_length=None, merge_field=None, name=None, numerical_value=None, payment_item_code=None, payment_item_description=None, payment_item_name=None, require_all=None, required=None, require_initial_on_shared_change=None, scale_value=None, selected=None, shared=None, stamp_type=None, stamp_type_metadata=None, tab_label=None, type=None, underline=None, validation_message=None, validation_pattern=None, width=None):  # noqa: E501
+        &#34;&#34;&#34;TabMetadata - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._anchor = None
+        self._anchor_case_sensitive = None
+        self._anchor_horizontal_alignment = None
+        self._anchor_ignore_if_not_present = None
+        self._anchor_match_whole_word = None
+        self._anchor_units = None
+        self._anchor_x_offset = None
+        self._anchor_y_offset = None
+        self._bold = None
+        self._collaborative = None
+        self._conceal_value_on_document = None
+        self._created_by_display_name = None
+        self._created_by_user_id = None
+        self._custom_tab_id = None
+        self._disable_auto_size = None
+        self._editable = None
+        self._font = None
+        self._font_color = None
+        self._font_size = None
+        self._height = None
+        self._included_in_email = None
+        self._initial_value = None
+        self._italic = None
+        self._items = None
+        self._last_modified = None
+        self._last_modified_by_display_name = None
+        self._last_modified_by_user_id = None
+        self._locale_policy = None
+        self._locked = None
+        self._maximum_length = None
+        self._merge_field = None
+        self._name = None
+        self._numerical_value = None
+        self._payment_item_code = None
+        self._payment_item_description = None
+        self._payment_item_name = None
+        self._require_all = None
+        self._required = None
+        self._require_initial_on_shared_change = None
+        self._scale_value = None
+        self._selected = None
+        self._shared = None
+        self._stamp_type = None
+        self._stamp_type_metadata = None
+        self._tab_label = None
+        self._type = None
+        self._underline = None
+        self._validation_message = None
+        self._validation_pattern = None
+        self._width = None
+        self.discriminator = None
+
+        if anchor is not None:
+            self.anchor = anchor
+        if anchor_case_sensitive is not None:
+            self.anchor_case_sensitive = anchor_case_sensitive
+        if anchor_horizontal_alignment is not None:
+            self.anchor_horizontal_alignment = anchor_horizontal_alignment
+        if anchor_ignore_if_not_present is not None:
+            self.anchor_ignore_if_not_present = anchor_ignore_if_not_present
+        if anchor_match_whole_word is not None:
+            self.anchor_match_whole_word = anchor_match_whole_word
+        if anchor_units is not None:
+            self.anchor_units = anchor_units
+        if anchor_x_offset is not None:
+            self.anchor_x_offset = anchor_x_offset
+        if anchor_y_offset is not None:
+            self.anchor_y_offset = anchor_y_offset
+        if bold is not None:
+            self.bold = bold
+        if collaborative is not None:
+            self.collaborative = collaborative
+        if conceal_value_on_document is not None:
+            self.conceal_value_on_document = conceal_value_on_document
+        if created_by_display_name is not None:
+            self.created_by_display_name = created_by_display_name
+        if created_by_user_id is not None:
+            self.created_by_user_id = created_by_user_id
+        if custom_tab_id is not None:
+            self.custom_tab_id = custom_tab_id
+        if disable_auto_size is not None:
+            self.disable_auto_size = disable_auto_size
+        if editable is not None:
+            self.editable = editable
+        if font is not None:
+            self.font = font
+        if font_color is not None:
+            self.font_color = font_color
+        if font_size is not None:
+            self.font_size = font_size
+        if height is not None:
+            self.height = height
+        if included_in_email is not None:
+            self.included_in_email = included_in_email
+        if initial_value is not None:
+            self.initial_value = initial_value
+        if italic is not None:
+            self.italic = italic
+        if items is not None:
+            self.items = items
+        if last_modified is not None:
+            self.last_modified = last_modified
+        if last_modified_by_display_name is not None:
+            self.last_modified_by_display_name = last_modified_by_display_name
+        if last_modified_by_user_id is not None:
+            self.last_modified_by_user_id = last_modified_by_user_id
+        if locale_policy is not None:
+            self.locale_policy = locale_policy
+        if locked is not None:
+            self.locked = locked
+        if maximum_length is not None:
+            self.maximum_length = maximum_length
+        if merge_field is not None:
+            self.merge_field = merge_field
+        if name is not None:
+            self.name = name
+        if numerical_value is not None:
+            self.numerical_value = numerical_value
+        if payment_item_code is not None:
+            self.payment_item_code = payment_item_code
+        if payment_item_description is not None:
+            self.payment_item_description = payment_item_description
+        if payment_item_name is not None:
+            self.payment_item_name = payment_item_name
+        if require_all is not None:
+            self.require_all = require_all
+        if required is not None:
+            self.required = required
+        if require_initial_on_shared_change is not None:
+            self.require_initial_on_shared_change = require_initial_on_shared_change
+        if scale_value is not None:
+            self.scale_value = scale_value
+        if selected is not None:
+            self.selected = selected
+        if shared is not None:
+            self.shared = shared
+        if stamp_type is not None:
+            self.stamp_type = stamp_type
+        if stamp_type_metadata is not None:
+            self.stamp_type_metadata = stamp_type_metadata
+        if tab_label is not None:
+            self.tab_label = tab_label
+        if type is not None:
+            self.type = type
+        if underline is not None:
+            self.underline = underline
+        if validation_message is not None:
+            self.validation_message = validation_message
+        if validation_pattern is not None:
+            self.validation_pattern = validation_pattern
+        if width is not None:
+            self.width = width
+
+    @property
+    def anchor(self):
+        &#34;&#34;&#34;Gets the anchor of this TabMetadata.  # noqa: E501
+
+        An optional string that is used to auto-match tabs to strings located in the documents of an envelope.  # noqa: E501
+
+        :return: The anchor of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor
+
+    @anchor.setter
+    def anchor(self, anchor):
+        &#34;&#34;&#34;Sets the anchor of this TabMetadata.
+
+        An optional string that is used to auto-match tabs to strings located in the documents of an envelope.  # noqa: E501
+
+        :param anchor: The anchor of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor = anchor
+
+    @property
+    def anchor_case_sensitive(self):
+        &#34;&#34;&#34;Gets the anchor_case_sensitive of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.  # noqa: E501
+
+        :return: The anchor_case_sensitive of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_case_sensitive
+
+    @anchor_case_sensitive.setter
+    def anchor_case_sensitive(self, anchor_case_sensitive):
+        &#34;&#34;&#34;Sets the anchor_case_sensitive of this TabMetadata.
+
+        When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.  # noqa: E501
+
+        :param anchor_case_sensitive: The anchor_case_sensitive of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_case_sensitive = anchor_case_sensitive
+
+    @property
+    def anchor_horizontal_alignment(self):
+        &#34;&#34;&#34;Gets the anchor_horizontal_alignment of this TabMetadata.  # noqa: E501
+
+        Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.  # noqa: E501
+
+        :return: The anchor_horizontal_alignment of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_horizontal_alignment
+
+    @anchor_horizontal_alignment.setter
+    def anchor_horizontal_alignment(self, anchor_horizontal_alignment):
+        &#34;&#34;&#34;Sets the anchor_horizontal_alignment of this TabMetadata.
+
+        Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.  # noqa: E501
+
+        :param anchor_horizontal_alignment: The anchor_horizontal_alignment of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_horizontal_alignment = anchor_horizontal_alignment
+
+    @property
+    def anchor_ignore_if_not_present(self):
+        &#34;&#34;&#34;Gets the anchor_ignore_if_not_present of this TabMetadata.  # noqa: E501
+
+        When set to **true**, this tab is ignored if anchorString is not found in the document.  # noqa: E501
+
+        :return: The anchor_ignore_if_not_present of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_ignore_if_not_present
+
+    @anchor_ignore_if_not_present.setter
+    def anchor_ignore_if_not_present(self, anchor_ignore_if_not_present):
+        &#34;&#34;&#34;Sets the anchor_ignore_if_not_present of this TabMetadata.
+
+        When set to **true**, this tab is ignored if anchorString is not found in the document.  # noqa: E501
+
+        :param anchor_ignore_if_not_present: The anchor_ignore_if_not_present of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_ignore_if_not_present = anchor_ignore_if_not_present
+
+    @property
+    def anchor_match_whole_word(self):
+        &#34;&#34;&#34;Gets the anchor_match_whole_word of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.  # noqa: E501
+
+        :return: The anchor_match_whole_word of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_match_whole_word
+
+    @anchor_match_whole_word.setter
+    def anchor_match_whole_word(self, anchor_match_whole_word):
+        &#34;&#34;&#34;Sets the anchor_match_whole_word of this TabMetadata.
+
+        When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.  # noqa: E501
+
+        :param anchor_match_whole_word: The anchor_match_whole_word of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_match_whole_word = anchor_match_whole_word
+
+    @property
+    def anchor_units(self):
+        &#34;&#34;&#34;Gets the anchor_units of this TabMetadata.  # noqa: E501
+
+        Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.  # noqa: E501
+
+        :return: The anchor_units of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_units
+
+    @anchor_units.setter
+    def anchor_units(self, anchor_units):
+        &#34;&#34;&#34;Sets the anchor_units of this TabMetadata.
+
+        Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.  # noqa: E501
+
+        :param anchor_units: The anchor_units of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_units = anchor_units
+
+    @property
+    def anchor_x_offset(self):
+        &#34;&#34;&#34;Gets the anchor_x_offset of this TabMetadata.  # noqa: E501
+
+        Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.  # noqa: E501
+
+        :return: The anchor_x_offset of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_x_offset
+
+    @anchor_x_offset.setter
+    def anchor_x_offset(self, anchor_x_offset):
+        &#34;&#34;&#34;Sets the anchor_x_offset of this TabMetadata.
+
+        Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.  # noqa: E501
+
+        :param anchor_x_offset: The anchor_x_offset of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_x_offset = anchor_x_offset
+
+    @property
+    def anchor_y_offset(self):
+        &#34;&#34;&#34;Gets the anchor_y_offset of this TabMetadata.  # noqa: E501
+
+        Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.  # noqa: E501
+
+        :return: The anchor_y_offset of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_y_offset
+
+    @anchor_y_offset.setter
+    def anchor_y_offset(self, anchor_y_offset):
+        &#34;&#34;&#34;Sets the anchor_y_offset of this TabMetadata.
+
+        Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.  # noqa: E501
+
+        :param anchor_y_offset: The anchor_y_offset of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_y_offset = anchor_y_offset
+
+    @property
+    def bold(self):
+        &#34;&#34;&#34;Gets the bold of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the information in the tab is bold.  # noqa: E501
+
+        :return: The bold of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._bold
+
+    @bold.setter
+    def bold(self, bold):
+        &#34;&#34;&#34;Sets the bold of this TabMetadata.
+
+        When set to **true**, the information in the tab is bold.  # noqa: E501
+
+        :param bold: The bold of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._bold = bold
+
+    @property
+    def collaborative(self):
+        &#34;&#34;&#34;Gets the collaborative of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The collaborative of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._collaborative
+
+    @collaborative.setter
+    def collaborative(self, collaborative):
+        &#34;&#34;&#34;Sets the collaborative of this TabMetadata.
+
+          # noqa: E501
+
+        :param collaborative: The collaborative of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._collaborative = collaborative
+
+    @property
+    def conceal_value_on_document(self):
+        &#34;&#34;&#34;Gets the conceal_value_on_document of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.  # noqa: E501
+
+        :return: The conceal_value_on_document of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._conceal_value_on_document
+
+    @conceal_value_on_document.setter
+    def conceal_value_on_document(self, conceal_value_on_document):
+        &#34;&#34;&#34;Sets the conceal_value_on_document of this TabMetadata.
+
+        When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.  # noqa: E501
+
+        :param conceal_value_on_document: The conceal_value_on_document of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._conceal_value_on_document = conceal_value_on_document
+
+    @property
+    def created_by_display_name(self):
+        &#34;&#34;&#34;Gets the created_by_display_name of this TabMetadata.  # noqa: E501
+
+        The user name of the DocuSign user who created this object.  # noqa: E501
+
+        :return: The created_by_display_name of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_by_display_name
+
+    @created_by_display_name.setter
+    def created_by_display_name(self, created_by_display_name):
+        &#34;&#34;&#34;Sets the created_by_display_name of this TabMetadata.
+
+        The user name of the DocuSign user who created this object.  # noqa: E501
+
+        :param created_by_display_name: The created_by_display_name of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_by_display_name = created_by_display_name
+
+    @property
+    def created_by_user_id(self):
+        &#34;&#34;&#34;Gets the created_by_user_id of this TabMetadata.  # noqa: E501
+
+        The userId of the DocuSign user who created this object.  # noqa: E501
+
+        :return: The created_by_user_id of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_by_user_id
+
+    @created_by_user_id.setter
+    def created_by_user_id(self, created_by_user_id):
+        &#34;&#34;&#34;Sets the created_by_user_id of this TabMetadata.
+
+        The userId of the DocuSign user who created this object.  # noqa: E501
+
+        :param created_by_user_id: The created_by_user_id of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_by_user_id = created_by_user_id
+
+    @property
+    def custom_tab_id(self):
+        &#34;&#34;&#34;Gets the custom_tab_id of this TabMetadata.  # noqa: E501
+
+        The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.  # noqa: E501
+
+        :return: The custom_tab_id of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_tab_id
+
+    @custom_tab_id.setter
+    def custom_tab_id(self, custom_tab_id):
+        &#34;&#34;&#34;Sets the custom_tab_id of this TabMetadata.
+
+        The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.  # noqa: E501
+
+        :param custom_tab_id: The custom_tab_id of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_tab_id = custom_tab_id
+
+    @property
+    def disable_auto_size(self):
+        &#34;&#34;&#34;Gets the disable_auto_size of this TabMetadata.  # noqa: E501
+
+        When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.  # noqa: E501
+
+        :return: The disable_auto_size of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._disable_auto_size
+
+    @disable_auto_size.setter
+    def disable_auto_size(self, disable_auto_size):
+        &#34;&#34;&#34;Sets the disable_auto_size of this TabMetadata.
+
+        When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.  # noqa: E501
+
+        :param disable_auto_size: The disable_auto_size of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._disable_auto_size = disable_auto_size
+
+    @property
+    def editable(self):
+        &#34;&#34;&#34;Gets the editable of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.  # noqa: E501
+
+        :return: The editable of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._editable
+
+    @editable.setter
+    def editable(self, editable):
+        &#34;&#34;&#34;Sets the editable of this TabMetadata.
+
+        When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.  # noqa: E501
+
+        :param editable: The editable of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._editable = editable
+
+    @property
+    def font(self):
+        &#34;&#34;&#34;Gets the font of this TabMetadata.  # noqa: E501
+
+        The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.  # noqa: E501
+
+        :return: The font of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._font
+
+    @font.setter
+    def font(self, font):
+        &#34;&#34;&#34;Sets the font of this TabMetadata.
+
+        The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.  # noqa: E501
+
+        :param font: The font of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._font = font
+
+    @property
+    def font_color(self):
+        &#34;&#34;&#34;Gets the font_color of this TabMetadata.  # noqa: E501
+
+        The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.  # noqa: E501
+
+        :return: The font_color of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._font_color
+
+    @font_color.setter
+    def font_color(self, font_color):
+        &#34;&#34;&#34;Sets the font_color of this TabMetadata.
+
+        The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.  # noqa: E501
+
+        :param font_color: The font_color of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._font_color = font_color
+
+    @property
+    def font_size(self):
+        &#34;&#34;&#34;Gets the font_size of this TabMetadata.  # noqa: E501
+
+        The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.  # noqa: E501
+
+        :return: The font_size of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._font_size
+
+    @font_size.setter
+    def font_size(self, font_size):
+        &#34;&#34;&#34;Sets the font_size of this TabMetadata.
+
+        The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.  # noqa: E501
+
+        :param font_size: The font_size of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._font_size = font_size
+
+    @property
+    def height(self):
+        &#34;&#34;&#34;Gets the height of this TabMetadata.  # noqa: E501
+
+        Height of the tab in pixels.  # noqa: E501
+
+        :return: The height of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._height
+
+    @height.setter
+    def height(self, height):
+        &#34;&#34;&#34;Sets the height of this TabMetadata.
+
+        Height of the tab in pixels.  # noqa: E501
+
+        :param height: The height of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._height = height
+
+    @property
+    def included_in_email(self):
+        &#34;&#34;&#34;Gets the included_in_email of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.  # noqa: E501
+
+        :return: The included_in_email of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._included_in_email
+
+    @included_in_email.setter
+    def included_in_email(self, included_in_email):
+        &#34;&#34;&#34;Sets the included_in_email of this TabMetadata.
+
+        When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.  # noqa: E501
+
+        :param included_in_email: The included_in_email of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._included_in_email = included_in_email
+
+    @property
+    def initial_value(self):
+        &#34;&#34;&#34;Gets the initial_value of this TabMetadata.  # noqa: E501
+
+        The original value of the tab.  # noqa: E501
+
+        :return: The initial_value of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._initial_value
+
+    @initial_value.setter
+    def initial_value(self, initial_value):
+        &#34;&#34;&#34;Sets the initial_value of this TabMetadata.
+
+        The original value of the tab.  # noqa: E501
+
+        :param initial_value: The initial_value of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._initial_value = initial_value
+
+    @property
+    def italic(self):
+        &#34;&#34;&#34;Gets the italic of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the information in the tab is italic.  # noqa: E501
+
+        :return: The italic of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._italic
+
+    @italic.setter
+    def italic(self, italic):
+        &#34;&#34;&#34;Sets the italic of this TabMetadata.
+
+        When set to **true**, the information in the tab is italic.  # noqa: E501
+
+        :param italic: The italic of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._italic = italic
+
+    @property
+    def items(self):
+        &#34;&#34;&#34;Gets the items of this TabMetadata.  # noqa: E501
+
+        If the tab is a list, this represents the values that are possible for the tab.  # noqa: E501
+
+        :return: The items of this TabMetadata.  # noqa: E501
+        :rtype: list[str]
+        &#34;&#34;&#34;
+        return self._items
+
+    @items.setter
+    def items(self, items):
+        &#34;&#34;&#34;Sets the items of this TabMetadata.
+
+        If the tab is a list, this represents the values that are possible for the tab.  # noqa: E501
+
+        :param items: The items of this TabMetadata.  # noqa: E501
+        :type: list[str]
+        &#34;&#34;&#34;
+
+        self._items = items
+
+    @property
+    def last_modified(self):
+        &#34;&#34;&#34;Gets the last_modified of this TabMetadata.  # noqa: E501
+
+        The UTC DateTime this object was last modified. This is in ISO8601 format.  # noqa: E501
+
+        :return: The last_modified of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified
+
+    @last_modified.setter
+    def last_modified(self, last_modified):
+        &#34;&#34;&#34;Sets the last_modified of this TabMetadata.
+
+        The UTC DateTime this object was last modified. This is in ISO8601 format.  # noqa: E501
+
+        :param last_modified: The last_modified of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified = last_modified
+
+    @property
+    def last_modified_by_display_name(self):
+        &#34;&#34;&#34;Gets the last_modified_by_display_name of this TabMetadata.  # noqa: E501
+
+        The User Name of the DocuSign user who last modified this object.  # noqa: E501
+
+        :return: The last_modified_by_display_name of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified_by_display_name
+
+    @last_modified_by_display_name.setter
+    def last_modified_by_display_name(self, last_modified_by_display_name):
+        &#34;&#34;&#34;Sets the last_modified_by_display_name of this TabMetadata.
+
+        The User Name of the DocuSign user who last modified this object.  # noqa: E501
+
+        :param last_modified_by_display_name: The last_modified_by_display_name of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified_by_display_name = last_modified_by_display_name
+
+    @property
+    def last_modified_by_user_id(self):
+        &#34;&#34;&#34;Gets the last_modified_by_user_id of this TabMetadata.  # noqa: E501
+
+        The userId of the DocuSign user who last modified this object.  # noqa: E501
+
+        :return: The last_modified_by_user_id of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified_by_user_id
+
+    @last_modified_by_user_id.setter
+    def last_modified_by_user_id(self, last_modified_by_user_id):
+        &#34;&#34;&#34;Sets the last_modified_by_user_id of this TabMetadata.
+
+        The userId of the DocuSign user who last modified this object.  # noqa: E501
+
+        :param last_modified_by_user_id: The last_modified_by_user_id of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified_by_user_id = last_modified_by_user_id
+
+    @property
+    def locale_policy(self):
+        &#34;&#34;&#34;Gets the locale_policy of this TabMetadata.  # noqa: E501
+
+
+        :return: The locale_policy of this TabMetadata.  # noqa: E501
+        :rtype: LocalePolicyTab
+        &#34;&#34;&#34;
+        return self._locale_policy
+
+    @locale_policy.setter
+    def locale_policy(self, locale_policy):
+        &#34;&#34;&#34;Sets the locale_policy of this TabMetadata.
+
+
+        :param locale_policy: The locale_policy of this TabMetadata.  # noqa: E501
+        :type: LocalePolicyTab
+        &#34;&#34;&#34;
+
+        self._locale_policy = locale_policy
+
+    @property
+    def locked(self):
+        &#34;&#34;&#34;Gets the locked of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the signer cannot change the data of the custom tab.  # noqa: E501
+
+        :return: The locked of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._locked
+
+    @locked.setter
+    def locked(self, locked):
+        &#34;&#34;&#34;Sets the locked of this TabMetadata.
+
+        When set to **true**, the signer cannot change the data of the custom tab.  # noqa: E501
+
+        :param locked: The locked of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._locked = locked
+
+    @property
+    def maximum_length(self):
+        &#34;&#34;&#34;Gets the maximum_length of this TabMetadata.  # noqa: E501
+
+        The maximum number of entry characters supported by the custom tab.  # noqa: E501
+
+        :return: The maximum_length of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._maximum_length
+
+    @maximum_length.setter
+    def maximum_length(self, maximum_length):
+        &#34;&#34;&#34;Sets the maximum_length of this TabMetadata.
+
+        The maximum number of entry characters supported by the custom tab.  # noqa: E501
+
+        :param maximum_length: The maximum_length of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._maximum_length = maximum_length
+
+    @property
+    def merge_field(self):
+        &#34;&#34;&#34;Gets the merge_field of this TabMetadata.  # noqa: E501
+
+
+        :return: The merge_field of this TabMetadata.  # noqa: E501
+        :rtype: MergeField
+        &#34;&#34;&#34;
+        return self._merge_field
+
+    @merge_field.setter
+    def merge_field(self, merge_field):
+        &#34;&#34;&#34;Sets the merge_field of this TabMetadata.
+
+
+        :param merge_field: The merge_field of this TabMetadata.  # noqa: E501
+        :type: MergeField
+        &#34;&#34;&#34;
+
+        self._merge_field = merge_field
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;Gets the name of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The name of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;Sets the name of this TabMetadata.
+
+          # noqa: E501
+
+        :param name: The name of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def numerical_value(self):
+        &#34;&#34;&#34;Gets the numerical_value of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The numerical_value of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._numerical_value
+
+    @numerical_value.setter
+    def numerical_value(self, numerical_value):
+        &#34;&#34;&#34;Sets the numerical_value of this TabMetadata.
+
+          # noqa: E501
+
+        :param numerical_value: The numerical_value of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._numerical_value = numerical_value
+
+    @property
+    def payment_item_code(self):
+        &#34;&#34;&#34;Gets the payment_item_code of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The payment_item_code of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._payment_item_code
+
+    @payment_item_code.setter
+    def payment_item_code(self, payment_item_code):
+        &#34;&#34;&#34;Sets the payment_item_code of this TabMetadata.
+
+          # noqa: E501
+
+        :param payment_item_code: The payment_item_code of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._payment_item_code = payment_item_code
+
+    @property
+    def payment_item_description(self):
+        &#34;&#34;&#34;Gets the payment_item_description of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The payment_item_description of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._payment_item_description
+
+    @payment_item_description.setter
+    def payment_item_description(self, payment_item_description):
+        &#34;&#34;&#34;Sets the payment_item_description of this TabMetadata.
+
+          # noqa: E501
+
+        :param payment_item_description: The payment_item_description of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._payment_item_description = payment_item_description
+
+    @property
+    def payment_item_name(self):
+        &#34;&#34;&#34;Gets the payment_item_name of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The payment_item_name of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._payment_item_name
+
+    @payment_item_name.setter
+    def payment_item_name(self, payment_item_name):
+        &#34;&#34;&#34;Sets the payment_item_name of this TabMetadata.
+
+          # noqa: E501
+
+        :param payment_item_name: The payment_item_name of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._payment_item_name = payment_item_name
+
+    @property
+    def require_all(self):
+        &#34;&#34;&#34;Gets the require_all of this TabMetadata.  # noqa: E501
+
+        When set to **true** and shared is true, information must be entered in this field to complete the envelope.   # noqa: E501
+
+        :return: The require_all of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._require_all
+
+    @require_all.setter
+    def require_all(self, require_all):
+        &#34;&#34;&#34;Sets the require_all of this TabMetadata.
+
+        When set to **true** and shared is true, information must be entered in this field to complete the envelope.   # noqa: E501
+
+        :param require_all: The require_all of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._require_all = require_all
+
+    @property
+    def required(self):
+        &#34;&#34;&#34;Gets the required of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the signer is required to fill out this tab  # noqa: E501
+
+        :return: The required of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._required
+
+    @required.setter
+    def required(self, required):
+        &#34;&#34;&#34;Sets the required of this TabMetadata.
+
+        When set to **true**, the signer is required to fill out this tab  # noqa: E501
+
+        :param required: The required of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._required = required
+
+    @property
+    def require_initial_on_shared_change(self):
+        &#34;&#34;&#34;Gets the require_initial_on_shared_change of this TabMetadata.  # noqa: E501
+
+        Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.  # noqa: E501
+
+        :return: The require_initial_on_shared_change of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._require_initial_on_shared_change
+
+    @require_initial_on_shared_change.setter
+    def require_initial_on_shared_change(self, require_initial_on_shared_change):
+        &#34;&#34;&#34;Sets the require_initial_on_shared_change of this TabMetadata.
+
+        Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.  # noqa: E501
+
+        :param require_initial_on_shared_change: The require_initial_on_shared_change of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._require_initial_on_shared_change = require_initial_on_shared_change
+
+    @property
+    def scale_value(self):
+        &#34;&#34;&#34;Gets the scale_value of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The scale_value of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._scale_value
+
+    @scale_value.setter
+    def scale_value(self, scale_value):
+        &#34;&#34;&#34;Sets the scale_value of this TabMetadata.
+
+          # noqa: E501
+
+        :param scale_value: The scale_value of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._scale_value = scale_value
+
+    @property
+    def selected(self):
+        &#34;&#34;&#34;Gets the selected of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The selected of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._selected
+
+    @selected.setter
+    def selected(self, selected):
+        &#34;&#34;&#34;Sets the selected of this TabMetadata.
+
+          # noqa: E501
+
+        :param selected: The selected of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._selected = selected
+
+    @property
+    def shared(self):
+        &#34;&#34;&#34;Gets the shared of this TabMetadata.  # noqa: E501
+
+        When set to **true**, this custom tab is shared.  # noqa: E501
+
+        :return: The shared of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._shared
+
+    @shared.setter
+    def shared(self, shared):
+        &#34;&#34;&#34;Sets the shared of this TabMetadata.
+
+        When set to **true**, this custom tab is shared.  # noqa: E501
+
+        :param shared: The shared of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._shared = shared
+
+    @property
+    def stamp_type(self):
+        &#34;&#34;&#34;Gets the stamp_type of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The stamp_type of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._stamp_type
+
+    @stamp_type.setter
+    def stamp_type(self, stamp_type):
+        &#34;&#34;&#34;Sets the stamp_type of this TabMetadata.
+
+          # noqa: E501
+
+        :param stamp_type: The stamp_type of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._stamp_type = stamp_type
+
+    @property
+    def stamp_type_metadata(self):
+        &#34;&#34;&#34;Gets the stamp_type_metadata of this TabMetadata.  # noqa: E501
+
+
+        :return: The stamp_type_metadata of this TabMetadata.  # noqa: E501
+        :rtype: PropertyMetadata
+        &#34;&#34;&#34;
+        return self._stamp_type_metadata
+
+    @stamp_type_metadata.setter
+    def stamp_type_metadata(self, stamp_type_metadata):
+        &#34;&#34;&#34;Sets the stamp_type_metadata of this TabMetadata.
+
+
+        :param stamp_type_metadata: The stamp_type_metadata of this TabMetadata.  # noqa: E501
+        :type: PropertyMetadata
+        &#34;&#34;&#34;
+
+        self._stamp_type_metadata = stamp_type_metadata
+
+    @property
+    def tab_label(self):
+        &#34;&#34;&#34;Gets the tab_label of this TabMetadata.  # noqa: E501
+
+        The label string associated with the tab.  # noqa: E501
+
+        :return: The tab_label of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._tab_label
+
+    @tab_label.setter
+    def tab_label(self, tab_label):
+        &#34;&#34;&#34;Sets the tab_label of this TabMetadata.
+
+        The label string associated with the tab.  # noqa: E501
+
+        :param tab_label: The tab_label of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._tab_label = tab_label
+
+    @property
+    def type(self):
+        &#34;&#34;&#34;Gets the type of this TabMetadata.  # noqa: E501
+
+        The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula, FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number, Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.  # noqa: E501
+
+        :return: The type of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        &#34;&#34;&#34;Sets the type of this TabMetadata.
+
+        The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula, FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number, Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.  # noqa: E501
+
+        :param type: The type of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._type = type
+
+    @property
+    def underline(self):
+        &#34;&#34;&#34;Gets the underline of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the information in the tab is underlined.  # noqa: E501
+
+        :return: The underline of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._underline
+
+    @underline.setter
+    def underline(self, underline):
+        &#34;&#34;&#34;Sets the underline of this TabMetadata.
+
+        When set to **true**, the information in the tab is underlined.  # noqa: E501
+
+        :param underline: The underline of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._underline = underline
+
+    @property
+    def validation_message(self):
+        &#34;&#34;&#34;Gets the validation_message of this TabMetadata.  # noqa: E501
+
+        The message displayed if the custom tab fails input validation (either custom of embedded).  # noqa: E501
+
+        :return: The validation_message of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._validation_message
+
+    @validation_message.setter
+    def validation_message(self, validation_message):
+        &#34;&#34;&#34;Sets the validation_message of this TabMetadata.
+
+        The message displayed if the custom tab fails input validation (either custom of embedded).  # noqa: E501
+
+        :param validation_message: The validation_message of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._validation_message = validation_message
+
+    @property
+    def validation_pattern(self):
+        &#34;&#34;&#34;Gets the validation_pattern of this TabMetadata.  # noqa: E501
+
+        A regular expression used to validate input for the tab.  # noqa: E501
+
+        :return: The validation_pattern of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._validation_pattern
+
+    @validation_pattern.setter
+    def validation_pattern(self, validation_pattern):
+        &#34;&#34;&#34;Sets the validation_pattern of this TabMetadata.
+
+        A regular expression used to validate input for the tab.  # noqa: E501
+
+        :param validation_pattern: The validation_pattern of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._validation_pattern = validation_pattern
+
+    @property
+    def width(self):
+        &#34;&#34;&#34;Gets the width of this TabMetadata.  # noqa: E501
+
+        Width of the tab in pixels.  # noqa: E501
+
+        :return: The width of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._width
+
+    @width.setter
+    def width(self, width):
+        &#34;&#34;&#34;Sets the width of this TabMetadata.
+
+        Width of the tab in pixels.  # noqa: E501
+
+        :param width: The width of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._width = width
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(TabMetadata, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, TabMetadata):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata"><code class="flex name class">
+<span>class <span class="ident">TabMetadata</span></span>
+<span>(</span><span>anchor=None, anchor_case_sensitive=None, anchor_horizontal_alignment=None, anchor_ignore_if_not_present=None, anchor_match_whole_word=None, anchor_units=None, anchor_x_offset=None, anchor_y_offset=None, bold=None, collaborative=None, conceal_value_on_document=None, created_by_display_name=None, created_by_user_id=None, custom_tab_id=None, disable_auto_size=None, editable=None, font=None, font_color=None, font_size=None, height=None, included_in_email=None, initial_value=None, italic=None, items=None, last_modified=None, last_modified_by_display_name=None, last_modified_by_user_id=None, locale_policy=None, locked=None, maximum_length=None, merge_field=None, name=None, numerical_value=None, payment_item_code=None, payment_item_description=None, payment_item_name=None, require_all=None, required=None, require_initial_on_shared_change=None, scale_value=None, selected=None, shared=None, stamp_type=None, stamp_type_metadata=None, tab_label=None, type=None, underline=None, validation_message=None, validation_pattern=None, width=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>TabMetadata - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TabMetadata(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;anchor&#39;: &#39;str&#39;,
+        &#39;anchor_case_sensitive&#39;: &#39;str&#39;,
+        &#39;anchor_horizontal_alignment&#39;: &#39;str&#39;,
+        &#39;anchor_ignore_if_not_present&#39;: &#39;str&#39;,
+        &#39;anchor_match_whole_word&#39;: &#39;str&#39;,
+        &#39;anchor_units&#39;: &#39;str&#39;,
+        &#39;anchor_x_offset&#39;: &#39;str&#39;,
+        &#39;anchor_y_offset&#39;: &#39;str&#39;,
+        &#39;bold&#39;: &#39;str&#39;,
+        &#39;collaborative&#39;: &#39;str&#39;,
+        &#39;conceal_value_on_document&#39;: &#39;str&#39;,
+        &#39;created_by_display_name&#39;: &#39;str&#39;,
+        &#39;created_by_user_id&#39;: &#39;str&#39;,
+        &#39;custom_tab_id&#39;: &#39;str&#39;,
+        &#39;disable_auto_size&#39;: &#39;str&#39;,
+        &#39;editable&#39;: &#39;str&#39;,
+        &#39;font&#39;: &#39;str&#39;,
+        &#39;font_color&#39;: &#39;str&#39;,
+        &#39;font_size&#39;: &#39;str&#39;,
+        &#39;height&#39;: &#39;str&#39;,
+        &#39;included_in_email&#39;: &#39;str&#39;,
+        &#39;initial_value&#39;: &#39;str&#39;,
+        &#39;italic&#39;: &#39;str&#39;,
+        &#39;items&#39;: &#39;list[str]&#39;,
+        &#39;last_modified&#39;: &#39;str&#39;,
+        &#39;last_modified_by_display_name&#39;: &#39;str&#39;,
+        &#39;last_modified_by_user_id&#39;: &#39;str&#39;,
+        &#39;locale_policy&#39;: &#39;LocalePolicyTab&#39;,
+        &#39;locked&#39;: &#39;str&#39;,
+        &#39;maximum_length&#39;: &#39;str&#39;,
+        &#39;merge_field&#39;: &#39;MergeField&#39;,
+        &#39;name&#39;: &#39;str&#39;,
+        &#39;numerical_value&#39;: &#39;str&#39;,
+        &#39;payment_item_code&#39;: &#39;str&#39;,
+        &#39;payment_item_description&#39;: &#39;str&#39;,
+        &#39;payment_item_name&#39;: &#39;str&#39;,
+        &#39;require_all&#39;: &#39;str&#39;,
+        &#39;required&#39;: &#39;str&#39;,
+        &#39;require_initial_on_shared_change&#39;: &#39;str&#39;,
+        &#39;scale_value&#39;: &#39;str&#39;,
+        &#39;selected&#39;: &#39;str&#39;,
+        &#39;shared&#39;: &#39;str&#39;,
+        &#39;stamp_type&#39;: &#39;str&#39;,
+        &#39;stamp_type_metadata&#39;: &#39;PropertyMetadata&#39;,
+        &#39;tab_label&#39;: &#39;str&#39;,
+        &#39;type&#39;: &#39;str&#39;,
+        &#39;underline&#39;: &#39;str&#39;,
+        &#39;validation_message&#39;: &#39;str&#39;,
+        &#39;validation_pattern&#39;: &#39;str&#39;,
+        &#39;width&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;anchor&#39;: &#39;anchor&#39;,
+        &#39;anchor_case_sensitive&#39;: &#39;anchorCaseSensitive&#39;,
+        &#39;anchor_horizontal_alignment&#39;: &#39;anchorHorizontalAlignment&#39;,
+        &#39;anchor_ignore_if_not_present&#39;: &#39;anchorIgnoreIfNotPresent&#39;,
+        &#39;anchor_match_whole_word&#39;: &#39;anchorMatchWholeWord&#39;,
+        &#39;anchor_units&#39;: &#39;anchorUnits&#39;,
+        &#39;anchor_x_offset&#39;: &#39;anchorXOffset&#39;,
+        &#39;anchor_y_offset&#39;: &#39;anchorYOffset&#39;,
+        &#39;bold&#39;: &#39;bold&#39;,
+        &#39;collaborative&#39;: &#39;collaborative&#39;,
+        &#39;conceal_value_on_document&#39;: &#39;concealValueOnDocument&#39;,
+        &#39;created_by_display_name&#39;: &#39;createdByDisplayName&#39;,
+        &#39;created_by_user_id&#39;: &#39;createdByUserId&#39;,
+        &#39;custom_tab_id&#39;: &#39;customTabId&#39;,
+        &#39;disable_auto_size&#39;: &#39;disableAutoSize&#39;,
+        &#39;editable&#39;: &#39;editable&#39;,
+        &#39;font&#39;: &#39;font&#39;,
+        &#39;font_color&#39;: &#39;fontColor&#39;,
+        &#39;font_size&#39;: &#39;fontSize&#39;,
+        &#39;height&#39;: &#39;height&#39;,
+        &#39;included_in_email&#39;: &#39;includedInEmail&#39;,
+        &#39;initial_value&#39;: &#39;initialValue&#39;,
+        &#39;italic&#39;: &#39;italic&#39;,
+        &#39;items&#39;: &#39;items&#39;,
+        &#39;last_modified&#39;: &#39;lastModified&#39;,
+        &#39;last_modified_by_display_name&#39;: &#39;lastModifiedByDisplayName&#39;,
+        &#39;last_modified_by_user_id&#39;: &#39;lastModifiedByUserId&#39;,
+        &#39;locale_policy&#39;: &#39;localePolicy&#39;,
+        &#39;locked&#39;: &#39;locked&#39;,
+        &#39;maximum_length&#39;: &#39;maximumLength&#39;,
+        &#39;merge_field&#39;: &#39;mergeField&#39;,
+        &#39;name&#39;: &#39;name&#39;,
+        &#39;numerical_value&#39;: &#39;numericalValue&#39;,
+        &#39;payment_item_code&#39;: &#39;paymentItemCode&#39;,
+        &#39;payment_item_description&#39;: &#39;paymentItemDescription&#39;,
+        &#39;payment_item_name&#39;: &#39;paymentItemName&#39;,
+        &#39;require_all&#39;: &#39;requireAll&#39;,
+        &#39;required&#39;: &#39;required&#39;,
+        &#39;require_initial_on_shared_change&#39;: &#39;requireInitialOnSharedChange&#39;,
+        &#39;scale_value&#39;: &#39;scaleValue&#39;,
+        &#39;selected&#39;: &#39;selected&#39;,
+        &#39;shared&#39;: &#39;shared&#39;,
+        &#39;stamp_type&#39;: &#39;stampType&#39;,
+        &#39;stamp_type_metadata&#39;: &#39;stampTypeMetadata&#39;,
+        &#39;tab_label&#39;: &#39;tabLabel&#39;,
+        &#39;type&#39;: &#39;type&#39;,
+        &#39;underline&#39;: &#39;underline&#39;,
+        &#39;validation_message&#39;: &#39;validationMessage&#39;,
+        &#39;validation_pattern&#39;: &#39;validationPattern&#39;,
+        &#39;width&#39;: &#39;width&#39;
+    }
+
+    def __init__(self, anchor=None, anchor_case_sensitive=None, anchor_horizontal_alignment=None, anchor_ignore_if_not_present=None, anchor_match_whole_word=None, anchor_units=None, anchor_x_offset=None, anchor_y_offset=None, bold=None, collaborative=None, conceal_value_on_document=None, created_by_display_name=None, created_by_user_id=None, custom_tab_id=None, disable_auto_size=None, editable=None, font=None, font_color=None, font_size=None, height=None, included_in_email=None, initial_value=None, italic=None, items=None, last_modified=None, last_modified_by_display_name=None, last_modified_by_user_id=None, locale_policy=None, locked=None, maximum_length=None, merge_field=None, name=None, numerical_value=None, payment_item_code=None, payment_item_description=None, payment_item_name=None, require_all=None, required=None, require_initial_on_shared_change=None, scale_value=None, selected=None, shared=None, stamp_type=None, stamp_type_metadata=None, tab_label=None, type=None, underline=None, validation_message=None, validation_pattern=None, width=None):  # noqa: E501
+        &#34;&#34;&#34;TabMetadata - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._anchor = None
+        self._anchor_case_sensitive = None
+        self._anchor_horizontal_alignment = None
+        self._anchor_ignore_if_not_present = None
+        self._anchor_match_whole_word = None
+        self._anchor_units = None
+        self._anchor_x_offset = None
+        self._anchor_y_offset = None
+        self._bold = None
+        self._collaborative = None
+        self._conceal_value_on_document = None
+        self._created_by_display_name = None
+        self._created_by_user_id = None
+        self._custom_tab_id = None
+        self._disable_auto_size = None
+        self._editable = None
+        self._font = None
+        self._font_color = None
+        self._font_size = None
+        self._height = None
+        self._included_in_email = None
+        self._initial_value = None
+        self._italic = None
+        self._items = None
+        self._last_modified = None
+        self._last_modified_by_display_name = None
+        self._last_modified_by_user_id = None
+        self._locale_policy = None
+        self._locked = None
+        self._maximum_length = None
+        self._merge_field = None
+        self._name = None
+        self._numerical_value = None
+        self._payment_item_code = None
+        self._payment_item_description = None
+        self._payment_item_name = None
+        self._require_all = None
+        self._required = None
+        self._require_initial_on_shared_change = None
+        self._scale_value = None
+        self._selected = None
+        self._shared = None
+        self._stamp_type = None
+        self._stamp_type_metadata = None
+        self._tab_label = None
+        self._type = None
+        self._underline = None
+        self._validation_message = None
+        self._validation_pattern = None
+        self._width = None
+        self.discriminator = None
+
+        if anchor is not None:
+            self.anchor = anchor
+        if anchor_case_sensitive is not None:
+            self.anchor_case_sensitive = anchor_case_sensitive
+        if anchor_horizontal_alignment is not None:
+            self.anchor_horizontal_alignment = anchor_horizontal_alignment
+        if anchor_ignore_if_not_present is not None:
+            self.anchor_ignore_if_not_present = anchor_ignore_if_not_present
+        if anchor_match_whole_word is not None:
+            self.anchor_match_whole_word = anchor_match_whole_word
+        if anchor_units is not None:
+            self.anchor_units = anchor_units
+        if anchor_x_offset is not None:
+            self.anchor_x_offset = anchor_x_offset
+        if anchor_y_offset is not None:
+            self.anchor_y_offset = anchor_y_offset
+        if bold is not None:
+            self.bold = bold
+        if collaborative is not None:
+            self.collaborative = collaborative
+        if conceal_value_on_document is not None:
+            self.conceal_value_on_document = conceal_value_on_document
+        if created_by_display_name is not None:
+            self.created_by_display_name = created_by_display_name
+        if created_by_user_id is not None:
+            self.created_by_user_id = created_by_user_id
+        if custom_tab_id is not None:
+            self.custom_tab_id = custom_tab_id
+        if disable_auto_size is not None:
+            self.disable_auto_size = disable_auto_size
+        if editable is not None:
+            self.editable = editable
+        if font is not None:
+            self.font = font
+        if font_color is not None:
+            self.font_color = font_color
+        if font_size is not None:
+            self.font_size = font_size
+        if height is not None:
+            self.height = height
+        if included_in_email is not None:
+            self.included_in_email = included_in_email
+        if initial_value is not None:
+            self.initial_value = initial_value
+        if italic is not None:
+            self.italic = italic
+        if items is not None:
+            self.items = items
+        if last_modified is not None:
+            self.last_modified = last_modified
+        if last_modified_by_display_name is not None:
+            self.last_modified_by_display_name = last_modified_by_display_name
+        if last_modified_by_user_id is not None:
+            self.last_modified_by_user_id = last_modified_by_user_id
+        if locale_policy is not None:
+            self.locale_policy = locale_policy
+        if locked is not None:
+            self.locked = locked
+        if maximum_length is not None:
+            self.maximum_length = maximum_length
+        if merge_field is not None:
+            self.merge_field = merge_field
+        if name is not None:
+            self.name = name
+        if numerical_value is not None:
+            self.numerical_value = numerical_value
+        if payment_item_code is not None:
+            self.payment_item_code = payment_item_code
+        if payment_item_description is not None:
+            self.payment_item_description = payment_item_description
+        if payment_item_name is not None:
+            self.payment_item_name = payment_item_name
+        if require_all is not None:
+            self.require_all = require_all
+        if required is not None:
+            self.required = required
+        if require_initial_on_shared_change is not None:
+            self.require_initial_on_shared_change = require_initial_on_shared_change
+        if scale_value is not None:
+            self.scale_value = scale_value
+        if selected is not None:
+            self.selected = selected
+        if shared is not None:
+            self.shared = shared
+        if stamp_type is not None:
+            self.stamp_type = stamp_type
+        if stamp_type_metadata is not None:
+            self.stamp_type_metadata = stamp_type_metadata
+        if tab_label is not None:
+            self.tab_label = tab_label
+        if type is not None:
+            self.type = type
+        if underline is not None:
+            self.underline = underline
+        if validation_message is not None:
+            self.validation_message = validation_message
+        if validation_pattern is not None:
+            self.validation_pattern = validation_pattern
+        if width is not None:
+            self.width = width
+
+    @property
+    def anchor(self):
+        &#34;&#34;&#34;Gets the anchor of this TabMetadata.  # noqa: E501
+
+        An optional string that is used to auto-match tabs to strings located in the documents of an envelope.  # noqa: E501
+
+        :return: The anchor of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor
+
+    @anchor.setter
+    def anchor(self, anchor):
+        &#34;&#34;&#34;Sets the anchor of this TabMetadata.
+
+        An optional string that is used to auto-match tabs to strings located in the documents of an envelope.  # noqa: E501
+
+        :param anchor: The anchor of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor = anchor
+
+    @property
+    def anchor_case_sensitive(self):
+        &#34;&#34;&#34;Gets the anchor_case_sensitive of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.  # noqa: E501
+
+        :return: The anchor_case_sensitive of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_case_sensitive
+
+    @anchor_case_sensitive.setter
+    def anchor_case_sensitive(self, anchor_case_sensitive):
+        &#34;&#34;&#34;Sets the anchor_case_sensitive of this TabMetadata.
+
+        When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.  # noqa: E501
+
+        :param anchor_case_sensitive: The anchor_case_sensitive of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_case_sensitive = anchor_case_sensitive
+
+    @property
+    def anchor_horizontal_alignment(self):
+        &#34;&#34;&#34;Gets the anchor_horizontal_alignment of this TabMetadata.  # noqa: E501
+
+        Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.  # noqa: E501
+
+        :return: The anchor_horizontal_alignment of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_horizontal_alignment
+
+    @anchor_horizontal_alignment.setter
+    def anchor_horizontal_alignment(self, anchor_horizontal_alignment):
+        &#34;&#34;&#34;Sets the anchor_horizontal_alignment of this TabMetadata.
+
+        Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.  # noqa: E501
+
+        :param anchor_horizontal_alignment: The anchor_horizontal_alignment of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_horizontal_alignment = anchor_horizontal_alignment
+
+    @property
+    def anchor_ignore_if_not_present(self):
+        &#34;&#34;&#34;Gets the anchor_ignore_if_not_present of this TabMetadata.  # noqa: E501
+
+        When set to **true**, this tab is ignored if anchorString is not found in the document.  # noqa: E501
+
+        :return: The anchor_ignore_if_not_present of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_ignore_if_not_present
+
+    @anchor_ignore_if_not_present.setter
+    def anchor_ignore_if_not_present(self, anchor_ignore_if_not_present):
+        &#34;&#34;&#34;Sets the anchor_ignore_if_not_present of this TabMetadata.
+
+        When set to **true**, this tab is ignored if anchorString is not found in the document.  # noqa: E501
+
+        :param anchor_ignore_if_not_present: The anchor_ignore_if_not_present of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_ignore_if_not_present = anchor_ignore_if_not_present
+
+    @property
+    def anchor_match_whole_word(self):
+        &#34;&#34;&#34;Gets the anchor_match_whole_word of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.  # noqa: E501
+
+        :return: The anchor_match_whole_word of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_match_whole_word
+
+    @anchor_match_whole_word.setter
+    def anchor_match_whole_word(self, anchor_match_whole_word):
+        &#34;&#34;&#34;Sets the anchor_match_whole_word of this TabMetadata.
+
+        When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.  # noqa: E501
+
+        :param anchor_match_whole_word: The anchor_match_whole_word of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_match_whole_word = anchor_match_whole_word
+
+    @property
+    def anchor_units(self):
+        &#34;&#34;&#34;Gets the anchor_units of this TabMetadata.  # noqa: E501
+
+        Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.  # noqa: E501
+
+        :return: The anchor_units of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_units
+
+    @anchor_units.setter
+    def anchor_units(self, anchor_units):
+        &#34;&#34;&#34;Sets the anchor_units of this TabMetadata.
+
+        Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.  # noqa: E501
+
+        :param anchor_units: The anchor_units of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_units = anchor_units
+
+    @property
+    def anchor_x_offset(self):
+        &#34;&#34;&#34;Gets the anchor_x_offset of this TabMetadata.  # noqa: E501
+
+        Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.  # noqa: E501
+
+        :return: The anchor_x_offset of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_x_offset
+
+    @anchor_x_offset.setter
+    def anchor_x_offset(self, anchor_x_offset):
+        &#34;&#34;&#34;Sets the anchor_x_offset of this TabMetadata.
+
+        Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.  # noqa: E501
+
+        :param anchor_x_offset: The anchor_x_offset of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_x_offset = anchor_x_offset
+
+    @property
+    def anchor_y_offset(self):
+        &#34;&#34;&#34;Gets the anchor_y_offset of this TabMetadata.  # noqa: E501
+
+        Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.  # noqa: E501
+
+        :return: The anchor_y_offset of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._anchor_y_offset
+
+    @anchor_y_offset.setter
+    def anchor_y_offset(self, anchor_y_offset):
+        &#34;&#34;&#34;Sets the anchor_y_offset of this TabMetadata.
+
+        Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.  # noqa: E501
+
+        :param anchor_y_offset: The anchor_y_offset of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._anchor_y_offset = anchor_y_offset
+
+    @property
+    def bold(self):
+        &#34;&#34;&#34;Gets the bold of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the information in the tab is bold.  # noqa: E501
+
+        :return: The bold of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._bold
+
+    @bold.setter
+    def bold(self, bold):
+        &#34;&#34;&#34;Sets the bold of this TabMetadata.
+
+        When set to **true**, the information in the tab is bold.  # noqa: E501
+
+        :param bold: The bold of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._bold = bold
+
+    @property
+    def collaborative(self):
+        &#34;&#34;&#34;Gets the collaborative of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The collaborative of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._collaborative
+
+    @collaborative.setter
+    def collaborative(self, collaborative):
+        &#34;&#34;&#34;Sets the collaborative of this TabMetadata.
+
+          # noqa: E501
+
+        :param collaborative: The collaborative of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._collaborative = collaborative
+
+    @property
+    def conceal_value_on_document(self):
+        &#34;&#34;&#34;Gets the conceal_value_on_document of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.  # noqa: E501
+
+        :return: The conceal_value_on_document of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._conceal_value_on_document
+
+    @conceal_value_on_document.setter
+    def conceal_value_on_document(self, conceal_value_on_document):
+        &#34;&#34;&#34;Sets the conceal_value_on_document of this TabMetadata.
+
+        When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.  # noqa: E501
+
+        :param conceal_value_on_document: The conceal_value_on_document of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._conceal_value_on_document = conceal_value_on_document
+
+    @property
+    def created_by_display_name(self):
+        &#34;&#34;&#34;Gets the created_by_display_name of this TabMetadata.  # noqa: E501
+
+        The user name of the DocuSign user who created this object.  # noqa: E501
+
+        :return: The created_by_display_name of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_by_display_name
+
+    @created_by_display_name.setter
+    def created_by_display_name(self, created_by_display_name):
+        &#34;&#34;&#34;Sets the created_by_display_name of this TabMetadata.
+
+        The user name of the DocuSign user who created this object.  # noqa: E501
+
+        :param created_by_display_name: The created_by_display_name of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_by_display_name = created_by_display_name
+
+    @property
+    def created_by_user_id(self):
+        &#34;&#34;&#34;Gets the created_by_user_id of this TabMetadata.  # noqa: E501
+
+        The userId of the DocuSign user who created this object.  # noqa: E501
+
+        :return: The created_by_user_id of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_by_user_id
+
+    @created_by_user_id.setter
+    def created_by_user_id(self, created_by_user_id):
+        &#34;&#34;&#34;Sets the created_by_user_id of this TabMetadata.
+
+        The userId of the DocuSign user who created this object.  # noqa: E501
+
+        :param created_by_user_id: The created_by_user_id of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_by_user_id = created_by_user_id
+
+    @property
+    def custom_tab_id(self):
+        &#34;&#34;&#34;Gets the custom_tab_id of this TabMetadata.  # noqa: E501
+
+        The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.  # noqa: E501
+
+        :return: The custom_tab_id of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_tab_id
+
+    @custom_tab_id.setter
+    def custom_tab_id(self, custom_tab_id):
+        &#34;&#34;&#34;Sets the custom_tab_id of this TabMetadata.
+
+        The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.  # noqa: E501
+
+        :param custom_tab_id: The custom_tab_id of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_tab_id = custom_tab_id
+
+    @property
+    def disable_auto_size(self):
+        &#34;&#34;&#34;Gets the disable_auto_size of this TabMetadata.  # noqa: E501
+
+        When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.  # noqa: E501
+
+        :return: The disable_auto_size of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._disable_auto_size
+
+    @disable_auto_size.setter
+    def disable_auto_size(self, disable_auto_size):
+        &#34;&#34;&#34;Sets the disable_auto_size of this TabMetadata.
+
+        When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.  # noqa: E501
+
+        :param disable_auto_size: The disable_auto_size of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._disable_auto_size = disable_auto_size
+
+    @property
+    def editable(self):
+        &#34;&#34;&#34;Gets the editable of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.  # noqa: E501
+
+        :return: The editable of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._editable
+
+    @editable.setter
+    def editable(self, editable):
+        &#34;&#34;&#34;Sets the editable of this TabMetadata.
+
+        When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.  # noqa: E501
+
+        :param editable: The editable of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._editable = editable
+
+    @property
+    def font(self):
+        &#34;&#34;&#34;Gets the font of this TabMetadata.  # noqa: E501
+
+        The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.  # noqa: E501
+
+        :return: The font of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._font
+
+    @font.setter
+    def font(self, font):
+        &#34;&#34;&#34;Sets the font of this TabMetadata.
+
+        The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.  # noqa: E501
+
+        :param font: The font of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._font = font
+
+    @property
+    def font_color(self):
+        &#34;&#34;&#34;Gets the font_color of this TabMetadata.  # noqa: E501
+
+        The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.  # noqa: E501
+
+        :return: The font_color of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._font_color
+
+    @font_color.setter
+    def font_color(self, font_color):
+        &#34;&#34;&#34;Sets the font_color of this TabMetadata.
+
+        The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.  # noqa: E501
+
+        :param font_color: The font_color of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._font_color = font_color
+
+    @property
+    def font_size(self):
+        &#34;&#34;&#34;Gets the font_size of this TabMetadata.  # noqa: E501
+
+        The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.  # noqa: E501
+
+        :return: The font_size of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._font_size
+
+    @font_size.setter
+    def font_size(self, font_size):
+        &#34;&#34;&#34;Sets the font_size of this TabMetadata.
+
+        The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.  # noqa: E501
+
+        :param font_size: The font_size of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._font_size = font_size
+
+    @property
+    def height(self):
+        &#34;&#34;&#34;Gets the height of this TabMetadata.  # noqa: E501
+
+        Height of the tab in pixels.  # noqa: E501
+
+        :return: The height of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._height
+
+    @height.setter
+    def height(self, height):
+        &#34;&#34;&#34;Sets the height of this TabMetadata.
+
+        Height of the tab in pixels.  # noqa: E501
+
+        :param height: The height of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._height = height
+
+    @property
+    def included_in_email(self):
+        &#34;&#34;&#34;Gets the included_in_email of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.  # noqa: E501
+
+        :return: The included_in_email of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._included_in_email
+
+    @included_in_email.setter
+    def included_in_email(self, included_in_email):
+        &#34;&#34;&#34;Sets the included_in_email of this TabMetadata.
+
+        When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.  # noqa: E501
+
+        :param included_in_email: The included_in_email of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._included_in_email = included_in_email
+
+    @property
+    def initial_value(self):
+        &#34;&#34;&#34;Gets the initial_value of this TabMetadata.  # noqa: E501
+
+        The original value of the tab.  # noqa: E501
+
+        :return: The initial_value of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._initial_value
+
+    @initial_value.setter
+    def initial_value(self, initial_value):
+        &#34;&#34;&#34;Sets the initial_value of this TabMetadata.
+
+        The original value of the tab.  # noqa: E501
+
+        :param initial_value: The initial_value of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._initial_value = initial_value
+
+    @property
+    def italic(self):
+        &#34;&#34;&#34;Gets the italic of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the information in the tab is italic.  # noqa: E501
+
+        :return: The italic of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._italic
+
+    @italic.setter
+    def italic(self, italic):
+        &#34;&#34;&#34;Sets the italic of this TabMetadata.
+
+        When set to **true**, the information in the tab is italic.  # noqa: E501
+
+        :param italic: The italic of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._italic = italic
+
+    @property
+    def items(self):
+        &#34;&#34;&#34;Gets the items of this TabMetadata.  # noqa: E501
+
+        If the tab is a list, this represents the values that are possible for the tab.  # noqa: E501
+
+        :return: The items of this TabMetadata.  # noqa: E501
+        :rtype: list[str]
+        &#34;&#34;&#34;
+        return self._items
+
+    @items.setter
+    def items(self, items):
+        &#34;&#34;&#34;Sets the items of this TabMetadata.
+
+        If the tab is a list, this represents the values that are possible for the tab.  # noqa: E501
+
+        :param items: The items of this TabMetadata.  # noqa: E501
+        :type: list[str]
+        &#34;&#34;&#34;
+
+        self._items = items
+
+    @property
+    def last_modified(self):
+        &#34;&#34;&#34;Gets the last_modified of this TabMetadata.  # noqa: E501
+
+        The UTC DateTime this object was last modified. This is in ISO8601 format.  # noqa: E501
+
+        :return: The last_modified of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified
+
+    @last_modified.setter
+    def last_modified(self, last_modified):
+        &#34;&#34;&#34;Sets the last_modified of this TabMetadata.
+
+        The UTC DateTime this object was last modified. This is in ISO8601 format.  # noqa: E501
+
+        :param last_modified: The last_modified of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified = last_modified
+
+    @property
+    def last_modified_by_display_name(self):
+        &#34;&#34;&#34;Gets the last_modified_by_display_name of this TabMetadata.  # noqa: E501
+
+        The User Name of the DocuSign user who last modified this object.  # noqa: E501
+
+        :return: The last_modified_by_display_name of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified_by_display_name
+
+    @last_modified_by_display_name.setter
+    def last_modified_by_display_name(self, last_modified_by_display_name):
+        &#34;&#34;&#34;Sets the last_modified_by_display_name of this TabMetadata.
+
+        The User Name of the DocuSign user who last modified this object.  # noqa: E501
+
+        :param last_modified_by_display_name: The last_modified_by_display_name of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified_by_display_name = last_modified_by_display_name
+
+    @property
+    def last_modified_by_user_id(self):
+        &#34;&#34;&#34;Gets the last_modified_by_user_id of this TabMetadata.  # noqa: E501
+
+        The userId of the DocuSign user who last modified this object.  # noqa: E501
+
+        :return: The last_modified_by_user_id of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified_by_user_id
+
+    @last_modified_by_user_id.setter
+    def last_modified_by_user_id(self, last_modified_by_user_id):
+        &#34;&#34;&#34;Sets the last_modified_by_user_id of this TabMetadata.
+
+        The userId of the DocuSign user who last modified this object.  # noqa: E501
+
+        :param last_modified_by_user_id: The last_modified_by_user_id of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified_by_user_id = last_modified_by_user_id
+
+    @property
+    def locale_policy(self):
+        &#34;&#34;&#34;Gets the locale_policy of this TabMetadata.  # noqa: E501
+
+
+        :return: The locale_policy of this TabMetadata.  # noqa: E501
+        :rtype: LocalePolicyTab
+        &#34;&#34;&#34;
+        return self._locale_policy
+
+    @locale_policy.setter
+    def locale_policy(self, locale_policy):
+        &#34;&#34;&#34;Sets the locale_policy of this TabMetadata.
+
+
+        :param locale_policy: The locale_policy of this TabMetadata.  # noqa: E501
+        :type: LocalePolicyTab
+        &#34;&#34;&#34;
+
+        self._locale_policy = locale_policy
+
+    @property
+    def locked(self):
+        &#34;&#34;&#34;Gets the locked of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the signer cannot change the data of the custom tab.  # noqa: E501
+
+        :return: The locked of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._locked
+
+    @locked.setter
+    def locked(self, locked):
+        &#34;&#34;&#34;Sets the locked of this TabMetadata.
+
+        When set to **true**, the signer cannot change the data of the custom tab.  # noqa: E501
+
+        :param locked: The locked of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._locked = locked
+
+    @property
+    def maximum_length(self):
+        &#34;&#34;&#34;Gets the maximum_length of this TabMetadata.  # noqa: E501
+
+        The maximum number of entry characters supported by the custom tab.  # noqa: E501
+
+        :return: The maximum_length of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._maximum_length
+
+    @maximum_length.setter
+    def maximum_length(self, maximum_length):
+        &#34;&#34;&#34;Sets the maximum_length of this TabMetadata.
+
+        The maximum number of entry characters supported by the custom tab.  # noqa: E501
+
+        :param maximum_length: The maximum_length of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._maximum_length = maximum_length
+
+    @property
+    def merge_field(self):
+        &#34;&#34;&#34;Gets the merge_field of this TabMetadata.  # noqa: E501
+
+
+        :return: The merge_field of this TabMetadata.  # noqa: E501
+        :rtype: MergeField
+        &#34;&#34;&#34;
+        return self._merge_field
+
+    @merge_field.setter
+    def merge_field(self, merge_field):
+        &#34;&#34;&#34;Sets the merge_field of this TabMetadata.
+
+
+        :param merge_field: The merge_field of this TabMetadata.  # noqa: E501
+        :type: MergeField
+        &#34;&#34;&#34;
+
+        self._merge_field = merge_field
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;Gets the name of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The name of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;Sets the name of this TabMetadata.
+
+          # noqa: E501
+
+        :param name: The name of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def numerical_value(self):
+        &#34;&#34;&#34;Gets the numerical_value of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The numerical_value of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._numerical_value
+
+    @numerical_value.setter
+    def numerical_value(self, numerical_value):
+        &#34;&#34;&#34;Sets the numerical_value of this TabMetadata.
+
+          # noqa: E501
+
+        :param numerical_value: The numerical_value of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._numerical_value = numerical_value
+
+    @property
+    def payment_item_code(self):
+        &#34;&#34;&#34;Gets the payment_item_code of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The payment_item_code of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._payment_item_code
+
+    @payment_item_code.setter
+    def payment_item_code(self, payment_item_code):
+        &#34;&#34;&#34;Sets the payment_item_code of this TabMetadata.
+
+          # noqa: E501
+
+        :param payment_item_code: The payment_item_code of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._payment_item_code = payment_item_code
+
+    @property
+    def payment_item_description(self):
+        &#34;&#34;&#34;Gets the payment_item_description of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The payment_item_description of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._payment_item_description
+
+    @payment_item_description.setter
+    def payment_item_description(self, payment_item_description):
+        &#34;&#34;&#34;Sets the payment_item_description of this TabMetadata.
+
+          # noqa: E501
+
+        :param payment_item_description: The payment_item_description of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._payment_item_description = payment_item_description
+
+    @property
+    def payment_item_name(self):
+        &#34;&#34;&#34;Gets the payment_item_name of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The payment_item_name of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._payment_item_name
+
+    @payment_item_name.setter
+    def payment_item_name(self, payment_item_name):
+        &#34;&#34;&#34;Sets the payment_item_name of this TabMetadata.
+
+          # noqa: E501
+
+        :param payment_item_name: The payment_item_name of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._payment_item_name = payment_item_name
+
+    @property
+    def require_all(self):
+        &#34;&#34;&#34;Gets the require_all of this TabMetadata.  # noqa: E501
+
+        When set to **true** and shared is true, information must be entered in this field to complete the envelope.   # noqa: E501
+
+        :return: The require_all of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._require_all
+
+    @require_all.setter
+    def require_all(self, require_all):
+        &#34;&#34;&#34;Sets the require_all of this TabMetadata.
+
+        When set to **true** and shared is true, information must be entered in this field to complete the envelope.   # noqa: E501
+
+        :param require_all: The require_all of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._require_all = require_all
+
+    @property
+    def required(self):
+        &#34;&#34;&#34;Gets the required of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the signer is required to fill out this tab  # noqa: E501
+
+        :return: The required of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._required
+
+    @required.setter
+    def required(self, required):
+        &#34;&#34;&#34;Sets the required of this TabMetadata.
+
+        When set to **true**, the signer is required to fill out this tab  # noqa: E501
+
+        :param required: The required of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._required = required
+
+    @property
+    def require_initial_on_shared_change(self):
+        &#34;&#34;&#34;Gets the require_initial_on_shared_change of this TabMetadata.  # noqa: E501
+
+        Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.  # noqa: E501
+
+        :return: The require_initial_on_shared_change of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._require_initial_on_shared_change
+
+    @require_initial_on_shared_change.setter
+    def require_initial_on_shared_change(self, require_initial_on_shared_change):
+        &#34;&#34;&#34;Sets the require_initial_on_shared_change of this TabMetadata.
+
+        Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.  # noqa: E501
+
+        :param require_initial_on_shared_change: The require_initial_on_shared_change of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._require_initial_on_shared_change = require_initial_on_shared_change
+
+    @property
+    def scale_value(self):
+        &#34;&#34;&#34;Gets the scale_value of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The scale_value of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._scale_value
+
+    @scale_value.setter
+    def scale_value(self, scale_value):
+        &#34;&#34;&#34;Sets the scale_value of this TabMetadata.
+
+          # noqa: E501
+
+        :param scale_value: The scale_value of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._scale_value = scale_value
+
+    @property
+    def selected(self):
+        &#34;&#34;&#34;Gets the selected of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The selected of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._selected
+
+    @selected.setter
+    def selected(self, selected):
+        &#34;&#34;&#34;Sets the selected of this TabMetadata.
+
+          # noqa: E501
+
+        :param selected: The selected of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._selected = selected
+
+    @property
+    def shared(self):
+        &#34;&#34;&#34;Gets the shared of this TabMetadata.  # noqa: E501
+
+        When set to **true**, this custom tab is shared.  # noqa: E501
+
+        :return: The shared of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._shared
+
+    @shared.setter
+    def shared(self, shared):
+        &#34;&#34;&#34;Sets the shared of this TabMetadata.
+
+        When set to **true**, this custom tab is shared.  # noqa: E501
+
+        :param shared: The shared of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._shared = shared
+
+    @property
+    def stamp_type(self):
+        &#34;&#34;&#34;Gets the stamp_type of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The stamp_type of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._stamp_type
+
+    @stamp_type.setter
+    def stamp_type(self, stamp_type):
+        &#34;&#34;&#34;Sets the stamp_type of this TabMetadata.
+
+          # noqa: E501
+
+        :param stamp_type: The stamp_type of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._stamp_type = stamp_type
+
+    @property
+    def stamp_type_metadata(self):
+        &#34;&#34;&#34;Gets the stamp_type_metadata of this TabMetadata.  # noqa: E501
+
+
+        :return: The stamp_type_metadata of this TabMetadata.  # noqa: E501
+        :rtype: PropertyMetadata
+        &#34;&#34;&#34;
+        return self._stamp_type_metadata
+
+    @stamp_type_metadata.setter
+    def stamp_type_metadata(self, stamp_type_metadata):
+        &#34;&#34;&#34;Sets the stamp_type_metadata of this TabMetadata.
+
+
+        :param stamp_type_metadata: The stamp_type_metadata of this TabMetadata.  # noqa: E501
+        :type: PropertyMetadata
+        &#34;&#34;&#34;
+
+        self._stamp_type_metadata = stamp_type_metadata
+
+    @property
+    def tab_label(self):
+        &#34;&#34;&#34;Gets the tab_label of this TabMetadata.  # noqa: E501
+
+        The label string associated with the tab.  # noqa: E501
+
+        :return: The tab_label of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._tab_label
+
+    @tab_label.setter
+    def tab_label(self, tab_label):
+        &#34;&#34;&#34;Sets the tab_label of this TabMetadata.
+
+        The label string associated with the tab.  # noqa: E501
+
+        :param tab_label: The tab_label of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._tab_label = tab_label
+
+    @property
+    def type(self):
+        &#34;&#34;&#34;Gets the type of this TabMetadata.  # noqa: E501
+
+        The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula, FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number, Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.  # noqa: E501
+
+        :return: The type of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        &#34;&#34;&#34;Sets the type of this TabMetadata.
+
+        The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula, FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number, Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.  # noqa: E501
+
+        :param type: The type of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._type = type
+
+    @property
+    def underline(self):
+        &#34;&#34;&#34;Gets the underline of this TabMetadata.  # noqa: E501
+
+        When set to **true**, the information in the tab is underlined.  # noqa: E501
+
+        :return: The underline of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._underline
+
+    @underline.setter
+    def underline(self, underline):
+        &#34;&#34;&#34;Sets the underline of this TabMetadata.
+
+        When set to **true**, the information in the tab is underlined.  # noqa: E501
+
+        :param underline: The underline of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._underline = underline
+
+    @property
+    def validation_message(self):
+        &#34;&#34;&#34;Gets the validation_message of this TabMetadata.  # noqa: E501
+
+        The message displayed if the custom tab fails input validation (either custom of embedded).  # noqa: E501
+
+        :return: The validation_message of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._validation_message
+
+    @validation_message.setter
+    def validation_message(self, validation_message):
+        &#34;&#34;&#34;Sets the validation_message of this TabMetadata.
+
+        The message displayed if the custom tab fails input validation (either custom of embedded).  # noqa: E501
+
+        :param validation_message: The validation_message of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._validation_message = validation_message
+
+    @property
+    def validation_pattern(self):
+        &#34;&#34;&#34;Gets the validation_pattern of this TabMetadata.  # noqa: E501
+
+        A regular expression used to validate input for the tab.  # noqa: E501
+
+        :return: The validation_pattern of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._validation_pattern
+
+    @validation_pattern.setter
+    def validation_pattern(self, validation_pattern):
+        &#34;&#34;&#34;Sets the validation_pattern of this TabMetadata.
+
+        A regular expression used to validate input for the tab.  # noqa: E501
+
+        :param validation_pattern: The validation_pattern of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._validation_pattern = validation_pattern
+
+    @property
+    def width(self):
+        &#34;&#34;&#34;Gets the width of this TabMetadata.  # noqa: E501
+
+        Width of the tab in pixels.  # noqa: E501
+
+        :return: The width of this TabMetadata.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._width
+
+    @width.setter
+    def width(self, width):
+        &#34;&#34;&#34;Sets the width of this TabMetadata.
+
+        Width of the tab in pixels.  # noqa: E501
+
+        :param width: The width of this TabMetadata.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._width = width
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(TabMetadata, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, TabMetadata):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.anchor"><code class="name">var <span class="ident">anchor</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the anchor of this TabMetadata.
+# noqa: E501</p>
+<p>An optional string that is used to auto-match tabs to strings located in the documents of an envelope.
+# noqa: E501</p>
+<p>:return: The anchor of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def anchor(self):
+    &#34;&#34;&#34;Gets the anchor of this TabMetadata.  # noqa: E501
+
+    An optional string that is used to auto-match tabs to strings located in the documents of an envelope.  # noqa: E501
+
+    :return: The anchor of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._anchor</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.anchor_case_sensitive"><code class="name">var <span class="ident">anchor_case_sensitive</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the anchor_case_sensitive of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the anchor string does not consider case when matching strings in the document. The default value is <strong>true</strong>.
+# noqa: E501</p>
+<p>:return: The anchor_case_sensitive of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def anchor_case_sensitive(self):
+    &#34;&#34;&#34;Gets the anchor_case_sensitive of this TabMetadata.  # noqa: E501
+
+    When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.  # noqa: E501
+
+    :return: The anchor_case_sensitive of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._anchor_case_sensitive</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.anchor_horizontal_alignment"><code class="name">var <span class="ident">anchor_horizontal_alignment</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the anchor_horizontal_alignment of this TabMetadata.
+# noqa: E501</p>
+<p>Specifies the alignment of anchor tabs with anchor strings. Possible values are <strong>left</strong> or <strong>right</strong>. The default value is <strong>left</strong>.
+# noqa: E501</p>
+<p>:return: The anchor_horizontal_alignment of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def anchor_horizontal_alignment(self):
+    &#34;&#34;&#34;Gets the anchor_horizontal_alignment of this TabMetadata.  # noqa: E501
+
+    Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.  # noqa: E501
+
+    :return: The anchor_horizontal_alignment of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._anchor_horizontal_alignment</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.anchor_ignore_if_not_present"><code class="name">var <span class="ident">anchor_ignore_if_not_present</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the anchor_ignore_if_not_present of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, this tab is ignored if anchorString is not found in the document.
+# noqa: E501</p>
+<p>:return: The anchor_ignore_if_not_present of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def anchor_ignore_if_not_present(self):
+    &#34;&#34;&#34;Gets the anchor_ignore_if_not_present of this TabMetadata.  # noqa: E501
+
+    When set to **true**, this tab is ignored if anchorString is not found in the document.  # noqa: E501
+
+    :return: The anchor_ignore_if_not_present of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._anchor_ignore_if_not_present</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.anchor_match_whole_word"><code class="name">var <span class="ident">anchor_match_whole_word</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the anchor_match_whole_word of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is <strong>true</strong>.
+# noqa: E501</p>
+<p>:return: The anchor_match_whole_word of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def anchor_match_whole_word(self):
+    &#34;&#34;&#34;Gets the anchor_match_whole_word of this TabMetadata.  # noqa: E501
+
+    When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.  # noqa: E501
+
+    :return: The anchor_match_whole_word of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._anchor_match_whole_word</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.anchor_units"><code class="name">var <span class="ident">anchor_units</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the anchor_units of this TabMetadata.
+# noqa: E501</p>
+<p>Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
+# noqa: E501</p>
+<p>:return: The anchor_units of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def anchor_units(self):
+    &#34;&#34;&#34;Gets the anchor_units of this TabMetadata.  # noqa: E501
+
+    Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.  # noqa: E501
+
+    :return: The anchor_units of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._anchor_units</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.anchor_x_offset"><code class="name">var <span class="ident">anchor_x_offset</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the anchor_x_offset of this TabMetadata.
+# noqa: E501</p>
+<p>Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
+# noqa: E501</p>
+<p>:return: The anchor_x_offset of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def anchor_x_offset(self):
+    &#34;&#34;&#34;Gets the anchor_x_offset of this TabMetadata.  # noqa: E501
+
+    Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.  # noqa: E501
+
+    :return: The anchor_x_offset of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._anchor_x_offset</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.anchor_y_offset"><code class="name">var <span class="ident">anchor_y_offset</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the anchor_y_offset of this TabMetadata.
+# noqa: E501</p>
+<p>Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
+# noqa: E501</p>
+<p>:return: The anchor_y_offset of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def anchor_y_offset(self):
+    &#34;&#34;&#34;Gets the anchor_y_offset of this TabMetadata.  # noqa: E501
+
+    Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.  # noqa: E501
+
+    :return: The anchor_y_offset of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._anchor_y_offset</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.bold"><code class="name">var <span class="ident">bold</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the bold of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the information in the tab is bold.
+# noqa: E501</p>
+<p>:return: The bold of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def bold(self):
+    &#34;&#34;&#34;Gets the bold of this TabMetadata.  # noqa: E501
+
+    When set to **true**, the information in the tab is bold.  # noqa: E501
+
+    :return: The bold of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._bold</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.collaborative"><code class="name">var <span class="ident">collaborative</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the collaborative of this TabMetadata.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The collaborative of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def collaborative(self):
+    &#34;&#34;&#34;Gets the collaborative of this TabMetadata.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The collaborative of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._collaborative</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.conceal_value_on_document"><code class="name">var <span class="ident">conceal_value_on_document</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the conceal_value_on_document of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.
+When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.
+This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.
+# noqa: E501</p>
+<p>:return: The conceal_value_on_document of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def conceal_value_on_document(self):
+    &#34;&#34;&#34;Gets the conceal_value_on_document of this TabMetadata.  # noqa: E501
+
+    When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.  # noqa: E501
+
+    :return: The conceal_value_on_document of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._conceal_value_on_document</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.created_by_display_name"><code class="name">var <span class="ident">created_by_display_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the created_by_display_name of this TabMetadata.
+# noqa: E501</p>
+<p>The user name of the DocuSign user who created this object.
+# noqa: E501</p>
+<p>:return: The created_by_display_name of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def created_by_display_name(self):
+    &#34;&#34;&#34;Gets the created_by_display_name of this TabMetadata.  # noqa: E501
+
+    The user name of the DocuSign user who created this object.  # noqa: E501
+
+    :return: The created_by_display_name of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._created_by_display_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.created_by_user_id"><code class="name">var <span class="ident">created_by_user_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the created_by_user_id of this TabMetadata.
+# noqa: E501</p>
+<p>The userId of the DocuSign user who created this object.
+# noqa: E501</p>
+<p>:return: The created_by_user_id of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def created_by_user_id(self):
+    &#34;&#34;&#34;Gets the created_by_user_id of this TabMetadata.  # noqa: E501
+
+    The userId of the DocuSign user who created this object.  # noqa: E501
+
+    :return: The created_by_user_id of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._created_by_user_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.custom_tab_id"><code class="name">var <span class="ident">custom_tab_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the custom_tab_id of this TabMetadata.
+# noqa: E501</p>
+<p>The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
+# noqa: E501</p>
+<p>:return: The custom_tab_id of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def custom_tab_id(self):
+    &#34;&#34;&#34;Gets the custom_tab_id of this TabMetadata.  # noqa: E501
+
+    The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.  # noqa: E501
+
+    :return: The custom_tab_id of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._custom_tab_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.disable_auto_size"><code class="name">var <span class="ident">disable_auto_size</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the disable_auto_size of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.
+# noqa: E501</p>
+<p>:return: The disable_auto_size of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def disable_auto_size(self):
+    &#34;&#34;&#34;Gets the disable_auto_size of this TabMetadata.  # noqa: E501
+
+    When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.  # noqa: E501
+
+    :return: The disable_auto_size of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._disable_auto_size</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.editable"><code class="name">var <span class="ident">editable</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the editable of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the custom tab is editable. Otherwise the custom tab cannot be modified.
+# noqa: E501</p>
+<p>:return: The editable of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def editable(self):
+    &#34;&#34;&#34;Gets the editable of this TabMetadata.  # noqa: E501
+
+    When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.  # noqa: E501
+
+    :return: The editable of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._editable</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.font"><code class="name">var <span class="ident">font</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the font of this TabMetadata.
+# noqa: E501</p>
+<p>The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,
+LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
+# noqa: E501</p>
+<p>:return: The font of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def font(self):
+    &#34;&#34;&#34;Gets the font of this TabMetadata.  # noqa: E501
+
+    The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.  # noqa: E501
+
+    :return: The font of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._font</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.font_color"><code class="name">var <span class="ident">font_color</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the font_color of this TabMetadata.
+# noqa: E501</p>
+<p>The font color used for the information in the tab.
+Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
+# noqa: E501</p>
+<p>:return: The font_color of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def font_color(self):
+    &#34;&#34;&#34;Gets the font_color of this TabMetadata.  # noqa: E501
+
+    The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.  # noqa: E501
+
+    :return: The font_color of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._font_color</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.font_size"><code class="name">var <span class="ident">font_size</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the font_size of this TabMetadata.
+# noqa: E501</p>
+<p>The font size used for the information in the tab.
+Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
+# noqa: E501</p>
+<p>:return: The font_size of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def font_size(self):
+    &#34;&#34;&#34;Gets the font_size of this TabMetadata.  # noqa: E501
+
+    The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.  # noqa: E501
+
+    :return: The font_size of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._font_size</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.height"><code class="name">var <span class="ident">height</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the height of this TabMetadata.
+# noqa: E501</p>
+<p>Height of the tab in pixels.
+# noqa: E501</p>
+<p>:return: The height of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def height(self):
+    &#34;&#34;&#34;Gets the height of this TabMetadata.  # noqa: E501
+
+    Height of the tab in pixels.  # noqa: E501
+
+    :return: The height of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._height</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.included_in_email"><code class="name">var <span class="ident">included_in_email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the included_in_email of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.
+# noqa: E501</p>
+<p>:return: The included_in_email of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def included_in_email(self):
+    &#34;&#34;&#34;Gets the included_in_email of this TabMetadata.  # noqa: E501
+
+    When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.  # noqa: E501
+
+    :return: The included_in_email of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._included_in_email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.initial_value"><code class="name">var <span class="ident">initial_value</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the initial_value of this TabMetadata.
+# noqa: E501</p>
+<p>The original value of the tab.
+# noqa: E501</p>
+<p>:return: The initial_value of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def initial_value(self):
+    &#34;&#34;&#34;Gets the initial_value of this TabMetadata.  # noqa: E501
+
+    The original value of the tab.  # noqa: E501
+
+    :return: The initial_value of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._initial_value</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.italic"><code class="name">var <span class="ident">italic</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the italic of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the information in the tab is italic.
+# noqa: E501</p>
+<p>:return: The italic of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def italic(self):
+    &#34;&#34;&#34;Gets the italic of this TabMetadata.  # noqa: E501
+
+    When set to **true**, the information in the tab is italic.  # noqa: E501
+
+    :return: The italic of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._italic</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.items"><code class="name">var <span class="ident">items</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the items of this TabMetadata.
+# noqa: E501</p>
+<p>If the tab is a list, this represents the values that are possible for the tab.
+# noqa: E501</p>
+<p>:return: The items of this TabMetadata.
+# noqa: E501
+:rtype: list[str]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def items(self):
+    &#34;&#34;&#34;Gets the items of this TabMetadata.  # noqa: E501
+
+    If the tab is a list, this represents the values that are possible for the tab.  # noqa: E501
+
+    :return: The items of this TabMetadata.  # noqa: E501
+    :rtype: list[str]
+    &#34;&#34;&#34;
+    return self._items</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.last_modified"><code class="name">var <span class="ident">last_modified</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_modified of this TabMetadata.
+# noqa: E501</p>
+<p>The UTC DateTime this object was last modified. This is in ISO8601 format.
+# noqa: E501</p>
+<p>:return: The last_modified of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_modified(self):
+    &#34;&#34;&#34;Gets the last_modified of this TabMetadata.  # noqa: E501
+
+    The UTC DateTime this object was last modified. This is in ISO8601 format.  # noqa: E501
+
+    :return: The last_modified of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._last_modified</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.last_modified_by_display_name"><code class="name">var <span class="ident">last_modified_by_display_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_modified_by_display_name of this TabMetadata.
+# noqa: E501</p>
+<p>The User Name of the DocuSign user who last modified this object.
+# noqa: E501</p>
+<p>:return: The last_modified_by_display_name of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_modified_by_display_name(self):
+    &#34;&#34;&#34;Gets the last_modified_by_display_name of this TabMetadata.  # noqa: E501
+
+    The User Name of the DocuSign user who last modified this object.  # noqa: E501
+
+    :return: The last_modified_by_display_name of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._last_modified_by_display_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.last_modified_by_user_id"><code class="name">var <span class="ident">last_modified_by_user_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_modified_by_user_id of this TabMetadata.
+# noqa: E501</p>
+<p>The userId of the DocuSign user who last modified this object.
+# noqa: E501</p>
+<p>:return: The last_modified_by_user_id of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_modified_by_user_id(self):
+    &#34;&#34;&#34;Gets the last_modified_by_user_id of this TabMetadata.  # noqa: E501
+
+    The userId of the DocuSign user who last modified this object.  # noqa: E501
+
+    :return: The last_modified_by_user_id of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._last_modified_by_user_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.locale_policy"><code class="name">var <span class="ident">locale_policy</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the locale_policy of this TabMetadata.
+# noqa: E501</p>
+<p>:return: The locale_policy of this TabMetadata.
+# noqa: E501
+:rtype: LocalePolicyTab</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def locale_policy(self):
+    &#34;&#34;&#34;Gets the locale_policy of this TabMetadata.  # noqa: E501
+
+
+    :return: The locale_policy of this TabMetadata.  # noqa: E501
+    :rtype: LocalePolicyTab
+    &#34;&#34;&#34;
+    return self._locale_policy</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.locked"><code class="name">var <span class="ident">locked</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the locked of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the signer cannot change the data of the custom tab.
+# noqa: E501</p>
+<p>:return: The locked of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def locked(self):
+    &#34;&#34;&#34;Gets the locked of this TabMetadata.  # noqa: E501
+
+    When set to **true**, the signer cannot change the data of the custom tab.  # noqa: E501
+
+    :return: The locked of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._locked</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.maximum_length"><code class="name">var <span class="ident">maximum_length</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the maximum_length of this TabMetadata.
+# noqa: E501</p>
+<p>The maximum number of entry characters supported by the custom tab.
+# noqa: E501</p>
+<p>:return: The maximum_length of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def maximum_length(self):
+    &#34;&#34;&#34;Gets the maximum_length of this TabMetadata.  # noqa: E501
+
+    The maximum number of entry characters supported by the custom tab.  # noqa: E501
+
+    :return: The maximum_length of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._maximum_length</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.merge_field"><code class="name">var <span class="ident">merge_field</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the merge_field of this TabMetadata.
+# noqa: E501</p>
+<p>:return: The merge_field of this TabMetadata.
+# noqa: E501
+:rtype: MergeField</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def merge_field(self):
+    &#34;&#34;&#34;Gets the merge_field of this TabMetadata.  # noqa: E501
+
+
+    :return: The merge_field of this TabMetadata.  # noqa: E501
+    :rtype: MergeField
+    &#34;&#34;&#34;
+    return self._merge_field</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the name of this TabMetadata.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The name of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name(self):
+    &#34;&#34;&#34;Gets the name of this TabMetadata.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The name of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.numerical_value"><code class="name">var <span class="ident">numerical_value</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the numerical_value of this TabMetadata.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The numerical_value of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def numerical_value(self):
+    &#34;&#34;&#34;Gets the numerical_value of this TabMetadata.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The numerical_value of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._numerical_value</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.payment_item_code"><code class="name">var <span class="ident">payment_item_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the payment_item_code of this TabMetadata.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The payment_item_code of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def payment_item_code(self):
+    &#34;&#34;&#34;Gets the payment_item_code of this TabMetadata.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The payment_item_code of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._payment_item_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.payment_item_description"><code class="name">var <span class="ident">payment_item_description</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the payment_item_description of this TabMetadata.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The payment_item_description of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def payment_item_description(self):
+    &#34;&#34;&#34;Gets the payment_item_description of this TabMetadata.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The payment_item_description of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._payment_item_description</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.payment_item_name"><code class="name">var <span class="ident">payment_item_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the payment_item_name of this TabMetadata.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The payment_item_name of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def payment_item_name(self):
+    &#34;&#34;&#34;Gets the payment_item_name of this TabMetadata.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The payment_item_name of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._payment_item_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.require_all"><code class="name">var <span class="ident">require_all</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the require_all of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong> and shared is true, information must be entered in this field to complete the envelope.
+# noqa: E501</p>
+<p>:return: The require_all of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def require_all(self):
+    &#34;&#34;&#34;Gets the require_all of this TabMetadata.  # noqa: E501
+
+    When set to **true** and shared is true, information must be entered in this field to complete the envelope.   # noqa: E501
+
+    :return: The require_all of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._require_all</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.require_initial_on_shared_change"><code class="name">var <span class="ident">require_initial_on_shared_change</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the require_initial_on_shared_change of this TabMetadata.
+# noqa: E501</p>
+<p>Optional element for field markup. When set to <strong>true</strong>, the signer is required to initial when they modify a shared field.
+# noqa: E501</p>
+<p>:return: The require_initial_on_shared_change of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def require_initial_on_shared_change(self):
+    &#34;&#34;&#34;Gets the require_initial_on_shared_change of this TabMetadata.  # noqa: E501
+
+    Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.  # noqa: E501
+
+    :return: The require_initial_on_shared_change of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._require_initial_on_shared_change</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.required"><code class="name">var <span class="ident">required</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the required of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the signer is required to fill out this tab
+# noqa: E501</p>
+<p>:return: The required of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def required(self):
+    &#34;&#34;&#34;Gets the required of this TabMetadata.  # noqa: E501
+
+    When set to **true**, the signer is required to fill out this tab  # noqa: E501
+
+    :return: The required of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._required</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.scale_value"><code class="name">var <span class="ident">scale_value</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the scale_value of this TabMetadata.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The scale_value of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def scale_value(self):
+    &#34;&#34;&#34;Gets the scale_value of this TabMetadata.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The scale_value of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._scale_value</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.selected"><code class="name">var <span class="ident">selected</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the selected of this TabMetadata.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The selected of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def selected(self):
+    &#34;&#34;&#34;Gets the selected of this TabMetadata.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The selected of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._selected</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.shared"><code class="name">var <span class="ident">shared</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the shared of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, this custom tab is shared.
+# noqa: E501</p>
+<p>:return: The shared of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def shared(self):
+    &#34;&#34;&#34;Gets the shared of this TabMetadata.  # noqa: E501
+
+    When set to **true**, this custom tab is shared.  # noqa: E501
+
+    :return: The shared of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._shared</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.stamp_type"><code class="name">var <span class="ident">stamp_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the stamp_type of this TabMetadata.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The stamp_type of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def stamp_type(self):
+    &#34;&#34;&#34;Gets the stamp_type of this TabMetadata.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The stamp_type of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._stamp_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.stamp_type_metadata"><code class="name">var <span class="ident">stamp_type_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the stamp_type_metadata of this TabMetadata.
+# noqa: E501</p>
+<p>:return: The stamp_type_metadata of this TabMetadata.
+# noqa: E501
+:rtype: PropertyMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def stamp_type_metadata(self):
+    &#34;&#34;&#34;Gets the stamp_type_metadata of this TabMetadata.  # noqa: E501
+
+
+    :return: The stamp_type_metadata of this TabMetadata.  # noqa: E501
+    :rtype: PropertyMetadata
+    &#34;&#34;&#34;
+    return self._stamp_type_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.tab_label"><code class="name">var <span class="ident">tab_label</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the tab_label of this TabMetadata.
+# noqa: E501</p>
+<p>The label string associated with the tab.
+# noqa: E501</p>
+<p>:return: The tab_label of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def tab_label(self):
+    &#34;&#34;&#34;Gets the tab_label of this TabMetadata.  # noqa: E501
+
+    The label string associated with the tab.  # noqa: E501
+
+    :return: The tab_label of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._tab_label</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.type"><code class="name">var <span class="ident">type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the type of this TabMetadata.
+# noqa: E501</p>
+<p>The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula, FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number, Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.
+# noqa: E501</p>
+<p>:return: The type of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def type(self):
+    &#34;&#34;&#34;Gets the type of this TabMetadata.  # noqa: E501
+
+    The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula, FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number, Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.  # noqa: E501
+
+    :return: The type of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.underline"><code class="name">var <span class="ident">underline</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the underline of this TabMetadata.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the information in the tab is underlined.
+# noqa: E501</p>
+<p>:return: The underline of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def underline(self):
+    &#34;&#34;&#34;Gets the underline of this TabMetadata.  # noqa: E501
+
+    When set to **true**, the information in the tab is underlined.  # noqa: E501
+
+    :return: The underline of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._underline</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.validation_message"><code class="name">var <span class="ident">validation_message</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the validation_message of this TabMetadata.
+# noqa: E501</p>
+<p>The message displayed if the custom tab fails input validation (either custom of embedded).
+# noqa: E501</p>
+<p>:return: The validation_message of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def validation_message(self):
+    &#34;&#34;&#34;Gets the validation_message of this TabMetadata.  # noqa: E501
+
+    The message displayed if the custom tab fails input validation (either custom of embedded).  # noqa: E501
+
+    :return: The validation_message of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._validation_message</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.validation_pattern"><code class="name">var <span class="ident">validation_pattern</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the validation_pattern of this TabMetadata.
+# noqa: E501</p>
+<p>A regular expression used to validate input for the tab.
+# noqa: E501</p>
+<p>:return: The validation_pattern of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def validation_pattern(self):
+    &#34;&#34;&#34;Gets the validation_pattern of this TabMetadata.  # noqa: E501
+
+    A regular expression used to validate input for the tab.  # noqa: E501
+
+    :return: The validation_pattern of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._validation_pattern</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.width"><code class="name">var <span class="ident">width</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the width of this TabMetadata.
+# noqa: E501</p>
+<p>Width of the tab in pixels.
+# noqa: E501</p>
+<p>:return: The width of this TabMetadata.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def width(self):
+    &#34;&#34;&#34;Gets the width of this TabMetadata.  # noqa: E501
+
+    Width of the tab in pixels.  # noqa: E501
+
+    :return: The width of this TabMetadata.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._width</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(TabMetadata, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.tab_metadata.TabMetadata.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.tab_metadata.TabMetadata" href="#docusign_esign.models.tab_metadata.TabMetadata">TabMetadata</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.anchor" href="#docusign_esign.models.tab_metadata.TabMetadata.anchor">anchor</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.anchor_case_sensitive" href="#docusign_esign.models.tab_metadata.TabMetadata.anchor_case_sensitive">anchor_case_sensitive</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.anchor_horizontal_alignment" href="#docusign_esign.models.tab_metadata.TabMetadata.anchor_horizontal_alignment">anchor_horizontal_alignment</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.anchor_ignore_if_not_present" href="#docusign_esign.models.tab_metadata.TabMetadata.anchor_ignore_if_not_present">anchor_ignore_if_not_present</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.anchor_match_whole_word" href="#docusign_esign.models.tab_metadata.TabMetadata.anchor_match_whole_word">anchor_match_whole_word</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.anchor_units" href="#docusign_esign.models.tab_metadata.TabMetadata.anchor_units">anchor_units</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.anchor_x_offset" href="#docusign_esign.models.tab_metadata.TabMetadata.anchor_x_offset">anchor_x_offset</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.anchor_y_offset" href="#docusign_esign.models.tab_metadata.TabMetadata.anchor_y_offset">anchor_y_offset</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.attribute_map" href="#docusign_esign.models.tab_metadata.TabMetadata.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.bold" href="#docusign_esign.models.tab_metadata.TabMetadata.bold">bold</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.collaborative" href="#docusign_esign.models.tab_metadata.TabMetadata.collaborative">collaborative</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.conceal_value_on_document" href="#docusign_esign.models.tab_metadata.TabMetadata.conceal_value_on_document">conceal_value_on_document</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.created_by_display_name" href="#docusign_esign.models.tab_metadata.TabMetadata.created_by_display_name">created_by_display_name</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.created_by_user_id" href="#docusign_esign.models.tab_metadata.TabMetadata.created_by_user_id">created_by_user_id</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.custom_tab_id" href="#docusign_esign.models.tab_metadata.TabMetadata.custom_tab_id">custom_tab_id</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.disable_auto_size" href="#docusign_esign.models.tab_metadata.TabMetadata.disable_auto_size">disable_auto_size</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.editable" href="#docusign_esign.models.tab_metadata.TabMetadata.editable">editable</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.font" href="#docusign_esign.models.tab_metadata.TabMetadata.font">font</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.font_color" href="#docusign_esign.models.tab_metadata.TabMetadata.font_color">font_color</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.font_size" href="#docusign_esign.models.tab_metadata.TabMetadata.font_size">font_size</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.height" href="#docusign_esign.models.tab_metadata.TabMetadata.height">height</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.included_in_email" href="#docusign_esign.models.tab_metadata.TabMetadata.included_in_email">included_in_email</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.initial_value" href="#docusign_esign.models.tab_metadata.TabMetadata.initial_value">initial_value</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.italic" href="#docusign_esign.models.tab_metadata.TabMetadata.italic">italic</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.items" href="#docusign_esign.models.tab_metadata.TabMetadata.items">items</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.last_modified" href="#docusign_esign.models.tab_metadata.TabMetadata.last_modified">last_modified</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.last_modified_by_display_name" href="#docusign_esign.models.tab_metadata.TabMetadata.last_modified_by_display_name">last_modified_by_display_name</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.last_modified_by_user_id" href="#docusign_esign.models.tab_metadata.TabMetadata.last_modified_by_user_id">last_modified_by_user_id</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.locale_policy" href="#docusign_esign.models.tab_metadata.TabMetadata.locale_policy">locale_policy</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.locked" href="#docusign_esign.models.tab_metadata.TabMetadata.locked">locked</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.maximum_length" href="#docusign_esign.models.tab_metadata.TabMetadata.maximum_length">maximum_length</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.merge_field" href="#docusign_esign.models.tab_metadata.TabMetadata.merge_field">merge_field</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.name" href="#docusign_esign.models.tab_metadata.TabMetadata.name">name</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.numerical_value" href="#docusign_esign.models.tab_metadata.TabMetadata.numerical_value">numerical_value</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.payment_item_code" href="#docusign_esign.models.tab_metadata.TabMetadata.payment_item_code">payment_item_code</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.payment_item_description" href="#docusign_esign.models.tab_metadata.TabMetadata.payment_item_description">payment_item_description</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.payment_item_name" href="#docusign_esign.models.tab_metadata.TabMetadata.payment_item_name">payment_item_name</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.require_all" href="#docusign_esign.models.tab_metadata.TabMetadata.require_all">require_all</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.require_initial_on_shared_change" href="#docusign_esign.models.tab_metadata.TabMetadata.require_initial_on_shared_change">require_initial_on_shared_change</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.required" href="#docusign_esign.models.tab_metadata.TabMetadata.required">required</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.scale_value" href="#docusign_esign.models.tab_metadata.TabMetadata.scale_value">scale_value</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.selected" href="#docusign_esign.models.tab_metadata.TabMetadata.selected">selected</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.shared" href="#docusign_esign.models.tab_metadata.TabMetadata.shared">shared</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.stamp_type" href="#docusign_esign.models.tab_metadata.TabMetadata.stamp_type">stamp_type</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.stamp_type_metadata" href="#docusign_esign.models.tab_metadata.TabMetadata.stamp_type_metadata">stamp_type_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.swagger_types" href="#docusign_esign.models.tab_metadata.TabMetadata.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.tab_label" href="#docusign_esign.models.tab_metadata.TabMetadata.tab_label">tab_label</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.to_dict" href="#docusign_esign.models.tab_metadata.TabMetadata.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.to_str" href="#docusign_esign.models.tab_metadata.TabMetadata.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.type" href="#docusign_esign.models.tab_metadata.TabMetadata.type">type</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.underline" href="#docusign_esign.models.tab_metadata.TabMetadata.underline">underline</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.validation_message" href="#docusign_esign.models.tab_metadata.TabMetadata.validation_message">validation_message</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.validation_pattern" href="#docusign_esign.models.tab_metadata.TabMetadata.validation_pattern">validation_pattern</a></code></li>
+<li><code><a title="docusign_esign.models.tab_metadata.TabMetadata.width" href="#docusign_esign.models.tab_metadata.TabMetadata.width">width</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

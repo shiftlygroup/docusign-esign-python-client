@@ -1,0 +1,1052 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.display_appliance_document_page API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.display_appliance_document_page</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+from pprint import pformat
+from six import iteritems
+import re
+
+
+class DisplayApplianceDocumentPage(object):
+    &#34;&#34;&#34;
+    NOTE: This class is auto generated by the swagger code generator program.
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+    def __init__(self, doc_page_count_total=None, document_id=None, document_name=None, extension=None, height72_dpi=None, is_attachment_type=None, page=None, page_id=None, type=None, width72_dpi=None):
+        &#34;&#34;&#34;
+        DisplayApplianceDocumentPage - a model defined in Swagger
+
+        :param dict swaggerTypes: The key is attribute name
+                                  and the value is attribute type.
+        :param dict attributeMap: The key is attribute name
+                                  and the value is json key in definition.
+        &#34;&#34;&#34;
+        self.swagger_types = {
+            &#39;doc_page_count_total&#39;: &#39;int&#39;,
+            &#39;document_id&#39;: &#39;str&#39;,
+            &#39;document_name&#39;: &#39;str&#39;,
+            &#39;extension&#39;: &#39;str&#39;,
+            &#39;height72_dpi&#39;: &#39;int&#39;,
+            &#39;is_attachment_type&#39;: &#39;bool&#39;,
+            &#39;page&#39;: &#39;int&#39;,
+            &#39;page_id&#39;: &#39;str&#39;,
+            &#39;type&#39;: &#39;str&#39;,
+            &#39;width72_dpi&#39;: &#39;int&#39;
+        }
+
+        self.attribute_map = {
+            &#39;doc_page_count_total&#39;: &#39;docPageCountTotal&#39;,
+            &#39;document_id&#39;: &#39;documentId&#39;,
+            &#39;document_name&#39;: &#39;documentName&#39;,
+            &#39;extension&#39;: &#39;extension&#39;,
+            &#39;height72_dpi&#39;: &#39;height72DPI&#39;,
+            &#39;is_attachment_type&#39;: &#39;isAttachmentType&#39;,
+            &#39;page&#39;: &#39;page&#39;,
+            &#39;page_id&#39;: &#39;pageId&#39;,
+            &#39;type&#39;: &#39;type&#39;,
+            &#39;width72_dpi&#39;: &#39;width72DPI&#39;
+        }
+
+        self._doc_page_count_total = doc_page_count_total
+        self._document_id = document_id
+        self._document_name = document_name
+        self._extension = extension
+        self._height72_dpi = height72_dpi
+        self._is_attachment_type = is_attachment_type
+        self._page = page
+        self._page_id = page_id
+        self._type = type
+        self._width72_dpi = width72_dpi
+
+    @property
+    def doc_page_count_total(self):
+        &#34;&#34;&#34;
+        Gets the doc_page_count_total of this DisplayApplianceDocumentPage.
+        
+
+        :return: The doc_page_count_total of this DisplayApplianceDocumentPage.
+        :rtype: int
+        &#34;&#34;&#34;
+        return self._doc_page_count_total
+
+    @doc_page_count_total.setter
+    def doc_page_count_total(self, doc_page_count_total):
+        &#34;&#34;&#34;
+        Sets the doc_page_count_total of this DisplayApplianceDocumentPage.
+        
+
+        :param doc_page_count_total: The doc_page_count_total of this DisplayApplianceDocumentPage.
+        :type: int
+        &#34;&#34;&#34;
+
+        self._doc_page_count_total = doc_page_count_total
+
+    @property
+    def document_id(self):
+        &#34;&#34;&#34;
+        Gets the document_id of this DisplayApplianceDocumentPage.
+        Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.
+
+        :return: The document_id of this DisplayApplianceDocumentPage.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        &#34;&#34;&#34;
+        Sets the document_id of this DisplayApplianceDocumentPage.
+        Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.
+
+        :param document_id: The document_id of this DisplayApplianceDocumentPage.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._document_id = document_id
+
+    @property
+    def document_name(self):
+        &#34;&#34;&#34;
+        Gets the document_name of this DisplayApplianceDocumentPage.
+        
+
+        :return: The document_name of this DisplayApplianceDocumentPage.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._document_name
+
+    @document_name.setter
+    def document_name(self, document_name):
+        &#34;&#34;&#34;
+        Sets the document_name of this DisplayApplianceDocumentPage.
+        
+
+        :param document_name: The document_name of this DisplayApplianceDocumentPage.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._document_name = document_name
+
+    @property
+    def extension(self):
+        &#34;&#34;&#34;
+        Gets the extension of this DisplayApplianceDocumentPage.
+        
+
+        :return: The extension of this DisplayApplianceDocumentPage.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._extension
+
+    @extension.setter
+    def extension(self, extension):
+        &#34;&#34;&#34;
+        Sets the extension of this DisplayApplianceDocumentPage.
+        
+
+        :param extension: The extension of this DisplayApplianceDocumentPage.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._extension = extension
+
+    @property
+    def height72_dpi(self):
+        &#34;&#34;&#34;
+        Gets the height72_dpi of this DisplayApplianceDocumentPage.
+        
+
+        :return: The height72_dpi of this DisplayApplianceDocumentPage.
+        :rtype: int
+        &#34;&#34;&#34;
+        return self._height72_dpi
+
+    @height72_dpi.setter
+    def height72_dpi(self, height72_dpi):
+        &#34;&#34;&#34;
+        Sets the height72_dpi of this DisplayApplianceDocumentPage.
+        
+
+        :param height72_dpi: The height72_dpi of this DisplayApplianceDocumentPage.
+        :type: int
+        &#34;&#34;&#34;
+
+        self._height72_dpi = height72_dpi
+
+    @property
+    def is_attachment_type(self):
+        &#34;&#34;&#34;
+        Gets the is_attachment_type of this DisplayApplianceDocumentPage.
+        
+
+        :return: The is_attachment_type of this DisplayApplianceDocumentPage.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._is_attachment_type
+
+    @is_attachment_type.setter
+    def is_attachment_type(self, is_attachment_type):
+        &#34;&#34;&#34;
+        Sets the is_attachment_type of this DisplayApplianceDocumentPage.
+        
+
+        :param is_attachment_type: The is_attachment_type of this DisplayApplianceDocumentPage.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._is_attachment_type = is_attachment_type
+
+    @property
+    def page(self):
+        &#34;&#34;&#34;
+        Gets the page of this DisplayApplianceDocumentPage.
+        
+
+        :return: The page of this DisplayApplianceDocumentPage.
+        :rtype: int
+        &#34;&#34;&#34;
+        return self._page
+
+    @page.setter
+    def page(self, page):
+        &#34;&#34;&#34;
+        Sets the page of this DisplayApplianceDocumentPage.
+        
+
+        :param page: The page of this DisplayApplianceDocumentPage.
+        :type: int
+        &#34;&#34;&#34;
+
+        self._page = page
+
+    @property
+    def page_id(self):
+        &#34;&#34;&#34;
+        Gets the page_id of this DisplayApplianceDocumentPage.
+        
+
+        :return: The page_id of this DisplayApplianceDocumentPage.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._page_id
+
+    @page_id.setter
+    def page_id(self, page_id):
+        &#34;&#34;&#34;
+        Sets the page_id of this DisplayApplianceDocumentPage.
+        
+
+        :param page_id: The page_id of this DisplayApplianceDocumentPage.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._page_id = page_id
+
+    @property
+    def type(self):
+        &#34;&#34;&#34;
+        Gets the type of this DisplayApplianceDocumentPage.
+        
+
+        :return: The type of this DisplayApplianceDocumentPage.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        &#34;&#34;&#34;
+        Sets the type of this DisplayApplianceDocumentPage.
+        
+
+        :param type: The type of this DisplayApplianceDocumentPage.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._type = type
+
+    @property
+    def width72_dpi(self):
+        &#34;&#34;&#34;
+        Gets the width72_dpi of this DisplayApplianceDocumentPage.
+        
+
+        :return: The width72_dpi of this DisplayApplianceDocumentPage.
+        :rtype: int
+        &#34;&#34;&#34;
+        return self._width72_dpi
+
+    @width72_dpi.setter
+    def width72_dpi(self, width72_dpi):
+        &#34;&#34;&#34;
+        Sets the width72_dpi of this DisplayApplianceDocumentPage.
+        
+
+        :param width72_dpi: The width72_dpi of this DisplayApplianceDocumentPage.
+        :type: int
+        &#34;&#34;&#34;
+
+        self._width72_dpi = width72_dpi
+
+    def to_dict(self):
+        &#34;&#34;&#34;
+        Returns the model properties as a dict
+        &#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;
+        Returns the string representation of the model
+        &#34;&#34;&#34;
+        return pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;
+        For `print` and `pprint`
+        &#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are equal
+        &#34;&#34;&#34;
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are not equal
+        &#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage"><code class="flex name class">
+<span>class <span class="ident">DisplayApplianceDocumentPage</span></span>
+<span>(</span><span>doc_page_count_total=None, document_id=None, document_name=None, extension=None, height72_dpi=None, is_attachment_type=None, page=None, page_id=None, type=None, width72_dpi=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.
+Do not edit the class manually.</p>
+<p>DisplayApplianceDocumentPage - a model defined in Swagger</p>
+<p>:param dict swaggerTypes: The key is attribute name
+and the value is attribute type.
+:param dict attributeMap: The key is attribute name
+and the value is json key in definition.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DisplayApplianceDocumentPage(object):
+    &#34;&#34;&#34;
+    NOTE: This class is auto generated by the swagger code generator program.
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+    def __init__(self, doc_page_count_total=None, document_id=None, document_name=None, extension=None, height72_dpi=None, is_attachment_type=None, page=None, page_id=None, type=None, width72_dpi=None):
+        &#34;&#34;&#34;
+        DisplayApplianceDocumentPage - a model defined in Swagger
+
+        :param dict swaggerTypes: The key is attribute name
+                                  and the value is attribute type.
+        :param dict attributeMap: The key is attribute name
+                                  and the value is json key in definition.
+        &#34;&#34;&#34;
+        self.swagger_types = {
+            &#39;doc_page_count_total&#39;: &#39;int&#39;,
+            &#39;document_id&#39;: &#39;str&#39;,
+            &#39;document_name&#39;: &#39;str&#39;,
+            &#39;extension&#39;: &#39;str&#39;,
+            &#39;height72_dpi&#39;: &#39;int&#39;,
+            &#39;is_attachment_type&#39;: &#39;bool&#39;,
+            &#39;page&#39;: &#39;int&#39;,
+            &#39;page_id&#39;: &#39;str&#39;,
+            &#39;type&#39;: &#39;str&#39;,
+            &#39;width72_dpi&#39;: &#39;int&#39;
+        }
+
+        self.attribute_map = {
+            &#39;doc_page_count_total&#39;: &#39;docPageCountTotal&#39;,
+            &#39;document_id&#39;: &#39;documentId&#39;,
+            &#39;document_name&#39;: &#39;documentName&#39;,
+            &#39;extension&#39;: &#39;extension&#39;,
+            &#39;height72_dpi&#39;: &#39;height72DPI&#39;,
+            &#39;is_attachment_type&#39;: &#39;isAttachmentType&#39;,
+            &#39;page&#39;: &#39;page&#39;,
+            &#39;page_id&#39;: &#39;pageId&#39;,
+            &#39;type&#39;: &#39;type&#39;,
+            &#39;width72_dpi&#39;: &#39;width72DPI&#39;
+        }
+
+        self._doc_page_count_total = doc_page_count_total
+        self._document_id = document_id
+        self._document_name = document_name
+        self._extension = extension
+        self._height72_dpi = height72_dpi
+        self._is_attachment_type = is_attachment_type
+        self._page = page
+        self._page_id = page_id
+        self._type = type
+        self._width72_dpi = width72_dpi
+
+    @property
+    def doc_page_count_total(self):
+        &#34;&#34;&#34;
+        Gets the doc_page_count_total of this DisplayApplianceDocumentPage.
+        
+
+        :return: The doc_page_count_total of this DisplayApplianceDocumentPage.
+        :rtype: int
+        &#34;&#34;&#34;
+        return self._doc_page_count_total
+
+    @doc_page_count_total.setter
+    def doc_page_count_total(self, doc_page_count_total):
+        &#34;&#34;&#34;
+        Sets the doc_page_count_total of this DisplayApplianceDocumentPage.
+        
+
+        :param doc_page_count_total: The doc_page_count_total of this DisplayApplianceDocumentPage.
+        :type: int
+        &#34;&#34;&#34;
+
+        self._doc_page_count_total = doc_page_count_total
+
+    @property
+    def document_id(self):
+        &#34;&#34;&#34;
+        Gets the document_id of this DisplayApplianceDocumentPage.
+        Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.
+
+        :return: The document_id of this DisplayApplianceDocumentPage.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        &#34;&#34;&#34;
+        Sets the document_id of this DisplayApplianceDocumentPage.
+        Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.
+
+        :param document_id: The document_id of this DisplayApplianceDocumentPage.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._document_id = document_id
+
+    @property
+    def document_name(self):
+        &#34;&#34;&#34;
+        Gets the document_name of this DisplayApplianceDocumentPage.
+        
+
+        :return: The document_name of this DisplayApplianceDocumentPage.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._document_name
+
+    @document_name.setter
+    def document_name(self, document_name):
+        &#34;&#34;&#34;
+        Sets the document_name of this DisplayApplianceDocumentPage.
+        
+
+        :param document_name: The document_name of this DisplayApplianceDocumentPage.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._document_name = document_name
+
+    @property
+    def extension(self):
+        &#34;&#34;&#34;
+        Gets the extension of this DisplayApplianceDocumentPage.
+        
+
+        :return: The extension of this DisplayApplianceDocumentPage.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._extension
+
+    @extension.setter
+    def extension(self, extension):
+        &#34;&#34;&#34;
+        Sets the extension of this DisplayApplianceDocumentPage.
+        
+
+        :param extension: The extension of this DisplayApplianceDocumentPage.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._extension = extension
+
+    @property
+    def height72_dpi(self):
+        &#34;&#34;&#34;
+        Gets the height72_dpi of this DisplayApplianceDocumentPage.
+        
+
+        :return: The height72_dpi of this DisplayApplianceDocumentPage.
+        :rtype: int
+        &#34;&#34;&#34;
+        return self._height72_dpi
+
+    @height72_dpi.setter
+    def height72_dpi(self, height72_dpi):
+        &#34;&#34;&#34;
+        Sets the height72_dpi of this DisplayApplianceDocumentPage.
+        
+
+        :param height72_dpi: The height72_dpi of this DisplayApplianceDocumentPage.
+        :type: int
+        &#34;&#34;&#34;
+
+        self._height72_dpi = height72_dpi
+
+    @property
+    def is_attachment_type(self):
+        &#34;&#34;&#34;
+        Gets the is_attachment_type of this DisplayApplianceDocumentPage.
+        
+
+        :return: The is_attachment_type of this DisplayApplianceDocumentPage.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._is_attachment_type
+
+    @is_attachment_type.setter
+    def is_attachment_type(self, is_attachment_type):
+        &#34;&#34;&#34;
+        Sets the is_attachment_type of this DisplayApplianceDocumentPage.
+        
+
+        :param is_attachment_type: The is_attachment_type of this DisplayApplianceDocumentPage.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._is_attachment_type = is_attachment_type
+
+    @property
+    def page(self):
+        &#34;&#34;&#34;
+        Gets the page of this DisplayApplianceDocumentPage.
+        
+
+        :return: The page of this DisplayApplianceDocumentPage.
+        :rtype: int
+        &#34;&#34;&#34;
+        return self._page
+
+    @page.setter
+    def page(self, page):
+        &#34;&#34;&#34;
+        Sets the page of this DisplayApplianceDocumentPage.
+        
+
+        :param page: The page of this DisplayApplianceDocumentPage.
+        :type: int
+        &#34;&#34;&#34;
+
+        self._page = page
+
+    @property
+    def page_id(self):
+        &#34;&#34;&#34;
+        Gets the page_id of this DisplayApplianceDocumentPage.
+        
+
+        :return: The page_id of this DisplayApplianceDocumentPage.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._page_id
+
+    @page_id.setter
+    def page_id(self, page_id):
+        &#34;&#34;&#34;
+        Sets the page_id of this DisplayApplianceDocumentPage.
+        
+
+        :param page_id: The page_id of this DisplayApplianceDocumentPage.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._page_id = page_id
+
+    @property
+    def type(self):
+        &#34;&#34;&#34;
+        Gets the type of this DisplayApplianceDocumentPage.
+        
+
+        :return: The type of this DisplayApplianceDocumentPage.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        &#34;&#34;&#34;
+        Sets the type of this DisplayApplianceDocumentPage.
+        
+
+        :param type: The type of this DisplayApplianceDocumentPage.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._type = type
+
+    @property
+    def width72_dpi(self):
+        &#34;&#34;&#34;
+        Gets the width72_dpi of this DisplayApplianceDocumentPage.
+        
+
+        :return: The width72_dpi of this DisplayApplianceDocumentPage.
+        :rtype: int
+        &#34;&#34;&#34;
+        return self._width72_dpi
+
+    @width72_dpi.setter
+    def width72_dpi(self, width72_dpi):
+        &#34;&#34;&#34;
+        Sets the width72_dpi of this DisplayApplianceDocumentPage.
+        
+
+        :param width72_dpi: The width72_dpi of this DisplayApplianceDocumentPage.
+        :type: int
+        &#34;&#34;&#34;
+
+        self._width72_dpi = width72_dpi
+
+    def to_dict(self):
+        &#34;&#34;&#34;
+        Returns the model properties as a dict
+        &#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;
+        Returns the string representation of the model
+        &#34;&#34;&#34;
+        return pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;
+        For `print` and `pprint`
+        &#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are equal
+        &#34;&#34;&#34;
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are not equal
+        &#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.doc_page_count_total"><code class="name">var <span class="ident">doc_page_count_total</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the doc_page_count_total of this DisplayApplianceDocumentPage.</p>
+<p>:return: The doc_page_count_total of this DisplayApplianceDocumentPage.
+:rtype: int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def doc_page_count_total(self):
+    &#34;&#34;&#34;
+    Gets the doc_page_count_total of this DisplayApplianceDocumentPage.
+    
+
+    :return: The doc_page_count_total of this DisplayApplianceDocumentPage.
+    :rtype: int
+    &#34;&#34;&#34;
+    return self._doc_page_count_total</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.document_id"><code class="name">var <span class="ident">document_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the document_id of this DisplayApplianceDocumentPage.
+Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.</p>
+<p>:return: The document_id of this DisplayApplianceDocumentPage.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def document_id(self):
+    &#34;&#34;&#34;
+    Gets the document_id of this DisplayApplianceDocumentPage.
+    Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.
+
+    :return: The document_id of this DisplayApplianceDocumentPage.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._document_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.document_name"><code class="name">var <span class="ident">document_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the document_name of this DisplayApplianceDocumentPage.</p>
+<p>:return: The document_name of this DisplayApplianceDocumentPage.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def document_name(self):
+    &#34;&#34;&#34;
+    Gets the document_name of this DisplayApplianceDocumentPage.
+    
+
+    :return: The document_name of this DisplayApplianceDocumentPage.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._document_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.extension"><code class="name">var <span class="ident">extension</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the extension of this DisplayApplianceDocumentPage.</p>
+<p>:return: The extension of this DisplayApplianceDocumentPage.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def extension(self):
+    &#34;&#34;&#34;
+    Gets the extension of this DisplayApplianceDocumentPage.
+    
+
+    :return: The extension of this DisplayApplianceDocumentPage.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._extension</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.height72_dpi"><code class="name">var <span class="ident">height72_dpi</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the height72_dpi of this DisplayApplianceDocumentPage.</p>
+<p>:return: The height72_dpi of this DisplayApplianceDocumentPage.
+:rtype: int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def height72_dpi(self):
+    &#34;&#34;&#34;
+    Gets the height72_dpi of this DisplayApplianceDocumentPage.
+    
+
+    :return: The height72_dpi of this DisplayApplianceDocumentPage.
+    :rtype: int
+    &#34;&#34;&#34;
+    return self._height72_dpi</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.is_attachment_type"><code class="name">var <span class="ident">is_attachment_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the is_attachment_type of this DisplayApplianceDocumentPage.</p>
+<p>:return: The is_attachment_type of this DisplayApplianceDocumentPage.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is_attachment_type(self):
+    &#34;&#34;&#34;
+    Gets the is_attachment_type of this DisplayApplianceDocumentPage.
+    
+
+    :return: The is_attachment_type of this DisplayApplianceDocumentPage.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._is_attachment_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.page"><code class="name">var <span class="ident">page</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the page of this DisplayApplianceDocumentPage.</p>
+<p>:return: The page of this DisplayApplianceDocumentPage.
+:rtype: int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def page(self):
+    &#34;&#34;&#34;
+    Gets the page of this DisplayApplianceDocumentPage.
+    
+
+    :return: The page of this DisplayApplianceDocumentPage.
+    :rtype: int
+    &#34;&#34;&#34;
+    return self._page</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.page_id"><code class="name">var <span class="ident">page_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the page_id of this DisplayApplianceDocumentPage.</p>
+<p>:return: The page_id of this DisplayApplianceDocumentPage.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def page_id(self):
+    &#34;&#34;&#34;
+    Gets the page_id of this DisplayApplianceDocumentPage.
+    
+
+    :return: The page_id of this DisplayApplianceDocumentPage.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._page_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.type"><code class="name">var <span class="ident">type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the type of this DisplayApplianceDocumentPage.</p>
+<p>:return: The type of this DisplayApplianceDocumentPage.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def type(self):
+    &#34;&#34;&#34;
+    Gets the type of this DisplayApplianceDocumentPage.
+    
+
+    :return: The type of this DisplayApplianceDocumentPage.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.width72_dpi"><code class="name">var <span class="ident">width72_dpi</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the width72_dpi of this DisplayApplianceDocumentPage.</p>
+<p>:return: The width72_dpi of this DisplayApplianceDocumentPage.
+:rtype: int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def width72_dpi(self):
+    &#34;&#34;&#34;
+    Gets the width72_dpi of this DisplayApplianceDocumentPage.
+    
+
+    :return: The width72_dpi of this DisplayApplianceDocumentPage.
+    :rtype: int
+    &#34;&#34;&#34;
+    return self._width72_dpi</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;
+    Returns the model properties as a dict
+    &#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;
+    Returns the string representation of the model
+    &#34;&#34;&#34;
+    return pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage" href="#docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage">DisplayApplianceDocumentPage</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.doc_page_count_total" href="#docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.doc_page_count_total">doc_page_count_total</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.document_id" href="#docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.document_id">document_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.document_name" href="#docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.document_name">document_name</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.extension" href="#docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.extension">extension</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.height72_dpi" href="#docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.height72_dpi">height72_dpi</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.is_attachment_type" href="#docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.is_attachment_type">is_attachment_type</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.page" href="#docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.page">page</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.page_id" href="#docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.page_id">page_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.to_dict" href="#docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.to_str" href="#docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.type" href="#docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.type">type</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.width72_dpi" href="#docusign_esign.models.display_appliance_document_page.DisplayApplianceDocumentPage.width72_dpi">width72_dpi</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

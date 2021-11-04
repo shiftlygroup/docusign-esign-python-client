@@ -1,0 +1,2266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.bulk_sending_copy_recipient API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.bulk_sending_copy_recipient</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class BulkSendingCopyRecipient(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;access_code&#39;: &#39;str&#39;,
+        &#39;client_user_id&#39;: &#39;str&#39;,
+        &#39;custom_fields&#39;: &#39;list[str]&#39;,
+        &#39;delivery_method&#39;: &#39;str&#39;,
+        &#39;email&#39;: &#39;str&#39;,
+        &#39;email_notification&#39;: &#39;RecipientEmailNotification&#39;,
+        &#39;embedded_recipient_start_url&#39;: &#39;str&#39;,
+        &#39;fax_number&#39;: &#39;str&#39;,
+        &#39;host_email&#39;: &#39;str&#39;,
+        &#39;host_name&#39;: &#39;str&#39;,
+        &#39;id_check_configuration_name&#39;: &#39;str&#39;,
+        &#39;id_check_information_input&#39;: &#39;IdCheckInformationInput&#39;,
+        &#39;identification_method&#39;: &#39;str&#39;,
+        &#39;name&#39;: &#39;str&#39;,
+        &#39;note&#39;: &#39;str&#39;,
+        &#39;phone_authentication&#39;: &#39;RecipientPhoneAuthentication&#39;,
+        &#39;recipient_id&#39;: &#39;str&#39;,
+        &#39;recipient_signature_providers&#39;: &#39;list[RecipientSignatureProvider]&#39;,
+        &#39;role_name&#39;: &#39;str&#39;,
+        &#39;signer_name&#39;: &#39;str&#39;,
+        &#39;signing_group_id&#39;: &#39;str&#39;,
+        &#39;sms_authentication&#39;: &#39;RecipientSMSAuthentication&#39;,
+        &#39;social_authentications&#39;: &#39;list[SocialAuthentication]&#39;,
+        &#39;tabs&#39;: &#39;list[BulkSendingCopyTab]&#39;
+    }
+
+    attribute_map = {
+        &#39;access_code&#39;: &#39;accessCode&#39;,
+        &#39;client_user_id&#39;: &#39;clientUserId&#39;,
+        &#39;custom_fields&#39;: &#39;customFields&#39;,
+        &#39;delivery_method&#39;: &#39;deliveryMethod&#39;,
+        &#39;email&#39;: &#39;email&#39;,
+        &#39;email_notification&#39;: &#39;emailNotification&#39;,
+        &#39;embedded_recipient_start_url&#39;: &#39;embeddedRecipientStartURL&#39;,
+        &#39;fax_number&#39;: &#39;faxNumber&#39;,
+        &#39;host_email&#39;: &#39;hostEmail&#39;,
+        &#39;host_name&#39;: &#39;hostName&#39;,
+        &#39;id_check_configuration_name&#39;: &#39;idCheckConfigurationName&#39;,
+        &#39;id_check_information_input&#39;: &#39;idCheckInformationInput&#39;,
+        &#39;identification_method&#39;: &#39;identificationMethod&#39;,
+        &#39;name&#39;: &#39;name&#39;,
+        &#39;note&#39;: &#39;note&#39;,
+        &#39;phone_authentication&#39;: &#39;phoneAuthentication&#39;,
+        &#39;recipient_id&#39;: &#39;recipientId&#39;,
+        &#39;recipient_signature_providers&#39;: &#39;recipientSignatureProviders&#39;,
+        &#39;role_name&#39;: &#39;roleName&#39;,
+        &#39;signer_name&#39;: &#39;signerName&#39;,
+        &#39;signing_group_id&#39;: &#39;signingGroupId&#39;,
+        &#39;sms_authentication&#39;: &#39;smsAuthentication&#39;,
+        &#39;social_authentications&#39;: &#39;socialAuthentications&#39;,
+        &#39;tabs&#39;: &#39;tabs&#39;
+    }
+
+    def __init__(self, access_code=None, client_user_id=None, custom_fields=None, delivery_method=None, email=None, email_notification=None, embedded_recipient_start_url=None, fax_number=None, host_email=None, host_name=None, id_check_configuration_name=None, id_check_information_input=None, identification_method=None, name=None, note=None, phone_authentication=None, recipient_id=None, recipient_signature_providers=None, role_name=None, signer_name=None, signing_group_id=None, sms_authentication=None, social_authentications=None, tabs=None):  # noqa: E501
+        &#34;&#34;&#34;BulkSendingCopyRecipient - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._access_code = None
+        self._client_user_id = None
+        self._custom_fields = None
+        self._delivery_method = None
+        self._email = None
+        self._email_notification = None
+        self._embedded_recipient_start_url = None
+        self._fax_number = None
+        self._host_email = None
+        self._host_name = None
+        self._id_check_configuration_name = None
+        self._id_check_information_input = None
+        self._identification_method = None
+        self._name = None
+        self._note = None
+        self._phone_authentication = None
+        self._recipient_id = None
+        self._recipient_signature_providers = None
+        self._role_name = None
+        self._signer_name = None
+        self._signing_group_id = None
+        self._sms_authentication = None
+        self._social_authentications = None
+        self._tabs = None
+        self.discriminator = None
+
+        if access_code is not None:
+            self.access_code = access_code
+        if client_user_id is not None:
+            self.client_user_id = client_user_id
+        if custom_fields is not None:
+            self.custom_fields = custom_fields
+        if delivery_method is not None:
+            self.delivery_method = delivery_method
+        if email is not None:
+            self.email = email
+        if email_notification is not None:
+            self.email_notification = email_notification
+        if embedded_recipient_start_url is not None:
+            self.embedded_recipient_start_url = embedded_recipient_start_url
+        if fax_number is not None:
+            self.fax_number = fax_number
+        if host_email is not None:
+            self.host_email = host_email
+        if host_name is not None:
+            self.host_name = host_name
+        if id_check_configuration_name is not None:
+            self.id_check_configuration_name = id_check_configuration_name
+        if id_check_information_input is not None:
+            self.id_check_information_input = id_check_information_input
+        if identification_method is not None:
+            self.identification_method = identification_method
+        if name is not None:
+            self.name = name
+        if note is not None:
+            self.note = note
+        if phone_authentication is not None:
+            self.phone_authentication = phone_authentication
+        if recipient_id is not None:
+            self.recipient_id = recipient_id
+        if recipient_signature_providers is not None:
+            self.recipient_signature_providers = recipient_signature_providers
+        if role_name is not None:
+            self.role_name = role_name
+        if signer_name is not None:
+            self.signer_name = signer_name
+        if signing_group_id is not None:
+            self.signing_group_id = signing_group_id
+        if sms_authentication is not None:
+            self.sms_authentication = sms_authentication
+        if social_authentications is not None:
+            self.social_authentications = social_authentications
+        if tabs is not None:
+            self.tabs = tabs
+
+    @property
+    def access_code(self):
+        &#34;&#34;&#34;Gets the access_code of this BulkSendingCopyRecipient.  # noqa: E501
+
+        If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+        :return: The access_code of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._access_code
+
+    @access_code.setter
+    def access_code(self, access_code):
+        &#34;&#34;&#34;Sets the access_code of this BulkSendingCopyRecipient.
+
+        If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+        :param access_code: The access_code of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._access_code = access_code
+
+    @property
+    def client_user_id(self):
+        &#34;&#34;&#34;Gets the client_user_id of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.   # noqa: E501
+
+        :return: The client_user_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._client_user_id
+
+    @client_user_id.setter
+    def client_user_id(self, client_user_id):
+        &#34;&#34;&#34;Sets the client_user_id of this BulkSendingCopyRecipient.
+
+        Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.   # noqa: E501
+
+        :param client_user_id: The client_user_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._client_user_id = client_user_id
+
+    @property
+    def custom_fields(self):
+        &#34;&#34;&#34;Gets the custom_fields of this BulkSendingCopyRecipient.  # noqa: E501
+
+        An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.  # noqa: E501
+
+        :return: The custom_fields of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: list[str]
+        &#34;&#34;&#34;
+        return self._custom_fields
+
+    @custom_fields.setter
+    def custom_fields(self, custom_fields):
+        &#34;&#34;&#34;Sets the custom_fields of this BulkSendingCopyRecipient.
+
+        An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.  # noqa: E501
+
+        :param custom_fields: The custom_fields of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: list[str]
+        &#34;&#34;&#34;
+
+        self._custom_fields = custom_fields
+
+    @property
+    def delivery_method(self):
+        &#34;&#34;&#34;Gets the delivery_method of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Reserved: For DocuSign use only.  # noqa: E501
+
+        :return: The delivery_method of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._delivery_method
+
+    @delivery_method.setter
+    def delivery_method(self, delivery_method):
+        &#34;&#34;&#34;Sets the delivery_method of this BulkSendingCopyRecipient.
+
+        Reserved: For DocuSign use only.  # noqa: E501
+
+        :param delivery_method: The delivery_method of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._delivery_method = delivery_method
+
+    @property
+    def email(self):
+        &#34;&#34;&#34;Gets the email of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The email of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        &#34;&#34;&#34;Sets the email of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param email: The email of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._email = email
+
+    @property
+    def email_notification(self):
+        &#34;&#34;&#34;Gets the email_notification of this BulkSendingCopyRecipient.  # noqa: E501
+
+
+        :return: The email_notification of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: RecipientEmailNotification
+        &#34;&#34;&#34;
+        return self._email_notification
+
+    @email_notification.setter
+    def email_notification(self, email_notification):
+        &#34;&#34;&#34;Sets the email_notification of this BulkSendingCopyRecipient.
+
+
+        :param email_notification: The email_notification of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: RecipientEmailNotification
+        &#34;&#34;&#34;
+
+        self._email_notification = email_notification
+
+    @property
+    def embedded_recipient_start_url(self):
+        &#34;&#34;&#34;Gets the embedded_recipient_start_url of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender&#39;s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient&#39;s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&amp;[[mergeField3]]`   # noqa: E501
+
+        :return: The embedded_recipient_start_url of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._embedded_recipient_start_url
+
+    @embedded_recipient_start_url.setter
+    def embedded_recipient_start_url(self, embedded_recipient_start_url):
+        &#34;&#34;&#34;Sets the embedded_recipient_start_url of this BulkSendingCopyRecipient.
+
+        Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender&#39;s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient&#39;s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&amp;[[mergeField3]]`   # noqa: E501
+
+        :param embedded_recipient_start_url: The embedded_recipient_start_url of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._embedded_recipient_start_url = embedded_recipient_start_url
+
+    @property
+    def fax_number(self):
+        &#34;&#34;&#34;Gets the fax_number of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Reserved:  # noqa: E501
+
+        :return: The fax_number of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._fax_number
+
+    @fax_number.setter
+    def fax_number(self, fax_number):
+        &#34;&#34;&#34;Sets the fax_number of this BulkSendingCopyRecipient.
+
+        Reserved:  # noqa: E501
+
+        :param fax_number: The fax_number of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._fax_number = fax_number
+
+    @property
+    def host_email(self):
+        &#34;&#34;&#34;Gets the host_email of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The host_email of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._host_email
+
+    @host_email.setter
+    def host_email(self, host_email):
+        &#34;&#34;&#34;Sets the host_email of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param host_email: The host_email of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._host_email = host_email
+
+    @property
+    def host_name(self):
+        &#34;&#34;&#34;Gets the host_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The host_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._host_name
+
+    @host_name.setter
+    def host_name(self, host_name):
+        &#34;&#34;&#34;Sets the host_name of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param host_name: The host_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._host_name = host_name
+
+    @property
+    def id_check_configuration_name(self):
+        &#34;&#34;&#34;Gets the id_check_configuration_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as &#39;ID Check $&#39; and &#39;SMS Auth $&#39;. To use ID check in an envelope, the idCheckConfigurationName should be &#39;ID Check &#39;. If you wanted to use SMS, it would be &#39;SMS Auth $&#39; and you would need to add you would need to add phone number information to the `smsAuthentication` node.  # noqa: E501
+
+        :return: The id_check_configuration_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._id_check_configuration_name
+
+    @id_check_configuration_name.setter
+    def id_check_configuration_name(self, id_check_configuration_name):
+        &#34;&#34;&#34;Sets the id_check_configuration_name of this BulkSendingCopyRecipient.
+
+        Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as &#39;ID Check $&#39; and &#39;SMS Auth $&#39;. To use ID check in an envelope, the idCheckConfigurationName should be &#39;ID Check &#39;. If you wanted to use SMS, it would be &#39;SMS Auth $&#39; and you would need to add you would need to add phone number information to the `smsAuthentication` node.  # noqa: E501
+
+        :param id_check_configuration_name: The id_check_configuration_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._id_check_configuration_name = id_check_configuration_name
+
+    @property
+    def id_check_information_input(self):
+        &#34;&#34;&#34;Gets the id_check_information_input of this BulkSendingCopyRecipient.  # noqa: E501
+
+
+        :return: The id_check_information_input of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: IdCheckInformationInput
+        &#34;&#34;&#34;
+        return self._id_check_information_input
+
+    @id_check_information_input.setter
+    def id_check_information_input(self, id_check_information_input):
+        &#34;&#34;&#34;Sets the id_check_information_input of this BulkSendingCopyRecipient.
+
+
+        :param id_check_information_input: The id_check_information_input of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: IdCheckInformationInput
+        &#34;&#34;&#34;
+
+        self._id_check_information_input = id_check_information_input
+
+    @property
+    def identification_method(self):
+        &#34;&#34;&#34;Gets the identification_method of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The identification_method of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._identification_method
+
+    @identification_method.setter
+    def identification_method(self, identification_method):
+        &#34;&#34;&#34;Sets the identification_method of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param identification_method: The identification_method of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._identification_method = identification_method
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;Gets the name of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The name of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;Sets the name of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param name: The name of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def note(self):
+        &#34;&#34;&#34;Gets the note of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.  # noqa: E501
+
+        :return: The note of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._note
+
+    @note.setter
+    def note(self, note):
+        &#34;&#34;&#34;Sets the note of this BulkSendingCopyRecipient.
+
+        Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.  # noqa: E501
+
+        :param note: The note of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._note = note
+
+    @property
+    def phone_authentication(self):
+        &#34;&#34;&#34;Gets the phone_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+
+
+        :return: The phone_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: RecipientPhoneAuthentication
+        &#34;&#34;&#34;
+        return self._phone_authentication
+
+    @phone_authentication.setter
+    def phone_authentication(self, phone_authentication):
+        &#34;&#34;&#34;Sets the phone_authentication of this BulkSendingCopyRecipient.
+
+
+        :param phone_authentication: The phone_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: RecipientPhoneAuthentication
+        &#34;&#34;&#34;
+
+        self._phone_authentication = phone_authentication
+
+    @property
+    def recipient_id(self):
+        &#34;&#34;&#34;Gets the recipient_id of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.  # noqa: E501
+
+        :return: The recipient_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_id
+
+    @recipient_id.setter
+    def recipient_id(self, recipient_id):
+        &#34;&#34;&#34;Sets the recipient_id of this BulkSendingCopyRecipient.
+
+        Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.  # noqa: E501
+
+        :param recipient_id: The recipient_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_id = recipient_id
+
+    @property
+    def recipient_signature_providers(self):
+        &#34;&#34;&#34;Gets the recipient_signature_providers of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The recipient_signature_providers of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: list[RecipientSignatureProvider]
+        &#34;&#34;&#34;
+        return self._recipient_signature_providers
+
+    @recipient_signature_providers.setter
+    def recipient_signature_providers(self, recipient_signature_providers):
+        &#34;&#34;&#34;Sets the recipient_signature_providers of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param recipient_signature_providers: The recipient_signature_providers of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: list[RecipientSignatureProvider]
+        &#34;&#34;&#34;
+
+        self._recipient_signature_providers = recipient_signature_providers
+
+    @property
+    def role_name(self):
+        &#34;&#34;&#34;Gets the role_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+        :return: The role_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._role_name
+
+    @role_name.setter
+    def role_name(self, role_name):
+        &#34;&#34;&#34;Sets the role_name of this BulkSendingCopyRecipient.
+
+        Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+        :param role_name: The role_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._role_name = role_name
+
+    @property
+    def signer_name(self):
+        &#34;&#34;&#34;Gets the signer_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signer_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signer_name
+
+    @signer_name.setter
+    def signer_name(self, signer_name):
+        &#34;&#34;&#34;Sets the signer_name of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param signer_name: The signer_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signer_name = signer_name
+
+    @property
+    def signing_group_id(self):
+        &#34;&#34;&#34;Gets the signing_group_id of this BulkSendingCopyRecipient.  # noqa: E501
+
+        When set to **true** and the feature is enabled in the sender&#39;s account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).  # noqa: E501
+
+        :return: The signing_group_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signing_group_id
+
+    @signing_group_id.setter
+    def signing_group_id(self, signing_group_id):
+        &#34;&#34;&#34;Sets the signing_group_id of this BulkSendingCopyRecipient.
+
+        When set to **true** and the feature is enabled in the sender&#39;s account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).  # noqa: E501
+
+        :param signing_group_id: The signing_group_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signing_group_id = signing_group_id
+
+    @property
+    def sms_authentication(self):
+        &#34;&#34;&#34;Gets the sms_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+
+
+        :return: The sms_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: RecipientSMSAuthentication
+        &#34;&#34;&#34;
+        return self._sms_authentication
+
+    @sms_authentication.setter
+    def sms_authentication(self, sms_authentication):
+        &#34;&#34;&#34;Sets the sms_authentication of this BulkSendingCopyRecipient.
+
+
+        :param sms_authentication: The sms_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: RecipientSMSAuthentication
+        &#34;&#34;&#34;
+
+        self._sms_authentication = sms_authentication
+
+    @property
+    def social_authentications(self):
+        &#34;&#34;&#34;Gets the social_authentications of this BulkSendingCopyRecipient.  # noqa: E501
+
+         Lists the social ID type that can be used for recipient authentication.  # noqa: E501
+
+        :return: The social_authentications of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: list[SocialAuthentication]
+        &#34;&#34;&#34;
+        return self._social_authentications
+
+    @social_authentications.setter
+    def social_authentications(self, social_authentications):
+        &#34;&#34;&#34;Sets the social_authentications of this BulkSendingCopyRecipient.
+
+         Lists the social ID type that can be used for recipient authentication.  # noqa: E501
+
+        :param social_authentications: The social_authentications of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: list[SocialAuthentication]
+        &#34;&#34;&#34;
+
+        self._social_authentications = social_authentications
+
+    @property
+    def tabs(self):
+        &#34;&#34;&#34;Gets the tabs of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tabs of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: list[BulkSendingCopyTab]
+        &#34;&#34;&#34;
+        return self._tabs
+
+    @tabs.setter
+    def tabs(self, tabs):
+        &#34;&#34;&#34;Sets the tabs of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param tabs: The tabs of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: list[BulkSendingCopyTab]
+        &#34;&#34;&#34;
+
+        self._tabs = tabs
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(BulkSendingCopyRecipient, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, BulkSendingCopyRecipient):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient"><code class="flex name class">
+<span>class <span class="ident">BulkSendingCopyRecipient</span></span>
+<span>(</span><span>access_code=None, client_user_id=None, custom_fields=None, delivery_method=None, email=None, email_notification=None, embedded_recipient_start_url=None, fax_number=None, host_email=None, host_name=None, id_check_configuration_name=None, id_check_information_input=None, identification_method=None, name=None, note=None, phone_authentication=None, recipient_id=None, recipient_signature_providers=None, role_name=None, signer_name=None, signing_group_id=None, sms_authentication=None, social_authentications=None, tabs=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>BulkSendingCopyRecipient - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class BulkSendingCopyRecipient(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;access_code&#39;: &#39;str&#39;,
+        &#39;client_user_id&#39;: &#39;str&#39;,
+        &#39;custom_fields&#39;: &#39;list[str]&#39;,
+        &#39;delivery_method&#39;: &#39;str&#39;,
+        &#39;email&#39;: &#39;str&#39;,
+        &#39;email_notification&#39;: &#39;RecipientEmailNotification&#39;,
+        &#39;embedded_recipient_start_url&#39;: &#39;str&#39;,
+        &#39;fax_number&#39;: &#39;str&#39;,
+        &#39;host_email&#39;: &#39;str&#39;,
+        &#39;host_name&#39;: &#39;str&#39;,
+        &#39;id_check_configuration_name&#39;: &#39;str&#39;,
+        &#39;id_check_information_input&#39;: &#39;IdCheckInformationInput&#39;,
+        &#39;identification_method&#39;: &#39;str&#39;,
+        &#39;name&#39;: &#39;str&#39;,
+        &#39;note&#39;: &#39;str&#39;,
+        &#39;phone_authentication&#39;: &#39;RecipientPhoneAuthentication&#39;,
+        &#39;recipient_id&#39;: &#39;str&#39;,
+        &#39;recipient_signature_providers&#39;: &#39;list[RecipientSignatureProvider]&#39;,
+        &#39;role_name&#39;: &#39;str&#39;,
+        &#39;signer_name&#39;: &#39;str&#39;,
+        &#39;signing_group_id&#39;: &#39;str&#39;,
+        &#39;sms_authentication&#39;: &#39;RecipientSMSAuthentication&#39;,
+        &#39;social_authentications&#39;: &#39;list[SocialAuthentication]&#39;,
+        &#39;tabs&#39;: &#39;list[BulkSendingCopyTab]&#39;
+    }
+
+    attribute_map = {
+        &#39;access_code&#39;: &#39;accessCode&#39;,
+        &#39;client_user_id&#39;: &#39;clientUserId&#39;,
+        &#39;custom_fields&#39;: &#39;customFields&#39;,
+        &#39;delivery_method&#39;: &#39;deliveryMethod&#39;,
+        &#39;email&#39;: &#39;email&#39;,
+        &#39;email_notification&#39;: &#39;emailNotification&#39;,
+        &#39;embedded_recipient_start_url&#39;: &#39;embeddedRecipientStartURL&#39;,
+        &#39;fax_number&#39;: &#39;faxNumber&#39;,
+        &#39;host_email&#39;: &#39;hostEmail&#39;,
+        &#39;host_name&#39;: &#39;hostName&#39;,
+        &#39;id_check_configuration_name&#39;: &#39;idCheckConfigurationName&#39;,
+        &#39;id_check_information_input&#39;: &#39;idCheckInformationInput&#39;,
+        &#39;identification_method&#39;: &#39;identificationMethod&#39;,
+        &#39;name&#39;: &#39;name&#39;,
+        &#39;note&#39;: &#39;note&#39;,
+        &#39;phone_authentication&#39;: &#39;phoneAuthentication&#39;,
+        &#39;recipient_id&#39;: &#39;recipientId&#39;,
+        &#39;recipient_signature_providers&#39;: &#39;recipientSignatureProviders&#39;,
+        &#39;role_name&#39;: &#39;roleName&#39;,
+        &#39;signer_name&#39;: &#39;signerName&#39;,
+        &#39;signing_group_id&#39;: &#39;signingGroupId&#39;,
+        &#39;sms_authentication&#39;: &#39;smsAuthentication&#39;,
+        &#39;social_authentications&#39;: &#39;socialAuthentications&#39;,
+        &#39;tabs&#39;: &#39;tabs&#39;
+    }
+
+    def __init__(self, access_code=None, client_user_id=None, custom_fields=None, delivery_method=None, email=None, email_notification=None, embedded_recipient_start_url=None, fax_number=None, host_email=None, host_name=None, id_check_configuration_name=None, id_check_information_input=None, identification_method=None, name=None, note=None, phone_authentication=None, recipient_id=None, recipient_signature_providers=None, role_name=None, signer_name=None, signing_group_id=None, sms_authentication=None, social_authentications=None, tabs=None):  # noqa: E501
+        &#34;&#34;&#34;BulkSendingCopyRecipient - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._access_code = None
+        self._client_user_id = None
+        self._custom_fields = None
+        self._delivery_method = None
+        self._email = None
+        self._email_notification = None
+        self._embedded_recipient_start_url = None
+        self._fax_number = None
+        self._host_email = None
+        self._host_name = None
+        self._id_check_configuration_name = None
+        self._id_check_information_input = None
+        self._identification_method = None
+        self._name = None
+        self._note = None
+        self._phone_authentication = None
+        self._recipient_id = None
+        self._recipient_signature_providers = None
+        self._role_name = None
+        self._signer_name = None
+        self._signing_group_id = None
+        self._sms_authentication = None
+        self._social_authentications = None
+        self._tabs = None
+        self.discriminator = None
+
+        if access_code is not None:
+            self.access_code = access_code
+        if client_user_id is not None:
+            self.client_user_id = client_user_id
+        if custom_fields is not None:
+            self.custom_fields = custom_fields
+        if delivery_method is not None:
+            self.delivery_method = delivery_method
+        if email is not None:
+            self.email = email
+        if email_notification is not None:
+            self.email_notification = email_notification
+        if embedded_recipient_start_url is not None:
+            self.embedded_recipient_start_url = embedded_recipient_start_url
+        if fax_number is not None:
+            self.fax_number = fax_number
+        if host_email is not None:
+            self.host_email = host_email
+        if host_name is not None:
+            self.host_name = host_name
+        if id_check_configuration_name is not None:
+            self.id_check_configuration_name = id_check_configuration_name
+        if id_check_information_input is not None:
+            self.id_check_information_input = id_check_information_input
+        if identification_method is not None:
+            self.identification_method = identification_method
+        if name is not None:
+            self.name = name
+        if note is not None:
+            self.note = note
+        if phone_authentication is not None:
+            self.phone_authentication = phone_authentication
+        if recipient_id is not None:
+            self.recipient_id = recipient_id
+        if recipient_signature_providers is not None:
+            self.recipient_signature_providers = recipient_signature_providers
+        if role_name is not None:
+            self.role_name = role_name
+        if signer_name is not None:
+            self.signer_name = signer_name
+        if signing_group_id is not None:
+            self.signing_group_id = signing_group_id
+        if sms_authentication is not None:
+            self.sms_authentication = sms_authentication
+        if social_authentications is not None:
+            self.social_authentications = social_authentications
+        if tabs is not None:
+            self.tabs = tabs
+
+    @property
+    def access_code(self):
+        &#34;&#34;&#34;Gets the access_code of this BulkSendingCopyRecipient.  # noqa: E501
+
+        If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+        :return: The access_code of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._access_code
+
+    @access_code.setter
+    def access_code(self, access_code):
+        &#34;&#34;&#34;Sets the access_code of this BulkSendingCopyRecipient.
+
+        If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+        :param access_code: The access_code of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._access_code = access_code
+
+    @property
+    def client_user_id(self):
+        &#34;&#34;&#34;Gets the client_user_id of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.   # noqa: E501
+
+        :return: The client_user_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._client_user_id
+
+    @client_user_id.setter
+    def client_user_id(self, client_user_id):
+        &#34;&#34;&#34;Sets the client_user_id of this BulkSendingCopyRecipient.
+
+        Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.   # noqa: E501
+
+        :param client_user_id: The client_user_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._client_user_id = client_user_id
+
+    @property
+    def custom_fields(self):
+        &#34;&#34;&#34;Gets the custom_fields of this BulkSendingCopyRecipient.  # noqa: E501
+
+        An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.  # noqa: E501
+
+        :return: The custom_fields of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: list[str]
+        &#34;&#34;&#34;
+        return self._custom_fields
+
+    @custom_fields.setter
+    def custom_fields(self, custom_fields):
+        &#34;&#34;&#34;Sets the custom_fields of this BulkSendingCopyRecipient.
+
+        An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.  # noqa: E501
+
+        :param custom_fields: The custom_fields of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: list[str]
+        &#34;&#34;&#34;
+
+        self._custom_fields = custom_fields
+
+    @property
+    def delivery_method(self):
+        &#34;&#34;&#34;Gets the delivery_method of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Reserved: For DocuSign use only.  # noqa: E501
+
+        :return: The delivery_method of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._delivery_method
+
+    @delivery_method.setter
+    def delivery_method(self, delivery_method):
+        &#34;&#34;&#34;Sets the delivery_method of this BulkSendingCopyRecipient.
+
+        Reserved: For DocuSign use only.  # noqa: E501
+
+        :param delivery_method: The delivery_method of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._delivery_method = delivery_method
+
+    @property
+    def email(self):
+        &#34;&#34;&#34;Gets the email of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The email of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        &#34;&#34;&#34;Sets the email of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param email: The email of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._email = email
+
+    @property
+    def email_notification(self):
+        &#34;&#34;&#34;Gets the email_notification of this BulkSendingCopyRecipient.  # noqa: E501
+
+
+        :return: The email_notification of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: RecipientEmailNotification
+        &#34;&#34;&#34;
+        return self._email_notification
+
+    @email_notification.setter
+    def email_notification(self, email_notification):
+        &#34;&#34;&#34;Sets the email_notification of this BulkSendingCopyRecipient.
+
+
+        :param email_notification: The email_notification of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: RecipientEmailNotification
+        &#34;&#34;&#34;
+
+        self._email_notification = email_notification
+
+    @property
+    def embedded_recipient_start_url(self):
+        &#34;&#34;&#34;Gets the embedded_recipient_start_url of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender&#39;s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient&#39;s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&amp;[[mergeField3]]`   # noqa: E501
+
+        :return: The embedded_recipient_start_url of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._embedded_recipient_start_url
+
+    @embedded_recipient_start_url.setter
+    def embedded_recipient_start_url(self, embedded_recipient_start_url):
+        &#34;&#34;&#34;Sets the embedded_recipient_start_url of this BulkSendingCopyRecipient.
+
+        Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender&#39;s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient&#39;s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&amp;[[mergeField3]]`   # noqa: E501
+
+        :param embedded_recipient_start_url: The embedded_recipient_start_url of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._embedded_recipient_start_url = embedded_recipient_start_url
+
+    @property
+    def fax_number(self):
+        &#34;&#34;&#34;Gets the fax_number of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Reserved:  # noqa: E501
+
+        :return: The fax_number of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._fax_number
+
+    @fax_number.setter
+    def fax_number(self, fax_number):
+        &#34;&#34;&#34;Sets the fax_number of this BulkSendingCopyRecipient.
+
+        Reserved:  # noqa: E501
+
+        :param fax_number: The fax_number of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._fax_number = fax_number
+
+    @property
+    def host_email(self):
+        &#34;&#34;&#34;Gets the host_email of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The host_email of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._host_email
+
+    @host_email.setter
+    def host_email(self, host_email):
+        &#34;&#34;&#34;Sets the host_email of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param host_email: The host_email of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._host_email = host_email
+
+    @property
+    def host_name(self):
+        &#34;&#34;&#34;Gets the host_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The host_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._host_name
+
+    @host_name.setter
+    def host_name(self, host_name):
+        &#34;&#34;&#34;Sets the host_name of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param host_name: The host_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._host_name = host_name
+
+    @property
+    def id_check_configuration_name(self):
+        &#34;&#34;&#34;Gets the id_check_configuration_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as &#39;ID Check $&#39; and &#39;SMS Auth $&#39;. To use ID check in an envelope, the idCheckConfigurationName should be &#39;ID Check &#39;. If you wanted to use SMS, it would be &#39;SMS Auth $&#39; and you would need to add you would need to add phone number information to the `smsAuthentication` node.  # noqa: E501
+
+        :return: The id_check_configuration_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._id_check_configuration_name
+
+    @id_check_configuration_name.setter
+    def id_check_configuration_name(self, id_check_configuration_name):
+        &#34;&#34;&#34;Sets the id_check_configuration_name of this BulkSendingCopyRecipient.
+
+        Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as &#39;ID Check $&#39; and &#39;SMS Auth $&#39;. To use ID check in an envelope, the idCheckConfigurationName should be &#39;ID Check &#39;. If you wanted to use SMS, it would be &#39;SMS Auth $&#39; and you would need to add you would need to add phone number information to the `smsAuthentication` node.  # noqa: E501
+
+        :param id_check_configuration_name: The id_check_configuration_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._id_check_configuration_name = id_check_configuration_name
+
+    @property
+    def id_check_information_input(self):
+        &#34;&#34;&#34;Gets the id_check_information_input of this BulkSendingCopyRecipient.  # noqa: E501
+
+
+        :return: The id_check_information_input of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: IdCheckInformationInput
+        &#34;&#34;&#34;
+        return self._id_check_information_input
+
+    @id_check_information_input.setter
+    def id_check_information_input(self, id_check_information_input):
+        &#34;&#34;&#34;Sets the id_check_information_input of this BulkSendingCopyRecipient.
+
+
+        :param id_check_information_input: The id_check_information_input of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: IdCheckInformationInput
+        &#34;&#34;&#34;
+
+        self._id_check_information_input = id_check_information_input
+
+    @property
+    def identification_method(self):
+        &#34;&#34;&#34;Gets the identification_method of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The identification_method of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._identification_method
+
+    @identification_method.setter
+    def identification_method(self, identification_method):
+        &#34;&#34;&#34;Sets the identification_method of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param identification_method: The identification_method of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._identification_method = identification_method
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;Gets the name of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The name of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;Sets the name of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param name: The name of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def note(self):
+        &#34;&#34;&#34;Gets the note of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.  # noqa: E501
+
+        :return: The note of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._note
+
+    @note.setter
+    def note(self, note):
+        &#34;&#34;&#34;Sets the note of this BulkSendingCopyRecipient.
+
+        Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.  # noqa: E501
+
+        :param note: The note of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._note = note
+
+    @property
+    def phone_authentication(self):
+        &#34;&#34;&#34;Gets the phone_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+
+
+        :return: The phone_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: RecipientPhoneAuthentication
+        &#34;&#34;&#34;
+        return self._phone_authentication
+
+    @phone_authentication.setter
+    def phone_authentication(self, phone_authentication):
+        &#34;&#34;&#34;Sets the phone_authentication of this BulkSendingCopyRecipient.
+
+
+        :param phone_authentication: The phone_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: RecipientPhoneAuthentication
+        &#34;&#34;&#34;
+
+        self._phone_authentication = phone_authentication
+
+    @property
+    def recipient_id(self):
+        &#34;&#34;&#34;Gets the recipient_id of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.  # noqa: E501
+
+        :return: The recipient_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_id
+
+    @recipient_id.setter
+    def recipient_id(self, recipient_id):
+        &#34;&#34;&#34;Sets the recipient_id of this BulkSendingCopyRecipient.
+
+        Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.  # noqa: E501
+
+        :param recipient_id: The recipient_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_id = recipient_id
+
+    @property
+    def recipient_signature_providers(self):
+        &#34;&#34;&#34;Gets the recipient_signature_providers of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The recipient_signature_providers of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: list[RecipientSignatureProvider]
+        &#34;&#34;&#34;
+        return self._recipient_signature_providers
+
+    @recipient_signature_providers.setter
+    def recipient_signature_providers(self, recipient_signature_providers):
+        &#34;&#34;&#34;Sets the recipient_signature_providers of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param recipient_signature_providers: The recipient_signature_providers of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: list[RecipientSignatureProvider]
+        &#34;&#34;&#34;
+
+        self._recipient_signature_providers = recipient_signature_providers
+
+    @property
+    def role_name(self):
+        &#34;&#34;&#34;Gets the role_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+        Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+        :return: The role_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._role_name
+
+    @role_name.setter
+    def role_name(self, role_name):
+        &#34;&#34;&#34;Sets the role_name of this BulkSendingCopyRecipient.
+
+        Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+        :param role_name: The role_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._role_name = role_name
+
+    @property
+    def signer_name(self):
+        &#34;&#34;&#34;Gets the signer_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signer_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signer_name
+
+    @signer_name.setter
+    def signer_name(self, signer_name):
+        &#34;&#34;&#34;Sets the signer_name of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param signer_name: The signer_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signer_name = signer_name
+
+    @property
+    def signing_group_id(self):
+        &#34;&#34;&#34;Gets the signing_group_id of this BulkSendingCopyRecipient.  # noqa: E501
+
+        When set to **true** and the feature is enabled in the sender&#39;s account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).  # noqa: E501
+
+        :return: The signing_group_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signing_group_id
+
+    @signing_group_id.setter
+    def signing_group_id(self, signing_group_id):
+        &#34;&#34;&#34;Sets the signing_group_id of this BulkSendingCopyRecipient.
+
+        When set to **true** and the feature is enabled in the sender&#39;s account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).  # noqa: E501
+
+        :param signing_group_id: The signing_group_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signing_group_id = signing_group_id
+
+    @property
+    def sms_authentication(self):
+        &#34;&#34;&#34;Gets the sms_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+
+
+        :return: The sms_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: RecipientSMSAuthentication
+        &#34;&#34;&#34;
+        return self._sms_authentication
+
+    @sms_authentication.setter
+    def sms_authentication(self, sms_authentication):
+        &#34;&#34;&#34;Sets the sms_authentication of this BulkSendingCopyRecipient.
+
+
+        :param sms_authentication: The sms_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: RecipientSMSAuthentication
+        &#34;&#34;&#34;
+
+        self._sms_authentication = sms_authentication
+
+    @property
+    def social_authentications(self):
+        &#34;&#34;&#34;Gets the social_authentications of this BulkSendingCopyRecipient.  # noqa: E501
+
+         Lists the social ID type that can be used for recipient authentication.  # noqa: E501
+
+        :return: The social_authentications of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: list[SocialAuthentication]
+        &#34;&#34;&#34;
+        return self._social_authentications
+
+    @social_authentications.setter
+    def social_authentications(self, social_authentications):
+        &#34;&#34;&#34;Sets the social_authentications of this BulkSendingCopyRecipient.
+
+         Lists the social ID type that can be used for recipient authentication.  # noqa: E501
+
+        :param social_authentications: The social_authentications of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: list[SocialAuthentication]
+        &#34;&#34;&#34;
+
+        self._social_authentications = social_authentications
+
+    @property
+    def tabs(self):
+        &#34;&#34;&#34;Gets the tabs of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tabs of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: list[BulkSendingCopyTab]
+        &#34;&#34;&#34;
+        return self._tabs
+
+    @tabs.setter
+    def tabs(self, tabs):
+        &#34;&#34;&#34;Sets the tabs of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param tabs: The tabs of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: list[BulkSendingCopyTab]
+        &#34;&#34;&#34;
+
+        self._tabs = tabs
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(BulkSendingCopyRecipient, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, BulkSendingCopyRecipient):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.access_code"><code class="name">var <span class="ident">access_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the access_code of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.
+Maximum Length: 50 characters and it must conform to the account's access code format setting.
+If blank, but the signer <code>accessCode</code> property is set in the envelope, then that value is used.
+If blank and the signer <code>accessCode</code> property is not set, then the access code is not required.
+# noqa: E501</p>
+<p>:return: The access_code of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def access_code(self):
+    &#34;&#34;&#34;Gets the access_code of this BulkSendingCopyRecipient.  # noqa: E501
+
+    If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+    :return: The access_code of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._access_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.client_user_id"><code class="name">var <span class="ident">client_user_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the client_user_id of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>Specifies whether the recipient is embedded or remote.
+If the <code>clientUserId</code> property is not null then the recipient is embedded. Note that if the <code>ClientUserId</code> property is set and either <code>SignerMustHaveAccount</code> or <code>SignerMustLoginToSign</code> property of the account settings is set to
+<strong>true</strong>, an error is generated on sending.ng.
+Maximum length: 100 characters.
+# noqa: E501</p>
+<p>:return: The client_user_id of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def client_user_id(self):
+    &#34;&#34;&#34;Gets the client_user_id of this BulkSendingCopyRecipient.  # noqa: E501
+
+    Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.   # noqa: E501
+
+    :return: The client_user_id of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._client_user_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.custom_fields"><code class="name">var <span class="ident">custom_fields</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the custom_fields of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
+# noqa: E501</p>
+<p>:return: The custom_fields of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: list[str]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def custom_fields(self):
+    &#34;&#34;&#34;Gets the custom_fields of this BulkSendingCopyRecipient.  # noqa: E501
+
+    An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.  # noqa: E501
+
+    :return: The custom_fields of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: list[str]
+    &#34;&#34;&#34;
+    return self._custom_fields</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.delivery_method"><code class="name">var <span class="ident">delivery_method</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the delivery_method of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>Reserved: For DocuSign use only.
+# noqa: E501</p>
+<p>:return: The delivery_method of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def delivery_method(self):
+    &#34;&#34;&#34;Gets the delivery_method of this BulkSendingCopyRecipient.  # noqa: E501
+
+    Reserved: For DocuSign use only.  # noqa: E501
+
+    :return: The delivery_method of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._delivery_method</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.email"><code class="name">var <span class="ident">email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the email of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The email of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def email(self):
+    &#34;&#34;&#34;Gets the email of this BulkSendingCopyRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The email of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.email_notification"><code class="name">var <span class="ident">email_notification</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the email_notification of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>:return: The email_notification of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: RecipientEmailNotification</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def email_notification(self):
+    &#34;&#34;&#34;Gets the email_notification of this BulkSendingCopyRecipient.  # noqa: E501
+
+
+    :return: The email_notification of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: RecipientEmailNotification
+    &#34;&#34;&#34;
+    return self._email_notification</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.embedded_recipient_start_url"><code class="name">var <span class="ident">embedded_recipient_start_url</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the embedded_recipient_start_url of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.
+If set to <code>SIGN_AT_DOCUSIGN</code>, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.
+It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets <code>EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN</code>, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.
+If the <code>clientUserId</code> property is NOT set, and the <code>embeddedRecipientStartURL</code> is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The <code>customFields</code> property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.
+<em>Example</em>:
+<code>http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&amp;[[mergeField3]]</code>
+# noqa: E501</p>
+<p>:return: The embedded_recipient_start_url of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def embedded_recipient_start_url(self):
+    &#34;&#34;&#34;Gets the embedded_recipient_start_url of this BulkSendingCopyRecipient.  # noqa: E501
+
+    Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender&#39;s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient&#39;s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&amp;[[mergeField3]]`   # noqa: E501
+
+    :return: The embedded_recipient_start_url of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._embedded_recipient_start_url</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.fax_number"><code class="name">var <span class="ident">fax_number</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the fax_number of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>Reserved:
+# noqa: E501</p>
+<p>:return: The fax_number of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def fax_number(self):
+    &#34;&#34;&#34;Gets the fax_number of this BulkSendingCopyRecipient.  # noqa: E501
+
+    Reserved:  # noqa: E501
+
+    :return: The fax_number of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._fax_number</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.host_email"><code class="name">var <span class="ident">host_email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the host_email of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The host_email of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def host_email(self):
+    &#34;&#34;&#34;Gets the host_email of this BulkSendingCopyRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The host_email of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._host_email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.host_name"><code class="name">var <span class="ident">host_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the host_name of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The host_name of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def host_name(self):
+    &#34;&#34;&#34;Gets the host_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The host_name of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._host_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.id_check_configuration_name"><code class="name">var <span class="ident">id_check_configuration_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the id_check_configuration_name of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.
+<em>Example</em>: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the <code>smsAuthentication</code> node.
+# noqa: E501</p>
+<p>:return: The id_check_configuration_name of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def id_check_configuration_name(self):
+    &#34;&#34;&#34;Gets the id_check_configuration_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+    Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as &#39;ID Check $&#39; and &#39;SMS Auth $&#39;. To use ID check in an envelope, the idCheckConfigurationName should be &#39;ID Check &#39;. If you wanted to use SMS, it would be &#39;SMS Auth $&#39; and you would need to add you would need to add phone number information to the `smsAuthentication` node.  # noqa: E501
+
+    :return: The id_check_configuration_name of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._id_check_configuration_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.id_check_information_input"><code class="name">var <span class="ident">id_check_information_input</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the id_check_information_input of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>:return: The id_check_information_input of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: IdCheckInformationInput</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def id_check_information_input(self):
+    &#34;&#34;&#34;Gets the id_check_information_input of this BulkSendingCopyRecipient.  # noqa: E501
+
+
+    :return: The id_check_information_input of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: IdCheckInformationInput
+    &#34;&#34;&#34;
+    return self._id_check_information_input</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.identification_method"><code class="name">var <span class="ident">identification_method</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the identification_method of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The identification_method of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def identification_method(self):
+    &#34;&#34;&#34;Gets the identification_method of this BulkSendingCopyRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The identification_method of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._identification_method</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the name of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The name of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name(self):
+    &#34;&#34;&#34;Gets the name of this BulkSendingCopyRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The name of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.note"><code class="name">var <span class="ident">note</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the note of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.
+Maximum Length: 1000 characters.
+# noqa: E501</p>
+<p>:return: The note of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def note(self):
+    &#34;&#34;&#34;Gets the note of this BulkSendingCopyRecipient.  # noqa: E501
+
+    Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.  # noqa: E501
+
+    :return: The note of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._note</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.phone_authentication"><code class="name">var <span class="ident">phone_authentication</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the phone_authentication of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>:return: The phone_authentication of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: RecipientPhoneAuthentication</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def phone_authentication(self):
+    &#34;&#34;&#34;Gets the phone_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+
+
+    :return: The phone_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: RecipientPhoneAuthentication
+    &#34;&#34;&#34;
+    return self._phone_authentication</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.recipient_id"><code class="name">var <span class="ident">recipient_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the recipient_id of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+# noqa: E501</p>
+<p>:return: The recipient_id of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def recipient_id(self):
+    &#34;&#34;&#34;Gets the recipient_id of this BulkSendingCopyRecipient.  # noqa: E501
+
+    Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.  # noqa: E501
+
+    :return: The recipient_id of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._recipient_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.recipient_signature_providers"><code class="name">var <span class="ident">recipient_signature_providers</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the recipient_signature_providers of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The recipient_signature_providers of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: list[RecipientSignatureProvider]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def recipient_signature_providers(self):
+    &#34;&#34;&#34;Gets the recipient_signature_providers of this BulkSendingCopyRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The recipient_signature_providers of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: list[RecipientSignatureProvider]
+    &#34;&#34;&#34;
+    return self._recipient_signature_providers</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.role_name"><code class="name">var <span class="ident">role_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the role_name of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
+# noqa: E501</p>
+<p>:return: The role_name of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def role_name(self):
+    &#34;&#34;&#34;Gets the role_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+    Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+    :return: The role_name of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._role_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.signer_name"><code class="name">var <span class="ident">signer_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signer_name of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The signer_name of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signer_name(self):
+    &#34;&#34;&#34;Gets the signer_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The signer_name of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signer_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.signing_group_id"><code class="name">var <span class="ident">signing_group_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signing_group_id of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>When set to <strong>true</strong> and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+# noqa: E501</p>
+<p>:return: The signing_group_id of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signing_group_id(self):
+    &#34;&#34;&#34;Gets the signing_group_id of this BulkSendingCopyRecipient.  # noqa: E501
+
+    When set to **true** and the feature is enabled in the sender&#39;s account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).  # noqa: E501
+
+    :return: The signing_group_id of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signing_group_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.sms_authentication"><code class="name">var <span class="ident">sms_authentication</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sms_authentication of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>:return: The sms_authentication of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: RecipientSMSAuthentication</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sms_authentication(self):
+    &#34;&#34;&#34;Gets the sms_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+
+
+    :return: The sms_authentication of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: RecipientSMSAuthentication
+    &#34;&#34;&#34;
+    return self._sms_authentication</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.social_authentications"><code class="name">var <span class="ident">social_authentications</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the social_authentications of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p>Lists the social ID type that can be used for recipient authentication.
+# noqa: E501</p>
+<p>:return: The social_authentications of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: list[SocialAuthentication]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def social_authentications(self):
+    &#34;&#34;&#34;Gets the social_authentications of this BulkSendingCopyRecipient.  # noqa: E501
+
+     Lists the social ID type that can be used for recipient authentication.  # noqa: E501
+
+    :return: The social_authentications of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: list[SocialAuthentication]
+    &#34;&#34;&#34;
+    return self._social_authentications</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.tabs"><code class="name">var <span class="ident">tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the tabs of this BulkSendingCopyRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The tabs of this BulkSendingCopyRecipient.
+# noqa: E501
+:rtype: list[BulkSendingCopyTab]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def tabs(self):
+    &#34;&#34;&#34;Gets the tabs of this BulkSendingCopyRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The tabs of this BulkSendingCopyRecipient.  # noqa: E501
+    :rtype: list[BulkSendingCopyTab]
+    &#34;&#34;&#34;
+    return self._tabs</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(BulkSendingCopyRecipient, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient">BulkSendingCopyRecipient</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.access_code" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.access_code">access_code</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.attribute_map" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.client_user_id" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.client_user_id">client_user_id</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.custom_fields" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.custom_fields">custom_fields</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.delivery_method" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.delivery_method">delivery_method</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.email" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.email">email</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.email_notification" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.email_notification">email_notification</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.embedded_recipient_start_url" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.embedded_recipient_start_url">embedded_recipient_start_url</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.fax_number" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.fax_number">fax_number</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.host_email" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.host_email">host_email</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.host_name" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.host_name">host_name</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.id_check_configuration_name" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.id_check_configuration_name">id_check_configuration_name</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.id_check_information_input" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.id_check_information_input">id_check_information_input</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.identification_method" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.identification_method">identification_method</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.name" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.name">name</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.note" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.note">note</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.phone_authentication" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.phone_authentication">phone_authentication</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.recipient_id" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.recipient_id">recipient_id</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.recipient_signature_providers" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.recipient_signature_providers">recipient_signature_providers</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.role_name" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.role_name">role_name</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.signer_name" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.signer_name">signer_name</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.signing_group_id" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.signing_group_id">signing_group_id</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.sms_authentication" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.sms_authentication">sms_authentication</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.social_authentications" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.social_authentications">social_authentications</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.swagger_types" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.tabs" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.tabs">tabs</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.to_dict" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.to_str" href="#docusign_esign.models.bulk_sending_copy_recipient.BulkSendingCopyRecipient.to_str">to_str</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

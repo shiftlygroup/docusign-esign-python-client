@@ -1,0 +1,1723 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.display_appliance_envelope API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.display_appliance_envelope</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+from pprint import pformat
+from six import iteritems
+import re
+
+
+class DisplayApplianceEnvelope(object):
+    &#34;&#34;&#34;
+    NOTE: This class is auto generated by the swagger code generator program.
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+    def __init__(self, account_id=None, add_demo_stamp=None, allow_multiple_attachments=None, burn_default_tab_data=None, company_name=None, convert_pdf_fields=None, custom_field_version=None, envelope_id=None, envelope_type=None, include_sigs_before_complete=None, is_concat_mode=None, is_envelope_id_stamping_enabled=None, pdf_form_conversion_font_scale100=None, should_flatten=None, show_envelope_changes=None, signing_location=None, sign_online=None, status=None, user_id=None):
+        &#34;&#34;&#34;
+        DisplayApplianceEnvelope - a model defined in Swagger
+
+        :param dict swaggerTypes: The key is attribute name
+                                  and the value is attribute type.
+        :param dict attributeMap: The key is attribute name
+                                  and the value is json key in definition.
+        &#34;&#34;&#34;
+        self.swagger_types = {
+            &#39;account_id&#39;: &#39;str&#39;,
+            &#39;add_demo_stamp&#39;: &#39;bool&#39;,
+            &#39;allow_multiple_attachments&#39;: &#39;bool&#39;,
+            &#39;burn_default_tab_data&#39;: &#39;bool&#39;,
+            &#39;company_name&#39;: &#39;str&#39;,
+            &#39;convert_pdf_fields&#39;: &#39;bool&#39;,
+            &#39;custom_field_version&#39;: &#39;str&#39;,
+            &#39;envelope_id&#39;: &#39;str&#39;,
+            &#39;envelope_type&#39;: &#39;str&#39;,
+            &#39;include_sigs_before_complete&#39;: &#39;bool&#39;,
+            &#39;is_concat_mode&#39;: &#39;bool&#39;,
+            &#39;is_envelope_id_stamping_enabled&#39;: &#39;bool&#39;,
+            &#39;pdf_form_conversion_font_scale100&#39;: &#39;bool&#39;,
+            &#39;should_flatten&#39;: &#39;bool&#39;,
+            &#39;show_envelope_changes&#39;: &#39;bool&#39;,
+            &#39;signing_location&#39;: &#39;str&#39;,
+            &#39;sign_online&#39;: &#39;bool&#39;,
+            &#39;status&#39;: &#39;str&#39;,
+            &#39;user_id&#39;: &#39;str&#39;
+        }
+
+        self.attribute_map = {
+            &#39;account_id&#39;: &#39;accountId&#39;,
+            &#39;add_demo_stamp&#39;: &#39;addDemoStamp&#39;,
+            &#39;allow_multiple_attachments&#39;: &#39;allowMultipleAttachments&#39;,
+            &#39;burn_default_tab_data&#39;: &#39;burnDefaultTabData&#39;,
+            &#39;company_name&#39;: &#39;companyName&#39;,
+            &#39;convert_pdf_fields&#39;: &#39;convertPdfFields&#39;,
+            &#39;custom_field_version&#39;: &#39;customFieldVersion&#39;,
+            &#39;envelope_id&#39;: &#39;envelopeId&#39;,
+            &#39;envelope_type&#39;: &#39;envelopeType&#39;,
+            &#39;include_sigs_before_complete&#39;: &#39;includeSigsBeforeComplete&#39;,
+            &#39;is_concat_mode&#39;: &#39;isConcatMode&#39;,
+            &#39;is_envelope_id_stamping_enabled&#39;: &#39;isEnvelopeIDStampingEnabled&#39;,
+            &#39;pdf_form_conversion_font_scale100&#39;: &#39;pdfFormConversionFontScale100&#39;,
+            &#39;should_flatten&#39;: &#39;shouldFlatten&#39;,
+            &#39;show_envelope_changes&#39;: &#39;showEnvelopeChanges&#39;,
+            &#39;signing_location&#39;: &#39;signingLocation&#39;,
+            &#39;sign_online&#39;: &#39;signOnline&#39;,
+            &#39;status&#39;: &#39;status&#39;,
+            &#39;user_id&#39;: &#39;userId&#39;
+        }
+
+        self._account_id = account_id
+        self._add_demo_stamp = add_demo_stamp
+        self._allow_multiple_attachments = allow_multiple_attachments
+        self._burn_default_tab_data = burn_default_tab_data
+        self._company_name = company_name
+        self._convert_pdf_fields = convert_pdf_fields
+        self._custom_field_version = custom_field_version
+        self._envelope_id = envelope_id
+        self._envelope_type = envelope_type
+        self._include_sigs_before_complete = include_sigs_before_complete
+        self._is_concat_mode = is_concat_mode
+        self._is_envelope_id_stamping_enabled = is_envelope_id_stamping_enabled
+        self._pdf_form_conversion_font_scale100 = pdf_form_conversion_font_scale100
+        self._should_flatten = should_flatten
+        self._show_envelope_changes = show_envelope_changes
+        self._signing_location = signing_location
+        self._sign_online = sign_online
+        self._status = status
+        self._user_id = user_id
+
+    @property
+    def account_id(self):
+        &#34;&#34;&#34;
+        Gets the account_id of this DisplayApplianceEnvelope.
+        The account ID associated with the envelope.
+
+        :return: The account_id of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._account_id
+
+    @account_id.setter
+    def account_id(self, account_id):
+        &#34;&#34;&#34;
+        Sets the account_id of this DisplayApplianceEnvelope.
+        The account ID associated with the envelope.
+
+        :param account_id: The account_id of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._account_id = account_id
+
+    @property
+    def add_demo_stamp(self):
+        &#34;&#34;&#34;
+        Gets the add_demo_stamp of this DisplayApplianceEnvelope.
+        
+
+        :return: The add_demo_stamp of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._add_demo_stamp
+
+    @add_demo_stamp.setter
+    def add_demo_stamp(self, add_demo_stamp):
+        &#34;&#34;&#34;
+        Sets the add_demo_stamp of this DisplayApplianceEnvelope.
+        
+
+        :param add_demo_stamp: The add_demo_stamp of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._add_demo_stamp = add_demo_stamp
+
+    @property
+    def allow_multiple_attachments(self):
+        &#34;&#34;&#34;
+        Gets the allow_multiple_attachments of this DisplayApplianceEnvelope.
+        
+
+        :return: The allow_multiple_attachments of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._allow_multiple_attachments
+
+    @allow_multiple_attachments.setter
+    def allow_multiple_attachments(self, allow_multiple_attachments):
+        &#34;&#34;&#34;
+        Sets the allow_multiple_attachments of this DisplayApplianceEnvelope.
+        
+
+        :param allow_multiple_attachments: The allow_multiple_attachments of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._allow_multiple_attachments = allow_multiple_attachments
+
+    @property
+    def burn_default_tab_data(self):
+        &#34;&#34;&#34;
+        Gets the burn_default_tab_data of this DisplayApplianceEnvelope.
+        
+
+        :return: The burn_default_tab_data of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._burn_default_tab_data
+
+    @burn_default_tab_data.setter
+    def burn_default_tab_data(self, burn_default_tab_data):
+        &#34;&#34;&#34;
+        Sets the burn_default_tab_data of this DisplayApplianceEnvelope.
+        
+
+        :param burn_default_tab_data: The burn_default_tab_data of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._burn_default_tab_data = burn_default_tab_data
+
+    @property
+    def company_name(self):
+        &#34;&#34;&#34;
+        Gets the company_name of this DisplayApplianceEnvelope.
+        
+
+        :return: The company_name of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._company_name
+
+    @company_name.setter
+    def company_name(self, company_name):
+        &#34;&#34;&#34;
+        Sets the company_name of this DisplayApplianceEnvelope.
+        
+
+        :param company_name: The company_name of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._company_name = company_name
+
+    @property
+    def convert_pdf_fields(self):
+        &#34;&#34;&#34;
+        Gets the convert_pdf_fields of this DisplayApplianceEnvelope.
+        
+
+        :return: The convert_pdf_fields of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._convert_pdf_fields
+
+    @convert_pdf_fields.setter
+    def convert_pdf_fields(self, convert_pdf_fields):
+        &#34;&#34;&#34;
+        Sets the convert_pdf_fields of this DisplayApplianceEnvelope.
+        
+
+        :param convert_pdf_fields: The convert_pdf_fields of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._convert_pdf_fields = convert_pdf_fields
+
+    @property
+    def custom_field_version(self):
+        &#34;&#34;&#34;
+        Gets the custom_field_version of this DisplayApplianceEnvelope.
+        
+
+        :return: The custom_field_version of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_field_version
+
+    @custom_field_version.setter
+    def custom_field_version(self, custom_field_version):
+        &#34;&#34;&#34;
+        Sets the custom_field_version of this DisplayApplianceEnvelope.
+        
+
+        :param custom_field_version: The custom_field_version of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_field_version = custom_field_version
+
+    @property
+    def envelope_id(self):
+        &#34;&#34;&#34;
+        Gets the envelope_id of this DisplayApplianceEnvelope.
+        The envelope ID of the envelope status that failed to post.
+
+        :return: The envelope_id of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_id
+
+    @envelope_id.setter
+    def envelope_id(self, envelope_id):
+        &#34;&#34;&#34;
+        Sets the envelope_id of this DisplayApplianceEnvelope.
+        The envelope ID of the envelope status that failed to post.
+
+        :param envelope_id: The envelope_id of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_id = envelope_id
+
+    @property
+    def envelope_type(self):
+        &#34;&#34;&#34;
+        Gets the envelope_type of this DisplayApplianceEnvelope.
+        
+
+        :return: The envelope_type of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_type
+
+    @envelope_type.setter
+    def envelope_type(self, envelope_type):
+        &#34;&#34;&#34;
+        Sets the envelope_type of this DisplayApplianceEnvelope.
+        
+
+        :param envelope_type: The envelope_type of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_type = envelope_type
+
+    @property
+    def include_sigs_before_complete(self):
+        &#34;&#34;&#34;
+        Gets the include_sigs_before_complete of this DisplayApplianceEnvelope.
+        
+
+        :return: The include_sigs_before_complete of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._include_sigs_before_complete
+
+    @include_sigs_before_complete.setter
+    def include_sigs_before_complete(self, include_sigs_before_complete):
+        &#34;&#34;&#34;
+        Sets the include_sigs_before_complete of this DisplayApplianceEnvelope.
+        
+
+        :param include_sigs_before_complete: The include_sigs_before_complete of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._include_sigs_before_complete = include_sigs_before_complete
+
+    @property
+    def is_concat_mode(self):
+        &#34;&#34;&#34;
+        Gets the is_concat_mode of this DisplayApplianceEnvelope.
+        
+
+        :return: The is_concat_mode of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._is_concat_mode
+
+    @is_concat_mode.setter
+    def is_concat_mode(self, is_concat_mode):
+        &#34;&#34;&#34;
+        Sets the is_concat_mode of this DisplayApplianceEnvelope.
+        
+
+        :param is_concat_mode: The is_concat_mode of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._is_concat_mode = is_concat_mode
+
+    @property
+    def is_envelope_id_stamping_enabled(self):
+        &#34;&#34;&#34;
+        Gets the is_envelope_id_stamping_enabled of this DisplayApplianceEnvelope.
+        
+
+        :return: The is_envelope_id_stamping_enabled of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._is_envelope_id_stamping_enabled
+
+    @is_envelope_id_stamping_enabled.setter
+    def is_envelope_id_stamping_enabled(self, is_envelope_id_stamping_enabled):
+        &#34;&#34;&#34;
+        Sets the is_envelope_id_stamping_enabled of this DisplayApplianceEnvelope.
+        
+
+        :param is_envelope_id_stamping_enabled: The is_envelope_id_stamping_enabled of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._is_envelope_id_stamping_enabled = is_envelope_id_stamping_enabled
+
+    @property
+    def pdf_form_conversion_font_scale100(self):
+        &#34;&#34;&#34;
+        Gets the pdf_form_conversion_font_scale100 of this DisplayApplianceEnvelope.
+        
+
+        :return: The pdf_form_conversion_font_scale100 of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._pdf_form_conversion_font_scale100
+
+    @pdf_form_conversion_font_scale100.setter
+    def pdf_form_conversion_font_scale100(self, pdf_form_conversion_font_scale100):
+        &#34;&#34;&#34;
+        Sets the pdf_form_conversion_font_scale100 of this DisplayApplianceEnvelope.
+        
+
+        :param pdf_form_conversion_font_scale100: The pdf_form_conversion_font_scale100 of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._pdf_form_conversion_font_scale100 = pdf_form_conversion_font_scale100
+
+    @property
+    def should_flatten(self):
+        &#34;&#34;&#34;
+        Gets the should_flatten of this DisplayApplianceEnvelope.
+        
+
+        :return: The should_flatten of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._should_flatten
+
+    @should_flatten.setter
+    def should_flatten(self, should_flatten):
+        &#34;&#34;&#34;
+        Sets the should_flatten of this DisplayApplianceEnvelope.
+        
+
+        :param should_flatten: The should_flatten of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._should_flatten = should_flatten
+
+    @property
+    def show_envelope_changes(self):
+        &#34;&#34;&#34;
+        Gets the show_envelope_changes of this DisplayApplianceEnvelope.
+        
+
+        :return: The show_envelope_changes of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._show_envelope_changes
+
+    @show_envelope_changes.setter
+    def show_envelope_changes(self, show_envelope_changes):
+        &#34;&#34;&#34;
+        Sets the show_envelope_changes of this DisplayApplianceEnvelope.
+        
+
+        :param show_envelope_changes: The show_envelope_changes of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._show_envelope_changes = show_envelope_changes
+
+    @property
+    def signing_location(self):
+        &#34;&#34;&#34;
+        Gets the signing_location of this DisplayApplianceEnvelope.
+        Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
+
+        :return: The signing_location of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signing_location
+
+    @signing_location.setter
+    def signing_location(self, signing_location):
+        &#34;&#34;&#34;
+        Sets the signing_location of this DisplayApplianceEnvelope.
+        Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
+
+        :param signing_location: The signing_location of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signing_location = signing_location
+
+    @property
+    def sign_online(self):
+        &#34;&#34;&#34;
+        Gets the sign_online of this DisplayApplianceEnvelope.
+        
+
+        :return: The sign_online of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._sign_online
+
+    @sign_online.setter
+    def sign_online(self, sign_online):
+        &#34;&#34;&#34;
+        Sets the sign_online of this DisplayApplianceEnvelope.
+        
+
+        :param sign_online: The sign_online of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._sign_online = sign_online
+
+    @property
+    def status(self):
+        &#34;&#34;&#34;
+        Gets the status of this DisplayApplianceEnvelope.
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+        :return: The status of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        &#34;&#34;&#34;
+        Sets the status of this DisplayApplianceEnvelope.
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+        :param status: The status of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._status = status
+
+    @property
+    def user_id(self):
+        &#34;&#34;&#34;
+        Gets the user_id of this DisplayApplianceEnvelope.
+        
+
+        :return: The user_id of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        &#34;&#34;&#34;
+        Sets the user_id of this DisplayApplianceEnvelope.
+        
+
+        :param user_id: The user_id of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_id = user_id
+
+    def to_dict(self):
+        &#34;&#34;&#34;
+        Returns the model properties as a dict
+        &#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;
+        Returns the string representation of the model
+        &#34;&#34;&#34;
+        return pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;
+        For `print` and `pprint`
+        &#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are equal
+        &#34;&#34;&#34;
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are not equal
+        &#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope"><code class="flex name class">
+<span>class <span class="ident">DisplayApplianceEnvelope</span></span>
+<span>(</span><span>account_id=None, add_demo_stamp=None, allow_multiple_attachments=None, burn_default_tab_data=None, company_name=None, convert_pdf_fields=None, custom_field_version=None, envelope_id=None, envelope_type=None, include_sigs_before_complete=None, is_concat_mode=None, is_envelope_id_stamping_enabled=None, pdf_form_conversion_font_scale100=None, should_flatten=None, show_envelope_changes=None, signing_location=None, sign_online=None, status=None, user_id=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.
+Do not edit the class manually.</p>
+<p>DisplayApplianceEnvelope - a model defined in Swagger</p>
+<p>:param dict swaggerTypes: The key is attribute name
+and the value is attribute type.
+:param dict attributeMap: The key is attribute name
+and the value is json key in definition.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DisplayApplianceEnvelope(object):
+    &#34;&#34;&#34;
+    NOTE: This class is auto generated by the swagger code generator program.
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+    def __init__(self, account_id=None, add_demo_stamp=None, allow_multiple_attachments=None, burn_default_tab_data=None, company_name=None, convert_pdf_fields=None, custom_field_version=None, envelope_id=None, envelope_type=None, include_sigs_before_complete=None, is_concat_mode=None, is_envelope_id_stamping_enabled=None, pdf_form_conversion_font_scale100=None, should_flatten=None, show_envelope_changes=None, signing_location=None, sign_online=None, status=None, user_id=None):
+        &#34;&#34;&#34;
+        DisplayApplianceEnvelope - a model defined in Swagger
+
+        :param dict swaggerTypes: The key is attribute name
+                                  and the value is attribute type.
+        :param dict attributeMap: The key is attribute name
+                                  and the value is json key in definition.
+        &#34;&#34;&#34;
+        self.swagger_types = {
+            &#39;account_id&#39;: &#39;str&#39;,
+            &#39;add_demo_stamp&#39;: &#39;bool&#39;,
+            &#39;allow_multiple_attachments&#39;: &#39;bool&#39;,
+            &#39;burn_default_tab_data&#39;: &#39;bool&#39;,
+            &#39;company_name&#39;: &#39;str&#39;,
+            &#39;convert_pdf_fields&#39;: &#39;bool&#39;,
+            &#39;custom_field_version&#39;: &#39;str&#39;,
+            &#39;envelope_id&#39;: &#39;str&#39;,
+            &#39;envelope_type&#39;: &#39;str&#39;,
+            &#39;include_sigs_before_complete&#39;: &#39;bool&#39;,
+            &#39;is_concat_mode&#39;: &#39;bool&#39;,
+            &#39;is_envelope_id_stamping_enabled&#39;: &#39;bool&#39;,
+            &#39;pdf_form_conversion_font_scale100&#39;: &#39;bool&#39;,
+            &#39;should_flatten&#39;: &#39;bool&#39;,
+            &#39;show_envelope_changes&#39;: &#39;bool&#39;,
+            &#39;signing_location&#39;: &#39;str&#39;,
+            &#39;sign_online&#39;: &#39;bool&#39;,
+            &#39;status&#39;: &#39;str&#39;,
+            &#39;user_id&#39;: &#39;str&#39;
+        }
+
+        self.attribute_map = {
+            &#39;account_id&#39;: &#39;accountId&#39;,
+            &#39;add_demo_stamp&#39;: &#39;addDemoStamp&#39;,
+            &#39;allow_multiple_attachments&#39;: &#39;allowMultipleAttachments&#39;,
+            &#39;burn_default_tab_data&#39;: &#39;burnDefaultTabData&#39;,
+            &#39;company_name&#39;: &#39;companyName&#39;,
+            &#39;convert_pdf_fields&#39;: &#39;convertPdfFields&#39;,
+            &#39;custom_field_version&#39;: &#39;customFieldVersion&#39;,
+            &#39;envelope_id&#39;: &#39;envelopeId&#39;,
+            &#39;envelope_type&#39;: &#39;envelopeType&#39;,
+            &#39;include_sigs_before_complete&#39;: &#39;includeSigsBeforeComplete&#39;,
+            &#39;is_concat_mode&#39;: &#39;isConcatMode&#39;,
+            &#39;is_envelope_id_stamping_enabled&#39;: &#39;isEnvelopeIDStampingEnabled&#39;,
+            &#39;pdf_form_conversion_font_scale100&#39;: &#39;pdfFormConversionFontScale100&#39;,
+            &#39;should_flatten&#39;: &#39;shouldFlatten&#39;,
+            &#39;show_envelope_changes&#39;: &#39;showEnvelopeChanges&#39;,
+            &#39;signing_location&#39;: &#39;signingLocation&#39;,
+            &#39;sign_online&#39;: &#39;signOnline&#39;,
+            &#39;status&#39;: &#39;status&#39;,
+            &#39;user_id&#39;: &#39;userId&#39;
+        }
+
+        self._account_id = account_id
+        self._add_demo_stamp = add_demo_stamp
+        self._allow_multiple_attachments = allow_multiple_attachments
+        self._burn_default_tab_data = burn_default_tab_data
+        self._company_name = company_name
+        self._convert_pdf_fields = convert_pdf_fields
+        self._custom_field_version = custom_field_version
+        self._envelope_id = envelope_id
+        self._envelope_type = envelope_type
+        self._include_sigs_before_complete = include_sigs_before_complete
+        self._is_concat_mode = is_concat_mode
+        self._is_envelope_id_stamping_enabled = is_envelope_id_stamping_enabled
+        self._pdf_form_conversion_font_scale100 = pdf_form_conversion_font_scale100
+        self._should_flatten = should_flatten
+        self._show_envelope_changes = show_envelope_changes
+        self._signing_location = signing_location
+        self._sign_online = sign_online
+        self._status = status
+        self._user_id = user_id
+
+    @property
+    def account_id(self):
+        &#34;&#34;&#34;
+        Gets the account_id of this DisplayApplianceEnvelope.
+        The account ID associated with the envelope.
+
+        :return: The account_id of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._account_id
+
+    @account_id.setter
+    def account_id(self, account_id):
+        &#34;&#34;&#34;
+        Sets the account_id of this DisplayApplianceEnvelope.
+        The account ID associated with the envelope.
+
+        :param account_id: The account_id of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._account_id = account_id
+
+    @property
+    def add_demo_stamp(self):
+        &#34;&#34;&#34;
+        Gets the add_demo_stamp of this DisplayApplianceEnvelope.
+        
+
+        :return: The add_demo_stamp of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._add_demo_stamp
+
+    @add_demo_stamp.setter
+    def add_demo_stamp(self, add_demo_stamp):
+        &#34;&#34;&#34;
+        Sets the add_demo_stamp of this DisplayApplianceEnvelope.
+        
+
+        :param add_demo_stamp: The add_demo_stamp of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._add_demo_stamp = add_demo_stamp
+
+    @property
+    def allow_multiple_attachments(self):
+        &#34;&#34;&#34;
+        Gets the allow_multiple_attachments of this DisplayApplianceEnvelope.
+        
+
+        :return: The allow_multiple_attachments of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._allow_multiple_attachments
+
+    @allow_multiple_attachments.setter
+    def allow_multiple_attachments(self, allow_multiple_attachments):
+        &#34;&#34;&#34;
+        Sets the allow_multiple_attachments of this DisplayApplianceEnvelope.
+        
+
+        :param allow_multiple_attachments: The allow_multiple_attachments of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._allow_multiple_attachments = allow_multiple_attachments
+
+    @property
+    def burn_default_tab_data(self):
+        &#34;&#34;&#34;
+        Gets the burn_default_tab_data of this DisplayApplianceEnvelope.
+        
+
+        :return: The burn_default_tab_data of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._burn_default_tab_data
+
+    @burn_default_tab_data.setter
+    def burn_default_tab_data(self, burn_default_tab_data):
+        &#34;&#34;&#34;
+        Sets the burn_default_tab_data of this DisplayApplianceEnvelope.
+        
+
+        :param burn_default_tab_data: The burn_default_tab_data of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._burn_default_tab_data = burn_default_tab_data
+
+    @property
+    def company_name(self):
+        &#34;&#34;&#34;
+        Gets the company_name of this DisplayApplianceEnvelope.
+        
+
+        :return: The company_name of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._company_name
+
+    @company_name.setter
+    def company_name(self, company_name):
+        &#34;&#34;&#34;
+        Sets the company_name of this DisplayApplianceEnvelope.
+        
+
+        :param company_name: The company_name of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._company_name = company_name
+
+    @property
+    def convert_pdf_fields(self):
+        &#34;&#34;&#34;
+        Gets the convert_pdf_fields of this DisplayApplianceEnvelope.
+        
+
+        :return: The convert_pdf_fields of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._convert_pdf_fields
+
+    @convert_pdf_fields.setter
+    def convert_pdf_fields(self, convert_pdf_fields):
+        &#34;&#34;&#34;
+        Sets the convert_pdf_fields of this DisplayApplianceEnvelope.
+        
+
+        :param convert_pdf_fields: The convert_pdf_fields of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._convert_pdf_fields = convert_pdf_fields
+
+    @property
+    def custom_field_version(self):
+        &#34;&#34;&#34;
+        Gets the custom_field_version of this DisplayApplianceEnvelope.
+        
+
+        :return: The custom_field_version of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_field_version
+
+    @custom_field_version.setter
+    def custom_field_version(self, custom_field_version):
+        &#34;&#34;&#34;
+        Sets the custom_field_version of this DisplayApplianceEnvelope.
+        
+
+        :param custom_field_version: The custom_field_version of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_field_version = custom_field_version
+
+    @property
+    def envelope_id(self):
+        &#34;&#34;&#34;
+        Gets the envelope_id of this DisplayApplianceEnvelope.
+        The envelope ID of the envelope status that failed to post.
+
+        :return: The envelope_id of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_id
+
+    @envelope_id.setter
+    def envelope_id(self, envelope_id):
+        &#34;&#34;&#34;
+        Sets the envelope_id of this DisplayApplianceEnvelope.
+        The envelope ID of the envelope status that failed to post.
+
+        :param envelope_id: The envelope_id of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_id = envelope_id
+
+    @property
+    def envelope_type(self):
+        &#34;&#34;&#34;
+        Gets the envelope_type of this DisplayApplianceEnvelope.
+        
+
+        :return: The envelope_type of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_type
+
+    @envelope_type.setter
+    def envelope_type(self, envelope_type):
+        &#34;&#34;&#34;
+        Sets the envelope_type of this DisplayApplianceEnvelope.
+        
+
+        :param envelope_type: The envelope_type of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_type = envelope_type
+
+    @property
+    def include_sigs_before_complete(self):
+        &#34;&#34;&#34;
+        Gets the include_sigs_before_complete of this DisplayApplianceEnvelope.
+        
+
+        :return: The include_sigs_before_complete of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._include_sigs_before_complete
+
+    @include_sigs_before_complete.setter
+    def include_sigs_before_complete(self, include_sigs_before_complete):
+        &#34;&#34;&#34;
+        Sets the include_sigs_before_complete of this DisplayApplianceEnvelope.
+        
+
+        :param include_sigs_before_complete: The include_sigs_before_complete of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._include_sigs_before_complete = include_sigs_before_complete
+
+    @property
+    def is_concat_mode(self):
+        &#34;&#34;&#34;
+        Gets the is_concat_mode of this DisplayApplianceEnvelope.
+        
+
+        :return: The is_concat_mode of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._is_concat_mode
+
+    @is_concat_mode.setter
+    def is_concat_mode(self, is_concat_mode):
+        &#34;&#34;&#34;
+        Sets the is_concat_mode of this DisplayApplianceEnvelope.
+        
+
+        :param is_concat_mode: The is_concat_mode of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._is_concat_mode = is_concat_mode
+
+    @property
+    def is_envelope_id_stamping_enabled(self):
+        &#34;&#34;&#34;
+        Gets the is_envelope_id_stamping_enabled of this DisplayApplianceEnvelope.
+        
+
+        :return: The is_envelope_id_stamping_enabled of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._is_envelope_id_stamping_enabled
+
+    @is_envelope_id_stamping_enabled.setter
+    def is_envelope_id_stamping_enabled(self, is_envelope_id_stamping_enabled):
+        &#34;&#34;&#34;
+        Sets the is_envelope_id_stamping_enabled of this DisplayApplianceEnvelope.
+        
+
+        :param is_envelope_id_stamping_enabled: The is_envelope_id_stamping_enabled of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._is_envelope_id_stamping_enabled = is_envelope_id_stamping_enabled
+
+    @property
+    def pdf_form_conversion_font_scale100(self):
+        &#34;&#34;&#34;
+        Gets the pdf_form_conversion_font_scale100 of this DisplayApplianceEnvelope.
+        
+
+        :return: The pdf_form_conversion_font_scale100 of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._pdf_form_conversion_font_scale100
+
+    @pdf_form_conversion_font_scale100.setter
+    def pdf_form_conversion_font_scale100(self, pdf_form_conversion_font_scale100):
+        &#34;&#34;&#34;
+        Sets the pdf_form_conversion_font_scale100 of this DisplayApplianceEnvelope.
+        
+
+        :param pdf_form_conversion_font_scale100: The pdf_form_conversion_font_scale100 of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._pdf_form_conversion_font_scale100 = pdf_form_conversion_font_scale100
+
+    @property
+    def should_flatten(self):
+        &#34;&#34;&#34;
+        Gets the should_flatten of this DisplayApplianceEnvelope.
+        
+
+        :return: The should_flatten of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._should_flatten
+
+    @should_flatten.setter
+    def should_flatten(self, should_flatten):
+        &#34;&#34;&#34;
+        Sets the should_flatten of this DisplayApplianceEnvelope.
+        
+
+        :param should_flatten: The should_flatten of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._should_flatten = should_flatten
+
+    @property
+    def show_envelope_changes(self):
+        &#34;&#34;&#34;
+        Gets the show_envelope_changes of this DisplayApplianceEnvelope.
+        
+
+        :return: The show_envelope_changes of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._show_envelope_changes
+
+    @show_envelope_changes.setter
+    def show_envelope_changes(self, show_envelope_changes):
+        &#34;&#34;&#34;
+        Sets the show_envelope_changes of this DisplayApplianceEnvelope.
+        
+
+        :param show_envelope_changes: The show_envelope_changes of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._show_envelope_changes = show_envelope_changes
+
+    @property
+    def signing_location(self):
+        &#34;&#34;&#34;
+        Gets the signing_location of this DisplayApplianceEnvelope.
+        Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
+
+        :return: The signing_location of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signing_location
+
+    @signing_location.setter
+    def signing_location(self, signing_location):
+        &#34;&#34;&#34;
+        Sets the signing_location of this DisplayApplianceEnvelope.
+        Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
+
+        :param signing_location: The signing_location of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signing_location = signing_location
+
+    @property
+    def sign_online(self):
+        &#34;&#34;&#34;
+        Gets the sign_online of this DisplayApplianceEnvelope.
+        
+
+        :return: The sign_online of this DisplayApplianceEnvelope.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._sign_online
+
+    @sign_online.setter
+    def sign_online(self, sign_online):
+        &#34;&#34;&#34;
+        Sets the sign_online of this DisplayApplianceEnvelope.
+        
+
+        :param sign_online: The sign_online of this DisplayApplianceEnvelope.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._sign_online = sign_online
+
+    @property
+    def status(self):
+        &#34;&#34;&#34;
+        Gets the status of this DisplayApplianceEnvelope.
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+        :return: The status of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        &#34;&#34;&#34;
+        Sets the status of this DisplayApplianceEnvelope.
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+        :param status: The status of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._status = status
+
+    @property
+    def user_id(self):
+        &#34;&#34;&#34;
+        Gets the user_id of this DisplayApplianceEnvelope.
+        
+
+        :return: The user_id of this DisplayApplianceEnvelope.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        &#34;&#34;&#34;
+        Sets the user_id of this DisplayApplianceEnvelope.
+        
+
+        :param user_id: The user_id of this DisplayApplianceEnvelope.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_id = user_id
+
+    def to_dict(self):
+        &#34;&#34;&#34;
+        Returns the model properties as a dict
+        &#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;
+        Returns the string representation of the model
+        &#34;&#34;&#34;
+        return pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;
+        For `print` and `pprint`
+        &#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are equal
+        &#34;&#34;&#34;
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are not equal
+        &#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.account_id"><code class="name">var <span class="ident">account_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the account_id of this DisplayApplianceEnvelope.
+The account ID associated with the envelope.</p>
+<p>:return: The account_id of this DisplayApplianceEnvelope.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def account_id(self):
+    &#34;&#34;&#34;
+    Gets the account_id of this DisplayApplianceEnvelope.
+    The account ID associated with the envelope.
+
+    :return: The account_id of this DisplayApplianceEnvelope.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._account_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.add_demo_stamp"><code class="name">var <span class="ident">add_demo_stamp</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the add_demo_stamp of this DisplayApplianceEnvelope.</p>
+<p>:return: The add_demo_stamp of this DisplayApplianceEnvelope.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def add_demo_stamp(self):
+    &#34;&#34;&#34;
+    Gets the add_demo_stamp of this DisplayApplianceEnvelope.
+    
+
+    :return: The add_demo_stamp of this DisplayApplianceEnvelope.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._add_demo_stamp</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.allow_multiple_attachments"><code class="name">var <span class="ident">allow_multiple_attachments</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the allow_multiple_attachments of this DisplayApplianceEnvelope.</p>
+<p>:return: The allow_multiple_attachments of this DisplayApplianceEnvelope.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def allow_multiple_attachments(self):
+    &#34;&#34;&#34;
+    Gets the allow_multiple_attachments of this DisplayApplianceEnvelope.
+    
+
+    :return: The allow_multiple_attachments of this DisplayApplianceEnvelope.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._allow_multiple_attachments</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.burn_default_tab_data"><code class="name">var <span class="ident">burn_default_tab_data</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the burn_default_tab_data of this DisplayApplianceEnvelope.</p>
+<p>:return: The burn_default_tab_data of this DisplayApplianceEnvelope.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def burn_default_tab_data(self):
+    &#34;&#34;&#34;
+    Gets the burn_default_tab_data of this DisplayApplianceEnvelope.
+    
+
+    :return: The burn_default_tab_data of this DisplayApplianceEnvelope.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._burn_default_tab_data</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.company_name"><code class="name">var <span class="ident">company_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the company_name of this DisplayApplianceEnvelope.</p>
+<p>:return: The company_name of this DisplayApplianceEnvelope.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def company_name(self):
+    &#34;&#34;&#34;
+    Gets the company_name of this DisplayApplianceEnvelope.
+    
+
+    :return: The company_name of this DisplayApplianceEnvelope.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._company_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.convert_pdf_fields"><code class="name">var <span class="ident">convert_pdf_fields</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the convert_pdf_fields of this DisplayApplianceEnvelope.</p>
+<p>:return: The convert_pdf_fields of this DisplayApplianceEnvelope.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def convert_pdf_fields(self):
+    &#34;&#34;&#34;
+    Gets the convert_pdf_fields of this DisplayApplianceEnvelope.
+    
+
+    :return: The convert_pdf_fields of this DisplayApplianceEnvelope.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._convert_pdf_fields</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.custom_field_version"><code class="name">var <span class="ident">custom_field_version</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the custom_field_version of this DisplayApplianceEnvelope.</p>
+<p>:return: The custom_field_version of this DisplayApplianceEnvelope.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def custom_field_version(self):
+    &#34;&#34;&#34;
+    Gets the custom_field_version of this DisplayApplianceEnvelope.
+    
+
+    :return: The custom_field_version of this DisplayApplianceEnvelope.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._custom_field_version</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.envelope_id"><code class="name">var <span class="ident">envelope_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_id of this DisplayApplianceEnvelope.
+The envelope ID of the envelope status that failed to post.</p>
+<p>:return: The envelope_id of this DisplayApplianceEnvelope.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_id(self):
+    &#34;&#34;&#34;
+    Gets the envelope_id of this DisplayApplianceEnvelope.
+    The envelope ID of the envelope status that failed to post.
+
+    :return: The envelope_id of this DisplayApplianceEnvelope.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._envelope_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.envelope_type"><code class="name">var <span class="ident">envelope_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_type of this DisplayApplianceEnvelope.</p>
+<p>:return: The envelope_type of this DisplayApplianceEnvelope.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_type(self):
+    &#34;&#34;&#34;
+    Gets the envelope_type of this DisplayApplianceEnvelope.
+    
+
+    :return: The envelope_type of this DisplayApplianceEnvelope.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._envelope_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.include_sigs_before_complete"><code class="name">var <span class="ident">include_sigs_before_complete</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the include_sigs_before_complete of this DisplayApplianceEnvelope.</p>
+<p>:return: The include_sigs_before_complete of this DisplayApplianceEnvelope.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def include_sigs_before_complete(self):
+    &#34;&#34;&#34;
+    Gets the include_sigs_before_complete of this DisplayApplianceEnvelope.
+    
+
+    :return: The include_sigs_before_complete of this DisplayApplianceEnvelope.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._include_sigs_before_complete</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.is_concat_mode"><code class="name">var <span class="ident">is_concat_mode</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the is_concat_mode of this DisplayApplianceEnvelope.</p>
+<p>:return: The is_concat_mode of this DisplayApplianceEnvelope.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is_concat_mode(self):
+    &#34;&#34;&#34;
+    Gets the is_concat_mode of this DisplayApplianceEnvelope.
+    
+
+    :return: The is_concat_mode of this DisplayApplianceEnvelope.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._is_concat_mode</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.is_envelope_id_stamping_enabled"><code class="name">var <span class="ident">is_envelope_id_stamping_enabled</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the is_envelope_id_stamping_enabled of this DisplayApplianceEnvelope.</p>
+<p>:return: The is_envelope_id_stamping_enabled of this DisplayApplianceEnvelope.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is_envelope_id_stamping_enabled(self):
+    &#34;&#34;&#34;
+    Gets the is_envelope_id_stamping_enabled of this DisplayApplianceEnvelope.
+    
+
+    :return: The is_envelope_id_stamping_enabled of this DisplayApplianceEnvelope.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._is_envelope_id_stamping_enabled</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.pdf_form_conversion_font_scale100"><code class="name">var <span class="ident">pdf_form_conversion_font_scale100</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the pdf_form_conversion_font_scale100 of this DisplayApplianceEnvelope.</p>
+<p>:return: The pdf_form_conversion_font_scale100 of this DisplayApplianceEnvelope.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def pdf_form_conversion_font_scale100(self):
+    &#34;&#34;&#34;
+    Gets the pdf_form_conversion_font_scale100 of this DisplayApplianceEnvelope.
+    
+
+    :return: The pdf_form_conversion_font_scale100 of this DisplayApplianceEnvelope.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._pdf_form_conversion_font_scale100</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.should_flatten"><code class="name">var <span class="ident">should_flatten</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the should_flatten of this DisplayApplianceEnvelope.</p>
+<p>:return: The should_flatten of this DisplayApplianceEnvelope.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def should_flatten(self):
+    &#34;&#34;&#34;
+    Gets the should_flatten of this DisplayApplianceEnvelope.
+    
+
+    :return: The should_flatten of this DisplayApplianceEnvelope.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._should_flatten</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.show_envelope_changes"><code class="name">var <span class="ident">show_envelope_changes</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the show_envelope_changes of this DisplayApplianceEnvelope.</p>
+<p>:return: The show_envelope_changes of this DisplayApplianceEnvelope.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def show_envelope_changes(self):
+    &#34;&#34;&#34;
+    Gets the show_envelope_changes of this DisplayApplianceEnvelope.
+    
+
+    :return: The show_envelope_changes of this DisplayApplianceEnvelope.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._show_envelope_changes</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.sign_online"><code class="name">var <span class="ident">sign_online</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sign_online of this DisplayApplianceEnvelope.</p>
+<p>:return: The sign_online of this DisplayApplianceEnvelope.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sign_online(self):
+    &#34;&#34;&#34;
+    Gets the sign_online of this DisplayApplianceEnvelope.
+    
+
+    :return: The sign_online of this DisplayApplianceEnvelope.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._sign_online</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.signing_location"><code class="name">var <span class="ident">signing_location</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signing_location of this DisplayApplianceEnvelope.
+Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.</p>
+<p>:return: The signing_location of this DisplayApplianceEnvelope.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signing_location(self):
+    &#34;&#34;&#34;
+    Gets the signing_location of this DisplayApplianceEnvelope.
+    Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
+
+    :return: The signing_location of this DisplayApplianceEnvelope.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signing_location</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.status"><code class="name">var <span class="ident">status</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the status of this DisplayApplianceEnvelope.
+Indicates the envelope status. Valid values are:
+* sent - The envelope is sent to the recipients.
+* created - The envelope is saved as a draft and can be modified and sent later.</p>
+<p>:return: The status of this DisplayApplianceEnvelope.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def status(self):
+    &#34;&#34;&#34;
+    Gets the status of this DisplayApplianceEnvelope.
+    Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+    :return: The status of this DisplayApplianceEnvelope.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._status</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.user_id"><code class="name">var <span class="ident">user_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_id of this DisplayApplianceEnvelope.</p>
+<p>:return: The user_id of this DisplayApplianceEnvelope.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_id(self):
+    &#34;&#34;&#34;
+    Gets the user_id of this DisplayApplianceEnvelope.
+    
+
+    :return: The user_id of this DisplayApplianceEnvelope.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._user_id</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;
+    Returns the model properties as a dict
+    &#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;
+    Returns the string representation of the model
+    &#34;&#34;&#34;
+    return pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope">DisplayApplianceEnvelope</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.account_id" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.account_id">account_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.add_demo_stamp" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.add_demo_stamp">add_demo_stamp</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.allow_multiple_attachments" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.allow_multiple_attachments">allow_multiple_attachments</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.burn_default_tab_data" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.burn_default_tab_data">burn_default_tab_data</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.company_name" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.company_name">company_name</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.convert_pdf_fields" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.convert_pdf_fields">convert_pdf_fields</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.custom_field_version" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.custom_field_version">custom_field_version</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.envelope_id" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.envelope_id">envelope_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.envelope_type" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.envelope_type">envelope_type</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.include_sigs_before_complete" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.include_sigs_before_complete">include_sigs_before_complete</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.is_concat_mode" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.is_concat_mode">is_concat_mode</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.is_envelope_id_stamping_enabled" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.is_envelope_id_stamping_enabled">is_envelope_id_stamping_enabled</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.pdf_form_conversion_font_scale100" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.pdf_form_conversion_font_scale100">pdf_form_conversion_font_scale100</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.should_flatten" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.should_flatten">should_flatten</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.show_envelope_changes" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.show_envelope_changes">show_envelope_changes</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.sign_online" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.sign_online">sign_online</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.signing_location" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.signing_location">signing_location</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.status" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.status">status</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.to_dict" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.to_str" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.user_id" href="#docusign_esign.models.display_appliance_envelope.DisplayApplianceEnvelope.user_id">user_id</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

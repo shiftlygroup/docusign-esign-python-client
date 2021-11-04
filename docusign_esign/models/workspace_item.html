@@ -1,0 +1,2241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.workspace_item API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.workspace_item</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class WorkspaceItem(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;caller_authorization&#39;: &#39;WorkspaceUserAuthorization&#39;,
+        &#39;content_type&#39;: &#39;str&#39;,
+        &#39;created&#39;: &#39;str&#39;,
+        &#39;created_by_id&#39;: &#39;str&#39;,
+        &#39;created_by_information&#39;: &#39;WorkspaceUser&#39;,
+        &#39;extension&#39;: &#39;str&#39;,
+        &#39;file_size&#39;: &#39;str&#39;,
+        &#39;file_uri&#39;: &#39;str&#39;,
+        &#39;id&#39;: &#39;str&#39;,
+        &#39;is_public&#39;: &#39;str&#39;,
+        &#39;last_modified&#39;: &#39;str&#39;,
+        &#39;last_modified_by_id&#39;: &#39;str&#39;,
+        &#39;last_modified_by_information&#39;: &#39;WorkspaceUser&#39;,
+        &#39;name&#39;: &#39;str&#39;,
+        &#39;page_count&#39;: &#39;str&#39;,
+        &#39;parent_folder_id&#39;: &#39;str&#39;,
+        &#39;parent_folder_uri&#39;: &#39;str&#39;,
+        &#39;sha256&#39;: &#39;str&#39;,
+        &#39;thumb_height&#39;: &#39;str&#39;,
+        &#39;thumbnail&#39;: &#39;Page&#39;,
+        &#39;thumb_width&#39;: &#39;str&#39;,
+        &#39;type&#39;: &#39;str&#39;,
+        &#39;uri&#39;: &#39;str&#39;,
+        &#39;user_authorization&#39;: &#39;WorkspaceUserAuthorization&#39;
+    }
+
+    attribute_map = {
+        &#39;caller_authorization&#39;: &#39;callerAuthorization&#39;,
+        &#39;content_type&#39;: &#39;contentType&#39;,
+        &#39;created&#39;: &#39;created&#39;,
+        &#39;created_by_id&#39;: &#39;createdById&#39;,
+        &#39;created_by_information&#39;: &#39;createdByInformation&#39;,
+        &#39;extension&#39;: &#39;extension&#39;,
+        &#39;file_size&#39;: &#39;fileSize&#39;,
+        &#39;file_uri&#39;: &#39;fileUri&#39;,
+        &#39;id&#39;: &#39;id&#39;,
+        &#39;is_public&#39;: &#39;isPublic&#39;,
+        &#39;last_modified&#39;: &#39;lastModified&#39;,
+        &#39;last_modified_by_id&#39;: &#39;lastModifiedById&#39;,
+        &#39;last_modified_by_information&#39;: &#39;lastModifiedByInformation&#39;,
+        &#39;name&#39;: &#39;name&#39;,
+        &#39;page_count&#39;: &#39;pageCount&#39;,
+        &#39;parent_folder_id&#39;: &#39;parentFolderId&#39;,
+        &#39;parent_folder_uri&#39;: &#39;parentFolderUri&#39;,
+        &#39;sha256&#39;: &#39;sha256&#39;,
+        &#39;thumb_height&#39;: &#39;thumbHeight&#39;,
+        &#39;thumbnail&#39;: &#39;thumbnail&#39;,
+        &#39;thumb_width&#39;: &#39;thumbWidth&#39;,
+        &#39;type&#39;: &#39;type&#39;,
+        &#39;uri&#39;: &#39;uri&#39;,
+        &#39;user_authorization&#39;: &#39;userAuthorization&#39;
+    }
+
+    def __init__(self, caller_authorization=None, content_type=None, created=None, created_by_id=None, created_by_information=None, extension=None, file_size=None, file_uri=None, id=None, is_public=None, last_modified=None, last_modified_by_id=None, last_modified_by_information=None, name=None, page_count=None, parent_folder_id=None, parent_folder_uri=None, sha256=None, thumb_height=None, thumbnail=None, thumb_width=None, type=None, uri=None, user_authorization=None):  # noqa: E501
+        &#34;&#34;&#34;WorkspaceItem - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._caller_authorization = None
+        self._content_type = None
+        self._created = None
+        self._created_by_id = None
+        self._created_by_information = None
+        self._extension = None
+        self._file_size = None
+        self._file_uri = None
+        self._id = None
+        self._is_public = None
+        self._last_modified = None
+        self._last_modified_by_id = None
+        self._last_modified_by_information = None
+        self._name = None
+        self._page_count = None
+        self._parent_folder_id = None
+        self._parent_folder_uri = None
+        self._sha256 = None
+        self._thumb_height = None
+        self._thumbnail = None
+        self._thumb_width = None
+        self._type = None
+        self._uri = None
+        self._user_authorization = None
+        self.discriminator = None
+
+        if caller_authorization is not None:
+            self.caller_authorization = caller_authorization
+        if content_type is not None:
+            self.content_type = content_type
+        if created is not None:
+            self.created = created
+        if created_by_id is not None:
+            self.created_by_id = created_by_id
+        if created_by_information is not None:
+            self.created_by_information = created_by_information
+        if extension is not None:
+            self.extension = extension
+        if file_size is not None:
+            self.file_size = file_size
+        if file_uri is not None:
+            self.file_uri = file_uri
+        if id is not None:
+            self.id = id
+        if is_public is not None:
+            self.is_public = is_public
+        if last_modified is not None:
+            self.last_modified = last_modified
+        if last_modified_by_id is not None:
+            self.last_modified_by_id = last_modified_by_id
+        if last_modified_by_information is not None:
+            self.last_modified_by_information = last_modified_by_information
+        if name is not None:
+            self.name = name
+        if page_count is not None:
+            self.page_count = page_count
+        if parent_folder_id is not None:
+            self.parent_folder_id = parent_folder_id
+        if parent_folder_uri is not None:
+            self.parent_folder_uri = parent_folder_uri
+        if sha256 is not None:
+            self.sha256 = sha256
+        if thumb_height is not None:
+            self.thumb_height = thumb_height
+        if thumbnail is not None:
+            self.thumbnail = thumbnail
+        if thumb_width is not None:
+            self.thumb_width = thumb_width
+        if type is not None:
+            self.type = type
+        if uri is not None:
+            self.uri = uri
+        if user_authorization is not None:
+            self.user_authorization = user_authorization
+
+    @property
+    def caller_authorization(self):
+        &#34;&#34;&#34;Gets the caller_authorization of this WorkspaceItem.  # noqa: E501
+
+
+        :return: The caller_authorization of this WorkspaceItem.  # noqa: E501
+        :rtype: WorkspaceUserAuthorization
+        &#34;&#34;&#34;
+        return self._caller_authorization
+
+    @caller_authorization.setter
+    def caller_authorization(self, caller_authorization):
+        &#34;&#34;&#34;Sets the caller_authorization of this WorkspaceItem.
+
+
+        :param caller_authorization: The caller_authorization of this WorkspaceItem.  # noqa: E501
+        :type: WorkspaceUserAuthorization
+        &#34;&#34;&#34;
+
+        self._caller_authorization = caller_authorization
+
+    @property
+    def content_type(self):
+        &#34;&#34;&#34;Gets the content_type of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The content_type of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._content_type
+
+    @content_type.setter
+    def content_type(self, content_type):
+        &#34;&#34;&#34;Sets the content_type of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param content_type: The content_type of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._content_type = content_type
+
+    @property
+    def created(self):
+        &#34;&#34;&#34;Gets the created of this WorkspaceItem.  # noqa: E501
+
+        The UTC DateTime when the workspace item was created.  # noqa: E501
+
+        :return: The created of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created
+
+    @created.setter
+    def created(self, created):
+        &#34;&#34;&#34;Sets the created of this WorkspaceItem.
+
+        The UTC DateTime when the workspace item was created.  # noqa: E501
+
+        :param created: The created of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created = created
+
+    @property
+    def created_by_id(self):
+        &#34;&#34;&#34;Gets the created_by_id of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The created_by_id of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_by_id
+
+    @created_by_id.setter
+    def created_by_id(self, created_by_id):
+        &#34;&#34;&#34;Sets the created_by_id of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param created_by_id: The created_by_id of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_by_id = created_by_id
+
+    @property
+    def created_by_information(self):
+        &#34;&#34;&#34;Gets the created_by_information of this WorkspaceItem.  # noqa: E501
+
+
+        :return: The created_by_information of this WorkspaceItem.  # noqa: E501
+        :rtype: WorkspaceUser
+        &#34;&#34;&#34;
+        return self._created_by_information
+
+    @created_by_information.setter
+    def created_by_information(self, created_by_information):
+        &#34;&#34;&#34;Sets the created_by_information of this WorkspaceItem.
+
+
+        :param created_by_information: The created_by_information of this WorkspaceItem.  # noqa: E501
+        :type: WorkspaceUser
+        &#34;&#34;&#34;
+
+        self._created_by_information = created_by_information
+
+    @property
+    def extension(self):
+        &#34;&#34;&#34;Gets the extension of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The extension of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._extension
+
+    @extension.setter
+    def extension(self, extension):
+        &#34;&#34;&#34;Sets the extension of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param extension: The extension of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._extension = extension
+
+    @property
+    def file_size(self):
+        &#34;&#34;&#34;Gets the file_size of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The file_size of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._file_size
+
+    @file_size.setter
+    def file_size(self, file_size):
+        &#34;&#34;&#34;Sets the file_size of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param file_size: The file_size of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._file_size = file_size
+
+    @property
+    def file_uri(self):
+        &#34;&#34;&#34;Gets the file_uri of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The file_uri of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._file_uri
+
+    @file_uri.setter
+    def file_uri(self, file_uri):
+        &#34;&#34;&#34;Sets the file_uri of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param file_uri: The file_uri of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._file_uri = file_uri
+
+    @property
+    def id(self):
+        &#34;&#34;&#34;Gets the id of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The id of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        &#34;&#34;&#34;Sets the id of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param id: The id of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._id = id
+
+    @property
+    def is_public(self):
+        &#34;&#34;&#34;Gets the is_public of this WorkspaceItem.  # noqa: E501
+
+         If true, this supersedes need for bit mask permission with workspaceUserAuthorization  # noqa: E501
+
+        :return: The is_public of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is_public
+
+    @is_public.setter
+    def is_public(self, is_public):
+        &#34;&#34;&#34;Sets the is_public of this WorkspaceItem.
+
+         If true, this supersedes need for bit mask permission with workspaceUserAuthorization  # noqa: E501
+
+        :param is_public: The is_public of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is_public = is_public
+
+    @property
+    def last_modified(self):
+        &#34;&#34;&#34;Gets the last_modified of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The last_modified of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified
+
+    @last_modified.setter
+    def last_modified(self, last_modified):
+        &#34;&#34;&#34;Sets the last_modified of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param last_modified: The last_modified of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified = last_modified
+
+    @property
+    def last_modified_by_id(self):
+        &#34;&#34;&#34;Gets the last_modified_by_id of this WorkspaceItem.  # noqa: E501
+
+        Utc date and time the comment was last updated (can only be done by creator)  # noqa: E501
+
+        :return: The last_modified_by_id of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified_by_id
+
+    @last_modified_by_id.setter
+    def last_modified_by_id(self, last_modified_by_id):
+        &#34;&#34;&#34;Sets the last_modified_by_id of this WorkspaceItem.
+
+        Utc date and time the comment was last updated (can only be done by creator)  # noqa: E501
+
+        :param last_modified_by_id: The last_modified_by_id of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified_by_id = last_modified_by_id
+
+    @property
+    def last_modified_by_information(self):
+        &#34;&#34;&#34;Gets the last_modified_by_information of this WorkspaceItem.  # noqa: E501
+
+
+        :return: The last_modified_by_information of this WorkspaceItem.  # noqa: E501
+        :rtype: WorkspaceUser
+        &#34;&#34;&#34;
+        return self._last_modified_by_information
+
+    @last_modified_by_information.setter
+    def last_modified_by_information(self, last_modified_by_information):
+        &#34;&#34;&#34;Sets the last_modified_by_information of this WorkspaceItem.
+
+
+        :param last_modified_by_information: The last_modified_by_information of this WorkspaceItem.  # noqa: E501
+        :type: WorkspaceUser
+        &#34;&#34;&#34;
+
+        self._last_modified_by_information = last_modified_by_information
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;Gets the name of this WorkspaceItem.  # noqa: E501
+
+        A simple string description of the item, such as a file name or a folder name.  # noqa: E501
+
+        :return: The name of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;Sets the name of this WorkspaceItem.
+
+        A simple string description of the item, such as a file name or a folder name.  # noqa: E501
+
+        :param name: The name of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def page_count(self):
+        &#34;&#34;&#34;Gets the page_count of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The page_count of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._page_count
+
+    @page_count.setter
+    def page_count(self, page_count):
+        &#34;&#34;&#34;Sets the page_count of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param page_count: The page_count of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._page_count = page_count
+
+    @property
+    def parent_folder_id(self):
+        &#34;&#34;&#34;Gets the parent_folder_id of this WorkspaceItem.  # noqa: E501
+
+        The ID of the parent folder. This is the GUID of the parent folder, or the special value &#39;root&#39; for the root folder.  # noqa: E501
+
+        :return: The parent_folder_id of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._parent_folder_id
+
+    @parent_folder_id.setter
+    def parent_folder_id(self, parent_folder_id):
+        &#34;&#34;&#34;Sets the parent_folder_id of this WorkspaceItem.
+
+        The ID of the parent folder. This is the GUID of the parent folder, or the special value &#39;root&#39; for the root folder.  # noqa: E501
+
+        :param parent_folder_id: The parent_folder_id of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._parent_folder_id = parent_folder_id
+
+    @property
+    def parent_folder_uri(self):
+        &#34;&#34;&#34;Gets the parent_folder_uri of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The parent_folder_uri of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._parent_folder_uri
+
+    @parent_folder_uri.setter
+    def parent_folder_uri(self, parent_folder_uri):
+        &#34;&#34;&#34;Sets the parent_folder_uri of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param parent_folder_uri: The parent_folder_uri of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._parent_folder_uri = parent_folder_uri
+
+    @property
+    def sha256(self):
+        &#34;&#34;&#34;Gets the sha256 of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sha256 of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sha256
+
+    @sha256.setter
+    def sha256(self, sha256):
+        &#34;&#34;&#34;Sets the sha256 of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param sha256: The sha256 of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sha256 = sha256
+
+    @property
+    def thumb_height(self):
+        &#34;&#34;&#34;Gets the thumb_height of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The thumb_height of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._thumb_height
+
+    @thumb_height.setter
+    def thumb_height(self, thumb_height):
+        &#34;&#34;&#34;Sets the thumb_height of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param thumb_height: The thumb_height of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._thumb_height = thumb_height
+
+    @property
+    def thumbnail(self):
+        &#34;&#34;&#34;Gets the thumbnail of this WorkspaceItem.  # noqa: E501
+
+
+        :return: The thumbnail of this WorkspaceItem.  # noqa: E501
+        :rtype: Page
+        &#34;&#34;&#34;
+        return self._thumbnail
+
+    @thumbnail.setter
+    def thumbnail(self, thumbnail):
+        &#34;&#34;&#34;Sets the thumbnail of this WorkspaceItem.
+
+
+        :param thumbnail: The thumbnail of this WorkspaceItem.  # noqa: E501
+        :type: Page
+        &#34;&#34;&#34;
+
+        self._thumbnail = thumbnail
+
+    @property
+    def thumb_width(self):
+        &#34;&#34;&#34;Gets the thumb_width of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The thumb_width of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._thumb_width
+
+    @thumb_width.setter
+    def thumb_width(self, thumb_width):
+        &#34;&#34;&#34;Sets the thumb_width of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param thumb_width: The thumb_width of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._thumb_width = thumb_width
+
+    @property
+    def type(self):
+        &#34;&#34;&#34;Gets the type of this WorkspaceItem.  # noqa: E501
+
+        The type of the workspace item. Valid values are file, folder.  # noqa: E501
+
+        :return: The type of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        &#34;&#34;&#34;Sets the type of this WorkspaceItem.
+
+        The type of the workspace item. Valid values are file, folder.  # noqa: E501
+
+        :param type: The type of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._type = type
+
+    @property
+    def uri(self):
+        &#34;&#34;&#34;Gets the uri of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The uri of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._uri
+
+    @uri.setter
+    def uri(self, uri):
+        &#34;&#34;&#34;Sets the uri of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param uri: The uri of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._uri = uri
+
+    @property
+    def user_authorization(self):
+        &#34;&#34;&#34;Gets the user_authorization of this WorkspaceItem.  # noqa: E501
+
+
+        :return: The user_authorization of this WorkspaceItem.  # noqa: E501
+        :rtype: WorkspaceUserAuthorization
+        &#34;&#34;&#34;
+        return self._user_authorization
+
+    @user_authorization.setter
+    def user_authorization(self, user_authorization):
+        &#34;&#34;&#34;Sets the user_authorization of this WorkspaceItem.
+
+
+        :param user_authorization: The user_authorization of this WorkspaceItem.  # noqa: E501
+        :type: WorkspaceUserAuthorization
+        &#34;&#34;&#34;
+
+        self._user_authorization = user_authorization
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(WorkspaceItem, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, WorkspaceItem):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem"><code class="flex name class">
+<span>class <span class="ident">WorkspaceItem</span></span>
+<span>(</span><span>caller_authorization=None, content_type=None, created=None, created_by_id=None, created_by_information=None, extension=None, file_size=None, file_uri=None, id=None, is_public=None, last_modified=None, last_modified_by_id=None, last_modified_by_information=None, name=None, page_count=None, parent_folder_id=None, parent_folder_uri=None, sha256=None, thumb_height=None, thumbnail=None, thumb_width=None, type=None, uri=None, user_authorization=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>WorkspaceItem - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class WorkspaceItem(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;caller_authorization&#39;: &#39;WorkspaceUserAuthorization&#39;,
+        &#39;content_type&#39;: &#39;str&#39;,
+        &#39;created&#39;: &#39;str&#39;,
+        &#39;created_by_id&#39;: &#39;str&#39;,
+        &#39;created_by_information&#39;: &#39;WorkspaceUser&#39;,
+        &#39;extension&#39;: &#39;str&#39;,
+        &#39;file_size&#39;: &#39;str&#39;,
+        &#39;file_uri&#39;: &#39;str&#39;,
+        &#39;id&#39;: &#39;str&#39;,
+        &#39;is_public&#39;: &#39;str&#39;,
+        &#39;last_modified&#39;: &#39;str&#39;,
+        &#39;last_modified_by_id&#39;: &#39;str&#39;,
+        &#39;last_modified_by_information&#39;: &#39;WorkspaceUser&#39;,
+        &#39;name&#39;: &#39;str&#39;,
+        &#39;page_count&#39;: &#39;str&#39;,
+        &#39;parent_folder_id&#39;: &#39;str&#39;,
+        &#39;parent_folder_uri&#39;: &#39;str&#39;,
+        &#39;sha256&#39;: &#39;str&#39;,
+        &#39;thumb_height&#39;: &#39;str&#39;,
+        &#39;thumbnail&#39;: &#39;Page&#39;,
+        &#39;thumb_width&#39;: &#39;str&#39;,
+        &#39;type&#39;: &#39;str&#39;,
+        &#39;uri&#39;: &#39;str&#39;,
+        &#39;user_authorization&#39;: &#39;WorkspaceUserAuthorization&#39;
+    }
+
+    attribute_map = {
+        &#39;caller_authorization&#39;: &#39;callerAuthorization&#39;,
+        &#39;content_type&#39;: &#39;contentType&#39;,
+        &#39;created&#39;: &#39;created&#39;,
+        &#39;created_by_id&#39;: &#39;createdById&#39;,
+        &#39;created_by_information&#39;: &#39;createdByInformation&#39;,
+        &#39;extension&#39;: &#39;extension&#39;,
+        &#39;file_size&#39;: &#39;fileSize&#39;,
+        &#39;file_uri&#39;: &#39;fileUri&#39;,
+        &#39;id&#39;: &#39;id&#39;,
+        &#39;is_public&#39;: &#39;isPublic&#39;,
+        &#39;last_modified&#39;: &#39;lastModified&#39;,
+        &#39;last_modified_by_id&#39;: &#39;lastModifiedById&#39;,
+        &#39;last_modified_by_information&#39;: &#39;lastModifiedByInformation&#39;,
+        &#39;name&#39;: &#39;name&#39;,
+        &#39;page_count&#39;: &#39;pageCount&#39;,
+        &#39;parent_folder_id&#39;: &#39;parentFolderId&#39;,
+        &#39;parent_folder_uri&#39;: &#39;parentFolderUri&#39;,
+        &#39;sha256&#39;: &#39;sha256&#39;,
+        &#39;thumb_height&#39;: &#39;thumbHeight&#39;,
+        &#39;thumbnail&#39;: &#39;thumbnail&#39;,
+        &#39;thumb_width&#39;: &#39;thumbWidth&#39;,
+        &#39;type&#39;: &#39;type&#39;,
+        &#39;uri&#39;: &#39;uri&#39;,
+        &#39;user_authorization&#39;: &#39;userAuthorization&#39;
+    }
+
+    def __init__(self, caller_authorization=None, content_type=None, created=None, created_by_id=None, created_by_information=None, extension=None, file_size=None, file_uri=None, id=None, is_public=None, last_modified=None, last_modified_by_id=None, last_modified_by_information=None, name=None, page_count=None, parent_folder_id=None, parent_folder_uri=None, sha256=None, thumb_height=None, thumbnail=None, thumb_width=None, type=None, uri=None, user_authorization=None):  # noqa: E501
+        &#34;&#34;&#34;WorkspaceItem - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._caller_authorization = None
+        self._content_type = None
+        self._created = None
+        self._created_by_id = None
+        self._created_by_information = None
+        self._extension = None
+        self._file_size = None
+        self._file_uri = None
+        self._id = None
+        self._is_public = None
+        self._last_modified = None
+        self._last_modified_by_id = None
+        self._last_modified_by_information = None
+        self._name = None
+        self._page_count = None
+        self._parent_folder_id = None
+        self._parent_folder_uri = None
+        self._sha256 = None
+        self._thumb_height = None
+        self._thumbnail = None
+        self._thumb_width = None
+        self._type = None
+        self._uri = None
+        self._user_authorization = None
+        self.discriminator = None
+
+        if caller_authorization is not None:
+            self.caller_authorization = caller_authorization
+        if content_type is not None:
+            self.content_type = content_type
+        if created is not None:
+            self.created = created
+        if created_by_id is not None:
+            self.created_by_id = created_by_id
+        if created_by_information is not None:
+            self.created_by_information = created_by_information
+        if extension is not None:
+            self.extension = extension
+        if file_size is not None:
+            self.file_size = file_size
+        if file_uri is not None:
+            self.file_uri = file_uri
+        if id is not None:
+            self.id = id
+        if is_public is not None:
+            self.is_public = is_public
+        if last_modified is not None:
+            self.last_modified = last_modified
+        if last_modified_by_id is not None:
+            self.last_modified_by_id = last_modified_by_id
+        if last_modified_by_information is not None:
+            self.last_modified_by_information = last_modified_by_information
+        if name is not None:
+            self.name = name
+        if page_count is not None:
+            self.page_count = page_count
+        if parent_folder_id is not None:
+            self.parent_folder_id = parent_folder_id
+        if parent_folder_uri is not None:
+            self.parent_folder_uri = parent_folder_uri
+        if sha256 is not None:
+            self.sha256 = sha256
+        if thumb_height is not None:
+            self.thumb_height = thumb_height
+        if thumbnail is not None:
+            self.thumbnail = thumbnail
+        if thumb_width is not None:
+            self.thumb_width = thumb_width
+        if type is not None:
+            self.type = type
+        if uri is not None:
+            self.uri = uri
+        if user_authorization is not None:
+            self.user_authorization = user_authorization
+
+    @property
+    def caller_authorization(self):
+        &#34;&#34;&#34;Gets the caller_authorization of this WorkspaceItem.  # noqa: E501
+
+
+        :return: The caller_authorization of this WorkspaceItem.  # noqa: E501
+        :rtype: WorkspaceUserAuthorization
+        &#34;&#34;&#34;
+        return self._caller_authorization
+
+    @caller_authorization.setter
+    def caller_authorization(self, caller_authorization):
+        &#34;&#34;&#34;Sets the caller_authorization of this WorkspaceItem.
+
+
+        :param caller_authorization: The caller_authorization of this WorkspaceItem.  # noqa: E501
+        :type: WorkspaceUserAuthorization
+        &#34;&#34;&#34;
+
+        self._caller_authorization = caller_authorization
+
+    @property
+    def content_type(self):
+        &#34;&#34;&#34;Gets the content_type of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The content_type of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._content_type
+
+    @content_type.setter
+    def content_type(self, content_type):
+        &#34;&#34;&#34;Sets the content_type of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param content_type: The content_type of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._content_type = content_type
+
+    @property
+    def created(self):
+        &#34;&#34;&#34;Gets the created of this WorkspaceItem.  # noqa: E501
+
+        The UTC DateTime when the workspace item was created.  # noqa: E501
+
+        :return: The created of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created
+
+    @created.setter
+    def created(self, created):
+        &#34;&#34;&#34;Sets the created of this WorkspaceItem.
+
+        The UTC DateTime when the workspace item was created.  # noqa: E501
+
+        :param created: The created of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created = created
+
+    @property
+    def created_by_id(self):
+        &#34;&#34;&#34;Gets the created_by_id of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The created_by_id of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_by_id
+
+    @created_by_id.setter
+    def created_by_id(self, created_by_id):
+        &#34;&#34;&#34;Sets the created_by_id of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param created_by_id: The created_by_id of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_by_id = created_by_id
+
+    @property
+    def created_by_information(self):
+        &#34;&#34;&#34;Gets the created_by_information of this WorkspaceItem.  # noqa: E501
+
+
+        :return: The created_by_information of this WorkspaceItem.  # noqa: E501
+        :rtype: WorkspaceUser
+        &#34;&#34;&#34;
+        return self._created_by_information
+
+    @created_by_information.setter
+    def created_by_information(self, created_by_information):
+        &#34;&#34;&#34;Sets the created_by_information of this WorkspaceItem.
+
+
+        :param created_by_information: The created_by_information of this WorkspaceItem.  # noqa: E501
+        :type: WorkspaceUser
+        &#34;&#34;&#34;
+
+        self._created_by_information = created_by_information
+
+    @property
+    def extension(self):
+        &#34;&#34;&#34;Gets the extension of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The extension of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._extension
+
+    @extension.setter
+    def extension(self, extension):
+        &#34;&#34;&#34;Sets the extension of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param extension: The extension of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._extension = extension
+
+    @property
+    def file_size(self):
+        &#34;&#34;&#34;Gets the file_size of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The file_size of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._file_size
+
+    @file_size.setter
+    def file_size(self, file_size):
+        &#34;&#34;&#34;Sets the file_size of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param file_size: The file_size of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._file_size = file_size
+
+    @property
+    def file_uri(self):
+        &#34;&#34;&#34;Gets the file_uri of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The file_uri of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._file_uri
+
+    @file_uri.setter
+    def file_uri(self, file_uri):
+        &#34;&#34;&#34;Sets the file_uri of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param file_uri: The file_uri of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._file_uri = file_uri
+
+    @property
+    def id(self):
+        &#34;&#34;&#34;Gets the id of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The id of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        &#34;&#34;&#34;Sets the id of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param id: The id of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._id = id
+
+    @property
+    def is_public(self):
+        &#34;&#34;&#34;Gets the is_public of this WorkspaceItem.  # noqa: E501
+
+         If true, this supersedes need for bit mask permission with workspaceUserAuthorization  # noqa: E501
+
+        :return: The is_public of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is_public
+
+    @is_public.setter
+    def is_public(self, is_public):
+        &#34;&#34;&#34;Sets the is_public of this WorkspaceItem.
+
+         If true, this supersedes need for bit mask permission with workspaceUserAuthorization  # noqa: E501
+
+        :param is_public: The is_public of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is_public = is_public
+
+    @property
+    def last_modified(self):
+        &#34;&#34;&#34;Gets the last_modified of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The last_modified of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified
+
+    @last_modified.setter
+    def last_modified(self, last_modified):
+        &#34;&#34;&#34;Sets the last_modified of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param last_modified: The last_modified of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified = last_modified
+
+    @property
+    def last_modified_by_id(self):
+        &#34;&#34;&#34;Gets the last_modified_by_id of this WorkspaceItem.  # noqa: E501
+
+        Utc date and time the comment was last updated (can only be done by creator)  # noqa: E501
+
+        :return: The last_modified_by_id of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified_by_id
+
+    @last_modified_by_id.setter
+    def last_modified_by_id(self, last_modified_by_id):
+        &#34;&#34;&#34;Sets the last_modified_by_id of this WorkspaceItem.
+
+        Utc date and time the comment was last updated (can only be done by creator)  # noqa: E501
+
+        :param last_modified_by_id: The last_modified_by_id of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified_by_id = last_modified_by_id
+
+    @property
+    def last_modified_by_information(self):
+        &#34;&#34;&#34;Gets the last_modified_by_information of this WorkspaceItem.  # noqa: E501
+
+
+        :return: The last_modified_by_information of this WorkspaceItem.  # noqa: E501
+        :rtype: WorkspaceUser
+        &#34;&#34;&#34;
+        return self._last_modified_by_information
+
+    @last_modified_by_information.setter
+    def last_modified_by_information(self, last_modified_by_information):
+        &#34;&#34;&#34;Sets the last_modified_by_information of this WorkspaceItem.
+
+
+        :param last_modified_by_information: The last_modified_by_information of this WorkspaceItem.  # noqa: E501
+        :type: WorkspaceUser
+        &#34;&#34;&#34;
+
+        self._last_modified_by_information = last_modified_by_information
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;Gets the name of this WorkspaceItem.  # noqa: E501
+
+        A simple string description of the item, such as a file name or a folder name.  # noqa: E501
+
+        :return: The name of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;Sets the name of this WorkspaceItem.
+
+        A simple string description of the item, such as a file name or a folder name.  # noqa: E501
+
+        :param name: The name of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def page_count(self):
+        &#34;&#34;&#34;Gets the page_count of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The page_count of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._page_count
+
+    @page_count.setter
+    def page_count(self, page_count):
+        &#34;&#34;&#34;Sets the page_count of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param page_count: The page_count of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._page_count = page_count
+
+    @property
+    def parent_folder_id(self):
+        &#34;&#34;&#34;Gets the parent_folder_id of this WorkspaceItem.  # noqa: E501
+
+        The ID of the parent folder. This is the GUID of the parent folder, or the special value &#39;root&#39; for the root folder.  # noqa: E501
+
+        :return: The parent_folder_id of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._parent_folder_id
+
+    @parent_folder_id.setter
+    def parent_folder_id(self, parent_folder_id):
+        &#34;&#34;&#34;Sets the parent_folder_id of this WorkspaceItem.
+
+        The ID of the parent folder. This is the GUID of the parent folder, or the special value &#39;root&#39; for the root folder.  # noqa: E501
+
+        :param parent_folder_id: The parent_folder_id of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._parent_folder_id = parent_folder_id
+
+    @property
+    def parent_folder_uri(self):
+        &#34;&#34;&#34;Gets the parent_folder_uri of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The parent_folder_uri of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._parent_folder_uri
+
+    @parent_folder_uri.setter
+    def parent_folder_uri(self, parent_folder_uri):
+        &#34;&#34;&#34;Sets the parent_folder_uri of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param parent_folder_uri: The parent_folder_uri of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._parent_folder_uri = parent_folder_uri
+
+    @property
+    def sha256(self):
+        &#34;&#34;&#34;Gets the sha256 of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sha256 of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sha256
+
+    @sha256.setter
+    def sha256(self, sha256):
+        &#34;&#34;&#34;Sets the sha256 of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param sha256: The sha256 of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sha256 = sha256
+
+    @property
+    def thumb_height(self):
+        &#34;&#34;&#34;Gets the thumb_height of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The thumb_height of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._thumb_height
+
+    @thumb_height.setter
+    def thumb_height(self, thumb_height):
+        &#34;&#34;&#34;Sets the thumb_height of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param thumb_height: The thumb_height of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._thumb_height = thumb_height
+
+    @property
+    def thumbnail(self):
+        &#34;&#34;&#34;Gets the thumbnail of this WorkspaceItem.  # noqa: E501
+
+
+        :return: The thumbnail of this WorkspaceItem.  # noqa: E501
+        :rtype: Page
+        &#34;&#34;&#34;
+        return self._thumbnail
+
+    @thumbnail.setter
+    def thumbnail(self, thumbnail):
+        &#34;&#34;&#34;Sets the thumbnail of this WorkspaceItem.
+
+
+        :param thumbnail: The thumbnail of this WorkspaceItem.  # noqa: E501
+        :type: Page
+        &#34;&#34;&#34;
+
+        self._thumbnail = thumbnail
+
+    @property
+    def thumb_width(self):
+        &#34;&#34;&#34;Gets the thumb_width of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The thumb_width of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._thumb_width
+
+    @thumb_width.setter
+    def thumb_width(self, thumb_width):
+        &#34;&#34;&#34;Sets the thumb_width of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param thumb_width: The thumb_width of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._thumb_width = thumb_width
+
+    @property
+    def type(self):
+        &#34;&#34;&#34;Gets the type of this WorkspaceItem.  # noqa: E501
+
+        The type of the workspace item. Valid values are file, folder.  # noqa: E501
+
+        :return: The type of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        &#34;&#34;&#34;Sets the type of this WorkspaceItem.
+
+        The type of the workspace item. Valid values are file, folder.  # noqa: E501
+
+        :param type: The type of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._type = type
+
+    @property
+    def uri(self):
+        &#34;&#34;&#34;Gets the uri of this WorkspaceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The uri of this WorkspaceItem.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._uri
+
+    @uri.setter
+    def uri(self, uri):
+        &#34;&#34;&#34;Sets the uri of this WorkspaceItem.
+
+          # noqa: E501
+
+        :param uri: The uri of this WorkspaceItem.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._uri = uri
+
+    @property
+    def user_authorization(self):
+        &#34;&#34;&#34;Gets the user_authorization of this WorkspaceItem.  # noqa: E501
+
+
+        :return: The user_authorization of this WorkspaceItem.  # noqa: E501
+        :rtype: WorkspaceUserAuthorization
+        &#34;&#34;&#34;
+        return self._user_authorization
+
+    @user_authorization.setter
+    def user_authorization(self, user_authorization):
+        &#34;&#34;&#34;Sets the user_authorization of this WorkspaceItem.
+
+
+        :param user_authorization: The user_authorization of this WorkspaceItem.  # noqa: E501
+        :type: WorkspaceUserAuthorization
+        &#34;&#34;&#34;
+
+        self._user_authorization = user_authorization
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(WorkspaceItem, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, WorkspaceItem):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.caller_authorization"><code class="name">var <span class="ident">caller_authorization</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the caller_authorization of this WorkspaceItem.
+# noqa: E501</p>
+<p>:return: The caller_authorization of this WorkspaceItem.
+# noqa: E501
+:rtype: WorkspaceUserAuthorization</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def caller_authorization(self):
+    &#34;&#34;&#34;Gets the caller_authorization of this WorkspaceItem.  # noqa: E501
+
+
+    :return: The caller_authorization of this WorkspaceItem.  # noqa: E501
+    :rtype: WorkspaceUserAuthorization
+    &#34;&#34;&#34;
+    return self._caller_authorization</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.content_type"><code class="name">var <span class="ident">content_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the content_type of this WorkspaceItem.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The content_type of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def content_type(self):
+    &#34;&#34;&#34;Gets the content_type of this WorkspaceItem.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The content_type of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._content_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.created"><code class="name">var <span class="ident">created</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the created of this WorkspaceItem.
+# noqa: E501</p>
+<p>The UTC DateTime when the workspace item was created.
+# noqa: E501</p>
+<p>:return: The created of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def created(self):
+    &#34;&#34;&#34;Gets the created of this WorkspaceItem.  # noqa: E501
+
+    The UTC DateTime when the workspace item was created.  # noqa: E501
+
+    :return: The created of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._created</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.created_by_id"><code class="name">var <span class="ident">created_by_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the created_by_id of this WorkspaceItem.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The created_by_id of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def created_by_id(self):
+    &#34;&#34;&#34;Gets the created_by_id of this WorkspaceItem.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The created_by_id of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._created_by_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.created_by_information"><code class="name">var <span class="ident">created_by_information</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the created_by_information of this WorkspaceItem.
+# noqa: E501</p>
+<p>:return: The created_by_information of this WorkspaceItem.
+# noqa: E501
+:rtype: WorkspaceUser</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def created_by_information(self):
+    &#34;&#34;&#34;Gets the created_by_information of this WorkspaceItem.  # noqa: E501
+
+
+    :return: The created_by_information of this WorkspaceItem.  # noqa: E501
+    :rtype: WorkspaceUser
+    &#34;&#34;&#34;
+    return self._created_by_information</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.extension"><code class="name">var <span class="ident">extension</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the extension of this WorkspaceItem.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The extension of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def extension(self):
+    &#34;&#34;&#34;Gets the extension of this WorkspaceItem.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The extension of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._extension</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.file_size"><code class="name">var <span class="ident">file_size</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the file_size of this WorkspaceItem.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The file_size of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def file_size(self):
+    &#34;&#34;&#34;Gets the file_size of this WorkspaceItem.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The file_size of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._file_size</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.file_uri"><code class="name">var <span class="ident">file_uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the file_uri of this WorkspaceItem.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The file_uri of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def file_uri(self):
+    &#34;&#34;&#34;Gets the file_uri of this WorkspaceItem.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The file_uri of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._file_uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.id"><code class="name">var <span class="ident">id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the id of this WorkspaceItem.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The id of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def id(self):
+    &#34;&#34;&#34;Gets the id of this WorkspaceItem.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The id of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.is_public"><code class="name">var <span class="ident">is_public</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the is_public of this WorkspaceItem.
+# noqa: E501</p>
+<p>If true, this supersedes need for bit mask permission with workspaceUserAuthorization
+# noqa: E501</p>
+<p>:return: The is_public of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is_public(self):
+    &#34;&#34;&#34;Gets the is_public of this WorkspaceItem.  # noqa: E501
+
+     If true, this supersedes need for bit mask permission with workspaceUserAuthorization  # noqa: E501
+
+    :return: The is_public of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._is_public</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.last_modified"><code class="name">var <span class="ident">last_modified</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_modified of this WorkspaceItem.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The last_modified of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_modified(self):
+    &#34;&#34;&#34;Gets the last_modified of this WorkspaceItem.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The last_modified of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._last_modified</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.last_modified_by_id"><code class="name">var <span class="ident">last_modified_by_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_modified_by_id of this WorkspaceItem.
+# noqa: E501</p>
+<p>Utc date and time the comment was last updated (can only be done by creator)
+# noqa: E501</p>
+<p>:return: The last_modified_by_id of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_modified_by_id(self):
+    &#34;&#34;&#34;Gets the last_modified_by_id of this WorkspaceItem.  # noqa: E501
+
+    Utc date and time the comment was last updated (can only be done by creator)  # noqa: E501
+
+    :return: The last_modified_by_id of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._last_modified_by_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.last_modified_by_information"><code class="name">var <span class="ident">last_modified_by_information</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_modified_by_information of this WorkspaceItem.
+# noqa: E501</p>
+<p>:return: The last_modified_by_information of this WorkspaceItem.
+# noqa: E501
+:rtype: WorkspaceUser</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_modified_by_information(self):
+    &#34;&#34;&#34;Gets the last_modified_by_information of this WorkspaceItem.  # noqa: E501
+
+
+    :return: The last_modified_by_information of this WorkspaceItem.  # noqa: E501
+    :rtype: WorkspaceUser
+    &#34;&#34;&#34;
+    return self._last_modified_by_information</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the name of this WorkspaceItem.
+# noqa: E501</p>
+<p>A simple string description of the item, such as a file name or a folder name.
+# noqa: E501</p>
+<p>:return: The name of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name(self):
+    &#34;&#34;&#34;Gets the name of this WorkspaceItem.  # noqa: E501
+
+    A simple string description of the item, such as a file name or a folder name.  # noqa: E501
+
+    :return: The name of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.page_count"><code class="name">var <span class="ident">page_count</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the page_count of this WorkspaceItem.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The page_count of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def page_count(self):
+    &#34;&#34;&#34;Gets the page_count of this WorkspaceItem.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The page_count of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._page_count</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.parent_folder_id"><code class="name">var <span class="ident">parent_folder_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the parent_folder_id of this WorkspaceItem.
+# noqa: E501</p>
+<p>The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder.
+# noqa: E501</p>
+<p>:return: The parent_folder_id of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def parent_folder_id(self):
+    &#34;&#34;&#34;Gets the parent_folder_id of this WorkspaceItem.  # noqa: E501
+
+    The ID of the parent folder. This is the GUID of the parent folder, or the special value &#39;root&#39; for the root folder.  # noqa: E501
+
+    :return: The parent_folder_id of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._parent_folder_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.parent_folder_uri"><code class="name">var <span class="ident">parent_folder_uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the parent_folder_uri of this WorkspaceItem.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The parent_folder_uri of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def parent_folder_uri(self):
+    &#34;&#34;&#34;Gets the parent_folder_uri of this WorkspaceItem.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The parent_folder_uri of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._parent_folder_uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.sha256"><code class="name">var <span class="ident">sha256</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sha256 of this WorkspaceItem.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The sha256 of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sha256(self):
+    &#34;&#34;&#34;Gets the sha256 of this WorkspaceItem.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The sha256 of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sha256</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.thumb_height"><code class="name">var <span class="ident">thumb_height</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the thumb_height of this WorkspaceItem.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The thumb_height of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def thumb_height(self):
+    &#34;&#34;&#34;Gets the thumb_height of this WorkspaceItem.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The thumb_height of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._thumb_height</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.thumb_width"><code class="name">var <span class="ident">thumb_width</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the thumb_width of this WorkspaceItem.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The thumb_width of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def thumb_width(self):
+    &#34;&#34;&#34;Gets the thumb_width of this WorkspaceItem.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The thumb_width of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._thumb_width</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.thumbnail"><code class="name">var <span class="ident">thumbnail</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the thumbnail of this WorkspaceItem.
+# noqa: E501</p>
+<p>:return: The thumbnail of this WorkspaceItem.
+# noqa: E501
+:rtype: Page</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def thumbnail(self):
+    &#34;&#34;&#34;Gets the thumbnail of this WorkspaceItem.  # noqa: E501
+
+
+    :return: The thumbnail of this WorkspaceItem.  # noqa: E501
+    :rtype: Page
+    &#34;&#34;&#34;
+    return self._thumbnail</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.type"><code class="name">var <span class="ident">type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the type of this WorkspaceItem.
+# noqa: E501</p>
+<p>The type of the workspace item. Valid values are file, folder.
+# noqa: E501</p>
+<p>:return: The type of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def type(self):
+    &#34;&#34;&#34;Gets the type of this WorkspaceItem.  # noqa: E501
+
+    The type of the workspace item. Valid values are file, folder.  # noqa: E501
+
+    :return: The type of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.uri"><code class="name">var <span class="ident">uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the uri of this WorkspaceItem.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The uri of this WorkspaceItem.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def uri(self):
+    &#34;&#34;&#34;Gets the uri of this WorkspaceItem.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The uri of this WorkspaceItem.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.user_authorization"><code class="name">var <span class="ident">user_authorization</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_authorization of this WorkspaceItem.
+# noqa: E501</p>
+<p>:return: The user_authorization of this WorkspaceItem.
+# noqa: E501
+:rtype: WorkspaceUserAuthorization</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_authorization(self):
+    &#34;&#34;&#34;Gets the user_authorization of this WorkspaceItem.  # noqa: E501
+
+
+    :return: The user_authorization of this WorkspaceItem.  # noqa: E501
+    :rtype: WorkspaceUserAuthorization
+    &#34;&#34;&#34;
+    return self._user_authorization</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(WorkspaceItem, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.workspace_item.WorkspaceItem.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.workspace_item.WorkspaceItem" href="#docusign_esign.models.workspace_item.WorkspaceItem">WorkspaceItem</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.attribute_map" href="#docusign_esign.models.workspace_item.WorkspaceItem.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.caller_authorization" href="#docusign_esign.models.workspace_item.WorkspaceItem.caller_authorization">caller_authorization</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.content_type" href="#docusign_esign.models.workspace_item.WorkspaceItem.content_type">content_type</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.created" href="#docusign_esign.models.workspace_item.WorkspaceItem.created">created</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.created_by_id" href="#docusign_esign.models.workspace_item.WorkspaceItem.created_by_id">created_by_id</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.created_by_information" href="#docusign_esign.models.workspace_item.WorkspaceItem.created_by_information">created_by_information</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.extension" href="#docusign_esign.models.workspace_item.WorkspaceItem.extension">extension</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.file_size" href="#docusign_esign.models.workspace_item.WorkspaceItem.file_size">file_size</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.file_uri" href="#docusign_esign.models.workspace_item.WorkspaceItem.file_uri">file_uri</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.id" href="#docusign_esign.models.workspace_item.WorkspaceItem.id">id</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.is_public" href="#docusign_esign.models.workspace_item.WorkspaceItem.is_public">is_public</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.last_modified" href="#docusign_esign.models.workspace_item.WorkspaceItem.last_modified">last_modified</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.last_modified_by_id" href="#docusign_esign.models.workspace_item.WorkspaceItem.last_modified_by_id">last_modified_by_id</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.last_modified_by_information" href="#docusign_esign.models.workspace_item.WorkspaceItem.last_modified_by_information">last_modified_by_information</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.name" href="#docusign_esign.models.workspace_item.WorkspaceItem.name">name</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.page_count" href="#docusign_esign.models.workspace_item.WorkspaceItem.page_count">page_count</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.parent_folder_id" href="#docusign_esign.models.workspace_item.WorkspaceItem.parent_folder_id">parent_folder_id</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.parent_folder_uri" href="#docusign_esign.models.workspace_item.WorkspaceItem.parent_folder_uri">parent_folder_uri</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.sha256" href="#docusign_esign.models.workspace_item.WorkspaceItem.sha256">sha256</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.swagger_types" href="#docusign_esign.models.workspace_item.WorkspaceItem.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.thumb_height" href="#docusign_esign.models.workspace_item.WorkspaceItem.thumb_height">thumb_height</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.thumb_width" href="#docusign_esign.models.workspace_item.WorkspaceItem.thumb_width">thumb_width</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.thumbnail" href="#docusign_esign.models.workspace_item.WorkspaceItem.thumbnail">thumbnail</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.to_dict" href="#docusign_esign.models.workspace_item.WorkspaceItem.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.to_str" href="#docusign_esign.models.workspace_item.WorkspaceItem.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.type" href="#docusign_esign.models.workspace_item.WorkspaceItem.type">type</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.uri" href="#docusign_esign.models.workspace_item.WorkspaceItem.uri">uri</a></code></li>
+<li><code><a title="docusign_esign.models.workspace_item.WorkspaceItem.user_authorization" href="#docusign_esign.models.workspace_item.WorkspaceItem.user_authorization">user_authorization</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

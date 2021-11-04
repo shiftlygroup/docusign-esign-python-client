@@ -1,0 +1,2927 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.consumer_disclosure API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.consumer_disclosure</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class ConsumerDisclosure(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;account_esign_id&#39;: &#39;str&#39;,
+        &#39;allow_cd_withdraw&#39;: &#39;str&#39;,
+        &#39;allow_cd_withdraw_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;change_email&#39;: &#39;str&#39;,
+        &#39;change_email_other&#39;: &#39;str&#39;,
+        &#39;company_name&#39;: &#39;str&#39;,
+        &#39;company_phone&#39;: &#39;str&#39;,
+        &#39;copy_cost_per_page&#39;: &#39;str&#39;,
+        &#39;copy_fee_collection_method&#39;: &#39;str&#39;,
+        &#39;copy_request_email&#39;: &#39;str&#39;,
+        &#39;custom&#39;: &#39;str&#39;,
+        &#39;enable_esign&#39;: &#39;str&#39;,
+        &#39;esign_agreement&#39;: &#39;str&#39;,
+        &#39;esign_text&#39;: &#39;str&#39;,
+        &#39;language_code&#39;: &#39;str&#39;,
+        &#39;must_agree_to_esign&#39;: &#39;str&#39;,
+        &#39;pdf_id&#39;: &#39;str&#39;,
+        &#39;use_brand&#39;: &#39;str&#39;,
+        &#39;use_consumer_disclosure_within_account&#39;: &#39;str&#39;,
+        &#39;use_consumer_disclosure_within_account_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;withdraw_address_line1&#39;: &#39;str&#39;,
+        &#39;withdraw_address_line2&#39;: &#39;str&#39;,
+        &#39;withdraw_by_email&#39;: &#39;str&#39;,
+        &#39;withdraw_by_mail&#39;: &#39;str&#39;,
+        &#39;withdraw_by_phone&#39;: &#39;str&#39;,
+        &#39;withdraw_city&#39;: &#39;str&#39;,
+        &#39;withdraw_consequences&#39;: &#39;str&#39;,
+        &#39;withdraw_email&#39;: &#39;str&#39;,
+        &#39;withdraw_other&#39;: &#39;str&#39;,
+        &#39;withdraw_phone&#39;: &#39;str&#39;,
+        &#39;withdraw_postal_code&#39;: &#39;str&#39;,
+        &#39;withdraw_state&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;account_esign_id&#39;: &#39;accountEsignId&#39;,
+        &#39;allow_cd_withdraw&#39;: &#39;allowCDWithdraw&#39;,
+        &#39;allow_cd_withdraw_metadata&#39;: &#39;allowCDWithdrawMetadata&#39;,
+        &#39;change_email&#39;: &#39;changeEmail&#39;,
+        &#39;change_email_other&#39;: &#39;changeEmailOther&#39;,
+        &#39;company_name&#39;: &#39;companyName&#39;,
+        &#39;company_phone&#39;: &#39;companyPhone&#39;,
+        &#39;copy_cost_per_page&#39;: &#39;copyCostPerPage&#39;,
+        &#39;copy_fee_collection_method&#39;: &#39;copyFeeCollectionMethod&#39;,
+        &#39;copy_request_email&#39;: &#39;copyRequestEmail&#39;,
+        &#39;custom&#39;: &#39;custom&#39;,
+        &#39;enable_esign&#39;: &#39;enableEsign&#39;,
+        &#39;esign_agreement&#39;: &#39;esignAgreement&#39;,
+        &#39;esign_text&#39;: &#39;esignText&#39;,
+        &#39;language_code&#39;: &#39;languageCode&#39;,
+        &#39;must_agree_to_esign&#39;: &#39;mustAgreeToEsign&#39;,
+        &#39;pdf_id&#39;: &#39;pdfId&#39;,
+        &#39;use_brand&#39;: &#39;useBrand&#39;,
+        &#39;use_consumer_disclosure_within_account&#39;: &#39;useConsumerDisclosureWithinAccount&#39;,
+        &#39;use_consumer_disclosure_within_account_metadata&#39;: &#39;useConsumerDisclosureWithinAccountMetadata&#39;,
+        &#39;withdraw_address_line1&#39;: &#39;withdrawAddressLine1&#39;,
+        &#39;withdraw_address_line2&#39;: &#39;withdrawAddressLine2&#39;,
+        &#39;withdraw_by_email&#39;: &#39;withdrawByEmail&#39;,
+        &#39;withdraw_by_mail&#39;: &#39;withdrawByMail&#39;,
+        &#39;withdraw_by_phone&#39;: &#39;withdrawByPhone&#39;,
+        &#39;withdraw_city&#39;: &#39;withdrawCity&#39;,
+        &#39;withdraw_consequences&#39;: &#39;withdrawConsequences&#39;,
+        &#39;withdraw_email&#39;: &#39;withdrawEmail&#39;,
+        &#39;withdraw_other&#39;: &#39;withdrawOther&#39;,
+        &#39;withdraw_phone&#39;: &#39;withdrawPhone&#39;,
+        &#39;withdraw_postal_code&#39;: &#39;withdrawPostalCode&#39;,
+        &#39;withdraw_state&#39;: &#39;withdrawState&#39;
+    }
+
+    def __init__(self, account_esign_id=None, allow_cd_withdraw=None, allow_cd_withdraw_metadata=None, change_email=None, change_email_other=None, company_name=None, company_phone=None, copy_cost_per_page=None, copy_fee_collection_method=None, copy_request_email=None, custom=None, enable_esign=None, esign_agreement=None, esign_text=None, language_code=None, must_agree_to_esign=None, pdf_id=None, use_brand=None, use_consumer_disclosure_within_account=None, use_consumer_disclosure_within_account_metadata=None, withdraw_address_line1=None, withdraw_address_line2=None, withdraw_by_email=None, withdraw_by_mail=None, withdraw_by_phone=None, withdraw_city=None, withdraw_consequences=None, withdraw_email=None, withdraw_other=None, withdraw_phone=None, withdraw_postal_code=None, withdraw_state=None):  # noqa: E501
+        &#34;&#34;&#34;ConsumerDisclosure - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._account_esign_id = None
+        self._allow_cd_withdraw = None
+        self._allow_cd_withdraw_metadata = None
+        self._change_email = None
+        self._change_email_other = None
+        self._company_name = None
+        self._company_phone = None
+        self._copy_cost_per_page = None
+        self._copy_fee_collection_method = None
+        self._copy_request_email = None
+        self._custom = None
+        self._enable_esign = None
+        self._esign_agreement = None
+        self._esign_text = None
+        self._language_code = None
+        self._must_agree_to_esign = None
+        self._pdf_id = None
+        self._use_brand = None
+        self._use_consumer_disclosure_within_account = None
+        self._use_consumer_disclosure_within_account_metadata = None
+        self._withdraw_address_line1 = None
+        self._withdraw_address_line2 = None
+        self._withdraw_by_email = None
+        self._withdraw_by_mail = None
+        self._withdraw_by_phone = None
+        self._withdraw_city = None
+        self._withdraw_consequences = None
+        self._withdraw_email = None
+        self._withdraw_other = None
+        self._withdraw_phone = None
+        self._withdraw_postal_code = None
+        self._withdraw_state = None
+        self.discriminator = None
+
+        if account_esign_id is not None:
+            self.account_esign_id = account_esign_id
+        if allow_cd_withdraw is not None:
+            self.allow_cd_withdraw = allow_cd_withdraw
+        if allow_cd_withdraw_metadata is not None:
+            self.allow_cd_withdraw_metadata = allow_cd_withdraw_metadata
+        if change_email is not None:
+            self.change_email = change_email
+        if change_email_other is not None:
+            self.change_email_other = change_email_other
+        if company_name is not None:
+            self.company_name = company_name
+        if company_phone is not None:
+            self.company_phone = company_phone
+        if copy_cost_per_page is not None:
+            self.copy_cost_per_page = copy_cost_per_page
+        if copy_fee_collection_method is not None:
+            self.copy_fee_collection_method = copy_fee_collection_method
+        if copy_request_email is not None:
+            self.copy_request_email = copy_request_email
+        if custom is not None:
+            self.custom = custom
+        if enable_esign is not None:
+            self.enable_esign = enable_esign
+        if esign_agreement is not None:
+            self.esign_agreement = esign_agreement
+        if esign_text is not None:
+            self.esign_text = esign_text
+        if language_code is not None:
+            self.language_code = language_code
+        if must_agree_to_esign is not None:
+            self.must_agree_to_esign = must_agree_to_esign
+        if pdf_id is not None:
+            self.pdf_id = pdf_id
+        if use_brand is not None:
+            self.use_brand = use_brand
+        if use_consumer_disclosure_within_account is not None:
+            self.use_consumer_disclosure_within_account = use_consumer_disclosure_within_account
+        if use_consumer_disclosure_within_account_metadata is not None:
+            self.use_consumer_disclosure_within_account_metadata = use_consumer_disclosure_within_account_metadata
+        if withdraw_address_line1 is not None:
+            self.withdraw_address_line1 = withdraw_address_line1
+        if withdraw_address_line2 is not None:
+            self.withdraw_address_line2 = withdraw_address_line2
+        if withdraw_by_email is not None:
+            self.withdraw_by_email = withdraw_by_email
+        if withdraw_by_mail is not None:
+            self.withdraw_by_mail = withdraw_by_mail
+        if withdraw_by_phone is not None:
+            self.withdraw_by_phone = withdraw_by_phone
+        if withdraw_city is not None:
+            self.withdraw_city = withdraw_city
+        if withdraw_consequences is not None:
+            self.withdraw_consequences = withdraw_consequences
+        if withdraw_email is not None:
+            self.withdraw_email = withdraw_email
+        if withdraw_other is not None:
+            self.withdraw_other = withdraw_other
+        if withdraw_phone is not None:
+            self.withdraw_phone = withdraw_phone
+        if withdraw_postal_code is not None:
+            self.withdraw_postal_code = withdraw_postal_code
+        if withdraw_state is not None:
+            self.withdraw_state = withdraw_state
+
+    @property
+    def account_esign_id(self):
+        &#34;&#34;&#34;Gets the account_esign_id of this ConsumerDisclosure.  # noqa: E501
+
+        A GUID identifying the account associated with the consumer disclosure  # noqa: E501
+
+        :return: The account_esign_id of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._account_esign_id
+
+    @account_esign_id.setter
+    def account_esign_id(self, account_esign_id):
+        &#34;&#34;&#34;Sets the account_esign_id of this ConsumerDisclosure.
+
+        A GUID identifying the account associated with the consumer disclosure  # noqa: E501
+
+        :param account_esign_id: The account_esign_id of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._account_esign_id = account_esign_id
+
+    @property
+    def allow_cd_withdraw(self):
+        &#34;&#34;&#34;Gets the allow_cd_withdraw of this ConsumerDisclosure.  # noqa: E501
+
+        Indicates whether the customer can withdraw their acceptance of the consumer disclosure.  # noqa: E501
+
+        :return: The allow_cd_withdraw of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._allow_cd_withdraw
+
+    @allow_cd_withdraw.setter
+    def allow_cd_withdraw(self, allow_cd_withdraw):
+        &#34;&#34;&#34;Sets the allow_cd_withdraw of this ConsumerDisclosure.
+
+        Indicates whether the customer can withdraw their acceptance of the consumer disclosure.  # noqa: E501
+
+        :param allow_cd_withdraw: The allow_cd_withdraw of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._allow_cd_withdraw = allow_cd_withdraw
+
+    @property
+    def allow_cd_withdraw_metadata(self):
+        &#34;&#34;&#34;Gets the allow_cd_withdraw_metadata of this ConsumerDisclosure.  # noqa: E501
+
+
+        :return: The allow_cd_withdraw_metadata of this ConsumerDisclosure.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._allow_cd_withdraw_metadata
+
+    @allow_cd_withdraw_metadata.setter
+    def allow_cd_withdraw_metadata(self, allow_cd_withdraw_metadata):
+        &#34;&#34;&#34;Sets the allow_cd_withdraw_metadata of this ConsumerDisclosure.
+
+
+        :param allow_cd_withdraw_metadata: The allow_cd_withdraw_metadata of this ConsumerDisclosure.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._allow_cd_withdraw_metadata = allow_cd_withdraw_metadata
+
+    @property
+    def change_email(self):
+        &#34;&#34;&#34;Gets the change_email of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The change_email of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._change_email
+
+    @change_email.setter
+    def change_email(self, change_email):
+        &#34;&#34;&#34;Sets the change_email of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param change_email: The change_email of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._change_email = change_email
+
+    @property
+    def change_email_other(self):
+        &#34;&#34;&#34;Gets the change_email_other of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The change_email_other of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._change_email_other
+
+    @change_email_other.setter
+    def change_email_other(self, change_email_other):
+        &#34;&#34;&#34;Sets the change_email_other of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param change_email_other: The change_email_other of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._change_email_other = change_email_other
+
+    @property
+    def company_name(self):
+        &#34;&#34;&#34;Gets the company_name of this ConsumerDisclosure.  # noqa: E501
+
+        The name of the company associated with the consumer disclosure.  # noqa: E501
+
+        :return: The company_name of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._company_name
+
+    @company_name.setter
+    def company_name(self, company_name):
+        &#34;&#34;&#34;Sets the company_name of this ConsumerDisclosure.
+
+        The name of the company associated with the consumer disclosure.  # noqa: E501
+
+        :param company_name: The company_name of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._company_name = company_name
+
+    @property
+    def company_phone(self):
+        &#34;&#34;&#34;Gets the company_phone of this ConsumerDisclosure.  # noqa: E501
+
+        The phone number of the company associated with the consumer disclosure.  # noqa: E501
+
+        :return: The company_phone of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._company_phone
+
+    @company_phone.setter
+    def company_phone(self, company_phone):
+        &#34;&#34;&#34;Sets the company_phone of this ConsumerDisclosure.
+
+        The phone number of the company associated with the consumer disclosure.  # noqa: E501
+
+        :param company_phone: The company_phone of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._company_phone = company_phone
+
+    @property
+    def copy_cost_per_page(self):
+        &#34;&#34;&#34;Gets the copy_cost_per_page of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The copy_cost_per_page of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._copy_cost_per_page
+
+    @copy_cost_per_page.setter
+    def copy_cost_per_page(self, copy_cost_per_page):
+        &#34;&#34;&#34;Sets the copy_cost_per_page of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param copy_cost_per_page: The copy_cost_per_page of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._copy_cost_per_page = copy_cost_per_page
+
+    @property
+    def copy_fee_collection_method(self):
+        &#34;&#34;&#34;Gets the copy_fee_collection_method of this ConsumerDisclosure.  # noqa: E501
+
+        Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters  # noqa: E501
+
+        :return: The copy_fee_collection_method of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._copy_fee_collection_method
+
+    @copy_fee_collection_method.setter
+    def copy_fee_collection_method(self, copy_fee_collection_method):
+        &#34;&#34;&#34;Sets the copy_fee_collection_method of this ConsumerDisclosure.
+
+        Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters  # noqa: E501
+
+        :param copy_fee_collection_method: The copy_fee_collection_method of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._copy_fee_collection_method = copy_fee_collection_method
+
+    @property
+    def copy_request_email(self):
+        &#34;&#34;&#34;Gets the copy_request_email of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The copy_request_email of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._copy_request_email
+
+    @copy_request_email.setter
+    def copy_request_email(self, copy_request_email):
+        &#34;&#34;&#34;Sets the copy_request_email of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param copy_request_email: The copy_request_email of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._copy_request_email = copy_request_email
+
+    @property
+    def custom(self):
+        &#34;&#34;&#34;Gets the custom of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom
+
+    @custom.setter
+    def custom(self, custom):
+        &#34;&#34;&#34;Sets the custom of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param custom: The custom of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom = custom
+
+    @property
+    def enable_esign(self):
+        &#34;&#34;&#34;Gets the enable_esign of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_esign of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._enable_esign
+
+    @enable_esign.setter
+    def enable_esign(self, enable_esign):
+        &#34;&#34;&#34;Sets the enable_esign of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param enable_esign: The enable_esign of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._enable_esign = enable_esign
+
+    @property
+    def esign_agreement(self):
+        &#34;&#34;&#34;Gets the esign_agreement of this ConsumerDisclosure.  # noqa: E501
+
+        The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.  # noqa: E501
+
+        :return: The esign_agreement of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._esign_agreement
+
+    @esign_agreement.setter
+    def esign_agreement(self, esign_agreement):
+        &#34;&#34;&#34;Sets the esign_agreement of this ConsumerDisclosure.
+
+        The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.  # noqa: E501
+
+        :param esign_agreement: The esign_agreement of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._esign_agreement = esign_agreement
+
+    @property
+    def esign_text(self):
+        &#34;&#34;&#34;Gets the esign_text of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The esign_text of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._esign_text
+
+    @esign_text.setter
+    def esign_text(self, esign_text):
+        &#34;&#34;&#34;Sets the esign_text of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param esign_text: The esign_text of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._esign_text = esign_text
+
+    @property
+    def language_code(self):
+        &#34;&#34;&#34;Gets the language_code of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The language_code of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._language_code
+
+    @language_code.setter
+    def language_code(self, language_code):
+        &#34;&#34;&#34;Sets the language_code of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param language_code: The language_code of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._language_code = language_code
+
+    @property
+    def must_agree_to_esign(self):
+        &#34;&#34;&#34;Gets the must_agree_to_esign of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The must_agree_to_esign of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._must_agree_to_esign
+
+    @must_agree_to_esign.setter
+    def must_agree_to_esign(self, must_agree_to_esign):
+        &#34;&#34;&#34;Sets the must_agree_to_esign of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param must_agree_to_esign: The must_agree_to_esign of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._must_agree_to_esign = must_agree_to_esign
+
+    @property
+    def pdf_id(self):
+        &#34;&#34;&#34;Gets the pdf_id of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The pdf_id of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._pdf_id
+
+    @pdf_id.setter
+    def pdf_id(self, pdf_id):
+        &#34;&#34;&#34;Sets the pdf_id of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param pdf_id: The pdf_id of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._pdf_id = pdf_id
+
+    @property
+    def use_brand(self):
+        &#34;&#34;&#34;Gets the use_brand of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_brand of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._use_brand
+
+    @use_brand.setter
+    def use_brand(self, use_brand):
+        &#34;&#34;&#34;Sets the use_brand of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param use_brand: The use_brand of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._use_brand = use_brand
+
+    @property
+    def use_consumer_disclosure_within_account(self):
+        &#34;&#34;&#34;Gets the use_consumer_disclosure_within_account of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_consumer_disclosure_within_account of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._use_consumer_disclosure_within_account
+
+    @use_consumer_disclosure_within_account.setter
+    def use_consumer_disclosure_within_account(self, use_consumer_disclosure_within_account):
+        &#34;&#34;&#34;Sets the use_consumer_disclosure_within_account of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param use_consumer_disclosure_within_account: The use_consumer_disclosure_within_account of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._use_consumer_disclosure_within_account = use_consumer_disclosure_within_account
+
+    @property
+    def use_consumer_disclosure_within_account_metadata(self):
+        &#34;&#34;&#34;Gets the use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.  # noqa: E501
+
+
+        :return: The use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._use_consumer_disclosure_within_account_metadata
+
+    @use_consumer_disclosure_within_account_metadata.setter
+    def use_consumer_disclosure_within_account_metadata(self, use_consumer_disclosure_within_account_metadata):
+        &#34;&#34;&#34;Sets the use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.
+
+
+        :param use_consumer_disclosure_within_account_metadata: The use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._use_consumer_disclosure_within_account_metadata = use_consumer_disclosure_within_account_metadata
+
+    @property
+    def withdraw_address_line1(self):
+        &#34;&#34;&#34;Gets the withdraw_address_line1 of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+        :return: The withdraw_address_line1 of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_address_line1
+
+    @withdraw_address_line1.setter
+    def withdraw_address_line1(self, withdraw_address_line1):
+        &#34;&#34;&#34;Sets the withdraw_address_line1 of this ConsumerDisclosure.
+
+        Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+        :param withdraw_address_line1: The withdraw_address_line1 of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_address_line1 = withdraw_address_line1
+
+    @property
+    def withdraw_address_line2(self):
+        &#34;&#34;&#34;Gets the withdraw_address_line2 of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+        :return: The withdraw_address_line2 of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_address_line2
+
+    @withdraw_address_line2.setter
+    def withdraw_address_line2(self, withdraw_address_line2):
+        &#34;&#34;&#34;Sets the withdraw_address_line2 of this ConsumerDisclosure.
+
+        Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+        :param withdraw_address_line2: The withdraw_address_line2 of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_address_line2 = withdraw_address_line2
+
+    @property
+    def withdraw_by_email(self):
+        &#34;&#34;&#34;Gets the withdraw_by_email of this ConsumerDisclosure.  # noqa: E501
+
+        Indicates whether the customer can withdraw consent by email.  # noqa: E501
+
+        :return: The withdraw_by_email of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_by_email
+
+    @withdraw_by_email.setter
+    def withdraw_by_email(self, withdraw_by_email):
+        &#34;&#34;&#34;Sets the withdraw_by_email of this ConsumerDisclosure.
+
+        Indicates whether the customer can withdraw consent by email.  # noqa: E501
+
+        :param withdraw_by_email: The withdraw_by_email of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_by_email = withdraw_by_email
+
+    @property
+    def withdraw_by_mail(self):
+        &#34;&#34;&#34;Gets the withdraw_by_mail of this ConsumerDisclosure.  # noqa: E501
+
+        Indicates whether the customer can withdraw consent by postal mail.  # noqa: E501
+
+        :return: The withdraw_by_mail of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_by_mail
+
+    @withdraw_by_mail.setter
+    def withdraw_by_mail(self, withdraw_by_mail):
+        &#34;&#34;&#34;Sets the withdraw_by_mail of this ConsumerDisclosure.
+
+        Indicates whether the customer can withdraw consent by postal mail.  # noqa: E501
+
+        :param withdraw_by_mail: The withdraw_by_mail of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_by_mail = withdraw_by_mail
+
+    @property
+    def withdraw_by_phone(self):
+        &#34;&#34;&#34;Gets the withdraw_by_phone of this ConsumerDisclosure.  # noqa: E501
+
+        Indicates whether the customer can withdraw consent by phone.  # noqa: E501
+
+        :return: The withdraw_by_phone of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_by_phone
+
+    @withdraw_by_phone.setter
+    def withdraw_by_phone(self, withdraw_by_phone):
+        &#34;&#34;&#34;Sets the withdraw_by_phone of this ConsumerDisclosure.
+
+        Indicates whether the customer can withdraw consent by phone.  # noqa: E501
+
+        :param withdraw_by_phone: The withdraw_by_phone of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_by_phone = withdraw_by_phone
+
+    @property
+    def withdraw_city(self):
+        &#34;&#34;&#34;Gets the withdraw_city of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters.   # noqa: E501
+
+        :return: The withdraw_city of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_city
+
+    @withdraw_city.setter
+    def withdraw_city(self, withdraw_city):
+        &#34;&#34;&#34;Sets the withdraw_city of this ConsumerDisclosure.
+
+        Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters.   # noqa: E501
+
+        :param withdraw_city: The withdraw_city of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_city = withdraw_city
+
+    @property
+    def withdraw_consequences(self):
+        &#34;&#34;&#34;Gets the withdraw_consequences of this ConsumerDisclosure.  # noqa: E501
+
+        Indicates the consequences of withdrawing consent.  # noqa: E501
+
+        :return: The withdraw_consequences of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_consequences
+
+    @withdraw_consequences.setter
+    def withdraw_consequences(self, withdraw_consequences):
+        &#34;&#34;&#34;Sets the withdraw_consequences of this ConsumerDisclosure.
+
+        Indicates the consequences of withdrawing consent.  # noqa: E501
+
+        :param withdraw_consequences: The withdraw_consequences of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_consequences = withdraw_consequences
+
+    @property
+    def withdraw_email(self):
+        &#34;&#34;&#34;Gets the withdraw_email of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+        :return: The withdraw_email of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_email
+
+    @withdraw_email.setter
+    def withdraw_email(self, withdraw_email):
+        &#34;&#34;&#34;Sets the withdraw_email of this ConsumerDisclosure.
+
+        Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+        :param withdraw_email: The withdraw_email of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_email = withdraw_email
+
+    @property
+    def withdraw_other(self):
+        &#34;&#34;&#34;Gets the withdraw_other of this ConsumerDisclosure.  # noqa: E501
+
+        Indicates other information need to withdraw consent.  Maximum length: 255 characters.  # noqa: E501
+
+        :return: The withdraw_other of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_other
+
+    @withdraw_other.setter
+    def withdraw_other(self, withdraw_other):
+        &#34;&#34;&#34;Sets the withdraw_other of this ConsumerDisclosure.
+
+        Indicates other information need to withdraw consent.  Maximum length: 255 characters.  # noqa: E501
+
+        :param withdraw_other: The withdraw_other of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_other = withdraw_other
+
+    @property
+    def withdraw_phone(self):
+        &#34;&#34;&#34;Gets the withdraw_phone of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters.   # noqa: E501
+
+        :return: The withdraw_phone of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_phone
+
+    @withdraw_phone.setter
+    def withdraw_phone(self, withdraw_phone):
+        &#34;&#34;&#34;Sets the withdraw_phone of this ConsumerDisclosure.
+
+        Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters.   # noqa: E501
+
+        :param withdraw_phone: The withdraw_phone of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_phone = withdraw_phone
+
+    @property
+    def withdraw_postal_code(self):
+        &#34;&#34;&#34;Gets the withdraw_postal_code of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters.   # noqa: E501
+
+        :return: The withdraw_postal_code of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_postal_code
+
+    @withdraw_postal_code.setter
+    def withdraw_postal_code(self, withdraw_postal_code):
+        &#34;&#34;&#34;Sets the withdraw_postal_code of this ConsumerDisclosure.
+
+        Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters.   # noqa: E501
+
+        :param withdraw_postal_code: The withdraw_postal_code of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_postal_code = withdraw_postal_code
+
+    @property
+    def withdraw_state(self):
+        &#34;&#34;&#34;Gets the withdraw_state of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the state of the postal address to which a customer can send a consent withdrawal notification.  # noqa: E501
+
+        :return: The withdraw_state of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_state
+
+    @withdraw_state.setter
+    def withdraw_state(self, withdraw_state):
+        &#34;&#34;&#34;Sets the withdraw_state of this ConsumerDisclosure.
+
+        Contains the state of the postal address to which a customer can send a consent withdrawal notification.  # noqa: E501
+
+        :param withdraw_state: The withdraw_state of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_state = withdraw_state
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(ConsumerDisclosure, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, ConsumerDisclosure):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure"><code class="flex name class">
+<span>class <span class="ident">ConsumerDisclosure</span></span>
+<span>(</span><span>account_esign_id=None, allow_cd_withdraw=None, allow_cd_withdraw_metadata=None, change_email=None, change_email_other=None, company_name=None, company_phone=None, copy_cost_per_page=None, copy_fee_collection_method=None, copy_request_email=None, custom=None, enable_esign=None, esign_agreement=None, esign_text=None, language_code=None, must_agree_to_esign=None, pdf_id=None, use_brand=None, use_consumer_disclosure_within_account=None, use_consumer_disclosure_within_account_metadata=None, withdraw_address_line1=None, withdraw_address_line2=None, withdraw_by_email=None, withdraw_by_mail=None, withdraw_by_phone=None, withdraw_city=None, withdraw_consequences=None, withdraw_email=None, withdraw_other=None, withdraw_phone=None, withdraw_postal_code=None, withdraw_state=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>ConsumerDisclosure - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ConsumerDisclosure(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;account_esign_id&#39;: &#39;str&#39;,
+        &#39;allow_cd_withdraw&#39;: &#39;str&#39;,
+        &#39;allow_cd_withdraw_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;change_email&#39;: &#39;str&#39;,
+        &#39;change_email_other&#39;: &#39;str&#39;,
+        &#39;company_name&#39;: &#39;str&#39;,
+        &#39;company_phone&#39;: &#39;str&#39;,
+        &#39;copy_cost_per_page&#39;: &#39;str&#39;,
+        &#39;copy_fee_collection_method&#39;: &#39;str&#39;,
+        &#39;copy_request_email&#39;: &#39;str&#39;,
+        &#39;custom&#39;: &#39;str&#39;,
+        &#39;enable_esign&#39;: &#39;str&#39;,
+        &#39;esign_agreement&#39;: &#39;str&#39;,
+        &#39;esign_text&#39;: &#39;str&#39;,
+        &#39;language_code&#39;: &#39;str&#39;,
+        &#39;must_agree_to_esign&#39;: &#39;str&#39;,
+        &#39;pdf_id&#39;: &#39;str&#39;,
+        &#39;use_brand&#39;: &#39;str&#39;,
+        &#39;use_consumer_disclosure_within_account&#39;: &#39;str&#39;,
+        &#39;use_consumer_disclosure_within_account_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;withdraw_address_line1&#39;: &#39;str&#39;,
+        &#39;withdraw_address_line2&#39;: &#39;str&#39;,
+        &#39;withdraw_by_email&#39;: &#39;str&#39;,
+        &#39;withdraw_by_mail&#39;: &#39;str&#39;,
+        &#39;withdraw_by_phone&#39;: &#39;str&#39;,
+        &#39;withdraw_city&#39;: &#39;str&#39;,
+        &#39;withdraw_consequences&#39;: &#39;str&#39;,
+        &#39;withdraw_email&#39;: &#39;str&#39;,
+        &#39;withdraw_other&#39;: &#39;str&#39;,
+        &#39;withdraw_phone&#39;: &#39;str&#39;,
+        &#39;withdraw_postal_code&#39;: &#39;str&#39;,
+        &#39;withdraw_state&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;account_esign_id&#39;: &#39;accountEsignId&#39;,
+        &#39;allow_cd_withdraw&#39;: &#39;allowCDWithdraw&#39;,
+        &#39;allow_cd_withdraw_metadata&#39;: &#39;allowCDWithdrawMetadata&#39;,
+        &#39;change_email&#39;: &#39;changeEmail&#39;,
+        &#39;change_email_other&#39;: &#39;changeEmailOther&#39;,
+        &#39;company_name&#39;: &#39;companyName&#39;,
+        &#39;company_phone&#39;: &#39;companyPhone&#39;,
+        &#39;copy_cost_per_page&#39;: &#39;copyCostPerPage&#39;,
+        &#39;copy_fee_collection_method&#39;: &#39;copyFeeCollectionMethod&#39;,
+        &#39;copy_request_email&#39;: &#39;copyRequestEmail&#39;,
+        &#39;custom&#39;: &#39;custom&#39;,
+        &#39;enable_esign&#39;: &#39;enableEsign&#39;,
+        &#39;esign_agreement&#39;: &#39;esignAgreement&#39;,
+        &#39;esign_text&#39;: &#39;esignText&#39;,
+        &#39;language_code&#39;: &#39;languageCode&#39;,
+        &#39;must_agree_to_esign&#39;: &#39;mustAgreeToEsign&#39;,
+        &#39;pdf_id&#39;: &#39;pdfId&#39;,
+        &#39;use_brand&#39;: &#39;useBrand&#39;,
+        &#39;use_consumer_disclosure_within_account&#39;: &#39;useConsumerDisclosureWithinAccount&#39;,
+        &#39;use_consumer_disclosure_within_account_metadata&#39;: &#39;useConsumerDisclosureWithinAccountMetadata&#39;,
+        &#39;withdraw_address_line1&#39;: &#39;withdrawAddressLine1&#39;,
+        &#39;withdraw_address_line2&#39;: &#39;withdrawAddressLine2&#39;,
+        &#39;withdraw_by_email&#39;: &#39;withdrawByEmail&#39;,
+        &#39;withdraw_by_mail&#39;: &#39;withdrawByMail&#39;,
+        &#39;withdraw_by_phone&#39;: &#39;withdrawByPhone&#39;,
+        &#39;withdraw_city&#39;: &#39;withdrawCity&#39;,
+        &#39;withdraw_consequences&#39;: &#39;withdrawConsequences&#39;,
+        &#39;withdraw_email&#39;: &#39;withdrawEmail&#39;,
+        &#39;withdraw_other&#39;: &#39;withdrawOther&#39;,
+        &#39;withdraw_phone&#39;: &#39;withdrawPhone&#39;,
+        &#39;withdraw_postal_code&#39;: &#39;withdrawPostalCode&#39;,
+        &#39;withdraw_state&#39;: &#39;withdrawState&#39;
+    }
+
+    def __init__(self, account_esign_id=None, allow_cd_withdraw=None, allow_cd_withdraw_metadata=None, change_email=None, change_email_other=None, company_name=None, company_phone=None, copy_cost_per_page=None, copy_fee_collection_method=None, copy_request_email=None, custom=None, enable_esign=None, esign_agreement=None, esign_text=None, language_code=None, must_agree_to_esign=None, pdf_id=None, use_brand=None, use_consumer_disclosure_within_account=None, use_consumer_disclosure_within_account_metadata=None, withdraw_address_line1=None, withdraw_address_line2=None, withdraw_by_email=None, withdraw_by_mail=None, withdraw_by_phone=None, withdraw_city=None, withdraw_consequences=None, withdraw_email=None, withdraw_other=None, withdraw_phone=None, withdraw_postal_code=None, withdraw_state=None):  # noqa: E501
+        &#34;&#34;&#34;ConsumerDisclosure - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._account_esign_id = None
+        self._allow_cd_withdraw = None
+        self._allow_cd_withdraw_metadata = None
+        self._change_email = None
+        self._change_email_other = None
+        self._company_name = None
+        self._company_phone = None
+        self._copy_cost_per_page = None
+        self._copy_fee_collection_method = None
+        self._copy_request_email = None
+        self._custom = None
+        self._enable_esign = None
+        self._esign_agreement = None
+        self._esign_text = None
+        self._language_code = None
+        self._must_agree_to_esign = None
+        self._pdf_id = None
+        self._use_brand = None
+        self._use_consumer_disclosure_within_account = None
+        self._use_consumer_disclosure_within_account_metadata = None
+        self._withdraw_address_line1 = None
+        self._withdraw_address_line2 = None
+        self._withdraw_by_email = None
+        self._withdraw_by_mail = None
+        self._withdraw_by_phone = None
+        self._withdraw_city = None
+        self._withdraw_consequences = None
+        self._withdraw_email = None
+        self._withdraw_other = None
+        self._withdraw_phone = None
+        self._withdraw_postal_code = None
+        self._withdraw_state = None
+        self.discriminator = None
+
+        if account_esign_id is not None:
+            self.account_esign_id = account_esign_id
+        if allow_cd_withdraw is not None:
+            self.allow_cd_withdraw = allow_cd_withdraw
+        if allow_cd_withdraw_metadata is not None:
+            self.allow_cd_withdraw_metadata = allow_cd_withdraw_metadata
+        if change_email is not None:
+            self.change_email = change_email
+        if change_email_other is not None:
+            self.change_email_other = change_email_other
+        if company_name is not None:
+            self.company_name = company_name
+        if company_phone is not None:
+            self.company_phone = company_phone
+        if copy_cost_per_page is not None:
+            self.copy_cost_per_page = copy_cost_per_page
+        if copy_fee_collection_method is not None:
+            self.copy_fee_collection_method = copy_fee_collection_method
+        if copy_request_email is not None:
+            self.copy_request_email = copy_request_email
+        if custom is not None:
+            self.custom = custom
+        if enable_esign is not None:
+            self.enable_esign = enable_esign
+        if esign_agreement is not None:
+            self.esign_agreement = esign_agreement
+        if esign_text is not None:
+            self.esign_text = esign_text
+        if language_code is not None:
+            self.language_code = language_code
+        if must_agree_to_esign is not None:
+            self.must_agree_to_esign = must_agree_to_esign
+        if pdf_id is not None:
+            self.pdf_id = pdf_id
+        if use_brand is not None:
+            self.use_brand = use_brand
+        if use_consumer_disclosure_within_account is not None:
+            self.use_consumer_disclosure_within_account = use_consumer_disclosure_within_account
+        if use_consumer_disclosure_within_account_metadata is not None:
+            self.use_consumer_disclosure_within_account_metadata = use_consumer_disclosure_within_account_metadata
+        if withdraw_address_line1 is not None:
+            self.withdraw_address_line1 = withdraw_address_line1
+        if withdraw_address_line2 is not None:
+            self.withdraw_address_line2 = withdraw_address_line2
+        if withdraw_by_email is not None:
+            self.withdraw_by_email = withdraw_by_email
+        if withdraw_by_mail is not None:
+            self.withdraw_by_mail = withdraw_by_mail
+        if withdraw_by_phone is not None:
+            self.withdraw_by_phone = withdraw_by_phone
+        if withdraw_city is not None:
+            self.withdraw_city = withdraw_city
+        if withdraw_consequences is not None:
+            self.withdraw_consequences = withdraw_consequences
+        if withdraw_email is not None:
+            self.withdraw_email = withdraw_email
+        if withdraw_other is not None:
+            self.withdraw_other = withdraw_other
+        if withdraw_phone is not None:
+            self.withdraw_phone = withdraw_phone
+        if withdraw_postal_code is not None:
+            self.withdraw_postal_code = withdraw_postal_code
+        if withdraw_state is not None:
+            self.withdraw_state = withdraw_state
+
+    @property
+    def account_esign_id(self):
+        &#34;&#34;&#34;Gets the account_esign_id of this ConsumerDisclosure.  # noqa: E501
+
+        A GUID identifying the account associated with the consumer disclosure  # noqa: E501
+
+        :return: The account_esign_id of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._account_esign_id
+
+    @account_esign_id.setter
+    def account_esign_id(self, account_esign_id):
+        &#34;&#34;&#34;Sets the account_esign_id of this ConsumerDisclosure.
+
+        A GUID identifying the account associated with the consumer disclosure  # noqa: E501
+
+        :param account_esign_id: The account_esign_id of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._account_esign_id = account_esign_id
+
+    @property
+    def allow_cd_withdraw(self):
+        &#34;&#34;&#34;Gets the allow_cd_withdraw of this ConsumerDisclosure.  # noqa: E501
+
+        Indicates whether the customer can withdraw their acceptance of the consumer disclosure.  # noqa: E501
+
+        :return: The allow_cd_withdraw of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._allow_cd_withdraw
+
+    @allow_cd_withdraw.setter
+    def allow_cd_withdraw(self, allow_cd_withdraw):
+        &#34;&#34;&#34;Sets the allow_cd_withdraw of this ConsumerDisclosure.
+
+        Indicates whether the customer can withdraw their acceptance of the consumer disclosure.  # noqa: E501
+
+        :param allow_cd_withdraw: The allow_cd_withdraw of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._allow_cd_withdraw = allow_cd_withdraw
+
+    @property
+    def allow_cd_withdraw_metadata(self):
+        &#34;&#34;&#34;Gets the allow_cd_withdraw_metadata of this ConsumerDisclosure.  # noqa: E501
+
+
+        :return: The allow_cd_withdraw_metadata of this ConsumerDisclosure.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._allow_cd_withdraw_metadata
+
+    @allow_cd_withdraw_metadata.setter
+    def allow_cd_withdraw_metadata(self, allow_cd_withdraw_metadata):
+        &#34;&#34;&#34;Sets the allow_cd_withdraw_metadata of this ConsumerDisclosure.
+
+
+        :param allow_cd_withdraw_metadata: The allow_cd_withdraw_metadata of this ConsumerDisclosure.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._allow_cd_withdraw_metadata = allow_cd_withdraw_metadata
+
+    @property
+    def change_email(self):
+        &#34;&#34;&#34;Gets the change_email of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The change_email of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._change_email
+
+    @change_email.setter
+    def change_email(self, change_email):
+        &#34;&#34;&#34;Sets the change_email of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param change_email: The change_email of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._change_email = change_email
+
+    @property
+    def change_email_other(self):
+        &#34;&#34;&#34;Gets the change_email_other of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The change_email_other of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._change_email_other
+
+    @change_email_other.setter
+    def change_email_other(self, change_email_other):
+        &#34;&#34;&#34;Sets the change_email_other of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param change_email_other: The change_email_other of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._change_email_other = change_email_other
+
+    @property
+    def company_name(self):
+        &#34;&#34;&#34;Gets the company_name of this ConsumerDisclosure.  # noqa: E501
+
+        The name of the company associated with the consumer disclosure.  # noqa: E501
+
+        :return: The company_name of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._company_name
+
+    @company_name.setter
+    def company_name(self, company_name):
+        &#34;&#34;&#34;Sets the company_name of this ConsumerDisclosure.
+
+        The name of the company associated with the consumer disclosure.  # noqa: E501
+
+        :param company_name: The company_name of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._company_name = company_name
+
+    @property
+    def company_phone(self):
+        &#34;&#34;&#34;Gets the company_phone of this ConsumerDisclosure.  # noqa: E501
+
+        The phone number of the company associated with the consumer disclosure.  # noqa: E501
+
+        :return: The company_phone of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._company_phone
+
+    @company_phone.setter
+    def company_phone(self, company_phone):
+        &#34;&#34;&#34;Sets the company_phone of this ConsumerDisclosure.
+
+        The phone number of the company associated with the consumer disclosure.  # noqa: E501
+
+        :param company_phone: The company_phone of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._company_phone = company_phone
+
+    @property
+    def copy_cost_per_page(self):
+        &#34;&#34;&#34;Gets the copy_cost_per_page of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The copy_cost_per_page of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._copy_cost_per_page
+
+    @copy_cost_per_page.setter
+    def copy_cost_per_page(self, copy_cost_per_page):
+        &#34;&#34;&#34;Sets the copy_cost_per_page of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param copy_cost_per_page: The copy_cost_per_page of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._copy_cost_per_page = copy_cost_per_page
+
+    @property
+    def copy_fee_collection_method(self):
+        &#34;&#34;&#34;Gets the copy_fee_collection_method of this ConsumerDisclosure.  # noqa: E501
+
+        Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters  # noqa: E501
+
+        :return: The copy_fee_collection_method of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._copy_fee_collection_method
+
+    @copy_fee_collection_method.setter
+    def copy_fee_collection_method(self, copy_fee_collection_method):
+        &#34;&#34;&#34;Sets the copy_fee_collection_method of this ConsumerDisclosure.
+
+        Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters  # noqa: E501
+
+        :param copy_fee_collection_method: The copy_fee_collection_method of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._copy_fee_collection_method = copy_fee_collection_method
+
+    @property
+    def copy_request_email(self):
+        &#34;&#34;&#34;Gets the copy_request_email of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The copy_request_email of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._copy_request_email
+
+    @copy_request_email.setter
+    def copy_request_email(self, copy_request_email):
+        &#34;&#34;&#34;Sets the copy_request_email of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param copy_request_email: The copy_request_email of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._copy_request_email = copy_request_email
+
+    @property
+    def custom(self):
+        &#34;&#34;&#34;Gets the custom of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom
+
+    @custom.setter
+    def custom(self, custom):
+        &#34;&#34;&#34;Sets the custom of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param custom: The custom of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom = custom
+
+    @property
+    def enable_esign(self):
+        &#34;&#34;&#34;Gets the enable_esign of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_esign of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._enable_esign
+
+    @enable_esign.setter
+    def enable_esign(self, enable_esign):
+        &#34;&#34;&#34;Sets the enable_esign of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param enable_esign: The enable_esign of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._enable_esign = enable_esign
+
+    @property
+    def esign_agreement(self):
+        &#34;&#34;&#34;Gets the esign_agreement of this ConsumerDisclosure.  # noqa: E501
+
+        The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.  # noqa: E501
+
+        :return: The esign_agreement of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._esign_agreement
+
+    @esign_agreement.setter
+    def esign_agreement(self, esign_agreement):
+        &#34;&#34;&#34;Sets the esign_agreement of this ConsumerDisclosure.
+
+        The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.  # noqa: E501
+
+        :param esign_agreement: The esign_agreement of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._esign_agreement = esign_agreement
+
+    @property
+    def esign_text(self):
+        &#34;&#34;&#34;Gets the esign_text of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The esign_text of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._esign_text
+
+    @esign_text.setter
+    def esign_text(self, esign_text):
+        &#34;&#34;&#34;Sets the esign_text of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param esign_text: The esign_text of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._esign_text = esign_text
+
+    @property
+    def language_code(self):
+        &#34;&#34;&#34;Gets the language_code of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The language_code of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._language_code
+
+    @language_code.setter
+    def language_code(self, language_code):
+        &#34;&#34;&#34;Sets the language_code of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param language_code: The language_code of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._language_code = language_code
+
+    @property
+    def must_agree_to_esign(self):
+        &#34;&#34;&#34;Gets the must_agree_to_esign of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The must_agree_to_esign of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._must_agree_to_esign
+
+    @must_agree_to_esign.setter
+    def must_agree_to_esign(self, must_agree_to_esign):
+        &#34;&#34;&#34;Sets the must_agree_to_esign of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param must_agree_to_esign: The must_agree_to_esign of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._must_agree_to_esign = must_agree_to_esign
+
+    @property
+    def pdf_id(self):
+        &#34;&#34;&#34;Gets the pdf_id of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The pdf_id of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._pdf_id
+
+    @pdf_id.setter
+    def pdf_id(self, pdf_id):
+        &#34;&#34;&#34;Sets the pdf_id of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param pdf_id: The pdf_id of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._pdf_id = pdf_id
+
+    @property
+    def use_brand(self):
+        &#34;&#34;&#34;Gets the use_brand of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_brand of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._use_brand
+
+    @use_brand.setter
+    def use_brand(self, use_brand):
+        &#34;&#34;&#34;Sets the use_brand of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param use_brand: The use_brand of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._use_brand = use_brand
+
+    @property
+    def use_consumer_disclosure_within_account(self):
+        &#34;&#34;&#34;Gets the use_consumer_disclosure_within_account of this ConsumerDisclosure.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_consumer_disclosure_within_account of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._use_consumer_disclosure_within_account
+
+    @use_consumer_disclosure_within_account.setter
+    def use_consumer_disclosure_within_account(self, use_consumer_disclosure_within_account):
+        &#34;&#34;&#34;Sets the use_consumer_disclosure_within_account of this ConsumerDisclosure.
+
+          # noqa: E501
+
+        :param use_consumer_disclosure_within_account: The use_consumer_disclosure_within_account of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._use_consumer_disclosure_within_account = use_consumer_disclosure_within_account
+
+    @property
+    def use_consumer_disclosure_within_account_metadata(self):
+        &#34;&#34;&#34;Gets the use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.  # noqa: E501
+
+
+        :return: The use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._use_consumer_disclosure_within_account_metadata
+
+    @use_consumer_disclosure_within_account_metadata.setter
+    def use_consumer_disclosure_within_account_metadata(self, use_consumer_disclosure_within_account_metadata):
+        &#34;&#34;&#34;Sets the use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.
+
+
+        :param use_consumer_disclosure_within_account_metadata: The use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._use_consumer_disclosure_within_account_metadata = use_consumer_disclosure_within_account_metadata
+
+    @property
+    def withdraw_address_line1(self):
+        &#34;&#34;&#34;Gets the withdraw_address_line1 of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+        :return: The withdraw_address_line1 of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_address_line1
+
+    @withdraw_address_line1.setter
+    def withdraw_address_line1(self, withdraw_address_line1):
+        &#34;&#34;&#34;Sets the withdraw_address_line1 of this ConsumerDisclosure.
+
+        Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+        :param withdraw_address_line1: The withdraw_address_line1 of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_address_line1 = withdraw_address_line1
+
+    @property
+    def withdraw_address_line2(self):
+        &#34;&#34;&#34;Gets the withdraw_address_line2 of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+        :return: The withdraw_address_line2 of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_address_line2
+
+    @withdraw_address_line2.setter
+    def withdraw_address_line2(self, withdraw_address_line2):
+        &#34;&#34;&#34;Sets the withdraw_address_line2 of this ConsumerDisclosure.
+
+        Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+        :param withdraw_address_line2: The withdraw_address_line2 of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_address_line2 = withdraw_address_line2
+
+    @property
+    def withdraw_by_email(self):
+        &#34;&#34;&#34;Gets the withdraw_by_email of this ConsumerDisclosure.  # noqa: E501
+
+        Indicates whether the customer can withdraw consent by email.  # noqa: E501
+
+        :return: The withdraw_by_email of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_by_email
+
+    @withdraw_by_email.setter
+    def withdraw_by_email(self, withdraw_by_email):
+        &#34;&#34;&#34;Sets the withdraw_by_email of this ConsumerDisclosure.
+
+        Indicates whether the customer can withdraw consent by email.  # noqa: E501
+
+        :param withdraw_by_email: The withdraw_by_email of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_by_email = withdraw_by_email
+
+    @property
+    def withdraw_by_mail(self):
+        &#34;&#34;&#34;Gets the withdraw_by_mail of this ConsumerDisclosure.  # noqa: E501
+
+        Indicates whether the customer can withdraw consent by postal mail.  # noqa: E501
+
+        :return: The withdraw_by_mail of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_by_mail
+
+    @withdraw_by_mail.setter
+    def withdraw_by_mail(self, withdraw_by_mail):
+        &#34;&#34;&#34;Sets the withdraw_by_mail of this ConsumerDisclosure.
+
+        Indicates whether the customer can withdraw consent by postal mail.  # noqa: E501
+
+        :param withdraw_by_mail: The withdraw_by_mail of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_by_mail = withdraw_by_mail
+
+    @property
+    def withdraw_by_phone(self):
+        &#34;&#34;&#34;Gets the withdraw_by_phone of this ConsumerDisclosure.  # noqa: E501
+
+        Indicates whether the customer can withdraw consent by phone.  # noqa: E501
+
+        :return: The withdraw_by_phone of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_by_phone
+
+    @withdraw_by_phone.setter
+    def withdraw_by_phone(self, withdraw_by_phone):
+        &#34;&#34;&#34;Sets the withdraw_by_phone of this ConsumerDisclosure.
+
+        Indicates whether the customer can withdraw consent by phone.  # noqa: E501
+
+        :param withdraw_by_phone: The withdraw_by_phone of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_by_phone = withdraw_by_phone
+
+    @property
+    def withdraw_city(self):
+        &#34;&#34;&#34;Gets the withdraw_city of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters.   # noqa: E501
+
+        :return: The withdraw_city of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_city
+
+    @withdraw_city.setter
+    def withdraw_city(self, withdraw_city):
+        &#34;&#34;&#34;Sets the withdraw_city of this ConsumerDisclosure.
+
+        Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters.   # noqa: E501
+
+        :param withdraw_city: The withdraw_city of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_city = withdraw_city
+
+    @property
+    def withdraw_consequences(self):
+        &#34;&#34;&#34;Gets the withdraw_consequences of this ConsumerDisclosure.  # noqa: E501
+
+        Indicates the consequences of withdrawing consent.  # noqa: E501
+
+        :return: The withdraw_consequences of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_consequences
+
+    @withdraw_consequences.setter
+    def withdraw_consequences(self, withdraw_consequences):
+        &#34;&#34;&#34;Sets the withdraw_consequences of this ConsumerDisclosure.
+
+        Indicates the consequences of withdrawing consent.  # noqa: E501
+
+        :param withdraw_consequences: The withdraw_consequences of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_consequences = withdraw_consequences
+
+    @property
+    def withdraw_email(self):
+        &#34;&#34;&#34;Gets the withdraw_email of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+        :return: The withdraw_email of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_email
+
+    @withdraw_email.setter
+    def withdraw_email(self, withdraw_email):
+        &#34;&#34;&#34;Sets the withdraw_email of this ConsumerDisclosure.
+
+        Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+        :param withdraw_email: The withdraw_email of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_email = withdraw_email
+
+    @property
+    def withdraw_other(self):
+        &#34;&#34;&#34;Gets the withdraw_other of this ConsumerDisclosure.  # noqa: E501
+
+        Indicates other information need to withdraw consent.  Maximum length: 255 characters.  # noqa: E501
+
+        :return: The withdraw_other of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_other
+
+    @withdraw_other.setter
+    def withdraw_other(self, withdraw_other):
+        &#34;&#34;&#34;Sets the withdraw_other of this ConsumerDisclosure.
+
+        Indicates other information need to withdraw consent.  Maximum length: 255 characters.  # noqa: E501
+
+        :param withdraw_other: The withdraw_other of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_other = withdraw_other
+
+    @property
+    def withdraw_phone(self):
+        &#34;&#34;&#34;Gets the withdraw_phone of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters.   # noqa: E501
+
+        :return: The withdraw_phone of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_phone
+
+    @withdraw_phone.setter
+    def withdraw_phone(self, withdraw_phone):
+        &#34;&#34;&#34;Sets the withdraw_phone of this ConsumerDisclosure.
+
+        Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters.   # noqa: E501
+
+        :param withdraw_phone: The withdraw_phone of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_phone = withdraw_phone
+
+    @property
+    def withdraw_postal_code(self):
+        &#34;&#34;&#34;Gets the withdraw_postal_code of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters.   # noqa: E501
+
+        :return: The withdraw_postal_code of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_postal_code
+
+    @withdraw_postal_code.setter
+    def withdraw_postal_code(self, withdraw_postal_code):
+        &#34;&#34;&#34;Sets the withdraw_postal_code of this ConsumerDisclosure.
+
+        Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters.   # noqa: E501
+
+        :param withdraw_postal_code: The withdraw_postal_code of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_postal_code = withdraw_postal_code
+
+    @property
+    def withdraw_state(self):
+        &#34;&#34;&#34;Gets the withdraw_state of this ConsumerDisclosure.  # noqa: E501
+
+        Contains the state of the postal address to which a customer can send a consent withdrawal notification.  # noqa: E501
+
+        :return: The withdraw_state of this ConsumerDisclosure.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._withdraw_state
+
+    @withdraw_state.setter
+    def withdraw_state(self, withdraw_state):
+        &#34;&#34;&#34;Sets the withdraw_state of this ConsumerDisclosure.
+
+        Contains the state of the postal address to which a customer can send a consent withdrawal notification.  # noqa: E501
+
+        :param withdraw_state: The withdraw_state of this ConsumerDisclosure.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._withdraw_state = withdraw_state
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(ConsumerDisclosure, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, ConsumerDisclosure):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.account_esign_id"><code class="name">var <span class="ident">account_esign_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the account_esign_id of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>A GUID identifying the account associated with the consumer disclosure
+# noqa: E501</p>
+<p>:return: The account_esign_id of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def account_esign_id(self):
+    &#34;&#34;&#34;Gets the account_esign_id of this ConsumerDisclosure.  # noqa: E501
+
+    A GUID identifying the account associated with the consumer disclosure  # noqa: E501
+
+    :return: The account_esign_id of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._account_esign_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.allow_cd_withdraw"><code class="name">var <span class="ident">allow_cd_withdraw</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the allow_cd_withdraw of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Indicates whether the customer can withdraw their acceptance of the consumer disclosure.
+# noqa: E501</p>
+<p>:return: The allow_cd_withdraw of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def allow_cd_withdraw(self):
+    &#34;&#34;&#34;Gets the allow_cd_withdraw of this ConsumerDisclosure.  # noqa: E501
+
+    Indicates whether the customer can withdraw their acceptance of the consumer disclosure.  # noqa: E501
+
+    :return: The allow_cd_withdraw of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._allow_cd_withdraw</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.allow_cd_withdraw_metadata"><code class="name">var <span class="ident">allow_cd_withdraw_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the allow_cd_withdraw_metadata of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>:return: The allow_cd_withdraw_metadata of this ConsumerDisclosure.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def allow_cd_withdraw_metadata(self):
+    &#34;&#34;&#34;Gets the allow_cd_withdraw_metadata of this ConsumerDisclosure.  # noqa: E501
+
+
+    :return: The allow_cd_withdraw_metadata of this ConsumerDisclosure.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._allow_cd_withdraw_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.change_email"><code class="name">var <span class="ident">change_email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the change_email of this ConsumerDisclosure.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The change_email of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def change_email(self):
+    &#34;&#34;&#34;Gets the change_email of this ConsumerDisclosure.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The change_email of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._change_email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.change_email_other"><code class="name">var <span class="ident">change_email_other</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the change_email_other of this ConsumerDisclosure.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The change_email_other of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def change_email_other(self):
+    &#34;&#34;&#34;Gets the change_email_other of this ConsumerDisclosure.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The change_email_other of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._change_email_other</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.company_name"><code class="name">var <span class="ident">company_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the company_name of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>The name of the company associated with the consumer disclosure.
+# noqa: E501</p>
+<p>:return: The company_name of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def company_name(self):
+    &#34;&#34;&#34;Gets the company_name of this ConsumerDisclosure.  # noqa: E501
+
+    The name of the company associated with the consumer disclosure.  # noqa: E501
+
+    :return: The company_name of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._company_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.company_phone"><code class="name">var <span class="ident">company_phone</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the company_phone of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>The phone number of the company associated with the consumer disclosure.
+# noqa: E501</p>
+<p>:return: The company_phone of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def company_phone(self):
+    &#34;&#34;&#34;Gets the company_phone of this ConsumerDisclosure.  # noqa: E501
+
+    The phone number of the company associated with the consumer disclosure.  # noqa: E501
+
+    :return: The company_phone of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._company_phone</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.copy_cost_per_page"><code class="name">var <span class="ident">copy_cost_per_page</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the copy_cost_per_page of this ConsumerDisclosure.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The copy_cost_per_page of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def copy_cost_per_page(self):
+    &#34;&#34;&#34;Gets the copy_cost_per_page of this ConsumerDisclosure.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The copy_cost_per_page of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._copy_cost_per_page</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.copy_fee_collection_method"><code class="name">var <span class="ident">copy_fee_collection_method</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the copy_fee_collection_method of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Specifies the fee collection method for cases in which the customer requires paper copies of the document.
+Maximum Length: 255 characters
+# noqa: E501</p>
+<p>:return: The copy_fee_collection_method of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def copy_fee_collection_method(self):
+    &#34;&#34;&#34;Gets the copy_fee_collection_method of this ConsumerDisclosure.  # noqa: E501
+
+    Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters  # noqa: E501
+
+    :return: The copy_fee_collection_method of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._copy_fee_collection_method</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.copy_request_email"><code class="name">var <span class="ident">copy_request_email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the copy_request_email of this ConsumerDisclosure.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The copy_request_email of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def copy_request_email(self):
+    &#34;&#34;&#34;Gets the copy_request_email of this ConsumerDisclosure.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The copy_request_email of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._copy_request_email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.custom"><code class="name">var <span class="ident">custom</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the custom of this ConsumerDisclosure.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The custom of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def custom(self):
+    &#34;&#34;&#34;Gets the custom of this ConsumerDisclosure.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The custom of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._custom</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.enable_esign"><code class="name">var <span class="ident">enable_esign</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the enable_esign of this ConsumerDisclosure.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The enable_esign of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def enable_esign(self):
+    &#34;&#34;&#34;Gets the enable_esign of this ConsumerDisclosure.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The enable_esign of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._enable_esign</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.esign_agreement"><code class="name">var <span class="ident">esign_agreement</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the esign_agreement of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.
+# noqa: E501</p>
+<p>:return: The esign_agreement of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def esign_agreement(self):
+    &#34;&#34;&#34;Gets the esign_agreement of this ConsumerDisclosure.  # noqa: E501
+
+    The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.  # noqa: E501
+
+    :return: The esign_agreement of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._esign_agreement</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.esign_text"><code class="name">var <span class="ident">esign_text</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the esign_text of this ConsumerDisclosure.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The esign_text of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def esign_text(self):
+    &#34;&#34;&#34;Gets the esign_text of this ConsumerDisclosure.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The esign_text of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._esign_text</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.language_code"><code class="name">var <span class="ident">language_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the language_code of this ConsumerDisclosure.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The language_code of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def language_code(self):
+    &#34;&#34;&#34;Gets the language_code of this ConsumerDisclosure.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The language_code of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._language_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.must_agree_to_esign"><code class="name">var <span class="ident">must_agree_to_esign</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the must_agree_to_esign of this ConsumerDisclosure.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The must_agree_to_esign of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def must_agree_to_esign(self):
+    &#34;&#34;&#34;Gets the must_agree_to_esign of this ConsumerDisclosure.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The must_agree_to_esign of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._must_agree_to_esign</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.pdf_id"><code class="name">var <span class="ident">pdf_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the pdf_id of this ConsumerDisclosure.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The pdf_id of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def pdf_id(self):
+    &#34;&#34;&#34;Gets the pdf_id of this ConsumerDisclosure.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The pdf_id of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._pdf_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.use_brand"><code class="name">var <span class="ident">use_brand</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the use_brand of this ConsumerDisclosure.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The use_brand of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def use_brand(self):
+    &#34;&#34;&#34;Gets the use_brand of this ConsumerDisclosure.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The use_brand of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._use_brand</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.use_consumer_disclosure_within_account"><code class="name">var <span class="ident">use_consumer_disclosure_within_account</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the use_consumer_disclosure_within_account of this ConsumerDisclosure.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The use_consumer_disclosure_within_account of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def use_consumer_disclosure_within_account(self):
+    &#34;&#34;&#34;Gets the use_consumer_disclosure_within_account of this ConsumerDisclosure.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The use_consumer_disclosure_within_account of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._use_consumer_disclosure_within_account</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.use_consumer_disclosure_within_account_metadata"><code class="name">var <span class="ident">use_consumer_disclosure_within_account_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>:return: The use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def use_consumer_disclosure_within_account_metadata(self):
+    &#34;&#34;&#34;Gets the use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.  # noqa: E501
+
+
+    :return: The use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._use_consumer_disclosure_within_account_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_address_line1"><code class="name">var <span class="ident">withdraw_address_line1</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the withdraw_address_line1 of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.
+Maximum length: 100 characters.
+# noqa: E501</p>
+<p>:return: The withdraw_address_line1 of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def withdraw_address_line1(self):
+    &#34;&#34;&#34;Gets the withdraw_address_line1 of this ConsumerDisclosure.  # noqa: E501
+
+    Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+    :return: The withdraw_address_line1 of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._withdraw_address_line1</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_address_line2"><code class="name">var <span class="ident">withdraw_address_line2</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the withdraw_address_line2 of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.
+Maximum length: 100 characters.
+# noqa: E501</p>
+<p>:return: The withdraw_address_line2 of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def withdraw_address_line2(self):
+    &#34;&#34;&#34;Gets the withdraw_address_line2 of this ConsumerDisclosure.  # noqa: E501
+
+    Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+    :return: The withdraw_address_line2 of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._withdraw_address_line2</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_by_email"><code class="name">var <span class="ident">withdraw_by_email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the withdraw_by_email of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Indicates whether the customer can withdraw consent by email.
+# noqa: E501</p>
+<p>:return: The withdraw_by_email of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def withdraw_by_email(self):
+    &#34;&#34;&#34;Gets the withdraw_by_email of this ConsumerDisclosure.  # noqa: E501
+
+    Indicates whether the customer can withdraw consent by email.  # noqa: E501
+
+    :return: The withdraw_by_email of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._withdraw_by_email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_by_mail"><code class="name">var <span class="ident">withdraw_by_mail</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the withdraw_by_mail of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Indicates whether the customer can withdraw consent by postal mail.
+# noqa: E501</p>
+<p>:return: The withdraw_by_mail of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def withdraw_by_mail(self):
+    &#34;&#34;&#34;Gets the withdraw_by_mail of this ConsumerDisclosure.  # noqa: E501
+
+    Indicates whether the customer can withdraw consent by postal mail.  # noqa: E501
+
+    :return: The withdraw_by_mail of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._withdraw_by_mail</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_by_phone"><code class="name">var <span class="ident">withdraw_by_phone</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the withdraw_by_phone of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Indicates whether the customer can withdraw consent by phone.
+# noqa: E501</p>
+<p>:return: The withdraw_by_phone of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def withdraw_by_phone(self):
+    &#34;&#34;&#34;Gets the withdraw_by_phone of this ConsumerDisclosure.  # noqa: E501
+
+    Indicates whether the customer can withdraw consent by phone.  # noqa: E501
+
+    :return: The withdraw_by_phone of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._withdraw_by_phone</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_city"><code class="name">var <span class="ident">withdraw_city</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the withdraw_city of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Contains the city of the postal address to which a customer can send a consent withdrawal notification.
+Maximum length: 50 characters.
+# noqa: E501</p>
+<p>:return: The withdraw_city of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def withdraw_city(self):
+    &#34;&#34;&#34;Gets the withdraw_city of this ConsumerDisclosure.  # noqa: E501
+
+    Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters.   # noqa: E501
+
+    :return: The withdraw_city of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._withdraw_city</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_consequences"><code class="name">var <span class="ident">withdraw_consequences</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the withdraw_consequences of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Indicates the consequences of withdrawing consent.
+# noqa: E501</p>
+<p>:return: The withdraw_consequences of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def withdraw_consequences(self):
+    &#34;&#34;&#34;Gets the withdraw_consequences of this ConsumerDisclosure.  # noqa: E501
+
+    Indicates the consequences of withdrawing consent.  # noqa: E501
+
+    :return: The withdraw_consequences of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._withdraw_consequences</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_email"><code class="name">var <span class="ident">withdraw_email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the withdraw_email of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Contains the email address to which a customer can send a consent withdrawal notification.
+Maximum length: 100 characters.
+# noqa: E501</p>
+<p>:return: The withdraw_email of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def withdraw_email(self):
+    &#34;&#34;&#34;Gets the withdraw_email of this ConsumerDisclosure.  # noqa: E501
+
+    Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters.   # noqa: E501
+
+    :return: The withdraw_email of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._withdraw_email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_other"><code class="name">var <span class="ident">withdraw_other</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the withdraw_other of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Indicates other information need to withdraw consent.
+Maximum length: 255 characters.
+# noqa: E501</p>
+<p>:return: The withdraw_other of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def withdraw_other(self):
+    &#34;&#34;&#34;Gets the withdraw_other of this ConsumerDisclosure.  # noqa: E501
+
+    Indicates other information need to withdraw consent.  Maximum length: 255 characters.  # noqa: E501
+
+    :return: The withdraw_other of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._withdraw_other</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_phone"><code class="name">var <span class="ident">withdraw_phone</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the withdraw_phone of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Contains the phone number which a customer can call to register consent withdrawal notification.
+Maximum length: 20 characters.
+# noqa: E501</p>
+<p>:return: The withdraw_phone of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def withdraw_phone(self):
+    &#34;&#34;&#34;Gets the withdraw_phone of this ConsumerDisclosure.  # noqa: E501
+
+    Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters.   # noqa: E501
+
+    :return: The withdraw_phone of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._withdraw_phone</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_postal_code"><code class="name">var <span class="ident">withdraw_postal_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the withdraw_postal_code of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.
+Maximum length: 20 characters.
+# noqa: E501</p>
+<p>:return: The withdraw_postal_code of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def withdraw_postal_code(self):
+    &#34;&#34;&#34;Gets the withdraw_postal_code of this ConsumerDisclosure.  # noqa: E501
+
+    Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters.   # noqa: E501
+
+    :return: The withdraw_postal_code of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._withdraw_postal_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_state"><code class="name">var <span class="ident">withdraw_state</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the withdraw_state of this ConsumerDisclosure.
+# noqa: E501</p>
+<p>Contains the state of the postal address to which a customer can send a consent withdrawal notification.
+# noqa: E501</p>
+<p>:return: The withdraw_state of this ConsumerDisclosure.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def withdraw_state(self):
+    &#34;&#34;&#34;Gets the withdraw_state of this ConsumerDisclosure.  # noqa: E501
+
+    Contains the state of the postal address to which a customer can send a consent withdrawal notification.  # noqa: E501
+
+    :return: The withdraw_state of this ConsumerDisclosure.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._withdraw_state</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(ConsumerDisclosure, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure">ConsumerDisclosure</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.account_esign_id" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.account_esign_id">account_esign_id</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.allow_cd_withdraw" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.allow_cd_withdraw">allow_cd_withdraw</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.allow_cd_withdraw_metadata" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.allow_cd_withdraw_metadata">allow_cd_withdraw_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.attribute_map" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.change_email" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.change_email">change_email</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.change_email_other" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.change_email_other">change_email_other</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.company_name" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.company_name">company_name</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.company_phone" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.company_phone">company_phone</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.copy_cost_per_page" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.copy_cost_per_page">copy_cost_per_page</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.copy_fee_collection_method" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.copy_fee_collection_method">copy_fee_collection_method</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.copy_request_email" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.copy_request_email">copy_request_email</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.custom" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.custom">custom</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.enable_esign" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.enable_esign">enable_esign</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.esign_agreement" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.esign_agreement">esign_agreement</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.esign_text" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.esign_text">esign_text</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.language_code" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.language_code">language_code</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.must_agree_to_esign" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.must_agree_to_esign">must_agree_to_esign</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.pdf_id" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.pdf_id">pdf_id</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.swagger_types" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.to_dict" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.to_str" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.use_brand" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.use_brand">use_brand</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.use_consumer_disclosure_within_account" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.use_consumer_disclosure_within_account">use_consumer_disclosure_within_account</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.use_consumer_disclosure_within_account_metadata" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.use_consumer_disclosure_within_account_metadata">use_consumer_disclosure_within_account_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_address_line1" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_address_line1">withdraw_address_line1</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_address_line2" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_address_line2">withdraw_address_line2</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_by_email" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_by_email">withdraw_by_email</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_by_mail" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_by_mail">withdraw_by_mail</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_by_phone" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_by_phone">withdraw_by_phone</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_city" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_city">withdraw_city</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_consequences" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_consequences">withdraw_consequences</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_email" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_email">withdraw_email</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_other" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_other">withdraw_other</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_phone" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_phone">withdraw_phone</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_postal_code" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_postal_code">withdraw_postal_code</a></code></li>
+<li><code><a title="docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_state" href="#docusign_esign.models.consumer_disclosure.ConsumerDisclosure.withdraw_state">withdraw_state</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,1788 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.referral_information API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.referral_information</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class ReferralInformation(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;advertisement_id&#39;: &#39;str&#39;,
+        &#39;enable_support&#39;: &#39;str&#39;,
+        &#39;external_org_id&#39;: &#39;str&#39;,
+        &#39;group_member_id&#39;: &#39;str&#39;,
+        &#39;id_type&#39;: &#39;str&#39;,
+        &#39;included_seats&#39;: &#39;str&#39;,
+        &#39;industry&#39;: &#39;str&#39;,
+        &#39;plan_start_month&#39;: &#39;str&#39;,
+        &#39;promo_code&#39;: &#39;str&#39;,
+        &#39;publisher_id&#39;: &#39;str&#39;,
+        &#39;referral_code&#39;: &#39;str&#39;,
+        &#39;referrer_name&#39;: &#39;str&#39;,
+        &#39;sale_discount_amount&#39;: &#39;str&#39;,
+        &#39;sale_discount_fixed_amount&#39;: &#39;str&#39;,
+        &#39;sale_discount_percent&#39;: &#39;str&#39;,
+        &#39;sale_discount_periods&#39;: &#39;str&#39;,
+        &#39;sale_discount_seat_price_override&#39;: &#39;str&#39;,
+        &#39;shopper_id&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;advertisement_id&#39;: &#39;advertisementId&#39;,
+        &#39;enable_support&#39;: &#39;enableSupport&#39;,
+        &#39;external_org_id&#39;: &#39;externalOrgId&#39;,
+        &#39;group_member_id&#39;: &#39;groupMemberId&#39;,
+        &#39;id_type&#39;: &#39;idType&#39;,
+        &#39;included_seats&#39;: &#39;includedSeats&#39;,
+        &#39;industry&#39;: &#39;industry&#39;,
+        &#39;plan_start_month&#39;: &#39;planStartMonth&#39;,
+        &#39;promo_code&#39;: &#39;promoCode&#39;,
+        &#39;publisher_id&#39;: &#39;publisherId&#39;,
+        &#39;referral_code&#39;: &#39;referralCode&#39;,
+        &#39;referrer_name&#39;: &#39;referrerName&#39;,
+        &#39;sale_discount_amount&#39;: &#39;saleDiscountAmount&#39;,
+        &#39;sale_discount_fixed_amount&#39;: &#39;saleDiscountFixedAmount&#39;,
+        &#39;sale_discount_percent&#39;: &#39;saleDiscountPercent&#39;,
+        &#39;sale_discount_periods&#39;: &#39;saleDiscountPeriods&#39;,
+        &#39;sale_discount_seat_price_override&#39;: &#39;saleDiscountSeatPriceOverride&#39;,
+        &#39;shopper_id&#39;: &#39;shopperId&#39;
+    }
+
+    def __init__(self, advertisement_id=None, enable_support=None, external_org_id=None, group_member_id=None, id_type=None, included_seats=None, industry=None, plan_start_month=None, promo_code=None, publisher_id=None, referral_code=None, referrer_name=None, sale_discount_amount=None, sale_discount_fixed_amount=None, sale_discount_percent=None, sale_discount_periods=None, sale_discount_seat_price_override=None, shopper_id=None):  # noqa: E501
+        &#34;&#34;&#34;ReferralInformation - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._advertisement_id = None
+        self._enable_support = None
+        self._external_org_id = None
+        self._group_member_id = None
+        self._id_type = None
+        self._included_seats = None
+        self._industry = None
+        self._plan_start_month = None
+        self._promo_code = None
+        self._publisher_id = None
+        self._referral_code = None
+        self._referrer_name = None
+        self._sale_discount_amount = None
+        self._sale_discount_fixed_amount = None
+        self._sale_discount_percent = None
+        self._sale_discount_periods = None
+        self._sale_discount_seat_price_override = None
+        self._shopper_id = None
+        self.discriminator = None
+
+        if advertisement_id is not None:
+            self.advertisement_id = advertisement_id
+        if enable_support is not None:
+            self.enable_support = enable_support
+        if external_org_id is not None:
+            self.external_org_id = external_org_id
+        if group_member_id is not None:
+            self.group_member_id = group_member_id
+        if id_type is not None:
+            self.id_type = id_type
+        if included_seats is not None:
+            self.included_seats = included_seats
+        if industry is not None:
+            self.industry = industry
+        if plan_start_month is not None:
+            self.plan_start_month = plan_start_month
+        if promo_code is not None:
+            self.promo_code = promo_code
+        if publisher_id is not None:
+            self.publisher_id = publisher_id
+        if referral_code is not None:
+            self.referral_code = referral_code
+        if referrer_name is not None:
+            self.referrer_name = referrer_name
+        if sale_discount_amount is not None:
+            self.sale_discount_amount = sale_discount_amount
+        if sale_discount_fixed_amount is not None:
+            self.sale_discount_fixed_amount = sale_discount_fixed_amount
+        if sale_discount_percent is not None:
+            self.sale_discount_percent = sale_discount_percent
+        if sale_discount_periods is not None:
+            self.sale_discount_periods = sale_discount_periods
+        if sale_discount_seat_price_override is not None:
+            self.sale_discount_seat_price_override = sale_discount_seat_price_override
+        if shopper_id is not None:
+            self.shopper_id = shopper_id
+
+    @property
+    def advertisement_id(self):
+        &#34;&#34;&#34;Gets the advertisement_id of this ReferralInformation.  # noqa: E501
+
+        A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.    # noqa: E501
+
+        :return: The advertisement_id of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._advertisement_id
+
+    @advertisement_id.setter
+    def advertisement_id(self, advertisement_id):
+        &#34;&#34;&#34;Sets the advertisement_id of this ReferralInformation.
+
+        A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.    # noqa: E501
+
+        :param advertisement_id: The advertisement_id of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._advertisement_id = advertisement_id
+
+    @property
+    def enable_support(self):
+        &#34;&#34;&#34;Gets the enable_support of this ReferralInformation.  # noqa: E501
+
+        When set to **true**, then customer support is provided as part of the account plan.  # noqa: E501
+
+        :return: The enable_support of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._enable_support
+
+    @enable_support.setter
+    def enable_support(self, enable_support):
+        &#34;&#34;&#34;Sets the enable_support of this ReferralInformation.
+
+        When set to **true**, then customer support is provided as part of the account plan.  # noqa: E501
+
+        :param enable_support: The enable_support of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._enable_support = enable_support
+
+    @property
+    def external_org_id(self):
+        &#34;&#34;&#34;Gets the external_org_id of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The external_org_id of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._external_org_id
+
+    @external_org_id.setter
+    def external_org_id(self, external_org_id):
+        &#34;&#34;&#34;Sets the external_org_id of this ReferralInformation.
+
+          # noqa: E501
+
+        :param external_org_id: The external_org_id of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._external_org_id = external_org_id
+
+    @property
+    def group_member_id(self):
+        &#34;&#34;&#34;Gets the group_member_id of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The group_member_id of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._group_member_id
+
+    @group_member_id.setter
+    def group_member_id(self, group_member_id):
+        &#34;&#34;&#34;Sets the group_member_id of this ReferralInformation.
+
+          # noqa: E501
+
+        :param group_member_id: The group_member_id of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._group_member_id = group_member_id
+
+    @property
+    def id_type(self):
+        &#34;&#34;&#34;Gets the id_type of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The id_type of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._id_type
+
+    @id_type.setter
+    def id_type(self, id_type):
+        &#34;&#34;&#34;Sets the id_type of this ReferralInformation.
+
+          # noqa: E501
+
+        :param id_type: The id_type of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._id_type = id_type
+
+    @property
+    def included_seats(self):
+        &#34;&#34;&#34;Gets the included_seats of this ReferralInformation.  # noqa: E501
+
+        The number of seats (users) included.  # noqa: E501
+
+        :return: The included_seats of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._included_seats
+
+    @included_seats.setter
+    def included_seats(self, included_seats):
+        &#34;&#34;&#34;Sets the included_seats of this ReferralInformation.
+
+        The number of seats (users) included.  # noqa: E501
+
+        :param included_seats: The included_seats of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._included_seats = included_seats
+
+    @property
+    def industry(self):
+        &#34;&#34;&#34;Gets the industry of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The industry of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._industry
+
+    @industry.setter
+    def industry(self, industry):
+        &#34;&#34;&#34;Sets the industry of this ReferralInformation.
+
+          # noqa: E501
+
+        :param industry: The industry of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._industry = industry
+
+    @property
+    def plan_start_month(self):
+        &#34;&#34;&#34;Gets the plan_start_month of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The plan_start_month of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_start_month
+
+    @plan_start_month.setter
+    def plan_start_month(self, plan_start_month):
+        &#34;&#34;&#34;Sets the plan_start_month of this ReferralInformation.
+
+          # noqa: E501
+
+        :param plan_start_month: The plan_start_month of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_start_month = plan_start_month
+
+    @property
+    def promo_code(self):
+        &#34;&#34;&#34;Gets the promo_code of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The promo_code of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._promo_code
+
+    @promo_code.setter
+    def promo_code(self, promo_code):
+        &#34;&#34;&#34;Sets the promo_code of this ReferralInformation.
+
+          # noqa: E501
+
+        :param promo_code: The promo_code of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._promo_code = promo_code
+
+    @property
+    def publisher_id(self):
+        &#34;&#34;&#34;Gets the publisher_id of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The publisher_id of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._publisher_id
+
+    @publisher_id.setter
+    def publisher_id(self, publisher_id):
+        &#34;&#34;&#34;Sets the publisher_id of this ReferralInformation.
+
+          # noqa: E501
+
+        :param publisher_id: The publisher_id of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._publisher_id = publisher_id
+
+    @property
+    def referral_code(self):
+        &#34;&#34;&#34;Gets the referral_code of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The referral_code of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._referral_code
+
+    @referral_code.setter
+    def referral_code(self, referral_code):
+        &#34;&#34;&#34;Sets the referral_code of this ReferralInformation.
+
+          # noqa: E501
+
+        :param referral_code: The referral_code of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._referral_code = referral_code
+
+    @property
+    def referrer_name(self):
+        &#34;&#34;&#34;Gets the referrer_name of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The referrer_name of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._referrer_name
+
+    @referrer_name.setter
+    def referrer_name(self, referrer_name):
+        &#34;&#34;&#34;Sets the referrer_name of this ReferralInformation.
+
+          # noqa: E501
+
+        :param referrer_name: The referrer_name of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._referrer_name = referrer_name
+
+    @property
+    def sale_discount_amount(self):
+        &#34;&#34;&#34;Gets the sale_discount_amount of this ReferralInformation.  # noqa: E501
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :return: The sale_discount_amount of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sale_discount_amount
+
+    @sale_discount_amount.setter
+    def sale_discount_amount(self, sale_discount_amount):
+        &#34;&#34;&#34;Sets the sale_discount_amount of this ReferralInformation.
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :param sale_discount_amount: The sale_discount_amount of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sale_discount_amount = sale_discount_amount
+
+    @property
+    def sale_discount_fixed_amount(self):
+        &#34;&#34;&#34;Gets the sale_discount_fixed_amount of this ReferralInformation.  # noqa: E501
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :return: The sale_discount_fixed_amount of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sale_discount_fixed_amount
+
+    @sale_discount_fixed_amount.setter
+    def sale_discount_fixed_amount(self, sale_discount_fixed_amount):
+        &#34;&#34;&#34;Sets the sale_discount_fixed_amount of this ReferralInformation.
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :param sale_discount_fixed_amount: The sale_discount_fixed_amount of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sale_discount_fixed_amount = sale_discount_fixed_amount
+
+    @property
+    def sale_discount_percent(self):
+        &#34;&#34;&#34;Gets the sale_discount_percent of this ReferralInformation.  # noqa: E501
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :return: The sale_discount_percent of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sale_discount_percent
+
+    @sale_discount_percent.setter
+    def sale_discount_percent(self, sale_discount_percent):
+        &#34;&#34;&#34;Sets the sale_discount_percent of this ReferralInformation.
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :param sale_discount_percent: The sale_discount_percent of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sale_discount_percent = sale_discount_percent
+
+    @property
+    def sale_discount_periods(self):
+        &#34;&#34;&#34;Gets the sale_discount_periods of this ReferralInformation.  # noqa: E501
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :return: The sale_discount_periods of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sale_discount_periods
+
+    @sale_discount_periods.setter
+    def sale_discount_periods(self, sale_discount_periods):
+        &#34;&#34;&#34;Sets the sale_discount_periods of this ReferralInformation.
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :param sale_discount_periods: The sale_discount_periods of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sale_discount_periods = sale_discount_periods
+
+    @property
+    def sale_discount_seat_price_override(self):
+        &#34;&#34;&#34;Gets the sale_discount_seat_price_override of this ReferralInformation.  # noqa: E501
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :return: The sale_discount_seat_price_override of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sale_discount_seat_price_override
+
+    @sale_discount_seat_price_override.setter
+    def sale_discount_seat_price_override(self, sale_discount_seat_price_override):
+        &#34;&#34;&#34;Sets the sale_discount_seat_price_override of this ReferralInformation.
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :param sale_discount_seat_price_override: The sale_discount_seat_price_override of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sale_discount_seat_price_override = sale_discount_seat_price_override
+
+    @property
+    def shopper_id(self):
+        &#34;&#34;&#34;Gets the shopper_id of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The shopper_id of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._shopper_id
+
+    @shopper_id.setter
+    def shopper_id(self, shopper_id):
+        &#34;&#34;&#34;Sets the shopper_id of this ReferralInformation.
+
+          # noqa: E501
+
+        :param shopper_id: The shopper_id of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._shopper_id = shopper_id
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(ReferralInformation, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, ReferralInformation):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.referral_information.ReferralInformation"><code class="flex name class">
+<span>class <span class="ident">ReferralInformation</span></span>
+<span>(</span><span>advertisement_id=None, enable_support=None, external_org_id=None, group_member_id=None, id_type=None, included_seats=None, industry=None, plan_start_month=None, promo_code=None, publisher_id=None, referral_code=None, referrer_name=None, sale_discount_amount=None, sale_discount_fixed_amount=None, sale_discount_percent=None, sale_discount_periods=None, sale_discount_seat_price_override=None, shopper_id=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>ReferralInformation - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ReferralInformation(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;advertisement_id&#39;: &#39;str&#39;,
+        &#39;enable_support&#39;: &#39;str&#39;,
+        &#39;external_org_id&#39;: &#39;str&#39;,
+        &#39;group_member_id&#39;: &#39;str&#39;,
+        &#39;id_type&#39;: &#39;str&#39;,
+        &#39;included_seats&#39;: &#39;str&#39;,
+        &#39;industry&#39;: &#39;str&#39;,
+        &#39;plan_start_month&#39;: &#39;str&#39;,
+        &#39;promo_code&#39;: &#39;str&#39;,
+        &#39;publisher_id&#39;: &#39;str&#39;,
+        &#39;referral_code&#39;: &#39;str&#39;,
+        &#39;referrer_name&#39;: &#39;str&#39;,
+        &#39;sale_discount_amount&#39;: &#39;str&#39;,
+        &#39;sale_discount_fixed_amount&#39;: &#39;str&#39;,
+        &#39;sale_discount_percent&#39;: &#39;str&#39;,
+        &#39;sale_discount_periods&#39;: &#39;str&#39;,
+        &#39;sale_discount_seat_price_override&#39;: &#39;str&#39;,
+        &#39;shopper_id&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;advertisement_id&#39;: &#39;advertisementId&#39;,
+        &#39;enable_support&#39;: &#39;enableSupport&#39;,
+        &#39;external_org_id&#39;: &#39;externalOrgId&#39;,
+        &#39;group_member_id&#39;: &#39;groupMemberId&#39;,
+        &#39;id_type&#39;: &#39;idType&#39;,
+        &#39;included_seats&#39;: &#39;includedSeats&#39;,
+        &#39;industry&#39;: &#39;industry&#39;,
+        &#39;plan_start_month&#39;: &#39;planStartMonth&#39;,
+        &#39;promo_code&#39;: &#39;promoCode&#39;,
+        &#39;publisher_id&#39;: &#39;publisherId&#39;,
+        &#39;referral_code&#39;: &#39;referralCode&#39;,
+        &#39;referrer_name&#39;: &#39;referrerName&#39;,
+        &#39;sale_discount_amount&#39;: &#39;saleDiscountAmount&#39;,
+        &#39;sale_discount_fixed_amount&#39;: &#39;saleDiscountFixedAmount&#39;,
+        &#39;sale_discount_percent&#39;: &#39;saleDiscountPercent&#39;,
+        &#39;sale_discount_periods&#39;: &#39;saleDiscountPeriods&#39;,
+        &#39;sale_discount_seat_price_override&#39;: &#39;saleDiscountSeatPriceOverride&#39;,
+        &#39;shopper_id&#39;: &#39;shopperId&#39;
+    }
+
+    def __init__(self, advertisement_id=None, enable_support=None, external_org_id=None, group_member_id=None, id_type=None, included_seats=None, industry=None, plan_start_month=None, promo_code=None, publisher_id=None, referral_code=None, referrer_name=None, sale_discount_amount=None, sale_discount_fixed_amount=None, sale_discount_percent=None, sale_discount_periods=None, sale_discount_seat_price_override=None, shopper_id=None):  # noqa: E501
+        &#34;&#34;&#34;ReferralInformation - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._advertisement_id = None
+        self._enable_support = None
+        self._external_org_id = None
+        self._group_member_id = None
+        self._id_type = None
+        self._included_seats = None
+        self._industry = None
+        self._plan_start_month = None
+        self._promo_code = None
+        self._publisher_id = None
+        self._referral_code = None
+        self._referrer_name = None
+        self._sale_discount_amount = None
+        self._sale_discount_fixed_amount = None
+        self._sale_discount_percent = None
+        self._sale_discount_periods = None
+        self._sale_discount_seat_price_override = None
+        self._shopper_id = None
+        self.discriminator = None
+
+        if advertisement_id is not None:
+            self.advertisement_id = advertisement_id
+        if enable_support is not None:
+            self.enable_support = enable_support
+        if external_org_id is not None:
+            self.external_org_id = external_org_id
+        if group_member_id is not None:
+            self.group_member_id = group_member_id
+        if id_type is not None:
+            self.id_type = id_type
+        if included_seats is not None:
+            self.included_seats = included_seats
+        if industry is not None:
+            self.industry = industry
+        if plan_start_month is not None:
+            self.plan_start_month = plan_start_month
+        if promo_code is not None:
+            self.promo_code = promo_code
+        if publisher_id is not None:
+            self.publisher_id = publisher_id
+        if referral_code is not None:
+            self.referral_code = referral_code
+        if referrer_name is not None:
+            self.referrer_name = referrer_name
+        if sale_discount_amount is not None:
+            self.sale_discount_amount = sale_discount_amount
+        if sale_discount_fixed_amount is not None:
+            self.sale_discount_fixed_amount = sale_discount_fixed_amount
+        if sale_discount_percent is not None:
+            self.sale_discount_percent = sale_discount_percent
+        if sale_discount_periods is not None:
+            self.sale_discount_periods = sale_discount_periods
+        if sale_discount_seat_price_override is not None:
+            self.sale_discount_seat_price_override = sale_discount_seat_price_override
+        if shopper_id is not None:
+            self.shopper_id = shopper_id
+
+    @property
+    def advertisement_id(self):
+        &#34;&#34;&#34;Gets the advertisement_id of this ReferralInformation.  # noqa: E501
+
+        A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.    # noqa: E501
+
+        :return: The advertisement_id of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._advertisement_id
+
+    @advertisement_id.setter
+    def advertisement_id(self, advertisement_id):
+        &#34;&#34;&#34;Sets the advertisement_id of this ReferralInformation.
+
+        A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.    # noqa: E501
+
+        :param advertisement_id: The advertisement_id of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._advertisement_id = advertisement_id
+
+    @property
+    def enable_support(self):
+        &#34;&#34;&#34;Gets the enable_support of this ReferralInformation.  # noqa: E501
+
+        When set to **true**, then customer support is provided as part of the account plan.  # noqa: E501
+
+        :return: The enable_support of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._enable_support
+
+    @enable_support.setter
+    def enable_support(self, enable_support):
+        &#34;&#34;&#34;Sets the enable_support of this ReferralInformation.
+
+        When set to **true**, then customer support is provided as part of the account plan.  # noqa: E501
+
+        :param enable_support: The enable_support of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._enable_support = enable_support
+
+    @property
+    def external_org_id(self):
+        &#34;&#34;&#34;Gets the external_org_id of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The external_org_id of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._external_org_id
+
+    @external_org_id.setter
+    def external_org_id(self, external_org_id):
+        &#34;&#34;&#34;Sets the external_org_id of this ReferralInformation.
+
+          # noqa: E501
+
+        :param external_org_id: The external_org_id of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._external_org_id = external_org_id
+
+    @property
+    def group_member_id(self):
+        &#34;&#34;&#34;Gets the group_member_id of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The group_member_id of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._group_member_id
+
+    @group_member_id.setter
+    def group_member_id(self, group_member_id):
+        &#34;&#34;&#34;Sets the group_member_id of this ReferralInformation.
+
+          # noqa: E501
+
+        :param group_member_id: The group_member_id of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._group_member_id = group_member_id
+
+    @property
+    def id_type(self):
+        &#34;&#34;&#34;Gets the id_type of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The id_type of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._id_type
+
+    @id_type.setter
+    def id_type(self, id_type):
+        &#34;&#34;&#34;Sets the id_type of this ReferralInformation.
+
+          # noqa: E501
+
+        :param id_type: The id_type of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._id_type = id_type
+
+    @property
+    def included_seats(self):
+        &#34;&#34;&#34;Gets the included_seats of this ReferralInformation.  # noqa: E501
+
+        The number of seats (users) included.  # noqa: E501
+
+        :return: The included_seats of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._included_seats
+
+    @included_seats.setter
+    def included_seats(self, included_seats):
+        &#34;&#34;&#34;Sets the included_seats of this ReferralInformation.
+
+        The number of seats (users) included.  # noqa: E501
+
+        :param included_seats: The included_seats of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._included_seats = included_seats
+
+    @property
+    def industry(self):
+        &#34;&#34;&#34;Gets the industry of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The industry of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._industry
+
+    @industry.setter
+    def industry(self, industry):
+        &#34;&#34;&#34;Sets the industry of this ReferralInformation.
+
+          # noqa: E501
+
+        :param industry: The industry of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._industry = industry
+
+    @property
+    def plan_start_month(self):
+        &#34;&#34;&#34;Gets the plan_start_month of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The plan_start_month of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_start_month
+
+    @plan_start_month.setter
+    def plan_start_month(self, plan_start_month):
+        &#34;&#34;&#34;Sets the plan_start_month of this ReferralInformation.
+
+          # noqa: E501
+
+        :param plan_start_month: The plan_start_month of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_start_month = plan_start_month
+
+    @property
+    def promo_code(self):
+        &#34;&#34;&#34;Gets the promo_code of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The promo_code of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._promo_code
+
+    @promo_code.setter
+    def promo_code(self, promo_code):
+        &#34;&#34;&#34;Sets the promo_code of this ReferralInformation.
+
+          # noqa: E501
+
+        :param promo_code: The promo_code of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._promo_code = promo_code
+
+    @property
+    def publisher_id(self):
+        &#34;&#34;&#34;Gets the publisher_id of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The publisher_id of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._publisher_id
+
+    @publisher_id.setter
+    def publisher_id(self, publisher_id):
+        &#34;&#34;&#34;Sets the publisher_id of this ReferralInformation.
+
+          # noqa: E501
+
+        :param publisher_id: The publisher_id of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._publisher_id = publisher_id
+
+    @property
+    def referral_code(self):
+        &#34;&#34;&#34;Gets the referral_code of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The referral_code of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._referral_code
+
+    @referral_code.setter
+    def referral_code(self, referral_code):
+        &#34;&#34;&#34;Sets the referral_code of this ReferralInformation.
+
+          # noqa: E501
+
+        :param referral_code: The referral_code of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._referral_code = referral_code
+
+    @property
+    def referrer_name(self):
+        &#34;&#34;&#34;Gets the referrer_name of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The referrer_name of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._referrer_name
+
+    @referrer_name.setter
+    def referrer_name(self, referrer_name):
+        &#34;&#34;&#34;Sets the referrer_name of this ReferralInformation.
+
+          # noqa: E501
+
+        :param referrer_name: The referrer_name of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._referrer_name = referrer_name
+
+    @property
+    def sale_discount_amount(self):
+        &#34;&#34;&#34;Gets the sale_discount_amount of this ReferralInformation.  # noqa: E501
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :return: The sale_discount_amount of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sale_discount_amount
+
+    @sale_discount_amount.setter
+    def sale_discount_amount(self, sale_discount_amount):
+        &#34;&#34;&#34;Sets the sale_discount_amount of this ReferralInformation.
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :param sale_discount_amount: The sale_discount_amount of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sale_discount_amount = sale_discount_amount
+
+    @property
+    def sale_discount_fixed_amount(self):
+        &#34;&#34;&#34;Gets the sale_discount_fixed_amount of this ReferralInformation.  # noqa: E501
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :return: The sale_discount_fixed_amount of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sale_discount_fixed_amount
+
+    @sale_discount_fixed_amount.setter
+    def sale_discount_fixed_amount(self, sale_discount_fixed_amount):
+        &#34;&#34;&#34;Sets the sale_discount_fixed_amount of this ReferralInformation.
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :param sale_discount_fixed_amount: The sale_discount_fixed_amount of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sale_discount_fixed_amount = sale_discount_fixed_amount
+
+    @property
+    def sale_discount_percent(self):
+        &#34;&#34;&#34;Gets the sale_discount_percent of this ReferralInformation.  # noqa: E501
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :return: The sale_discount_percent of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sale_discount_percent
+
+    @sale_discount_percent.setter
+    def sale_discount_percent(self, sale_discount_percent):
+        &#34;&#34;&#34;Sets the sale_discount_percent of this ReferralInformation.
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :param sale_discount_percent: The sale_discount_percent of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sale_discount_percent = sale_discount_percent
+
+    @property
+    def sale_discount_periods(self):
+        &#34;&#34;&#34;Gets the sale_discount_periods of this ReferralInformation.  # noqa: E501
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :return: The sale_discount_periods of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sale_discount_periods
+
+    @sale_discount_periods.setter
+    def sale_discount_periods(self, sale_discount_periods):
+        &#34;&#34;&#34;Sets the sale_discount_periods of this ReferralInformation.
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :param sale_discount_periods: The sale_discount_periods of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sale_discount_periods = sale_discount_periods
+
+    @property
+    def sale_discount_seat_price_override(self):
+        &#34;&#34;&#34;Gets the sale_discount_seat_price_override of this ReferralInformation.  # noqa: E501
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :return: The sale_discount_seat_price_override of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sale_discount_seat_price_override
+
+    @sale_discount_seat_price_override.setter
+    def sale_discount_seat_price_override(self, sale_discount_seat_price_override):
+        &#34;&#34;&#34;Sets the sale_discount_seat_price_override of this ReferralInformation.
+
+        Reserved for DocuSign use only.  # noqa: E501
+
+        :param sale_discount_seat_price_override: The sale_discount_seat_price_override of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sale_discount_seat_price_override = sale_discount_seat_price_override
+
+    @property
+    def shopper_id(self):
+        &#34;&#34;&#34;Gets the shopper_id of this ReferralInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The shopper_id of this ReferralInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._shopper_id
+
+    @shopper_id.setter
+    def shopper_id(self, shopper_id):
+        &#34;&#34;&#34;Sets the shopper_id of this ReferralInformation.
+
+          # noqa: E501
+
+        :param shopper_id: The shopper_id of this ReferralInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._shopper_id = shopper_id
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(ReferralInformation, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, ReferralInformation):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.advertisement_id"><code class="name">var <span class="ident">advertisement_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the advertisement_id of this ReferralInformation.
+# noqa: E501</p>
+<p>A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.
+###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.
+# noqa: E501</p>
+<p>:return: The advertisement_id of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def advertisement_id(self):
+    &#34;&#34;&#34;Gets the advertisement_id of this ReferralInformation.  # noqa: E501
+
+    A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.    # noqa: E501
+
+    :return: The advertisement_id of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._advertisement_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.enable_support"><code class="name">var <span class="ident">enable_support</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the enable_support of this ReferralInformation.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, then customer support is provided as part of the account plan.
+# noqa: E501</p>
+<p>:return: The enable_support of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def enable_support(self):
+    &#34;&#34;&#34;Gets the enable_support of this ReferralInformation.  # noqa: E501
+
+    When set to **true**, then customer support is provided as part of the account plan.  # noqa: E501
+
+    :return: The enable_support of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._enable_support</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.external_org_id"><code class="name">var <span class="ident">external_org_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the external_org_id of this ReferralInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The external_org_id of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def external_org_id(self):
+    &#34;&#34;&#34;Gets the external_org_id of this ReferralInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The external_org_id of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._external_org_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.group_member_id"><code class="name">var <span class="ident">group_member_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the group_member_id of this ReferralInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The group_member_id of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def group_member_id(self):
+    &#34;&#34;&#34;Gets the group_member_id of this ReferralInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The group_member_id of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._group_member_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.id_type"><code class="name">var <span class="ident">id_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the id_type of this ReferralInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The id_type of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def id_type(self):
+    &#34;&#34;&#34;Gets the id_type of this ReferralInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The id_type of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._id_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.included_seats"><code class="name">var <span class="ident">included_seats</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the included_seats of this ReferralInformation.
+# noqa: E501</p>
+<p>The number of seats (users) included.
+# noqa: E501</p>
+<p>:return: The included_seats of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def included_seats(self):
+    &#34;&#34;&#34;Gets the included_seats of this ReferralInformation.  # noqa: E501
+
+    The number of seats (users) included.  # noqa: E501
+
+    :return: The included_seats of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._included_seats</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.industry"><code class="name">var <span class="ident">industry</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the industry of this ReferralInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The industry of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def industry(self):
+    &#34;&#34;&#34;Gets the industry of this ReferralInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The industry of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._industry</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.plan_start_month"><code class="name">var <span class="ident">plan_start_month</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the plan_start_month of this ReferralInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The plan_start_month of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def plan_start_month(self):
+    &#34;&#34;&#34;Gets the plan_start_month of this ReferralInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The plan_start_month of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._plan_start_month</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.promo_code"><code class="name">var <span class="ident">promo_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the promo_code of this ReferralInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The promo_code of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def promo_code(self):
+    &#34;&#34;&#34;Gets the promo_code of this ReferralInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The promo_code of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._promo_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.publisher_id"><code class="name">var <span class="ident">publisher_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the publisher_id of this ReferralInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The publisher_id of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def publisher_id(self):
+    &#34;&#34;&#34;Gets the publisher_id of this ReferralInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The publisher_id of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._publisher_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.referral_code"><code class="name">var <span class="ident">referral_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the referral_code of this ReferralInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The referral_code of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def referral_code(self):
+    &#34;&#34;&#34;Gets the referral_code of this ReferralInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The referral_code of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._referral_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.referrer_name"><code class="name">var <span class="ident">referrer_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the referrer_name of this ReferralInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The referrer_name of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def referrer_name(self):
+    &#34;&#34;&#34;Gets the referrer_name of this ReferralInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The referrer_name of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._referrer_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.sale_discount_amount"><code class="name">var <span class="ident">sale_discount_amount</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sale_discount_amount of this ReferralInformation.
+# noqa: E501</p>
+<p>Reserved for DocuSign use only.
+# noqa: E501</p>
+<p>:return: The sale_discount_amount of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sale_discount_amount(self):
+    &#34;&#34;&#34;Gets the sale_discount_amount of this ReferralInformation.  # noqa: E501
+
+    Reserved for DocuSign use only.  # noqa: E501
+
+    :return: The sale_discount_amount of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sale_discount_amount</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.sale_discount_fixed_amount"><code class="name">var <span class="ident">sale_discount_fixed_amount</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sale_discount_fixed_amount of this ReferralInformation.
+# noqa: E501</p>
+<p>Reserved for DocuSign use only.
+# noqa: E501</p>
+<p>:return: The sale_discount_fixed_amount of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sale_discount_fixed_amount(self):
+    &#34;&#34;&#34;Gets the sale_discount_fixed_amount of this ReferralInformation.  # noqa: E501
+
+    Reserved for DocuSign use only.  # noqa: E501
+
+    :return: The sale_discount_fixed_amount of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sale_discount_fixed_amount</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.sale_discount_percent"><code class="name">var <span class="ident">sale_discount_percent</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sale_discount_percent of this ReferralInformation.
+# noqa: E501</p>
+<p>Reserved for DocuSign use only.
+# noqa: E501</p>
+<p>:return: The sale_discount_percent of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sale_discount_percent(self):
+    &#34;&#34;&#34;Gets the sale_discount_percent of this ReferralInformation.  # noqa: E501
+
+    Reserved for DocuSign use only.  # noqa: E501
+
+    :return: The sale_discount_percent of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sale_discount_percent</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.sale_discount_periods"><code class="name">var <span class="ident">sale_discount_periods</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sale_discount_periods of this ReferralInformation.
+# noqa: E501</p>
+<p>Reserved for DocuSign use only.
+# noqa: E501</p>
+<p>:return: The sale_discount_periods of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sale_discount_periods(self):
+    &#34;&#34;&#34;Gets the sale_discount_periods of this ReferralInformation.  # noqa: E501
+
+    Reserved for DocuSign use only.  # noqa: E501
+
+    :return: The sale_discount_periods of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sale_discount_periods</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.sale_discount_seat_price_override"><code class="name">var <span class="ident">sale_discount_seat_price_override</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sale_discount_seat_price_override of this ReferralInformation.
+# noqa: E501</p>
+<p>Reserved for DocuSign use only.
+# noqa: E501</p>
+<p>:return: The sale_discount_seat_price_override of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sale_discount_seat_price_override(self):
+    &#34;&#34;&#34;Gets the sale_discount_seat_price_override of this ReferralInformation.  # noqa: E501
+
+    Reserved for DocuSign use only.  # noqa: E501
+
+    :return: The sale_discount_seat_price_override of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sale_discount_seat_price_override</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.shopper_id"><code class="name">var <span class="ident">shopper_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the shopper_id of this ReferralInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The shopper_id of this ReferralInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def shopper_id(self):
+    &#34;&#34;&#34;Gets the shopper_id of this ReferralInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The shopper_id of this ReferralInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._shopper_id</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(ReferralInformation, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.referral_information.ReferralInformation.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.referral_information.ReferralInformation" href="#docusign_esign.models.referral_information.ReferralInformation">ReferralInformation</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.advertisement_id" href="#docusign_esign.models.referral_information.ReferralInformation.advertisement_id">advertisement_id</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.attribute_map" href="#docusign_esign.models.referral_information.ReferralInformation.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.enable_support" href="#docusign_esign.models.referral_information.ReferralInformation.enable_support">enable_support</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.external_org_id" href="#docusign_esign.models.referral_information.ReferralInformation.external_org_id">external_org_id</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.group_member_id" href="#docusign_esign.models.referral_information.ReferralInformation.group_member_id">group_member_id</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.id_type" href="#docusign_esign.models.referral_information.ReferralInformation.id_type">id_type</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.included_seats" href="#docusign_esign.models.referral_information.ReferralInformation.included_seats">included_seats</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.industry" href="#docusign_esign.models.referral_information.ReferralInformation.industry">industry</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.plan_start_month" href="#docusign_esign.models.referral_information.ReferralInformation.plan_start_month">plan_start_month</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.promo_code" href="#docusign_esign.models.referral_information.ReferralInformation.promo_code">promo_code</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.publisher_id" href="#docusign_esign.models.referral_information.ReferralInformation.publisher_id">publisher_id</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.referral_code" href="#docusign_esign.models.referral_information.ReferralInformation.referral_code">referral_code</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.referrer_name" href="#docusign_esign.models.referral_information.ReferralInformation.referrer_name">referrer_name</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.sale_discount_amount" href="#docusign_esign.models.referral_information.ReferralInformation.sale_discount_amount">sale_discount_amount</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.sale_discount_fixed_amount" href="#docusign_esign.models.referral_information.ReferralInformation.sale_discount_fixed_amount">sale_discount_fixed_amount</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.sale_discount_percent" href="#docusign_esign.models.referral_information.ReferralInformation.sale_discount_percent">sale_discount_percent</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.sale_discount_periods" href="#docusign_esign.models.referral_information.ReferralInformation.sale_discount_periods">sale_discount_periods</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.sale_discount_seat_price_override" href="#docusign_esign.models.referral_information.ReferralInformation.sale_discount_seat_price_override">sale_discount_seat_price_override</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.shopper_id" href="#docusign_esign.models.referral_information.ReferralInformation.shopper_id">shopper_id</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.swagger_types" href="#docusign_esign.models.referral_information.ReferralInformation.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.to_dict" href="#docusign_esign.models.referral_information.ReferralInformation.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.referral_information.ReferralInformation.to_str" href="#docusign_esign.models.referral_information.ReferralInformation.to_str">to_str</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

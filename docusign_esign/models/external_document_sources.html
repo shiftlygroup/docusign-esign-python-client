@@ -1,0 +1,1101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.external_document_sources API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.external_document_sources</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class ExternalDocumentSources(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;boxnet_enabled&#39;: &#39;str&#39;,
+        &#39;boxnet_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;dropbox_enabled&#39;: &#39;str&#39;,
+        &#39;dropbox_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;google_drive_enabled&#39;: &#39;str&#39;,
+        &#39;google_drive_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;one_drive_enabled&#39;: &#39;str&#39;,
+        &#39;one_drive_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;salesforce_enabled&#39;: &#39;str&#39;,
+        &#39;salesforce_metadata&#39;: &#39;SettingsMetadata&#39;
+    }
+
+    attribute_map = {
+        &#39;boxnet_enabled&#39;: &#39;boxnetEnabled&#39;,
+        &#39;boxnet_metadata&#39;: &#39;boxnetMetadata&#39;,
+        &#39;dropbox_enabled&#39;: &#39;dropboxEnabled&#39;,
+        &#39;dropbox_metadata&#39;: &#39;dropboxMetadata&#39;,
+        &#39;google_drive_enabled&#39;: &#39;googleDriveEnabled&#39;,
+        &#39;google_drive_metadata&#39;: &#39;googleDriveMetadata&#39;,
+        &#39;one_drive_enabled&#39;: &#39;oneDriveEnabled&#39;,
+        &#39;one_drive_metadata&#39;: &#39;oneDriveMetadata&#39;,
+        &#39;salesforce_enabled&#39;: &#39;salesforceEnabled&#39;,
+        &#39;salesforce_metadata&#39;: &#39;salesforceMetadata&#39;
+    }
+
+    def __init__(self, boxnet_enabled=None, boxnet_metadata=None, dropbox_enabled=None, dropbox_metadata=None, google_drive_enabled=None, google_drive_metadata=None, one_drive_enabled=None, one_drive_metadata=None, salesforce_enabled=None, salesforce_metadata=None):  # noqa: E501
+        &#34;&#34;&#34;ExternalDocumentSources - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._boxnet_enabled = None
+        self._boxnet_metadata = None
+        self._dropbox_enabled = None
+        self._dropbox_metadata = None
+        self._google_drive_enabled = None
+        self._google_drive_metadata = None
+        self._one_drive_enabled = None
+        self._one_drive_metadata = None
+        self._salesforce_enabled = None
+        self._salesforce_metadata = None
+        self.discriminator = None
+
+        if boxnet_enabled is not None:
+            self.boxnet_enabled = boxnet_enabled
+        if boxnet_metadata is not None:
+            self.boxnet_metadata = boxnet_metadata
+        if dropbox_enabled is not None:
+            self.dropbox_enabled = dropbox_enabled
+        if dropbox_metadata is not None:
+            self.dropbox_metadata = dropbox_metadata
+        if google_drive_enabled is not None:
+            self.google_drive_enabled = google_drive_enabled
+        if google_drive_metadata is not None:
+            self.google_drive_metadata = google_drive_metadata
+        if one_drive_enabled is not None:
+            self.one_drive_enabled = one_drive_enabled
+        if one_drive_metadata is not None:
+            self.one_drive_metadata = one_drive_metadata
+        if salesforce_enabled is not None:
+            self.salesforce_enabled = salesforce_enabled
+        if salesforce_metadata is not None:
+            self.salesforce_metadata = salesforce_metadata
+
+    @property
+    def boxnet_enabled(self):
+        &#34;&#34;&#34;Gets the boxnet_enabled of this ExternalDocumentSources.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The boxnet_enabled of this ExternalDocumentSources.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._boxnet_enabled
+
+    @boxnet_enabled.setter
+    def boxnet_enabled(self, boxnet_enabled):
+        &#34;&#34;&#34;Sets the boxnet_enabled of this ExternalDocumentSources.
+
+          # noqa: E501
+
+        :param boxnet_enabled: The boxnet_enabled of this ExternalDocumentSources.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._boxnet_enabled = boxnet_enabled
+
+    @property
+    def boxnet_metadata(self):
+        &#34;&#34;&#34;Gets the boxnet_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+        :return: The boxnet_metadata of this ExternalDocumentSources.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._boxnet_metadata
+
+    @boxnet_metadata.setter
+    def boxnet_metadata(self, boxnet_metadata):
+        &#34;&#34;&#34;Sets the boxnet_metadata of this ExternalDocumentSources.
+
+
+        :param boxnet_metadata: The boxnet_metadata of this ExternalDocumentSources.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._boxnet_metadata = boxnet_metadata
+
+    @property
+    def dropbox_enabled(self):
+        &#34;&#34;&#34;Gets the dropbox_enabled of this ExternalDocumentSources.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The dropbox_enabled of this ExternalDocumentSources.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._dropbox_enabled
+
+    @dropbox_enabled.setter
+    def dropbox_enabled(self, dropbox_enabled):
+        &#34;&#34;&#34;Sets the dropbox_enabled of this ExternalDocumentSources.
+
+          # noqa: E501
+
+        :param dropbox_enabled: The dropbox_enabled of this ExternalDocumentSources.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._dropbox_enabled = dropbox_enabled
+
+    @property
+    def dropbox_metadata(self):
+        &#34;&#34;&#34;Gets the dropbox_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+        :return: The dropbox_metadata of this ExternalDocumentSources.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._dropbox_metadata
+
+    @dropbox_metadata.setter
+    def dropbox_metadata(self, dropbox_metadata):
+        &#34;&#34;&#34;Sets the dropbox_metadata of this ExternalDocumentSources.
+
+
+        :param dropbox_metadata: The dropbox_metadata of this ExternalDocumentSources.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._dropbox_metadata = dropbox_metadata
+
+    @property
+    def google_drive_enabled(self):
+        &#34;&#34;&#34;Gets the google_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The google_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._google_drive_enabled
+
+    @google_drive_enabled.setter
+    def google_drive_enabled(self, google_drive_enabled):
+        &#34;&#34;&#34;Sets the google_drive_enabled of this ExternalDocumentSources.
+
+          # noqa: E501
+
+        :param google_drive_enabled: The google_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._google_drive_enabled = google_drive_enabled
+
+    @property
+    def google_drive_metadata(self):
+        &#34;&#34;&#34;Gets the google_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+        :return: The google_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._google_drive_metadata
+
+    @google_drive_metadata.setter
+    def google_drive_metadata(self, google_drive_metadata):
+        &#34;&#34;&#34;Sets the google_drive_metadata of this ExternalDocumentSources.
+
+
+        :param google_drive_metadata: The google_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._google_drive_metadata = google_drive_metadata
+
+    @property
+    def one_drive_enabled(self):
+        &#34;&#34;&#34;Gets the one_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The one_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._one_drive_enabled
+
+    @one_drive_enabled.setter
+    def one_drive_enabled(self, one_drive_enabled):
+        &#34;&#34;&#34;Sets the one_drive_enabled of this ExternalDocumentSources.
+
+          # noqa: E501
+
+        :param one_drive_enabled: The one_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._one_drive_enabled = one_drive_enabled
+
+    @property
+    def one_drive_metadata(self):
+        &#34;&#34;&#34;Gets the one_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+        :return: The one_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._one_drive_metadata
+
+    @one_drive_metadata.setter
+    def one_drive_metadata(self, one_drive_metadata):
+        &#34;&#34;&#34;Sets the one_drive_metadata of this ExternalDocumentSources.
+
+
+        :param one_drive_metadata: The one_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._one_drive_metadata = one_drive_metadata
+
+    @property
+    def salesforce_enabled(self):
+        &#34;&#34;&#34;Gets the salesforce_enabled of this ExternalDocumentSources.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The salesforce_enabled of this ExternalDocumentSources.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._salesforce_enabled
+
+    @salesforce_enabled.setter
+    def salesforce_enabled(self, salesforce_enabled):
+        &#34;&#34;&#34;Sets the salesforce_enabled of this ExternalDocumentSources.
+
+          # noqa: E501
+
+        :param salesforce_enabled: The salesforce_enabled of this ExternalDocumentSources.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._salesforce_enabled = salesforce_enabled
+
+    @property
+    def salesforce_metadata(self):
+        &#34;&#34;&#34;Gets the salesforce_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+        :return: The salesforce_metadata of this ExternalDocumentSources.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._salesforce_metadata
+
+    @salesforce_metadata.setter
+    def salesforce_metadata(self, salesforce_metadata):
+        &#34;&#34;&#34;Sets the salesforce_metadata of this ExternalDocumentSources.
+
+
+        :param salesforce_metadata: The salesforce_metadata of this ExternalDocumentSources.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._salesforce_metadata = salesforce_metadata
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(ExternalDocumentSources, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, ExternalDocumentSources):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources"><code class="flex name class">
+<span>class <span class="ident">ExternalDocumentSources</span></span>
+<span>(</span><span>boxnet_enabled=None, boxnet_metadata=None, dropbox_enabled=None, dropbox_metadata=None, google_drive_enabled=None, google_drive_metadata=None, one_drive_enabled=None, one_drive_metadata=None, salesforce_enabled=None, salesforce_metadata=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>ExternalDocumentSources - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ExternalDocumentSources(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;boxnet_enabled&#39;: &#39;str&#39;,
+        &#39;boxnet_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;dropbox_enabled&#39;: &#39;str&#39;,
+        &#39;dropbox_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;google_drive_enabled&#39;: &#39;str&#39;,
+        &#39;google_drive_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;one_drive_enabled&#39;: &#39;str&#39;,
+        &#39;one_drive_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;salesforce_enabled&#39;: &#39;str&#39;,
+        &#39;salesforce_metadata&#39;: &#39;SettingsMetadata&#39;
+    }
+
+    attribute_map = {
+        &#39;boxnet_enabled&#39;: &#39;boxnetEnabled&#39;,
+        &#39;boxnet_metadata&#39;: &#39;boxnetMetadata&#39;,
+        &#39;dropbox_enabled&#39;: &#39;dropboxEnabled&#39;,
+        &#39;dropbox_metadata&#39;: &#39;dropboxMetadata&#39;,
+        &#39;google_drive_enabled&#39;: &#39;googleDriveEnabled&#39;,
+        &#39;google_drive_metadata&#39;: &#39;googleDriveMetadata&#39;,
+        &#39;one_drive_enabled&#39;: &#39;oneDriveEnabled&#39;,
+        &#39;one_drive_metadata&#39;: &#39;oneDriveMetadata&#39;,
+        &#39;salesforce_enabled&#39;: &#39;salesforceEnabled&#39;,
+        &#39;salesforce_metadata&#39;: &#39;salesforceMetadata&#39;
+    }
+
+    def __init__(self, boxnet_enabled=None, boxnet_metadata=None, dropbox_enabled=None, dropbox_metadata=None, google_drive_enabled=None, google_drive_metadata=None, one_drive_enabled=None, one_drive_metadata=None, salesforce_enabled=None, salesforce_metadata=None):  # noqa: E501
+        &#34;&#34;&#34;ExternalDocumentSources - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._boxnet_enabled = None
+        self._boxnet_metadata = None
+        self._dropbox_enabled = None
+        self._dropbox_metadata = None
+        self._google_drive_enabled = None
+        self._google_drive_metadata = None
+        self._one_drive_enabled = None
+        self._one_drive_metadata = None
+        self._salesforce_enabled = None
+        self._salesforce_metadata = None
+        self.discriminator = None
+
+        if boxnet_enabled is not None:
+            self.boxnet_enabled = boxnet_enabled
+        if boxnet_metadata is not None:
+            self.boxnet_metadata = boxnet_metadata
+        if dropbox_enabled is not None:
+            self.dropbox_enabled = dropbox_enabled
+        if dropbox_metadata is not None:
+            self.dropbox_metadata = dropbox_metadata
+        if google_drive_enabled is not None:
+            self.google_drive_enabled = google_drive_enabled
+        if google_drive_metadata is not None:
+            self.google_drive_metadata = google_drive_metadata
+        if one_drive_enabled is not None:
+            self.one_drive_enabled = one_drive_enabled
+        if one_drive_metadata is not None:
+            self.one_drive_metadata = one_drive_metadata
+        if salesforce_enabled is not None:
+            self.salesforce_enabled = salesforce_enabled
+        if salesforce_metadata is not None:
+            self.salesforce_metadata = salesforce_metadata
+
+    @property
+    def boxnet_enabled(self):
+        &#34;&#34;&#34;Gets the boxnet_enabled of this ExternalDocumentSources.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The boxnet_enabled of this ExternalDocumentSources.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._boxnet_enabled
+
+    @boxnet_enabled.setter
+    def boxnet_enabled(self, boxnet_enabled):
+        &#34;&#34;&#34;Sets the boxnet_enabled of this ExternalDocumentSources.
+
+          # noqa: E501
+
+        :param boxnet_enabled: The boxnet_enabled of this ExternalDocumentSources.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._boxnet_enabled = boxnet_enabled
+
+    @property
+    def boxnet_metadata(self):
+        &#34;&#34;&#34;Gets the boxnet_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+        :return: The boxnet_metadata of this ExternalDocumentSources.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._boxnet_metadata
+
+    @boxnet_metadata.setter
+    def boxnet_metadata(self, boxnet_metadata):
+        &#34;&#34;&#34;Sets the boxnet_metadata of this ExternalDocumentSources.
+
+
+        :param boxnet_metadata: The boxnet_metadata of this ExternalDocumentSources.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._boxnet_metadata = boxnet_metadata
+
+    @property
+    def dropbox_enabled(self):
+        &#34;&#34;&#34;Gets the dropbox_enabled of this ExternalDocumentSources.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The dropbox_enabled of this ExternalDocumentSources.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._dropbox_enabled
+
+    @dropbox_enabled.setter
+    def dropbox_enabled(self, dropbox_enabled):
+        &#34;&#34;&#34;Sets the dropbox_enabled of this ExternalDocumentSources.
+
+          # noqa: E501
+
+        :param dropbox_enabled: The dropbox_enabled of this ExternalDocumentSources.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._dropbox_enabled = dropbox_enabled
+
+    @property
+    def dropbox_metadata(self):
+        &#34;&#34;&#34;Gets the dropbox_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+        :return: The dropbox_metadata of this ExternalDocumentSources.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._dropbox_metadata
+
+    @dropbox_metadata.setter
+    def dropbox_metadata(self, dropbox_metadata):
+        &#34;&#34;&#34;Sets the dropbox_metadata of this ExternalDocumentSources.
+
+
+        :param dropbox_metadata: The dropbox_metadata of this ExternalDocumentSources.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._dropbox_metadata = dropbox_metadata
+
+    @property
+    def google_drive_enabled(self):
+        &#34;&#34;&#34;Gets the google_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The google_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._google_drive_enabled
+
+    @google_drive_enabled.setter
+    def google_drive_enabled(self, google_drive_enabled):
+        &#34;&#34;&#34;Sets the google_drive_enabled of this ExternalDocumentSources.
+
+          # noqa: E501
+
+        :param google_drive_enabled: The google_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._google_drive_enabled = google_drive_enabled
+
+    @property
+    def google_drive_metadata(self):
+        &#34;&#34;&#34;Gets the google_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+        :return: The google_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._google_drive_metadata
+
+    @google_drive_metadata.setter
+    def google_drive_metadata(self, google_drive_metadata):
+        &#34;&#34;&#34;Sets the google_drive_metadata of this ExternalDocumentSources.
+
+
+        :param google_drive_metadata: The google_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._google_drive_metadata = google_drive_metadata
+
+    @property
+    def one_drive_enabled(self):
+        &#34;&#34;&#34;Gets the one_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The one_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._one_drive_enabled
+
+    @one_drive_enabled.setter
+    def one_drive_enabled(self, one_drive_enabled):
+        &#34;&#34;&#34;Sets the one_drive_enabled of this ExternalDocumentSources.
+
+          # noqa: E501
+
+        :param one_drive_enabled: The one_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._one_drive_enabled = one_drive_enabled
+
+    @property
+    def one_drive_metadata(self):
+        &#34;&#34;&#34;Gets the one_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+        :return: The one_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._one_drive_metadata
+
+    @one_drive_metadata.setter
+    def one_drive_metadata(self, one_drive_metadata):
+        &#34;&#34;&#34;Sets the one_drive_metadata of this ExternalDocumentSources.
+
+
+        :param one_drive_metadata: The one_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._one_drive_metadata = one_drive_metadata
+
+    @property
+    def salesforce_enabled(self):
+        &#34;&#34;&#34;Gets the salesforce_enabled of this ExternalDocumentSources.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The salesforce_enabled of this ExternalDocumentSources.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._salesforce_enabled
+
+    @salesforce_enabled.setter
+    def salesforce_enabled(self, salesforce_enabled):
+        &#34;&#34;&#34;Sets the salesforce_enabled of this ExternalDocumentSources.
+
+          # noqa: E501
+
+        :param salesforce_enabled: The salesforce_enabled of this ExternalDocumentSources.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._salesforce_enabled = salesforce_enabled
+
+    @property
+    def salesforce_metadata(self):
+        &#34;&#34;&#34;Gets the salesforce_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+        :return: The salesforce_metadata of this ExternalDocumentSources.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._salesforce_metadata
+
+    @salesforce_metadata.setter
+    def salesforce_metadata(self, salesforce_metadata):
+        &#34;&#34;&#34;Sets the salesforce_metadata of this ExternalDocumentSources.
+
+
+        :param salesforce_metadata: The salesforce_metadata of this ExternalDocumentSources.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._salesforce_metadata = salesforce_metadata
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(ExternalDocumentSources, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, ExternalDocumentSources):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.boxnet_enabled"><code class="name">var <span class="ident">boxnet_enabled</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the boxnet_enabled of this ExternalDocumentSources.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The boxnet_enabled of this ExternalDocumentSources.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def boxnet_enabled(self):
+    &#34;&#34;&#34;Gets the boxnet_enabled of this ExternalDocumentSources.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The boxnet_enabled of this ExternalDocumentSources.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._boxnet_enabled</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.boxnet_metadata"><code class="name">var <span class="ident">boxnet_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the boxnet_metadata of this ExternalDocumentSources.
+# noqa: E501</p>
+<p>:return: The boxnet_metadata of this ExternalDocumentSources.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def boxnet_metadata(self):
+    &#34;&#34;&#34;Gets the boxnet_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+    :return: The boxnet_metadata of this ExternalDocumentSources.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._boxnet_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.dropbox_enabled"><code class="name">var <span class="ident">dropbox_enabled</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the dropbox_enabled of this ExternalDocumentSources.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The dropbox_enabled of this ExternalDocumentSources.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def dropbox_enabled(self):
+    &#34;&#34;&#34;Gets the dropbox_enabled of this ExternalDocumentSources.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The dropbox_enabled of this ExternalDocumentSources.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._dropbox_enabled</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.dropbox_metadata"><code class="name">var <span class="ident">dropbox_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the dropbox_metadata of this ExternalDocumentSources.
+# noqa: E501</p>
+<p>:return: The dropbox_metadata of this ExternalDocumentSources.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def dropbox_metadata(self):
+    &#34;&#34;&#34;Gets the dropbox_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+    :return: The dropbox_metadata of this ExternalDocumentSources.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._dropbox_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.google_drive_enabled"><code class="name">var <span class="ident">google_drive_enabled</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the google_drive_enabled of this ExternalDocumentSources.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The google_drive_enabled of this ExternalDocumentSources.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def google_drive_enabled(self):
+    &#34;&#34;&#34;Gets the google_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The google_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._google_drive_enabled</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.google_drive_metadata"><code class="name">var <span class="ident">google_drive_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the google_drive_metadata of this ExternalDocumentSources.
+# noqa: E501</p>
+<p>:return: The google_drive_metadata of this ExternalDocumentSources.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def google_drive_metadata(self):
+    &#34;&#34;&#34;Gets the google_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+    :return: The google_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._google_drive_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.one_drive_enabled"><code class="name">var <span class="ident">one_drive_enabled</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the one_drive_enabled of this ExternalDocumentSources.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The one_drive_enabled of this ExternalDocumentSources.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def one_drive_enabled(self):
+    &#34;&#34;&#34;Gets the one_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The one_drive_enabled of this ExternalDocumentSources.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._one_drive_enabled</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.one_drive_metadata"><code class="name">var <span class="ident">one_drive_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the one_drive_metadata of this ExternalDocumentSources.
+# noqa: E501</p>
+<p>:return: The one_drive_metadata of this ExternalDocumentSources.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def one_drive_metadata(self):
+    &#34;&#34;&#34;Gets the one_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+    :return: The one_drive_metadata of this ExternalDocumentSources.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._one_drive_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.salesforce_enabled"><code class="name">var <span class="ident">salesforce_enabled</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the salesforce_enabled of this ExternalDocumentSources.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The salesforce_enabled of this ExternalDocumentSources.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def salesforce_enabled(self):
+    &#34;&#34;&#34;Gets the salesforce_enabled of this ExternalDocumentSources.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The salesforce_enabled of this ExternalDocumentSources.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._salesforce_enabled</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.salesforce_metadata"><code class="name">var <span class="ident">salesforce_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the salesforce_metadata of this ExternalDocumentSources.
+# noqa: E501</p>
+<p>:return: The salesforce_metadata of this ExternalDocumentSources.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def salesforce_metadata(self):
+    &#34;&#34;&#34;Gets the salesforce_metadata of this ExternalDocumentSources.  # noqa: E501
+
+
+    :return: The salesforce_metadata of this ExternalDocumentSources.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._salesforce_metadata</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(ExternalDocumentSources, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.external_document_sources.ExternalDocumentSources.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources">ExternalDocumentSources</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.attribute_map" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.boxnet_enabled" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.boxnet_enabled">boxnet_enabled</a></code></li>
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.boxnet_metadata" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.boxnet_metadata">boxnet_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.dropbox_enabled" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.dropbox_enabled">dropbox_enabled</a></code></li>
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.dropbox_metadata" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.dropbox_metadata">dropbox_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.google_drive_enabled" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.google_drive_enabled">google_drive_enabled</a></code></li>
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.google_drive_metadata" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.google_drive_metadata">google_drive_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.one_drive_enabled" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.one_drive_enabled">one_drive_enabled</a></code></li>
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.one_drive_metadata" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.one_drive_metadata">one_drive_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.salesforce_enabled" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.salesforce_enabled">salesforce_enabled</a></code></li>
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.salesforce_metadata" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.salesforce_metadata">salesforce_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.swagger_types" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.to_dict" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.external_document_sources.ExternalDocumentSources.to_str" href="#docusign_esign.models.external_document_sources.ExternalDocumentSources.to_str">to_str</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

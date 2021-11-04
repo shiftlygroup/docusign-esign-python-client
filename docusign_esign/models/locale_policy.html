@@ -1,0 +1,3726 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.locale_policy API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.locale_policy</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class LocalePolicy(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;address_format&#39;: &#39;str&#39;,
+        &#39;address_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;allow_region&#39;: &#39;str&#39;,
+        &#39;calendar_type&#39;: &#39;str&#39;,
+        &#39;calendar_type_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;culture_name&#39;: &#39;str&#39;,
+        &#39;culture_name_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;currency_code&#39;: &#39;str&#39;,
+        &#39;currency_code_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;currency_negative_format&#39;: &#39;str&#39;,
+        &#39;currency_negative_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;currency_positive_format&#39;: &#39;str&#39;,
+        &#39;currency_positive_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;custom_date_format&#39;: &#39;str&#39;,
+        &#39;custom_sign_date_format&#39;: &#39;str&#39;,
+        &#39;custom_sign_time_format&#39;: &#39;str&#39;,
+        &#39;custom_time_format&#39;: &#39;str&#39;,
+        &#39;date_format&#39;: &#39;str&#39;,
+        &#39;date_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;effective_address_format&#39;: &#39;str&#39;,
+        &#39;effective_calendar_type&#39;: &#39;str&#39;,
+        &#39;effective_currency_code&#39;: &#39;str&#39;,
+        &#39;effective_currency_negative_format&#39;: &#39;str&#39;,
+        &#39;effective_currency_positive_format&#39;: &#39;str&#39;,
+        &#39;effective_custom_date_format&#39;: &#39;str&#39;,
+        &#39;effective_custom_time_format&#39;: &#39;str&#39;,
+        &#39;effective_date_format&#39;: &#39;str&#39;,
+        &#39;effective_initial_format&#39;: &#39;str&#39;,
+        &#39;effective_name_format&#39;: &#39;str&#39;,
+        &#39;effective_time_format&#39;: &#39;str&#39;,
+        &#39;effective_time_zone&#39;: &#39;str&#39;,
+        &#39;initial_format&#39;: &#39;str&#39;,
+        &#39;initial_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;name_format&#39;: &#39;str&#39;,
+        &#39;name_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;sign_date_format&#39;: &#39;str&#39;,
+        &#39;sign_date_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;sign_time_format&#39;: &#39;str&#39;,
+        &#39;sign_time_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;time_format&#39;: &#39;str&#39;,
+        &#39;time_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;time_zone&#39;: &#39;str&#39;,
+        &#39;time_zone_metadata&#39;: &#39;SettingsMetadata&#39;
+    }
+
+    attribute_map = {
+        &#39;address_format&#39;: &#39;addressFormat&#39;,
+        &#39;address_format_metadata&#39;: &#39;addressFormatMetadata&#39;,
+        &#39;allow_region&#39;: &#39;allowRegion&#39;,
+        &#39;calendar_type&#39;: &#39;calendarType&#39;,
+        &#39;calendar_type_metadata&#39;: &#39;calendarTypeMetadata&#39;,
+        &#39;culture_name&#39;: &#39;cultureName&#39;,
+        &#39;culture_name_metadata&#39;: &#39;cultureNameMetadata&#39;,
+        &#39;currency_code&#39;: &#39;currencyCode&#39;,
+        &#39;currency_code_metadata&#39;: &#39;currencyCodeMetadata&#39;,
+        &#39;currency_negative_format&#39;: &#39;currencyNegativeFormat&#39;,
+        &#39;currency_negative_format_metadata&#39;: &#39;currencyNegativeFormatMetadata&#39;,
+        &#39;currency_positive_format&#39;: &#39;currencyPositiveFormat&#39;,
+        &#39;currency_positive_format_metadata&#39;: &#39;currencyPositiveFormatMetadata&#39;,
+        &#39;custom_date_format&#39;: &#39;customDateFormat&#39;,
+        &#39;custom_sign_date_format&#39;: &#39;customSignDateFormat&#39;,
+        &#39;custom_sign_time_format&#39;: &#39;customSignTimeFormat&#39;,
+        &#39;custom_time_format&#39;: &#39;customTimeFormat&#39;,
+        &#39;date_format&#39;: &#39;dateFormat&#39;,
+        &#39;date_format_metadata&#39;: &#39;dateFormatMetadata&#39;,
+        &#39;effective_address_format&#39;: &#39;effectiveAddressFormat&#39;,
+        &#39;effective_calendar_type&#39;: &#39;effectiveCalendarType&#39;,
+        &#39;effective_currency_code&#39;: &#39;effectiveCurrencyCode&#39;,
+        &#39;effective_currency_negative_format&#39;: &#39;effectiveCurrencyNegativeFormat&#39;,
+        &#39;effective_currency_positive_format&#39;: &#39;effectiveCurrencyPositiveFormat&#39;,
+        &#39;effective_custom_date_format&#39;: &#39;effectiveCustomDateFormat&#39;,
+        &#39;effective_custom_time_format&#39;: &#39;effectiveCustomTimeFormat&#39;,
+        &#39;effective_date_format&#39;: &#39;effectiveDateFormat&#39;,
+        &#39;effective_initial_format&#39;: &#39;effectiveInitialFormat&#39;,
+        &#39;effective_name_format&#39;: &#39;effectiveNameFormat&#39;,
+        &#39;effective_time_format&#39;: &#39;effectiveTimeFormat&#39;,
+        &#39;effective_time_zone&#39;: &#39;effectiveTimeZone&#39;,
+        &#39;initial_format&#39;: &#39;initialFormat&#39;,
+        &#39;initial_format_metadata&#39;: &#39;initialFormatMetadata&#39;,
+        &#39;name_format&#39;: &#39;nameFormat&#39;,
+        &#39;name_format_metadata&#39;: &#39;nameFormatMetadata&#39;,
+        &#39;sign_date_format&#39;: &#39;signDateFormat&#39;,
+        &#39;sign_date_format_metadata&#39;: &#39;signDateFormatMetadata&#39;,
+        &#39;sign_time_format&#39;: &#39;signTimeFormat&#39;,
+        &#39;sign_time_format_metadata&#39;: &#39;signTimeFormatMetadata&#39;,
+        &#39;time_format&#39;: &#39;timeFormat&#39;,
+        &#39;time_format_metadata&#39;: &#39;timeFormatMetadata&#39;,
+        &#39;time_zone&#39;: &#39;timeZone&#39;,
+        &#39;time_zone_metadata&#39;: &#39;timeZoneMetadata&#39;
+    }
+
+    def __init__(self, address_format=None, address_format_metadata=None, allow_region=None, calendar_type=None, calendar_type_metadata=None, culture_name=None, culture_name_metadata=None, currency_code=None, currency_code_metadata=None, currency_negative_format=None, currency_negative_format_metadata=None, currency_positive_format=None, currency_positive_format_metadata=None, custom_date_format=None, custom_sign_date_format=None, custom_sign_time_format=None, custom_time_format=None, date_format=None, date_format_metadata=None, effective_address_format=None, effective_calendar_type=None, effective_currency_code=None, effective_currency_negative_format=None, effective_currency_positive_format=None, effective_custom_date_format=None, effective_custom_time_format=None, effective_date_format=None, effective_initial_format=None, effective_name_format=None, effective_time_format=None, effective_time_zone=None, initial_format=None, initial_format_metadata=None, name_format=None, name_format_metadata=None, sign_date_format=None, sign_date_format_metadata=None, sign_time_format=None, sign_time_format_metadata=None, time_format=None, time_format_metadata=None, time_zone=None, time_zone_metadata=None):  # noqa: E501
+        &#34;&#34;&#34;LocalePolicy - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._address_format = None
+        self._address_format_metadata = None
+        self._allow_region = None
+        self._calendar_type = None
+        self._calendar_type_metadata = None
+        self._culture_name = None
+        self._culture_name_metadata = None
+        self._currency_code = None
+        self._currency_code_metadata = None
+        self._currency_negative_format = None
+        self._currency_negative_format_metadata = None
+        self._currency_positive_format = None
+        self._currency_positive_format_metadata = None
+        self._custom_date_format = None
+        self._custom_sign_date_format = None
+        self._custom_sign_time_format = None
+        self._custom_time_format = None
+        self._date_format = None
+        self._date_format_metadata = None
+        self._effective_address_format = None
+        self._effective_calendar_type = None
+        self._effective_currency_code = None
+        self._effective_currency_negative_format = None
+        self._effective_currency_positive_format = None
+        self._effective_custom_date_format = None
+        self._effective_custom_time_format = None
+        self._effective_date_format = None
+        self._effective_initial_format = None
+        self._effective_name_format = None
+        self._effective_time_format = None
+        self._effective_time_zone = None
+        self._initial_format = None
+        self._initial_format_metadata = None
+        self._name_format = None
+        self._name_format_metadata = None
+        self._sign_date_format = None
+        self._sign_date_format_metadata = None
+        self._sign_time_format = None
+        self._sign_time_format_metadata = None
+        self._time_format = None
+        self._time_format_metadata = None
+        self._time_zone = None
+        self._time_zone_metadata = None
+        self.discriminator = None
+
+        if address_format is not None:
+            self.address_format = address_format
+        if address_format_metadata is not None:
+            self.address_format_metadata = address_format_metadata
+        if allow_region is not None:
+            self.allow_region = allow_region
+        if calendar_type is not None:
+            self.calendar_type = calendar_type
+        if calendar_type_metadata is not None:
+            self.calendar_type_metadata = calendar_type_metadata
+        if culture_name is not None:
+            self.culture_name = culture_name
+        if culture_name_metadata is not None:
+            self.culture_name_metadata = culture_name_metadata
+        if currency_code is not None:
+            self.currency_code = currency_code
+        if currency_code_metadata is not None:
+            self.currency_code_metadata = currency_code_metadata
+        if currency_negative_format is not None:
+            self.currency_negative_format = currency_negative_format
+        if currency_negative_format_metadata is not None:
+            self.currency_negative_format_metadata = currency_negative_format_metadata
+        if currency_positive_format is not None:
+            self.currency_positive_format = currency_positive_format
+        if currency_positive_format_metadata is not None:
+            self.currency_positive_format_metadata = currency_positive_format_metadata
+        if custom_date_format is not None:
+            self.custom_date_format = custom_date_format
+        if custom_sign_date_format is not None:
+            self.custom_sign_date_format = custom_sign_date_format
+        if custom_sign_time_format is not None:
+            self.custom_sign_time_format = custom_sign_time_format
+        if custom_time_format is not None:
+            self.custom_time_format = custom_time_format
+        if date_format is not None:
+            self.date_format = date_format
+        if date_format_metadata is not None:
+            self.date_format_metadata = date_format_metadata
+        if effective_address_format is not None:
+            self.effective_address_format = effective_address_format
+        if effective_calendar_type is not None:
+            self.effective_calendar_type = effective_calendar_type
+        if effective_currency_code is not None:
+            self.effective_currency_code = effective_currency_code
+        if effective_currency_negative_format is not None:
+            self.effective_currency_negative_format = effective_currency_negative_format
+        if effective_currency_positive_format is not None:
+            self.effective_currency_positive_format = effective_currency_positive_format
+        if effective_custom_date_format is not None:
+            self.effective_custom_date_format = effective_custom_date_format
+        if effective_custom_time_format is not None:
+            self.effective_custom_time_format = effective_custom_time_format
+        if effective_date_format is not None:
+            self.effective_date_format = effective_date_format
+        if effective_initial_format is not None:
+            self.effective_initial_format = effective_initial_format
+        if effective_name_format is not None:
+            self.effective_name_format = effective_name_format
+        if effective_time_format is not None:
+            self.effective_time_format = effective_time_format
+        if effective_time_zone is not None:
+            self.effective_time_zone = effective_time_zone
+        if initial_format is not None:
+            self.initial_format = initial_format
+        if initial_format_metadata is not None:
+            self.initial_format_metadata = initial_format_metadata
+        if name_format is not None:
+            self.name_format = name_format
+        if name_format_metadata is not None:
+            self.name_format_metadata = name_format_metadata
+        if sign_date_format is not None:
+            self.sign_date_format = sign_date_format
+        if sign_date_format_metadata is not None:
+            self.sign_date_format_metadata = sign_date_format_metadata
+        if sign_time_format is not None:
+            self.sign_time_format = sign_time_format
+        if sign_time_format_metadata is not None:
+            self.sign_time_format_metadata = sign_time_format_metadata
+        if time_format is not None:
+            self.time_format = time_format
+        if time_format_metadata is not None:
+            self.time_format_metadata = time_format_metadata
+        if time_zone is not None:
+            self.time_zone = time_zone
+        if time_zone_metadata is not None:
+            self.time_zone_metadata = time_zone_metadata
+
+    @property
+    def address_format(self):
+        &#34;&#34;&#34;Gets the address_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The address_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._address_format
+
+    @address_format.setter
+    def address_format(self, address_format):
+        &#34;&#34;&#34;Sets the address_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param address_format: The address_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._address_format = address_format
+
+    @property
+    def address_format_metadata(self):
+        &#34;&#34;&#34;Gets the address_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The address_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._address_format_metadata
+
+    @address_format_metadata.setter
+    def address_format_metadata(self, address_format_metadata):
+        &#34;&#34;&#34;Sets the address_format_metadata of this LocalePolicy.
+
+
+        :param address_format_metadata: The address_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._address_format_metadata = address_format_metadata
+
+    @property
+    def allow_region(self):
+        &#34;&#34;&#34;Gets the allow_region of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_region of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._allow_region
+
+    @allow_region.setter
+    def allow_region(self, allow_region):
+        &#34;&#34;&#34;Sets the allow_region of this LocalePolicy.
+
+          # noqa: E501
+
+        :param allow_region: The allow_region of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._allow_region = allow_region
+
+    @property
+    def calendar_type(self):
+        &#34;&#34;&#34;Gets the calendar_type of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The calendar_type of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._calendar_type
+
+    @calendar_type.setter
+    def calendar_type(self, calendar_type):
+        &#34;&#34;&#34;Sets the calendar_type of this LocalePolicy.
+
+          # noqa: E501
+
+        :param calendar_type: The calendar_type of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._calendar_type = calendar_type
+
+    @property
+    def calendar_type_metadata(self):
+        &#34;&#34;&#34;Gets the calendar_type_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The calendar_type_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._calendar_type_metadata
+
+    @calendar_type_metadata.setter
+    def calendar_type_metadata(self, calendar_type_metadata):
+        &#34;&#34;&#34;Sets the calendar_type_metadata of this LocalePolicy.
+
+
+        :param calendar_type_metadata: The calendar_type_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._calendar_type_metadata = calendar_type_metadata
+
+    @property
+    def culture_name(self):
+        &#34;&#34;&#34;Gets the culture_name of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The culture_name of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._culture_name
+
+    @culture_name.setter
+    def culture_name(self, culture_name):
+        &#34;&#34;&#34;Sets the culture_name of this LocalePolicy.
+
+          # noqa: E501
+
+        :param culture_name: The culture_name of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._culture_name = culture_name
+
+    @property
+    def culture_name_metadata(self):
+        &#34;&#34;&#34;Gets the culture_name_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The culture_name_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._culture_name_metadata
+
+    @culture_name_metadata.setter
+    def culture_name_metadata(self, culture_name_metadata):
+        &#34;&#34;&#34;Sets the culture_name_metadata of this LocalePolicy.
+
+
+        :param culture_name_metadata: The culture_name_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._culture_name_metadata = culture_name_metadata
+
+    @property
+    def currency_code(self):
+        &#34;&#34;&#34;Gets the currency_code of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The currency_code of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._currency_code
+
+    @currency_code.setter
+    def currency_code(self, currency_code):
+        &#34;&#34;&#34;Sets the currency_code of this LocalePolicy.
+
+          # noqa: E501
+
+        :param currency_code: The currency_code of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._currency_code = currency_code
+
+    @property
+    def currency_code_metadata(self):
+        &#34;&#34;&#34;Gets the currency_code_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The currency_code_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._currency_code_metadata
+
+    @currency_code_metadata.setter
+    def currency_code_metadata(self, currency_code_metadata):
+        &#34;&#34;&#34;Sets the currency_code_metadata of this LocalePolicy.
+
+
+        :param currency_code_metadata: The currency_code_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._currency_code_metadata = currency_code_metadata
+
+    @property
+    def currency_negative_format(self):
+        &#34;&#34;&#34;Gets the currency_negative_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The currency_negative_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._currency_negative_format
+
+    @currency_negative_format.setter
+    def currency_negative_format(self, currency_negative_format):
+        &#34;&#34;&#34;Sets the currency_negative_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param currency_negative_format: The currency_negative_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._currency_negative_format = currency_negative_format
+
+    @property
+    def currency_negative_format_metadata(self):
+        &#34;&#34;&#34;Gets the currency_negative_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The currency_negative_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._currency_negative_format_metadata
+
+    @currency_negative_format_metadata.setter
+    def currency_negative_format_metadata(self, currency_negative_format_metadata):
+        &#34;&#34;&#34;Sets the currency_negative_format_metadata of this LocalePolicy.
+
+
+        :param currency_negative_format_metadata: The currency_negative_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._currency_negative_format_metadata = currency_negative_format_metadata
+
+    @property
+    def currency_positive_format(self):
+        &#34;&#34;&#34;Gets the currency_positive_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The currency_positive_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._currency_positive_format
+
+    @currency_positive_format.setter
+    def currency_positive_format(self, currency_positive_format):
+        &#34;&#34;&#34;Sets the currency_positive_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param currency_positive_format: The currency_positive_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._currency_positive_format = currency_positive_format
+
+    @property
+    def currency_positive_format_metadata(self):
+        &#34;&#34;&#34;Gets the currency_positive_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The currency_positive_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._currency_positive_format_metadata
+
+    @currency_positive_format_metadata.setter
+    def currency_positive_format_metadata(self, currency_positive_format_metadata):
+        &#34;&#34;&#34;Sets the currency_positive_format_metadata of this LocalePolicy.
+
+
+        :param currency_positive_format_metadata: The currency_positive_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._currency_positive_format_metadata = currency_positive_format_metadata
+
+    @property
+    def custom_date_format(self):
+        &#34;&#34;&#34;Gets the custom_date_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_date_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_date_format
+
+    @custom_date_format.setter
+    def custom_date_format(self, custom_date_format):
+        &#34;&#34;&#34;Sets the custom_date_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param custom_date_format: The custom_date_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_date_format = custom_date_format
+
+    @property
+    def custom_sign_date_format(self):
+        &#34;&#34;&#34;Gets the custom_sign_date_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_sign_date_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_sign_date_format
+
+    @custom_sign_date_format.setter
+    def custom_sign_date_format(self, custom_sign_date_format):
+        &#34;&#34;&#34;Sets the custom_sign_date_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param custom_sign_date_format: The custom_sign_date_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_sign_date_format = custom_sign_date_format
+
+    @property
+    def custom_sign_time_format(self):
+        &#34;&#34;&#34;Gets the custom_sign_time_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_sign_time_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_sign_time_format
+
+    @custom_sign_time_format.setter
+    def custom_sign_time_format(self, custom_sign_time_format):
+        &#34;&#34;&#34;Sets the custom_sign_time_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param custom_sign_time_format: The custom_sign_time_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_sign_time_format = custom_sign_time_format
+
+    @property
+    def custom_time_format(self):
+        &#34;&#34;&#34;Gets the custom_time_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_time_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_time_format
+
+    @custom_time_format.setter
+    def custom_time_format(self, custom_time_format):
+        &#34;&#34;&#34;Sets the custom_time_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param custom_time_format: The custom_time_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_time_format = custom_time_format
+
+    @property
+    def date_format(self):
+        &#34;&#34;&#34;Gets the date_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The date_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._date_format
+
+    @date_format.setter
+    def date_format(self, date_format):
+        &#34;&#34;&#34;Sets the date_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param date_format: The date_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._date_format = date_format
+
+    @property
+    def date_format_metadata(self):
+        &#34;&#34;&#34;Gets the date_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The date_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._date_format_metadata
+
+    @date_format_metadata.setter
+    def date_format_metadata(self, date_format_metadata):
+        &#34;&#34;&#34;Sets the date_format_metadata of this LocalePolicy.
+
+
+        :param date_format_metadata: The date_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._date_format_metadata = date_format_metadata
+
+    @property
+    def effective_address_format(self):
+        &#34;&#34;&#34;Gets the effective_address_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_address_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_address_format
+
+    @effective_address_format.setter
+    def effective_address_format(self, effective_address_format):
+        &#34;&#34;&#34;Sets the effective_address_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_address_format: The effective_address_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_address_format = effective_address_format
+
+    @property
+    def effective_calendar_type(self):
+        &#34;&#34;&#34;Gets the effective_calendar_type of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_calendar_type of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_calendar_type
+
+    @effective_calendar_type.setter
+    def effective_calendar_type(self, effective_calendar_type):
+        &#34;&#34;&#34;Sets the effective_calendar_type of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_calendar_type: The effective_calendar_type of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_calendar_type = effective_calendar_type
+
+    @property
+    def effective_currency_code(self):
+        &#34;&#34;&#34;Gets the effective_currency_code of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_currency_code of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_currency_code
+
+    @effective_currency_code.setter
+    def effective_currency_code(self, effective_currency_code):
+        &#34;&#34;&#34;Sets the effective_currency_code of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_currency_code: The effective_currency_code of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_currency_code = effective_currency_code
+
+    @property
+    def effective_currency_negative_format(self):
+        &#34;&#34;&#34;Gets the effective_currency_negative_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_currency_negative_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_currency_negative_format
+
+    @effective_currency_negative_format.setter
+    def effective_currency_negative_format(self, effective_currency_negative_format):
+        &#34;&#34;&#34;Sets the effective_currency_negative_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_currency_negative_format: The effective_currency_negative_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_currency_negative_format = effective_currency_negative_format
+
+    @property
+    def effective_currency_positive_format(self):
+        &#34;&#34;&#34;Gets the effective_currency_positive_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_currency_positive_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_currency_positive_format
+
+    @effective_currency_positive_format.setter
+    def effective_currency_positive_format(self, effective_currency_positive_format):
+        &#34;&#34;&#34;Sets the effective_currency_positive_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_currency_positive_format: The effective_currency_positive_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_currency_positive_format = effective_currency_positive_format
+
+    @property
+    def effective_custom_date_format(self):
+        &#34;&#34;&#34;Gets the effective_custom_date_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_custom_date_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_custom_date_format
+
+    @effective_custom_date_format.setter
+    def effective_custom_date_format(self, effective_custom_date_format):
+        &#34;&#34;&#34;Sets the effective_custom_date_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_custom_date_format: The effective_custom_date_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_custom_date_format = effective_custom_date_format
+
+    @property
+    def effective_custom_time_format(self):
+        &#34;&#34;&#34;Gets the effective_custom_time_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_custom_time_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_custom_time_format
+
+    @effective_custom_time_format.setter
+    def effective_custom_time_format(self, effective_custom_time_format):
+        &#34;&#34;&#34;Sets the effective_custom_time_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_custom_time_format: The effective_custom_time_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_custom_time_format = effective_custom_time_format
+
+    @property
+    def effective_date_format(self):
+        &#34;&#34;&#34;Gets the effective_date_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_date_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_date_format
+
+    @effective_date_format.setter
+    def effective_date_format(self, effective_date_format):
+        &#34;&#34;&#34;Sets the effective_date_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_date_format: The effective_date_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_date_format = effective_date_format
+
+    @property
+    def effective_initial_format(self):
+        &#34;&#34;&#34;Gets the effective_initial_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_initial_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_initial_format
+
+    @effective_initial_format.setter
+    def effective_initial_format(self, effective_initial_format):
+        &#34;&#34;&#34;Sets the effective_initial_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_initial_format: The effective_initial_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_initial_format = effective_initial_format
+
+    @property
+    def effective_name_format(self):
+        &#34;&#34;&#34;Gets the effective_name_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_name_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_name_format
+
+    @effective_name_format.setter
+    def effective_name_format(self, effective_name_format):
+        &#34;&#34;&#34;Sets the effective_name_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_name_format: The effective_name_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_name_format = effective_name_format
+
+    @property
+    def effective_time_format(self):
+        &#34;&#34;&#34;Gets the effective_time_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_time_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_time_format
+
+    @effective_time_format.setter
+    def effective_time_format(self, effective_time_format):
+        &#34;&#34;&#34;Sets the effective_time_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_time_format: The effective_time_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_time_format = effective_time_format
+
+    @property
+    def effective_time_zone(self):
+        &#34;&#34;&#34;Gets the effective_time_zone of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_time_zone of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_time_zone
+
+    @effective_time_zone.setter
+    def effective_time_zone(self, effective_time_zone):
+        &#34;&#34;&#34;Sets the effective_time_zone of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_time_zone: The effective_time_zone of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_time_zone = effective_time_zone
+
+    @property
+    def initial_format(self):
+        &#34;&#34;&#34;Gets the initial_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The initial_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._initial_format
+
+    @initial_format.setter
+    def initial_format(self, initial_format):
+        &#34;&#34;&#34;Sets the initial_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param initial_format: The initial_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._initial_format = initial_format
+
+    @property
+    def initial_format_metadata(self):
+        &#34;&#34;&#34;Gets the initial_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The initial_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._initial_format_metadata
+
+    @initial_format_metadata.setter
+    def initial_format_metadata(self, initial_format_metadata):
+        &#34;&#34;&#34;Sets the initial_format_metadata of this LocalePolicy.
+
+
+        :param initial_format_metadata: The initial_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._initial_format_metadata = initial_format_metadata
+
+    @property
+    def name_format(self):
+        &#34;&#34;&#34;Gets the name_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The name_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name_format
+
+    @name_format.setter
+    def name_format(self, name_format):
+        &#34;&#34;&#34;Sets the name_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param name_format: The name_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name_format = name_format
+
+    @property
+    def name_format_metadata(self):
+        &#34;&#34;&#34;Gets the name_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The name_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._name_format_metadata
+
+    @name_format_metadata.setter
+    def name_format_metadata(self, name_format_metadata):
+        &#34;&#34;&#34;Sets the name_format_metadata of this LocalePolicy.
+
+
+        :param name_format_metadata: The name_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._name_format_metadata = name_format_metadata
+
+    @property
+    def sign_date_format(self):
+        &#34;&#34;&#34;Gets the sign_date_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sign_date_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sign_date_format
+
+    @sign_date_format.setter
+    def sign_date_format(self, sign_date_format):
+        &#34;&#34;&#34;Sets the sign_date_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param sign_date_format: The sign_date_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sign_date_format = sign_date_format
+
+    @property
+    def sign_date_format_metadata(self):
+        &#34;&#34;&#34;Gets the sign_date_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The sign_date_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._sign_date_format_metadata
+
+    @sign_date_format_metadata.setter
+    def sign_date_format_metadata(self, sign_date_format_metadata):
+        &#34;&#34;&#34;Sets the sign_date_format_metadata of this LocalePolicy.
+
+
+        :param sign_date_format_metadata: The sign_date_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._sign_date_format_metadata = sign_date_format_metadata
+
+    @property
+    def sign_time_format(self):
+        &#34;&#34;&#34;Gets the sign_time_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sign_time_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sign_time_format
+
+    @sign_time_format.setter
+    def sign_time_format(self, sign_time_format):
+        &#34;&#34;&#34;Sets the sign_time_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param sign_time_format: The sign_time_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sign_time_format = sign_time_format
+
+    @property
+    def sign_time_format_metadata(self):
+        &#34;&#34;&#34;Gets the sign_time_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The sign_time_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._sign_time_format_metadata
+
+    @sign_time_format_metadata.setter
+    def sign_time_format_metadata(self, sign_time_format_metadata):
+        &#34;&#34;&#34;Sets the sign_time_format_metadata of this LocalePolicy.
+
+
+        :param sign_time_format_metadata: The sign_time_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._sign_time_format_metadata = sign_time_format_metadata
+
+    @property
+    def time_format(self):
+        &#34;&#34;&#34;Gets the time_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The time_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._time_format
+
+    @time_format.setter
+    def time_format(self, time_format):
+        &#34;&#34;&#34;Sets the time_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param time_format: The time_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._time_format = time_format
+
+    @property
+    def time_format_metadata(self):
+        &#34;&#34;&#34;Gets the time_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The time_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._time_format_metadata
+
+    @time_format_metadata.setter
+    def time_format_metadata(self, time_format_metadata):
+        &#34;&#34;&#34;Sets the time_format_metadata of this LocalePolicy.
+
+
+        :param time_format_metadata: The time_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._time_format_metadata = time_format_metadata
+
+    @property
+    def time_zone(self):
+        &#34;&#34;&#34;Gets the time_zone of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The time_zone of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._time_zone
+
+    @time_zone.setter
+    def time_zone(self, time_zone):
+        &#34;&#34;&#34;Sets the time_zone of this LocalePolicy.
+
+          # noqa: E501
+
+        :param time_zone: The time_zone of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._time_zone = time_zone
+
+    @property
+    def time_zone_metadata(self):
+        &#34;&#34;&#34;Gets the time_zone_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The time_zone_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._time_zone_metadata
+
+    @time_zone_metadata.setter
+    def time_zone_metadata(self, time_zone_metadata):
+        &#34;&#34;&#34;Sets the time_zone_metadata of this LocalePolicy.
+
+
+        :param time_zone_metadata: The time_zone_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._time_zone_metadata = time_zone_metadata
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(LocalePolicy, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, LocalePolicy):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy"><code class="flex name class">
+<span>class <span class="ident">LocalePolicy</span></span>
+<span>(</span><span>address_format=None, address_format_metadata=None, allow_region=None, calendar_type=None, calendar_type_metadata=None, culture_name=None, culture_name_metadata=None, currency_code=None, currency_code_metadata=None, currency_negative_format=None, currency_negative_format_metadata=None, currency_positive_format=None, currency_positive_format_metadata=None, custom_date_format=None, custom_sign_date_format=None, custom_sign_time_format=None, custom_time_format=None, date_format=None, date_format_metadata=None, effective_address_format=None, effective_calendar_type=None, effective_currency_code=None, effective_currency_negative_format=None, effective_currency_positive_format=None, effective_custom_date_format=None, effective_custom_time_format=None, effective_date_format=None, effective_initial_format=None, effective_name_format=None, effective_time_format=None, effective_time_zone=None, initial_format=None, initial_format_metadata=None, name_format=None, name_format_metadata=None, sign_date_format=None, sign_date_format_metadata=None, sign_time_format=None, sign_time_format_metadata=None, time_format=None, time_format_metadata=None, time_zone=None, time_zone_metadata=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>LocalePolicy - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class LocalePolicy(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;address_format&#39;: &#39;str&#39;,
+        &#39;address_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;allow_region&#39;: &#39;str&#39;,
+        &#39;calendar_type&#39;: &#39;str&#39;,
+        &#39;calendar_type_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;culture_name&#39;: &#39;str&#39;,
+        &#39;culture_name_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;currency_code&#39;: &#39;str&#39;,
+        &#39;currency_code_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;currency_negative_format&#39;: &#39;str&#39;,
+        &#39;currency_negative_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;currency_positive_format&#39;: &#39;str&#39;,
+        &#39;currency_positive_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;custom_date_format&#39;: &#39;str&#39;,
+        &#39;custom_sign_date_format&#39;: &#39;str&#39;,
+        &#39;custom_sign_time_format&#39;: &#39;str&#39;,
+        &#39;custom_time_format&#39;: &#39;str&#39;,
+        &#39;date_format&#39;: &#39;str&#39;,
+        &#39;date_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;effective_address_format&#39;: &#39;str&#39;,
+        &#39;effective_calendar_type&#39;: &#39;str&#39;,
+        &#39;effective_currency_code&#39;: &#39;str&#39;,
+        &#39;effective_currency_negative_format&#39;: &#39;str&#39;,
+        &#39;effective_currency_positive_format&#39;: &#39;str&#39;,
+        &#39;effective_custom_date_format&#39;: &#39;str&#39;,
+        &#39;effective_custom_time_format&#39;: &#39;str&#39;,
+        &#39;effective_date_format&#39;: &#39;str&#39;,
+        &#39;effective_initial_format&#39;: &#39;str&#39;,
+        &#39;effective_name_format&#39;: &#39;str&#39;,
+        &#39;effective_time_format&#39;: &#39;str&#39;,
+        &#39;effective_time_zone&#39;: &#39;str&#39;,
+        &#39;initial_format&#39;: &#39;str&#39;,
+        &#39;initial_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;name_format&#39;: &#39;str&#39;,
+        &#39;name_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;sign_date_format&#39;: &#39;str&#39;,
+        &#39;sign_date_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;sign_time_format&#39;: &#39;str&#39;,
+        &#39;sign_time_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;time_format&#39;: &#39;str&#39;,
+        &#39;time_format_metadata&#39;: &#39;SettingsMetadata&#39;,
+        &#39;time_zone&#39;: &#39;str&#39;,
+        &#39;time_zone_metadata&#39;: &#39;SettingsMetadata&#39;
+    }
+
+    attribute_map = {
+        &#39;address_format&#39;: &#39;addressFormat&#39;,
+        &#39;address_format_metadata&#39;: &#39;addressFormatMetadata&#39;,
+        &#39;allow_region&#39;: &#39;allowRegion&#39;,
+        &#39;calendar_type&#39;: &#39;calendarType&#39;,
+        &#39;calendar_type_metadata&#39;: &#39;calendarTypeMetadata&#39;,
+        &#39;culture_name&#39;: &#39;cultureName&#39;,
+        &#39;culture_name_metadata&#39;: &#39;cultureNameMetadata&#39;,
+        &#39;currency_code&#39;: &#39;currencyCode&#39;,
+        &#39;currency_code_metadata&#39;: &#39;currencyCodeMetadata&#39;,
+        &#39;currency_negative_format&#39;: &#39;currencyNegativeFormat&#39;,
+        &#39;currency_negative_format_metadata&#39;: &#39;currencyNegativeFormatMetadata&#39;,
+        &#39;currency_positive_format&#39;: &#39;currencyPositiveFormat&#39;,
+        &#39;currency_positive_format_metadata&#39;: &#39;currencyPositiveFormatMetadata&#39;,
+        &#39;custom_date_format&#39;: &#39;customDateFormat&#39;,
+        &#39;custom_sign_date_format&#39;: &#39;customSignDateFormat&#39;,
+        &#39;custom_sign_time_format&#39;: &#39;customSignTimeFormat&#39;,
+        &#39;custom_time_format&#39;: &#39;customTimeFormat&#39;,
+        &#39;date_format&#39;: &#39;dateFormat&#39;,
+        &#39;date_format_metadata&#39;: &#39;dateFormatMetadata&#39;,
+        &#39;effective_address_format&#39;: &#39;effectiveAddressFormat&#39;,
+        &#39;effective_calendar_type&#39;: &#39;effectiveCalendarType&#39;,
+        &#39;effective_currency_code&#39;: &#39;effectiveCurrencyCode&#39;,
+        &#39;effective_currency_negative_format&#39;: &#39;effectiveCurrencyNegativeFormat&#39;,
+        &#39;effective_currency_positive_format&#39;: &#39;effectiveCurrencyPositiveFormat&#39;,
+        &#39;effective_custom_date_format&#39;: &#39;effectiveCustomDateFormat&#39;,
+        &#39;effective_custom_time_format&#39;: &#39;effectiveCustomTimeFormat&#39;,
+        &#39;effective_date_format&#39;: &#39;effectiveDateFormat&#39;,
+        &#39;effective_initial_format&#39;: &#39;effectiveInitialFormat&#39;,
+        &#39;effective_name_format&#39;: &#39;effectiveNameFormat&#39;,
+        &#39;effective_time_format&#39;: &#39;effectiveTimeFormat&#39;,
+        &#39;effective_time_zone&#39;: &#39;effectiveTimeZone&#39;,
+        &#39;initial_format&#39;: &#39;initialFormat&#39;,
+        &#39;initial_format_metadata&#39;: &#39;initialFormatMetadata&#39;,
+        &#39;name_format&#39;: &#39;nameFormat&#39;,
+        &#39;name_format_metadata&#39;: &#39;nameFormatMetadata&#39;,
+        &#39;sign_date_format&#39;: &#39;signDateFormat&#39;,
+        &#39;sign_date_format_metadata&#39;: &#39;signDateFormatMetadata&#39;,
+        &#39;sign_time_format&#39;: &#39;signTimeFormat&#39;,
+        &#39;sign_time_format_metadata&#39;: &#39;signTimeFormatMetadata&#39;,
+        &#39;time_format&#39;: &#39;timeFormat&#39;,
+        &#39;time_format_metadata&#39;: &#39;timeFormatMetadata&#39;,
+        &#39;time_zone&#39;: &#39;timeZone&#39;,
+        &#39;time_zone_metadata&#39;: &#39;timeZoneMetadata&#39;
+    }
+
+    def __init__(self, address_format=None, address_format_metadata=None, allow_region=None, calendar_type=None, calendar_type_metadata=None, culture_name=None, culture_name_metadata=None, currency_code=None, currency_code_metadata=None, currency_negative_format=None, currency_negative_format_metadata=None, currency_positive_format=None, currency_positive_format_metadata=None, custom_date_format=None, custom_sign_date_format=None, custom_sign_time_format=None, custom_time_format=None, date_format=None, date_format_metadata=None, effective_address_format=None, effective_calendar_type=None, effective_currency_code=None, effective_currency_negative_format=None, effective_currency_positive_format=None, effective_custom_date_format=None, effective_custom_time_format=None, effective_date_format=None, effective_initial_format=None, effective_name_format=None, effective_time_format=None, effective_time_zone=None, initial_format=None, initial_format_metadata=None, name_format=None, name_format_metadata=None, sign_date_format=None, sign_date_format_metadata=None, sign_time_format=None, sign_time_format_metadata=None, time_format=None, time_format_metadata=None, time_zone=None, time_zone_metadata=None):  # noqa: E501
+        &#34;&#34;&#34;LocalePolicy - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._address_format = None
+        self._address_format_metadata = None
+        self._allow_region = None
+        self._calendar_type = None
+        self._calendar_type_metadata = None
+        self._culture_name = None
+        self._culture_name_metadata = None
+        self._currency_code = None
+        self._currency_code_metadata = None
+        self._currency_negative_format = None
+        self._currency_negative_format_metadata = None
+        self._currency_positive_format = None
+        self._currency_positive_format_metadata = None
+        self._custom_date_format = None
+        self._custom_sign_date_format = None
+        self._custom_sign_time_format = None
+        self._custom_time_format = None
+        self._date_format = None
+        self._date_format_metadata = None
+        self._effective_address_format = None
+        self._effective_calendar_type = None
+        self._effective_currency_code = None
+        self._effective_currency_negative_format = None
+        self._effective_currency_positive_format = None
+        self._effective_custom_date_format = None
+        self._effective_custom_time_format = None
+        self._effective_date_format = None
+        self._effective_initial_format = None
+        self._effective_name_format = None
+        self._effective_time_format = None
+        self._effective_time_zone = None
+        self._initial_format = None
+        self._initial_format_metadata = None
+        self._name_format = None
+        self._name_format_metadata = None
+        self._sign_date_format = None
+        self._sign_date_format_metadata = None
+        self._sign_time_format = None
+        self._sign_time_format_metadata = None
+        self._time_format = None
+        self._time_format_metadata = None
+        self._time_zone = None
+        self._time_zone_metadata = None
+        self.discriminator = None
+
+        if address_format is not None:
+            self.address_format = address_format
+        if address_format_metadata is not None:
+            self.address_format_metadata = address_format_metadata
+        if allow_region is not None:
+            self.allow_region = allow_region
+        if calendar_type is not None:
+            self.calendar_type = calendar_type
+        if calendar_type_metadata is not None:
+            self.calendar_type_metadata = calendar_type_metadata
+        if culture_name is not None:
+            self.culture_name = culture_name
+        if culture_name_metadata is not None:
+            self.culture_name_metadata = culture_name_metadata
+        if currency_code is not None:
+            self.currency_code = currency_code
+        if currency_code_metadata is not None:
+            self.currency_code_metadata = currency_code_metadata
+        if currency_negative_format is not None:
+            self.currency_negative_format = currency_negative_format
+        if currency_negative_format_metadata is not None:
+            self.currency_negative_format_metadata = currency_negative_format_metadata
+        if currency_positive_format is not None:
+            self.currency_positive_format = currency_positive_format
+        if currency_positive_format_metadata is not None:
+            self.currency_positive_format_metadata = currency_positive_format_metadata
+        if custom_date_format is not None:
+            self.custom_date_format = custom_date_format
+        if custom_sign_date_format is not None:
+            self.custom_sign_date_format = custom_sign_date_format
+        if custom_sign_time_format is not None:
+            self.custom_sign_time_format = custom_sign_time_format
+        if custom_time_format is not None:
+            self.custom_time_format = custom_time_format
+        if date_format is not None:
+            self.date_format = date_format
+        if date_format_metadata is not None:
+            self.date_format_metadata = date_format_metadata
+        if effective_address_format is not None:
+            self.effective_address_format = effective_address_format
+        if effective_calendar_type is not None:
+            self.effective_calendar_type = effective_calendar_type
+        if effective_currency_code is not None:
+            self.effective_currency_code = effective_currency_code
+        if effective_currency_negative_format is not None:
+            self.effective_currency_negative_format = effective_currency_negative_format
+        if effective_currency_positive_format is not None:
+            self.effective_currency_positive_format = effective_currency_positive_format
+        if effective_custom_date_format is not None:
+            self.effective_custom_date_format = effective_custom_date_format
+        if effective_custom_time_format is not None:
+            self.effective_custom_time_format = effective_custom_time_format
+        if effective_date_format is not None:
+            self.effective_date_format = effective_date_format
+        if effective_initial_format is not None:
+            self.effective_initial_format = effective_initial_format
+        if effective_name_format is not None:
+            self.effective_name_format = effective_name_format
+        if effective_time_format is not None:
+            self.effective_time_format = effective_time_format
+        if effective_time_zone is not None:
+            self.effective_time_zone = effective_time_zone
+        if initial_format is not None:
+            self.initial_format = initial_format
+        if initial_format_metadata is not None:
+            self.initial_format_metadata = initial_format_metadata
+        if name_format is not None:
+            self.name_format = name_format
+        if name_format_metadata is not None:
+            self.name_format_metadata = name_format_metadata
+        if sign_date_format is not None:
+            self.sign_date_format = sign_date_format
+        if sign_date_format_metadata is not None:
+            self.sign_date_format_metadata = sign_date_format_metadata
+        if sign_time_format is not None:
+            self.sign_time_format = sign_time_format
+        if sign_time_format_metadata is not None:
+            self.sign_time_format_metadata = sign_time_format_metadata
+        if time_format is not None:
+            self.time_format = time_format
+        if time_format_metadata is not None:
+            self.time_format_metadata = time_format_metadata
+        if time_zone is not None:
+            self.time_zone = time_zone
+        if time_zone_metadata is not None:
+            self.time_zone_metadata = time_zone_metadata
+
+    @property
+    def address_format(self):
+        &#34;&#34;&#34;Gets the address_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The address_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._address_format
+
+    @address_format.setter
+    def address_format(self, address_format):
+        &#34;&#34;&#34;Sets the address_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param address_format: The address_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._address_format = address_format
+
+    @property
+    def address_format_metadata(self):
+        &#34;&#34;&#34;Gets the address_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The address_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._address_format_metadata
+
+    @address_format_metadata.setter
+    def address_format_metadata(self, address_format_metadata):
+        &#34;&#34;&#34;Sets the address_format_metadata of this LocalePolicy.
+
+
+        :param address_format_metadata: The address_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._address_format_metadata = address_format_metadata
+
+    @property
+    def allow_region(self):
+        &#34;&#34;&#34;Gets the allow_region of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_region of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._allow_region
+
+    @allow_region.setter
+    def allow_region(self, allow_region):
+        &#34;&#34;&#34;Sets the allow_region of this LocalePolicy.
+
+          # noqa: E501
+
+        :param allow_region: The allow_region of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._allow_region = allow_region
+
+    @property
+    def calendar_type(self):
+        &#34;&#34;&#34;Gets the calendar_type of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The calendar_type of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._calendar_type
+
+    @calendar_type.setter
+    def calendar_type(self, calendar_type):
+        &#34;&#34;&#34;Sets the calendar_type of this LocalePolicy.
+
+          # noqa: E501
+
+        :param calendar_type: The calendar_type of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._calendar_type = calendar_type
+
+    @property
+    def calendar_type_metadata(self):
+        &#34;&#34;&#34;Gets the calendar_type_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The calendar_type_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._calendar_type_metadata
+
+    @calendar_type_metadata.setter
+    def calendar_type_metadata(self, calendar_type_metadata):
+        &#34;&#34;&#34;Sets the calendar_type_metadata of this LocalePolicy.
+
+
+        :param calendar_type_metadata: The calendar_type_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._calendar_type_metadata = calendar_type_metadata
+
+    @property
+    def culture_name(self):
+        &#34;&#34;&#34;Gets the culture_name of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The culture_name of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._culture_name
+
+    @culture_name.setter
+    def culture_name(self, culture_name):
+        &#34;&#34;&#34;Sets the culture_name of this LocalePolicy.
+
+          # noqa: E501
+
+        :param culture_name: The culture_name of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._culture_name = culture_name
+
+    @property
+    def culture_name_metadata(self):
+        &#34;&#34;&#34;Gets the culture_name_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The culture_name_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._culture_name_metadata
+
+    @culture_name_metadata.setter
+    def culture_name_metadata(self, culture_name_metadata):
+        &#34;&#34;&#34;Sets the culture_name_metadata of this LocalePolicy.
+
+
+        :param culture_name_metadata: The culture_name_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._culture_name_metadata = culture_name_metadata
+
+    @property
+    def currency_code(self):
+        &#34;&#34;&#34;Gets the currency_code of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The currency_code of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._currency_code
+
+    @currency_code.setter
+    def currency_code(self, currency_code):
+        &#34;&#34;&#34;Sets the currency_code of this LocalePolicy.
+
+          # noqa: E501
+
+        :param currency_code: The currency_code of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._currency_code = currency_code
+
+    @property
+    def currency_code_metadata(self):
+        &#34;&#34;&#34;Gets the currency_code_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The currency_code_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._currency_code_metadata
+
+    @currency_code_metadata.setter
+    def currency_code_metadata(self, currency_code_metadata):
+        &#34;&#34;&#34;Sets the currency_code_metadata of this LocalePolicy.
+
+
+        :param currency_code_metadata: The currency_code_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._currency_code_metadata = currency_code_metadata
+
+    @property
+    def currency_negative_format(self):
+        &#34;&#34;&#34;Gets the currency_negative_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The currency_negative_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._currency_negative_format
+
+    @currency_negative_format.setter
+    def currency_negative_format(self, currency_negative_format):
+        &#34;&#34;&#34;Sets the currency_negative_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param currency_negative_format: The currency_negative_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._currency_negative_format = currency_negative_format
+
+    @property
+    def currency_negative_format_metadata(self):
+        &#34;&#34;&#34;Gets the currency_negative_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The currency_negative_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._currency_negative_format_metadata
+
+    @currency_negative_format_metadata.setter
+    def currency_negative_format_metadata(self, currency_negative_format_metadata):
+        &#34;&#34;&#34;Sets the currency_negative_format_metadata of this LocalePolicy.
+
+
+        :param currency_negative_format_metadata: The currency_negative_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._currency_negative_format_metadata = currency_negative_format_metadata
+
+    @property
+    def currency_positive_format(self):
+        &#34;&#34;&#34;Gets the currency_positive_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The currency_positive_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._currency_positive_format
+
+    @currency_positive_format.setter
+    def currency_positive_format(self, currency_positive_format):
+        &#34;&#34;&#34;Sets the currency_positive_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param currency_positive_format: The currency_positive_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._currency_positive_format = currency_positive_format
+
+    @property
+    def currency_positive_format_metadata(self):
+        &#34;&#34;&#34;Gets the currency_positive_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The currency_positive_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._currency_positive_format_metadata
+
+    @currency_positive_format_metadata.setter
+    def currency_positive_format_metadata(self, currency_positive_format_metadata):
+        &#34;&#34;&#34;Sets the currency_positive_format_metadata of this LocalePolicy.
+
+
+        :param currency_positive_format_metadata: The currency_positive_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._currency_positive_format_metadata = currency_positive_format_metadata
+
+    @property
+    def custom_date_format(self):
+        &#34;&#34;&#34;Gets the custom_date_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_date_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_date_format
+
+    @custom_date_format.setter
+    def custom_date_format(self, custom_date_format):
+        &#34;&#34;&#34;Sets the custom_date_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param custom_date_format: The custom_date_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_date_format = custom_date_format
+
+    @property
+    def custom_sign_date_format(self):
+        &#34;&#34;&#34;Gets the custom_sign_date_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_sign_date_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_sign_date_format
+
+    @custom_sign_date_format.setter
+    def custom_sign_date_format(self, custom_sign_date_format):
+        &#34;&#34;&#34;Sets the custom_sign_date_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param custom_sign_date_format: The custom_sign_date_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_sign_date_format = custom_sign_date_format
+
+    @property
+    def custom_sign_time_format(self):
+        &#34;&#34;&#34;Gets the custom_sign_time_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_sign_time_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_sign_time_format
+
+    @custom_sign_time_format.setter
+    def custom_sign_time_format(self, custom_sign_time_format):
+        &#34;&#34;&#34;Sets the custom_sign_time_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param custom_sign_time_format: The custom_sign_time_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_sign_time_format = custom_sign_time_format
+
+    @property
+    def custom_time_format(self):
+        &#34;&#34;&#34;Gets the custom_time_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_time_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_time_format
+
+    @custom_time_format.setter
+    def custom_time_format(self, custom_time_format):
+        &#34;&#34;&#34;Sets the custom_time_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param custom_time_format: The custom_time_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_time_format = custom_time_format
+
+    @property
+    def date_format(self):
+        &#34;&#34;&#34;Gets the date_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The date_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._date_format
+
+    @date_format.setter
+    def date_format(self, date_format):
+        &#34;&#34;&#34;Sets the date_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param date_format: The date_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._date_format = date_format
+
+    @property
+    def date_format_metadata(self):
+        &#34;&#34;&#34;Gets the date_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The date_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._date_format_metadata
+
+    @date_format_metadata.setter
+    def date_format_metadata(self, date_format_metadata):
+        &#34;&#34;&#34;Sets the date_format_metadata of this LocalePolicy.
+
+
+        :param date_format_metadata: The date_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._date_format_metadata = date_format_metadata
+
+    @property
+    def effective_address_format(self):
+        &#34;&#34;&#34;Gets the effective_address_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_address_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_address_format
+
+    @effective_address_format.setter
+    def effective_address_format(self, effective_address_format):
+        &#34;&#34;&#34;Sets the effective_address_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_address_format: The effective_address_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_address_format = effective_address_format
+
+    @property
+    def effective_calendar_type(self):
+        &#34;&#34;&#34;Gets the effective_calendar_type of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_calendar_type of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_calendar_type
+
+    @effective_calendar_type.setter
+    def effective_calendar_type(self, effective_calendar_type):
+        &#34;&#34;&#34;Sets the effective_calendar_type of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_calendar_type: The effective_calendar_type of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_calendar_type = effective_calendar_type
+
+    @property
+    def effective_currency_code(self):
+        &#34;&#34;&#34;Gets the effective_currency_code of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_currency_code of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_currency_code
+
+    @effective_currency_code.setter
+    def effective_currency_code(self, effective_currency_code):
+        &#34;&#34;&#34;Sets the effective_currency_code of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_currency_code: The effective_currency_code of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_currency_code = effective_currency_code
+
+    @property
+    def effective_currency_negative_format(self):
+        &#34;&#34;&#34;Gets the effective_currency_negative_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_currency_negative_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_currency_negative_format
+
+    @effective_currency_negative_format.setter
+    def effective_currency_negative_format(self, effective_currency_negative_format):
+        &#34;&#34;&#34;Sets the effective_currency_negative_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_currency_negative_format: The effective_currency_negative_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_currency_negative_format = effective_currency_negative_format
+
+    @property
+    def effective_currency_positive_format(self):
+        &#34;&#34;&#34;Gets the effective_currency_positive_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_currency_positive_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_currency_positive_format
+
+    @effective_currency_positive_format.setter
+    def effective_currency_positive_format(self, effective_currency_positive_format):
+        &#34;&#34;&#34;Sets the effective_currency_positive_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_currency_positive_format: The effective_currency_positive_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_currency_positive_format = effective_currency_positive_format
+
+    @property
+    def effective_custom_date_format(self):
+        &#34;&#34;&#34;Gets the effective_custom_date_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_custom_date_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_custom_date_format
+
+    @effective_custom_date_format.setter
+    def effective_custom_date_format(self, effective_custom_date_format):
+        &#34;&#34;&#34;Sets the effective_custom_date_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_custom_date_format: The effective_custom_date_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_custom_date_format = effective_custom_date_format
+
+    @property
+    def effective_custom_time_format(self):
+        &#34;&#34;&#34;Gets the effective_custom_time_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_custom_time_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_custom_time_format
+
+    @effective_custom_time_format.setter
+    def effective_custom_time_format(self, effective_custom_time_format):
+        &#34;&#34;&#34;Sets the effective_custom_time_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_custom_time_format: The effective_custom_time_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_custom_time_format = effective_custom_time_format
+
+    @property
+    def effective_date_format(self):
+        &#34;&#34;&#34;Gets the effective_date_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_date_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_date_format
+
+    @effective_date_format.setter
+    def effective_date_format(self, effective_date_format):
+        &#34;&#34;&#34;Sets the effective_date_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_date_format: The effective_date_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_date_format = effective_date_format
+
+    @property
+    def effective_initial_format(self):
+        &#34;&#34;&#34;Gets the effective_initial_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_initial_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_initial_format
+
+    @effective_initial_format.setter
+    def effective_initial_format(self, effective_initial_format):
+        &#34;&#34;&#34;Sets the effective_initial_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_initial_format: The effective_initial_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_initial_format = effective_initial_format
+
+    @property
+    def effective_name_format(self):
+        &#34;&#34;&#34;Gets the effective_name_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_name_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_name_format
+
+    @effective_name_format.setter
+    def effective_name_format(self, effective_name_format):
+        &#34;&#34;&#34;Sets the effective_name_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_name_format: The effective_name_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_name_format = effective_name_format
+
+    @property
+    def effective_time_format(self):
+        &#34;&#34;&#34;Gets the effective_time_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_time_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_time_format
+
+    @effective_time_format.setter
+    def effective_time_format(self, effective_time_format):
+        &#34;&#34;&#34;Sets the effective_time_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_time_format: The effective_time_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_time_format = effective_time_format
+
+    @property
+    def effective_time_zone(self):
+        &#34;&#34;&#34;Gets the effective_time_zone of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The effective_time_zone of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._effective_time_zone
+
+    @effective_time_zone.setter
+    def effective_time_zone(self, effective_time_zone):
+        &#34;&#34;&#34;Sets the effective_time_zone of this LocalePolicy.
+
+          # noqa: E501
+
+        :param effective_time_zone: The effective_time_zone of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._effective_time_zone = effective_time_zone
+
+    @property
+    def initial_format(self):
+        &#34;&#34;&#34;Gets the initial_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The initial_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._initial_format
+
+    @initial_format.setter
+    def initial_format(self, initial_format):
+        &#34;&#34;&#34;Sets the initial_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param initial_format: The initial_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._initial_format = initial_format
+
+    @property
+    def initial_format_metadata(self):
+        &#34;&#34;&#34;Gets the initial_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The initial_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._initial_format_metadata
+
+    @initial_format_metadata.setter
+    def initial_format_metadata(self, initial_format_metadata):
+        &#34;&#34;&#34;Sets the initial_format_metadata of this LocalePolicy.
+
+
+        :param initial_format_metadata: The initial_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._initial_format_metadata = initial_format_metadata
+
+    @property
+    def name_format(self):
+        &#34;&#34;&#34;Gets the name_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The name_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name_format
+
+    @name_format.setter
+    def name_format(self, name_format):
+        &#34;&#34;&#34;Sets the name_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param name_format: The name_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name_format = name_format
+
+    @property
+    def name_format_metadata(self):
+        &#34;&#34;&#34;Gets the name_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The name_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._name_format_metadata
+
+    @name_format_metadata.setter
+    def name_format_metadata(self, name_format_metadata):
+        &#34;&#34;&#34;Sets the name_format_metadata of this LocalePolicy.
+
+
+        :param name_format_metadata: The name_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._name_format_metadata = name_format_metadata
+
+    @property
+    def sign_date_format(self):
+        &#34;&#34;&#34;Gets the sign_date_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sign_date_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sign_date_format
+
+    @sign_date_format.setter
+    def sign_date_format(self, sign_date_format):
+        &#34;&#34;&#34;Sets the sign_date_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param sign_date_format: The sign_date_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sign_date_format = sign_date_format
+
+    @property
+    def sign_date_format_metadata(self):
+        &#34;&#34;&#34;Gets the sign_date_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The sign_date_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._sign_date_format_metadata
+
+    @sign_date_format_metadata.setter
+    def sign_date_format_metadata(self, sign_date_format_metadata):
+        &#34;&#34;&#34;Sets the sign_date_format_metadata of this LocalePolicy.
+
+
+        :param sign_date_format_metadata: The sign_date_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._sign_date_format_metadata = sign_date_format_metadata
+
+    @property
+    def sign_time_format(self):
+        &#34;&#34;&#34;Gets the sign_time_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sign_time_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sign_time_format
+
+    @sign_time_format.setter
+    def sign_time_format(self, sign_time_format):
+        &#34;&#34;&#34;Sets the sign_time_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param sign_time_format: The sign_time_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sign_time_format = sign_time_format
+
+    @property
+    def sign_time_format_metadata(self):
+        &#34;&#34;&#34;Gets the sign_time_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The sign_time_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._sign_time_format_metadata
+
+    @sign_time_format_metadata.setter
+    def sign_time_format_metadata(self, sign_time_format_metadata):
+        &#34;&#34;&#34;Sets the sign_time_format_metadata of this LocalePolicy.
+
+
+        :param sign_time_format_metadata: The sign_time_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._sign_time_format_metadata = sign_time_format_metadata
+
+    @property
+    def time_format(self):
+        &#34;&#34;&#34;Gets the time_format of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The time_format of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._time_format
+
+    @time_format.setter
+    def time_format(self, time_format):
+        &#34;&#34;&#34;Sets the time_format of this LocalePolicy.
+
+          # noqa: E501
+
+        :param time_format: The time_format of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._time_format = time_format
+
+    @property
+    def time_format_metadata(self):
+        &#34;&#34;&#34;Gets the time_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The time_format_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._time_format_metadata
+
+    @time_format_metadata.setter
+    def time_format_metadata(self, time_format_metadata):
+        &#34;&#34;&#34;Sets the time_format_metadata of this LocalePolicy.
+
+
+        :param time_format_metadata: The time_format_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._time_format_metadata = time_format_metadata
+
+    @property
+    def time_zone(self):
+        &#34;&#34;&#34;Gets the time_zone of this LocalePolicy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The time_zone of this LocalePolicy.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._time_zone
+
+    @time_zone.setter
+    def time_zone(self, time_zone):
+        &#34;&#34;&#34;Sets the time_zone of this LocalePolicy.
+
+          # noqa: E501
+
+        :param time_zone: The time_zone of this LocalePolicy.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._time_zone = time_zone
+
+    @property
+    def time_zone_metadata(self):
+        &#34;&#34;&#34;Gets the time_zone_metadata of this LocalePolicy.  # noqa: E501
+
+
+        :return: The time_zone_metadata of this LocalePolicy.  # noqa: E501
+        :rtype: SettingsMetadata
+        &#34;&#34;&#34;
+        return self._time_zone_metadata
+
+    @time_zone_metadata.setter
+    def time_zone_metadata(self, time_zone_metadata):
+        &#34;&#34;&#34;Sets the time_zone_metadata of this LocalePolicy.
+
+
+        :param time_zone_metadata: The time_zone_metadata of this LocalePolicy.  # noqa: E501
+        :type: SettingsMetadata
+        &#34;&#34;&#34;
+
+        self._time_zone_metadata = time_zone_metadata
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(LocalePolicy, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, LocalePolicy):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.address_format"><code class="name">var <span class="ident">address_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the address_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The address_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def address_format(self):
+    &#34;&#34;&#34;Gets the address_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The address_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._address_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.address_format_metadata"><code class="name">var <span class="ident">address_format_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the address_format_metadata of this LocalePolicy.
+# noqa: E501</p>
+<p>:return: The address_format_metadata of this LocalePolicy.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def address_format_metadata(self):
+    &#34;&#34;&#34;Gets the address_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+    :return: The address_format_metadata of this LocalePolicy.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._address_format_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.allow_region"><code class="name">var <span class="ident">allow_region</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the allow_region of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The allow_region of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def allow_region(self):
+    &#34;&#34;&#34;Gets the allow_region of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The allow_region of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._allow_region</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.calendar_type"><code class="name">var <span class="ident">calendar_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the calendar_type of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The calendar_type of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def calendar_type(self):
+    &#34;&#34;&#34;Gets the calendar_type of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The calendar_type of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._calendar_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.calendar_type_metadata"><code class="name">var <span class="ident">calendar_type_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the calendar_type_metadata of this LocalePolicy.
+# noqa: E501</p>
+<p>:return: The calendar_type_metadata of this LocalePolicy.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def calendar_type_metadata(self):
+    &#34;&#34;&#34;Gets the calendar_type_metadata of this LocalePolicy.  # noqa: E501
+
+
+    :return: The calendar_type_metadata of this LocalePolicy.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._calendar_type_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.culture_name"><code class="name">var <span class="ident">culture_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the culture_name of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The culture_name of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def culture_name(self):
+    &#34;&#34;&#34;Gets the culture_name of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The culture_name of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._culture_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.culture_name_metadata"><code class="name">var <span class="ident">culture_name_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the culture_name_metadata of this LocalePolicy.
+# noqa: E501</p>
+<p>:return: The culture_name_metadata of this LocalePolicy.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def culture_name_metadata(self):
+    &#34;&#34;&#34;Gets the culture_name_metadata of this LocalePolicy.  # noqa: E501
+
+
+    :return: The culture_name_metadata of this LocalePolicy.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._culture_name_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.currency_code"><code class="name">var <span class="ident">currency_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the currency_code of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The currency_code of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def currency_code(self):
+    &#34;&#34;&#34;Gets the currency_code of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The currency_code of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._currency_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.currency_code_metadata"><code class="name">var <span class="ident">currency_code_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the currency_code_metadata of this LocalePolicy.
+# noqa: E501</p>
+<p>:return: The currency_code_metadata of this LocalePolicy.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def currency_code_metadata(self):
+    &#34;&#34;&#34;Gets the currency_code_metadata of this LocalePolicy.  # noqa: E501
+
+
+    :return: The currency_code_metadata of this LocalePolicy.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._currency_code_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.currency_negative_format"><code class="name">var <span class="ident">currency_negative_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the currency_negative_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The currency_negative_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def currency_negative_format(self):
+    &#34;&#34;&#34;Gets the currency_negative_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The currency_negative_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._currency_negative_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.currency_negative_format_metadata"><code class="name">var <span class="ident">currency_negative_format_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the currency_negative_format_metadata of this LocalePolicy.
+# noqa: E501</p>
+<p>:return: The currency_negative_format_metadata of this LocalePolicy.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def currency_negative_format_metadata(self):
+    &#34;&#34;&#34;Gets the currency_negative_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+    :return: The currency_negative_format_metadata of this LocalePolicy.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._currency_negative_format_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.currency_positive_format"><code class="name">var <span class="ident">currency_positive_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the currency_positive_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The currency_positive_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def currency_positive_format(self):
+    &#34;&#34;&#34;Gets the currency_positive_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The currency_positive_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._currency_positive_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.currency_positive_format_metadata"><code class="name">var <span class="ident">currency_positive_format_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the currency_positive_format_metadata of this LocalePolicy.
+# noqa: E501</p>
+<p>:return: The currency_positive_format_metadata of this LocalePolicy.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def currency_positive_format_metadata(self):
+    &#34;&#34;&#34;Gets the currency_positive_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+    :return: The currency_positive_format_metadata of this LocalePolicy.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._currency_positive_format_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.custom_date_format"><code class="name">var <span class="ident">custom_date_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the custom_date_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The custom_date_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def custom_date_format(self):
+    &#34;&#34;&#34;Gets the custom_date_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The custom_date_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._custom_date_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.custom_sign_date_format"><code class="name">var <span class="ident">custom_sign_date_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the custom_sign_date_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The custom_sign_date_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def custom_sign_date_format(self):
+    &#34;&#34;&#34;Gets the custom_sign_date_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The custom_sign_date_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._custom_sign_date_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.custom_sign_time_format"><code class="name">var <span class="ident">custom_sign_time_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the custom_sign_time_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The custom_sign_time_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def custom_sign_time_format(self):
+    &#34;&#34;&#34;Gets the custom_sign_time_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The custom_sign_time_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._custom_sign_time_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.custom_time_format"><code class="name">var <span class="ident">custom_time_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the custom_time_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The custom_time_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def custom_time_format(self):
+    &#34;&#34;&#34;Gets the custom_time_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The custom_time_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._custom_time_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.date_format"><code class="name">var <span class="ident">date_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the date_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The date_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def date_format(self):
+    &#34;&#34;&#34;Gets the date_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The date_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._date_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.date_format_metadata"><code class="name">var <span class="ident">date_format_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the date_format_metadata of this LocalePolicy.
+# noqa: E501</p>
+<p>:return: The date_format_metadata of this LocalePolicy.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def date_format_metadata(self):
+    &#34;&#34;&#34;Gets the date_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+    :return: The date_format_metadata of this LocalePolicy.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._date_format_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.effective_address_format"><code class="name">var <span class="ident">effective_address_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the effective_address_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The effective_address_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def effective_address_format(self):
+    &#34;&#34;&#34;Gets the effective_address_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The effective_address_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._effective_address_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.effective_calendar_type"><code class="name">var <span class="ident">effective_calendar_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the effective_calendar_type of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The effective_calendar_type of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def effective_calendar_type(self):
+    &#34;&#34;&#34;Gets the effective_calendar_type of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The effective_calendar_type of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._effective_calendar_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.effective_currency_code"><code class="name">var <span class="ident">effective_currency_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the effective_currency_code of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The effective_currency_code of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def effective_currency_code(self):
+    &#34;&#34;&#34;Gets the effective_currency_code of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The effective_currency_code of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._effective_currency_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.effective_currency_negative_format"><code class="name">var <span class="ident">effective_currency_negative_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the effective_currency_negative_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The effective_currency_negative_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def effective_currency_negative_format(self):
+    &#34;&#34;&#34;Gets the effective_currency_negative_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The effective_currency_negative_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._effective_currency_negative_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.effective_currency_positive_format"><code class="name">var <span class="ident">effective_currency_positive_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the effective_currency_positive_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The effective_currency_positive_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def effective_currency_positive_format(self):
+    &#34;&#34;&#34;Gets the effective_currency_positive_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The effective_currency_positive_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._effective_currency_positive_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.effective_custom_date_format"><code class="name">var <span class="ident">effective_custom_date_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the effective_custom_date_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The effective_custom_date_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def effective_custom_date_format(self):
+    &#34;&#34;&#34;Gets the effective_custom_date_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The effective_custom_date_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._effective_custom_date_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.effective_custom_time_format"><code class="name">var <span class="ident">effective_custom_time_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the effective_custom_time_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The effective_custom_time_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def effective_custom_time_format(self):
+    &#34;&#34;&#34;Gets the effective_custom_time_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The effective_custom_time_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._effective_custom_time_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.effective_date_format"><code class="name">var <span class="ident">effective_date_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the effective_date_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The effective_date_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def effective_date_format(self):
+    &#34;&#34;&#34;Gets the effective_date_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The effective_date_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._effective_date_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.effective_initial_format"><code class="name">var <span class="ident">effective_initial_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the effective_initial_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The effective_initial_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def effective_initial_format(self):
+    &#34;&#34;&#34;Gets the effective_initial_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The effective_initial_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._effective_initial_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.effective_name_format"><code class="name">var <span class="ident">effective_name_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the effective_name_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The effective_name_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def effective_name_format(self):
+    &#34;&#34;&#34;Gets the effective_name_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The effective_name_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._effective_name_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.effective_time_format"><code class="name">var <span class="ident">effective_time_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the effective_time_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The effective_time_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def effective_time_format(self):
+    &#34;&#34;&#34;Gets the effective_time_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The effective_time_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._effective_time_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.effective_time_zone"><code class="name">var <span class="ident">effective_time_zone</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the effective_time_zone of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The effective_time_zone of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def effective_time_zone(self):
+    &#34;&#34;&#34;Gets the effective_time_zone of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The effective_time_zone of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._effective_time_zone</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.initial_format"><code class="name">var <span class="ident">initial_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the initial_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The initial_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def initial_format(self):
+    &#34;&#34;&#34;Gets the initial_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The initial_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._initial_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.initial_format_metadata"><code class="name">var <span class="ident">initial_format_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the initial_format_metadata of this LocalePolicy.
+# noqa: E501</p>
+<p>:return: The initial_format_metadata of this LocalePolicy.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def initial_format_metadata(self):
+    &#34;&#34;&#34;Gets the initial_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+    :return: The initial_format_metadata of this LocalePolicy.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._initial_format_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.name_format"><code class="name">var <span class="ident">name_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the name_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The name_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name_format(self):
+    &#34;&#34;&#34;Gets the name_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The name_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._name_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.name_format_metadata"><code class="name">var <span class="ident">name_format_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the name_format_metadata of this LocalePolicy.
+# noqa: E501</p>
+<p>:return: The name_format_metadata of this LocalePolicy.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name_format_metadata(self):
+    &#34;&#34;&#34;Gets the name_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+    :return: The name_format_metadata of this LocalePolicy.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._name_format_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.sign_date_format"><code class="name">var <span class="ident">sign_date_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sign_date_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The sign_date_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sign_date_format(self):
+    &#34;&#34;&#34;Gets the sign_date_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The sign_date_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sign_date_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.sign_date_format_metadata"><code class="name">var <span class="ident">sign_date_format_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sign_date_format_metadata of this LocalePolicy.
+# noqa: E501</p>
+<p>:return: The sign_date_format_metadata of this LocalePolicy.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sign_date_format_metadata(self):
+    &#34;&#34;&#34;Gets the sign_date_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+    :return: The sign_date_format_metadata of this LocalePolicy.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._sign_date_format_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.sign_time_format"><code class="name">var <span class="ident">sign_time_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sign_time_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The sign_time_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sign_time_format(self):
+    &#34;&#34;&#34;Gets the sign_time_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The sign_time_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sign_time_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.sign_time_format_metadata"><code class="name">var <span class="ident">sign_time_format_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sign_time_format_metadata of this LocalePolicy.
+# noqa: E501</p>
+<p>:return: The sign_time_format_metadata of this LocalePolicy.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sign_time_format_metadata(self):
+    &#34;&#34;&#34;Gets the sign_time_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+    :return: The sign_time_format_metadata of this LocalePolicy.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._sign_time_format_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.time_format"><code class="name">var <span class="ident">time_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the time_format of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The time_format of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def time_format(self):
+    &#34;&#34;&#34;Gets the time_format of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The time_format of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._time_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.time_format_metadata"><code class="name">var <span class="ident">time_format_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the time_format_metadata of this LocalePolicy.
+# noqa: E501</p>
+<p>:return: The time_format_metadata of this LocalePolicy.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def time_format_metadata(self):
+    &#34;&#34;&#34;Gets the time_format_metadata of this LocalePolicy.  # noqa: E501
+
+
+    :return: The time_format_metadata of this LocalePolicy.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._time_format_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.time_zone"><code class="name">var <span class="ident">time_zone</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the time_zone of this LocalePolicy.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The time_zone of this LocalePolicy.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def time_zone(self):
+    &#34;&#34;&#34;Gets the time_zone of this LocalePolicy.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The time_zone of this LocalePolicy.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._time_zone</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.time_zone_metadata"><code class="name">var <span class="ident">time_zone_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the time_zone_metadata of this LocalePolicy.
+# noqa: E501</p>
+<p>:return: The time_zone_metadata of this LocalePolicy.
+# noqa: E501
+:rtype: SettingsMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def time_zone_metadata(self):
+    &#34;&#34;&#34;Gets the time_zone_metadata of this LocalePolicy.  # noqa: E501
+
+
+    :return: The time_zone_metadata of this LocalePolicy.  # noqa: E501
+    :rtype: SettingsMetadata
+    &#34;&#34;&#34;
+    return self._time_zone_metadata</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(LocalePolicy, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.locale_policy.LocalePolicy.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.locale_policy.LocalePolicy" href="#docusign_esign.models.locale_policy.LocalePolicy">LocalePolicy</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.address_format" href="#docusign_esign.models.locale_policy.LocalePolicy.address_format">address_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.address_format_metadata" href="#docusign_esign.models.locale_policy.LocalePolicy.address_format_metadata">address_format_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.allow_region" href="#docusign_esign.models.locale_policy.LocalePolicy.allow_region">allow_region</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.attribute_map" href="#docusign_esign.models.locale_policy.LocalePolicy.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.calendar_type" href="#docusign_esign.models.locale_policy.LocalePolicy.calendar_type">calendar_type</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.calendar_type_metadata" href="#docusign_esign.models.locale_policy.LocalePolicy.calendar_type_metadata">calendar_type_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.culture_name" href="#docusign_esign.models.locale_policy.LocalePolicy.culture_name">culture_name</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.culture_name_metadata" href="#docusign_esign.models.locale_policy.LocalePolicy.culture_name_metadata">culture_name_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.currency_code" href="#docusign_esign.models.locale_policy.LocalePolicy.currency_code">currency_code</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.currency_code_metadata" href="#docusign_esign.models.locale_policy.LocalePolicy.currency_code_metadata">currency_code_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.currency_negative_format" href="#docusign_esign.models.locale_policy.LocalePolicy.currency_negative_format">currency_negative_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.currency_negative_format_metadata" href="#docusign_esign.models.locale_policy.LocalePolicy.currency_negative_format_metadata">currency_negative_format_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.currency_positive_format" href="#docusign_esign.models.locale_policy.LocalePolicy.currency_positive_format">currency_positive_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.currency_positive_format_metadata" href="#docusign_esign.models.locale_policy.LocalePolicy.currency_positive_format_metadata">currency_positive_format_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.custom_date_format" href="#docusign_esign.models.locale_policy.LocalePolicy.custom_date_format">custom_date_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.custom_sign_date_format" href="#docusign_esign.models.locale_policy.LocalePolicy.custom_sign_date_format">custom_sign_date_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.custom_sign_time_format" href="#docusign_esign.models.locale_policy.LocalePolicy.custom_sign_time_format">custom_sign_time_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.custom_time_format" href="#docusign_esign.models.locale_policy.LocalePolicy.custom_time_format">custom_time_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.date_format" href="#docusign_esign.models.locale_policy.LocalePolicy.date_format">date_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.date_format_metadata" href="#docusign_esign.models.locale_policy.LocalePolicy.date_format_metadata">date_format_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.effective_address_format" href="#docusign_esign.models.locale_policy.LocalePolicy.effective_address_format">effective_address_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.effective_calendar_type" href="#docusign_esign.models.locale_policy.LocalePolicy.effective_calendar_type">effective_calendar_type</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.effective_currency_code" href="#docusign_esign.models.locale_policy.LocalePolicy.effective_currency_code">effective_currency_code</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.effective_currency_negative_format" href="#docusign_esign.models.locale_policy.LocalePolicy.effective_currency_negative_format">effective_currency_negative_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.effective_currency_positive_format" href="#docusign_esign.models.locale_policy.LocalePolicy.effective_currency_positive_format">effective_currency_positive_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.effective_custom_date_format" href="#docusign_esign.models.locale_policy.LocalePolicy.effective_custom_date_format">effective_custom_date_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.effective_custom_time_format" href="#docusign_esign.models.locale_policy.LocalePolicy.effective_custom_time_format">effective_custom_time_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.effective_date_format" href="#docusign_esign.models.locale_policy.LocalePolicy.effective_date_format">effective_date_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.effective_initial_format" href="#docusign_esign.models.locale_policy.LocalePolicy.effective_initial_format">effective_initial_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.effective_name_format" href="#docusign_esign.models.locale_policy.LocalePolicy.effective_name_format">effective_name_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.effective_time_format" href="#docusign_esign.models.locale_policy.LocalePolicy.effective_time_format">effective_time_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.effective_time_zone" href="#docusign_esign.models.locale_policy.LocalePolicy.effective_time_zone">effective_time_zone</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.initial_format" href="#docusign_esign.models.locale_policy.LocalePolicy.initial_format">initial_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.initial_format_metadata" href="#docusign_esign.models.locale_policy.LocalePolicy.initial_format_metadata">initial_format_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.name_format" href="#docusign_esign.models.locale_policy.LocalePolicy.name_format">name_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.name_format_metadata" href="#docusign_esign.models.locale_policy.LocalePolicy.name_format_metadata">name_format_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.sign_date_format" href="#docusign_esign.models.locale_policy.LocalePolicy.sign_date_format">sign_date_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.sign_date_format_metadata" href="#docusign_esign.models.locale_policy.LocalePolicy.sign_date_format_metadata">sign_date_format_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.sign_time_format" href="#docusign_esign.models.locale_policy.LocalePolicy.sign_time_format">sign_time_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.sign_time_format_metadata" href="#docusign_esign.models.locale_policy.LocalePolicy.sign_time_format_metadata">sign_time_format_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.swagger_types" href="#docusign_esign.models.locale_policy.LocalePolicy.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.time_format" href="#docusign_esign.models.locale_policy.LocalePolicy.time_format">time_format</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.time_format_metadata" href="#docusign_esign.models.locale_policy.LocalePolicy.time_format_metadata">time_format_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.time_zone" href="#docusign_esign.models.locale_policy.LocalePolicy.time_zone">time_zone</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.time_zone_metadata" href="#docusign_esign.models.locale_policy.LocalePolicy.time_zone_metadata">time_zone_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.to_dict" href="#docusign_esign.models.locale_policy.LocalePolicy.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.locale_policy.LocalePolicy.to_str" href="#docusign_esign.models.locale_policy.LocalePolicy.to_str">to_str</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

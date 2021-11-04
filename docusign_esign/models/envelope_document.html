@@ -1,0 +1,2314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.envelope_document API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.envelope_document</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class EnvelopeDocument(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;added_recipient_ids&#39;: &#39;list[str]&#39;,
+        &#39;attachment_tab_id&#39;: &#39;str&#39;,
+        &#39;authoritative_copy&#39;: &#39;str&#39;,
+        &#39;authoritative_copy_metadata&#39;: &#39;PropertyMetadata&#39;,
+        &#39;available_document_types&#39;: &#39;list[SignatureType]&#39;,
+        &#39;contains_pdf_form_fields&#39;: &#39;str&#39;,
+        &#39;display&#39;: &#39;str&#39;,
+        &#39;display_metadata&#39;: &#39;PropertyMetadata&#39;,
+        &#39;document_fields&#39;: &#39;list[NameValue]&#39;,
+        &#39;document_id&#39;: &#39;str&#39;,
+        &#39;document_id_guid&#39;: &#39;str&#39;,
+        &#39;error_details&#39;: &#39;ErrorDetails&#39;,
+        &#39;include_in_download&#39;: &#39;str&#39;,
+        &#39;include_in_download_metadata&#39;: &#39;PropertyMetadata&#39;,
+        &#39;name&#39;: &#39;str&#39;,
+        &#39;name_metadata&#39;: &#39;PropertyMetadata&#39;,
+        &#39;order&#39;: &#39;str&#39;,
+        &#39;pages&#39;: &#39;list[Page]&#39;,
+        &#39;signer_must_acknowledge&#39;: &#39;str&#39;,
+        &#39;signer_must_acknowledge_metadata&#39;: &#39;PropertyMetadata&#39;,
+        &#39;size_bytes&#39;: &#39;str&#39;,
+        &#39;template_locked&#39;: &#39;str&#39;,
+        &#39;template_required&#39;: &#39;str&#39;,
+        &#39;type&#39;: &#39;str&#39;,
+        &#39;uri&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;added_recipient_ids&#39;: &#39;addedRecipientIds&#39;,
+        &#39;attachment_tab_id&#39;: &#39;attachmentTabId&#39;,
+        &#39;authoritative_copy&#39;: &#39;authoritativeCopy&#39;,
+        &#39;authoritative_copy_metadata&#39;: &#39;authoritativeCopyMetadata&#39;,
+        &#39;available_document_types&#39;: &#39;availableDocumentTypes&#39;,
+        &#39;contains_pdf_form_fields&#39;: &#39;containsPdfFormFields&#39;,
+        &#39;display&#39;: &#39;display&#39;,
+        &#39;display_metadata&#39;: &#39;displayMetadata&#39;,
+        &#39;document_fields&#39;: &#39;documentFields&#39;,
+        &#39;document_id&#39;: &#39;documentId&#39;,
+        &#39;document_id_guid&#39;: &#39;documentIdGuid&#39;,
+        &#39;error_details&#39;: &#39;errorDetails&#39;,
+        &#39;include_in_download&#39;: &#39;includeInDownload&#39;,
+        &#39;include_in_download_metadata&#39;: &#39;includeInDownloadMetadata&#39;,
+        &#39;name&#39;: &#39;name&#39;,
+        &#39;name_metadata&#39;: &#39;nameMetadata&#39;,
+        &#39;order&#39;: &#39;order&#39;,
+        &#39;pages&#39;: &#39;pages&#39;,
+        &#39;signer_must_acknowledge&#39;: &#39;signerMustAcknowledge&#39;,
+        &#39;signer_must_acknowledge_metadata&#39;: &#39;signerMustAcknowledgeMetadata&#39;,
+        &#39;size_bytes&#39;: &#39;sizeBytes&#39;,
+        &#39;template_locked&#39;: &#39;templateLocked&#39;,
+        &#39;template_required&#39;: &#39;templateRequired&#39;,
+        &#39;type&#39;: &#39;type&#39;,
+        &#39;uri&#39;: &#39;uri&#39;
+    }
+
+    def __init__(self, added_recipient_ids=None, attachment_tab_id=None, authoritative_copy=None, authoritative_copy_metadata=None, available_document_types=None, contains_pdf_form_fields=None, display=None, display_metadata=None, document_fields=None, document_id=None, document_id_guid=None, error_details=None, include_in_download=None, include_in_download_metadata=None, name=None, name_metadata=None, order=None, pages=None, signer_must_acknowledge=None, signer_must_acknowledge_metadata=None, size_bytes=None, template_locked=None, template_required=None, type=None, uri=None):  # noqa: E501
+        &#34;&#34;&#34;EnvelopeDocument - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._added_recipient_ids = None
+        self._attachment_tab_id = None
+        self._authoritative_copy = None
+        self._authoritative_copy_metadata = None
+        self._available_document_types = None
+        self._contains_pdf_form_fields = None
+        self._display = None
+        self._display_metadata = None
+        self._document_fields = None
+        self._document_id = None
+        self._document_id_guid = None
+        self._error_details = None
+        self._include_in_download = None
+        self._include_in_download_metadata = None
+        self._name = None
+        self._name_metadata = None
+        self._order = None
+        self._pages = None
+        self._signer_must_acknowledge = None
+        self._signer_must_acknowledge_metadata = None
+        self._size_bytes = None
+        self._template_locked = None
+        self._template_required = None
+        self._type = None
+        self._uri = None
+        self.discriminator = None
+
+        if added_recipient_ids is not None:
+            self.added_recipient_ids = added_recipient_ids
+        if attachment_tab_id is not None:
+            self.attachment_tab_id = attachment_tab_id
+        if authoritative_copy is not None:
+            self.authoritative_copy = authoritative_copy
+        if authoritative_copy_metadata is not None:
+            self.authoritative_copy_metadata = authoritative_copy_metadata
+        if available_document_types is not None:
+            self.available_document_types = available_document_types
+        if contains_pdf_form_fields is not None:
+            self.contains_pdf_form_fields = contains_pdf_form_fields
+        if display is not None:
+            self.display = display
+        if display_metadata is not None:
+            self.display_metadata = display_metadata
+        if document_fields is not None:
+            self.document_fields = document_fields
+        if document_id is not None:
+            self.document_id = document_id
+        if document_id_guid is not None:
+            self.document_id_guid = document_id_guid
+        if error_details is not None:
+            self.error_details = error_details
+        if include_in_download is not None:
+            self.include_in_download = include_in_download
+        if include_in_download_metadata is not None:
+            self.include_in_download_metadata = include_in_download_metadata
+        if name is not None:
+            self.name = name
+        if name_metadata is not None:
+            self.name_metadata = name_metadata
+        if order is not None:
+            self.order = order
+        if pages is not None:
+            self.pages = pages
+        if signer_must_acknowledge is not None:
+            self.signer_must_acknowledge = signer_must_acknowledge
+        if signer_must_acknowledge_metadata is not None:
+            self.signer_must_acknowledge_metadata = signer_must_acknowledge_metadata
+        if size_bytes is not None:
+            self.size_bytes = size_bytes
+        if template_locked is not None:
+            self.template_locked = template_locked
+        if template_required is not None:
+            self.template_required = template_required
+        if type is not None:
+            self.type = type
+        if uri is not None:
+            self.uri = uri
+
+    @property
+    def added_recipient_ids(self):
+        &#34;&#34;&#34;Gets the added_recipient_ids of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The added_recipient_ids of this EnvelopeDocument.  # noqa: E501
+        :rtype: list[str]
+        &#34;&#34;&#34;
+        return self._added_recipient_ids
+
+    @added_recipient_ids.setter
+    def added_recipient_ids(self, added_recipient_ids):
+        &#34;&#34;&#34;Sets the added_recipient_ids of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param added_recipient_ids: The added_recipient_ids of this EnvelopeDocument.  # noqa: E501
+        :type: list[str]
+        &#34;&#34;&#34;
+
+        self._added_recipient_ids = added_recipient_ids
+
+    @property
+    def attachment_tab_id(self):
+        &#34;&#34;&#34;Gets the attachment_tab_id of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The attachment_tab_id of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._attachment_tab_id
+
+    @attachment_tab_id.setter
+    def attachment_tab_id(self, attachment_tab_id):
+        &#34;&#34;&#34;Sets the attachment_tab_id of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param attachment_tab_id: The attachment_tab_id of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._attachment_tab_id = attachment_tab_id
+
+    @property
+    def authoritative_copy(self):
+        &#34;&#34;&#34;Gets the authoritative_copy of this EnvelopeDocument.  # noqa: E501
+
+        Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.  # noqa: E501
+
+        :return: The authoritative_copy of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._authoritative_copy
+
+    @authoritative_copy.setter
+    def authoritative_copy(self, authoritative_copy):
+        &#34;&#34;&#34;Sets the authoritative_copy of this EnvelopeDocument.
+
+        Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.  # noqa: E501
+
+        :param authoritative_copy: The authoritative_copy of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._authoritative_copy = authoritative_copy
+
+    @property
+    def authoritative_copy_metadata(self):
+        &#34;&#34;&#34;Gets the authoritative_copy_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+        :return: The authoritative_copy_metadata of this EnvelopeDocument.  # noqa: E501
+        :rtype: PropertyMetadata
+        &#34;&#34;&#34;
+        return self._authoritative_copy_metadata
+
+    @authoritative_copy_metadata.setter
+    def authoritative_copy_metadata(self, authoritative_copy_metadata):
+        &#34;&#34;&#34;Sets the authoritative_copy_metadata of this EnvelopeDocument.
+
+
+        :param authoritative_copy_metadata: The authoritative_copy_metadata of this EnvelopeDocument.  # noqa: E501
+        :type: PropertyMetadata
+        &#34;&#34;&#34;
+
+        self._authoritative_copy_metadata = authoritative_copy_metadata
+
+    @property
+    def available_document_types(self):
+        &#34;&#34;&#34;Gets the available_document_types of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The available_document_types of this EnvelopeDocument.  # noqa: E501
+        :rtype: list[SignatureType]
+        &#34;&#34;&#34;
+        return self._available_document_types
+
+    @available_document_types.setter
+    def available_document_types(self, available_document_types):
+        &#34;&#34;&#34;Sets the available_document_types of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param available_document_types: The available_document_types of this EnvelopeDocument.  # noqa: E501
+        :type: list[SignatureType]
+        &#34;&#34;&#34;
+
+        self._available_document_types = available_document_types
+
+    @property
+    def contains_pdf_form_fields(self):
+        &#34;&#34;&#34;Gets the contains_pdf_form_fields of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The contains_pdf_form_fields of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._contains_pdf_form_fields
+
+    @contains_pdf_form_fields.setter
+    def contains_pdf_form_fields(self, contains_pdf_form_fields):
+        &#34;&#34;&#34;Sets the contains_pdf_form_fields of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param contains_pdf_form_fields: The contains_pdf_form_fields of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._contains_pdf_form_fields = contains_pdf_form_fields
+
+    @property
+    def display(self):
+        &#34;&#34;&#34;Gets the display of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The display of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display
+
+    @display.setter
+    def display(self, display):
+        &#34;&#34;&#34;Sets the display of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param display: The display of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display = display
+
+    @property
+    def display_metadata(self):
+        &#34;&#34;&#34;Gets the display_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+        :return: The display_metadata of this EnvelopeDocument.  # noqa: E501
+        :rtype: PropertyMetadata
+        &#34;&#34;&#34;
+        return self._display_metadata
+
+    @display_metadata.setter
+    def display_metadata(self, display_metadata):
+        &#34;&#34;&#34;Sets the display_metadata of this EnvelopeDocument.
+
+
+        :param display_metadata: The display_metadata of this EnvelopeDocument.  # noqa: E501
+        :type: PropertyMetadata
+        &#34;&#34;&#34;
+
+        self._display_metadata = display_metadata
+
+    @property
+    def document_fields(self):
+        &#34;&#34;&#34;Gets the document_fields of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The document_fields of this EnvelopeDocument.  # noqa: E501
+        :rtype: list[NameValue]
+        &#34;&#34;&#34;
+        return self._document_fields
+
+    @document_fields.setter
+    def document_fields(self, document_fields):
+        &#34;&#34;&#34;Sets the document_fields of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param document_fields: The document_fields of this EnvelopeDocument.  # noqa: E501
+        :type: list[NameValue]
+        &#34;&#34;&#34;
+
+        self._document_fields = document_fields
+
+    @property
+    def document_id(self):
+        &#34;&#34;&#34;Gets the document_id of this EnvelopeDocument.  # noqa: E501
+
+        Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.  # noqa: E501
+
+        :return: The document_id of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        &#34;&#34;&#34;Sets the document_id of this EnvelopeDocument.
+
+        Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.  # noqa: E501
+
+        :param document_id: The document_id of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._document_id = document_id
+
+    @property
+    def document_id_guid(self):
+        &#34;&#34;&#34;Gets the document_id_guid of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The document_id_guid of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._document_id_guid
+
+    @document_id_guid.setter
+    def document_id_guid(self, document_id_guid):
+        &#34;&#34;&#34;Sets the document_id_guid of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param document_id_guid: The document_id_guid of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._document_id_guid = document_id_guid
+
+    @property
+    def error_details(self):
+        &#34;&#34;&#34;Gets the error_details of this EnvelopeDocument.  # noqa: E501
+
+
+        :return: The error_details of this EnvelopeDocument.  # noqa: E501
+        :rtype: ErrorDetails
+        &#34;&#34;&#34;
+        return self._error_details
+
+    @error_details.setter
+    def error_details(self, error_details):
+        &#34;&#34;&#34;Sets the error_details of this EnvelopeDocument.
+
+
+        :param error_details: The error_details of this EnvelopeDocument.  # noqa: E501
+        :type: ErrorDetails
+        &#34;&#34;&#34;
+
+        self._error_details = error_details
+
+    @property
+    def include_in_download(self):
+        &#34;&#34;&#34;Gets the include_in_download of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The include_in_download of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_in_download
+
+    @include_in_download.setter
+    def include_in_download(self, include_in_download):
+        &#34;&#34;&#34;Sets the include_in_download of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param include_in_download: The include_in_download of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_in_download = include_in_download
+
+    @property
+    def include_in_download_metadata(self):
+        &#34;&#34;&#34;Gets the include_in_download_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+        :return: The include_in_download_metadata of this EnvelopeDocument.  # noqa: E501
+        :rtype: PropertyMetadata
+        &#34;&#34;&#34;
+        return self._include_in_download_metadata
+
+    @include_in_download_metadata.setter
+    def include_in_download_metadata(self, include_in_download_metadata):
+        &#34;&#34;&#34;Sets the include_in_download_metadata of this EnvelopeDocument.
+
+
+        :param include_in_download_metadata: The include_in_download_metadata of this EnvelopeDocument.  # noqa: E501
+        :type: PropertyMetadata
+        &#34;&#34;&#34;
+
+        self._include_in_download_metadata = include_in_download_metadata
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;Gets the name of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The name of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;Sets the name of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param name: The name of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def name_metadata(self):
+        &#34;&#34;&#34;Gets the name_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+        :return: The name_metadata of this EnvelopeDocument.  # noqa: E501
+        :rtype: PropertyMetadata
+        &#34;&#34;&#34;
+        return self._name_metadata
+
+    @name_metadata.setter
+    def name_metadata(self, name_metadata):
+        &#34;&#34;&#34;Sets the name_metadata of this EnvelopeDocument.
+
+
+        :param name_metadata: The name_metadata of this EnvelopeDocument.  # noqa: E501
+        :type: PropertyMetadata
+        &#34;&#34;&#34;
+
+        self._name_metadata = name_metadata
+
+    @property
+    def order(self):
+        &#34;&#34;&#34;Gets the order of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The order of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._order
+
+    @order.setter
+    def order(self, order):
+        &#34;&#34;&#34;Sets the order of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param order: The order of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._order = order
+
+    @property
+    def pages(self):
+        &#34;&#34;&#34;Gets the pages of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The pages of this EnvelopeDocument.  # noqa: E501
+        :rtype: list[Page]
+        &#34;&#34;&#34;
+        return self._pages
+
+    @pages.setter
+    def pages(self, pages):
+        &#34;&#34;&#34;Sets the pages of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param pages: The pages of this EnvelopeDocument.  # noqa: E501
+        :type: list[Page]
+        &#34;&#34;&#34;
+
+        self._pages = pages
+
+    @property
+    def signer_must_acknowledge(self):
+        &#34;&#34;&#34;Gets the signer_must_acknowledge of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signer_must_acknowledge of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signer_must_acknowledge
+
+    @signer_must_acknowledge.setter
+    def signer_must_acknowledge(self, signer_must_acknowledge):
+        &#34;&#34;&#34;Sets the signer_must_acknowledge of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param signer_must_acknowledge: The signer_must_acknowledge of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signer_must_acknowledge = signer_must_acknowledge
+
+    @property
+    def signer_must_acknowledge_metadata(self):
+        &#34;&#34;&#34;Gets the signer_must_acknowledge_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+        :return: The signer_must_acknowledge_metadata of this EnvelopeDocument.  # noqa: E501
+        :rtype: PropertyMetadata
+        &#34;&#34;&#34;
+        return self._signer_must_acknowledge_metadata
+
+    @signer_must_acknowledge_metadata.setter
+    def signer_must_acknowledge_metadata(self, signer_must_acknowledge_metadata):
+        &#34;&#34;&#34;Sets the signer_must_acknowledge_metadata of this EnvelopeDocument.
+
+
+        :param signer_must_acknowledge_metadata: The signer_must_acknowledge_metadata of this EnvelopeDocument.  # noqa: E501
+        :type: PropertyMetadata
+        &#34;&#34;&#34;
+
+        self._signer_must_acknowledge_metadata = signer_must_acknowledge_metadata
+
+    @property
+    def size_bytes(self):
+        &#34;&#34;&#34;Gets the size_bytes of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The size_bytes of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._size_bytes
+
+    @size_bytes.setter
+    def size_bytes(self, size_bytes):
+        &#34;&#34;&#34;Sets the size_bytes of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param size_bytes: The size_bytes of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._size_bytes = size_bytes
+
+    @property
+    def template_locked(self):
+        &#34;&#34;&#34;Gets the template_locked of this EnvelopeDocument.  # noqa: E501
+
+        When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.   # noqa: E501
+
+        :return: The template_locked of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._template_locked
+
+    @template_locked.setter
+    def template_locked(self, template_locked):
+        &#34;&#34;&#34;Sets the template_locked of this EnvelopeDocument.
+
+        When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.   # noqa: E501
+
+        :param template_locked: The template_locked of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._template_locked = template_locked
+
+    @property
+    def template_required(self):
+        &#34;&#34;&#34;Gets the template_required of this EnvelopeDocument.  # noqa: E501
+
+        When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.  # noqa: E501
+
+        :return: The template_required of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._template_required
+
+    @template_required.setter
+    def template_required(self, template_required):
+        &#34;&#34;&#34;Sets the template_required of this EnvelopeDocument.
+
+        When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.  # noqa: E501
+
+        :param template_required: The template_required of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._template_required = template_required
+
+    @property
+    def type(self):
+        &#34;&#34;&#34;Gets the type of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The type of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        &#34;&#34;&#34;Sets the type of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param type: The type of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._type = type
+
+    @property
+    def uri(self):
+        &#34;&#34;&#34;Gets the uri of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The uri of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._uri
+
+    @uri.setter
+    def uri(self, uri):
+        &#34;&#34;&#34;Sets the uri of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param uri: The uri of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._uri = uri
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(EnvelopeDocument, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, EnvelopeDocument):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument"><code class="flex name class">
+<span>class <span class="ident">EnvelopeDocument</span></span>
+<span>(</span><span>added_recipient_ids=None, attachment_tab_id=None, authoritative_copy=None, authoritative_copy_metadata=None, available_document_types=None, contains_pdf_form_fields=None, display=None, display_metadata=None, document_fields=None, document_id=None, document_id_guid=None, error_details=None, include_in_download=None, include_in_download_metadata=None, name=None, name_metadata=None, order=None, pages=None, signer_must_acknowledge=None, signer_must_acknowledge_metadata=None, size_bytes=None, template_locked=None, template_required=None, type=None, uri=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>EnvelopeDocument - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class EnvelopeDocument(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;added_recipient_ids&#39;: &#39;list[str]&#39;,
+        &#39;attachment_tab_id&#39;: &#39;str&#39;,
+        &#39;authoritative_copy&#39;: &#39;str&#39;,
+        &#39;authoritative_copy_metadata&#39;: &#39;PropertyMetadata&#39;,
+        &#39;available_document_types&#39;: &#39;list[SignatureType]&#39;,
+        &#39;contains_pdf_form_fields&#39;: &#39;str&#39;,
+        &#39;display&#39;: &#39;str&#39;,
+        &#39;display_metadata&#39;: &#39;PropertyMetadata&#39;,
+        &#39;document_fields&#39;: &#39;list[NameValue]&#39;,
+        &#39;document_id&#39;: &#39;str&#39;,
+        &#39;document_id_guid&#39;: &#39;str&#39;,
+        &#39;error_details&#39;: &#39;ErrorDetails&#39;,
+        &#39;include_in_download&#39;: &#39;str&#39;,
+        &#39;include_in_download_metadata&#39;: &#39;PropertyMetadata&#39;,
+        &#39;name&#39;: &#39;str&#39;,
+        &#39;name_metadata&#39;: &#39;PropertyMetadata&#39;,
+        &#39;order&#39;: &#39;str&#39;,
+        &#39;pages&#39;: &#39;list[Page]&#39;,
+        &#39;signer_must_acknowledge&#39;: &#39;str&#39;,
+        &#39;signer_must_acknowledge_metadata&#39;: &#39;PropertyMetadata&#39;,
+        &#39;size_bytes&#39;: &#39;str&#39;,
+        &#39;template_locked&#39;: &#39;str&#39;,
+        &#39;template_required&#39;: &#39;str&#39;,
+        &#39;type&#39;: &#39;str&#39;,
+        &#39;uri&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;added_recipient_ids&#39;: &#39;addedRecipientIds&#39;,
+        &#39;attachment_tab_id&#39;: &#39;attachmentTabId&#39;,
+        &#39;authoritative_copy&#39;: &#39;authoritativeCopy&#39;,
+        &#39;authoritative_copy_metadata&#39;: &#39;authoritativeCopyMetadata&#39;,
+        &#39;available_document_types&#39;: &#39;availableDocumentTypes&#39;,
+        &#39;contains_pdf_form_fields&#39;: &#39;containsPdfFormFields&#39;,
+        &#39;display&#39;: &#39;display&#39;,
+        &#39;display_metadata&#39;: &#39;displayMetadata&#39;,
+        &#39;document_fields&#39;: &#39;documentFields&#39;,
+        &#39;document_id&#39;: &#39;documentId&#39;,
+        &#39;document_id_guid&#39;: &#39;documentIdGuid&#39;,
+        &#39;error_details&#39;: &#39;errorDetails&#39;,
+        &#39;include_in_download&#39;: &#39;includeInDownload&#39;,
+        &#39;include_in_download_metadata&#39;: &#39;includeInDownloadMetadata&#39;,
+        &#39;name&#39;: &#39;name&#39;,
+        &#39;name_metadata&#39;: &#39;nameMetadata&#39;,
+        &#39;order&#39;: &#39;order&#39;,
+        &#39;pages&#39;: &#39;pages&#39;,
+        &#39;signer_must_acknowledge&#39;: &#39;signerMustAcknowledge&#39;,
+        &#39;signer_must_acknowledge_metadata&#39;: &#39;signerMustAcknowledgeMetadata&#39;,
+        &#39;size_bytes&#39;: &#39;sizeBytes&#39;,
+        &#39;template_locked&#39;: &#39;templateLocked&#39;,
+        &#39;template_required&#39;: &#39;templateRequired&#39;,
+        &#39;type&#39;: &#39;type&#39;,
+        &#39;uri&#39;: &#39;uri&#39;
+    }
+
+    def __init__(self, added_recipient_ids=None, attachment_tab_id=None, authoritative_copy=None, authoritative_copy_metadata=None, available_document_types=None, contains_pdf_form_fields=None, display=None, display_metadata=None, document_fields=None, document_id=None, document_id_guid=None, error_details=None, include_in_download=None, include_in_download_metadata=None, name=None, name_metadata=None, order=None, pages=None, signer_must_acknowledge=None, signer_must_acknowledge_metadata=None, size_bytes=None, template_locked=None, template_required=None, type=None, uri=None):  # noqa: E501
+        &#34;&#34;&#34;EnvelopeDocument - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._added_recipient_ids = None
+        self._attachment_tab_id = None
+        self._authoritative_copy = None
+        self._authoritative_copy_metadata = None
+        self._available_document_types = None
+        self._contains_pdf_form_fields = None
+        self._display = None
+        self._display_metadata = None
+        self._document_fields = None
+        self._document_id = None
+        self._document_id_guid = None
+        self._error_details = None
+        self._include_in_download = None
+        self._include_in_download_metadata = None
+        self._name = None
+        self._name_metadata = None
+        self._order = None
+        self._pages = None
+        self._signer_must_acknowledge = None
+        self._signer_must_acknowledge_metadata = None
+        self._size_bytes = None
+        self._template_locked = None
+        self._template_required = None
+        self._type = None
+        self._uri = None
+        self.discriminator = None
+
+        if added_recipient_ids is not None:
+            self.added_recipient_ids = added_recipient_ids
+        if attachment_tab_id is not None:
+            self.attachment_tab_id = attachment_tab_id
+        if authoritative_copy is not None:
+            self.authoritative_copy = authoritative_copy
+        if authoritative_copy_metadata is not None:
+            self.authoritative_copy_metadata = authoritative_copy_metadata
+        if available_document_types is not None:
+            self.available_document_types = available_document_types
+        if contains_pdf_form_fields is not None:
+            self.contains_pdf_form_fields = contains_pdf_form_fields
+        if display is not None:
+            self.display = display
+        if display_metadata is not None:
+            self.display_metadata = display_metadata
+        if document_fields is not None:
+            self.document_fields = document_fields
+        if document_id is not None:
+            self.document_id = document_id
+        if document_id_guid is not None:
+            self.document_id_guid = document_id_guid
+        if error_details is not None:
+            self.error_details = error_details
+        if include_in_download is not None:
+            self.include_in_download = include_in_download
+        if include_in_download_metadata is not None:
+            self.include_in_download_metadata = include_in_download_metadata
+        if name is not None:
+            self.name = name
+        if name_metadata is not None:
+            self.name_metadata = name_metadata
+        if order is not None:
+            self.order = order
+        if pages is not None:
+            self.pages = pages
+        if signer_must_acknowledge is not None:
+            self.signer_must_acknowledge = signer_must_acknowledge
+        if signer_must_acknowledge_metadata is not None:
+            self.signer_must_acknowledge_metadata = signer_must_acknowledge_metadata
+        if size_bytes is not None:
+            self.size_bytes = size_bytes
+        if template_locked is not None:
+            self.template_locked = template_locked
+        if template_required is not None:
+            self.template_required = template_required
+        if type is not None:
+            self.type = type
+        if uri is not None:
+            self.uri = uri
+
+    @property
+    def added_recipient_ids(self):
+        &#34;&#34;&#34;Gets the added_recipient_ids of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The added_recipient_ids of this EnvelopeDocument.  # noqa: E501
+        :rtype: list[str]
+        &#34;&#34;&#34;
+        return self._added_recipient_ids
+
+    @added_recipient_ids.setter
+    def added_recipient_ids(self, added_recipient_ids):
+        &#34;&#34;&#34;Sets the added_recipient_ids of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param added_recipient_ids: The added_recipient_ids of this EnvelopeDocument.  # noqa: E501
+        :type: list[str]
+        &#34;&#34;&#34;
+
+        self._added_recipient_ids = added_recipient_ids
+
+    @property
+    def attachment_tab_id(self):
+        &#34;&#34;&#34;Gets the attachment_tab_id of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The attachment_tab_id of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._attachment_tab_id
+
+    @attachment_tab_id.setter
+    def attachment_tab_id(self, attachment_tab_id):
+        &#34;&#34;&#34;Sets the attachment_tab_id of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param attachment_tab_id: The attachment_tab_id of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._attachment_tab_id = attachment_tab_id
+
+    @property
+    def authoritative_copy(self):
+        &#34;&#34;&#34;Gets the authoritative_copy of this EnvelopeDocument.  # noqa: E501
+
+        Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.  # noqa: E501
+
+        :return: The authoritative_copy of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._authoritative_copy
+
+    @authoritative_copy.setter
+    def authoritative_copy(self, authoritative_copy):
+        &#34;&#34;&#34;Sets the authoritative_copy of this EnvelopeDocument.
+
+        Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.  # noqa: E501
+
+        :param authoritative_copy: The authoritative_copy of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._authoritative_copy = authoritative_copy
+
+    @property
+    def authoritative_copy_metadata(self):
+        &#34;&#34;&#34;Gets the authoritative_copy_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+        :return: The authoritative_copy_metadata of this EnvelopeDocument.  # noqa: E501
+        :rtype: PropertyMetadata
+        &#34;&#34;&#34;
+        return self._authoritative_copy_metadata
+
+    @authoritative_copy_metadata.setter
+    def authoritative_copy_metadata(self, authoritative_copy_metadata):
+        &#34;&#34;&#34;Sets the authoritative_copy_metadata of this EnvelopeDocument.
+
+
+        :param authoritative_copy_metadata: The authoritative_copy_metadata of this EnvelopeDocument.  # noqa: E501
+        :type: PropertyMetadata
+        &#34;&#34;&#34;
+
+        self._authoritative_copy_metadata = authoritative_copy_metadata
+
+    @property
+    def available_document_types(self):
+        &#34;&#34;&#34;Gets the available_document_types of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The available_document_types of this EnvelopeDocument.  # noqa: E501
+        :rtype: list[SignatureType]
+        &#34;&#34;&#34;
+        return self._available_document_types
+
+    @available_document_types.setter
+    def available_document_types(self, available_document_types):
+        &#34;&#34;&#34;Sets the available_document_types of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param available_document_types: The available_document_types of this EnvelopeDocument.  # noqa: E501
+        :type: list[SignatureType]
+        &#34;&#34;&#34;
+
+        self._available_document_types = available_document_types
+
+    @property
+    def contains_pdf_form_fields(self):
+        &#34;&#34;&#34;Gets the contains_pdf_form_fields of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The contains_pdf_form_fields of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._contains_pdf_form_fields
+
+    @contains_pdf_form_fields.setter
+    def contains_pdf_form_fields(self, contains_pdf_form_fields):
+        &#34;&#34;&#34;Sets the contains_pdf_form_fields of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param contains_pdf_form_fields: The contains_pdf_form_fields of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._contains_pdf_form_fields = contains_pdf_form_fields
+
+    @property
+    def display(self):
+        &#34;&#34;&#34;Gets the display of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The display of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display
+
+    @display.setter
+    def display(self, display):
+        &#34;&#34;&#34;Sets the display of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param display: The display of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display = display
+
+    @property
+    def display_metadata(self):
+        &#34;&#34;&#34;Gets the display_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+        :return: The display_metadata of this EnvelopeDocument.  # noqa: E501
+        :rtype: PropertyMetadata
+        &#34;&#34;&#34;
+        return self._display_metadata
+
+    @display_metadata.setter
+    def display_metadata(self, display_metadata):
+        &#34;&#34;&#34;Sets the display_metadata of this EnvelopeDocument.
+
+
+        :param display_metadata: The display_metadata of this EnvelopeDocument.  # noqa: E501
+        :type: PropertyMetadata
+        &#34;&#34;&#34;
+
+        self._display_metadata = display_metadata
+
+    @property
+    def document_fields(self):
+        &#34;&#34;&#34;Gets the document_fields of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The document_fields of this EnvelopeDocument.  # noqa: E501
+        :rtype: list[NameValue]
+        &#34;&#34;&#34;
+        return self._document_fields
+
+    @document_fields.setter
+    def document_fields(self, document_fields):
+        &#34;&#34;&#34;Sets the document_fields of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param document_fields: The document_fields of this EnvelopeDocument.  # noqa: E501
+        :type: list[NameValue]
+        &#34;&#34;&#34;
+
+        self._document_fields = document_fields
+
+    @property
+    def document_id(self):
+        &#34;&#34;&#34;Gets the document_id of this EnvelopeDocument.  # noqa: E501
+
+        Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.  # noqa: E501
+
+        :return: The document_id of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        &#34;&#34;&#34;Sets the document_id of this EnvelopeDocument.
+
+        Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.  # noqa: E501
+
+        :param document_id: The document_id of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._document_id = document_id
+
+    @property
+    def document_id_guid(self):
+        &#34;&#34;&#34;Gets the document_id_guid of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The document_id_guid of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._document_id_guid
+
+    @document_id_guid.setter
+    def document_id_guid(self, document_id_guid):
+        &#34;&#34;&#34;Sets the document_id_guid of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param document_id_guid: The document_id_guid of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._document_id_guid = document_id_guid
+
+    @property
+    def error_details(self):
+        &#34;&#34;&#34;Gets the error_details of this EnvelopeDocument.  # noqa: E501
+
+
+        :return: The error_details of this EnvelopeDocument.  # noqa: E501
+        :rtype: ErrorDetails
+        &#34;&#34;&#34;
+        return self._error_details
+
+    @error_details.setter
+    def error_details(self, error_details):
+        &#34;&#34;&#34;Sets the error_details of this EnvelopeDocument.
+
+
+        :param error_details: The error_details of this EnvelopeDocument.  # noqa: E501
+        :type: ErrorDetails
+        &#34;&#34;&#34;
+
+        self._error_details = error_details
+
+    @property
+    def include_in_download(self):
+        &#34;&#34;&#34;Gets the include_in_download of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The include_in_download of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_in_download
+
+    @include_in_download.setter
+    def include_in_download(self, include_in_download):
+        &#34;&#34;&#34;Sets the include_in_download of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param include_in_download: The include_in_download of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_in_download = include_in_download
+
+    @property
+    def include_in_download_metadata(self):
+        &#34;&#34;&#34;Gets the include_in_download_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+        :return: The include_in_download_metadata of this EnvelopeDocument.  # noqa: E501
+        :rtype: PropertyMetadata
+        &#34;&#34;&#34;
+        return self._include_in_download_metadata
+
+    @include_in_download_metadata.setter
+    def include_in_download_metadata(self, include_in_download_metadata):
+        &#34;&#34;&#34;Sets the include_in_download_metadata of this EnvelopeDocument.
+
+
+        :param include_in_download_metadata: The include_in_download_metadata of this EnvelopeDocument.  # noqa: E501
+        :type: PropertyMetadata
+        &#34;&#34;&#34;
+
+        self._include_in_download_metadata = include_in_download_metadata
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;Gets the name of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The name of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;Sets the name of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param name: The name of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def name_metadata(self):
+        &#34;&#34;&#34;Gets the name_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+        :return: The name_metadata of this EnvelopeDocument.  # noqa: E501
+        :rtype: PropertyMetadata
+        &#34;&#34;&#34;
+        return self._name_metadata
+
+    @name_metadata.setter
+    def name_metadata(self, name_metadata):
+        &#34;&#34;&#34;Sets the name_metadata of this EnvelopeDocument.
+
+
+        :param name_metadata: The name_metadata of this EnvelopeDocument.  # noqa: E501
+        :type: PropertyMetadata
+        &#34;&#34;&#34;
+
+        self._name_metadata = name_metadata
+
+    @property
+    def order(self):
+        &#34;&#34;&#34;Gets the order of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The order of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._order
+
+    @order.setter
+    def order(self, order):
+        &#34;&#34;&#34;Sets the order of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param order: The order of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._order = order
+
+    @property
+    def pages(self):
+        &#34;&#34;&#34;Gets the pages of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The pages of this EnvelopeDocument.  # noqa: E501
+        :rtype: list[Page]
+        &#34;&#34;&#34;
+        return self._pages
+
+    @pages.setter
+    def pages(self, pages):
+        &#34;&#34;&#34;Sets the pages of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param pages: The pages of this EnvelopeDocument.  # noqa: E501
+        :type: list[Page]
+        &#34;&#34;&#34;
+
+        self._pages = pages
+
+    @property
+    def signer_must_acknowledge(self):
+        &#34;&#34;&#34;Gets the signer_must_acknowledge of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signer_must_acknowledge of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signer_must_acknowledge
+
+    @signer_must_acknowledge.setter
+    def signer_must_acknowledge(self, signer_must_acknowledge):
+        &#34;&#34;&#34;Sets the signer_must_acknowledge of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param signer_must_acknowledge: The signer_must_acknowledge of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signer_must_acknowledge = signer_must_acknowledge
+
+    @property
+    def signer_must_acknowledge_metadata(self):
+        &#34;&#34;&#34;Gets the signer_must_acknowledge_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+        :return: The signer_must_acknowledge_metadata of this EnvelopeDocument.  # noqa: E501
+        :rtype: PropertyMetadata
+        &#34;&#34;&#34;
+        return self._signer_must_acknowledge_metadata
+
+    @signer_must_acknowledge_metadata.setter
+    def signer_must_acknowledge_metadata(self, signer_must_acknowledge_metadata):
+        &#34;&#34;&#34;Sets the signer_must_acknowledge_metadata of this EnvelopeDocument.
+
+
+        :param signer_must_acknowledge_metadata: The signer_must_acknowledge_metadata of this EnvelopeDocument.  # noqa: E501
+        :type: PropertyMetadata
+        &#34;&#34;&#34;
+
+        self._signer_must_acknowledge_metadata = signer_must_acknowledge_metadata
+
+    @property
+    def size_bytes(self):
+        &#34;&#34;&#34;Gets the size_bytes of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The size_bytes of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._size_bytes
+
+    @size_bytes.setter
+    def size_bytes(self, size_bytes):
+        &#34;&#34;&#34;Sets the size_bytes of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param size_bytes: The size_bytes of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._size_bytes = size_bytes
+
+    @property
+    def template_locked(self):
+        &#34;&#34;&#34;Gets the template_locked of this EnvelopeDocument.  # noqa: E501
+
+        When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.   # noqa: E501
+
+        :return: The template_locked of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._template_locked
+
+    @template_locked.setter
+    def template_locked(self, template_locked):
+        &#34;&#34;&#34;Sets the template_locked of this EnvelopeDocument.
+
+        When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.   # noqa: E501
+
+        :param template_locked: The template_locked of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._template_locked = template_locked
+
+    @property
+    def template_required(self):
+        &#34;&#34;&#34;Gets the template_required of this EnvelopeDocument.  # noqa: E501
+
+        When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.  # noqa: E501
+
+        :return: The template_required of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._template_required
+
+    @template_required.setter
+    def template_required(self, template_required):
+        &#34;&#34;&#34;Sets the template_required of this EnvelopeDocument.
+
+        When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.  # noqa: E501
+
+        :param template_required: The template_required of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._template_required = template_required
+
+    @property
+    def type(self):
+        &#34;&#34;&#34;Gets the type of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The type of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        &#34;&#34;&#34;Sets the type of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param type: The type of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._type = type
+
+    @property
+    def uri(self):
+        &#34;&#34;&#34;Gets the uri of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The uri of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._uri
+
+    @uri.setter
+    def uri(self, uri):
+        &#34;&#34;&#34;Sets the uri of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param uri: The uri of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._uri = uri
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(EnvelopeDocument, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, EnvelopeDocument):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.added_recipient_ids"><code class="name">var <span class="ident">added_recipient_ids</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the added_recipient_ids of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The added_recipient_ids of this EnvelopeDocument.
+# noqa: E501
+:rtype: list[str]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def added_recipient_ids(self):
+    &#34;&#34;&#34;Gets the added_recipient_ids of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The added_recipient_ids of this EnvelopeDocument.  # noqa: E501
+    :rtype: list[str]
+    &#34;&#34;&#34;
+    return self._added_recipient_ids</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.attachment_tab_id"><code class="name">var <span class="ident">attachment_tab_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the attachment_tab_id of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The attachment_tab_id of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def attachment_tab_id(self):
+    &#34;&#34;&#34;Gets the attachment_tab_id of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The attachment_tab_id of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._attachment_tab_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.authoritative_copy"><code class="name">var <span class="ident">authoritative_copy</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the authoritative_copy of this EnvelopeDocument.
+# noqa: E501</p>
+<p>Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
+# noqa: E501</p>
+<p>:return: The authoritative_copy of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def authoritative_copy(self):
+    &#34;&#34;&#34;Gets the authoritative_copy of this EnvelopeDocument.  # noqa: E501
+
+    Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.  # noqa: E501
+
+    :return: The authoritative_copy of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._authoritative_copy</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.authoritative_copy_metadata"><code class="name">var <span class="ident">authoritative_copy_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the authoritative_copy_metadata of this EnvelopeDocument.
+# noqa: E501</p>
+<p>:return: The authoritative_copy_metadata of this EnvelopeDocument.
+# noqa: E501
+:rtype: PropertyMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def authoritative_copy_metadata(self):
+    &#34;&#34;&#34;Gets the authoritative_copy_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+    :return: The authoritative_copy_metadata of this EnvelopeDocument.  # noqa: E501
+    :rtype: PropertyMetadata
+    &#34;&#34;&#34;
+    return self._authoritative_copy_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.available_document_types"><code class="name">var <span class="ident">available_document_types</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the available_document_types of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The available_document_types of this EnvelopeDocument.
+# noqa: E501
+:rtype: list[SignatureType]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def available_document_types(self):
+    &#34;&#34;&#34;Gets the available_document_types of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The available_document_types of this EnvelopeDocument.  # noqa: E501
+    :rtype: list[SignatureType]
+    &#34;&#34;&#34;
+    return self._available_document_types</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.contains_pdf_form_fields"><code class="name">var <span class="ident">contains_pdf_form_fields</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the contains_pdf_form_fields of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The contains_pdf_form_fields of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def contains_pdf_form_fields(self):
+    &#34;&#34;&#34;Gets the contains_pdf_form_fields of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The contains_pdf_form_fields of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._contains_pdf_form_fields</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.display"><code class="name">var <span class="ident">display</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the display of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The display of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def display(self):
+    &#34;&#34;&#34;Gets the display of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The display of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._display</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.display_metadata"><code class="name">var <span class="ident">display_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the display_metadata of this EnvelopeDocument.
+# noqa: E501</p>
+<p>:return: The display_metadata of this EnvelopeDocument.
+# noqa: E501
+:rtype: PropertyMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def display_metadata(self):
+    &#34;&#34;&#34;Gets the display_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+    :return: The display_metadata of this EnvelopeDocument.  # noqa: E501
+    :rtype: PropertyMetadata
+    &#34;&#34;&#34;
+    return self._display_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.document_fields"><code class="name">var <span class="ident">document_fields</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the document_fields of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The document_fields of this EnvelopeDocument.
+# noqa: E501
+:rtype: list[NameValue]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def document_fields(self):
+    &#34;&#34;&#34;Gets the document_fields of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The document_fields of this EnvelopeDocument.  # noqa: E501
+    :rtype: list[NameValue]
+    &#34;&#34;&#34;
+    return self._document_fields</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.document_id"><code class="name">var <span class="ident">document_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the document_id of this EnvelopeDocument.
+# noqa: E501</p>
+<p>Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+# noqa: E501</p>
+<p>:return: The document_id of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def document_id(self):
+    &#34;&#34;&#34;Gets the document_id of this EnvelopeDocument.  # noqa: E501
+
+    Specifies the document ID number that the tab is placed on. This must refer to an existing Document&#39;s ID attribute.  # noqa: E501
+
+    :return: The document_id of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._document_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.document_id_guid"><code class="name">var <span class="ident">document_id_guid</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the document_id_guid of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The document_id_guid of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def document_id_guid(self):
+    &#34;&#34;&#34;Gets the document_id_guid of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The document_id_guid of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._document_id_guid</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.error_details"><code class="name">var <span class="ident">error_details</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the error_details of this EnvelopeDocument.
+# noqa: E501</p>
+<p>:return: The error_details of this EnvelopeDocument.
+# noqa: E501
+:rtype: ErrorDetails</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def error_details(self):
+    &#34;&#34;&#34;Gets the error_details of this EnvelopeDocument.  # noqa: E501
+
+
+    :return: The error_details of this EnvelopeDocument.  # noqa: E501
+    :rtype: ErrorDetails
+    &#34;&#34;&#34;
+    return self._error_details</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.include_in_download"><code class="name">var <span class="ident">include_in_download</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the include_in_download of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The include_in_download of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def include_in_download(self):
+    &#34;&#34;&#34;Gets the include_in_download of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The include_in_download of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._include_in_download</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.include_in_download_metadata"><code class="name">var <span class="ident">include_in_download_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the include_in_download_metadata of this EnvelopeDocument.
+# noqa: E501</p>
+<p>:return: The include_in_download_metadata of this EnvelopeDocument.
+# noqa: E501
+:rtype: PropertyMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def include_in_download_metadata(self):
+    &#34;&#34;&#34;Gets the include_in_download_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+    :return: The include_in_download_metadata of this EnvelopeDocument.  # noqa: E501
+    :rtype: PropertyMetadata
+    &#34;&#34;&#34;
+    return self._include_in_download_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the name of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The name of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name(self):
+    &#34;&#34;&#34;Gets the name of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The name of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.name_metadata"><code class="name">var <span class="ident">name_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the name_metadata of this EnvelopeDocument.
+# noqa: E501</p>
+<p>:return: The name_metadata of this EnvelopeDocument.
+# noqa: E501
+:rtype: PropertyMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name_metadata(self):
+    &#34;&#34;&#34;Gets the name_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+    :return: The name_metadata of this EnvelopeDocument.  # noqa: E501
+    :rtype: PropertyMetadata
+    &#34;&#34;&#34;
+    return self._name_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.order"><code class="name">var <span class="ident">order</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the order of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The order of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def order(self):
+    &#34;&#34;&#34;Gets the order of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The order of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._order</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.pages"><code class="name">var <span class="ident">pages</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the pages of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The pages of this EnvelopeDocument.
+# noqa: E501
+:rtype: list[Page]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def pages(self):
+    &#34;&#34;&#34;Gets the pages of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The pages of this EnvelopeDocument.  # noqa: E501
+    :rtype: list[Page]
+    &#34;&#34;&#34;
+    return self._pages</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.signer_must_acknowledge"><code class="name">var <span class="ident">signer_must_acknowledge</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signer_must_acknowledge of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The signer_must_acknowledge of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signer_must_acknowledge(self):
+    &#34;&#34;&#34;Gets the signer_must_acknowledge of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The signer_must_acknowledge of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signer_must_acknowledge</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.signer_must_acknowledge_metadata"><code class="name">var <span class="ident">signer_must_acknowledge_metadata</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signer_must_acknowledge_metadata of this EnvelopeDocument.
+# noqa: E501</p>
+<p>:return: The signer_must_acknowledge_metadata of this EnvelopeDocument.
+# noqa: E501
+:rtype: PropertyMetadata</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signer_must_acknowledge_metadata(self):
+    &#34;&#34;&#34;Gets the signer_must_acknowledge_metadata of this EnvelopeDocument.  # noqa: E501
+
+
+    :return: The signer_must_acknowledge_metadata of this EnvelopeDocument.  # noqa: E501
+    :rtype: PropertyMetadata
+    &#34;&#34;&#34;
+    return self._signer_must_acknowledge_metadata</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.size_bytes"><code class="name">var <span class="ident">size_bytes</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the size_bytes of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The size_bytes of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def size_bytes(self):
+    &#34;&#34;&#34;Gets the size_bytes of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The size_bytes of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._size_bytes</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.template_locked"><code class="name">var <span class="ident">template_locked</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the template_locked of this EnvelopeDocument.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+# noqa: E501</p>
+<p>:return: The template_locked of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def template_locked(self):
+    &#34;&#34;&#34;Gets the template_locked of this EnvelopeDocument.  # noqa: E501
+
+    When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.   # noqa: E501
+
+    :return: The template_locked of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._template_locked</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.template_required"><code class="name">var <span class="ident">template_required</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the template_required of this EnvelopeDocument.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the sender may not remove the recipient. Used only when working with template recipients.
+# noqa: E501</p>
+<p>:return: The template_required of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def template_required(self):
+    &#34;&#34;&#34;Gets the template_required of this EnvelopeDocument.  # noqa: E501
+
+    When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.  # noqa: E501
+
+    :return: The template_required of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._template_required</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.type"><code class="name">var <span class="ident">type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the type of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The type of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def type(self):
+    &#34;&#34;&#34;Gets the type of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The type of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.uri"><code class="name">var <span class="ident">uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the uri of this EnvelopeDocument.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The uri of this EnvelopeDocument.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def uri(self):
+    &#34;&#34;&#34;Gets the uri of this EnvelopeDocument.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The uri of this EnvelopeDocument.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._uri</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(EnvelopeDocument, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.envelope_document.EnvelopeDocument.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument" href="#docusign_esign.models.envelope_document.EnvelopeDocument">EnvelopeDocument</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.added_recipient_ids" href="#docusign_esign.models.envelope_document.EnvelopeDocument.added_recipient_ids">added_recipient_ids</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.attachment_tab_id" href="#docusign_esign.models.envelope_document.EnvelopeDocument.attachment_tab_id">attachment_tab_id</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.attribute_map" href="#docusign_esign.models.envelope_document.EnvelopeDocument.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.authoritative_copy" href="#docusign_esign.models.envelope_document.EnvelopeDocument.authoritative_copy">authoritative_copy</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.authoritative_copy_metadata" href="#docusign_esign.models.envelope_document.EnvelopeDocument.authoritative_copy_metadata">authoritative_copy_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.available_document_types" href="#docusign_esign.models.envelope_document.EnvelopeDocument.available_document_types">available_document_types</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.contains_pdf_form_fields" href="#docusign_esign.models.envelope_document.EnvelopeDocument.contains_pdf_form_fields">contains_pdf_form_fields</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.display" href="#docusign_esign.models.envelope_document.EnvelopeDocument.display">display</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.display_metadata" href="#docusign_esign.models.envelope_document.EnvelopeDocument.display_metadata">display_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.document_fields" href="#docusign_esign.models.envelope_document.EnvelopeDocument.document_fields">document_fields</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.document_id" href="#docusign_esign.models.envelope_document.EnvelopeDocument.document_id">document_id</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.document_id_guid" href="#docusign_esign.models.envelope_document.EnvelopeDocument.document_id_guid">document_id_guid</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.error_details" href="#docusign_esign.models.envelope_document.EnvelopeDocument.error_details">error_details</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.include_in_download" href="#docusign_esign.models.envelope_document.EnvelopeDocument.include_in_download">include_in_download</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.include_in_download_metadata" href="#docusign_esign.models.envelope_document.EnvelopeDocument.include_in_download_metadata">include_in_download_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.name" href="#docusign_esign.models.envelope_document.EnvelopeDocument.name">name</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.name_metadata" href="#docusign_esign.models.envelope_document.EnvelopeDocument.name_metadata">name_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.order" href="#docusign_esign.models.envelope_document.EnvelopeDocument.order">order</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.pages" href="#docusign_esign.models.envelope_document.EnvelopeDocument.pages">pages</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.signer_must_acknowledge" href="#docusign_esign.models.envelope_document.EnvelopeDocument.signer_must_acknowledge">signer_must_acknowledge</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.signer_must_acknowledge_metadata" href="#docusign_esign.models.envelope_document.EnvelopeDocument.signer_must_acknowledge_metadata">signer_must_acknowledge_metadata</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.size_bytes" href="#docusign_esign.models.envelope_document.EnvelopeDocument.size_bytes">size_bytes</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.swagger_types" href="#docusign_esign.models.envelope_document.EnvelopeDocument.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.template_locked" href="#docusign_esign.models.envelope_document.EnvelopeDocument.template_locked">template_locked</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.template_required" href="#docusign_esign.models.envelope_document.EnvelopeDocument.template_required">template_required</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.to_dict" href="#docusign_esign.models.envelope_document.EnvelopeDocument.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.to_str" href="#docusign_esign.models.envelope_document.EnvelopeDocument.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.type" href="#docusign_esign.models.envelope_document.EnvelopeDocument.type">type</a></code></li>
+<li><code><a title="docusign_esign.models.envelope_document.EnvelopeDocument.uri" href="#docusign_esign.models.envelope_document.EnvelopeDocument.uri">uri</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

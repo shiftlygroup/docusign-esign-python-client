@@ -1,0 +1,1282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.user_profile API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.user_profile</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class UserProfile(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;address&#39;: &#39;AddressInformation&#39;,
+        &#39;authentication_methods&#39;: &#39;list[AuthenticationMethod]&#39;,
+        &#39;company_name&#39;: &#39;str&#39;,
+        &#39;display_organization_info&#39;: &#39;str&#39;,
+        &#39;display_personal_info&#39;: &#39;str&#39;,
+        &#39;display_profile&#39;: &#39;str&#39;,
+        &#39;display_usage_history&#39;: &#39;str&#39;,
+        &#39;profile_image_uri&#39;: &#39;str&#39;,
+        &#39;title&#39;: &#39;str&#39;,
+        &#39;usage_history&#39;: &#39;UsageHistory&#39;,
+        &#39;user_details&#39;: &#39;UserInformation&#39;,
+        &#39;user_profile_last_modified_date&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;address&#39;: &#39;address&#39;,
+        &#39;authentication_methods&#39;: &#39;authenticationMethods&#39;,
+        &#39;company_name&#39;: &#39;companyName&#39;,
+        &#39;display_organization_info&#39;: &#39;displayOrganizationInfo&#39;,
+        &#39;display_personal_info&#39;: &#39;displayPersonalInfo&#39;,
+        &#39;display_profile&#39;: &#39;displayProfile&#39;,
+        &#39;display_usage_history&#39;: &#39;displayUsageHistory&#39;,
+        &#39;profile_image_uri&#39;: &#39;profileImageUri&#39;,
+        &#39;title&#39;: &#39;title&#39;,
+        &#39;usage_history&#39;: &#39;usageHistory&#39;,
+        &#39;user_details&#39;: &#39;userDetails&#39;,
+        &#39;user_profile_last_modified_date&#39;: &#39;userProfileLastModifiedDate&#39;
+    }
+
+    def __init__(self, address=None, authentication_methods=None, company_name=None, display_organization_info=None, display_personal_info=None, display_profile=None, display_usage_history=None, profile_image_uri=None, title=None, usage_history=None, user_details=None, user_profile_last_modified_date=None):  # noqa: E501
+        &#34;&#34;&#34;UserProfile - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._address = None
+        self._authentication_methods = None
+        self._company_name = None
+        self._display_organization_info = None
+        self._display_personal_info = None
+        self._display_profile = None
+        self._display_usage_history = None
+        self._profile_image_uri = None
+        self._title = None
+        self._usage_history = None
+        self._user_details = None
+        self._user_profile_last_modified_date = None
+        self.discriminator = None
+
+        if address is not None:
+            self.address = address
+        if authentication_methods is not None:
+            self.authentication_methods = authentication_methods
+        if company_name is not None:
+            self.company_name = company_name
+        if display_organization_info is not None:
+            self.display_organization_info = display_organization_info
+        if display_personal_info is not None:
+            self.display_personal_info = display_personal_info
+        if display_profile is not None:
+            self.display_profile = display_profile
+        if display_usage_history is not None:
+            self.display_usage_history = display_usage_history
+        if profile_image_uri is not None:
+            self.profile_image_uri = profile_image_uri
+        if title is not None:
+            self.title = title
+        if usage_history is not None:
+            self.usage_history = usage_history
+        if user_details is not None:
+            self.user_details = user_details
+        if user_profile_last_modified_date is not None:
+            self.user_profile_last_modified_date = user_profile_last_modified_date
+
+    @property
+    def address(self):
+        &#34;&#34;&#34;Gets the address of this UserProfile.  # noqa: E501
+
+
+        :return: The address of this UserProfile.  # noqa: E501
+        :rtype: AddressInformation
+        &#34;&#34;&#34;
+        return self._address
+
+    @address.setter
+    def address(self, address):
+        &#34;&#34;&#34;Sets the address of this UserProfile.
+
+
+        :param address: The address of this UserProfile.  # noqa: E501
+        :type: AddressInformation
+        &#34;&#34;&#34;
+
+        self._address = address
+
+    @property
+    def authentication_methods(self):
+        &#34;&#34;&#34;Gets the authentication_methods of this UserProfile.  # noqa: E501
+
+        These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user.  # noqa: E501
+
+        :return: The authentication_methods of this UserProfile.  # noqa: E501
+        :rtype: list[AuthenticationMethod]
+        &#34;&#34;&#34;
+        return self._authentication_methods
+
+    @authentication_methods.setter
+    def authentication_methods(self, authentication_methods):
+        &#34;&#34;&#34;Sets the authentication_methods of this UserProfile.
+
+        These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user.  # noqa: E501
+
+        :param authentication_methods: The authentication_methods of this UserProfile.  # noqa: E501
+        :type: list[AuthenticationMethod]
+        &#34;&#34;&#34;
+
+        self._authentication_methods = authentication_methods
+
+    @property
+    def company_name(self):
+        &#34;&#34;&#34;Gets the company_name of this UserProfile.  # noqa: E501
+
+        The name of the user&#39;s Company.  # noqa: E501
+
+        :return: The company_name of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._company_name
+
+    @company_name.setter
+    def company_name(self, company_name):
+        &#34;&#34;&#34;Sets the company_name of this UserProfile.
+
+        The name of the user&#39;s Company.  # noqa: E501
+
+        :param company_name: The company_name of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._company_name = company_name
+
+    @property
+    def display_organization_info(self):
+        &#34;&#34;&#34;Gets the display_organization_info of this UserProfile.  # noqa: E501
+
+         When set to **true**, the user&#39;s company and title information are shown on the ID card.   # noqa: E501
+
+        :return: The display_organization_info of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_organization_info
+
+    @display_organization_info.setter
+    def display_organization_info(self, display_organization_info):
+        &#34;&#34;&#34;Sets the display_organization_info of this UserProfile.
+
+         When set to **true**, the user&#39;s company and title information are shown on the ID card.   # noqa: E501
+
+        :param display_organization_info: The display_organization_info of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_organization_info = display_organization_info
+
+    @property
+    def display_personal_info(self):
+        &#34;&#34;&#34;Gets the display_personal_info of this UserProfile.  # noqa: E501
+
+        When set to **true**, the user&#39;s Address and Phone number are shown on the ID card.  # noqa: E501
+
+        :return: The display_personal_info of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_personal_info
+
+    @display_personal_info.setter
+    def display_personal_info(self, display_personal_info):
+        &#34;&#34;&#34;Sets the display_personal_info of this UserProfile.
+
+        When set to **true**, the user&#39;s Address and Phone number are shown on the ID card.  # noqa: E501
+
+        :param display_personal_info: The display_personal_info of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_personal_info = display_personal_info
+
+    @property
+    def display_profile(self):
+        &#34;&#34;&#34;Gets the display_profile of this UserProfile.  # noqa: E501
+
+        When set to **true**, the user&#39;s ID card can be viewed from signed documents and envelope history.  # noqa: E501
+
+        :return: The display_profile of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_profile
+
+    @display_profile.setter
+    def display_profile(self, display_profile):
+        &#34;&#34;&#34;Sets the display_profile of this UserProfile.
+
+        When set to **true**, the user&#39;s ID card can be viewed from signed documents and envelope history.  # noqa: E501
+
+        :param display_profile: The display_profile of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_profile = display_profile
+
+    @property
+    def display_usage_history(self):
+        &#34;&#34;&#34;Gets the display_usage_history of this UserProfile.  # noqa: E501
+
+        When set to **true**, the user&#39;s usage information is shown on the ID card.  # noqa: E501
+
+        :return: The display_usage_history of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_usage_history
+
+    @display_usage_history.setter
+    def display_usage_history(self, display_usage_history):
+        &#34;&#34;&#34;Sets the display_usage_history of this UserProfile.
+
+        When set to **true**, the user&#39;s usage information is shown on the ID card.  # noqa: E501
+
+        :param display_usage_history: The display_usage_history of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_usage_history = display_usage_history
+
+    @property
+    def profile_image_uri(self):
+        &#34;&#34;&#34;Gets the profile_image_uri of this UserProfile.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The profile_image_uri of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._profile_image_uri
+
+    @profile_image_uri.setter
+    def profile_image_uri(self, profile_image_uri):
+        &#34;&#34;&#34;Sets the profile_image_uri of this UserProfile.
+
+          # noqa: E501
+
+        :param profile_image_uri: The profile_image_uri of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._profile_image_uri = profile_image_uri
+
+    @property
+    def title(self):
+        &#34;&#34;&#34;Gets the title of this UserProfile.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The title of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        &#34;&#34;&#34;Sets the title of this UserProfile.
+
+          # noqa: E501
+
+        :param title: The title of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._title = title
+
+    @property
+    def usage_history(self):
+        &#34;&#34;&#34;Gets the usage_history of this UserProfile.  # noqa: E501
+
+
+        :return: The usage_history of this UserProfile.  # noqa: E501
+        :rtype: UsageHistory
+        &#34;&#34;&#34;
+        return self._usage_history
+
+    @usage_history.setter
+    def usage_history(self, usage_history):
+        &#34;&#34;&#34;Sets the usage_history of this UserProfile.
+
+
+        :param usage_history: The usage_history of this UserProfile.  # noqa: E501
+        :type: UsageHistory
+        &#34;&#34;&#34;
+
+        self._usage_history = usage_history
+
+    @property
+    def user_details(self):
+        &#34;&#34;&#34;Gets the user_details of this UserProfile.  # noqa: E501
+
+
+        :return: The user_details of this UserProfile.  # noqa: E501
+        :rtype: UserInformation
+        &#34;&#34;&#34;
+        return self._user_details
+
+    @user_details.setter
+    def user_details(self, user_details):
+        &#34;&#34;&#34;Sets the user_details of this UserProfile.
+
+
+        :param user_details: The user_details of this UserProfile.  # noqa: E501
+        :type: UserInformation
+        &#34;&#34;&#34;
+
+        self._user_details = user_details
+
+    @property
+    def user_profile_last_modified_date(self):
+        &#34;&#34;&#34;Gets the user_profile_last_modified_date of this UserProfile.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_profile_last_modified_date of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_profile_last_modified_date
+
+    @user_profile_last_modified_date.setter
+    def user_profile_last_modified_date(self, user_profile_last_modified_date):
+        &#34;&#34;&#34;Sets the user_profile_last_modified_date of this UserProfile.
+
+          # noqa: E501
+
+        :param user_profile_last_modified_date: The user_profile_last_modified_date of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_profile_last_modified_date = user_profile_last_modified_date
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(UserProfile, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, UserProfile):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.user_profile.UserProfile"><code class="flex name class">
+<span>class <span class="ident">UserProfile</span></span>
+<span>(</span><span>address=None, authentication_methods=None, company_name=None, display_organization_info=None, display_personal_info=None, display_profile=None, display_usage_history=None, profile_image_uri=None, title=None, usage_history=None, user_details=None, user_profile_last_modified_date=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>UserProfile - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class UserProfile(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;address&#39;: &#39;AddressInformation&#39;,
+        &#39;authentication_methods&#39;: &#39;list[AuthenticationMethod]&#39;,
+        &#39;company_name&#39;: &#39;str&#39;,
+        &#39;display_organization_info&#39;: &#39;str&#39;,
+        &#39;display_personal_info&#39;: &#39;str&#39;,
+        &#39;display_profile&#39;: &#39;str&#39;,
+        &#39;display_usage_history&#39;: &#39;str&#39;,
+        &#39;profile_image_uri&#39;: &#39;str&#39;,
+        &#39;title&#39;: &#39;str&#39;,
+        &#39;usage_history&#39;: &#39;UsageHistory&#39;,
+        &#39;user_details&#39;: &#39;UserInformation&#39;,
+        &#39;user_profile_last_modified_date&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;address&#39;: &#39;address&#39;,
+        &#39;authentication_methods&#39;: &#39;authenticationMethods&#39;,
+        &#39;company_name&#39;: &#39;companyName&#39;,
+        &#39;display_organization_info&#39;: &#39;displayOrganizationInfo&#39;,
+        &#39;display_personal_info&#39;: &#39;displayPersonalInfo&#39;,
+        &#39;display_profile&#39;: &#39;displayProfile&#39;,
+        &#39;display_usage_history&#39;: &#39;displayUsageHistory&#39;,
+        &#39;profile_image_uri&#39;: &#39;profileImageUri&#39;,
+        &#39;title&#39;: &#39;title&#39;,
+        &#39;usage_history&#39;: &#39;usageHistory&#39;,
+        &#39;user_details&#39;: &#39;userDetails&#39;,
+        &#39;user_profile_last_modified_date&#39;: &#39;userProfileLastModifiedDate&#39;
+    }
+
+    def __init__(self, address=None, authentication_methods=None, company_name=None, display_organization_info=None, display_personal_info=None, display_profile=None, display_usage_history=None, profile_image_uri=None, title=None, usage_history=None, user_details=None, user_profile_last_modified_date=None):  # noqa: E501
+        &#34;&#34;&#34;UserProfile - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._address = None
+        self._authentication_methods = None
+        self._company_name = None
+        self._display_organization_info = None
+        self._display_personal_info = None
+        self._display_profile = None
+        self._display_usage_history = None
+        self._profile_image_uri = None
+        self._title = None
+        self._usage_history = None
+        self._user_details = None
+        self._user_profile_last_modified_date = None
+        self.discriminator = None
+
+        if address is not None:
+            self.address = address
+        if authentication_methods is not None:
+            self.authentication_methods = authentication_methods
+        if company_name is not None:
+            self.company_name = company_name
+        if display_organization_info is not None:
+            self.display_organization_info = display_organization_info
+        if display_personal_info is not None:
+            self.display_personal_info = display_personal_info
+        if display_profile is not None:
+            self.display_profile = display_profile
+        if display_usage_history is not None:
+            self.display_usage_history = display_usage_history
+        if profile_image_uri is not None:
+            self.profile_image_uri = profile_image_uri
+        if title is not None:
+            self.title = title
+        if usage_history is not None:
+            self.usage_history = usage_history
+        if user_details is not None:
+            self.user_details = user_details
+        if user_profile_last_modified_date is not None:
+            self.user_profile_last_modified_date = user_profile_last_modified_date
+
+    @property
+    def address(self):
+        &#34;&#34;&#34;Gets the address of this UserProfile.  # noqa: E501
+
+
+        :return: The address of this UserProfile.  # noqa: E501
+        :rtype: AddressInformation
+        &#34;&#34;&#34;
+        return self._address
+
+    @address.setter
+    def address(self, address):
+        &#34;&#34;&#34;Sets the address of this UserProfile.
+
+
+        :param address: The address of this UserProfile.  # noqa: E501
+        :type: AddressInformation
+        &#34;&#34;&#34;
+
+        self._address = address
+
+    @property
+    def authentication_methods(self):
+        &#34;&#34;&#34;Gets the authentication_methods of this UserProfile.  # noqa: E501
+
+        These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user.  # noqa: E501
+
+        :return: The authentication_methods of this UserProfile.  # noqa: E501
+        :rtype: list[AuthenticationMethod]
+        &#34;&#34;&#34;
+        return self._authentication_methods
+
+    @authentication_methods.setter
+    def authentication_methods(self, authentication_methods):
+        &#34;&#34;&#34;Sets the authentication_methods of this UserProfile.
+
+        These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user.  # noqa: E501
+
+        :param authentication_methods: The authentication_methods of this UserProfile.  # noqa: E501
+        :type: list[AuthenticationMethod]
+        &#34;&#34;&#34;
+
+        self._authentication_methods = authentication_methods
+
+    @property
+    def company_name(self):
+        &#34;&#34;&#34;Gets the company_name of this UserProfile.  # noqa: E501
+
+        The name of the user&#39;s Company.  # noqa: E501
+
+        :return: The company_name of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._company_name
+
+    @company_name.setter
+    def company_name(self, company_name):
+        &#34;&#34;&#34;Sets the company_name of this UserProfile.
+
+        The name of the user&#39;s Company.  # noqa: E501
+
+        :param company_name: The company_name of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._company_name = company_name
+
+    @property
+    def display_organization_info(self):
+        &#34;&#34;&#34;Gets the display_organization_info of this UserProfile.  # noqa: E501
+
+         When set to **true**, the user&#39;s company and title information are shown on the ID card.   # noqa: E501
+
+        :return: The display_organization_info of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_organization_info
+
+    @display_organization_info.setter
+    def display_organization_info(self, display_organization_info):
+        &#34;&#34;&#34;Sets the display_organization_info of this UserProfile.
+
+         When set to **true**, the user&#39;s company and title information are shown on the ID card.   # noqa: E501
+
+        :param display_organization_info: The display_organization_info of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_organization_info = display_organization_info
+
+    @property
+    def display_personal_info(self):
+        &#34;&#34;&#34;Gets the display_personal_info of this UserProfile.  # noqa: E501
+
+        When set to **true**, the user&#39;s Address and Phone number are shown on the ID card.  # noqa: E501
+
+        :return: The display_personal_info of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_personal_info
+
+    @display_personal_info.setter
+    def display_personal_info(self, display_personal_info):
+        &#34;&#34;&#34;Sets the display_personal_info of this UserProfile.
+
+        When set to **true**, the user&#39;s Address and Phone number are shown on the ID card.  # noqa: E501
+
+        :param display_personal_info: The display_personal_info of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_personal_info = display_personal_info
+
+    @property
+    def display_profile(self):
+        &#34;&#34;&#34;Gets the display_profile of this UserProfile.  # noqa: E501
+
+        When set to **true**, the user&#39;s ID card can be viewed from signed documents and envelope history.  # noqa: E501
+
+        :return: The display_profile of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_profile
+
+    @display_profile.setter
+    def display_profile(self, display_profile):
+        &#34;&#34;&#34;Sets the display_profile of this UserProfile.
+
+        When set to **true**, the user&#39;s ID card can be viewed from signed documents and envelope history.  # noqa: E501
+
+        :param display_profile: The display_profile of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_profile = display_profile
+
+    @property
+    def display_usage_history(self):
+        &#34;&#34;&#34;Gets the display_usage_history of this UserProfile.  # noqa: E501
+
+        When set to **true**, the user&#39;s usage information is shown on the ID card.  # noqa: E501
+
+        :return: The display_usage_history of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_usage_history
+
+    @display_usage_history.setter
+    def display_usage_history(self, display_usage_history):
+        &#34;&#34;&#34;Sets the display_usage_history of this UserProfile.
+
+        When set to **true**, the user&#39;s usage information is shown on the ID card.  # noqa: E501
+
+        :param display_usage_history: The display_usage_history of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_usage_history = display_usage_history
+
+    @property
+    def profile_image_uri(self):
+        &#34;&#34;&#34;Gets the profile_image_uri of this UserProfile.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The profile_image_uri of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._profile_image_uri
+
+    @profile_image_uri.setter
+    def profile_image_uri(self, profile_image_uri):
+        &#34;&#34;&#34;Sets the profile_image_uri of this UserProfile.
+
+          # noqa: E501
+
+        :param profile_image_uri: The profile_image_uri of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._profile_image_uri = profile_image_uri
+
+    @property
+    def title(self):
+        &#34;&#34;&#34;Gets the title of this UserProfile.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The title of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        &#34;&#34;&#34;Sets the title of this UserProfile.
+
+          # noqa: E501
+
+        :param title: The title of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._title = title
+
+    @property
+    def usage_history(self):
+        &#34;&#34;&#34;Gets the usage_history of this UserProfile.  # noqa: E501
+
+
+        :return: The usage_history of this UserProfile.  # noqa: E501
+        :rtype: UsageHistory
+        &#34;&#34;&#34;
+        return self._usage_history
+
+    @usage_history.setter
+    def usage_history(self, usage_history):
+        &#34;&#34;&#34;Sets the usage_history of this UserProfile.
+
+
+        :param usage_history: The usage_history of this UserProfile.  # noqa: E501
+        :type: UsageHistory
+        &#34;&#34;&#34;
+
+        self._usage_history = usage_history
+
+    @property
+    def user_details(self):
+        &#34;&#34;&#34;Gets the user_details of this UserProfile.  # noqa: E501
+
+
+        :return: The user_details of this UserProfile.  # noqa: E501
+        :rtype: UserInformation
+        &#34;&#34;&#34;
+        return self._user_details
+
+    @user_details.setter
+    def user_details(self, user_details):
+        &#34;&#34;&#34;Sets the user_details of this UserProfile.
+
+
+        :param user_details: The user_details of this UserProfile.  # noqa: E501
+        :type: UserInformation
+        &#34;&#34;&#34;
+
+        self._user_details = user_details
+
+    @property
+    def user_profile_last_modified_date(self):
+        &#34;&#34;&#34;Gets the user_profile_last_modified_date of this UserProfile.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_profile_last_modified_date of this UserProfile.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_profile_last_modified_date
+
+    @user_profile_last_modified_date.setter
+    def user_profile_last_modified_date(self, user_profile_last_modified_date):
+        &#34;&#34;&#34;Sets the user_profile_last_modified_date of this UserProfile.
+
+          # noqa: E501
+
+        :param user_profile_last_modified_date: The user_profile_last_modified_date of this UserProfile.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_profile_last_modified_date = user_profile_last_modified_date
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(UserProfile, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, UserProfile):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.user_profile.UserProfile.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.user_profile.UserProfile.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.user_profile.UserProfile.address"><code class="name">var <span class="ident">address</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the address of this UserProfile.
+# noqa: E501</p>
+<p>:return: The address of this UserProfile.
+# noqa: E501
+:rtype: AddressInformation</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def address(self):
+    &#34;&#34;&#34;Gets the address of this UserProfile.  # noqa: E501
+
+
+    :return: The address of this UserProfile.  # noqa: E501
+    :rtype: AddressInformation
+    &#34;&#34;&#34;
+    return self._address</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_profile.UserProfile.authentication_methods"><code class="name">var <span class="ident">authentication_methods</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the authentication_methods of this UserProfile.
+# noqa: E501</p>
+<p>These properties cannot be modified in the PUT.
+Indicates the authentication methods used by the user.
+# noqa: E501</p>
+<p>:return: The authentication_methods of this UserProfile.
+# noqa: E501
+:rtype: list[AuthenticationMethod]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def authentication_methods(self):
+    &#34;&#34;&#34;Gets the authentication_methods of this UserProfile.  # noqa: E501
+
+    These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user.  # noqa: E501
+
+    :return: The authentication_methods of this UserProfile.  # noqa: E501
+    :rtype: list[AuthenticationMethod]
+    &#34;&#34;&#34;
+    return self._authentication_methods</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_profile.UserProfile.company_name"><code class="name">var <span class="ident">company_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the company_name of this UserProfile.
+# noqa: E501</p>
+<p>The name of the user's Company.
+# noqa: E501</p>
+<p>:return: The company_name of this UserProfile.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def company_name(self):
+    &#34;&#34;&#34;Gets the company_name of this UserProfile.  # noqa: E501
+
+    The name of the user&#39;s Company.  # noqa: E501
+
+    :return: The company_name of this UserProfile.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._company_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_profile.UserProfile.display_organization_info"><code class="name">var <span class="ident">display_organization_info</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the display_organization_info of this UserProfile.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the user's company and title information are shown on the ID card.
+# noqa: E501</p>
+<p>:return: The display_organization_info of this UserProfile.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def display_organization_info(self):
+    &#34;&#34;&#34;Gets the display_organization_info of this UserProfile.  # noqa: E501
+
+     When set to **true**, the user&#39;s company and title information are shown on the ID card.   # noqa: E501
+
+    :return: The display_organization_info of this UserProfile.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._display_organization_info</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_profile.UserProfile.display_personal_info"><code class="name">var <span class="ident">display_personal_info</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the display_personal_info of this UserProfile.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the user's Address and Phone number are shown on the ID card.
+# noqa: E501</p>
+<p>:return: The display_personal_info of this UserProfile.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def display_personal_info(self):
+    &#34;&#34;&#34;Gets the display_personal_info of this UserProfile.  # noqa: E501
+
+    When set to **true**, the user&#39;s Address and Phone number are shown on the ID card.  # noqa: E501
+
+    :return: The display_personal_info of this UserProfile.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._display_personal_info</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_profile.UserProfile.display_profile"><code class="name">var <span class="ident">display_profile</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the display_profile of this UserProfile.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the user's ID card can be viewed from signed documents and envelope history.
+# noqa: E501</p>
+<p>:return: The display_profile of this UserProfile.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def display_profile(self):
+    &#34;&#34;&#34;Gets the display_profile of this UserProfile.  # noqa: E501
+
+    When set to **true**, the user&#39;s ID card can be viewed from signed documents and envelope history.  # noqa: E501
+
+    :return: The display_profile of this UserProfile.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._display_profile</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_profile.UserProfile.display_usage_history"><code class="name">var <span class="ident">display_usage_history</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the display_usage_history of this UserProfile.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the user's usage information is shown on the ID card.
+# noqa: E501</p>
+<p>:return: The display_usage_history of this UserProfile.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def display_usage_history(self):
+    &#34;&#34;&#34;Gets the display_usage_history of this UserProfile.  # noqa: E501
+
+    When set to **true**, the user&#39;s usage information is shown on the ID card.  # noqa: E501
+
+    :return: The display_usage_history of this UserProfile.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._display_usage_history</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_profile.UserProfile.profile_image_uri"><code class="name">var <span class="ident">profile_image_uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the profile_image_uri of this UserProfile.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The profile_image_uri of this UserProfile.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def profile_image_uri(self):
+    &#34;&#34;&#34;Gets the profile_image_uri of this UserProfile.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The profile_image_uri of this UserProfile.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._profile_image_uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_profile.UserProfile.title"><code class="name">var <span class="ident">title</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the title of this UserProfile.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The title of this UserProfile.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def title(self):
+    &#34;&#34;&#34;Gets the title of this UserProfile.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The title of this UserProfile.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._title</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_profile.UserProfile.usage_history"><code class="name">var <span class="ident">usage_history</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the usage_history of this UserProfile.
+# noqa: E501</p>
+<p>:return: The usage_history of this UserProfile.
+# noqa: E501
+:rtype: UsageHistory</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def usage_history(self):
+    &#34;&#34;&#34;Gets the usage_history of this UserProfile.  # noqa: E501
+
+
+    :return: The usage_history of this UserProfile.  # noqa: E501
+    :rtype: UsageHistory
+    &#34;&#34;&#34;
+    return self._usage_history</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_profile.UserProfile.user_details"><code class="name">var <span class="ident">user_details</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_details of this UserProfile.
+# noqa: E501</p>
+<p>:return: The user_details of this UserProfile.
+# noqa: E501
+:rtype: UserInformation</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_details(self):
+    &#34;&#34;&#34;Gets the user_details of this UserProfile.  # noqa: E501
+
+
+    :return: The user_details of this UserProfile.  # noqa: E501
+    :rtype: UserInformation
+    &#34;&#34;&#34;
+    return self._user_details</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_profile.UserProfile.user_profile_last_modified_date"><code class="name">var <span class="ident">user_profile_last_modified_date</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_profile_last_modified_date of this UserProfile.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The user_profile_last_modified_date of this UserProfile.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_profile_last_modified_date(self):
+    &#34;&#34;&#34;Gets the user_profile_last_modified_date of this UserProfile.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The user_profile_last_modified_date of this UserProfile.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._user_profile_last_modified_date</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.user_profile.UserProfile.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(UserProfile, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_profile.UserProfile.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.user_profile.UserProfile" href="#docusign_esign.models.user_profile.UserProfile">UserProfile</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.address" href="#docusign_esign.models.user_profile.UserProfile.address">address</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.attribute_map" href="#docusign_esign.models.user_profile.UserProfile.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.authentication_methods" href="#docusign_esign.models.user_profile.UserProfile.authentication_methods">authentication_methods</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.company_name" href="#docusign_esign.models.user_profile.UserProfile.company_name">company_name</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.display_organization_info" href="#docusign_esign.models.user_profile.UserProfile.display_organization_info">display_organization_info</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.display_personal_info" href="#docusign_esign.models.user_profile.UserProfile.display_personal_info">display_personal_info</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.display_profile" href="#docusign_esign.models.user_profile.UserProfile.display_profile">display_profile</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.display_usage_history" href="#docusign_esign.models.user_profile.UserProfile.display_usage_history">display_usage_history</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.profile_image_uri" href="#docusign_esign.models.user_profile.UserProfile.profile_image_uri">profile_image_uri</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.swagger_types" href="#docusign_esign.models.user_profile.UserProfile.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.title" href="#docusign_esign.models.user_profile.UserProfile.title">title</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.to_dict" href="#docusign_esign.models.user_profile.UserProfile.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.to_str" href="#docusign_esign.models.user_profile.UserProfile.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.usage_history" href="#docusign_esign.models.user_profile.UserProfile.usage_history">usage_history</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.user_details" href="#docusign_esign.models.user_profile.UserProfile.user_details">user_details</a></code></li>
+<li><code><a title="docusign_esign.models.user_profile.UserProfile.user_profile_last_modified_date" href="#docusign_esign.models.user_profile.UserProfile.user_profile_last_modified_date">user_profile_last_modified_date</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

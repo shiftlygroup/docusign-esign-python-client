@@ -1,0 +1,1465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.template_role API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.template_role</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class TemplateRole(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;access_code&#39;: &#39;str&#39;,
+        &#39;additional_notifications&#39;: &#39;list[RecipientAdditionalNotification]&#39;,
+        &#39;client_user_id&#39;: &#39;str&#39;,
+        &#39;default_recipient&#39;: &#39;str&#39;,
+        &#39;email&#39;: &#39;str&#39;,
+        &#39;email_notification&#39;: &#39;RecipientEmailNotification&#39;,
+        &#39;embedded_recipient_start_url&#39;: &#39;str&#39;,
+        &#39;in_person_signer_name&#39;: &#39;str&#39;,
+        &#39;name&#39;: &#39;str&#39;,
+        &#39;recipient_signature_providers&#39;: &#39;list[RecipientSignatureProvider]&#39;,
+        &#39;role_name&#39;: &#39;str&#39;,
+        &#39;routing_order&#39;: &#39;str&#39;,
+        &#39;signing_group_id&#39;: &#39;str&#39;,
+        &#39;tabs&#39;: &#39;Tabs&#39;
+    }
+
+    attribute_map = {
+        &#39;access_code&#39;: &#39;accessCode&#39;,
+        &#39;additional_notifications&#39;: &#39;additionalNotifications&#39;,
+        &#39;client_user_id&#39;: &#39;clientUserId&#39;,
+        &#39;default_recipient&#39;: &#39;defaultRecipient&#39;,
+        &#39;email&#39;: &#39;email&#39;,
+        &#39;email_notification&#39;: &#39;emailNotification&#39;,
+        &#39;embedded_recipient_start_url&#39;: &#39;embeddedRecipientStartURL&#39;,
+        &#39;in_person_signer_name&#39;: &#39;inPersonSignerName&#39;,
+        &#39;name&#39;: &#39;name&#39;,
+        &#39;recipient_signature_providers&#39;: &#39;recipientSignatureProviders&#39;,
+        &#39;role_name&#39;: &#39;roleName&#39;,
+        &#39;routing_order&#39;: &#39;routingOrder&#39;,
+        &#39;signing_group_id&#39;: &#39;signingGroupId&#39;,
+        &#39;tabs&#39;: &#39;tabs&#39;
+    }
+
+    def __init__(self, access_code=None, additional_notifications=None, client_user_id=None, default_recipient=None, email=None, email_notification=None, embedded_recipient_start_url=None, in_person_signer_name=None, name=None, recipient_signature_providers=None, role_name=None, routing_order=None, signing_group_id=None, tabs=None):  # noqa: E501
+        &#34;&#34;&#34;TemplateRole - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._access_code = None
+        self._additional_notifications = None
+        self._client_user_id = None
+        self._default_recipient = None
+        self._email = None
+        self._email_notification = None
+        self._embedded_recipient_start_url = None
+        self._in_person_signer_name = None
+        self._name = None
+        self._recipient_signature_providers = None
+        self._role_name = None
+        self._routing_order = None
+        self._signing_group_id = None
+        self._tabs = None
+        self.discriminator = None
+
+        if access_code is not None:
+            self.access_code = access_code
+        if additional_notifications is not None:
+            self.additional_notifications = additional_notifications
+        if client_user_id is not None:
+            self.client_user_id = client_user_id
+        if default_recipient is not None:
+            self.default_recipient = default_recipient
+        if email is not None:
+            self.email = email
+        if email_notification is not None:
+            self.email_notification = email_notification
+        if embedded_recipient_start_url is not None:
+            self.embedded_recipient_start_url = embedded_recipient_start_url
+        if in_person_signer_name is not None:
+            self.in_person_signer_name = in_person_signer_name
+        if name is not None:
+            self.name = name
+        if recipient_signature_providers is not None:
+            self.recipient_signature_providers = recipient_signature_providers
+        if role_name is not None:
+            self.role_name = role_name
+        if routing_order is not None:
+            self.routing_order = routing_order
+        if signing_group_id is not None:
+            self.signing_group_id = signing_group_id
+        if tabs is not None:
+            self.tabs = tabs
+
+    @property
+    def access_code(self):
+        &#34;&#34;&#34;Gets the access_code of this TemplateRole.  # noqa: E501
+
+        If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+        :return: The access_code of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._access_code
+
+    @access_code.setter
+    def access_code(self, access_code):
+        &#34;&#34;&#34;Sets the access_code of this TemplateRole.
+
+        If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+        :param access_code: The access_code of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._access_code = access_code
+
+    @property
+    def additional_notifications(self):
+        &#34;&#34;&#34;Gets the additional_notifications of this TemplateRole.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The additional_notifications of this TemplateRole.  # noqa: E501
+        :rtype: list[RecipientAdditionalNotification]
+        &#34;&#34;&#34;
+        return self._additional_notifications
+
+    @additional_notifications.setter
+    def additional_notifications(self, additional_notifications):
+        &#34;&#34;&#34;Sets the additional_notifications of this TemplateRole.
+
+          # noqa: E501
+
+        :param additional_notifications: The additional_notifications of this TemplateRole.  # noqa: E501
+        :type: list[RecipientAdditionalNotification]
+        &#34;&#34;&#34;
+
+        self._additional_notifications = additional_notifications
+
+    @property
+    def client_user_id(self):
+        &#34;&#34;&#34;Gets the client_user_id of this TemplateRole.  # noqa: E501
+
+        Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.   # noqa: E501
+
+        :return: The client_user_id of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._client_user_id
+
+    @client_user_id.setter
+    def client_user_id(self, client_user_id):
+        &#34;&#34;&#34;Sets the client_user_id of this TemplateRole.
+
+        Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.   # noqa: E501
+
+        :param client_user_id: The client_user_id of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._client_user_id = client_user_id
+
+    @property
+    def default_recipient(self):
+        &#34;&#34;&#34;Gets the default_recipient of this TemplateRole.  # noqa: E501
+
+        When set to **true**, this recipient is the default recipient and any tabs generated by the transformPdfFields option are mapped to this recipient.  # noqa: E501
+
+        :return: The default_recipient of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._default_recipient
+
+    @default_recipient.setter
+    def default_recipient(self, default_recipient):
+        &#34;&#34;&#34;Sets the default_recipient of this TemplateRole.
+
+        When set to **true**, this recipient is the default recipient and any tabs generated by the transformPdfFields option are mapped to this recipient.  # noqa: E501
+
+        :param default_recipient: The default_recipient of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._default_recipient = default_recipient
+
+    @property
+    def email(self):
+        &#34;&#34;&#34;Gets the email of this TemplateRole.  # noqa: E501
+
+        Specifies the email associated with a role name.  # noqa: E501
+
+        :return: The email of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        &#34;&#34;&#34;Sets the email of this TemplateRole.
+
+        Specifies the email associated with a role name.  # noqa: E501
+
+        :param email: The email of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._email = email
+
+    @property
+    def email_notification(self):
+        &#34;&#34;&#34;Gets the email_notification of this TemplateRole.  # noqa: E501
+
+
+        :return: The email_notification of this TemplateRole.  # noqa: E501
+        :rtype: RecipientEmailNotification
+        &#34;&#34;&#34;
+        return self._email_notification
+
+    @email_notification.setter
+    def email_notification(self, email_notification):
+        &#34;&#34;&#34;Sets the email_notification of this TemplateRole.
+
+
+        :param email_notification: The email_notification of this TemplateRole.  # noqa: E501
+        :type: RecipientEmailNotification
+        &#34;&#34;&#34;
+
+        self._email_notification = email_notification
+
+    @property
+    def embedded_recipient_start_url(self):
+        &#34;&#34;&#34;Gets the embedded_recipient_start_url of this TemplateRole.  # noqa: E501
+
+        Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender&#39;s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient&#39;s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&amp;[[mergeField3]]`   # noqa: E501
+
+        :return: The embedded_recipient_start_url of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._embedded_recipient_start_url
+
+    @embedded_recipient_start_url.setter
+    def embedded_recipient_start_url(self, embedded_recipient_start_url):
+        &#34;&#34;&#34;Sets the embedded_recipient_start_url of this TemplateRole.
+
+        Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender&#39;s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient&#39;s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&amp;[[mergeField3]]`   # noqa: E501
+
+        :param embedded_recipient_start_url: The embedded_recipient_start_url of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._embedded_recipient_start_url = embedded_recipient_start_url
+
+    @property
+    def in_person_signer_name(self):
+        &#34;&#34;&#34;Gets the in_person_signer_name of this TemplateRole.  # noqa: E501
+
+        Specifies the full legal name of the signer in person signer template roles.  Maximum Length: 100 characters.  # noqa: E501
+
+        :return: The in_person_signer_name of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._in_person_signer_name
+
+    @in_person_signer_name.setter
+    def in_person_signer_name(self, in_person_signer_name):
+        &#34;&#34;&#34;Sets the in_person_signer_name of this TemplateRole.
+
+        Specifies the full legal name of the signer in person signer template roles.  Maximum Length: 100 characters.  # noqa: E501
+
+        :param in_person_signer_name: The in_person_signer_name of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._in_person_signer_name = in_person_signer_name
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;Gets the name of this TemplateRole.  # noqa: E501
+
+        Specifies the recipient&#39;s name.  # noqa: E501
+
+        :return: The name of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;Sets the name of this TemplateRole.
+
+        Specifies the recipient&#39;s name.  # noqa: E501
+
+        :param name: The name of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def recipient_signature_providers(self):
+        &#34;&#34;&#34;Gets the recipient_signature_providers of this TemplateRole.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The recipient_signature_providers of this TemplateRole.  # noqa: E501
+        :rtype: list[RecipientSignatureProvider]
+        &#34;&#34;&#34;
+        return self._recipient_signature_providers
+
+    @recipient_signature_providers.setter
+    def recipient_signature_providers(self, recipient_signature_providers):
+        &#34;&#34;&#34;Sets the recipient_signature_providers of this TemplateRole.
+
+          # noqa: E501
+
+        :param recipient_signature_providers: The recipient_signature_providers of this TemplateRole.  # noqa: E501
+        :type: list[RecipientSignatureProvider]
+        &#34;&#34;&#34;
+
+        self._recipient_signature_providers = recipient_signature_providers
+
+    @property
+    def role_name(self):
+        &#34;&#34;&#34;Gets the role_name of this TemplateRole.  # noqa: E501
+
+        Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+        :return: The role_name of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._role_name
+
+    @role_name.setter
+    def role_name(self, role_name):
+        &#34;&#34;&#34;Sets the role_name of this TemplateRole.
+
+        Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+        :param role_name: The role_name of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._role_name = role_name
+
+    @property
+    def routing_order(self):
+        &#34;&#34;&#34;Gets the routing_order of this TemplateRole.  # noqa: E501
+
+        Specifies the routing order of the recipient in the envelope.   # noqa: E501
+
+        :return: The routing_order of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._routing_order
+
+    @routing_order.setter
+    def routing_order(self, routing_order):
+        &#34;&#34;&#34;Sets the routing_order of this TemplateRole.
+
+        Specifies the routing order of the recipient in the envelope.   # noqa: E501
+
+        :param routing_order: The routing_order of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._routing_order = routing_order
+
+    @property
+    def signing_group_id(self):
+        &#34;&#34;&#34;Gets the signing_group_id of this TemplateRole.  # noqa: E501
+
+        When set to **true** and the feature is enabled in the sender&#39;s account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).  # noqa: E501
+
+        :return: The signing_group_id of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signing_group_id
+
+    @signing_group_id.setter
+    def signing_group_id(self, signing_group_id):
+        &#34;&#34;&#34;Sets the signing_group_id of this TemplateRole.
+
+        When set to **true** and the feature is enabled in the sender&#39;s account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).  # noqa: E501
+
+        :param signing_group_id: The signing_group_id of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signing_group_id = signing_group_id
+
+    @property
+    def tabs(self):
+        &#34;&#34;&#34;Gets the tabs of this TemplateRole.  # noqa: E501
+
+
+        :return: The tabs of this TemplateRole.  # noqa: E501
+        :rtype: Tabs
+        &#34;&#34;&#34;
+        return self._tabs
+
+    @tabs.setter
+    def tabs(self, tabs):
+        &#34;&#34;&#34;Sets the tabs of this TemplateRole.
+
+
+        :param tabs: The tabs of this TemplateRole.  # noqa: E501
+        :type: Tabs
+        &#34;&#34;&#34;
+
+        self._tabs = tabs
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(TemplateRole, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, TemplateRole):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.template_role.TemplateRole"><code class="flex name class">
+<span>class <span class="ident">TemplateRole</span></span>
+<span>(</span><span>access_code=None, additional_notifications=None, client_user_id=None, default_recipient=None, email=None, email_notification=None, embedded_recipient_start_url=None, in_person_signer_name=None, name=None, recipient_signature_providers=None, role_name=None, routing_order=None, signing_group_id=None, tabs=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>TemplateRole - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TemplateRole(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;access_code&#39;: &#39;str&#39;,
+        &#39;additional_notifications&#39;: &#39;list[RecipientAdditionalNotification]&#39;,
+        &#39;client_user_id&#39;: &#39;str&#39;,
+        &#39;default_recipient&#39;: &#39;str&#39;,
+        &#39;email&#39;: &#39;str&#39;,
+        &#39;email_notification&#39;: &#39;RecipientEmailNotification&#39;,
+        &#39;embedded_recipient_start_url&#39;: &#39;str&#39;,
+        &#39;in_person_signer_name&#39;: &#39;str&#39;,
+        &#39;name&#39;: &#39;str&#39;,
+        &#39;recipient_signature_providers&#39;: &#39;list[RecipientSignatureProvider]&#39;,
+        &#39;role_name&#39;: &#39;str&#39;,
+        &#39;routing_order&#39;: &#39;str&#39;,
+        &#39;signing_group_id&#39;: &#39;str&#39;,
+        &#39;tabs&#39;: &#39;Tabs&#39;
+    }
+
+    attribute_map = {
+        &#39;access_code&#39;: &#39;accessCode&#39;,
+        &#39;additional_notifications&#39;: &#39;additionalNotifications&#39;,
+        &#39;client_user_id&#39;: &#39;clientUserId&#39;,
+        &#39;default_recipient&#39;: &#39;defaultRecipient&#39;,
+        &#39;email&#39;: &#39;email&#39;,
+        &#39;email_notification&#39;: &#39;emailNotification&#39;,
+        &#39;embedded_recipient_start_url&#39;: &#39;embeddedRecipientStartURL&#39;,
+        &#39;in_person_signer_name&#39;: &#39;inPersonSignerName&#39;,
+        &#39;name&#39;: &#39;name&#39;,
+        &#39;recipient_signature_providers&#39;: &#39;recipientSignatureProviders&#39;,
+        &#39;role_name&#39;: &#39;roleName&#39;,
+        &#39;routing_order&#39;: &#39;routingOrder&#39;,
+        &#39;signing_group_id&#39;: &#39;signingGroupId&#39;,
+        &#39;tabs&#39;: &#39;tabs&#39;
+    }
+
+    def __init__(self, access_code=None, additional_notifications=None, client_user_id=None, default_recipient=None, email=None, email_notification=None, embedded_recipient_start_url=None, in_person_signer_name=None, name=None, recipient_signature_providers=None, role_name=None, routing_order=None, signing_group_id=None, tabs=None):  # noqa: E501
+        &#34;&#34;&#34;TemplateRole - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._access_code = None
+        self._additional_notifications = None
+        self._client_user_id = None
+        self._default_recipient = None
+        self._email = None
+        self._email_notification = None
+        self._embedded_recipient_start_url = None
+        self._in_person_signer_name = None
+        self._name = None
+        self._recipient_signature_providers = None
+        self._role_name = None
+        self._routing_order = None
+        self._signing_group_id = None
+        self._tabs = None
+        self.discriminator = None
+
+        if access_code is not None:
+            self.access_code = access_code
+        if additional_notifications is not None:
+            self.additional_notifications = additional_notifications
+        if client_user_id is not None:
+            self.client_user_id = client_user_id
+        if default_recipient is not None:
+            self.default_recipient = default_recipient
+        if email is not None:
+            self.email = email
+        if email_notification is not None:
+            self.email_notification = email_notification
+        if embedded_recipient_start_url is not None:
+            self.embedded_recipient_start_url = embedded_recipient_start_url
+        if in_person_signer_name is not None:
+            self.in_person_signer_name = in_person_signer_name
+        if name is not None:
+            self.name = name
+        if recipient_signature_providers is not None:
+            self.recipient_signature_providers = recipient_signature_providers
+        if role_name is not None:
+            self.role_name = role_name
+        if routing_order is not None:
+            self.routing_order = routing_order
+        if signing_group_id is not None:
+            self.signing_group_id = signing_group_id
+        if tabs is not None:
+            self.tabs = tabs
+
+    @property
+    def access_code(self):
+        &#34;&#34;&#34;Gets the access_code of this TemplateRole.  # noqa: E501
+
+        If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+        :return: The access_code of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._access_code
+
+    @access_code.setter
+    def access_code(self, access_code):
+        &#34;&#34;&#34;Sets the access_code of this TemplateRole.
+
+        If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+        :param access_code: The access_code of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._access_code = access_code
+
+    @property
+    def additional_notifications(self):
+        &#34;&#34;&#34;Gets the additional_notifications of this TemplateRole.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The additional_notifications of this TemplateRole.  # noqa: E501
+        :rtype: list[RecipientAdditionalNotification]
+        &#34;&#34;&#34;
+        return self._additional_notifications
+
+    @additional_notifications.setter
+    def additional_notifications(self, additional_notifications):
+        &#34;&#34;&#34;Sets the additional_notifications of this TemplateRole.
+
+          # noqa: E501
+
+        :param additional_notifications: The additional_notifications of this TemplateRole.  # noqa: E501
+        :type: list[RecipientAdditionalNotification]
+        &#34;&#34;&#34;
+
+        self._additional_notifications = additional_notifications
+
+    @property
+    def client_user_id(self):
+        &#34;&#34;&#34;Gets the client_user_id of this TemplateRole.  # noqa: E501
+
+        Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.   # noqa: E501
+
+        :return: The client_user_id of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._client_user_id
+
+    @client_user_id.setter
+    def client_user_id(self, client_user_id):
+        &#34;&#34;&#34;Sets the client_user_id of this TemplateRole.
+
+        Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.   # noqa: E501
+
+        :param client_user_id: The client_user_id of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._client_user_id = client_user_id
+
+    @property
+    def default_recipient(self):
+        &#34;&#34;&#34;Gets the default_recipient of this TemplateRole.  # noqa: E501
+
+        When set to **true**, this recipient is the default recipient and any tabs generated by the transformPdfFields option are mapped to this recipient.  # noqa: E501
+
+        :return: The default_recipient of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._default_recipient
+
+    @default_recipient.setter
+    def default_recipient(self, default_recipient):
+        &#34;&#34;&#34;Sets the default_recipient of this TemplateRole.
+
+        When set to **true**, this recipient is the default recipient and any tabs generated by the transformPdfFields option are mapped to this recipient.  # noqa: E501
+
+        :param default_recipient: The default_recipient of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._default_recipient = default_recipient
+
+    @property
+    def email(self):
+        &#34;&#34;&#34;Gets the email of this TemplateRole.  # noqa: E501
+
+        Specifies the email associated with a role name.  # noqa: E501
+
+        :return: The email of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        &#34;&#34;&#34;Sets the email of this TemplateRole.
+
+        Specifies the email associated with a role name.  # noqa: E501
+
+        :param email: The email of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._email = email
+
+    @property
+    def email_notification(self):
+        &#34;&#34;&#34;Gets the email_notification of this TemplateRole.  # noqa: E501
+
+
+        :return: The email_notification of this TemplateRole.  # noqa: E501
+        :rtype: RecipientEmailNotification
+        &#34;&#34;&#34;
+        return self._email_notification
+
+    @email_notification.setter
+    def email_notification(self, email_notification):
+        &#34;&#34;&#34;Sets the email_notification of this TemplateRole.
+
+
+        :param email_notification: The email_notification of this TemplateRole.  # noqa: E501
+        :type: RecipientEmailNotification
+        &#34;&#34;&#34;
+
+        self._email_notification = email_notification
+
+    @property
+    def embedded_recipient_start_url(self):
+        &#34;&#34;&#34;Gets the embedded_recipient_start_url of this TemplateRole.  # noqa: E501
+
+        Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender&#39;s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient&#39;s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&amp;[[mergeField3]]`   # noqa: E501
+
+        :return: The embedded_recipient_start_url of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._embedded_recipient_start_url
+
+    @embedded_recipient_start_url.setter
+    def embedded_recipient_start_url(self, embedded_recipient_start_url):
+        &#34;&#34;&#34;Sets the embedded_recipient_start_url of this TemplateRole.
+
+        Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender&#39;s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient&#39;s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&amp;[[mergeField3]]`   # noqa: E501
+
+        :param embedded_recipient_start_url: The embedded_recipient_start_url of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._embedded_recipient_start_url = embedded_recipient_start_url
+
+    @property
+    def in_person_signer_name(self):
+        &#34;&#34;&#34;Gets the in_person_signer_name of this TemplateRole.  # noqa: E501
+
+        Specifies the full legal name of the signer in person signer template roles.  Maximum Length: 100 characters.  # noqa: E501
+
+        :return: The in_person_signer_name of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._in_person_signer_name
+
+    @in_person_signer_name.setter
+    def in_person_signer_name(self, in_person_signer_name):
+        &#34;&#34;&#34;Sets the in_person_signer_name of this TemplateRole.
+
+        Specifies the full legal name of the signer in person signer template roles.  Maximum Length: 100 characters.  # noqa: E501
+
+        :param in_person_signer_name: The in_person_signer_name of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._in_person_signer_name = in_person_signer_name
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;Gets the name of this TemplateRole.  # noqa: E501
+
+        Specifies the recipient&#39;s name.  # noqa: E501
+
+        :return: The name of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;Sets the name of this TemplateRole.
+
+        Specifies the recipient&#39;s name.  # noqa: E501
+
+        :param name: The name of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def recipient_signature_providers(self):
+        &#34;&#34;&#34;Gets the recipient_signature_providers of this TemplateRole.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The recipient_signature_providers of this TemplateRole.  # noqa: E501
+        :rtype: list[RecipientSignatureProvider]
+        &#34;&#34;&#34;
+        return self._recipient_signature_providers
+
+    @recipient_signature_providers.setter
+    def recipient_signature_providers(self, recipient_signature_providers):
+        &#34;&#34;&#34;Sets the recipient_signature_providers of this TemplateRole.
+
+          # noqa: E501
+
+        :param recipient_signature_providers: The recipient_signature_providers of this TemplateRole.  # noqa: E501
+        :type: list[RecipientSignatureProvider]
+        &#34;&#34;&#34;
+
+        self._recipient_signature_providers = recipient_signature_providers
+
+    @property
+    def role_name(self):
+        &#34;&#34;&#34;Gets the role_name of this TemplateRole.  # noqa: E501
+
+        Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+        :return: The role_name of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._role_name
+
+    @role_name.setter
+    def role_name(self, role_name):
+        &#34;&#34;&#34;Sets the role_name of this TemplateRole.
+
+        Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+        :param role_name: The role_name of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._role_name = role_name
+
+    @property
+    def routing_order(self):
+        &#34;&#34;&#34;Gets the routing_order of this TemplateRole.  # noqa: E501
+
+        Specifies the routing order of the recipient in the envelope.   # noqa: E501
+
+        :return: The routing_order of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._routing_order
+
+    @routing_order.setter
+    def routing_order(self, routing_order):
+        &#34;&#34;&#34;Sets the routing_order of this TemplateRole.
+
+        Specifies the routing order of the recipient in the envelope.   # noqa: E501
+
+        :param routing_order: The routing_order of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._routing_order = routing_order
+
+    @property
+    def signing_group_id(self):
+        &#34;&#34;&#34;Gets the signing_group_id of this TemplateRole.  # noqa: E501
+
+        When set to **true** and the feature is enabled in the sender&#39;s account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).  # noqa: E501
+
+        :return: The signing_group_id of this TemplateRole.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signing_group_id
+
+    @signing_group_id.setter
+    def signing_group_id(self, signing_group_id):
+        &#34;&#34;&#34;Sets the signing_group_id of this TemplateRole.
+
+        When set to **true** and the feature is enabled in the sender&#39;s account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).  # noqa: E501
+
+        :param signing_group_id: The signing_group_id of this TemplateRole.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signing_group_id = signing_group_id
+
+    @property
+    def tabs(self):
+        &#34;&#34;&#34;Gets the tabs of this TemplateRole.  # noqa: E501
+
+
+        :return: The tabs of this TemplateRole.  # noqa: E501
+        :rtype: Tabs
+        &#34;&#34;&#34;
+        return self._tabs
+
+    @tabs.setter
+    def tabs(self, tabs):
+        &#34;&#34;&#34;Sets the tabs of this TemplateRole.
+
+
+        :param tabs: The tabs of this TemplateRole.  # noqa: E501
+        :type: Tabs
+        &#34;&#34;&#34;
+
+        self._tabs = tabs
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(TemplateRole, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, TemplateRole):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.template_role.TemplateRole.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.template_role.TemplateRole.access_code"><code class="name">var <span class="ident">access_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the access_code of this TemplateRole.
+# noqa: E501</p>
+<p>If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.
+Maximum Length: 50 characters and it must conform to the account's access code format setting.
+If blank, but the signer <code>accessCode</code> property is set in the envelope, then that value is used.
+If blank and the signer <code>accessCode</code> property is not set, then the access code is not required.
+# noqa: E501</p>
+<p>:return: The access_code of this TemplateRole.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def access_code(self):
+    &#34;&#34;&#34;Gets the access_code of this TemplateRole.  # noqa: E501
+
+    If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+    :return: The access_code of this TemplateRole.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._access_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.additional_notifications"><code class="name">var <span class="ident">additional_notifications</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the additional_notifications of this TemplateRole.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The additional_notifications of this TemplateRole.
+# noqa: E501
+:rtype: list[RecipientAdditionalNotification]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def additional_notifications(self):
+    &#34;&#34;&#34;Gets the additional_notifications of this TemplateRole.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The additional_notifications of this TemplateRole.  # noqa: E501
+    :rtype: list[RecipientAdditionalNotification]
+    &#34;&#34;&#34;
+    return self._additional_notifications</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.client_user_id"><code class="name">var <span class="ident">client_user_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the client_user_id of this TemplateRole.
+# noqa: E501</p>
+<p>Specifies whether the recipient is embedded or remote.
+If the <code>clientUserId</code> property is not null then the recipient is embedded. Note that if the <code>ClientUserId</code> property is set and either <code>SignerMustHaveAccount</code> or <code>SignerMustLoginToSign</code> property of the account settings is set to
+<strong>true</strong>, an error is generated on sending.ng.
+Maximum length: 100 characters.
+# noqa: E501</p>
+<p>:return: The client_user_id of this TemplateRole.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def client_user_id(self):
+    &#34;&#34;&#34;Gets the client_user_id of this TemplateRole.  # noqa: E501
+
+    Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.   # noqa: E501
+
+    :return: The client_user_id of this TemplateRole.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._client_user_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.default_recipient"><code class="name">var <span class="ident">default_recipient</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the default_recipient of this TemplateRole.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, this recipient is the default recipient and any tabs generated by the transformPdfFields option are mapped to this recipient.
+# noqa: E501</p>
+<p>:return: The default_recipient of this TemplateRole.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def default_recipient(self):
+    &#34;&#34;&#34;Gets the default_recipient of this TemplateRole.  # noqa: E501
+
+    When set to **true**, this recipient is the default recipient and any tabs generated by the transformPdfFields option are mapped to this recipient.  # noqa: E501
+
+    :return: The default_recipient of this TemplateRole.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._default_recipient</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.email"><code class="name">var <span class="ident">email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the email of this TemplateRole.
+# noqa: E501</p>
+<p>Specifies the email associated with a role name.
+# noqa: E501</p>
+<p>:return: The email of this TemplateRole.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def email(self):
+    &#34;&#34;&#34;Gets the email of this TemplateRole.  # noqa: E501
+
+    Specifies the email associated with a role name.  # noqa: E501
+
+    :return: The email of this TemplateRole.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.email_notification"><code class="name">var <span class="ident">email_notification</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the email_notification of this TemplateRole.
+# noqa: E501</p>
+<p>:return: The email_notification of this TemplateRole.
+# noqa: E501
+:rtype: RecipientEmailNotification</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def email_notification(self):
+    &#34;&#34;&#34;Gets the email_notification of this TemplateRole.  # noqa: E501
+
+
+    :return: The email_notification of this TemplateRole.  # noqa: E501
+    :rtype: RecipientEmailNotification
+    &#34;&#34;&#34;
+    return self._email_notification</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.embedded_recipient_start_url"><code class="name">var <span class="ident">embedded_recipient_start_url</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the embedded_recipient_start_url of this TemplateRole.
+# noqa: E501</p>
+<p>Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.
+If set to <code>SIGN_AT_DOCUSIGN</code>, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.
+It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets <code>EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN</code>, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.
+If the <code>clientUserId</code> property is NOT set, and the <code>embeddedRecipientStartURL</code> is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The <code>customFields</code> property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.
+<em>Example</em>:
+<code>http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&amp;[[mergeField3]]</code>
+# noqa: E501</p>
+<p>:return: The embedded_recipient_start_url of this TemplateRole.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def embedded_recipient_start_url(self):
+    &#34;&#34;&#34;Gets the embedded_recipient_start_url of this TemplateRole.  # noqa: E501
+
+    Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender&#39;s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient&#39;s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&amp;[[mergeField3]]`   # noqa: E501
+
+    :return: The embedded_recipient_start_url of this TemplateRole.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._embedded_recipient_start_url</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.in_person_signer_name"><code class="name">var <span class="ident">in_person_signer_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the in_person_signer_name of this TemplateRole.
+# noqa: E501</p>
+<p>Specifies the full legal name of the signer in person signer template roles.
+Maximum Length: 100 characters.
+# noqa: E501</p>
+<p>:return: The in_person_signer_name of this TemplateRole.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def in_person_signer_name(self):
+    &#34;&#34;&#34;Gets the in_person_signer_name of this TemplateRole.  # noqa: E501
+
+    Specifies the full legal name of the signer in person signer template roles.  Maximum Length: 100 characters.  # noqa: E501
+
+    :return: The in_person_signer_name of this TemplateRole.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._in_person_signer_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the name of this TemplateRole.
+# noqa: E501</p>
+<p>Specifies the recipient's name.
+# noqa: E501</p>
+<p>:return: The name of this TemplateRole.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name(self):
+    &#34;&#34;&#34;Gets the name of this TemplateRole.  # noqa: E501
+
+    Specifies the recipient&#39;s name.  # noqa: E501
+
+    :return: The name of this TemplateRole.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.recipient_signature_providers"><code class="name">var <span class="ident">recipient_signature_providers</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the recipient_signature_providers of this TemplateRole.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The recipient_signature_providers of this TemplateRole.
+# noqa: E501
+:rtype: list[RecipientSignatureProvider]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def recipient_signature_providers(self):
+    &#34;&#34;&#34;Gets the recipient_signature_providers of this TemplateRole.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The recipient_signature_providers of this TemplateRole.  # noqa: E501
+    :rtype: list[RecipientSignatureProvider]
+    &#34;&#34;&#34;
+    return self._recipient_signature_providers</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.role_name"><code class="name">var <span class="ident">role_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the role_name of this TemplateRole.
+# noqa: E501</p>
+<p>Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
+# noqa: E501</p>
+<p>:return: The role_name of this TemplateRole.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def role_name(self):
+    &#34;&#34;&#34;Gets the role_name of this TemplateRole.  # noqa: E501
+
+    Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+    :return: The role_name of this TemplateRole.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._role_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.routing_order"><code class="name">var <span class="ident">routing_order</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the routing_order of this TemplateRole.
+# noqa: E501</p>
+<p>Specifies the routing order of the recipient in the envelope.
+# noqa: E501</p>
+<p>:return: The routing_order of this TemplateRole.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def routing_order(self):
+    &#34;&#34;&#34;Gets the routing_order of this TemplateRole.  # noqa: E501
+
+    Specifies the routing order of the recipient in the envelope.   # noqa: E501
+
+    :return: The routing_order of this TemplateRole.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._routing_order</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.signing_group_id"><code class="name">var <span class="ident">signing_group_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signing_group_id of this TemplateRole.
+# noqa: E501</p>
+<p>When set to <strong>true</strong> and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+# noqa: E501</p>
+<p>:return: The signing_group_id of this TemplateRole.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signing_group_id(self):
+    &#34;&#34;&#34;Gets the signing_group_id of this TemplateRole.  # noqa: E501
+
+    When set to **true** and the feature is enabled in the sender&#39;s account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).  # noqa: E501
+
+    :return: The signing_group_id of this TemplateRole.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signing_group_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.tabs"><code class="name">var <span class="ident">tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the tabs of this TemplateRole.
+# noqa: E501</p>
+<p>:return: The tabs of this TemplateRole.
+# noqa: E501
+:rtype: Tabs</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def tabs(self):
+    &#34;&#34;&#34;Gets the tabs of this TemplateRole.  # noqa: E501
+
+
+    :return: The tabs of this TemplateRole.  # noqa: E501
+    :rtype: Tabs
+    &#34;&#34;&#34;
+    return self._tabs</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.template_role.TemplateRole.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(TemplateRole, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.template_role.TemplateRole.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.template_role.TemplateRole" href="#docusign_esign.models.template_role.TemplateRole">TemplateRole</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.access_code" href="#docusign_esign.models.template_role.TemplateRole.access_code">access_code</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.additional_notifications" href="#docusign_esign.models.template_role.TemplateRole.additional_notifications">additional_notifications</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.attribute_map" href="#docusign_esign.models.template_role.TemplateRole.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.client_user_id" href="#docusign_esign.models.template_role.TemplateRole.client_user_id">client_user_id</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.default_recipient" href="#docusign_esign.models.template_role.TemplateRole.default_recipient">default_recipient</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.email" href="#docusign_esign.models.template_role.TemplateRole.email">email</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.email_notification" href="#docusign_esign.models.template_role.TemplateRole.email_notification">email_notification</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.embedded_recipient_start_url" href="#docusign_esign.models.template_role.TemplateRole.embedded_recipient_start_url">embedded_recipient_start_url</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.in_person_signer_name" href="#docusign_esign.models.template_role.TemplateRole.in_person_signer_name">in_person_signer_name</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.name" href="#docusign_esign.models.template_role.TemplateRole.name">name</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.recipient_signature_providers" href="#docusign_esign.models.template_role.TemplateRole.recipient_signature_providers">recipient_signature_providers</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.role_name" href="#docusign_esign.models.template_role.TemplateRole.role_name">role_name</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.routing_order" href="#docusign_esign.models.template_role.TemplateRole.routing_order">routing_order</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.signing_group_id" href="#docusign_esign.models.template_role.TemplateRole.signing_group_id">signing_group_id</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.swagger_types" href="#docusign_esign.models.template_role.TemplateRole.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.tabs" href="#docusign_esign.models.template_role.TemplateRole.tabs">tabs</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.to_dict" href="#docusign_esign.models.template_role.TemplateRole.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.template_role.TemplateRole.to_str" href="#docusign_esign.models.template_role.TemplateRole.to_str">to_str</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

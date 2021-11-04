@@ -1,0 +1,2910 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.account_signature API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.account_signature</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class AccountSignature(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;adopted_date_time&#39;: &#39;str&#39;,
+        &#39;created_date_time&#39;: &#39;str&#39;,
+        &#39;custom_field&#39;: &#39;str&#39;,
+        &#39;date_stamp_properties&#39;: &#39;DateStampProperties&#39;,
+        &#39;disallow_user_resize_stamp&#39;: &#39;str&#39;,
+        &#39;error_details&#39;: &#39;ErrorDetails&#39;,
+        &#39;external_id&#39;: &#39;str&#39;,
+        &#39;image_base64&#39;: &#39;str&#39;,
+        &#39;image_type&#39;: &#39;str&#39;,
+        &#39;initials150_image_id&#39;: &#39;str&#39;,
+        &#39;initials_image_uri&#39;: &#39;str&#39;,
+        &#39;is_default&#39;: &#39;str&#39;,
+        &#39;last_modified_date_time&#39;: &#39;str&#39;,
+        &#39;nrds_id&#39;: &#39;str&#39;,
+        &#39;nrds_last_name&#39;: &#39;str&#39;,
+        &#39;nrds_status&#39;: &#39;str&#39;,
+        &#39;phonetic_name&#39;: &#39;str&#39;,
+        &#39;signature150_image_id&#39;: &#39;str&#39;,
+        &#39;signature_font&#39;: &#39;str&#39;,
+        &#39;signature_groups&#39;: &#39;list[SignatureGroup]&#39;,
+        &#39;signature_id&#39;: &#39;str&#39;,
+        &#39;signature_image_uri&#39;: &#39;str&#39;,
+        &#39;signature_initials&#39;: &#39;str&#39;,
+        &#39;signature_name&#39;: &#39;str&#39;,
+        &#39;signature_rights&#39;: &#39;str&#39;,
+        &#39;signature_type&#39;: &#39;str&#39;,
+        &#39;signature_users&#39;: &#39;list[SignatureUser]&#39;,
+        &#39;stamp_format&#39;: &#39;str&#39;,
+        &#39;stamp_image_uri&#39;: &#39;str&#39;,
+        &#39;stamp_size_mm&#39;: &#39;str&#39;,
+        &#39;stamp_type&#39;: &#39;str&#39;,
+        &#39;status&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;adopted_date_time&#39;: &#39;adoptedDateTime&#39;,
+        &#39;created_date_time&#39;: &#39;createdDateTime&#39;,
+        &#39;custom_field&#39;: &#39;customField&#39;,
+        &#39;date_stamp_properties&#39;: &#39;dateStampProperties&#39;,
+        &#39;disallow_user_resize_stamp&#39;: &#39;disallowUserResizeStamp&#39;,
+        &#39;error_details&#39;: &#39;errorDetails&#39;,
+        &#39;external_id&#39;: &#39;externalID&#39;,
+        &#39;image_base64&#39;: &#39;imageBase64&#39;,
+        &#39;image_type&#39;: &#39;imageType&#39;,
+        &#39;initials150_image_id&#39;: &#39;initials150ImageId&#39;,
+        &#39;initials_image_uri&#39;: &#39;initialsImageUri&#39;,
+        &#39;is_default&#39;: &#39;isDefault&#39;,
+        &#39;last_modified_date_time&#39;: &#39;lastModifiedDateTime&#39;,
+        &#39;nrds_id&#39;: &#39;nrdsId&#39;,
+        &#39;nrds_last_name&#39;: &#39;nrdsLastName&#39;,
+        &#39;nrds_status&#39;: &#39;nrdsStatus&#39;,
+        &#39;phonetic_name&#39;: &#39;phoneticName&#39;,
+        &#39;signature150_image_id&#39;: &#39;signature150ImageId&#39;,
+        &#39;signature_font&#39;: &#39;signatureFont&#39;,
+        &#39;signature_groups&#39;: &#39;signatureGroups&#39;,
+        &#39;signature_id&#39;: &#39;signatureId&#39;,
+        &#39;signature_image_uri&#39;: &#39;signatureImageUri&#39;,
+        &#39;signature_initials&#39;: &#39;signatureInitials&#39;,
+        &#39;signature_name&#39;: &#39;signatureName&#39;,
+        &#39;signature_rights&#39;: &#39;signatureRights&#39;,
+        &#39;signature_type&#39;: &#39;signatureType&#39;,
+        &#39;signature_users&#39;: &#39;signatureUsers&#39;,
+        &#39;stamp_format&#39;: &#39;stampFormat&#39;,
+        &#39;stamp_image_uri&#39;: &#39;stampImageUri&#39;,
+        &#39;stamp_size_mm&#39;: &#39;stampSizeMM&#39;,
+        &#39;stamp_type&#39;: &#39;stampType&#39;,
+        &#39;status&#39;: &#39;status&#39;
+    }
+
+    def __init__(self, adopted_date_time=None, created_date_time=None, custom_field=None, date_stamp_properties=None, disallow_user_resize_stamp=None, error_details=None, external_id=None, image_base64=None, image_type=None, initials150_image_id=None, initials_image_uri=None, is_default=None, last_modified_date_time=None, nrds_id=None, nrds_last_name=None, nrds_status=None, phonetic_name=None, signature150_image_id=None, signature_font=None, signature_groups=None, signature_id=None, signature_image_uri=None, signature_initials=None, signature_name=None, signature_rights=None, signature_type=None, signature_users=None, stamp_format=None, stamp_image_uri=None, stamp_size_mm=None, stamp_type=None, status=None):  # noqa: E501
+        &#34;&#34;&#34;AccountSignature - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._adopted_date_time = None
+        self._created_date_time = None
+        self._custom_field = None
+        self._date_stamp_properties = None
+        self._disallow_user_resize_stamp = None
+        self._error_details = None
+        self._external_id = None
+        self._image_base64 = None
+        self._image_type = None
+        self._initials150_image_id = None
+        self._initials_image_uri = None
+        self._is_default = None
+        self._last_modified_date_time = None
+        self._nrds_id = None
+        self._nrds_last_name = None
+        self._nrds_status = None
+        self._phonetic_name = None
+        self._signature150_image_id = None
+        self._signature_font = None
+        self._signature_groups = None
+        self._signature_id = None
+        self._signature_image_uri = None
+        self._signature_initials = None
+        self._signature_name = None
+        self._signature_rights = None
+        self._signature_type = None
+        self._signature_users = None
+        self._stamp_format = None
+        self._stamp_image_uri = None
+        self._stamp_size_mm = None
+        self._stamp_type = None
+        self._status = None
+        self.discriminator = None
+
+        if adopted_date_time is not None:
+            self.adopted_date_time = adopted_date_time
+        if created_date_time is not None:
+            self.created_date_time = created_date_time
+        if custom_field is not None:
+            self.custom_field = custom_field
+        if date_stamp_properties is not None:
+            self.date_stamp_properties = date_stamp_properties
+        if disallow_user_resize_stamp is not None:
+            self.disallow_user_resize_stamp = disallow_user_resize_stamp
+        if error_details is not None:
+            self.error_details = error_details
+        if external_id is not None:
+            self.external_id = external_id
+        if image_base64 is not None:
+            self.image_base64 = image_base64
+        if image_type is not None:
+            self.image_type = image_type
+        if initials150_image_id is not None:
+            self.initials150_image_id = initials150_image_id
+        if initials_image_uri is not None:
+            self.initials_image_uri = initials_image_uri
+        if is_default is not None:
+            self.is_default = is_default
+        if last_modified_date_time is not None:
+            self.last_modified_date_time = last_modified_date_time
+        if nrds_id is not None:
+            self.nrds_id = nrds_id
+        if nrds_last_name is not None:
+            self.nrds_last_name = nrds_last_name
+        if nrds_status is not None:
+            self.nrds_status = nrds_status
+        if phonetic_name is not None:
+            self.phonetic_name = phonetic_name
+        if signature150_image_id is not None:
+            self.signature150_image_id = signature150_image_id
+        if signature_font is not None:
+            self.signature_font = signature_font
+        if signature_groups is not None:
+            self.signature_groups = signature_groups
+        if signature_id is not None:
+            self.signature_id = signature_id
+        if signature_image_uri is not None:
+            self.signature_image_uri = signature_image_uri
+        if signature_initials is not None:
+            self.signature_initials = signature_initials
+        if signature_name is not None:
+            self.signature_name = signature_name
+        if signature_rights is not None:
+            self.signature_rights = signature_rights
+        if signature_type is not None:
+            self.signature_type = signature_type
+        if signature_users is not None:
+            self.signature_users = signature_users
+        if stamp_format is not None:
+            self.stamp_format = stamp_format
+        if stamp_image_uri is not None:
+            self.stamp_image_uri = stamp_image_uri
+        if stamp_size_mm is not None:
+            self.stamp_size_mm = stamp_size_mm
+        if stamp_type is not None:
+            self.stamp_type = stamp_type
+        if status is not None:
+            self.status = status
+
+    @property
+    def adopted_date_time(self):
+        &#34;&#34;&#34;Gets the adopted_date_time of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The adopted_date_time of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._adopted_date_time
+
+    @adopted_date_time.setter
+    def adopted_date_time(self, adopted_date_time):
+        &#34;&#34;&#34;Sets the adopted_date_time of this AccountSignature.
+
+          # noqa: E501
+
+        :param adopted_date_time: The adopted_date_time of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._adopted_date_time = adopted_date_time
+
+    @property
+    def created_date_time(self):
+        &#34;&#34;&#34;Gets the created_date_time of this AccountSignature.  # noqa: E501
+
+        Indicates the date and time the item was created.  # noqa: E501
+
+        :return: The created_date_time of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_date_time
+
+    @created_date_time.setter
+    def created_date_time(self, created_date_time):
+        &#34;&#34;&#34;Sets the created_date_time of this AccountSignature.
+
+        Indicates the date and time the item was created.  # noqa: E501
+
+        :param created_date_time: The created_date_time of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_date_time = created_date_time
+
+    @property
+    def custom_field(self):
+        &#34;&#34;&#34;Gets the custom_field of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_field of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_field
+
+    @custom_field.setter
+    def custom_field(self, custom_field):
+        &#34;&#34;&#34;Sets the custom_field of this AccountSignature.
+
+          # noqa: E501
+
+        :param custom_field: The custom_field of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_field = custom_field
+
+    @property
+    def date_stamp_properties(self):
+        &#34;&#34;&#34;Gets the date_stamp_properties of this AccountSignature.  # noqa: E501
+
+
+        :return: The date_stamp_properties of this AccountSignature.  # noqa: E501
+        :rtype: DateStampProperties
+        &#34;&#34;&#34;
+        return self._date_stamp_properties
+
+    @date_stamp_properties.setter
+    def date_stamp_properties(self, date_stamp_properties):
+        &#34;&#34;&#34;Sets the date_stamp_properties of this AccountSignature.
+
+
+        :param date_stamp_properties: The date_stamp_properties of this AccountSignature.  # noqa: E501
+        :type: DateStampProperties
+        &#34;&#34;&#34;
+
+        self._date_stamp_properties = date_stamp_properties
+
+    @property
+    def disallow_user_resize_stamp(self):
+        &#34;&#34;&#34;Gets the disallow_user_resize_stamp of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The disallow_user_resize_stamp of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._disallow_user_resize_stamp
+
+    @disallow_user_resize_stamp.setter
+    def disallow_user_resize_stamp(self, disallow_user_resize_stamp):
+        &#34;&#34;&#34;Sets the disallow_user_resize_stamp of this AccountSignature.
+
+          # noqa: E501
+
+        :param disallow_user_resize_stamp: The disallow_user_resize_stamp of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._disallow_user_resize_stamp = disallow_user_resize_stamp
+
+    @property
+    def error_details(self):
+        &#34;&#34;&#34;Gets the error_details of this AccountSignature.  # noqa: E501
+
+
+        :return: The error_details of this AccountSignature.  # noqa: E501
+        :rtype: ErrorDetails
+        &#34;&#34;&#34;
+        return self._error_details
+
+    @error_details.setter
+    def error_details(self, error_details):
+        &#34;&#34;&#34;Sets the error_details of this AccountSignature.
+
+
+        :param error_details: The error_details of this AccountSignature.  # noqa: E501
+        :type: ErrorDetails
+        &#34;&#34;&#34;
+
+        self._error_details = error_details
+
+    @property
+    def external_id(self):
+        &#34;&#34;&#34;Gets the external_id of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The external_id of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._external_id
+
+    @external_id.setter
+    def external_id(self, external_id):
+        &#34;&#34;&#34;Sets the external_id of this AccountSignature.
+
+          # noqa: E501
+
+        :param external_id: The external_id of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._external_id = external_id
+
+    @property
+    def image_base64(self):
+        &#34;&#34;&#34;Gets the image_base64 of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The image_base64 of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._image_base64
+
+    @image_base64.setter
+    def image_base64(self, image_base64):
+        &#34;&#34;&#34;Sets the image_base64 of this AccountSignature.
+
+          # noqa: E501
+
+        :param image_base64: The image_base64 of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._image_base64 = image_base64
+
+    @property
+    def image_type(self):
+        &#34;&#34;&#34;Gets the image_type of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The image_type of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._image_type
+
+    @image_type.setter
+    def image_type(self, image_type):
+        &#34;&#34;&#34;Sets the image_type of this AccountSignature.
+
+          # noqa: E501
+
+        :param image_type: The image_type of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._image_type = image_type
+
+    @property
+    def initials150_image_id(self):
+        &#34;&#34;&#34;Gets the initials150_image_id of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The initials150_image_id of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._initials150_image_id
+
+    @initials150_image_id.setter
+    def initials150_image_id(self, initials150_image_id):
+        &#34;&#34;&#34;Sets the initials150_image_id of this AccountSignature.
+
+          # noqa: E501
+
+        :param initials150_image_id: The initials150_image_id of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._initials150_image_id = initials150_image_id
+
+    @property
+    def initials_image_uri(self):
+        &#34;&#34;&#34;Gets the initials_image_uri of this AccountSignature.  # noqa: E501
+
+        Contains the URI for an endpoint that you can use to retrieve the initials image.  # noqa: E501
+
+        :return: The initials_image_uri of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._initials_image_uri
+
+    @initials_image_uri.setter
+    def initials_image_uri(self, initials_image_uri):
+        &#34;&#34;&#34;Sets the initials_image_uri of this AccountSignature.
+
+        Contains the URI for an endpoint that you can use to retrieve the initials image.  # noqa: E501
+
+        :param initials_image_uri: The initials_image_uri of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._initials_image_uri = initials_image_uri
+
+    @property
+    def is_default(self):
+        &#34;&#34;&#34;Gets the is_default of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_default of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is_default
+
+    @is_default.setter
+    def is_default(self, is_default):
+        &#34;&#34;&#34;Sets the is_default of this AccountSignature.
+
+          # noqa: E501
+
+        :param is_default: The is_default of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is_default = is_default
+
+    @property
+    def last_modified_date_time(self):
+        &#34;&#34;&#34;Gets the last_modified_date_time of this AccountSignature.  # noqa: E501
+
+        The date and time the item was last modified.  # noqa: E501
+
+        :return: The last_modified_date_time of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified_date_time
+
+    @last_modified_date_time.setter
+    def last_modified_date_time(self, last_modified_date_time):
+        &#34;&#34;&#34;Sets the last_modified_date_time of this AccountSignature.
+
+        The date and time the item was last modified.  # noqa: E501
+
+        :param last_modified_date_time: The last_modified_date_time of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified_date_time = last_modified_date_time
+
+    @property
+    def nrds_id(self):
+        &#34;&#34;&#34;Gets the nrds_id of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The nrds_id of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._nrds_id
+
+    @nrds_id.setter
+    def nrds_id(self, nrds_id):
+        &#34;&#34;&#34;Sets the nrds_id of this AccountSignature.
+
+          # noqa: E501
+
+        :param nrds_id: The nrds_id of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._nrds_id = nrds_id
+
+    @property
+    def nrds_last_name(self):
+        &#34;&#34;&#34;Gets the nrds_last_name of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The nrds_last_name of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._nrds_last_name
+
+    @nrds_last_name.setter
+    def nrds_last_name(self, nrds_last_name):
+        &#34;&#34;&#34;Sets the nrds_last_name of this AccountSignature.
+
+          # noqa: E501
+
+        :param nrds_last_name: The nrds_last_name of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._nrds_last_name = nrds_last_name
+
+    @property
+    def nrds_status(self):
+        &#34;&#34;&#34;Gets the nrds_status of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The nrds_status of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._nrds_status
+
+    @nrds_status.setter
+    def nrds_status(self, nrds_status):
+        &#34;&#34;&#34;Sets the nrds_status of this AccountSignature.
+
+          # noqa: E501
+
+        :param nrds_status: The nrds_status of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._nrds_status = nrds_status
+
+    @property
+    def phonetic_name(self):
+        &#34;&#34;&#34;Gets the phonetic_name of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The phonetic_name of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._phonetic_name
+
+    @phonetic_name.setter
+    def phonetic_name(self, phonetic_name):
+        &#34;&#34;&#34;Sets the phonetic_name of this AccountSignature.
+
+          # noqa: E501
+
+        :param phonetic_name: The phonetic_name of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._phonetic_name = phonetic_name
+
+    @property
+    def signature150_image_id(self):
+        &#34;&#34;&#34;Gets the signature150_image_id of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature150_image_id of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature150_image_id
+
+    @signature150_image_id.setter
+    def signature150_image_id(self, signature150_image_id):
+        &#34;&#34;&#34;Sets the signature150_image_id of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature150_image_id: The signature150_image_id of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature150_image_id = signature150_image_id
+
+    @property
+    def signature_font(self):
+        &#34;&#34;&#34;Gets the signature_font of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_font of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_font
+
+    @signature_font.setter
+    def signature_font(self, signature_font):
+        &#34;&#34;&#34;Sets the signature_font of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature_font: The signature_font of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_font = signature_font
+
+    @property
+    def signature_groups(self):
+        &#34;&#34;&#34;Gets the signature_groups of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_groups of this AccountSignature.  # noqa: E501
+        :rtype: list[SignatureGroup]
+        &#34;&#34;&#34;
+        return self._signature_groups
+
+    @signature_groups.setter
+    def signature_groups(self, signature_groups):
+        &#34;&#34;&#34;Sets the signature_groups of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature_groups: The signature_groups of this AccountSignature.  # noqa: E501
+        :type: list[SignatureGroup]
+        &#34;&#34;&#34;
+
+        self._signature_groups = signature_groups
+
+    @property
+    def signature_id(self):
+        &#34;&#34;&#34;Gets the signature_id of this AccountSignature.  # noqa: E501
+
+        Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \&#34;&amp;\&#34;, \&#34;&lt;\&#34;, \&#34;&gt;\&#34;) in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.  # noqa: E501
+
+        :return: The signature_id of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_id
+
+    @signature_id.setter
+    def signature_id(self, signature_id):
+        &#34;&#34;&#34;Sets the signature_id of this AccountSignature.
+
+        Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \&#34;&amp;\&#34;, \&#34;&lt;\&#34;, \&#34;&gt;\&#34;) in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.  # noqa: E501
+
+        :param signature_id: The signature_id of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_id = signature_id
+
+    @property
+    def signature_image_uri(self):
+        &#34;&#34;&#34;Gets the signature_image_uri of this AccountSignature.  # noqa: E501
+
+        Contains the URI for an endpoint that you can use to retrieve the signature image.  # noqa: E501
+
+        :return: The signature_image_uri of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_image_uri
+
+    @signature_image_uri.setter
+    def signature_image_uri(self, signature_image_uri):
+        &#34;&#34;&#34;Sets the signature_image_uri of this AccountSignature.
+
+        Contains the URI for an endpoint that you can use to retrieve the signature image.  # noqa: E501
+
+        :param signature_image_uri: The signature_image_uri of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_image_uri = signature_image_uri
+
+    @property
+    def signature_initials(self):
+        &#34;&#34;&#34;Gets the signature_initials of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_initials of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_initials
+
+    @signature_initials.setter
+    def signature_initials(self, signature_initials):
+        &#34;&#34;&#34;Sets the signature_initials of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature_initials: The signature_initials of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_initials = signature_initials
+
+    @property
+    def signature_name(self):
+        &#34;&#34;&#34;Gets the signature_name of this AccountSignature.  # noqa: E501
+
+        Specifies the user signature name.  # noqa: E501
+
+        :return: The signature_name of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_name
+
+    @signature_name.setter
+    def signature_name(self, signature_name):
+        &#34;&#34;&#34;Sets the signature_name of this AccountSignature.
+
+        Specifies the user signature name.  # noqa: E501
+
+        :param signature_name: The signature_name of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_name = signature_name
+
+    @property
+    def signature_rights(self):
+        &#34;&#34;&#34;Gets the signature_rights of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_rights of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_rights
+
+    @signature_rights.setter
+    def signature_rights(self, signature_rights):
+        &#34;&#34;&#34;Sets the signature_rights of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature_rights: The signature_rights of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_rights = signature_rights
+
+    @property
+    def signature_type(self):
+        &#34;&#34;&#34;Gets the signature_type of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_type of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_type
+
+    @signature_type.setter
+    def signature_type(self, signature_type):
+        &#34;&#34;&#34;Sets the signature_type of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature_type: The signature_type of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_type = signature_type
+
+    @property
+    def signature_users(self):
+        &#34;&#34;&#34;Gets the signature_users of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_users of this AccountSignature.  # noqa: E501
+        :rtype: list[SignatureUser]
+        &#34;&#34;&#34;
+        return self._signature_users
+
+    @signature_users.setter
+    def signature_users(self, signature_users):
+        &#34;&#34;&#34;Sets the signature_users of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature_users: The signature_users of this AccountSignature.  # noqa: E501
+        :type: list[SignatureUser]
+        &#34;&#34;&#34;
+
+        self._signature_users = signature_users
+
+    @property
+    def stamp_format(self):
+        &#34;&#34;&#34;Gets the stamp_format of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The stamp_format of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._stamp_format
+
+    @stamp_format.setter
+    def stamp_format(self, stamp_format):
+        &#34;&#34;&#34;Sets the stamp_format of this AccountSignature.
+
+          # noqa: E501
+
+        :param stamp_format: The stamp_format of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._stamp_format = stamp_format
+
+    @property
+    def stamp_image_uri(self):
+        &#34;&#34;&#34;Gets the stamp_image_uri of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The stamp_image_uri of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._stamp_image_uri
+
+    @stamp_image_uri.setter
+    def stamp_image_uri(self, stamp_image_uri):
+        &#34;&#34;&#34;Sets the stamp_image_uri of this AccountSignature.
+
+          # noqa: E501
+
+        :param stamp_image_uri: The stamp_image_uri of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._stamp_image_uri = stamp_image_uri
+
+    @property
+    def stamp_size_mm(self):
+        &#34;&#34;&#34;Gets the stamp_size_mm of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The stamp_size_mm of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._stamp_size_mm
+
+    @stamp_size_mm.setter
+    def stamp_size_mm(self, stamp_size_mm):
+        &#34;&#34;&#34;Sets the stamp_size_mm of this AccountSignature.
+
+          # noqa: E501
+
+        :param stamp_size_mm: The stamp_size_mm of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._stamp_size_mm = stamp_size_mm
+
+    @property
+    def stamp_type(self):
+        &#34;&#34;&#34;Gets the stamp_type of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The stamp_type of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._stamp_type
+
+    @stamp_type.setter
+    def stamp_type(self, stamp_type):
+        &#34;&#34;&#34;Sets the stamp_type of this AccountSignature.
+
+          # noqa: E501
+
+        :param stamp_type: The stamp_type of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._stamp_type = stamp_type
+
+    @property
+    def status(self):
+        &#34;&#34;&#34;Gets the status of this AccountSignature.  # noqa: E501
+
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.  # noqa: E501
+
+        :return: The status of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        &#34;&#34;&#34;Sets the status of this AccountSignature.
+
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.  # noqa: E501
+
+        :param status: The status of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._status = status
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(AccountSignature, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, AccountSignature):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.account_signature.AccountSignature"><code class="flex name class">
+<span>class <span class="ident">AccountSignature</span></span>
+<span>(</span><span>adopted_date_time=None, created_date_time=None, custom_field=None, date_stamp_properties=None, disallow_user_resize_stamp=None, error_details=None, external_id=None, image_base64=None, image_type=None, initials150_image_id=None, initials_image_uri=None, is_default=None, last_modified_date_time=None, nrds_id=None, nrds_last_name=None, nrds_status=None, phonetic_name=None, signature150_image_id=None, signature_font=None, signature_groups=None, signature_id=None, signature_image_uri=None, signature_initials=None, signature_name=None, signature_rights=None, signature_type=None, signature_users=None, stamp_format=None, stamp_image_uri=None, stamp_size_mm=None, stamp_type=None, status=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>AccountSignature - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class AccountSignature(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;adopted_date_time&#39;: &#39;str&#39;,
+        &#39;created_date_time&#39;: &#39;str&#39;,
+        &#39;custom_field&#39;: &#39;str&#39;,
+        &#39;date_stamp_properties&#39;: &#39;DateStampProperties&#39;,
+        &#39;disallow_user_resize_stamp&#39;: &#39;str&#39;,
+        &#39;error_details&#39;: &#39;ErrorDetails&#39;,
+        &#39;external_id&#39;: &#39;str&#39;,
+        &#39;image_base64&#39;: &#39;str&#39;,
+        &#39;image_type&#39;: &#39;str&#39;,
+        &#39;initials150_image_id&#39;: &#39;str&#39;,
+        &#39;initials_image_uri&#39;: &#39;str&#39;,
+        &#39;is_default&#39;: &#39;str&#39;,
+        &#39;last_modified_date_time&#39;: &#39;str&#39;,
+        &#39;nrds_id&#39;: &#39;str&#39;,
+        &#39;nrds_last_name&#39;: &#39;str&#39;,
+        &#39;nrds_status&#39;: &#39;str&#39;,
+        &#39;phonetic_name&#39;: &#39;str&#39;,
+        &#39;signature150_image_id&#39;: &#39;str&#39;,
+        &#39;signature_font&#39;: &#39;str&#39;,
+        &#39;signature_groups&#39;: &#39;list[SignatureGroup]&#39;,
+        &#39;signature_id&#39;: &#39;str&#39;,
+        &#39;signature_image_uri&#39;: &#39;str&#39;,
+        &#39;signature_initials&#39;: &#39;str&#39;,
+        &#39;signature_name&#39;: &#39;str&#39;,
+        &#39;signature_rights&#39;: &#39;str&#39;,
+        &#39;signature_type&#39;: &#39;str&#39;,
+        &#39;signature_users&#39;: &#39;list[SignatureUser]&#39;,
+        &#39;stamp_format&#39;: &#39;str&#39;,
+        &#39;stamp_image_uri&#39;: &#39;str&#39;,
+        &#39;stamp_size_mm&#39;: &#39;str&#39;,
+        &#39;stamp_type&#39;: &#39;str&#39;,
+        &#39;status&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;adopted_date_time&#39;: &#39;adoptedDateTime&#39;,
+        &#39;created_date_time&#39;: &#39;createdDateTime&#39;,
+        &#39;custom_field&#39;: &#39;customField&#39;,
+        &#39;date_stamp_properties&#39;: &#39;dateStampProperties&#39;,
+        &#39;disallow_user_resize_stamp&#39;: &#39;disallowUserResizeStamp&#39;,
+        &#39;error_details&#39;: &#39;errorDetails&#39;,
+        &#39;external_id&#39;: &#39;externalID&#39;,
+        &#39;image_base64&#39;: &#39;imageBase64&#39;,
+        &#39;image_type&#39;: &#39;imageType&#39;,
+        &#39;initials150_image_id&#39;: &#39;initials150ImageId&#39;,
+        &#39;initials_image_uri&#39;: &#39;initialsImageUri&#39;,
+        &#39;is_default&#39;: &#39;isDefault&#39;,
+        &#39;last_modified_date_time&#39;: &#39;lastModifiedDateTime&#39;,
+        &#39;nrds_id&#39;: &#39;nrdsId&#39;,
+        &#39;nrds_last_name&#39;: &#39;nrdsLastName&#39;,
+        &#39;nrds_status&#39;: &#39;nrdsStatus&#39;,
+        &#39;phonetic_name&#39;: &#39;phoneticName&#39;,
+        &#39;signature150_image_id&#39;: &#39;signature150ImageId&#39;,
+        &#39;signature_font&#39;: &#39;signatureFont&#39;,
+        &#39;signature_groups&#39;: &#39;signatureGroups&#39;,
+        &#39;signature_id&#39;: &#39;signatureId&#39;,
+        &#39;signature_image_uri&#39;: &#39;signatureImageUri&#39;,
+        &#39;signature_initials&#39;: &#39;signatureInitials&#39;,
+        &#39;signature_name&#39;: &#39;signatureName&#39;,
+        &#39;signature_rights&#39;: &#39;signatureRights&#39;,
+        &#39;signature_type&#39;: &#39;signatureType&#39;,
+        &#39;signature_users&#39;: &#39;signatureUsers&#39;,
+        &#39;stamp_format&#39;: &#39;stampFormat&#39;,
+        &#39;stamp_image_uri&#39;: &#39;stampImageUri&#39;,
+        &#39;stamp_size_mm&#39;: &#39;stampSizeMM&#39;,
+        &#39;stamp_type&#39;: &#39;stampType&#39;,
+        &#39;status&#39;: &#39;status&#39;
+    }
+
+    def __init__(self, adopted_date_time=None, created_date_time=None, custom_field=None, date_stamp_properties=None, disallow_user_resize_stamp=None, error_details=None, external_id=None, image_base64=None, image_type=None, initials150_image_id=None, initials_image_uri=None, is_default=None, last_modified_date_time=None, nrds_id=None, nrds_last_name=None, nrds_status=None, phonetic_name=None, signature150_image_id=None, signature_font=None, signature_groups=None, signature_id=None, signature_image_uri=None, signature_initials=None, signature_name=None, signature_rights=None, signature_type=None, signature_users=None, stamp_format=None, stamp_image_uri=None, stamp_size_mm=None, stamp_type=None, status=None):  # noqa: E501
+        &#34;&#34;&#34;AccountSignature - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._adopted_date_time = None
+        self._created_date_time = None
+        self._custom_field = None
+        self._date_stamp_properties = None
+        self._disallow_user_resize_stamp = None
+        self._error_details = None
+        self._external_id = None
+        self._image_base64 = None
+        self._image_type = None
+        self._initials150_image_id = None
+        self._initials_image_uri = None
+        self._is_default = None
+        self._last_modified_date_time = None
+        self._nrds_id = None
+        self._nrds_last_name = None
+        self._nrds_status = None
+        self._phonetic_name = None
+        self._signature150_image_id = None
+        self._signature_font = None
+        self._signature_groups = None
+        self._signature_id = None
+        self._signature_image_uri = None
+        self._signature_initials = None
+        self._signature_name = None
+        self._signature_rights = None
+        self._signature_type = None
+        self._signature_users = None
+        self._stamp_format = None
+        self._stamp_image_uri = None
+        self._stamp_size_mm = None
+        self._stamp_type = None
+        self._status = None
+        self.discriminator = None
+
+        if adopted_date_time is not None:
+            self.adopted_date_time = adopted_date_time
+        if created_date_time is not None:
+            self.created_date_time = created_date_time
+        if custom_field is not None:
+            self.custom_field = custom_field
+        if date_stamp_properties is not None:
+            self.date_stamp_properties = date_stamp_properties
+        if disallow_user_resize_stamp is not None:
+            self.disallow_user_resize_stamp = disallow_user_resize_stamp
+        if error_details is not None:
+            self.error_details = error_details
+        if external_id is not None:
+            self.external_id = external_id
+        if image_base64 is not None:
+            self.image_base64 = image_base64
+        if image_type is not None:
+            self.image_type = image_type
+        if initials150_image_id is not None:
+            self.initials150_image_id = initials150_image_id
+        if initials_image_uri is not None:
+            self.initials_image_uri = initials_image_uri
+        if is_default is not None:
+            self.is_default = is_default
+        if last_modified_date_time is not None:
+            self.last_modified_date_time = last_modified_date_time
+        if nrds_id is not None:
+            self.nrds_id = nrds_id
+        if nrds_last_name is not None:
+            self.nrds_last_name = nrds_last_name
+        if nrds_status is not None:
+            self.nrds_status = nrds_status
+        if phonetic_name is not None:
+            self.phonetic_name = phonetic_name
+        if signature150_image_id is not None:
+            self.signature150_image_id = signature150_image_id
+        if signature_font is not None:
+            self.signature_font = signature_font
+        if signature_groups is not None:
+            self.signature_groups = signature_groups
+        if signature_id is not None:
+            self.signature_id = signature_id
+        if signature_image_uri is not None:
+            self.signature_image_uri = signature_image_uri
+        if signature_initials is not None:
+            self.signature_initials = signature_initials
+        if signature_name is not None:
+            self.signature_name = signature_name
+        if signature_rights is not None:
+            self.signature_rights = signature_rights
+        if signature_type is not None:
+            self.signature_type = signature_type
+        if signature_users is not None:
+            self.signature_users = signature_users
+        if stamp_format is not None:
+            self.stamp_format = stamp_format
+        if stamp_image_uri is not None:
+            self.stamp_image_uri = stamp_image_uri
+        if stamp_size_mm is not None:
+            self.stamp_size_mm = stamp_size_mm
+        if stamp_type is not None:
+            self.stamp_type = stamp_type
+        if status is not None:
+            self.status = status
+
+    @property
+    def adopted_date_time(self):
+        &#34;&#34;&#34;Gets the adopted_date_time of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The adopted_date_time of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._adopted_date_time
+
+    @adopted_date_time.setter
+    def adopted_date_time(self, adopted_date_time):
+        &#34;&#34;&#34;Sets the adopted_date_time of this AccountSignature.
+
+          # noqa: E501
+
+        :param adopted_date_time: The adopted_date_time of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._adopted_date_time = adopted_date_time
+
+    @property
+    def created_date_time(self):
+        &#34;&#34;&#34;Gets the created_date_time of this AccountSignature.  # noqa: E501
+
+        Indicates the date and time the item was created.  # noqa: E501
+
+        :return: The created_date_time of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_date_time
+
+    @created_date_time.setter
+    def created_date_time(self, created_date_time):
+        &#34;&#34;&#34;Sets the created_date_time of this AccountSignature.
+
+        Indicates the date and time the item was created.  # noqa: E501
+
+        :param created_date_time: The created_date_time of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_date_time = created_date_time
+
+    @property
+    def custom_field(self):
+        &#34;&#34;&#34;Gets the custom_field of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_field of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_field
+
+    @custom_field.setter
+    def custom_field(self, custom_field):
+        &#34;&#34;&#34;Sets the custom_field of this AccountSignature.
+
+          # noqa: E501
+
+        :param custom_field: The custom_field of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_field = custom_field
+
+    @property
+    def date_stamp_properties(self):
+        &#34;&#34;&#34;Gets the date_stamp_properties of this AccountSignature.  # noqa: E501
+
+
+        :return: The date_stamp_properties of this AccountSignature.  # noqa: E501
+        :rtype: DateStampProperties
+        &#34;&#34;&#34;
+        return self._date_stamp_properties
+
+    @date_stamp_properties.setter
+    def date_stamp_properties(self, date_stamp_properties):
+        &#34;&#34;&#34;Sets the date_stamp_properties of this AccountSignature.
+
+
+        :param date_stamp_properties: The date_stamp_properties of this AccountSignature.  # noqa: E501
+        :type: DateStampProperties
+        &#34;&#34;&#34;
+
+        self._date_stamp_properties = date_stamp_properties
+
+    @property
+    def disallow_user_resize_stamp(self):
+        &#34;&#34;&#34;Gets the disallow_user_resize_stamp of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The disallow_user_resize_stamp of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._disallow_user_resize_stamp
+
+    @disallow_user_resize_stamp.setter
+    def disallow_user_resize_stamp(self, disallow_user_resize_stamp):
+        &#34;&#34;&#34;Sets the disallow_user_resize_stamp of this AccountSignature.
+
+          # noqa: E501
+
+        :param disallow_user_resize_stamp: The disallow_user_resize_stamp of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._disallow_user_resize_stamp = disallow_user_resize_stamp
+
+    @property
+    def error_details(self):
+        &#34;&#34;&#34;Gets the error_details of this AccountSignature.  # noqa: E501
+
+
+        :return: The error_details of this AccountSignature.  # noqa: E501
+        :rtype: ErrorDetails
+        &#34;&#34;&#34;
+        return self._error_details
+
+    @error_details.setter
+    def error_details(self, error_details):
+        &#34;&#34;&#34;Sets the error_details of this AccountSignature.
+
+
+        :param error_details: The error_details of this AccountSignature.  # noqa: E501
+        :type: ErrorDetails
+        &#34;&#34;&#34;
+
+        self._error_details = error_details
+
+    @property
+    def external_id(self):
+        &#34;&#34;&#34;Gets the external_id of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The external_id of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._external_id
+
+    @external_id.setter
+    def external_id(self, external_id):
+        &#34;&#34;&#34;Sets the external_id of this AccountSignature.
+
+          # noqa: E501
+
+        :param external_id: The external_id of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._external_id = external_id
+
+    @property
+    def image_base64(self):
+        &#34;&#34;&#34;Gets the image_base64 of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The image_base64 of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._image_base64
+
+    @image_base64.setter
+    def image_base64(self, image_base64):
+        &#34;&#34;&#34;Sets the image_base64 of this AccountSignature.
+
+          # noqa: E501
+
+        :param image_base64: The image_base64 of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._image_base64 = image_base64
+
+    @property
+    def image_type(self):
+        &#34;&#34;&#34;Gets the image_type of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The image_type of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._image_type
+
+    @image_type.setter
+    def image_type(self, image_type):
+        &#34;&#34;&#34;Sets the image_type of this AccountSignature.
+
+          # noqa: E501
+
+        :param image_type: The image_type of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._image_type = image_type
+
+    @property
+    def initials150_image_id(self):
+        &#34;&#34;&#34;Gets the initials150_image_id of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The initials150_image_id of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._initials150_image_id
+
+    @initials150_image_id.setter
+    def initials150_image_id(self, initials150_image_id):
+        &#34;&#34;&#34;Sets the initials150_image_id of this AccountSignature.
+
+          # noqa: E501
+
+        :param initials150_image_id: The initials150_image_id of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._initials150_image_id = initials150_image_id
+
+    @property
+    def initials_image_uri(self):
+        &#34;&#34;&#34;Gets the initials_image_uri of this AccountSignature.  # noqa: E501
+
+        Contains the URI for an endpoint that you can use to retrieve the initials image.  # noqa: E501
+
+        :return: The initials_image_uri of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._initials_image_uri
+
+    @initials_image_uri.setter
+    def initials_image_uri(self, initials_image_uri):
+        &#34;&#34;&#34;Sets the initials_image_uri of this AccountSignature.
+
+        Contains the URI for an endpoint that you can use to retrieve the initials image.  # noqa: E501
+
+        :param initials_image_uri: The initials_image_uri of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._initials_image_uri = initials_image_uri
+
+    @property
+    def is_default(self):
+        &#34;&#34;&#34;Gets the is_default of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_default of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is_default
+
+    @is_default.setter
+    def is_default(self, is_default):
+        &#34;&#34;&#34;Sets the is_default of this AccountSignature.
+
+          # noqa: E501
+
+        :param is_default: The is_default of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is_default = is_default
+
+    @property
+    def last_modified_date_time(self):
+        &#34;&#34;&#34;Gets the last_modified_date_time of this AccountSignature.  # noqa: E501
+
+        The date and time the item was last modified.  # noqa: E501
+
+        :return: The last_modified_date_time of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified_date_time
+
+    @last_modified_date_time.setter
+    def last_modified_date_time(self, last_modified_date_time):
+        &#34;&#34;&#34;Sets the last_modified_date_time of this AccountSignature.
+
+        The date and time the item was last modified.  # noqa: E501
+
+        :param last_modified_date_time: The last_modified_date_time of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified_date_time = last_modified_date_time
+
+    @property
+    def nrds_id(self):
+        &#34;&#34;&#34;Gets the nrds_id of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The nrds_id of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._nrds_id
+
+    @nrds_id.setter
+    def nrds_id(self, nrds_id):
+        &#34;&#34;&#34;Sets the nrds_id of this AccountSignature.
+
+          # noqa: E501
+
+        :param nrds_id: The nrds_id of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._nrds_id = nrds_id
+
+    @property
+    def nrds_last_name(self):
+        &#34;&#34;&#34;Gets the nrds_last_name of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The nrds_last_name of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._nrds_last_name
+
+    @nrds_last_name.setter
+    def nrds_last_name(self, nrds_last_name):
+        &#34;&#34;&#34;Sets the nrds_last_name of this AccountSignature.
+
+          # noqa: E501
+
+        :param nrds_last_name: The nrds_last_name of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._nrds_last_name = nrds_last_name
+
+    @property
+    def nrds_status(self):
+        &#34;&#34;&#34;Gets the nrds_status of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The nrds_status of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._nrds_status
+
+    @nrds_status.setter
+    def nrds_status(self, nrds_status):
+        &#34;&#34;&#34;Sets the nrds_status of this AccountSignature.
+
+          # noqa: E501
+
+        :param nrds_status: The nrds_status of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._nrds_status = nrds_status
+
+    @property
+    def phonetic_name(self):
+        &#34;&#34;&#34;Gets the phonetic_name of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The phonetic_name of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._phonetic_name
+
+    @phonetic_name.setter
+    def phonetic_name(self, phonetic_name):
+        &#34;&#34;&#34;Sets the phonetic_name of this AccountSignature.
+
+          # noqa: E501
+
+        :param phonetic_name: The phonetic_name of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._phonetic_name = phonetic_name
+
+    @property
+    def signature150_image_id(self):
+        &#34;&#34;&#34;Gets the signature150_image_id of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature150_image_id of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature150_image_id
+
+    @signature150_image_id.setter
+    def signature150_image_id(self, signature150_image_id):
+        &#34;&#34;&#34;Sets the signature150_image_id of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature150_image_id: The signature150_image_id of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature150_image_id = signature150_image_id
+
+    @property
+    def signature_font(self):
+        &#34;&#34;&#34;Gets the signature_font of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_font of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_font
+
+    @signature_font.setter
+    def signature_font(self, signature_font):
+        &#34;&#34;&#34;Sets the signature_font of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature_font: The signature_font of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_font = signature_font
+
+    @property
+    def signature_groups(self):
+        &#34;&#34;&#34;Gets the signature_groups of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_groups of this AccountSignature.  # noqa: E501
+        :rtype: list[SignatureGroup]
+        &#34;&#34;&#34;
+        return self._signature_groups
+
+    @signature_groups.setter
+    def signature_groups(self, signature_groups):
+        &#34;&#34;&#34;Sets the signature_groups of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature_groups: The signature_groups of this AccountSignature.  # noqa: E501
+        :type: list[SignatureGroup]
+        &#34;&#34;&#34;
+
+        self._signature_groups = signature_groups
+
+    @property
+    def signature_id(self):
+        &#34;&#34;&#34;Gets the signature_id of this AccountSignature.  # noqa: E501
+
+        Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \&#34;&amp;\&#34;, \&#34;&lt;\&#34;, \&#34;&gt;\&#34;) in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.  # noqa: E501
+
+        :return: The signature_id of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_id
+
+    @signature_id.setter
+    def signature_id(self, signature_id):
+        &#34;&#34;&#34;Sets the signature_id of this AccountSignature.
+
+        Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \&#34;&amp;\&#34;, \&#34;&lt;\&#34;, \&#34;&gt;\&#34;) in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.  # noqa: E501
+
+        :param signature_id: The signature_id of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_id = signature_id
+
+    @property
+    def signature_image_uri(self):
+        &#34;&#34;&#34;Gets the signature_image_uri of this AccountSignature.  # noqa: E501
+
+        Contains the URI for an endpoint that you can use to retrieve the signature image.  # noqa: E501
+
+        :return: The signature_image_uri of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_image_uri
+
+    @signature_image_uri.setter
+    def signature_image_uri(self, signature_image_uri):
+        &#34;&#34;&#34;Sets the signature_image_uri of this AccountSignature.
+
+        Contains the URI for an endpoint that you can use to retrieve the signature image.  # noqa: E501
+
+        :param signature_image_uri: The signature_image_uri of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_image_uri = signature_image_uri
+
+    @property
+    def signature_initials(self):
+        &#34;&#34;&#34;Gets the signature_initials of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_initials of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_initials
+
+    @signature_initials.setter
+    def signature_initials(self, signature_initials):
+        &#34;&#34;&#34;Sets the signature_initials of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature_initials: The signature_initials of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_initials = signature_initials
+
+    @property
+    def signature_name(self):
+        &#34;&#34;&#34;Gets the signature_name of this AccountSignature.  # noqa: E501
+
+        Specifies the user signature name.  # noqa: E501
+
+        :return: The signature_name of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_name
+
+    @signature_name.setter
+    def signature_name(self, signature_name):
+        &#34;&#34;&#34;Sets the signature_name of this AccountSignature.
+
+        Specifies the user signature name.  # noqa: E501
+
+        :param signature_name: The signature_name of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_name = signature_name
+
+    @property
+    def signature_rights(self):
+        &#34;&#34;&#34;Gets the signature_rights of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_rights of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_rights
+
+    @signature_rights.setter
+    def signature_rights(self, signature_rights):
+        &#34;&#34;&#34;Sets the signature_rights of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature_rights: The signature_rights of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_rights = signature_rights
+
+    @property
+    def signature_type(self):
+        &#34;&#34;&#34;Gets the signature_type of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_type of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_type
+
+    @signature_type.setter
+    def signature_type(self, signature_type):
+        &#34;&#34;&#34;Sets the signature_type of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature_type: The signature_type of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_type = signature_type
+
+    @property
+    def signature_users(self):
+        &#34;&#34;&#34;Gets the signature_users of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_users of this AccountSignature.  # noqa: E501
+        :rtype: list[SignatureUser]
+        &#34;&#34;&#34;
+        return self._signature_users
+
+    @signature_users.setter
+    def signature_users(self, signature_users):
+        &#34;&#34;&#34;Sets the signature_users of this AccountSignature.
+
+          # noqa: E501
+
+        :param signature_users: The signature_users of this AccountSignature.  # noqa: E501
+        :type: list[SignatureUser]
+        &#34;&#34;&#34;
+
+        self._signature_users = signature_users
+
+    @property
+    def stamp_format(self):
+        &#34;&#34;&#34;Gets the stamp_format of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The stamp_format of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._stamp_format
+
+    @stamp_format.setter
+    def stamp_format(self, stamp_format):
+        &#34;&#34;&#34;Sets the stamp_format of this AccountSignature.
+
+          # noqa: E501
+
+        :param stamp_format: The stamp_format of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._stamp_format = stamp_format
+
+    @property
+    def stamp_image_uri(self):
+        &#34;&#34;&#34;Gets the stamp_image_uri of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The stamp_image_uri of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._stamp_image_uri
+
+    @stamp_image_uri.setter
+    def stamp_image_uri(self, stamp_image_uri):
+        &#34;&#34;&#34;Sets the stamp_image_uri of this AccountSignature.
+
+          # noqa: E501
+
+        :param stamp_image_uri: The stamp_image_uri of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._stamp_image_uri = stamp_image_uri
+
+    @property
+    def stamp_size_mm(self):
+        &#34;&#34;&#34;Gets the stamp_size_mm of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The stamp_size_mm of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._stamp_size_mm
+
+    @stamp_size_mm.setter
+    def stamp_size_mm(self, stamp_size_mm):
+        &#34;&#34;&#34;Sets the stamp_size_mm of this AccountSignature.
+
+          # noqa: E501
+
+        :param stamp_size_mm: The stamp_size_mm of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._stamp_size_mm = stamp_size_mm
+
+    @property
+    def stamp_type(self):
+        &#34;&#34;&#34;Gets the stamp_type of this AccountSignature.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The stamp_type of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._stamp_type
+
+    @stamp_type.setter
+    def stamp_type(self, stamp_type):
+        &#34;&#34;&#34;Sets the stamp_type of this AccountSignature.
+
+          # noqa: E501
+
+        :param stamp_type: The stamp_type of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._stamp_type = stamp_type
+
+    @property
+    def status(self):
+        &#34;&#34;&#34;Gets the status of this AccountSignature.  # noqa: E501
+
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.  # noqa: E501
+
+        :return: The status of this AccountSignature.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        &#34;&#34;&#34;Sets the status of this AccountSignature.
+
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.  # noqa: E501
+
+        :param status: The status of this AccountSignature.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._status = status
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(AccountSignature, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, AccountSignature):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.account_signature.AccountSignature.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.account_signature.AccountSignature.adopted_date_time"><code class="name">var <span class="ident">adopted_date_time</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the adopted_date_time of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The adopted_date_time of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def adopted_date_time(self):
+    &#34;&#34;&#34;Gets the adopted_date_time of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The adopted_date_time of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._adopted_date_time</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.created_date_time"><code class="name">var <span class="ident">created_date_time</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the created_date_time of this AccountSignature.
+# noqa: E501</p>
+<p>Indicates the date and time the item was created.
+# noqa: E501</p>
+<p>:return: The created_date_time of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def created_date_time(self):
+    &#34;&#34;&#34;Gets the created_date_time of this AccountSignature.  # noqa: E501
+
+    Indicates the date and time the item was created.  # noqa: E501
+
+    :return: The created_date_time of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._created_date_time</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.custom_field"><code class="name">var <span class="ident">custom_field</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the custom_field of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The custom_field of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def custom_field(self):
+    &#34;&#34;&#34;Gets the custom_field of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The custom_field of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._custom_field</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.date_stamp_properties"><code class="name">var <span class="ident">date_stamp_properties</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the date_stamp_properties of this AccountSignature.
+# noqa: E501</p>
+<p>:return: The date_stamp_properties of this AccountSignature.
+# noqa: E501
+:rtype: DateStampProperties</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def date_stamp_properties(self):
+    &#34;&#34;&#34;Gets the date_stamp_properties of this AccountSignature.  # noqa: E501
+
+
+    :return: The date_stamp_properties of this AccountSignature.  # noqa: E501
+    :rtype: DateStampProperties
+    &#34;&#34;&#34;
+    return self._date_stamp_properties</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.disallow_user_resize_stamp"><code class="name">var <span class="ident">disallow_user_resize_stamp</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the disallow_user_resize_stamp of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The disallow_user_resize_stamp of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def disallow_user_resize_stamp(self):
+    &#34;&#34;&#34;Gets the disallow_user_resize_stamp of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The disallow_user_resize_stamp of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._disallow_user_resize_stamp</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.error_details"><code class="name">var <span class="ident">error_details</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the error_details of this AccountSignature.
+# noqa: E501</p>
+<p>:return: The error_details of this AccountSignature.
+# noqa: E501
+:rtype: ErrorDetails</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def error_details(self):
+    &#34;&#34;&#34;Gets the error_details of this AccountSignature.  # noqa: E501
+
+
+    :return: The error_details of this AccountSignature.  # noqa: E501
+    :rtype: ErrorDetails
+    &#34;&#34;&#34;
+    return self._error_details</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.external_id"><code class="name">var <span class="ident">external_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the external_id of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The external_id of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def external_id(self):
+    &#34;&#34;&#34;Gets the external_id of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The external_id of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._external_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.image_base64"><code class="name">var <span class="ident">image_base64</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the image_base64 of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The image_base64 of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def image_base64(self):
+    &#34;&#34;&#34;Gets the image_base64 of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The image_base64 of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._image_base64</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.image_type"><code class="name">var <span class="ident">image_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the image_type of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The image_type of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def image_type(self):
+    &#34;&#34;&#34;Gets the image_type of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The image_type of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._image_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.initials150_image_id"><code class="name">var <span class="ident">initials150_image_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the initials150_image_id of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The initials150_image_id of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def initials150_image_id(self):
+    &#34;&#34;&#34;Gets the initials150_image_id of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The initials150_image_id of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._initials150_image_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.initials_image_uri"><code class="name">var <span class="ident">initials_image_uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the initials_image_uri of this AccountSignature.
+# noqa: E501</p>
+<p>Contains the URI for an endpoint that you can use to retrieve the initials image.
+# noqa: E501</p>
+<p>:return: The initials_image_uri of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def initials_image_uri(self):
+    &#34;&#34;&#34;Gets the initials_image_uri of this AccountSignature.  # noqa: E501
+
+    Contains the URI for an endpoint that you can use to retrieve the initials image.  # noqa: E501
+
+    :return: The initials_image_uri of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._initials_image_uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.is_default"><code class="name">var <span class="ident">is_default</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the is_default of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The is_default of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is_default(self):
+    &#34;&#34;&#34;Gets the is_default of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The is_default of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._is_default</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.last_modified_date_time"><code class="name">var <span class="ident">last_modified_date_time</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_modified_date_time of this AccountSignature.
+# noqa: E501</p>
+<p>The date and time the item was last modified.
+# noqa: E501</p>
+<p>:return: The last_modified_date_time of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_modified_date_time(self):
+    &#34;&#34;&#34;Gets the last_modified_date_time of this AccountSignature.  # noqa: E501
+
+    The date and time the item was last modified.  # noqa: E501
+
+    :return: The last_modified_date_time of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._last_modified_date_time</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.nrds_id"><code class="name">var <span class="ident">nrds_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the nrds_id of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The nrds_id of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def nrds_id(self):
+    &#34;&#34;&#34;Gets the nrds_id of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The nrds_id of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._nrds_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.nrds_last_name"><code class="name">var <span class="ident">nrds_last_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the nrds_last_name of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The nrds_last_name of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def nrds_last_name(self):
+    &#34;&#34;&#34;Gets the nrds_last_name of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The nrds_last_name of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._nrds_last_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.nrds_status"><code class="name">var <span class="ident">nrds_status</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the nrds_status of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The nrds_status of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def nrds_status(self):
+    &#34;&#34;&#34;Gets the nrds_status of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The nrds_status of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._nrds_status</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.phonetic_name"><code class="name">var <span class="ident">phonetic_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the phonetic_name of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The phonetic_name of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def phonetic_name(self):
+    &#34;&#34;&#34;Gets the phonetic_name of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The phonetic_name of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._phonetic_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.signature150_image_id"><code class="name">var <span class="ident">signature150_image_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signature150_image_id of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The signature150_image_id of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signature150_image_id(self):
+    &#34;&#34;&#34;Gets the signature150_image_id of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The signature150_image_id of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signature150_image_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.signature_font"><code class="name">var <span class="ident">signature_font</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signature_font of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The signature_font of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signature_font(self):
+    &#34;&#34;&#34;Gets the signature_font of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The signature_font of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signature_font</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.signature_groups"><code class="name">var <span class="ident">signature_groups</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signature_groups of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The signature_groups of this AccountSignature.
+# noqa: E501
+:rtype: list[SignatureGroup]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signature_groups(self):
+    &#34;&#34;&#34;Gets the signature_groups of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The signature_groups of this AccountSignature.  # noqa: E501
+    :rtype: list[SignatureGroup]
+    &#34;&#34;&#34;
+    return self._signature_groups</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.signature_id"><code class="name">var <span class="ident">signature_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signature_id of this AccountSignature.
+# noqa: E501</p>
+<p>Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the <code>signatureName</code> property in the body is used. This allows the use of special characters (such as "&amp;", "&lt;", "&gt;") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.
+# noqa: E501</p>
+<p>:return: The signature_id of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signature_id(self):
+    &#34;&#34;&#34;Gets the signature_id of this AccountSignature.  # noqa: E501
+
+    Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \&#34;&amp;\&#34;, \&#34;&lt;\&#34;, \&#34;&gt;\&#34;) in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.  # noqa: E501
+
+    :return: The signature_id of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signature_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.signature_image_uri"><code class="name">var <span class="ident">signature_image_uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signature_image_uri of this AccountSignature.
+# noqa: E501</p>
+<p>Contains the URI for an endpoint that you can use to retrieve the signature image.
+# noqa: E501</p>
+<p>:return: The signature_image_uri of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signature_image_uri(self):
+    &#34;&#34;&#34;Gets the signature_image_uri of this AccountSignature.  # noqa: E501
+
+    Contains the URI for an endpoint that you can use to retrieve the signature image.  # noqa: E501
+
+    :return: The signature_image_uri of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signature_image_uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.signature_initials"><code class="name">var <span class="ident">signature_initials</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signature_initials of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The signature_initials of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signature_initials(self):
+    &#34;&#34;&#34;Gets the signature_initials of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The signature_initials of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signature_initials</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.signature_name"><code class="name">var <span class="ident">signature_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signature_name of this AccountSignature.
+# noqa: E501</p>
+<p>Specifies the user signature name.
+# noqa: E501</p>
+<p>:return: The signature_name of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signature_name(self):
+    &#34;&#34;&#34;Gets the signature_name of this AccountSignature.  # noqa: E501
+
+    Specifies the user signature name.  # noqa: E501
+
+    :return: The signature_name of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signature_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.signature_rights"><code class="name">var <span class="ident">signature_rights</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signature_rights of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The signature_rights of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signature_rights(self):
+    &#34;&#34;&#34;Gets the signature_rights of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The signature_rights of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signature_rights</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.signature_type"><code class="name">var <span class="ident">signature_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signature_type of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The signature_type of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signature_type(self):
+    &#34;&#34;&#34;Gets the signature_type of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The signature_type of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signature_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.signature_users"><code class="name">var <span class="ident">signature_users</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signature_users of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The signature_users of this AccountSignature.
+# noqa: E501
+:rtype: list[SignatureUser]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signature_users(self):
+    &#34;&#34;&#34;Gets the signature_users of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The signature_users of this AccountSignature.  # noqa: E501
+    :rtype: list[SignatureUser]
+    &#34;&#34;&#34;
+    return self._signature_users</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.stamp_format"><code class="name">var <span class="ident">stamp_format</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the stamp_format of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The stamp_format of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def stamp_format(self):
+    &#34;&#34;&#34;Gets the stamp_format of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The stamp_format of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._stamp_format</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.stamp_image_uri"><code class="name">var <span class="ident">stamp_image_uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the stamp_image_uri of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The stamp_image_uri of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def stamp_image_uri(self):
+    &#34;&#34;&#34;Gets the stamp_image_uri of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The stamp_image_uri of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._stamp_image_uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.stamp_size_mm"><code class="name">var <span class="ident">stamp_size_mm</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the stamp_size_mm of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The stamp_size_mm of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def stamp_size_mm(self):
+    &#34;&#34;&#34;Gets the stamp_size_mm of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The stamp_size_mm of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._stamp_size_mm</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.stamp_type"><code class="name">var <span class="ident">stamp_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the stamp_type of this AccountSignature.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The stamp_type of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def stamp_type(self):
+    &#34;&#34;&#34;Gets the stamp_type of this AccountSignature.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The stamp_type of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._stamp_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.status"><code class="name">var <span class="ident">status</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the status of this AccountSignature.
+# noqa: E501</p>
+<p>Indicates the envelope status. Valid values are:
+* sent - The envelope is sent to the recipients.
+* created - The envelope is saved as a draft and can be modified and sent later.
+# noqa: E501</p>
+<p>:return: The status of this AccountSignature.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def status(self):
+    &#34;&#34;&#34;Gets the status of this AccountSignature.  # noqa: E501
+
+    Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.  # noqa: E501
+
+    :return: The status of this AccountSignature.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._status</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.account_signature.AccountSignature.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(AccountSignature, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_signature.AccountSignature.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.account_signature.AccountSignature" href="#docusign_esign.models.account_signature.AccountSignature">AccountSignature</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.adopted_date_time" href="#docusign_esign.models.account_signature.AccountSignature.adopted_date_time">adopted_date_time</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.attribute_map" href="#docusign_esign.models.account_signature.AccountSignature.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.created_date_time" href="#docusign_esign.models.account_signature.AccountSignature.created_date_time">created_date_time</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.custom_field" href="#docusign_esign.models.account_signature.AccountSignature.custom_field">custom_field</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.date_stamp_properties" href="#docusign_esign.models.account_signature.AccountSignature.date_stamp_properties">date_stamp_properties</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.disallow_user_resize_stamp" href="#docusign_esign.models.account_signature.AccountSignature.disallow_user_resize_stamp">disallow_user_resize_stamp</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.error_details" href="#docusign_esign.models.account_signature.AccountSignature.error_details">error_details</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.external_id" href="#docusign_esign.models.account_signature.AccountSignature.external_id">external_id</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.image_base64" href="#docusign_esign.models.account_signature.AccountSignature.image_base64">image_base64</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.image_type" href="#docusign_esign.models.account_signature.AccountSignature.image_type">image_type</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.initials150_image_id" href="#docusign_esign.models.account_signature.AccountSignature.initials150_image_id">initials150_image_id</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.initials_image_uri" href="#docusign_esign.models.account_signature.AccountSignature.initials_image_uri">initials_image_uri</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.is_default" href="#docusign_esign.models.account_signature.AccountSignature.is_default">is_default</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.last_modified_date_time" href="#docusign_esign.models.account_signature.AccountSignature.last_modified_date_time">last_modified_date_time</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.nrds_id" href="#docusign_esign.models.account_signature.AccountSignature.nrds_id">nrds_id</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.nrds_last_name" href="#docusign_esign.models.account_signature.AccountSignature.nrds_last_name">nrds_last_name</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.nrds_status" href="#docusign_esign.models.account_signature.AccountSignature.nrds_status">nrds_status</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.phonetic_name" href="#docusign_esign.models.account_signature.AccountSignature.phonetic_name">phonetic_name</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.signature150_image_id" href="#docusign_esign.models.account_signature.AccountSignature.signature150_image_id">signature150_image_id</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.signature_font" href="#docusign_esign.models.account_signature.AccountSignature.signature_font">signature_font</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.signature_groups" href="#docusign_esign.models.account_signature.AccountSignature.signature_groups">signature_groups</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.signature_id" href="#docusign_esign.models.account_signature.AccountSignature.signature_id">signature_id</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.signature_image_uri" href="#docusign_esign.models.account_signature.AccountSignature.signature_image_uri">signature_image_uri</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.signature_initials" href="#docusign_esign.models.account_signature.AccountSignature.signature_initials">signature_initials</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.signature_name" href="#docusign_esign.models.account_signature.AccountSignature.signature_name">signature_name</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.signature_rights" href="#docusign_esign.models.account_signature.AccountSignature.signature_rights">signature_rights</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.signature_type" href="#docusign_esign.models.account_signature.AccountSignature.signature_type">signature_type</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.signature_users" href="#docusign_esign.models.account_signature.AccountSignature.signature_users">signature_users</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.stamp_format" href="#docusign_esign.models.account_signature.AccountSignature.stamp_format">stamp_format</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.stamp_image_uri" href="#docusign_esign.models.account_signature.AccountSignature.stamp_image_uri">stamp_image_uri</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.stamp_size_mm" href="#docusign_esign.models.account_signature.AccountSignature.stamp_size_mm">stamp_size_mm</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.stamp_type" href="#docusign_esign.models.account_signature.AccountSignature.stamp_type">stamp_type</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.status" href="#docusign_esign.models.account_signature.AccountSignature.status">status</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.swagger_types" href="#docusign_esign.models.account_signature.AccountSignature.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.to_dict" href="#docusign_esign.models.account_signature.AccountSignature.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.account_signature.AccountSignature.to_str" href="#docusign_esign.models.account_signature.AccountSignature.to_str">to_str</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

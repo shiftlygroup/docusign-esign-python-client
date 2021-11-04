@@ -1,0 +1,1879 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.folder_item API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.folder_item</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.</p>
+<p>OpenAPI spec version: v2
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+
+    OpenAPI spec version: v2
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+from pprint import pformat
+from six import iteritems
+import re
+
+
+class FolderItem(object):
+    &#34;&#34;&#34;
+    NOTE: This class is auto generated by the swagger code generator program.
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+    def __init__(self, completed_date_time=None, created_date_time=None, custom_fields=None, description=None, envelope_id=None, envelope_uri=None, is21_cfr_part11=None, is_signature_provider_envelope=None, last_modified=None, name=None, owner_name=None, page_count=None, password=None, sender_email=None, sender_name=None, sent_date_time=None, shared=None, status=None, subject=None, template_id=None, uri=None):
+        &#34;&#34;&#34;
+        FolderItem - a model defined in Swagger
+
+        :param dict swaggerTypes: The key is attribute name
+                                  and the value is attribute type.
+        :param dict attributeMap: The key is attribute name
+                                  and the value is json key in definition.
+        &#34;&#34;&#34;
+        self.swagger_types = {
+            &#39;completed_date_time&#39;: &#39;str&#39;,
+            &#39;created_date_time&#39;: &#39;str&#39;,
+            &#39;custom_fields&#39;: &#39;list[CustomFieldV2]&#39;,
+            &#39;description&#39;: &#39;str&#39;,
+            &#39;envelope_id&#39;: &#39;str&#39;,
+            &#39;envelope_uri&#39;: &#39;str&#39;,
+            &#39;is21_cfr_part11&#39;: &#39;str&#39;,
+            &#39;is_signature_provider_envelope&#39;: &#39;str&#39;,
+            &#39;last_modified&#39;: &#39;str&#39;,
+            &#39;name&#39;: &#39;str&#39;,
+            &#39;owner_name&#39;: &#39;str&#39;,
+            &#39;page_count&#39;: &#39;int&#39;,
+            &#39;password&#39;: &#39;str&#39;,
+            &#39;sender_email&#39;: &#39;str&#39;,
+            &#39;sender_name&#39;: &#39;str&#39;,
+            &#39;sent_date_time&#39;: &#39;str&#39;,
+            &#39;shared&#39;: &#39;str&#39;,
+            &#39;status&#39;: &#39;str&#39;,
+            &#39;subject&#39;: &#39;str&#39;,
+            &#39;template_id&#39;: &#39;str&#39;,
+            &#39;uri&#39;: &#39;str&#39;
+        }
+
+        self.attribute_map = {
+            &#39;completed_date_time&#39;: &#39;completedDateTime&#39;,
+            &#39;created_date_time&#39;: &#39;createdDateTime&#39;,
+            &#39;custom_fields&#39;: &#39;customFields&#39;,
+            &#39;description&#39;: &#39;description&#39;,
+            &#39;envelope_id&#39;: &#39;envelopeId&#39;,
+            &#39;envelope_uri&#39;: &#39;envelopeUri&#39;,
+            &#39;is21_cfr_part11&#39;: &#39;is21CFRPart11&#39;,
+            &#39;is_signature_provider_envelope&#39;: &#39;isSignatureProviderEnvelope&#39;,
+            &#39;last_modified&#39;: &#39;lastModified&#39;,
+            &#39;name&#39;: &#39;name&#39;,
+            &#39;owner_name&#39;: &#39;ownerName&#39;,
+            &#39;page_count&#39;: &#39;pageCount&#39;,
+            &#39;password&#39;: &#39;password&#39;,
+            &#39;sender_email&#39;: &#39;senderEmail&#39;,
+            &#39;sender_name&#39;: &#39;senderName&#39;,
+            &#39;sent_date_time&#39;: &#39;sentDateTime&#39;,
+            &#39;shared&#39;: &#39;shared&#39;,
+            &#39;status&#39;: &#39;status&#39;,
+            &#39;subject&#39;: &#39;subject&#39;,
+            &#39;template_id&#39;: &#39;templateId&#39;,
+            &#39;uri&#39;: &#39;uri&#39;
+        }
+
+        self._completed_date_time = completed_date_time
+        self._created_date_time = created_date_time
+        self._custom_fields = custom_fields
+        self._description = description
+        self._envelope_id = envelope_id
+        self._envelope_uri = envelope_uri
+        self._is21_cfr_part11 = is21_cfr_part11
+        self._is_signature_provider_envelope = is_signature_provider_envelope
+        self._last_modified = last_modified
+        self._name = name
+        self._owner_name = owner_name
+        self._page_count = page_count
+        self._password = password
+        self._sender_email = sender_email
+        self._sender_name = sender_name
+        self._sent_date_time = sent_date_time
+        self._shared = shared
+        self._status = status
+        self._subject = subject
+        self._template_id = template_id
+        self._uri = uri
+
+    @property
+    def completed_date_time(self):
+        &#34;&#34;&#34;
+        Gets the completed_date_time of this FolderItem.
+        Specifies the date and time this item was completed.
+
+        :return: The completed_date_time of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._completed_date_time
+
+    @completed_date_time.setter
+    def completed_date_time(self, completed_date_time):
+        &#34;&#34;&#34;
+        Sets the completed_date_time of this FolderItem.
+        Specifies the date and time this item was completed.
+
+        :param completed_date_time: The completed_date_time of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._completed_date_time = completed_date_time
+
+    @property
+    def created_date_time(self):
+        &#34;&#34;&#34;
+        Gets the created_date_time of this FolderItem.
+        Indicates the date and time the item was created.
+
+        :return: The created_date_time of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_date_time
+
+    @created_date_time.setter
+    def created_date_time(self, created_date_time):
+        &#34;&#34;&#34;
+        Sets the created_date_time of this FolderItem.
+        Indicates the date and time the item was created.
+
+        :param created_date_time: The created_date_time of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_date_time = created_date_time
+
+    @property
+    def custom_fields(self):
+        &#34;&#34;&#34;
+        Gets the custom_fields of this FolderItem.
+        An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
+
+        :return: The custom_fields of this FolderItem.
+        :rtype: list[CustomFieldV2]
+        &#34;&#34;&#34;
+        return self._custom_fields
+
+    @custom_fields.setter
+    def custom_fields(self, custom_fields):
+        &#34;&#34;&#34;
+        Sets the custom_fields of this FolderItem.
+        An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
+
+        :param custom_fields: The custom_fields of this FolderItem.
+        :type: list[CustomFieldV2]
+        &#34;&#34;&#34;
+
+        self._custom_fields = custom_fields
+
+    @property
+    def description(self):
+        &#34;&#34;&#34;
+        Gets the description of this FolderItem.
+        
+
+        :return: The description of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        &#34;&#34;&#34;
+        Sets the description of this FolderItem.
+        
+
+        :param description: The description of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._description = description
+
+    @property
+    def envelope_id(self):
+        &#34;&#34;&#34;
+        Gets the envelope_id of this FolderItem.
+        The envelope ID of the envelope status that failed to post.
+
+        :return: The envelope_id of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_id
+
+    @envelope_id.setter
+    def envelope_id(self, envelope_id):
+        &#34;&#34;&#34;
+        Sets the envelope_id of this FolderItem.
+        The envelope ID of the envelope status that failed to post.
+
+        :param envelope_id: The envelope_id of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_id = envelope_id
+
+    @property
+    def envelope_uri(self):
+        &#34;&#34;&#34;
+        Gets the envelope_uri of this FolderItem.
+        Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
+
+        :return: The envelope_uri of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_uri
+
+    @envelope_uri.setter
+    def envelope_uri(self, envelope_uri):
+        &#34;&#34;&#34;
+        Sets the envelope_uri of this FolderItem.
+        Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
+
+        :param envelope_uri: The envelope_uri of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_uri = envelope_uri
+
+    @property
+    def is21_cfr_part11(self):
+        &#34;&#34;&#34;
+        Gets the is21_cfr_part11 of this FolderItem.
+        When set to **true**, indicates that this module is enabled on the account.
+
+        :return: The is21_cfr_part11 of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is21_cfr_part11
+
+    @is21_cfr_part11.setter
+    def is21_cfr_part11(self, is21_cfr_part11):
+        &#34;&#34;&#34;
+        Sets the is21_cfr_part11 of this FolderItem.
+        When set to **true**, indicates that this module is enabled on the account.
+
+        :param is21_cfr_part11: The is21_cfr_part11 of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is21_cfr_part11 = is21_cfr_part11
+
+    @property
+    def is_signature_provider_envelope(self):
+        &#34;&#34;&#34;
+        Gets the is_signature_provider_envelope of this FolderItem.
+        
+
+        :return: The is_signature_provider_envelope of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is_signature_provider_envelope
+
+    @is_signature_provider_envelope.setter
+    def is_signature_provider_envelope(self, is_signature_provider_envelope):
+        &#34;&#34;&#34;
+        Sets the is_signature_provider_envelope of this FolderItem.
+        
+
+        :param is_signature_provider_envelope: The is_signature_provider_envelope of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is_signature_provider_envelope = is_signature_provider_envelope
+
+    @property
+    def last_modified(self):
+        &#34;&#34;&#34;
+        Gets the last_modified of this FolderItem.
+        
+
+        :return: The last_modified of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified
+
+    @last_modified.setter
+    def last_modified(self, last_modified):
+        &#34;&#34;&#34;
+        Sets the last_modified of this FolderItem.
+        
+
+        :param last_modified: The last_modified of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified = last_modified
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;
+        Gets the name of this FolderItem.
+        
+
+        :return: The name of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;
+        Sets the name of this FolderItem.
+        
+
+        :param name: The name of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def owner_name(self):
+        &#34;&#34;&#34;
+        Gets the owner_name of this FolderItem.
+        Name of the envelope owner.
+
+        :return: The owner_name of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._owner_name
+
+    @owner_name.setter
+    def owner_name(self, owner_name):
+        &#34;&#34;&#34;
+        Sets the owner_name of this FolderItem.
+        Name of the envelope owner.
+
+        :param owner_name: The owner_name of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._owner_name = owner_name
+
+    @property
+    def page_count(self):
+        &#34;&#34;&#34;
+        Gets the page_count of this FolderItem.
+        
+
+        :return: The page_count of this FolderItem.
+        :rtype: int
+        &#34;&#34;&#34;
+        return self._page_count
+
+    @page_count.setter
+    def page_count(self, page_count):
+        &#34;&#34;&#34;
+        Sets the page_count of this FolderItem.
+        
+
+        :param page_count: The page_count of this FolderItem.
+        :type: int
+        &#34;&#34;&#34;
+
+        self._page_count = page_count
+
+    @property
+    def password(self):
+        &#34;&#34;&#34;
+        Gets the password of this FolderItem.
+        
+
+        :return: The password of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        &#34;&#34;&#34;
+        Sets the password of this FolderItem.
+        
+
+        :param password: The password of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._password = password
+
+    @property
+    def sender_email(self):
+        &#34;&#34;&#34;
+        Gets the sender_email of this FolderItem.
+        
+
+        :return: The sender_email of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sender_email
+
+    @sender_email.setter
+    def sender_email(self, sender_email):
+        &#34;&#34;&#34;
+        Sets the sender_email of this FolderItem.
+        
+
+        :param sender_email: The sender_email of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sender_email = sender_email
+
+    @property
+    def sender_name(self):
+        &#34;&#34;&#34;
+        Gets the sender_name of this FolderItem.
+        Name of the envelope sender.
+
+        :return: The sender_name of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sender_name
+
+    @sender_name.setter
+    def sender_name(self, sender_name):
+        &#34;&#34;&#34;
+        Sets the sender_name of this FolderItem.
+        Name of the envelope sender.
+
+        :param sender_name: The sender_name of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sender_name = sender_name
+
+    @property
+    def sent_date_time(self):
+        &#34;&#34;&#34;
+        Gets the sent_date_time of this FolderItem.
+        The date and time the envelope was sent.
+
+        :return: The sent_date_time of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sent_date_time
+
+    @sent_date_time.setter
+    def sent_date_time(self, sent_date_time):
+        &#34;&#34;&#34;
+        Sets the sent_date_time of this FolderItem.
+        The date and time the envelope was sent.
+
+        :param sent_date_time: The sent_date_time of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sent_date_time = sent_date_time
+
+    @property
+    def shared(self):
+        &#34;&#34;&#34;
+        Gets the shared of this FolderItem.
+        When set to **true**, this custom tab is shared.
+
+        :return: The shared of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._shared
+
+    @shared.setter
+    def shared(self, shared):
+        &#34;&#34;&#34;
+        Sets the shared of this FolderItem.
+        When set to **true**, this custom tab is shared.
+
+        :param shared: The shared of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._shared = shared
+
+    @property
+    def status(self):
+        &#34;&#34;&#34;
+        Gets the status of this FolderItem.
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+        :return: The status of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        &#34;&#34;&#34;
+        Sets the status of this FolderItem.
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+        :param status: The status of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._status = status
+
+    @property
+    def subject(self):
+        &#34;&#34;&#34;
+        Gets the subject of this FolderItem.
+        
+
+        :return: The subject of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._subject
+
+    @subject.setter
+    def subject(self, subject):
+        &#34;&#34;&#34;
+        Sets the subject of this FolderItem.
+        
+
+        :param subject: The subject of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._subject = subject
+
+    @property
+    def template_id(self):
+        &#34;&#34;&#34;
+        Gets the template_id of this FolderItem.
+        The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
+
+        :return: The template_id of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._template_id
+
+    @template_id.setter
+    def template_id(self, template_id):
+        &#34;&#34;&#34;
+        Sets the template_id of this FolderItem.
+        The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
+
+        :param template_id: The template_id of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._template_id = template_id
+
+    @property
+    def uri(self):
+        &#34;&#34;&#34;
+        Gets the uri of this FolderItem.
+        
+
+        :return: The uri of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._uri
+
+    @uri.setter
+    def uri(self, uri):
+        &#34;&#34;&#34;
+        Sets the uri of this FolderItem.
+        
+
+        :param uri: The uri of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._uri = uri
+
+    def to_dict(self):
+        &#34;&#34;&#34;
+        Returns the model properties as a dict
+        &#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;
+        Returns the string representation of the model
+        &#34;&#34;&#34;
+        return pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;
+        For `print` and `pprint`
+        &#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are equal
+        &#34;&#34;&#34;
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are not equal
+        &#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.folder_item.FolderItem"><code class="flex name class">
+<span>class <span class="ident">FolderItem</span></span>
+<span>(</span><span>completed_date_time=None, created_date_time=None, custom_fields=None, description=None, envelope_id=None, envelope_uri=None, is21_cfr_part11=None, is_signature_provider_envelope=None, last_modified=None, name=None, owner_name=None, page_count=None, password=None, sender_email=None, sender_name=None, sent_date_time=None, shared=None, status=None, subject=None, template_id=None, uri=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.
+Do not edit the class manually.</p>
+<p>FolderItem - a model defined in Swagger</p>
+<p>:param dict swaggerTypes: The key is attribute name
+and the value is attribute type.
+:param dict attributeMap: The key is attribute name
+and the value is json key in definition.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FolderItem(object):
+    &#34;&#34;&#34;
+    NOTE: This class is auto generated by the swagger code generator program.
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+    def __init__(self, completed_date_time=None, created_date_time=None, custom_fields=None, description=None, envelope_id=None, envelope_uri=None, is21_cfr_part11=None, is_signature_provider_envelope=None, last_modified=None, name=None, owner_name=None, page_count=None, password=None, sender_email=None, sender_name=None, sent_date_time=None, shared=None, status=None, subject=None, template_id=None, uri=None):
+        &#34;&#34;&#34;
+        FolderItem - a model defined in Swagger
+
+        :param dict swaggerTypes: The key is attribute name
+                                  and the value is attribute type.
+        :param dict attributeMap: The key is attribute name
+                                  and the value is json key in definition.
+        &#34;&#34;&#34;
+        self.swagger_types = {
+            &#39;completed_date_time&#39;: &#39;str&#39;,
+            &#39;created_date_time&#39;: &#39;str&#39;,
+            &#39;custom_fields&#39;: &#39;list[CustomFieldV2]&#39;,
+            &#39;description&#39;: &#39;str&#39;,
+            &#39;envelope_id&#39;: &#39;str&#39;,
+            &#39;envelope_uri&#39;: &#39;str&#39;,
+            &#39;is21_cfr_part11&#39;: &#39;str&#39;,
+            &#39;is_signature_provider_envelope&#39;: &#39;str&#39;,
+            &#39;last_modified&#39;: &#39;str&#39;,
+            &#39;name&#39;: &#39;str&#39;,
+            &#39;owner_name&#39;: &#39;str&#39;,
+            &#39;page_count&#39;: &#39;int&#39;,
+            &#39;password&#39;: &#39;str&#39;,
+            &#39;sender_email&#39;: &#39;str&#39;,
+            &#39;sender_name&#39;: &#39;str&#39;,
+            &#39;sent_date_time&#39;: &#39;str&#39;,
+            &#39;shared&#39;: &#39;str&#39;,
+            &#39;status&#39;: &#39;str&#39;,
+            &#39;subject&#39;: &#39;str&#39;,
+            &#39;template_id&#39;: &#39;str&#39;,
+            &#39;uri&#39;: &#39;str&#39;
+        }
+
+        self.attribute_map = {
+            &#39;completed_date_time&#39;: &#39;completedDateTime&#39;,
+            &#39;created_date_time&#39;: &#39;createdDateTime&#39;,
+            &#39;custom_fields&#39;: &#39;customFields&#39;,
+            &#39;description&#39;: &#39;description&#39;,
+            &#39;envelope_id&#39;: &#39;envelopeId&#39;,
+            &#39;envelope_uri&#39;: &#39;envelopeUri&#39;,
+            &#39;is21_cfr_part11&#39;: &#39;is21CFRPart11&#39;,
+            &#39;is_signature_provider_envelope&#39;: &#39;isSignatureProviderEnvelope&#39;,
+            &#39;last_modified&#39;: &#39;lastModified&#39;,
+            &#39;name&#39;: &#39;name&#39;,
+            &#39;owner_name&#39;: &#39;ownerName&#39;,
+            &#39;page_count&#39;: &#39;pageCount&#39;,
+            &#39;password&#39;: &#39;password&#39;,
+            &#39;sender_email&#39;: &#39;senderEmail&#39;,
+            &#39;sender_name&#39;: &#39;senderName&#39;,
+            &#39;sent_date_time&#39;: &#39;sentDateTime&#39;,
+            &#39;shared&#39;: &#39;shared&#39;,
+            &#39;status&#39;: &#39;status&#39;,
+            &#39;subject&#39;: &#39;subject&#39;,
+            &#39;template_id&#39;: &#39;templateId&#39;,
+            &#39;uri&#39;: &#39;uri&#39;
+        }
+
+        self._completed_date_time = completed_date_time
+        self._created_date_time = created_date_time
+        self._custom_fields = custom_fields
+        self._description = description
+        self._envelope_id = envelope_id
+        self._envelope_uri = envelope_uri
+        self._is21_cfr_part11 = is21_cfr_part11
+        self._is_signature_provider_envelope = is_signature_provider_envelope
+        self._last_modified = last_modified
+        self._name = name
+        self._owner_name = owner_name
+        self._page_count = page_count
+        self._password = password
+        self._sender_email = sender_email
+        self._sender_name = sender_name
+        self._sent_date_time = sent_date_time
+        self._shared = shared
+        self._status = status
+        self._subject = subject
+        self._template_id = template_id
+        self._uri = uri
+
+    @property
+    def completed_date_time(self):
+        &#34;&#34;&#34;
+        Gets the completed_date_time of this FolderItem.
+        Specifies the date and time this item was completed.
+
+        :return: The completed_date_time of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._completed_date_time
+
+    @completed_date_time.setter
+    def completed_date_time(self, completed_date_time):
+        &#34;&#34;&#34;
+        Sets the completed_date_time of this FolderItem.
+        Specifies the date and time this item was completed.
+
+        :param completed_date_time: The completed_date_time of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._completed_date_time = completed_date_time
+
+    @property
+    def created_date_time(self):
+        &#34;&#34;&#34;
+        Gets the created_date_time of this FolderItem.
+        Indicates the date and time the item was created.
+
+        :return: The created_date_time of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_date_time
+
+    @created_date_time.setter
+    def created_date_time(self, created_date_time):
+        &#34;&#34;&#34;
+        Sets the created_date_time of this FolderItem.
+        Indicates the date and time the item was created.
+
+        :param created_date_time: The created_date_time of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_date_time = created_date_time
+
+    @property
+    def custom_fields(self):
+        &#34;&#34;&#34;
+        Gets the custom_fields of this FolderItem.
+        An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
+
+        :return: The custom_fields of this FolderItem.
+        :rtype: list[CustomFieldV2]
+        &#34;&#34;&#34;
+        return self._custom_fields
+
+    @custom_fields.setter
+    def custom_fields(self, custom_fields):
+        &#34;&#34;&#34;
+        Sets the custom_fields of this FolderItem.
+        An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
+
+        :param custom_fields: The custom_fields of this FolderItem.
+        :type: list[CustomFieldV2]
+        &#34;&#34;&#34;
+
+        self._custom_fields = custom_fields
+
+    @property
+    def description(self):
+        &#34;&#34;&#34;
+        Gets the description of this FolderItem.
+        
+
+        :return: The description of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        &#34;&#34;&#34;
+        Sets the description of this FolderItem.
+        
+
+        :param description: The description of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._description = description
+
+    @property
+    def envelope_id(self):
+        &#34;&#34;&#34;
+        Gets the envelope_id of this FolderItem.
+        The envelope ID of the envelope status that failed to post.
+
+        :return: The envelope_id of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_id
+
+    @envelope_id.setter
+    def envelope_id(self, envelope_id):
+        &#34;&#34;&#34;
+        Sets the envelope_id of this FolderItem.
+        The envelope ID of the envelope status that failed to post.
+
+        :param envelope_id: The envelope_id of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_id = envelope_id
+
+    @property
+    def envelope_uri(self):
+        &#34;&#34;&#34;
+        Gets the envelope_uri of this FolderItem.
+        Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
+
+        :return: The envelope_uri of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_uri
+
+    @envelope_uri.setter
+    def envelope_uri(self, envelope_uri):
+        &#34;&#34;&#34;
+        Sets the envelope_uri of this FolderItem.
+        Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
+
+        :param envelope_uri: The envelope_uri of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_uri = envelope_uri
+
+    @property
+    def is21_cfr_part11(self):
+        &#34;&#34;&#34;
+        Gets the is21_cfr_part11 of this FolderItem.
+        When set to **true**, indicates that this module is enabled on the account.
+
+        :return: The is21_cfr_part11 of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is21_cfr_part11
+
+    @is21_cfr_part11.setter
+    def is21_cfr_part11(self, is21_cfr_part11):
+        &#34;&#34;&#34;
+        Sets the is21_cfr_part11 of this FolderItem.
+        When set to **true**, indicates that this module is enabled on the account.
+
+        :param is21_cfr_part11: The is21_cfr_part11 of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is21_cfr_part11 = is21_cfr_part11
+
+    @property
+    def is_signature_provider_envelope(self):
+        &#34;&#34;&#34;
+        Gets the is_signature_provider_envelope of this FolderItem.
+        
+
+        :return: The is_signature_provider_envelope of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is_signature_provider_envelope
+
+    @is_signature_provider_envelope.setter
+    def is_signature_provider_envelope(self, is_signature_provider_envelope):
+        &#34;&#34;&#34;
+        Sets the is_signature_provider_envelope of this FolderItem.
+        
+
+        :param is_signature_provider_envelope: The is_signature_provider_envelope of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is_signature_provider_envelope = is_signature_provider_envelope
+
+    @property
+    def last_modified(self):
+        &#34;&#34;&#34;
+        Gets the last_modified of this FolderItem.
+        
+
+        :return: The last_modified of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_modified
+
+    @last_modified.setter
+    def last_modified(self, last_modified):
+        &#34;&#34;&#34;
+        Sets the last_modified of this FolderItem.
+        
+
+        :param last_modified: The last_modified of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_modified = last_modified
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;
+        Gets the name of this FolderItem.
+        
+
+        :return: The name of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;
+        Sets the name of this FolderItem.
+        
+
+        :param name: The name of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def owner_name(self):
+        &#34;&#34;&#34;
+        Gets the owner_name of this FolderItem.
+        Name of the envelope owner.
+
+        :return: The owner_name of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._owner_name
+
+    @owner_name.setter
+    def owner_name(self, owner_name):
+        &#34;&#34;&#34;
+        Sets the owner_name of this FolderItem.
+        Name of the envelope owner.
+
+        :param owner_name: The owner_name of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._owner_name = owner_name
+
+    @property
+    def page_count(self):
+        &#34;&#34;&#34;
+        Gets the page_count of this FolderItem.
+        
+
+        :return: The page_count of this FolderItem.
+        :rtype: int
+        &#34;&#34;&#34;
+        return self._page_count
+
+    @page_count.setter
+    def page_count(self, page_count):
+        &#34;&#34;&#34;
+        Sets the page_count of this FolderItem.
+        
+
+        :param page_count: The page_count of this FolderItem.
+        :type: int
+        &#34;&#34;&#34;
+
+        self._page_count = page_count
+
+    @property
+    def password(self):
+        &#34;&#34;&#34;
+        Gets the password of this FolderItem.
+        
+
+        :return: The password of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        &#34;&#34;&#34;
+        Sets the password of this FolderItem.
+        
+
+        :param password: The password of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._password = password
+
+    @property
+    def sender_email(self):
+        &#34;&#34;&#34;
+        Gets the sender_email of this FolderItem.
+        
+
+        :return: The sender_email of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sender_email
+
+    @sender_email.setter
+    def sender_email(self, sender_email):
+        &#34;&#34;&#34;
+        Sets the sender_email of this FolderItem.
+        
+
+        :param sender_email: The sender_email of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sender_email = sender_email
+
+    @property
+    def sender_name(self):
+        &#34;&#34;&#34;
+        Gets the sender_name of this FolderItem.
+        Name of the envelope sender.
+
+        :return: The sender_name of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sender_name
+
+    @sender_name.setter
+    def sender_name(self, sender_name):
+        &#34;&#34;&#34;
+        Sets the sender_name of this FolderItem.
+        Name of the envelope sender.
+
+        :param sender_name: The sender_name of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sender_name = sender_name
+
+    @property
+    def sent_date_time(self):
+        &#34;&#34;&#34;
+        Gets the sent_date_time of this FolderItem.
+        The date and time the envelope was sent.
+
+        :return: The sent_date_time of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sent_date_time
+
+    @sent_date_time.setter
+    def sent_date_time(self, sent_date_time):
+        &#34;&#34;&#34;
+        Sets the sent_date_time of this FolderItem.
+        The date and time the envelope was sent.
+
+        :param sent_date_time: The sent_date_time of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sent_date_time = sent_date_time
+
+    @property
+    def shared(self):
+        &#34;&#34;&#34;
+        Gets the shared of this FolderItem.
+        When set to **true**, this custom tab is shared.
+
+        :return: The shared of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._shared
+
+    @shared.setter
+    def shared(self, shared):
+        &#34;&#34;&#34;
+        Sets the shared of this FolderItem.
+        When set to **true**, this custom tab is shared.
+
+        :param shared: The shared of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._shared = shared
+
+    @property
+    def status(self):
+        &#34;&#34;&#34;
+        Gets the status of this FolderItem.
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+        :return: The status of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        &#34;&#34;&#34;
+        Sets the status of this FolderItem.
+        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+        :param status: The status of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._status = status
+
+    @property
+    def subject(self):
+        &#34;&#34;&#34;
+        Gets the subject of this FolderItem.
+        
+
+        :return: The subject of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._subject
+
+    @subject.setter
+    def subject(self, subject):
+        &#34;&#34;&#34;
+        Sets the subject of this FolderItem.
+        
+
+        :param subject: The subject of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._subject = subject
+
+    @property
+    def template_id(self):
+        &#34;&#34;&#34;
+        Gets the template_id of this FolderItem.
+        The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
+
+        :return: The template_id of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._template_id
+
+    @template_id.setter
+    def template_id(self, template_id):
+        &#34;&#34;&#34;
+        Sets the template_id of this FolderItem.
+        The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
+
+        :param template_id: The template_id of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._template_id = template_id
+
+    @property
+    def uri(self):
+        &#34;&#34;&#34;
+        Gets the uri of this FolderItem.
+        
+
+        :return: The uri of this FolderItem.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._uri
+
+    @uri.setter
+    def uri(self, uri):
+        &#34;&#34;&#34;
+        Sets the uri of this FolderItem.
+        
+
+        :param uri: The uri of this FolderItem.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._uri = uri
+
+    def to_dict(self):
+        &#34;&#34;&#34;
+        Returns the model properties as a dict
+        &#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;
+        Returns the string representation of the model
+        &#34;&#34;&#34;
+        return pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;
+        For `print` and `pprint`
+        &#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are equal
+        &#34;&#34;&#34;
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are not equal
+        &#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.folder_item.FolderItem.completed_date_time"><code class="name">var <span class="ident">completed_date_time</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the completed_date_time of this FolderItem.
+Specifies the date and time this item was completed.</p>
+<p>:return: The completed_date_time of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def completed_date_time(self):
+    &#34;&#34;&#34;
+    Gets the completed_date_time of this FolderItem.
+    Specifies the date and time this item was completed.
+
+    :return: The completed_date_time of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._completed_date_time</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.created_date_time"><code class="name">var <span class="ident">created_date_time</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the created_date_time of this FolderItem.
+Indicates the date and time the item was created.</p>
+<p>:return: The created_date_time of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def created_date_time(self):
+    &#34;&#34;&#34;
+    Gets the created_date_time of this FolderItem.
+    Indicates the date and time the item was created.
+
+    :return: The created_date_time of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._created_date_time</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.custom_fields"><code class="name">var <span class="ident">custom_fields</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the custom_fields of this FolderItem.
+An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.</p>
+<p>:return: The custom_fields of this FolderItem.
+:rtype: list[CustomFieldV2]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def custom_fields(self):
+    &#34;&#34;&#34;
+    Gets the custom_fields of this FolderItem.
+    An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
+
+    :return: The custom_fields of this FolderItem.
+    :rtype: list[CustomFieldV2]
+    &#34;&#34;&#34;
+    return self._custom_fields</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.description"><code class="name">var <span class="ident">description</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the description of this FolderItem.</p>
+<p>:return: The description of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def description(self):
+    &#34;&#34;&#34;
+    Gets the description of this FolderItem.
+    
+
+    :return: The description of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._description</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.envelope_id"><code class="name">var <span class="ident">envelope_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_id of this FolderItem.
+The envelope ID of the envelope status that failed to post.</p>
+<p>:return: The envelope_id of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_id(self):
+    &#34;&#34;&#34;
+    Gets the envelope_id of this FolderItem.
+    The envelope ID of the envelope status that failed to post.
+
+    :return: The envelope_id of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._envelope_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.envelope_uri"><code class="name">var <span class="ident">envelope_uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_uri of this FolderItem.
+Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.</p>
+<p>:return: The envelope_uri of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_uri(self):
+    &#34;&#34;&#34;
+    Gets the envelope_uri of this FolderItem.
+    Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
+
+    :return: The envelope_uri of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._envelope_uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.is21_cfr_part11"><code class="name">var <span class="ident">is21_cfr_part11</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the is21_cfr_part11 of this FolderItem.
+When set to <strong>true</strong>, indicates that this module is enabled on the account.</p>
+<p>:return: The is21_cfr_part11 of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is21_cfr_part11(self):
+    &#34;&#34;&#34;
+    Gets the is21_cfr_part11 of this FolderItem.
+    When set to **true**, indicates that this module is enabled on the account.
+
+    :return: The is21_cfr_part11 of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._is21_cfr_part11</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.is_signature_provider_envelope"><code class="name">var <span class="ident">is_signature_provider_envelope</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the is_signature_provider_envelope of this FolderItem.</p>
+<p>:return: The is_signature_provider_envelope of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is_signature_provider_envelope(self):
+    &#34;&#34;&#34;
+    Gets the is_signature_provider_envelope of this FolderItem.
+    
+
+    :return: The is_signature_provider_envelope of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._is_signature_provider_envelope</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.last_modified"><code class="name">var <span class="ident">last_modified</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_modified of this FolderItem.</p>
+<p>:return: The last_modified of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_modified(self):
+    &#34;&#34;&#34;
+    Gets the last_modified of this FolderItem.
+    
+
+    :return: The last_modified of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._last_modified</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the name of this FolderItem.</p>
+<p>:return: The name of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name(self):
+    &#34;&#34;&#34;
+    Gets the name of this FolderItem.
+    
+
+    :return: The name of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.owner_name"><code class="name">var <span class="ident">owner_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the owner_name of this FolderItem.
+Name of the envelope owner.</p>
+<p>:return: The owner_name of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def owner_name(self):
+    &#34;&#34;&#34;
+    Gets the owner_name of this FolderItem.
+    Name of the envelope owner.
+
+    :return: The owner_name of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._owner_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.page_count"><code class="name">var <span class="ident">page_count</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the page_count of this FolderItem.</p>
+<p>:return: The page_count of this FolderItem.
+:rtype: int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def page_count(self):
+    &#34;&#34;&#34;
+    Gets the page_count of this FolderItem.
+    
+
+    :return: The page_count of this FolderItem.
+    :rtype: int
+    &#34;&#34;&#34;
+    return self._page_count</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.password"><code class="name">var <span class="ident">password</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the password of this FolderItem.</p>
+<p>:return: The password of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def password(self):
+    &#34;&#34;&#34;
+    Gets the password of this FolderItem.
+    
+
+    :return: The password of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._password</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.sender_email"><code class="name">var <span class="ident">sender_email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sender_email of this FolderItem.</p>
+<p>:return: The sender_email of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sender_email(self):
+    &#34;&#34;&#34;
+    Gets the sender_email of this FolderItem.
+    
+
+    :return: The sender_email of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sender_email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.sender_name"><code class="name">var <span class="ident">sender_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sender_name of this FolderItem.
+Name of the envelope sender.</p>
+<p>:return: The sender_name of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sender_name(self):
+    &#34;&#34;&#34;
+    Gets the sender_name of this FolderItem.
+    Name of the envelope sender.
+
+    :return: The sender_name of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sender_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.sent_date_time"><code class="name">var <span class="ident">sent_date_time</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sent_date_time of this FolderItem.
+The date and time the envelope was sent.</p>
+<p>:return: The sent_date_time of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sent_date_time(self):
+    &#34;&#34;&#34;
+    Gets the sent_date_time of this FolderItem.
+    The date and time the envelope was sent.
+
+    :return: The sent_date_time of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sent_date_time</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.shared"><code class="name">var <span class="ident">shared</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the shared of this FolderItem.
+When set to <strong>true</strong>, this custom tab is shared.</p>
+<p>:return: The shared of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def shared(self):
+    &#34;&#34;&#34;
+    Gets the shared of this FolderItem.
+    When set to **true**, this custom tab is shared.
+
+    :return: The shared of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._shared</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.status"><code class="name">var <span class="ident">status</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the status of this FolderItem.
+Indicates the envelope status. Valid values are:
+* sent - The envelope is sent to the recipients.
+* created - The envelope is saved as a draft and can be modified and sent later.</p>
+<p>:return: The status of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def status(self):
+    &#34;&#34;&#34;
+    Gets the status of this FolderItem.
+    Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+
+    :return: The status of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._status</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.subject"><code class="name">var <span class="ident">subject</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the subject of this FolderItem.</p>
+<p>:return: The subject of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def subject(self):
+    &#34;&#34;&#34;
+    Gets the subject of this FolderItem.
+    
+
+    :return: The subject of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._subject</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.template_id"><code class="name">var <span class="ident">template_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the template_id of this FolderItem.
+The unique identifier of the template. If this is not provided, DocuSign will generate a value. </p>
+<p>:return: The template_id of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def template_id(self):
+    &#34;&#34;&#34;
+    Gets the template_id of this FolderItem.
+    The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
+
+    :return: The template_id of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._template_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.uri"><code class="name">var <span class="ident">uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the uri of this FolderItem.</p>
+<p>:return: The uri of this FolderItem.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def uri(self):
+    &#34;&#34;&#34;
+    Gets the uri of this FolderItem.
+    
+
+    :return: The uri of this FolderItem.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._uri</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.folder_item.FolderItem.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;
+    Returns the model properties as a dict
+    &#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.folder_item.FolderItem.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;
+    Returns the string representation of the model
+    &#34;&#34;&#34;
+    return pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.folder_item.FolderItem" href="#docusign_esign.models.folder_item.FolderItem">FolderItem</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.completed_date_time" href="#docusign_esign.models.folder_item.FolderItem.completed_date_time">completed_date_time</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.created_date_time" href="#docusign_esign.models.folder_item.FolderItem.created_date_time">created_date_time</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.custom_fields" href="#docusign_esign.models.folder_item.FolderItem.custom_fields">custom_fields</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.description" href="#docusign_esign.models.folder_item.FolderItem.description">description</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.envelope_id" href="#docusign_esign.models.folder_item.FolderItem.envelope_id">envelope_id</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.envelope_uri" href="#docusign_esign.models.folder_item.FolderItem.envelope_uri">envelope_uri</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.is21_cfr_part11" href="#docusign_esign.models.folder_item.FolderItem.is21_cfr_part11">is21_cfr_part11</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.is_signature_provider_envelope" href="#docusign_esign.models.folder_item.FolderItem.is_signature_provider_envelope">is_signature_provider_envelope</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.last_modified" href="#docusign_esign.models.folder_item.FolderItem.last_modified">last_modified</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.name" href="#docusign_esign.models.folder_item.FolderItem.name">name</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.owner_name" href="#docusign_esign.models.folder_item.FolderItem.owner_name">owner_name</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.page_count" href="#docusign_esign.models.folder_item.FolderItem.page_count">page_count</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.password" href="#docusign_esign.models.folder_item.FolderItem.password">password</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.sender_email" href="#docusign_esign.models.folder_item.FolderItem.sender_email">sender_email</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.sender_name" href="#docusign_esign.models.folder_item.FolderItem.sender_name">sender_name</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.sent_date_time" href="#docusign_esign.models.folder_item.FolderItem.sent_date_time">sent_date_time</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.shared" href="#docusign_esign.models.folder_item.FolderItem.shared">shared</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.status" href="#docusign_esign.models.folder_item.FolderItem.status">status</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.subject" href="#docusign_esign.models.folder_item.FolderItem.subject">subject</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.template_id" href="#docusign_esign.models.folder_item.FolderItem.template_id">template_id</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.to_dict" href="#docusign_esign.models.folder_item.FolderItem.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.to_str" href="#docusign_esign.models.folder_item.FolderItem.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.folder_item.FolderItem.uri" href="#docusign_esign.models.folder_item.FolderItem.uri">uri</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

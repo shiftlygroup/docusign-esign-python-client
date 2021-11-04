@@ -1,0 +1,2664 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.report_in_product_get API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.report_in_product_get</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class ReportInProductGet(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;custom_field_filter&#39;: &#39;str&#39;,
+        &#39;date_range_custom_from_date&#39;: &#39;str&#39;,
+        &#39;date_range_custom_to_date&#39;: &#39;str&#39;,
+        &#39;date_range_filter&#39;: &#39;str&#39;,
+        &#39;display_order&#39;: &#39;str&#39;,
+        &#39;envelope_date_type_filter&#39;: &#39;str&#39;,
+        &#39;envelope_recipient_name_contains_filter&#39;: &#39;str&#39;,
+        &#39;envelope_status_filter&#39;: &#39;str&#39;,
+        &#39;envelope_subject_contains_filter&#39;: &#39;str&#39;,
+        &#39;fields&#39;: &#39;list[ReportInProductField]&#39;,
+        &#39;last_scheduled_execution_date&#39;: &#39;str&#39;,
+        &#39;last_scheduled_execution_success_date&#39;: &#39;str&#39;,
+        &#39;max_download_rows&#39;: &#39;str&#39;,
+        &#39;max_grid_rows&#39;: &#39;str&#39;,
+        &#39;max_scheduled_rows&#39;: &#39;str&#39;,
+        &#39;period_length_filter&#39;: &#39;str&#39;,
+        &#39;report_customized_id&#39;: &#39;str&#39;,
+        &#39;report_description&#39;: &#39;str&#39;,
+        &#39;report_id&#39;: &#39;str&#39;,
+        &#39;report_name&#39;: &#39;str&#39;,
+        &#39;report_type&#39;: &#39;str&#39;,
+        &#39;run_uri&#39;: &#39;str&#39;,
+        &#39;save_uri&#39;: &#39;str&#39;,
+        &#39;schedule_id&#39;: &#39;str&#39;,
+        &#39;sent_by_details&#39;: &#39;ReportInProductSentByDetails&#39;,
+        &#39;sent_by_filter&#39;: &#39;str&#39;,
+        &#39;sent_by_ids&#39;: &#39;str&#39;,
+        &#39;sort_field_direction&#39;: &#39;str&#39;,
+        &#39;sort_field_name&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;custom_field_filter&#39;: &#39;customFieldFilter&#39;,
+        &#39;date_range_custom_from_date&#39;: &#39;dateRangeCustomFromDate&#39;,
+        &#39;date_range_custom_to_date&#39;: &#39;dateRangeCustomToDate&#39;,
+        &#39;date_range_filter&#39;: &#39;dateRangeFilter&#39;,
+        &#39;display_order&#39;: &#39;displayOrder&#39;,
+        &#39;envelope_date_type_filter&#39;: &#39;envelopeDateTypeFilter&#39;,
+        &#39;envelope_recipient_name_contains_filter&#39;: &#39;envelopeRecipientNameContainsFilter&#39;,
+        &#39;envelope_status_filter&#39;: &#39;envelopeStatusFilter&#39;,
+        &#39;envelope_subject_contains_filter&#39;: &#39;envelopeSubjectContainsFilter&#39;,
+        &#39;fields&#39;: &#39;fields&#39;,
+        &#39;last_scheduled_execution_date&#39;: &#39;lastScheduledExecutionDate&#39;,
+        &#39;last_scheduled_execution_success_date&#39;: &#39;lastScheduledExecutionSuccessDate&#39;,
+        &#39;max_download_rows&#39;: &#39;maxDownloadRows&#39;,
+        &#39;max_grid_rows&#39;: &#39;maxGridRows&#39;,
+        &#39;max_scheduled_rows&#39;: &#39;maxScheduledRows&#39;,
+        &#39;period_length_filter&#39;: &#39;periodLengthFilter&#39;,
+        &#39;report_customized_id&#39;: &#39;reportCustomizedId&#39;,
+        &#39;report_description&#39;: &#39;reportDescription&#39;,
+        &#39;report_id&#39;: &#39;reportId&#39;,
+        &#39;report_name&#39;: &#39;reportName&#39;,
+        &#39;report_type&#39;: &#39;reportType&#39;,
+        &#39;run_uri&#39;: &#39;runUri&#39;,
+        &#39;save_uri&#39;: &#39;saveUri&#39;,
+        &#39;schedule_id&#39;: &#39;scheduleId&#39;,
+        &#39;sent_by_details&#39;: &#39;sentByDetails&#39;,
+        &#39;sent_by_filter&#39;: &#39;sentByFilter&#39;,
+        &#39;sent_by_ids&#39;: &#39;sentByIds&#39;,
+        &#39;sort_field_direction&#39;: &#39;sortFieldDirection&#39;,
+        &#39;sort_field_name&#39;: &#39;sortFieldName&#39;
+    }
+
+    def __init__(self, custom_field_filter=None, date_range_custom_from_date=None, date_range_custom_to_date=None, date_range_filter=None, display_order=None, envelope_date_type_filter=None, envelope_recipient_name_contains_filter=None, envelope_status_filter=None, envelope_subject_contains_filter=None, fields=None, last_scheduled_execution_date=None, last_scheduled_execution_success_date=None, max_download_rows=None, max_grid_rows=None, max_scheduled_rows=None, period_length_filter=None, report_customized_id=None, report_description=None, report_id=None, report_name=None, report_type=None, run_uri=None, save_uri=None, schedule_id=None, sent_by_details=None, sent_by_filter=None, sent_by_ids=None, sort_field_direction=None, sort_field_name=None):  # noqa: E501
+        &#34;&#34;&#34;ReportInProductGet - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._custom_field_filter = None
+        self._date_range_custom_from_date = None
+        self._date_range_custom_to_date = None
+        self._date_range_filter = None
+        self._display_order = None
+        self._envelope_date_type_filter = None
+        self._envelope_recipient_name_contains_filter = None
+        self._envelope_status_filter = None
+        self._envelope_subject_contains_filter = None
+        self._fields = None
+        self._last_scheduled_execution_date = None
+        self._last_scheduled_execution_success_date = None
+        self._max_download_rows = None
+        self._max_grid_rows = None
+        self._max_scheduled_rows = None
+        self._period_length_filter = None
+        self._report_customized_id = None
+        self._report_description = None
+        self._report_id = None
+        self._report_name = None
+        self._report_type = None
+        self._run_uri = None
+        self._save_uri = None
+        self._schedule_id = None
+        self._sent_by_details = None
+        self._sent_by_filter = None
+        self._sent_by_ids = None
+        self._sort_field_direction = None
+        self._sort_field_name = None
+        self.discriminator = None
+
+        if custom_field_filter is not None:
+            self.custom_field_filter = custom_field_filter
+        if date_range_custom_from_date is not None:
+            self.date_range_custom_from_date = date_range_custom_from_date
+        if date_range_custom_to_date is not None:
+            self.date_range_custom_to_date = date_range_custom_to_date
+        if date_range_filter is not None:
+            self.date_range_filter = date_range_filter
+        if display_order is not None:
+            self.display_order = display_order
+        if envelope_date_type_filter is not None:
+            self.envelope_date_type_filter = envelope_date_type_filter
+        if envelope_recipient_name_contains_filter is not None:
+            self.envelope_recipient_name_contains_filter = envelope_recipient_name_contains_filter
+        if envelope_status_filter is not None:
+            self.envelope_status_filter = envelope_status_filter
+        if envelope_subject_contains_filter is not None:
+            self.envelope_subject_contains_filter = envelope_subject_contains_filter
+        if fields is not None:
+            self.fields = fields
+        if last_scheduled_execution_date is not None:
+            self.last_scheduled_execution_date = last_scheduled_execution_date
+        if last_scheduled_execution_success_date is not None:
+            self.last_scheduled_execution_success_date = last_scheduled_execution_success_date
+        if max_download_rows is not None:
+            self.max_download_rows = max_download_rows
+        if max_grid_rows is not None:
+            self.max_grid_rows = max_grid_rows
+        if max_scheduled_rows is not None:
+            self.max_scheduled_rows = max_scheduled_rows
+        if period_length_filter is not None:
+            self.period_length_filter = period_length_filter
+        if report_customized_id is not None:
+            self.report_customized_id = report_customized_id
+        if report_description is not None:
+            self.report_description = report_description
+        if report_id is not None:
+            self.report_id = report_id
+        if report_name is not None:
+            self.report_name = report_name
+        if report_type is not None:
+            self.report_type = report_type
+        if run_uri is not None:
+            self.run_uri = run_uri
+        if save_uri is not None:
+            self.save_uri = save_uri
+        if schedule_id is not None:
+            self.schedule_id = schedule_id
+        if sent_by_details is not None:
+            self.sent_by_details = sent_by_details
+        if sent_by_filter is not None:
+            self.sent_by_filter = sent_by_filter
+        if sent_by_ids is not None:
+            self.sent_by_ids = sent_by_ids
+        if sort_field_direction is not None:
+            self.sort_field_direction = sort_field_direction
+        if sort_field_name is not None:
+            self.sort_field_name = sort_field_name
+
+    @property
+    def custom_field_filter(self):
+        &#34;&#34;&#34;Gets the custom_field_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_field_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_field_filter
+
+    @custom_field_filter.setter
+    def custom_field_filter(self, custom_field_filter):
+        &#34;&#34;&#34;Sets the custom_field_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param custom_field_filter: The custom_field_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_field_filter = custom_field_filter
+
+    @property
+    def date_range_custom_from_date(self):
+        &#34;&#34;&#34;Gets the date_range_custom_from_date of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The date_range_custom_from_date of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._date_range_custom_from_date
+
+    @date_range_custom_from_date.setter
+    def date_range_custom_from_date(self, date_range_custom_from_date):
+        &#34;&#34;&#34;Sets the date_range_custom_from_date of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param date_range_custom_from_date: The date_range_custom_from_date of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._date_range_custom_from_date = date_range_custom_from_date
+
+    @property
+    def date_range_custom_to_date(self):
+        &#34;&#34;&#34;Gets the date_range_custom_to_date of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The date_range_custom_to_date of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._date_range_custom_to_date
+
+    @date_range_custom_to_date.setter
+    def date_range_custom_to_date(self, date_range_custom_to_date):
+        &#34;&#34;&#34;Sets the date_range_custom_to_date of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param date_range_custom_to_date: The date_range_custom_to_date of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._date_range_custom_to_date = date_range_custom_to_date
+
+    @property
+    def date_range_filter(self):
+        &#34;&#34;&#34;Gets the date_range_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The date_range_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._date_range_filter
+
+    @date_range_filter.setter
+    def date_range_filter(self, date_range_filter):
+        &#34;&#34;&#34;Sets the date_range_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param date_range_filter: The date_range_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._date_range_filter = date_range_filter
+
+    @property
+    def display_order(self):
+        &#34;&#34;&#34;Gets the display_order of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The display_order of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_order
+
+    @display_order.setter
+    def display_order(self, display_order):
+        &#34;&#34;&#34;Sets the display_order of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param display_order: The display_order of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_order = display_order
+
+    @property
+    def envelope_date_type_filter(self):
+        &#34;&#34;&#34;Gets the envelope_date_type_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_date_type_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_date_type_filter
+
+    @envelope_date_type_filter.setter
+    def envelope_date_type_filter(self, envelope_date_type_filter):
+        &#34;&#34;&#34;Sets the envelope_date_type_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param envelope_date_type_filter: The envelope_date_type_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_date_type_filter = envelope_date_type_filter
+
+    @property
+    def envelope_recipient_name_contains_filter(self):
+        &#34;&#34;&#34;Gets the envelope_recipient_name_contains_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_recipient_name_contains_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_recipient_name_contains_filter
+
+    @envelope_recipient_name_contains_filter.setter
+    def envelope_recipient_name_contains_filter(self, envelope_recipient_name_contains_filter):
+        &#34;&#34;&#34;Sets the envelope_recipient_name_contains_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param envelope_recipient_name_contains_filter: The envelope_recipient_name_contains_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_recipient_name_contains_filter = envelope_recipient_name_contains_filter
+
+    @property
+    def envelope_status_filter(self):
+        &#34;&#34;&#34;Gets the envelope_status_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_status_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_status_filter
+
+    @envelope_status_filter.setter
+    def envelope_status_filter(self, envelope_status_filter):
+        &#34;&#34;&#34;Sets the envelope_status_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param envelope_status_filter: The envelope_status_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_status_filter = envelope_status_filter
+
+    @property
+    def envelope_subject_contains_filter(self):
+        &#34;&#34;&#34;Gets the envelope_subject_contains_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_subject_contains_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_subject_contains_filter
+
+    @envelope_subject_contains_filter.setter
+    def envelope_subject_contains_filter(self, envelope_subject_contains_filter):
+        &#34;&#34;&#34;Sets the envelope_subject_contains_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param envelope_subject_contains_filter: The envelope_subject_contains_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_subject_contains_filter = envelope_subject_contains_filter
+
+    @property
+    def fields(self):
+        &#34;&#34;&#34;Gets the fields of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The fields of this ReportInProductGet.  # noqa: E501
+        :rtype: list[ReportInProductField]
+        &#34;&#34;&#34;
+        return self._fields
+
+    @fields.setter
+    def fields(self, fields):
+        &#34;&#34;&#34;Sets the fields of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param fields: The fields of this ReportInProductGet.  # noqa: E501
+        :type: list[ReportInProductField]
+        &#34;&#34;&#34;
+
+        self._fields = fields
+
+    @property
+    def last_scheduled_execution_date(self):
+        &#34;&#34;&#34;Gets the last_scheduled_execution_date of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The last_scheduled_execution_date of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_scheduled_execution_date
+
+    @last_scheduled_execution_date.setter
+    def last_scheduled_execution_date(self, last_scheduled_execution_date):
+        &#34;&#34;&#34;Sets the last_scheduled_execution_date of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param last_scheduled_execution_date: The last_scheduled_execution_date of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_scheduled_execution_date = last_scheduled_execution_date
+
+    @property
+    def last_scheduled_execution_success_date(self):
+        &#34;&#34;&#34;Gets the last_scheduled_execution_success_date of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The last_scheduled_execution_success_date of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_scheduled_execution_success_date
+
+    @last_scheduled_execution_success_date.setter
+    def last_scheduled_execution_success_date(self, last_scheduled_execution_success_date):
+        &#34;&#34;&#34;Sets the last_scheduled_execution_success_date of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param last_scheduled_execution_success_date: The last_scheduled_execution_success_date of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_scheduled_execution_success_date = last_scheduled_execution_success_date
+
+    @property
+    def max_download_rows(self):
+        &#34;&#34;&#34;Gets the max_download_rows of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The max_download_rows of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._max_download_rows
+
+    @max_download_rows.setter
+    def max_download_rows(self, max_download_rows):
+        &#34;&#34;&#34;Sets the max_download_rows of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param max_download_rows: The max_download_rows of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._max_download_rows = max_download_rows
+
+    @property
+    def max_grid_rows(self):
+        &#34;&#34;&#34;Gets the max_grid_rows of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The max_grid_rows of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._max_grid_rows
+
+    @max_grid_rows.setter
+    def max_grid_rows(self, max_grid_rows):
+        &#34;&#34;&#34;Sets the max_grid_rows of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param max_grid_rows: The max_grid_rows of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._max_grid_rows = max_grid_rows
+
+    @property
+    def max_scheduled_rows(self):
+        &#34;&#34;&#34;Gets the max_scheduled_rows of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The max_scheduled_rows of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._max_scheduled_rows
+
+    @max_scheduled_rows.setter
+    def max_scheduled_rows(self, max_scheduled_rows):
+        &#34;&#34;&#34;Sets the max_scheduled_rows of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param max_scheduled_rows: The max_scheduled_rows of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._max_scheduled_rows = max_scheduled_rows
+
+    @property
+    def period_length_filter(self):
+        &#34;&#34;&#34;Gets the period_length_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The period_length_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._period_length_filter
+
+    @period_length_filter.setter
+    def period_length_filter(self, period_length_filter):
+        &#34;&#34;&#34;Sets the period_length_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param period_length_filter: The period_length_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._period_length_filter = period_length_filter
+
+    @property
+    def report_customized_id(self):
+        &#34;&#34;&#34;Gets the report_customized_id of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The report_customized_id of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._report_customized_id
+
+    @report_customized_id.setter
+    def report_customized_id(self, report_customized_id):
+        &#34;&#34;&#34;Sets the report_customized_id of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param report_customized_id: The report_customized_id of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._report_customized_id = report_customized_id
+
+    @property
+    def report_description(self):
+        &#34;&#34;&#34;Gets the report_description of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The report_description of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._report_description
+
+    @report_description.setter
+    def report_description(self, report_description):
+        &#34;&#34;&#34;Sets the report_description of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param report_description: The report_description of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._report_description = report_description
+
+    @property
+    def report_id(self):
+        &#34;&#34;&#34;Gets the report_id of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The report_id of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._report_id
+
+    @report_id.setter
+    def report_id(self, report_id):
+        &#34;&#34;&#34;Sets the report_id of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param report_id: The report_id of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._report_id = report_id
+
+    @property
+    def report_name(self):
+        &#34;&#34;&#34;Gets the report_name of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The report_name of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._report_name
+
+    @report_name.setter
+    def report_name(self, report_name):
+        &#34;&#34;&#34;Sets the report_name of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param report_name: The report_name of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._report_name = report_name
+
+    @property
+    def report_type(self):
+        &#34;&#34;&#34;Gets the report_type of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The report_type of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._report_type
+
+    @report_type.setter
+    def report_type(self, report_type):
+        &#34;&#34;&#34;Sets the report_type of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param report_type: The report_type of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._report_type = report_type
+
+    @property
+    def run_uri(self):
+        &#34;&#34;&#34;Gets the run_uri of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The run_uri of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._run_uri
+
+    @run_uri.setter
+    def run_uri(self, run_uri):
+        &#34;&#34;&#34;Sets the run_uri of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param run_uri: The run_uri of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._run_uri = run_uri
+
+    @property
+    def save_uri(self):
+        &#34;&#34;&#34;Gets the save_uri of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The save_uri of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._save_uri
+
+    @save_uri.setter
+    def save_uri(self, save_uri):
+        &#34;&#34;&#34;Sets the save_uri of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param save_uri: The save_uri of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._save_uri = save_uri
+
+    @property
+    def schedule_id(self):
+        &#34;&#34;&#34;Gets the schedule_id of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The schedule_id of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._schedule_id
+
+    @schedule_id.setter
+    def schedule_id(self, schedule_id):
+        &#34;&#34;&#34;Sets the schedule_id of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param schedule_id: The schedule_id of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._schedule_id = schedule_id
+
+    @property
+    def sent_by_details(self):
+        &#34;&#34;&#34;Gets the sent_by_details of this ReportInProductGet.  # noqa: E501
+
+
+        :return: The sent_by_details of this ReportInProductGet.  # noqa: E501
+        :rtype: ReportInProductSentByDetails
+        &#34;&#34;&#34;
+        return self._sent_by_details
+
+    @sent_by_details.setter
+    def sent_by_details(self, sent_by_details):
+        &#34;&#34;&#34;Sets the sent_by_details of this ReportInProductGet.
+
+
+        :param sent_by_details: The sent_by_details of this ReportInProductGet.  # noqa: E501
+        :type: ReportInProductSentByDetails
+        &#34;&#34;&#34;
+
+        self._sent_by_details = sent_by_details
+
+    @property
+    def sent_by_filter(self):
+        &#34;&#34;&#34;Gets the sent_by_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sent_by_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sent_by_filter
+
+    @sent_by_filter.setter
+    def sent_by_filter(self, sent_by_filter):
+        &#34;&#34;&#34;Sets the sent_by_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param sent_by_filter: The sent_by_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sent_by_filter = sent_by_filter
+
+    @property
+    def sent_by_ids(self):
+        &#34;&#34;&#34;Gets the sent_by_ids of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sent_by_ids of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sent_by_ids
+
+    @sent_by_ids.setter
+    def sent_by_ids(self, sent_by_ids):
+        &#34;&#34;&#34;Sets the sent_by_ids of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param sent_by_ids: The sent_by_ids of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sent_by_ids = sent_by_ids
+
+    @property
+    def sort_field_direction(self):
+        &#34;&#34;&#34;Gets the sort_field_direction of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sort_field_direction of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sort_field_direction
+
+    @sort_field_direction.setter
+    def sort_field_direction(self, sort_field_direction):
+        &#34;&#34;&#34;Sets the sort_field_direction of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param sort_field_direction: The sort_field_direction of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sort_field_direction = sort_field_direction
+
+    @property
+    def sort_field_name(self):
+        &#34;&#34;&#34;Gets the sort_field_name of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sort_field_name of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sort_field_name
+
+    @sort_field_name.setter
+    def sort_field_name(self, sort_field_name):
+        &#34;&#34;&#34;Sets the sort_field_name of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param sort_field_name: The sort_field_name of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sort_field_name = sort_field_name
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(ReportInProductGet, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, ReportInProductGet):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet"><code class="flex name class">
+<span>class <span class="ident">ReportInProductGet</span></span>
+<span>(</span><span>custom_field_filter=None, date_range_custom_from_date=None, date_range_custom_to_date=None, date_range_filter=None, display_order=None, envelope_date_type_filter=None, envelope_recipient_name_contains_filter=None, envelope_status_filter=None, envelope_subject_contains_filter=None, fields=None, last_scheduled_execution_date=None, last_scheduled_execution_success_date=None, max_download_rows=None, max_grid_rows=None, max_scheduled_rows=None, period_length_filter=None, report_customized_id=None, report_description=None, report_id=None, report_name=None, report_type=None, run_uri=None, save_uri=None, schedule_id=None, sent_by_details=None, sent_by_filter=None, sent_by_ids=None, sort_field_direction=None, sort_field_name=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>ReportInProductGet - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ReportInProductGet(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;custom_field_filter&#39;: &#39;str&#39;,
+        &#39;date_range_custom_from_date&#39;: &#39;str&#39;,
+        &#39;date_range_custom_to_date&#39;: &#39;str&#39;,
+        &#39;date_range_filter&#39;: &#39;str&#39;,
+        &#39;display_order&#39;: &#39;str&#39;,
+        &#39;envelope_date_type_filter&#39;: &#39;str&#39;,
+        &#39;envelope_recipient_name_contains_filter&#39;: &#39;str&#39;,
+        &#39;envelope_status_filter&#39;: &#39;str&#39;,
+        &#39;envelope_subject_contains_filter&#39;: &#39;str&#39;,
+        &#39;fields&#39;: &#39;list[ReportInProductField]&#39;,
+        &#39;last_scheduled_execution_date&#39;: &#39;str&#39;,
+        &#39;last_scheduled_execution_success_date&#39;: &#39;str&#39;,
+        &#39;max_download_rows&#39;: &#39;str&#39;,
+        &#39;max_grid_rows&#39;: &#39;str&#39;,
+        &#39;max_scheduled_rows&#39;: &#39;str&#39;,
+        &#39;period_length_filter&#39;: &#39;str&#39;,
+        &#39;report_customized_id&#39;: &#39;str&#39;,
+        &#39;report_description&#39;: &#39;str&#39;,
+        &#39;report_id&#39;: &#39;str&#39;,
+        &#39;report_name&#39;: &#39;str&#39;,
+        &#39;report_type&#39;: &#39;str&#39;,
+        &#39;run_uri&#39;: &#39;str&#39;,
+        &#39;save_uri&#39;: &#39;str&#39;,
+        &#39;schedule_id&#39;: &#39;str&#39;,
+        &#39;sent_by_details&#39;: &#39;ReportInProductSentByDetails&#39;,
+        &#39;sent_by_filter&#39;: &#39;str&#39;,
+        &#39;sent_by_ids&#39;: &#39;str&#39;,
+        &#39;sort_field_direction&#39;: &#39;str&#39;,
+        &#39;sort_field_name&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;custom_field_filter&#39;: &#39;customFieldFilter&#39;,
+        &#39;date_range_custom_from_date&#39;: &#39;dateRangeCustomFromDate&#39;,
+        &#39;date_range_custom_to_date&#39;: &#39;dateRangeCustomToDate&#39;,
+        &#39;date_range_filter&#39;: &#39;dateRangeFilter&#39;,
+        &#39;display_order&#39;: &#39;displayOrder&#39;,
+        &#39;envelope_date_type_filter&#39;: &#39;envelopeDateTypeFilter&#39;,
+        &#39;envelope_recipient_name_contains_filter&#39;: &#39;envelopeRecipientNameContainsFilter&#39;,
+        &#39;envelope_status_filter&#39;: &#39;envelopeStatusFilter&#39;,
+        &#39;envelope_subject_contains_filter&#39;: &#39;envelopeSubjectContainsFilter&#39;,
+        &#39;fields&#39;: &#39;fields&#39;,
+        &#39;last_scheduled_execution_date&#39;: &#39;lastScheduledExecutionDate&#39;,
+        &#39;last_scheduled_execution_success_date&#39;: &#39;lastScheduledExecutionSuccessDate&#39;,
+        &#39;max_download_rows&#39;: &#39;maxDownloadRows&#39;,
+        &#39;max_grid_rows&#39;: &#39;maxGridRows&#39;,
+        &#39;max_scheduled_rows&#39;: &#39;maxScheduledRows&#39;,
+        &#39;period_length_filter&#39;: &#39;periodLengthFilter&#39;,
+        &#39;report_customized_id&#39;: &#39;reportCustomizedId&#39;,
+        &#39;report_description&#39;: &#39;reportDescription&#39;,
+        &#39;report_id&#39;: &#39;reportId&#39;,
+        &#39;report_name&#39;: &#39;reportName&#39;,
+        &#39;report_type&#39;: &#39;reportType&#39;,
+        &#39;run_uri&#39;: &#39;runUri&#39;,
+        &#39;save_uri&#39;: &#39;saveUri&#39;,
+        &#39;schedule_id&#39;: &#39;scheduleId&#39;,
+        &#39;sent_by_details&#39;: &#39;sentByDetails&#39;,
+        &#39;sent_by_filter&#39;: &#39;sentByFilter&#39;,
+        &#39;sent_by_ids&#39;: &#39;sentByIds&#39;,
+        &#39;sort_field_direction&#39;: &#39;sortFieldDirection&#39;,
+        &#39;sort_field_name&#39;: &#39;sortFieldName&#39;
+    }
+
+    def __init__(self, custom_field_filter=None, date_range_custom_from_date=None, date_range_custom_to_date=None, date_range_filter=None, display_order=None, envelope_date_type_filter=None, envelope_recipient_name_contains_filter=None, envelope_status_filter=None, envelope_subject_contains_filter=None, fields=None, last_scheduled_execution_date=None, last_scheduled_execution_success_date=None, max_download_rows=None, max_grid_rows=None, max_scheduled_rows=None, period_length_filter=None, report_customized_id=None, report_description=None, report_id=None, report_name=None, report_type=None, run_uri=None, save_uri=None, schedule_id=None, sent_by_details=None, sent_by_filter=None, sent_by_ids=None, sort_field_direction=None, sort_field_name=None):  # noqa: E501
+        &#34;&#34;&#34;ReportInProductGet - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._custom_field_filter = None
+        self._date_range_custom_from_date = None
+        self._date_range_custom_to_date = None
+        self._date_range_filter = None
+        self._display_order = None
+        self._envelope_date_type_filter = None
+        self._envelope_recipient_name_contains_filter = None
+        self._envelope_status_filter = None
+        self._envelope_subject_contains_filter = None
+        self._fields = None
+        self._last_scheduled_execution_date = None
+        self._last_scheduled_execution_success_date = None
+        self._max_download_rows = None
+        self._max_grid_rows = None
+        self._max_scheduled_rows = None
+        self._period_length_filter = None
+        self._report_customized_id = None
+        self._report_description = None
+        self._report_id = None
+        self._report_name = None
+        self._report_type = None
+        self._run_uri = None
+        self._save_uri = None
+        self._schedule_id = None
+        self._sent_by_details = None
+        self._sent_by_filter = None
+        self._sent_by_ids = None
+        self._sort_field_direction = None
+        self._sort_field_name = None
+        self.discriminator = None
+
+        if custom_field_filter is not None:
+            self.custom_field_filter = custom_field_filter
+        if date_range_custom_from_date is not None:
+            self.date_range_custom_from_date = date_range_custom_from_date
+        if date_range_custom_to_date is not None:
+            self.date_range_custom_to_date = date_range_custom_to_date
+        if date_range_filter is not None:
+            self.date_range_filter = date_range_filter
+        if display_order is not None:
+            self.display_order = display_order
+        if envelope_date_type_filter is not None:
+            self.envelope_date_type_filter = envelope_date_type_filter
+        if envelope_recipient_name_contains_filter is not None:
+            self.envelope_recipient_name_contains_filter = envelope_recipient_name_contains_filter
+        if envelope_status_filter is not None:
+            self.envelope_status_filter = envelope_status_filter
+        if envelope_subject_contains_filter is not None:
+            self.envelope_subject_contains_filter = envelope_subject_contains_filter
+        if fields is not None:
+            self.fields = fields
+        if last_scheduled_execution_date is not None:
+            self.last_scheduled_execution_date = last_scheduled_execution_date
+        if last_scheduled_execution_success_date is not None:
+            self.last_scheduled_execution_success_date = last_scheduled_execution_success_date
+        if max_download_rows is not None:
+            self.max_download_rows = max_download_rows
+        if max_grid_rows is not None:
+            self.max_grid_rows = max_grid_rows
+        if max_scheduled_rows is not None:
+            self.max_scheduled_rows = max_scheduled_rows
+        if period_length_filter is not None:
+            self.period_length_filter = period_length_filter
+        if report_customized_id is not None:
+            self.report_customized_id = report_customized_id
+        if report_description is not None:
+            self.report_description = report_description
+        if report_id is not None:
+            self.report_id = report_id
+        if report_name is not None:
+            self.report_name = report_name
+        if report_type is not None:
+            self.report_type = report_type
+        if run_uri is not None:
+            self.run_uri = run_uri
+        if save_uri is not None:
+            self.save_uri = save_uri
+        if schedule_id is not None:
+            self.schedule_id = schedule_id
+        if sent_by_details is not None:
+            self.sent_by_details = sent_by_details
+        if sent_by_filter is not None:
+            self.sent_by_filter = sent_by_filter
+        if sent_by_ids is not None:
+            self.sent_by_ids = sent_by_ids
+        if sort_field_direction is not None:
+            self.sort_field_direction = sort_field_direction
+        if sort_field_name is not None:
+            self.sort_field_name = sort_field_name
+
+    @property
+    def custom_field_filter(self):
+        &#34;&#34;&#34;Gets the custom_field_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_field_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_field_filter
+
+    @custom_field_filter.setter
+    def custom_field_filter(self, custom_field_filter):
+        &#34;&#34;&#34;Sets the custom_field_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param custom_field_filter: The custom_field_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_field_filter = custom_field_filter
+
+    @property
+    def date_range_custom_from_date(self):
+        &#34;&#34;&#34;Gets the date_range_custom_from_date of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The date_range_custom_from_date of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._date_range_custom_from_date
+
+    @date_range_custom_from_date.setter
+    def date_range_custom_from_date(self, date_range_custom_from_date):
+        &#34;&#34;&#34;Sets the date_range_custom_from_date of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param date_range_custom_from_date: The date_range_custom_from_date of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._date_range_custom_from_date = date_range_custom_from_date
+
+    @property
+    def date_range_custom_to_date(self):
+        &#34;&#34;&#34;Gets the date_range_custom_to_date of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The date_range_custom_to_date of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._date_range_custom_to_date
+
+    @date_range_custom_to_date.setter
+    def date_range_custom_to_date(self, date_range_custom_to_date):
+        &#34;&#34;&#34;Sets the date_range_custom_to_date of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param date_range_custom_to_date: The date_range_custom_to_date of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._date_range_custom_to_date = date_range_custom_to_date
+
+    @property
+    def date_range_filter(self):
+        &#34;&#34;&#34;Gets the date_range_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The date_range_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._date_range_filter
+
+    @date_range_filter.setter
+    def date_range_filter(self, date_range_filter):
+        &#34;&#34;&#34;Sets the date_range_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param date_range_filter: The date_range_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._date_range_filter = date_range_filter
+
+    @property
+    def display_order(self):
+        &#34;&#34;&#34;Gets the display_order of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The display_order of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_order
+
+    @display_order.setter
+    def display_order(self, display_order):
+        &#34;&#34;&#34;Sets the display_order of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param display_order: The display_order of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_order = display_order
+
+    @property
+    def envelope_date_type_filter(self):
+        &#34;&#34;&#34;Gets the envelope_date_type_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_date_type_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_date_type_filter
+
+    @envelope_date_type_filter.setter
+    def envelope_date_type_filter(self, envelope_date_type_filter):
+        &#34;&#34;&#34;Sets the envelope_date_type_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param envelope_date_type_filter: The envelope_date_type_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_date_type_filter = envelope_date_type_filter
+
+    @property
+    def envelope_recipient_name_contains_filter(self):
+        &#34;&#34;&#34;Gets the envelope_recipient_name_contains_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_recipient_name_contains_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_recipient_name_contains_filter
+
+    @envelope_recipient_name_contains_filter.setter
+    def envelope_recipient_name_contains_filter(self, envelope_recipient_name_contains_filter):
+        &#34;&#34;&#34;Sets the envelope_recipient_name_contains_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param envelope_recipient_name_contains_filter: The envelope_recipient_name_contains_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_recipient_name_contains_filter = envelope_recipient_name_contains_filter
+
+    @property
+    def envelope_status_filter(self):
+        &#34;&#34;&#34;Gets the envelope_status_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_status_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_status_filter
+
+    @envelope_status_filter.setter
+    def envelope_status_filter(self, envelope_status_filter):
+        &#34;&#34;&#34;Sets the envelope_status_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param envelope_status_filter: The envelope_status_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_status_filter = envelope_status_filter
+
+    @property
+    def envelope_subject_contains_filter(self):
+        &#34;&#34;&#34;Gets the envelope_subject_contains_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_subject_contains_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_subject_contains_filter
+
+    @envelope_subject_contains_filter.setter
+    def envelope_subject_contains_filter(self, envelope_subject_contains_filter):
+        &#34;&#34;&#34;Sets the envelope_subject_contains_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param envelope_subject_contains_filter: The envelope_subject_contains_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_subject_contains_filter = envelope_subject_contains_filter
+
+    @property
+    def fields(self):
+        &#34;&#34;&#34;Gets the fields of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The fields of this ReportInProductGet.  # noqa: E501
+        :rtype: list[ReportInProductField]
+        &#34;&#34;&#34;
+        return self._fields
+
+    @fields.setter
+    def fields(self, fields):
+        &#34;&#34;&#34;Sets the fields of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param fields: The fields of this ReportInProductGet.  # noqa: E501
+        :type: list[ReportInProductField]
+        &#34;&#34;&#34;
+
+        self._fields = fields
+
+    @property
+    def last_scheduled_execution_date(self):
+        &#34;&#34;&#34;Gets the last_scheduled_execution_date of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The last_scheduled_execution_date of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_scheduled_execution_date
+
+    @last_scheduled_execution_date.setter
+    def last_scheduled_execution_date(self, last_scheduled_execution_date):
+        &#34;&#34;&#34;Sets the last_scheduled_execution_date of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param last_scheduled_execution_date: The last_scheduled_execution_date of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_scheduled_execution_date = last_scheduled_execution_date
+
+    @property
+    def last_scheduled_execution_success_date(self):
+        &#34;&#34;&#34;Gets the last_scheduled_execution_success_date of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The last_scheduled_execution_success_date of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_scheduled_execution_success_date
+
+    @last_scheduled_execution_success_date.setter
+    def last_scheduled_execution_success_date(self, last_scheduled_execution_success_date):
+        &#34;&#34;&#34;Sets the last_scheduled_execution_success_date of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param last_scheduled_execution_success_date: The last_scheduled_execution_success_date of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_scheduled_execution_success_date = last_scheduled_execution_success_date
+
+    @property
+    def max_download_rows(self):
+        &#34;&#34;&#34;Gets the max_download_rows of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The max_download_rows of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._max_download_rows
+
+    @max_download_rows.setter
+    def max_download_rows(self, max_download_rows):
+        &#34;&#34;&#34;Sets the max_download_rows of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param max_download_rows: The max_download_rows of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._max_download_rows = max_download_rows
+
+    @property
+    def max_grid_rows(self):
+        &#34;&#34;&#34;Gets the max_grid_rows of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The max_grid_rows of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._max_grid_rows
+
+    @max_grid_rows.setter
+    def max_grid_rows(self, max_grid_rows):
+        &#34;&#34;&#34;Sets the max_grid_rows of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param max_grid_rows: The max_grid_rows of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._max_grid_rows = max_grid_rows
+
+    @property
+    def max_scheduled_rows(self):
+        &#34;&#34;&#34;Gets the max_scheduled_rows of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The max_scheduled_rows of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._max_scheduled_rows
+
+    @max_scheduled_rows.setter
+    def max_scheduled_rows(self, max_scheduled_rows):
+        &#34;&#34;&#34;Sets the max_scheduled_rows of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param max_scheduled_rows: The max_scheduled_rows of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._max_scheduled_rows = max_scheduled_rows
+
+    @property
+    def period_length_filter(self):
+        &#34;&#34;&#34;Gets the period_length_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The period_length_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._period_length_filter
+
+    @period_length_filter.setter
+    def period_length_filter(self, period_length_filter):
+        &#34;&#34;&#34;Sets the period_length_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param period_length_filter: The period_length_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._period_length_filter = period_length_filter
+
+    @property
+    def report_customized_id(self):
+        &#34;&#34;&#34;Gets the report_customized_id of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The report_customized_id of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._report_customized_id
+
+    @report_customized_id.setter
+    def report_customized_id(self, report_customized_id):
+        &#34;&#34;&#34;Sets the report_customized_id of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param report_customized_id: The report_customized_id of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._report_customized_id = report_customized_id
+
+    @property
+    def report_description(self):
+        &#34;&#34;&#34;Gets the report_description of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The report_description of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._report_description
+
+    @report_description.setter
+    def report_description(self, report_description):
+        &#34;&#34;&#34;Sets the report_description of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param report_description: The report_description of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._report_description = report_description
+
+    @property
+    def report_id(self):
+        &#34;&#34;&#34;Gets the report_id of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The report_id of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._report_id
+
+    @report_id.setter
+    def report_id(self, report_id):
+        &#34;&#34;&#34;Sets the report_id of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param report_id: The report_id of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._report_id = report_id
+
+    @property
+    def report_name(self):
+        &#34;&#34;&#34;Gets the report_name of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The report_name of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._report_name
+
+    @report_name.setter
+    def report_name(self, report_name):
+        &#34;&#34;&#34;Sets the report_name of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param report_name: The report_name of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._report_name = report_name
+
+    @property
+    def report_type(self):
+        &#34;&#34;&#34;Gets the report_type of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The report_type of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._report_type
+
+    @report_type.setter
+    def report_type(self, report_type):
+        &#34;&#34;&#34;Sets the report_type of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param report_type: The report_type of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._report_type = report_type
+
+    @property
+    def run_uri(self):
+        &#34;&#34;&#34;Gets the run_uri of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The run_uri of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._run_uri
+
+    @run_uri.setter
+    def run_uri(self, run_uri):
+        &#34;&#34;&#34;Sets the run_uri of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param run_uri: The run_uri of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._run_uri = run_uri
+
+    @property
+    def save_uri(self):
+        &#34;&#34;&#34;Gets the save_uri of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The save_uri of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._save_uri
+
+    @save_uri.setter
+    def save_uri(self, save_uri):
+        &#34;&#34;&#34;Sets the save_uri of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param save_uri: The save_uri of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._save_uri = save_uri
+
+    @property
+    def schedule_id(self):
+        &#34;&#34;&#34;Gets the schedule_id of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The schedule_id of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._schedule_id
+
+    @schedule_id.setter
+    def schedule_id(self, schedule_id):
+        &#34;&#34;&#34;Sets the schedule_id of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param schedule_id: The schedule_id of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._schedule_id = schedule_id
+
+    @property
+    def sent_by_details(self):
+        &#34;&#34;&#34;Gets the sent_by_details of this ReportInProductGet.  # noqa: E501
+
+
+        :return: The sent_by_details of this ReportInProductGet.  # noqa: E501
+        :rtype: ReportInProductSentByDetails
+        &#34;&#34;&#34;
+        return self._sent_by_details
+
+    @sent_by_details.setter
+    def sent_by_details(self, sent_by_details):
+        &#34;&#34;&#34;Sets the sent_by_details of this ReportInProductGet.
+
+
+        :param sent_by_details: The sent_by_details of this ReportInProductGet.  # noqa: E501
+        :type: ReportInProductSentByDetails
+        &#34;&#34;&#34;
+
+        self._sent_by_details = sent_by_details
+
+    @property
+    def sent_by_filter(self):
+        &#34;&#34;&#34;Gets the sent_by_filter of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sent_by_filter of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sent_by_filter
+
+    @sent_by_filter.setter
+    def sent_by_filter(self, sent_by_filter):
+        &#34;&#34;&#34;Sets the sent_by_filter of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param sent_by_filter: The sent_by_filter of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sent_by_filter = sent_by_filter
+
+    @property
+    def sent_by_ids(self):
+        &#34;&#34;&#34;Gets the sent_by_ids of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sent_by_ids of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sent_by_ids
+
+    @sent_by_ids.setter
+    def sent_by_ids(self, sent_by_ids):
+        &#34;&#34;&#34;Sets the sent_by_ids of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param sent_by_ids: The sent_by_ids of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sent_by_ids = sent_by_ids
+
+    @property
+    def sort_field_direction(self):
+        &#34;&#34;&#34;Gets the sort_field_direction of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sort_field_direction of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sort_field_direction
+
+    @sort_field_direction.setter
+    def sort_field_direction(self, sort_field_direction):
+        &#34;&#34;&#34;Sets the sort_field_direction of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param sort_field_direction: The sort_field_direction of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sort_field_direction = sort_field_direction
+
+    @property
+    def sort_field_name(self):
+        &#34;&#34;&#34;Gets the sort_field_name of this ReportInProductGet.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sort_field_name of this ReportInProductGet.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sort_field_name
+
+    @sort_field_name.setter
+    def sort_field_name(self, sort_field_name):
+        &#34;&#34;&#34;Sets the sort_field_name of this ReportInProductGet.
+
+          # noqa: E501
+
+        :param sort_field_name: The sort_field_name of this ReportInProductGet.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sort_field_name = sort_field_name
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(ReportInProductGet, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, ReportInProductGet):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.custom_field_filter"><code class="name">var <span class="ident">custom_field_filter</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the custom_field_filter of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The custom_field_filter of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def custom_field_filter(self):
+    &#34;&#34;&#34;Gets the custom_field_filter of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The custom_field_filter of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._custom_field_filter</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.date_range_custom_from_date"><code class="name">var <span class="ident">date_range_custom_from_date</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the date_range_custom_from_date of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The date_range_custom_from_date of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def date_range_custom_from_date(self):
+    &#34;&#34;&#34;Gets the date_range_custom_from_date of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The date_range_custom_from_date of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._date_range_custom_from_date</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.date_range_custom_to_date"><code class="name">var <span class="ident">date_range_custom_to_date</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the date_range_custom_to_date of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The date_range_custom_to_date of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def date_range_custom_to_date(self):
+    &#34;&#34;&#34;Gets the date_range_custom_to_date of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The date_range_custom_to_date of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._date_range_custom_to_date</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.date_range_filter"><code class="name">var <span class="ident">date_range_filter</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the date_range_filter of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The date_range_filter of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def date_range_filter(self):
+    &#34;&#34;&#34;Gets the date_range_filter of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The date_range_filter of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._date_range_filter</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.display_order"><code class="name">var <span class="ident">display_order</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the display_order of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The display_order of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def display_order(self):
+    &#34;&#34;&#34;Gets the display_order of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The display_order of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._display_order</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.envelope_date_type_filter"><code class="name">var <span class="ident">envelope_date_type_filter</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_date_type_filter of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The envelope_date_type_filter of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_date_type_filter(self):
+    &#34;&#34;&#34;Gets the envelope_date_type_filter of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The envelope_date_type_filter of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._envelope_date_type_filter</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.envelope_recipient_name_contains_filter"><code class="name">var <span class="ident">envelope_recipient_name_contains_filter</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_recipient_name_contains_filter of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The envelope_recipient_name_contains_filter of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_recipient_name_contains_filter(self):
+    &#34;&#34;&#34;Gets the envelope_recipient_name_contains_filter of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The envelope_recipient_name_contains_filter of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._envelope_recipient_name_contains_filter</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.envelope_status_filter"><code class="name">var <span class="ident">envelope_status_filter</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_status_filter of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The envelope_status_filter of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_status_filter(self):
+    &#34;&#34;&#34;Gets the envelope_status_filter of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The envelope_status_filter of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._envelope_status_filter</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.envelope_subject_contains_filter"><code class="name">var <span class="ident">envelope_subject_contains_filter</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_subject_contains_filter of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The envelope_subject_contains_filter of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_subject_contains_filter(self):
+    &#34;&#34;&#34;Gets the envelope_subject_contains_filter of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The envelope_subject_contains_filter of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._envelope_subject_contains_filter</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.fields"><code class="name">var <span class="ident">fields</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the fields of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The fields of this ReportInProductGet.
+# noqa: E501
+:rtype: list[ReportInProductField]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def fields(self):
+    &#34;&#34;&#34;Gets the fields of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The fields of this ReportInProductGet.  # noqa: E501
+    :rtype: list[ReportInProductField]
+    &#34;&#34;&#34;
+    return self._fields</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.last_scheduled_execution_date"><code class="name">var <span class="ident">last_scheduled_execution_date</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_scheduled_execution_date of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The last_scheduled_execution_date of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_scheduled_execution_date(self):
+    &#34;&#34;&#34;Gets the last_scheduled_execution_date of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The last_scheduled_execution_date of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._last_scheduled_execution_date</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.last_scheduled_execution_success_date"><code class="name">var <span class="ident">last_scheduled_execution_success_date</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_scheduled_execution_success_date of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The last_scheduled_execution_success_date of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_scheduled_execution_success_date(self):
+    &#34;&#34;&#34;Gets the last_scheduled_execution_success_date of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The last_scheduled_execution_success_date of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._last_scheduled_execution_success_date</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.max_download_rows"><code class="name">var <span class="ident">max_download_rows</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the max_download_rows of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The max_download_rows of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def max_download_rows(self):
+    &#34;&#34;&#34;Gets the max_download_rows of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The max_download_rows of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._max_download_rows</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.max_grid_rows"><code class="name">var <span class="ident">max_grid_rows</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the max_grid_rows of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The max_grid_rows of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def max_grid_rows(self):
+    &#34;&#34;&#34;Gets the max_grid_rows of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The max_grid_rows of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._max_grid_rows</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.max_scheduled_rows"><code class="name">var <span class="ident">max_scheduled_rows</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the max_scheduled_rows of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The max_scheduled_rows of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def max_scheduled_rows(self):
+    &#34;&#34;&#34;Gets the max_scheduled_rows of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The max_scheduled_rows of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._max_scheduled_rows</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.period_length_filter"><code class="name">var <span class="ident">period_length_filter</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the period_length_filter of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The period_length_filter of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def period_length_filter(self):
+    &#34;&#34;&#34;Gets the period_length_filter of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The period_length_filter of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._period_length_filter</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.report_customized_id"><code class="name">var <span class="ident">report_customized_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the report_customized_id of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The report_customized_id of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def report_customized_id(self):
+    &#34;&#34;&#34;Gets the report_customized_id of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The report_customized_id of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._report_customized_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.report_description"><code class="name">var <span class="ident">report_description</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the report_description of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The report_description of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def report_description(self):
+    &#34;&#34;&#34;Gets the report_description of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The report_description of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._report_description</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.report_id"><code class="name">var <span class="ident">report_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the report_id of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The report_id of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def report_id(self):
+    &#34;&#34;&#34;Gets the report_id of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The report_id of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._report_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.report_name"><code class="name">var <span class="ident">report_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the report_name of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The report_name of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def report_name(self):
+    &#34;&#34;&#34;Gets the report_name of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The report_name of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._report_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.report_type"><code class="name">var <span class="ident">report_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the report_type of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The report_type of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def report_type(self):
+    &#34;&#34;&#34;Gets the report_type of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The report_type of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._report_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.run_uri"><code class="name">var <span class="ident">run_uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the run_uri of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The run_uri of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def run_uri(self):
+    &#34;&#34;&#34;Gets the run_uri of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The run_uri of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._run_uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.save_uri"><code class="name">var <span class="ident">save_uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the save_uri of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The save_uri of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def save_uri(self):
+    &#34;&#34;&#34;Gets the save_uri of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The save_uri of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._save_uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.schedule_id"><code class="name">var <span class="ident">schedule_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the schedule_id of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The schedule_id of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def schedule_id(self):
+    &#34;&#34;&#34;Gets the schedule_id of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The schedule_id of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._schedule_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.sent_by_details"><code class="name">var <span class="ident">sent_by_details</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sent_by_details of this ReportInProductGet.
+# noqa: E501</p>
+<p>:return: The sent_by_details of this ReportInProductGet.
+# noqa: E501
+:rtype: ReportInProductSentByDetails</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sent_by_details(self):
+    &#34;&#34;&#34;Gets the sent_by_details of this ReportInProductGet.  # noqa: E501
+
+
+    :return: The sent_by_details of this ReportInProductGet.  # noqa: E501
+    :rtype: ReportInProductSentByDetails
+    &#34;&#34;&#34;
+    return self._sent_by_details</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.sent_by_filter"><code class="name">var <span class="ident">sent_by_filter</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sent_by_filter of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The sent_by_filter of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sent_by_filter(self):
+    &#34;&#34;&#34;Gets the sent_by_filter of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The sent_by_filter of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sent_by_filter</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.sent_by_ids"><code class="name">var <span class="ident">sent_by_ids</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sent_by_ids of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The sent_by_ids of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sent_by_ids(self):
+    &#34;&#34;&#34;Gets the sent_by_ids of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The sent_by_ids of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sent_by_ids</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.sort_field_direction"><code class="name">var <span class="ident">sort_field_direction</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sort_field_direction of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The sort_field_direction of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sort_field_direction(self):
+    &#34;&#34;&#34;Gets the sort_field_direction of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The sort_field_direction of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sort_field_direction</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.sort_field_name"><code class="name">var <span class="ident">sort_field_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sort_field_name of this ReportInProductGet.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The sort_field_name of this ReportInProductGet.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sort_field_name(self):
+    &#34;&#34;&#34;Gets the sort_field_name of this ReportInProductGet.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The sort_field_name of this ReportInProductGet.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sort_field_name</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(ReportInProductGet, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.report_in_product_get.ReportInProductGet.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet" href="#docusign_esign.models.report_in_product_get.ReportInProductGet">ReportInProductGet</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.attribute_map" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.custom_field_filter" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.custom_field_filter">custom_field_filter</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.date_range_custom_from_date" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.date_range_custom_from_date">date_range_custom_from_date</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.date_range_custom_to_date" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.date_range_custom_to_date">date_range_custom_to_date</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.date_range_filter" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.date_range_filter">date_range_filter</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.display_order" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.display_order">display_order</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.envelope_date_type_filter" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.envelope_date_type_filter">envelope_date_type_filter</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.envelope_recipient_name_contains_filter" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.envelope_recipient_name_contains_filter">envelope_recipient_name_contains_filter</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.envelope_status_filter" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.envelope_status_filter">envelope_status_filter</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.envelope_subject_contains_filter" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.envelope_subject_contains_filter">envelope_subject_contains_filter</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.fields" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.fields">fields</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.last_scheduled_execution_date" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.last_scheduled_execution_date">last_scheduled_execution_date</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.last_scheduled_execution_success_date" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.last_scheduled_execution_success_date">last_scheduled_execution_success_date</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.max_download_rows" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.max_download_rows">max_download_rows</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.max_grid_rows" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.max_grid_rows">max_grid_rows</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.max_scheduled_rows" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.max_scheduled_rows">max_scheduled_rows</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.period_length_filter" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.period_length_filter">period_length_filter</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.report_customized_id" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.report_customized_id">report_customized_id</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.report_description" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.report_description">report_description</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.report_id" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.report_id">report_id</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.report_name" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.report_name">report_name</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.report_type" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.report_type">report_type</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.run_uri" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.run_uri">run_uri</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.save_uri" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.save_uri">save_uri</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.schedule_id" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.schedule_id">schedule_id</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.sent_by_details" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.sent_by_details">sent_by_details</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.sent_by_filter" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.sent_by_filter">sent_by_filter</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.sent_by_ids" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.sent_by_ids">sent_by_ids</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.sort_field_direction" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.sort_field_direction">sort_field_direction</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.sort_field_name" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.sort_field_name">sort_field_name</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.swagger_types" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.to_dict" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.report_in_product_get.ReportInProductGet.to_str" href="#docusign_esign.models.report_in_product_get.ReportInProductGet.to_str">to_str</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,3330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.account_information API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.account_information</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class AccountInformation(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;account_id_guid&#39;: &#39;str&#39;,
+        &#39;account_name&#39;: &#39;str&#39;,
+        &#39;account_settings&#39;: &#39;AccountSettingsInformation&#39;,
+        &#39;allow_transaction_rooms&#39;: &#39;str&#39;,
+        &#39;billing_period_days_remaining&#39;: &#39;str&#39;,
+        &#39;billing_period_end_date&#39;: &#39;str&#39;,
+        &#39;billing_period_envelopes_allowed&#39;: &#39;str&#39;,
+        &#39;billing_period_envelopes_sent&#39;: &#39;str&#39;,
+        &#39;billing_period_start_date&#39;: &#39;str&#39;,
+        &#39;billing_profile&#39;: &#39;str&#39;,
+        &#39;can_upgrade&#39;: &#39;str&#39;,
+        &#39;connect_permission&#39;: &#39;str&#39;,
+        &#39;created_date&#39;: &#39;str&#39;,
+        &#39;currency_code&#39;: &#39;str&#39;,
+        &#39;current_plan_id&#39;: &#39;str&#39;,
+        &#39;display_appliance_start_url&#39;: &#39;str&#39;,
+        &#39;display_appliance_url&#39;: &#39;str&#39;,
+        &#39;distributor_code&#39;: &#39;str&#39;,
+        &#39;docu_sign_landing_url&#39;: &#39;str&#39;,
+        &#39;dss_values&#39;: &#39;dict(str, str)&#39;,
+        &#39;envelope_sending_blocked&#39;: &#39;str&#39;,
+        &#39;envelope_unit_price&#39;: &#39;str&#39;,
+        &#39;external_account_id&#39;: &#39;str&#39;,
+        &#39;forgotten_password_questions_count&#39;: &#39;str&#39;,
+        &#39;is_downgrade&#39;: &#39;str&#39;,
+        &#39;payment_method&#39;: &#39;str&#39;,
+        &#39;plan_classification&#39;: &#39;str&#39;,
+        &#39;plan_end_date&#39;: &#39;str&#39;,
+        &#39;plan_name&#39;: &#39;str&#39;,
+        &#39;plan_start_date&#39;: &#39;str&#39;,
+        &#39;recipient_domains&#39;: &#39;list[RecipientDomain]&#39;,
+        &#39;seats_allowed&#39;: &#39;str&#39;,
+        &#39;seats_in_use&#39;: &#39;str&#39;,
+        &#39;status21_cfr_part11&#39;: &#39;str&#39;,
+        &#39;suspension_date&#39;: &#39;str&#39;,
+        &#39;suspension_status&#39;: &#39;str&#39;,
+        &#39;use_display_appliance&#39;: &#39;bool&#39;
+    }
+
+    attribute_map = {
+        &#39;account_id_guid&#39;: &#39;accountIdGuid&#39;,
+        &#39;account_name&#39;: &#39;accountName&#39;,
+        &#39;account_settings&#39;: &#39;accountSettings&#39;,
+        &#39;allow_transaction_rooms&#39;: &#39;allowTransactionRooms&#39;,
+        &#39;billing_period_days_remaining&#39;: &#39;billingPeriodDaysRemaining&#39;,
+        &#39;billing_period_end_date&#39;: &#39;billingPeriodEndDate&#39;,
+        &#39;billing_period_envelopes_allowed&#39;: &#39;billingPeriodEnvelopesAllowed&#39;,
+        &#39;billing_period_envelopes_sent&#39;: &#39;billingPeriodEnvelopesSent&#39;,
+        &#39;billing_period_start_date&#39;: &#39;billingPeriodStartDate&#39;,
+        &#39;billing_profile&#39;: &#39;billingProfile&#39;,
+        &#39;can_upgrade&#39;: &#39;canUpgrade&#39;,
+        &#39;connect_permission&#39;: &#39;connectPermission&#39;,
+        &#39;created_date&#39;: &#39;createdDate&#39;,
+        &#39;currency_code&#39;: &#39;currencyCode&#39;,
+        &#39;current_plan_id&#39;: &#39;currentPlanId&#39;,
+        &#39;display_appliance_start_url&#39;: &#39;displayApplianceStartUrl&#39;,
+        &#39;display_appliance_url&#39;: &#39;displayApplianceUrl&#39;,
+        &#39;distributor_code&#39;: &#39;distributorCode&#39;,
+        &#39;docu_sign_landing_url&#39;: &#39;docuSignLandingUrl&#39;,
+        &#39;dss_values&#39;: &#39;dssValues&#39;,
+        &#39;envelope_sending_blocked&#39;: &#39;envelopeSendingBlocked&#39;,
+        &#39;envelope_unit_price&#39;: &#39;envelopeUnitPrice&#39;,
+        &#39;external_account_id&#39;: &#39;externalAccountId&#39;,
+        &#39;forgotten_password_questions_count&#39;: &#39;forgottenPasswordQuestionsCount&#39;,
+        &#39;is_downgrade&#39;: &#39;isDowngrade&#39;,
+        &#39;payment_method&#39;: &#39;paymentMethod&#39;,
+        &#39;plan_classification&#39;: &#39;planClassification&#39;,
+        &#39;plan_end_date&#39;: &#39;planEndDate&#39;,
+        &#39;plan_name&#39;: &#39;planName&#39;,
+        &#39;plan_start_date&#39;: &#39;planStartDate&#39;,
+        &#39;recipient_domains&#39;: &#39;recipientDomains&#39;,
+        &#39;seats_allowed&#39;: &#39;seatsAllowed&#39;,
+        &#39;seats_in_use&#39;: &#39;seatsInUse&#39;,
+        &#39;status21_cfr_part11&#39;: &#39;status21CFRPart11&#39;,
+        &#39;suspension_date&#39;: &#39;suspensionDate&#39;,
+        &#39;suspension_status&#39;: &#39;suspensionStatus&#39;,
+        &#39;use_display_appliance&#39;: &#39;useDisplayAppliance&#39;
+    }
+
+    def __init__(self, account_id_guid=None, account_name=None, account_settings=None, allow_transaction_rooms=None, billing_period_days_remaining=None, billing_period_end_date=None, billing_period_envelopes_allowed=None, billing_period_envelopes_sent=None, billing_period_start_date=None, billing_profile=None, can_upgrade=None, connect_permission=None, created_date=None, currency_code=None, current_plan_id=None, display_appliance_start_url=None, display_appliance_url=None, distributor_code=None, docu_sign_landing_url=None, dss_values=None, envelope_sending_blocked=None, envelope_unit_price=None, external_account_id=None, forgotten_password_questions_count=None, is_downgrade=None, payment_method=None, plan_classification=None, plan_end_date=None, plan_name=None, plan_start_date=None, recipient_domains=None, seats_allowed=None, seats_in_use=None, status21_cfr_part11=None, suspension_date=None, suspension_status=None, use_display_appliance=None):  # noqa: E501
+        &#34;&#34;&#34;AccountInformation - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._account_id_guid = None
+        self._account_name = None
+        self._account_settings = None
+        self._allow_transaction_rooms = None
+        self._billing_period_days_remaining = None
+        self._billing_period_end_date = None
+        self._billing_period_envelopes_allowed = None
+        self._billing_period_envelopes_sent = None
+        self._billing_period_start_date = None
+        self._billing_profile = None
+        self._can_upgrade = None
+        self._connect_permission = None
+        self._created_date = None
+        self._currency_code = None
+        self._current_plan_id = None
+        self._display_appliance_start_url = None
+        self._display_appliance_url = None
+        self._distributor_code = None
+        self._docu_sign_landing_url = None
+        self._dss_values = None
+        self._envelope_sending_blocked = None
+        self._envelope_unit_price = None
+        self._external_account_id = None
+        self._forgotten_password_questions_count = None
+        self._is_downgrade = None
+        self._payment_method = None
+        self._plan_classification = None
+        self._plan_end_date = None
+        self._plan_name = None
+        self._plan_start_date = None
+        self._recipient_domains = None
+        self._seats_allowed = None
+        self._seats_in_use = None
+        self._status21_cfr_part11 = None
+        self._suspension_date = None
+        self._suspension_status = None
+        self._use_display_appliance = None
+        self.discriminator = None
+
+        if account_id_guid is not None:
+            self.account_id_guid = account_id_guid
+        if account_name is not None:
+            self.account_name = account_name
+        if account_settings is not None:
+            self.account_settings = account_settings
+        if allow_transaction_rooms is not None:
+            self.allow_transaction_rooms = allow_transaction_rooms
+        if billing_period_days_remaining is not None:
+            self.billing_period_days_remaining = billing_period_days_remaining
+        if billing_period_end_date is not None:
+            self.billing_period_end_date = billing_period_end_date
+        if billing_period_envelopes_allowed is not None:
+            self.billing_period_envelopes_allowed = billing_period_envelopes_allowed
+        if billing_period_envelopes_sent is not None:
+            self.billing_period_envelopes_sent = billing_period_envelopes_sent
+        if billing_period_start_date is not None:
+            self.billing_period_start_date = billing_period_start_date
+        if billing_profile is not None:
+            self.billing_profile = billing_profile
+        if can_upgrade is not None:
+            self.can_upgrade = can_upgrade
+        if connect_permission is not None:
+            self.connect_permission = connect_permission
+        if created_date is not None:
+            self.created_date = created_date
+        if currency_code is not None:
+            self.currency_code = currency_code
+        if current_plan_id is not None:
+            self.current_plan_id = current_plan_id
+        if display_appliance_start_url is not None:
+            self.display_appliance_start_url = display_appliance_start_url
+        if display_appliance_url is not None:
+            self.display_appliance_url = display_appliance_url
+        if distributor_code is not None:
+            self.distributor_code = distributor_code
+        if docu_sign_landing_url is not None:
+            self.docu_sign_landing_url = docu_sign_landing_url
+        if dss_values is not None:
+            self.dss_values = dss_values
+        if envelope_sending_blocked is not None:
+            self.envelope_sending_blocked = envelope_sending_blocked
+        if envelope_unit_price is not None:
+            self.envelope_unit_price = envelope_unit_price
+        if external_account_id is not None:
+            self.external_account_id = external_account_id
+        if forgotten_password_questions_count is not None:
+            self.forgotten_password_questions_count = forgotten_password_questions_count
+        if is_downgrade is not None:
+            self.is_downgrade = is_downgrade
+        if payment_method is not None:
+            self.payment_method = payment_method
+        if plan_classification is not None:
+            self.plan_classification = plan_classification
+        if plan_end_date is not None:
+            self.plan_end_date = plan_end_date
+        if plan_name is not None:
+            self.plan_name = plan_name
+        if plan_start_date is not None:
+            self.plan_start_date = plan_start_date
+        if recipient_domains is not None:
+            self.recipient_domains = recipient_domains
+        if seats_allowed is not None:
+            self.seats_allowed = seats_allowed
+        if seats_in_use is not None:
+            self.seats_in_use = seats_in_use
+        if status21_cfr_part11 is not None:
+            self.status21_cfr_part11 = status21_cfr_part11
+        if suspension_date is not None:
+            self.suspension_date = suspension_date
+        if suspension_status is not None:
+            self.suspension_status = suspension_status
+        if use_display_appliance is not None:
+            self.use_display_appliance = use_display_appliance
+
+    @property
+    def account_id_guid(self):
+        &#34;&#34;&#34;Gets the account_id_guid of this AccountInformation.  # noqa: E501
+
+        The GUID associated with the account ID.  # noqa: E501
+
+        :return: The account_id_guid of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._account_id_guid
+
+    @account_id_guid.setter
+    def account_id_guid(self, account_id_guid):
+        &#34;&#34;&#34;Sets the account_id_guid of this AccountInformation.
+
+        The GUID associated with the account ID.  # noqa: E501
+
+        :param account_id_guid: The account_id_guid of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._account_id_guid = account_id_guid
+
+    @property
+    def account_name(self):
+        &#34;&#34;&#34;Gets the account_name of this AccountInformation.  # noqa: E501
+
+        The name of the current account.  # noqa: E501
+
+        :return: The account_name of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._account_name
+
+    @account_name.setter
+    def account_name(self, account_name):
+        &#34;&#34;&#34;Sets the account_name of this AccountInformation.
+
+        The name of the current account.  # noqa: E501
+
+        :param account_name: The account_name of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._account_name = account_name
+
+    @property
+    def account_settings(self):
+        &#34;&#34;&#34;Gets the account_settings of this AccountInformation.  # noqa: E501
+
+
+        :return: The account_settings of this AccountInformation.  # noqa: E501
+        :rtype: AccountSettingsInformation
+        &#34;&#34;&#34;
+        return self._account_settings
+
+    @account_settings.setter
+    def account_settings(self, account_settings):
+        &#34;&#34;&#34;Sets the account_settings of this AccountInformation.
+
+
+        :param account_settings: The account_settings of this AccountInformation.  # noqa: E501
+        :type: AccountSettingsInformation
+        &#34;&#34;&#34;
+
+        self._account_settings = account_settings
+
+    @property
+    def allow_transaction_rooms(self):
+        &#34;&#34;&#34;Gets the allow_transaction_rooms of this AccountInformation.  # noqa: E501
+
+        When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.  # noqa: E501
+
+        :return: The allow_transaction_rooms of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._allow_transaction_rooms
+
+    @allow_transaction_rooms.setter
+    def allow_transaction_rooms(self, allow_transaction_rooms):
+        &#34;&#34;&#34;Sets the allow_transaction_rooms of this AccountInformation.
+
+        When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.  # noqa: E501
+
+        :param allow_transaction_rooms: The allow_transaction_rooms of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._allow_transaction_rooms = allow_transaction_rooms
+
+    @property
+    def billing_period_days_remaining(self):
+        &#34;&#34;&#34;Gets the billing_period_days_remaining of this AccountInformation.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The billing_period_days_remaining of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._billing_period_days_remaining
+
+    @billing_period_days_remaining.setter
+    def billing_period_days_remaining(self, billing_period_days_remaining):
+        &#34;&#34;&#34;Sets the billing_period_days_remaining of this AccountInformation.
+
+        Reserved: TBD  # noqa: E501
+
+        :param billing_period_days_remaining: The billing_period_days_remaining of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._billing_period_days_remaining = billing_period_days_remaining
+
+    @property
+    def billing_period_end_date(self):
+        &#34;&#34;&#34;Gets the billing_period_end_date of this AccountInformation.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The billing_period_end_date of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._billing_period_end_date
+
+    @billing_period_end_date.setter
+    def billing_period_end_date(self, billing_period_end_date):
+        &#34;&#34;&#34;Sets the billing_period_end_date of this AccountInformation.
+
+        Reserved: TBD  # noqa: E501
+
+        :param billing_period_end_date: The billing_period_end_date of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._billing_period_end_date = billing_period_end_date
+
+    @property
+    def billing_period_envelopes_allowed(self):
+        &#34;&#34;&#34;Gets the billing_period_envelopes_allowed of this AccountInformation.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The billing_period_envelopes_allowed of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._billing_period_envelopes_allowed
+
+    @billing_period_envelopes_allowed.setter
+    def billing_period_envelopes_allowed(self, billing_period_envelopes_allowed):
+        &#34;&#34;&#34;Sets the billing_period_envelopes_allowed of this AccountInformation.
+
+        Reserved: TBD  # noqa: E501
+
+        :param billing_period_envelopes_allowed: The billing_period_envelopes_allowed of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._billing_period_envelopes_allowed = billing_period_envelopes_allowed
+
+    @property
+    def billing_period_envelopes_sent(self):
+        &#34;&#34;&#34;Gets the billing_period_envelopes_sent of this AccountInformation.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The billing_period_envelopes_sent of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._billing_period_envelopes_sent
+
+    @billing_period_envelopes_sent.setter
+    def billing_period_envelopes_sent(self, billing_period_envelopes_sent):
+        &#34;&#34;&#34;Sets the billing_period_envelopes_sent of this AccountInformation.
+
+        Reserved: TBD  # noqa: E501
+
+        :param billing_period_envelopes_sent: The billing_period_envelopes_sent of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._billing_period_envelopes_sent = billing_period_envelopes_sent
+
+    @property
+    def billing_period_start_date(self):
+        &#34;&#34;&#34;Gets the billing_period_start_date of this AccountInformation.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The billing_period_start_date of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._billing_period_start_date
+
+    @billing_period_start_date.setter
+    def billing_period_start_date(self, billing_period_start_date):
+        &#34;&#34;&#34;Sets the billing_period_start_date of this AccountInformation.
+
+        Reserved: TBD  # noqa: E501
+
+        :param billing_period_start_date: The billing_period_start_date of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._billing_period_start_date = billing_period_start_date
+
+    @property
+    def billing_profile(self):
+        &#34;&#34;&#34;Gets the billing_profile of this AccountInformation.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The billing_profile of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._billing_profile
+
+    @billing_profile.setter
+    def billing_profile(self, billing_profile):
+        &#34;&#34;&#34;Sets the billing_profile of this AccountInformation.
+
+        Reserved: TBD  # noqa: E501
+
+        :param billing_profile: The billing_profile of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._billing_profile = billing_profile
+
+    @property
+    def can_upgrade(self):
+        &#34;&#34;&#34;Gets the can_upgrade of this AccountInformation.  # noqa: E501
+
+        When set to **true**, specifies that you can upgrade the account through the API.  # noqa: E501
+
+        :return: The can_upgrade of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._can_upgrade
+
+    @can_upgrade.setter
+    def can_upgrade(self, can_upgrade):
+        &#34;&#34;&#34;Sets the can_upgrade of this AccountInformation.
+
+        When set to **true**, specifies that you can upgrade the account through the API.  # noqa: E501
+
+        :param can_upgrade: The can_upgrade of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._can_upgrade = can_upgrade
+
+    @property
+    def connect_permission(self):
+        &#34;&#34;&#34;Gets the connect_permission of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The connect_permission of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._connect_permission
+
+    @connect_permission.setter
+    def connect_permission(self, connect_permission):
+        &#34;&#34;&#34;Sets the connect_permission of this AccountInformation.
+
+          # noqa: E501
+
+        :param connect_permission: The connect_permission of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._connect_permission = connect_permission
+
+    @property
+    def created_date(self):
+        &#34;&#34;&#34;Gets the created_date of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The created_date of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_date
+
+    @created_date.setter
+    def created_date(self, created_date):
+        &#34;&#34;&#34;Sets the created_date of this AccountInformation.
+
+          # noqa: E501
+
+        :param created_date: The created_date of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_date = created_date
+
+    @property
+    def currency_code(self):
+        &#34;&#34;&#34;Gets the currency_code of this AccountInformation.  # noqa: E501
+
+        Specifies the ISO currency code for the account.  # noqa: E501
+
+        :return: The currency_code of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._currency_code
+
+    @currency_code.setter
+    def currency_code(self, currency_code):
+        &#34;&#34;&#34;Sets the currency_code of this AccountInformation.
+
+        Specifies the ISO currency code for the account.  # noqa: E501
+
+        :param currency_code: The currency_code of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._currency_code = currency_code
+
+    @property
+    def current_plan_id(self):
+        &#34;&#34;&#34;Gets the current_plan_id of this AccountInformation.  # noqa: E501
+
+        Identifies the plan that was used create this account.  # noqa: E501
+
+        :return: The current_plan_id of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._current_plan_id
+
+    @current_plan_id.setter
+    def current_plan_id(self, current_plan_id):
+        &#34;&#34;&#34;Sets the current_plan_id of this AccountInformation.
+
+        Identifies the plan that was used create this account.  # noqa: E501
+
+        :param current_plan_id: The current_plan_id of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._current_plan_id = current_plan_id
+
+    @property
+    def display_appliance_start_url(self):
+        &#34;&#34;&#34;Gets the display_appliance_start_url of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The display_appliance_start_url of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_appliance_start_url
+
+    @display_appliance_start_url.setter
+    def display_appliance_start_url(self, display_appliance_start_url):
+        &#34;&#34;&#34;Sets the display_appliance_start_url of this AccountInformation.
+
+          # noqa: E501
+
+        :param display_appliance_start_url: The display_appliance_start_url of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_appliance_start_url = display_appliance_start_url
+
+    @property
+    def display_appliance_url(self):
+        &#34;&#34;&#34;Gets the display_appliance_url of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The display_appliance_url of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_appliance_url
+
+    @display_appliance_url.setter
+    def display_appliance_url(self, display_appliance_url):
+        &#34;&#34;&#34;Sets the display_appliance_url of this AccountInformation.
+
+          # noqa: E501
+
+        :param display_appliance_url: The display_appliance_url of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_appliance_url = display_appliance_url
+
+    @property
+    def distributor_code(self):
+        &#34;&#34;&#34;Gets the distributor_code of this AccountInformation.  # noqa: E501
+
+        The code that identifies the billing plan groups and plans for the new account.  # noqa: E501
+
+        :return: The distributor_code of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._distributor_code
+
+    @distributor_code.setter
+    def distributor_code(self, distributor_code):
+        &#34;&#34;&#34;Sets the distributor_code of this AccountInformation.
+
+        The code that identifies the billing plan groups and plans for the new account.  # noqa: E501
+
+        :param distributor_code: The distributor_code of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._distributor_code = distributor_code
+
+    @property
+    def docu_sign_landing_url(self):
+        &#34;&#34;&#34;Gets the docu_sign_landing_url of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The docu_sign_landing_url of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._docu_sign_landing_url
+
+    @docu_sign_landing_url.setter
+    def docu_sign_landing_url(self, docu_sign_landing_url):
+        &#34;&#34;&#34;Sets the docu_sign_landing_url of this AccountInformation.
+
+          # noqa: E501
+
+        :param docu_sign_landing_url: The docu_sign_landing_url of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._docu_sign_landing_url = docu_sign_landing_url
+
+    @property
+    def dss_values(self):
+        &#34;&#34;&#34;Gets the dss_values of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The dss_values of this AccountInformation.  # noqa: E501
+        :rtype: dict(str, str)
+        &#34;&#34;&#34;
+        return self._dss_values
+
+    @dss_values.setter
+    def dss_values(self, dss_values):
+        &#34;&#34;&#34;Sets the dss_values of this AccountInformation.
+
+          # noqa: E501
+
+        :param dss_values: The dss_values of this AccountInformation.  # noqa: E501
+        :type: dict(str, str)
+        &#34;&#34;&#34;
+
+        self._dss_values = dss_values
+
+    @property
+    def envelope_sending_blocked(self):
+        &#34;&#34;&#34;Gets the envelope_sending_blocked of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_sending_blocked of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_sending_blocked
+
+    @envelope_sending_blocked.setter
+    def envelope_sending_blocked(self, envelope_sending_blocked):
+        &#34;&#34;&#34;Sets the envelope_sending_blocked of this AccountInformation.
+
+          # noqa: E501
+
+        :param envelope_sending_blocked: The envelope_sending_blocked of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_sending_blocked = envelope_sending_blocked
+
+    @property
+    def envelope_unit_price(self):
+        &#34;&#34;&#34;Gets the envelope_unit_price of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_unit_price of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_unit_price
+
+    @envelope_unit_price.setter
+    def envelope_unit_price(self, envelope_unit_price):
+        &#34;&#34;&#34;Sets the envelope_unit_price of this AccountInformation.
+
+          # noqa: E501
+
+        :param envelope_unit_price: The envelope_unit_price of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_unit_price = envelope_unit_price
+
+    @property
+    def external_account_id(self):
+        &#34;&#34;&#34;Gets the external_account_id of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The external_account_id of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._external_account_id
+
+    @external_account_id.setter
+    def external_account_id(self, external_account_id):
+        &#34;&#34;&#34;Sets the external_account_id of this AccountInformation.
+
+          # noqa: E501
+
+        :param external_account_id: The external_account_id of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._external_account_id = external_account_id
+
+    @property
+    def forgotten_password_questions_count(self):
+        &#34;&#34;&#34;Gets the forgotten_password_questions_count of this AccountInformation.  # noqa: E501
+
+         A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.  # noqa: E501
+
+        :return: The forgotten_password_questions_count of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._forgotten_password_questions_count
+
+    @forgotten_password_questions_count.setter
+    def forgotten_password_questions_count(self, forgotten_password_questions_count):
+        &#34;&#34;&#34;Sets the forgotten_password_questions_count of this AccountInformation.
+
+         A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.  # noqa: E501
+
+        :param forgotten_password_questions_count: The forgotten_password_questions_count of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._forgotten_password_questions_count = forgotten_password_questions_count
+
+    @property
+    def is_downgrade(self):
+        &#34;&#34;&#34;Gets the is_downgrade of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_downgrade of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is_downgrade
+
+    @is_downgrade.setter
+    def is_downgrade(self, is_downgrade):
+        &#34;&#34;&#34;Sets the is_downgrade of this AccountInformation.
+
+          # noqa: E501
+
+        :param is_downgrade: The is_downgrade of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is_downgrade = is_downgrade
+
+    @property
+    def payment_method(self):
+        &#34;&#34;&#34;Gets the payment_method of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The payment_method of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._payment_method
+
+    @payment_method.setter
+    def payment_method(self, payment_method):
+        &#34;&#34;&#34;Sets the payment_method of this AccountInformation.
+
+          # noqa: E501
+
+        :param payment_method: The payment_method of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._payment_method = payment_method
+
+    @property
+    def plan_classification(self):
+        &#34;&#34;&#34;Gets the plan_classification of this AccountInformation.  # noqa: E501
+
+        Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.  # noqa: E501
+
+        :return: The plan_classification of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_classification
+
+    @plan_classification.setter
+    def plan_classification(self, plan_classification):
+        &#34;&#34;&#34;Sets the plan_classification of this AccountInformation.
+
+        Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.  # noqa: E501
+
+        :param plan_classification: The plan_classification of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_classification = plan_classification
+
+    @property
+    def plan_end_date(self):
+        &#34;&#34;&#34;Gets the plan_end_date of this AccountInformation.  # noqa: E501
+
+        The date that the current plan will end.  # noqa: E501
+
+        :return: The plan_end_date of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_end_date
+
+    @plan_end_date.setter
+    def plan_end_date(self, plan_end_date):
+        &#34;&#34;&#34;Sets the plan_end_date of this AccountInformation.
+
+        The date that the current plan will end.  # noqa: E501
+
+        :param plan_end_date: The plan_end_date of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_end_date = plan_end_date
+
+    @property
+    def plan_name(self):
+        &#34;&#34;&#34;Gets the plan_name of this AccountInformation.  # noqa: E501
+
+        The name of the Billing Plan.  # noqa: E501
+
+        :return: The plan_name of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_name
+
+    @plan_name.setter
+    def plan_name(self, plan_name):
+        &#34;&#34;&#34;Sets the plan_name of this AccountInformation.
+
+        The name of the Billing Plan.  # noqa: E501
+
+        :param plan_name: The plan_name of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_name = plan_name
+
+    @property
+    def plan_start_date(self):
+        &#34;&#34;&#34;Gets the plan_start_date of this AccountInformation.  # noqa: E501
+
+        The date that the Account started using the current plan.  # noqa: E501
+
+        :return: The plan_start_date of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_start_date
+
+    @plan_start_date.setter
+    def plan_start_date(self, plan_start_date):
+        &#34;&#34;&#34;Sets the plan_start_date of this AccountInformation.
+
+        The date that the Account started using the current plan.  # noqa: E501
+
+        :param plan_start_date: The plan_start_date of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_start_date = plan_start_date
+
+    @property
+    def recipient_domains(self):
+        &#34;&#34;&#34;Gets the recipient_domains of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The recipient_domains of this AccountInformation.  # noqa: E501
+        :rtype: list[RecipientDomain]
+        &#34;&#34;&#34;
+        return self._recipient_domains
+
+    @recipient_domains.setter
+    def recipient_domains(self, recipient_domains):
+        &#34;&#34;&#34;Sets the recipient_domains of this AccountInformation.
+
+          # noqa: E501
+
+        :param recipient_domains: The recipient_domains of this AccountInformation.  # noqa: E501
+        :type: list[RecipientDomain]
+        &#34;&#34;&#34;
+
+        self._recipient_domains = recipient_domains
+
+    @property
+    def seats_allowed(self):
+        &#34;&#34;&#34;Gets the seats_allowed of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The seats_allowed of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._seats_allowed
+
+    @seats_allowed.setter
+    def seats_allowed(self, seats_allowed):
+        &#34;&#34;&#34;Sets the seats_allowed of this AccountInformation.
+
+          # noqa: E501
+
+        :param seats_allowed: The seats_allowed of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._seats_allowed = seats_allowed
+
+    @property
+    def seats_in_use(self):
+        &#34;&#34;&#34;Gets the seats_in_use of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The seats_in_use of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._seats_in_use
+
+    @seats_in_use.setter
+    def seats_in_use(self, seats_in_use):
+        &#34;&#34;&#34;Sets the seats_in_use of this AccountInformation.
+
+          # noqa: E501
+
+        :param seats_in_use: The seats_in_use of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._seats_in_use = seats_in_use
+
+    @property
+    def status21_cfr_part11(self):
+        &#34;&#34;&#34;Gets the status21_cfr_part11 of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The status21_cfr_part11 of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._status21_cfr_part11
+
+    @status21_cfr_part11.setter
+    def status21_cfr_part11(self, status21_cfr_part11):
+        &#34;&#34;&#34;Sets the status21_cfr_part11 of this AccountInformation.
+
+          # noqa: E501
+
+        :param status21_cfr_part11: The status21_cfr_part11 of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._status21_cfr_part11 = status21_cfr_part11
+
+    @property
+    def suspension_date(self):
+        &#34;&#34;&#34;Gets the suspension_date of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The suspension_date of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._suspension_date
+
+    @suspension_date.setter
+    def suspension_date(self, suspension_date):
+        &#34;&#34;&#34;Sets the suspension_date of this AccountInformation.
+
+          # noqa: E501
+
+        :param suspension_date: The suspension_date of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._suspension_date = suspension_date
+
+    @property
+    def suspension_status(self):
+        &#34;&#34;&#34;Gets the suspension_status of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The suspension_status of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._suspension_status
+
+    @suspension_status.setter
+    def suspension_status(self, suspension_status):
+        &#34;&#34;&#34;Sets the suspension_status of this AccountInformation.
+
+          # noqa: E501
+
+        :param suspension_status: The suspension_status of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._suspension_status = suspension_status
+
+    @property
+    def use_display_appliance(self):
+        &#34;&#34;&#34;Gets the use_display_appliance of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_display_appliance of this AccountInformation.  # noqa: E501
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._use_display_appliance
+
+    @use_display_appliance.setter
+    def use_display_appliance(self, use_display_appliance):
+        &#34;&#34;&#34;Sets the use_display_appliance of this AccountInformation.
+
+          # noqa: E501
+
+        :param use_display_appliance: The use_display_appliance of this AccountInformation.  # noqa: E501
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._use_display_appliance = use_display_appliance
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(AccountInformation, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, AccountInformation):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.account_information.AccountInformation"><code class="flex name class">
+<span>class <span class="ident">AccountInformation</span></span>
+<span>(</span><span>account_id_guid=None, account_name=None, account_settings=None, allow_transaction_rooms=None, billing_period_days_remaining=None, billing_period_end_date=None, billing_period_envelopes_allowed=None, billing_period_envelopes_sent=None, billing_period_start_date=None, billing_profile=None, can_upgrade=None, connect_permission=None, created_date=None, currency_code=None, current_plan_id=None, display_appliance_start_url=None, display_appliance_url=None, distributor_code=None, docu_sign_landing_url=None, dss_values=None, envelope_sending_blocked=None, envelope_unit_price=None, external_account_id=None, forgotten_password_questions_count=None, is_downgrade=None, payment_method=None, plan_classification=None, plan_end_date=None, plan_name=None, plan_start_date=None, recipient_domains=None, seats_allowed=None, seats_in_use=None, status21_cfr_part11=None, suspension_date=None, suspension_status=None, use_display_appliance=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>AccountInformation - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class AccountInformation(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;account_id_guid&#39;: &#39;str&#39;,
+        &#39;account_name&#39;: &#39;str&#39;,
+        &#39;account_settings&#39;: &#39;AccountSettingsInformation&#39;,
+        &#39;allow_transaction_rooms&#39;: &#39;str&#39;,
+        &#39;billing_period_days_remaining&#39;: &#39;str&#39;,
+        &#39;billing_period_end_date&#39;: &#39;str&#39;,
+        &#39;billing_period_envelopes_allowed&#39;: &#39;str&#39;,
+        &#39;billing_period_envelopes_sent&#39;: &#39;str&#39;,
+        &#39;billing_period_start_date&#39;: &#39;str&#39;,
+        &#39;billing_profile&#39;: &#39;str&#39;,
+        &#39;can_upgrade&#39;: &#39;str&#39;,
+        &#39;connect_permission&#39;: &#39;str&#39;,
+        &#39;created_date&#39;: &#39;str&#39;,
+        &#39;currency_code&#39;: &#39;str&#39;,
+        &#39;current_plan_id&#39;: &#39;str&#39;,
+        &#39;display_appliance_start_url&#39;: &#39;str&#39;,
+        &#39;display_appliance_url&#39;: &#39;str&#39;,
+        &#39;distributor_code&#39;: &#39;str&#39;,
+        &#39;docu_sign_landing_url&#39;: &#39;str&#39;,
+        &#39;dss_values&#39;: &#39;dict(str, str)&#39;,
+        &#39;envelope_sending_blocked&#39;: &#39;str&#39;,
+        &#39;envelope_unit_price&#39;: &#39;str&#39;,
+        &#39;external_account_id&#39;: &#39;str&#39;,
+        &#39;forgotten_password_questions_count&#39;: &#39;str&#39;,
+        &#39;is_downgrade&#39;: &#39;str&#39;,
+        &#39;payment_method&#39;: &#39;str&#39;,
+        &#39;plan_classification&#39;: &#39;str&#39;,
+        &#39;plan_end_date&#39;: &#39;str&#39;,
+        &#39;plan_name&#39;: &#39;str&#39;,
+        &#39;plan_start_date&#39;: &#39;str&#39;,
+        &#39;recipient_domains&#39;: &#39;list[RecipientDomain]&#39;,
+        &#39;seats_allowed&#39;: &#39;str&#39;,
+        &#39;seats_in_use&#39;: &#39;str&#39;,
+        &#39;status21_cfr_part11&#39;: &#39;str&#39;,
+        &#39;suspension_date&#39;: &#39;str&#39;,
+        &#39;suspension_status&#39;: &#39;str&#39;,
+        &#39;use_display_appliance&#39;: &#39;bool&#39;
+    }
+
+    attribute_map = {
+        &#39;account_id_guid&#39;: &#39;accountIdGuid&#39;,
+        &#39;account_name&#39;: &#39;accountName&#39;,
+        &#39;account_settings&#39;: &#39;accountSettings&#39;,
+        &#39;allow_transaction_rooms&#39;: &#39;allowTransactionRooms&#39;,
+        &#39;billing_period_days_remaining&#39;: &#39;billingPeriodDaysRemaining&#39;,
+        &#39;billing_period_end_date&#39;: &#39;billingPeriodEndDate&#39;,
+        &#39;billing_period_envelopes_allowed&#39;: &#39;billingPeriodEnvelopesAllowed&#39;,
+        &#39;billing_period_envelopes_sent&#39;: &#39;billingPeriodEnvelopesSent&#39;,
+        &#39;billing_period_start_date&#39;: &#39;billingPeriodStartDate&#39;,
+        &#39;billing_profile&#39;: &#39;billingProfile&#39;,
+        &#39;can_upgrade&#39;: &#39;canUpgrade&#39;,
+        &#39;connect_permission&#39;: &#39;connectPermission&#39;,
+        &#39;created_date&#39;: &#39;createdDate&#39;,
+        &#39;currency_code&#39;: &#39;currencyCode&#39;,
+        &#39;current_plan_id&#39;: &#39;currentPlanId&#39;,
+        &#39;display_appliance_start_url&#39;: &#39;displayApplianceStartUrl&#39;,
+        &#39;display_appliance_url&#39;: &#39;displayApplianceUrl&#39;,
+        &#39;distributor_code&#39;: &#39;distributorCode&#39;,
+        &#39;docu_sign_landing_url&#39;: &#39;docuSignLandingUrl&#39;,
+        &#39;dss_values&#39;: &#39;dssValues&#39;,
+        &#39;envelope_sending_blocked&#39;: &#39;envelopeSendingBlocked&#39;,
+        &#39;envelope_unit_price&#39;: &#39;envelopeUnitPrice&#39;,
+        &#39;external_account_id&#39;: &#39;externalAccountId&#39;,
+        &#39;forgotten_password_questions_count&#39;: &#39;forgottenPasswordQuestionsCount&#39;,
+        &#39;is_downgrade&#39;: &#39;isDowngrade&#39;,
+        &#39;payment_method&#39;: &#39;paymentMethod&#39;,
+        &#39;plan_classification&#39;: &#39;planClassification&#39;,
+        &#39;plan_end_date&#39;: &#39;planEndDate&#39;,
+        &#39;plan_name&#39;: &#39;planName&#39;,
+        &#39;plan_start_date&#39;: &#39;planStartDate&#39;,
+        &#39;recipient_domains&#39;: &#39;recipientDomains&#39;,
+        &#39;seats_allowed&#39;: &#39;seatsAllowed&#39;,
+        &#39;seats_in_use&#39;: &#39;seatsInUse&#39;,
+        &#39;status21_cfr_part11&#39;: &#39;status21CFRPart11&#39;,
+        &#39;suspension_date&#39;: &#39;suspensionDate&#39;,
+        &#39;suspension_status&#39;: &#39;suspensionStatus&#39;,
+        &#39;use_display_appliance&#39;: &#39;useDisplayAppliance&#39;
+    }
+
+    def __init__(self, account_id_guid=None, account_name=None, account_settings=None, allow_transaction_rooms=None, billing_period_days_remaining=None, billing_period_end_date=None, billing_period_envelopes_allowed=None, billing_period_envelopes_sent=None, billing_period_start_date=None, billing_profile=None, can_upgrade=None, connect_permission=None, created_date=None, currency_code=None, current_plan_id=None, display_appliance_start_url=None, display_appliance_url=None, distributor_code=None, docu_sign_landing_url=None, dss_values=None, envelope_sending_blocked=None, envelope_unit_price=None, external_account_id=None, forgotten_password_questions_count=None, is_downgrade=None, payment_method=None, plan_classification=None, plan_end_date=None, plan_name=None, plan_start_date=None, recipient_domains=None, seats_allowed=None, seats_in_use=None, status21_cfr_part11=None, suspension_date=None, suspension_status=None, use_display_appliance=None):  # noqa: E501
+        &#34;&#34;&#34;AccountInformation - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._account_id_guid = None
+        self._account_name = None
+        self._account_settings = None
+        self._allow_transaction_rooms = None
+        self._billing_period_days_remaining = None
+        self._billing_period_end_date = None
+        self._billing_period_envelopes_allowed = None
+        self._billing_period_envelopes_sent = None
+        self._billing_period_start_date = None
+        self._billing_profile = None
+        self._can_upgrade = None
+        self._connect_permission = None
+        self._created_date = None
+        self._currency_code = None
+        self._current_plan_id = None
+        self._display_appliance_start_url = None
+        self._display_appliance_url = None
+        self._distributor_code = None
+        self._docu_sign_landing_url = None
+        self._dss_values = None
+        self._envelope_sending_blocked = None
+        self._envelope_unit_price = None
+        self._external_account_id = None
+        self._forgotten_password_questions_count = None
+        self._is_downgrade = None
+        self._payment_method = None
+        self._plan_classification = None
+        self._plan_end_date = None
+        self._plan_name = None
+        self._plan_start_date = None
+        self._recipient_domains = None
+        self._seats_allowed = None
+        self._seats_in_use = None
+        self._status21_cfr_part11 = None
+        self._suspension_date = None
+        self._suspension_status = None
+        self._use_display_appliance = None
+        self.discriminator = None
+
+        if account_id_guid is not None:
+            self.account_id_guid = account_id_guid
+        if account_name is not None:
+            self.account_name = account_name
+        if account_settings is not None:
+            self.account_settings = account_settings
+        if allow_transaction_rooms is not None:
+            self.allow_transaction_rooms = allow_transaction_rooms
+        if billing_period_days_remaining is not None:
+            self.billing_period_days_remaining = billing_period_days_remaining
+        if billing_period_end_date is not None:
+            self.billing_period_end_date = billing_period_end_date
+        if billing_period_envelopes_allowed is not None:
+            self.billing_period_envelopes_allowed = billing_period_envelopes_allowed
+        if billing_period_envelopes_sent is not None:
+            self.billing_period_envelopes_sent = billing_period_envelopes_sent
+        if billing_period_start_date is not None:
+            self.billing_period_start_date = billing_period_start_date
+        if billing_profile is not None:
+            self.billing_profile = billing_profile
+        if can_upgrade is not None:
+            self.can_upgrade = can_upgrade
+        if connect_permission is not None:
+            self.connect_permission = connect_permission
+        if created_date is not None:
+            self.created_date = created_date
+        if currency_code is not None:
+            self.currency_code = currency_code
+        if current_plan_id is not None:
+            self.current_plan_id = current_plan_id
+        if display_appliance_start_url is not None:
+            self.display_appliance_start_url = display_appliance_start_url
+        if display_appliance_url is not None:
+            self.display_appliance_url = display_appliance_url
+        if distributor_code is not None:
+            self.distributor_code = distributor_code
+        if docu_sign_landing_url is not None:
+            self.docu_sign_landing_url = docu_sign_landing_url
+        if dss_values is not None:
+            self.dss_values = dss_values
+        if envelope_sending_blocked is not None:
+            self.envelope_sending_blocked = envelope_sending_blocked
+        if envelope_unit_price is not None:
+            self.envelope_unit_price = envelope_unit_price
+        if external_account_id is not None:
+            self.external_account_id = external_account_id
+        if forgotten_password_questions_count is not None:
+            self.forgotten_password_questions_count = forgotten_password_questions_count
+        if is_downgrade is not None:
+            self.is_downgrade = is_downgrade
+        if payment_method is not None:
+            self.payment_method = payment_method
+        if plan_classification is not None:
+            self.plan_classification = plan_classification
+        if plan_end_date is not None:
+            self.plan_end_date = plan_end_date
+        if plan_name is not None:
+            self.plan_name = plan_name
+        if plan_start_date is not None:
+            self.plan_start_date = plan_start_date
+        if recipient_domains is not None:
+            self.recipient_domains = recipient_domains
+        if seats_allowed is not None:
+            self.seats_allowed = seats_allowed
+        if seats_in_use is not None:
+            self.seats_in_use = seats_in_use
+        if status21_cfr_part11 is not None:
+            self.status21_cfr_part11 = status21_cfr_part11
+        if suspension_date is not None:
+            self.suspension_date = suspension_date
+        if suspension_status is not None:
+            self.suspension_status = suspension_status
+        if use_display_appliance is not None:
+            self.use_display_appliance = use_display_appliance
+
+    @property
+    def account_id_guid(self):
+        &#34;&#34;&#34;Gets the account_id_guid of this AccountInformation.  # noqa: E501
+
+        The GUID associated with the account ID.  # noqa: E501
+
+        :return: The account_id_guid of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._account_id_guid
+
+    @account_id_guid.setter
+    def account_id_guid(self, account_id_guid):
+        &#34;&#34;&#34;Sets the account_id_guid of this AccountInformation.
+
+        The GUID associated with the account ID.  # noqa: E501
+
+        :param account_id_guid: The account_id_guid of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._account_id_guid = account_id_guid
+
+    @property
+    def account_name(self):
+        &#34;&#34;&#34;Gets the account_name of this AccountInformation.  # noqa: E501
+
+        The name of the current account.  # noqa: E501
+
+        :return: The account_name of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._account_name
+
+    @account_name.setter
+    def account_name(self, account_name):
+        &#34;&#34;&#34;Sets the account_name of this AccountInformation.
+
+        The name of the current account.  # noqa: E501
+
+        :param account_name: The account_name of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._account_name = account_name
+
+    @property
+    def account_settings(self):
+        &#34;&#34;&#34;Gets the account_settings of this AccountInformation.  # noqa: E501
+
+
+        :return: The account_settings of this AccountInformation.  # noqa: E501
+        :rtype: AccountSettingsInformation
+        &#34;&#34;&#34;
+        return self._account_settings
+
+    @account_settings.setter
+    def account_settings(self, account_settings):
+        &#34;&#34;&#34;Sets the account_settings of this AccountInformation.
+
+
+        :param account_settings: The account_settings of this AccountInformation.  # noqa: E501
+        :type: AccountSettingsInformation
+        &#34;&#34;&#34;
+
+        self._account_settings = account_settings
+
+    @property
+    def allow_transaction_rooms(self):
+        &#34;&#34;&#34;Gets the allow_transaction_rooms of this AccountInformation.  # noqa: E501
+
+        When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.  # noqa: E501
+
+        :return: The allow_transaction_rooms of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._allow_transaction_rooms
+
+    @allow_transaction_rooms.setter
+    def allow_transaction_rooms(self, allow_transaction_rooms):
+        &#34;&#34;&#34;Sets the allow_transaction_rooms of this AccountInformation.
+
+        When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.  # noqa: E501
+
+        :param allow_transaction_rooms: The allow_transaction_rooms of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._allow_transaction_rooms = allow_transaction_rooms
+
+    @property
+    def billing_period_days_remaining(self):
+        &#34;&#34;&#34;Gets the billing_period_days_remaining of this AccountInformation.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The billing_period_days_remaining of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._billing_period_days_remaining
+
+    @billing_period_days_remaining.setter
+    def billing_period_days_remaining(self, billing_period_days_remaining):
+        &#34;&#34;&#34;Sets the billing_period_days_remaining of this AccountInformation.
+
+        Reserved: TBD  # noqa: E501
+
+        :param billing_period_days_remaining: The billing_period_days_remaining of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._billing_period_days_remaining = billing_period_days_remaining
+
+    @property
+    def billing_period_end_date(self):
+        &#34;&#34;&#34;Gets the billing_period_end_date of this AccountInformation.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The billing_period_end_date of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._billing_period_end_date
+
+    @billing_period_end_date.setter
+    def billing_period_end_date(self, billing_period_end_date):
+        &#34;&#34;&#34;Sets the billing_period_end_date of this AccountInformation.
+
+        Reserved: TBD  # noqa: E501
+
+        :param billing_period_end_date: The billing_period_end_date of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._billing_period_end_date = billing_period_end_date
+
+    @property
+    def billing_period_envelopes_allowed(self):
+        &#34;&#34;&#34;Gets the billing_period_envelopes_allowed of this AccountInformation.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The billing_period_envelopes_allowed of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._billing_period_envelopes_allowed
+
+    @billing_period_envelopes_allowed.setter
+    def billing_period_envelopes_allowed(self, billing_period_envelopes_allowed):
+        &#34;&#34;&#34;Sets the billing_period_envelopes_allowed of this AccountInformation.
+
+        Reserved: TBD  # noqa: E501
+
+        :param billing_period_envelopes_allowed: The billing_period_envelopes_allowed of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._billing_period_envelopes_allowed = billing_period_envelopes_allowed
+
+    @property
+    def billing_period_envelopes_sent(self):
+        &#34;&#34;&#34;Gets the billing_period_envelopes_sent of this AccountInformation.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The billing_period_envelopes_sent of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._billing_period_envelopes_sent
+
+    @billing_period_envelopes_sent.setter
+    def billing_period_envelopes_sent(self, billing_period_envelopes_sent):
+        &#34;&#34;&#34;Sets the billing_period_envelopes_sent of this AccountInformation.
+
+        Reserved: TBD  # noqa: E501
+
+        :param billing_period_envelopes_sent: The billing_period_envelopes_sent of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._billing_period_envelopes_sent = billing_period_envelopes_sent
+
+    @property
+    def billing_period_start_date(self):
+        &#34;&#34;&#34;Gets the billing_period_start_date of this AccountInformation.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The billing_period_start_date of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._billing_period_start_date
+
+    @billing_period_start_date.setter
+    def billing_period_start_date(self, billing_period_start_date):
+        &#34;&#34;&#34;Sets the billing_period_start_date of this AccountInformation.
+
+        Reserved: TBD  # noqa: E501
+
+        :param billing_period_start_date: The billing_period_start_date of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._billing_period_start_date = billing_period_start_date
+
+    @property
+    def billing_profile(self):
+        &#34;&#34;&#34;Gets the billing_profile of this AccountInformation.  # noqa: E501
+
+        Reserved: TBD  # noqa: E501
+
+        :return: The billing_profile of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._billing_profile
+
+    @billing_profile.setter
+    def billing_profile(self, billing_profile):
+        &#34;&#34;&#34;Sets the billing_profile of this AccountInformation.
+
+        Reserved: TBD  # noqa: E501
+
+        :param billing_profile: The billing_profile of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._billing_profile = billing_profile
+
+    @property
+    def can_upgrade(self):
+        &#34;&#34;&#34;Gets the can_upgrade of this AccountInformation.  # noqa: E501
+
+        When set to **true**, specifies that you can upgrade the account through the API.  # noqa: E501
+
+        :return: The can_upgrade of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._can_upgrade
+
+    @can_upgrade.setter
+    def can_upgrade(self, can_upgrade):
+        &#34;&#34;&#34;Sets the can_upgrade of this AccountInformation.
+
+        When set to **true**, specifies that you can upgrade the account through the API.  # noqa: E501
+
+        :param can_upgrade: The can_upgrade of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._can_upgrade = can_upgrade
+
+    @property
+    def connect_permission(self):
+        &#34;&#34;&#34;Gets the connect_permission of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The connect_permission of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._connect_permission
+
+    @connect_permission.setter
+    def connect_permission(self, connect_permission):
+        &#34;&#34;&#34;Sets the connect_permission of this AccountInformation.
+
+          # noqa: E501
+
+        :param connect_permission: The connect_permission of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._connect_permission = connect_permission
+
+    @property
+    def created_date(self):
+        &#34;&#34;&#34;Gets the created_date of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The created_date of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_date
+
+    @created_date.setter
+    def created_date(self, created_date):
+        &#34;&#34;&#34;Sets the created_date of this AccountInformation.
+
+          # noqa: E501
+
+        :param created_date: The created_date of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_date = created_date
+
+    @property
+    def currency_code(self):
+        &#34;&#34;&#34;Gets the currency_code of this AccountInformation.  # noqa: E501
+
+        Specifies the ISO currency code for the account.  # noqa: E501
+
+        :return: The currency_code of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._currency_code
+
+    @currency_code.setter
+    def currency_code(self, currency_code):
+        &#34;&#34;&#34;Sets the currency_code of this AccountInformation.
+
+        Specifies the ISO currency code for the account.  # noqa: E501
+
+        :param currency_code: The currency_code of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._currency_code = currency_code
+
+    @property
+    def current_plan_id(self):
+        &#34;&#34;&#34;Gets the current_plan_id of this AccountInformation.  # noqa: E501
+
+        Identifies the plan that was used create this account.  # noqa: E501
+
+        :return: The current_plan_id of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._current_plan_id
+
+    @current_plan_id.setter
+    def current_plan_id(self, current_plan_id):
+        &#34;&#34;&#34;Sets the current_plan_id of this AccountInformation.
+
+        Identifies the plan that was used create this account.  # noqa: E501
+
+        :param current_plan_id: The current_plan_id of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._current_plan_id = current_plan_id
+
+    @property
+    def display_appliance_start_url(self):
+        &#34;&#34;&#34;Gets the display_appliance_start_url of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The display_appliance_start_url of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_appliance_start_url
+
+    @display_appliance_start_url.setter
+    def display_appliance_start_url(self, display_appliance_start_url):
+        &#34;&#34;&#34;Sets the display_appliance_start_url of this AccountInformation.
+
+          # noqa: E501
+
+        :param display_appliance_start_url: The display_appliance_start_url of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_appliance_start_url = display_appliance_start_url
+
+    @property
+    def display_appliance_url(self):
+        &#34;&#34;&#34;Gets the display_appliance_url of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The display_appliance_url of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._display_appliance_url
+
+    @display_appliance_url.setter
+    def display_appliance_url(self, display_appliance_url):
+        &#34;&#34;&#34;Sets the display_appliance_url of this AccountInformation.
+
+          # noqa: E501
+
+        :param display_appliance_url: The display_appliance_url of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._display_appliance_url = display_appliance_url
+
+    @property
+    def distributor_code(self):
+        &#34;&#34;&#34;Gets the distributor_code of this AccountInformation.  # noqa: E501
+
+        The code that identifies the billing plan groups and plans for the new account.  # noqa: E501
+
+        :return: The distributor_code of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._distributor_code
+
+    @distributor_code.setter
+    def distributor_code(self, distributor_code):
+        &#34;&#34;&#34;Sets the distributor_code of this AccountInformation.
+
+        The code that identifies the billing plan groups and plans for the new account.  # noqa: E501
+
+        :param distributor_code: The distributor_code of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._distributor_code = distributor_code
+
+    @property
+    def docu_sign_landing_url(self):
+        &#34;&#34;&#34;Gets the docu_sign_landing_url of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The docu_sign_landing_url of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._docu_sign_landing_url
+
+    @docu_sign_landing_url.setter
+    def docu_sign_landing_url(self, docu_sign_landing_url):
+        &#34;&#34;&#34;Sets the docu_sign_landing_url of this AccountInformation.
+
+          # noqa: E501
+
+        :param docu_sign_landing_url: The docu_sign_landing_url of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._docu_sign_landing_url = docu_sign_landing_url
+
+    @property
+    def dss_values(self):
+        &#34;&#34;&#34;Gets the dss_values of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The dss_values of this AccountInformation.  # noqa: E501
+        :rtype: dict(str, str)
+        &#34;&#34;&#34;
+        return self._dss_values
+
+    @dss_values.setter
+    def dss_values(self, dss_values):
+        &#34;&#34;&#34;Sets the dss_values of this AccountInformation.
+
+          # noqa: E501
+
+        :param dss_values: The dss_values of this AccountInformation.  # noqa: E501
+        :type: dict(str, str)
+        &#34;&#34;&#34;
+
+        self._dss_values = dss_values
+
+    @property
+    def envelope_sending_blocked(self):
+        &#34;&#34;&#34;Gets the envelope_sending_blocked of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_sending_blocked of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_sending_blocked
+
+    @envelope_sending_blocked.setter
+    def envelope_sending_blocked(self, envelope_sending_blocked):
+        &#34;&#34;&#34;Sets the envelope_sending_blocked of this AccountInformation.
+
+          # noqa: E501
+
+        :param envelope_sending_blocked: The envelope_sending_blocked of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_sending_blocked = envelope_sending_blocked
+
+    @property
+    def envelope_unit_price(self):
+        &#34;&#34;&#34;Gets the envelope_unit_price of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_unit_price of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._envelope_unit_price
+
+    @envelope_unit_price.setter
+    def envelope_unit_price(self, envelope_unit_price):
+        &#34;&#34;&#34;Sets the envelope_unit_price of this AccountInformation.
+
+          # noqa: E501
+
+        :param envelope_unit_price: The envelope_unit_price of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._envelope_unit_price = envelope_unit_price
+
+    @property
+    def external_account_id(self):
+        &#34;&#34;&#34;Gets the external_account_id of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The external_account_id of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._external_account_id
+
+    @external_account_id.setter
+    def external_account_id(self, external_account_id):
+        &#34;&#34;&#34;Sets the external_account_id of this AccountInformation.
+
+          # noqa: E501
+
+        :param external_account_id: The external_account_id of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._external_account_id = external_account_id
+
+    @property
+    def forgotten_password_questions_count(self):
+        &#34;&#34;&#34;Gets the forgotten_password_questions_count of this AccountInformation.  # noqa: E501
+
+         A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.  # noqa: E501
+
+        :return: The forgotten_password_questions_count of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._forgotten_password_questions_count
+
+    @forgotten_password_questions_count.setter
+    def forgotten_password_questions_count(self, forgotten_password_questions_count):
+        &#34;&#34;&#34;Sets the forgotten_password_questions_count of this AccountInformation.
+
+         A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.  # noqa: E501
+
+        :param forgotten_password_questions_count: The forgotten_password_questions_count of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._forgotten_password_questions_count = forgotten_password_questions_count
+
+    @property
+    def is_downgrade(self):
+        &#34;&#34;&#34;Gets the is_downgrade of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_downgrade of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is_downgrade
+
+    @is_downgrade.setter
+    def is_downgrade(self, is_downgrade):
+        &#34;&#34;&#34;Sets the is_downgrade of this AccountInformation.
+
+          # noqa: E501
+
+        :param is_downgrade: The is_downgrade of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is_downgrade = is_downgrade
+
+    @property
+    def payment_method(self):
+        &#34;&#34;&#34;Gets the payment_method of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The payment_method of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._payment_method
+
+    @payment_method.setter
+    def payment_method(self, payment_method):
+        &#34;&#34;&#34;Sets the payment_method of this AccountInformation.
+
+          # noqa: E501
+
+        :param payment_method: The payment_method of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._payment_method = payment_method
+
+    @property
+    def plan_classification(self):
+        &#34;&#34;&#34;Gets the plan_classification of this AccountInformation.  # noqa: E501
+
+        Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.  # noqa: E501
+
+        :return: The plan_classification of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_classification
+
+    @plan_classification.setter
+    def plan_classification(self, plan_classification):
+        &#34;&#34;&#34;Sets the plan_classification of this AccountInformation.
+
+        Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.  # noqa: E501
+
+        :param plan_classification: The plan_classification of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_classification = plan_classification
+
+    @property
+    def plan_end_date(self):
+        &#34;&#34;&#34;Gets the plan_end_date of this AccountInformation.  # noqa: E501
+
+        The date that the current plan will end.  # noqa: E501
+
+        :return: The plan_end_date of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_end_date
+
+    @plan_end_date.setter
+    def plan_end_date(self, plan_end_date):
+        &#34;&#34;&#34;Sets the plan_end_date of this AccountInformation.
+
+        The date that the current plan will end.  # noqa: E501
+
+        :param plan_end_date: The plan_end_date of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_end_date = plan_end_date
+
+    @property
+    def plan_name(self):
+        &#34;&#34;&#34;Gets the plan_name of this AccountInformation.  # noqa: E501
+
+        The name of the Billing Plan.  # noqa: E501
+
+        :return: The plan_name of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_name
+
+    @plan_name.setter
+    def plan_name(self, plan_name):
+        &#34;&#34;&#34;Sets the plan_name of this AccountInformation.
+
+        The name of the Billing Plan.  # noqa: E501
+
+        :param plan_name: The plan_name of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_name = plan_name
+
+    @property
+    def plan_start_date(self):
+        &#34;&#34;&#34;Gets the plan_start_date of this AccountInformation.  # noqa: E501
+
+        The date that the Account started using the current plan.  # noqa: E501
+
+        :return: The plan_start_date of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._plan_start_date
+
+    @plan_start_date.setter
+    def plan_start_date(self, plan_start_date):
+        &#34;&#34;&#34;Sets the plan_start_date of this AccountInformation.
+
+        The date that the Account started using the current plan.  # noqa: E501
+
+        :param plan_start_date: The plan_start_date of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._plan_start_date = plan_start_date
+
+    @property
+    def recipient_domains(self):
+        &#34;&#34;&#34;Gets the recipient_domains of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The recipient_domains of this AccountInformation.  # noqa: E501
+        :rtype: list[RecipientDomain]
+        &#34;&#34;&#34;
+        return self._recipient_domains
+
+    @recipient_domains.setter
+    def recipient_domains(self, recipient_domains):
+        &#34;&#34;&#34;Sets the recipient_domains of this AccountInformation.
+
+          # noqa: E501
+
+        :param recipient_domains: The recipient_domains of this AccountInformation.  # noqa: E501
+        :type: list[RecipientDomain]
+        &#34;&#34;&#34;
+
+        self._recipient_domains = recipient_domains
+
+    @property
+    def seats_allowed(self):
+        &#34;&#34;&#34;Gets the seats_allowed of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The seats_allowed of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._seats_allowed
+
+    @seats_allowed.setter
+    def seats_allowed(self, seats_allowed):
+        &#34;&#34;&#34;Sets the seats_allowed of this AccountInformation.
+
+          # noqa: E501
+
+        :param seats_allowed: The seats_allowed of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._seats_allowed = seats_allowed
+
+    @property
+    def seats_in_use(self):
+        &#34;&#34;&#34;Gets the seats_in_use of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The seats_in_use of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._seats_in_use
+
+    @seats_in_use.setter
+    def seats_in_use(self, seats_in_use):
+        &#34;&#34;&#34;Sets the seats_in_use of this AccountInformation.
+
+          # noqa: E501
+
+        :param seats_in_use: The seats_in_use of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._seats_in_use = seats_in_use
+
+    @property
+    def status21_cfr_part11(self):
+        &#34;&#34;&#34;Gets the status21_cfr_part11 of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The status21_cfr_part11 of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._status21_cfr_part11
+
+    @status21_cfr_part11.setter
+    def status21_cfr_part11(self, status21_cfr_part11):
+        &#34;&#34;&#34;Sets the status21_cfr_part11 of this AccountInformation.
+
+          # noqa: E501
+
+        :param status21_cfr_part11: The status21_cfr_part11 of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._status21_cfr_part11 = status21_cfr_part11
+
+    @property
+    def suspension_date(self):
+        &#34;&#34;&#34;Gets the suspension_date of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The suspension_date of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._suspension_date
+
+    @suspension_date.setter
+    def suspension_date(self, suspension_date):
+        &#34;&#34;&#34;Sets the suspension_date of this AccountInformation.
+
+          # noqa: E501
+
+        :param suspension_date: The suspension_date of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._suspension_date = suspension_date
+
+    @property
+    def suspension_status(self):
+        &#34;&#34;&#34;Gets the suspension_status of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The suspension_status of this AccountInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._suspension_status
+
+    @suspension_status.setter
+    def suspension_status(self, suspension_status):
+        &#34;&#34;&#34;Sets the suspension_status of this AccountInformation.
+
+          # noqa: E501
+
+        :param suspension_status: The suspension_status of this AccountInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._suspension_status = suspension_status
+
+    @property
+    def use_display_appliance(self):
+        &#34;&#34;&#34;Gets the use_display_appliance of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_display_appliance of this AccountInformation.  # noqa: E501
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._use_display_appliance
+
+    @use_display_appliance.setter
+    def use_display_appliance(self, use_display_appliance):
+        &#34;&#34;&#34;Sets the use_display_appliance of this AccountInformation.
+
+          # noqa: E501
+
+        :param use_display_appliance: The use_display_appliance of this AccountInformation.  # noqa: E501
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._use_display_appliance = use_display_appliance
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(AccountInformation, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, AccountInformation):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.account_information.AccountInformation.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.account_information.AccountInformation.account_id_guid"><code class="name">var <span class="ident">account_id_guid</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the account_id_guid of this AccountInformation.
+# noqa: E501</p>
+<p>The GUID associated with the account ID.
+# noqa: E501</p>
+<p>:return: The account_id_guid of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def account_id_guid(self):
+    &#34;&#34;&#34;Gets the account_id_guid of this AccountInformation.  # noqa: E501
+
+    The GUID associated with the account ID.  # noqa: E501
+
+    :return: The account_id_guid of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._account_id_guid</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.account_name"><code class="name">var <span class="ident">account_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the account_name of this AccountInformation.
+# noqa: E501</p>
+<p>The name of the current account.
+# noqa: E501</p>
+<p>:return: The account_name of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def account_name(self):
+    &#34;&#34;&#34;Gets the account_name of this AccountInformation.  # noqa: E501
+
+    The name of the current account.  # noqa: E501
+
+    :return: The account_name of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._account_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.account_settings"><code class="name">var <span class="ident">account_settings</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the account_settings of this AccountInformation.
+# noqa: E501</p>
+<p>:return: The account_settings of this AccountInformation.
+# noqa: E501
+:rtype: AccountSettingsInformation</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def account_settings(self):
+    &#34;&#34;&#34;Gets the account_settings of this AccountInformation.  # noqa: E501
+
+
+    :return: The account_settings of this AccountInformation.  # noqa: E501
+    :rtype: AccountSettingsInformation
+    &#34;&#34;&#34;
+    return self._account_settings</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.allow_transaction_rooms"><code class="name">var <span class="ident">allow_transaction_rooms</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the allow_transaction_rooms of this AccountInformation.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the transaction rooms feature exposed through the Workspaces API is enabled.
+# noqa: E501</p>
+<p>:return: The allow_transaction_rooms of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def allow_transaction_rooms(self):
+    &#34;&#34;&#34;Gets the allow_transaction_rooms of this AccountInformation.  # noqa: E501
+
+    When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.  # noqa: E501
+
+    :return: The allow_transaction_rooms of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._allow_transaction_rooms</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.billing_period_days_remaining"><code class="name">var <span class="ident">billing_period_days_remaining</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the billing_period_days_remaining of this AccountInformation.
+# noqa: E501</p>
+<p>Reserved: TBD
+# noqa: E501</p>
+<p>:return: The billing_period_days_remaining of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def billing_period_days_remaining(self):
+    &#34;&#34;&#34;Gets the billing_period_days_remaining of this AccountInformation.  # noqa: E501
+
+    Reserved: TBD  # noqa: E501
+
+    :return: The billing_period_days_remaining of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._billing_period_days_remaining</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.billing_period_end_date"><code class="name">var <span class="ident">billing_period_end_date</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the billing_period_end_date of this AccountInformation.
+# noqa: E501</p>
+<p>Reserved: TBD
+# noqa: E501</p>
+<p>:return: The billing_period_end_date of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def billing_period_end_date(self):
+    &#34;&#34;&#34;Gets the billing_period_end_date of this AccountInformation.  # noqa: E501
+
+    Reserved: TBD  # noqa: E501
+
+    :return: The billing_period_end_date of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._billing_period_end_date</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.billing_period_envelopes_allowed"><code class="name">var <span class="ident">billing_period_envelopes_allowed</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the billing_period_envelopes_allowed of this AccountInformation.
+# noqa: E501</p>
+<p>Reserved: TBD
+# noqa: E501</p>
+<p>:return: The billing_period_envelopes_allowed of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def billing_period_envelopes_allowed(self):
+    &#34;&#34;&#34;Gets the billing_period_envelopes_allowed of this AccountInformation.  # noqa: E501
+
+    Reserved: TBD  # noqa: E501
+
+    :return: The billing_period_envelopes_allowed of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._billing_period_envelopes_allowed</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.billing_period_envelopes_sent"><code class="name">var <span class="ident">billing_period_envelopes_sent</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the billing_period_envelopes_sent of this AccountInformation.
+# noqa: E501</p>
+<p>Reserved: TBD
+# noqa: E501</p>
+<p>:return: The billing_period_envelopes_sent of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def billing_period_envelopes_sent(self):
+    &#34;&#34;&#34;Gets the billing_period_envelopes_sent of this AccountInformation.  # noqa: E501
+
+    Reserved: TBD  # noqa: E501
+
+    :return: The billing_period_envelopes_sent of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._billing_period_envelopes_sent</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.billing_period_start_date"><code class="name">var <span class="ident">billing_period_start_date</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the billing_period_start_date of this AccountInformation.
+# noqa: E501</p>
+<p>Reserved: TBD
+# noqa: E501</p>
+<p>:return: The billing_period_start_date of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def billing_period_start_date(self):
+    &#34;&#34;&#34;Gets the billing_period_start_date of this AccountInformation.  # noqa: E501
+
+    Reserved: TBD  # noqa: E501
+
+    :return: The billing_period_start_date of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._billing_period_start_date</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.billing_profile"><code class="name">var <span class="ident">billing_profile</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the billing_profile of this AccountInformation.
+# noqa: E501</p>
+<p>Reserved: TBD
+# noqa: E501</p>
+<p>:return: The billing_profile of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def billing_profile(self):
+    &#34;&#34;&#34;Gets the billing_profile of this AccountInformation.  # noqa: E501
+
+    Reserved: TBD  # noqa: E501
+
+    :return: The billing_profile of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._billing_profile</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.can_upgrade"><code class="name">var <span class="ident">can_upgrade</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the can_upgrade of this AccountInformation.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, specifies that you can upgrade the account through the API.
+# noqa: E501</p>
+<p>:return: The can_upgrade of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def can_upgrade(self):
+    &#34;&#34;&#34;Gets the can_upgrade of this AccountInformation.  # noqa: E501
+
+    When set to **true**, specifies that you can upgrade the account through the API.  # noqa: E501
+
+    :return: The can_upgrade of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._can_upgrade</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.connect_permission"><code class="name">var <span class="ident">connect_permission</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the connect_permission of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The connect_permission of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def connect_permission(self):
+    &#34;&#34;&#34;Gets the connect_permission of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The connect_permission of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._connect_permission</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.created_date"><code class="name">var <span class="ident">created_date</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the created_date of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The created_date of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def created_date(self):
+    &#34;&#34;&#34;Gets the created_date of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The created_date of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._created_date</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.currency_code"><code class="name">var <span class="ident">currency_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the currency_code of this AccountInformation.
+# noqa: E501</p>
+<p>Specifies the ISO currency code for the account.
+# noqa: E501</p>
+<p>:return: The currency_code of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def currency_code(self):
+    &#34;&#34;&#34;Gets the currency_code of this AccountInformation.  # noqa: E501
+
+    Specifies the ISO currency code for the account.  # noqa: E501
+
+    :return: The currency_code of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._currency_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.current_plan_id"><code class="name">var <span class="ident">current_plan_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the current_plan_id of this AccountInformation.
+# noqa: E501</p>
+<p>Identifies the plan that was used create this account.
+# noqa: E501</p>
+<p>:return: The current_plan_id of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def current_plan_id(self):
+    &#34;&#34;&#34;Gets the current_plan_id of this AccountInformation.  # noqa: E501
+
+    Identifies the plan that was used create this account.  # noqa: E501
+
+    :return: The current_plan_id of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._current_plan_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.display_appliance_start_url"><code class="name">var <span class="ident">display_appliance_start_url</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the display_appliance_start_url of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The display_appliance_start_url of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def display_appliance_start_url(self):
+    &#34;&#34;&#34;Gets the display_appliance_start_url of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The display_appliance_start_url of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._display_appliance_start_url</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.display_appliance_url"><code class="name">var <span class="ident">display_appliance_url</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the display_appliance_url of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The display_appliance_url of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def display_appliance_url(self):
+    &#34;&#34;&#34;Gets the display_appliance_url of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The display_appliance_url of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._display_appliance_url</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.distributor_code"><code class="name">var <span class="ident">distributor_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the distributor_code of this AccountInformation.
+# noqa: E501</p>
+<p>The code that identifies the billing plan groups and plans for the new account.
+# noqa: E501</p>
+<p>:return: The distributor_code of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def distributor_code(self):
+    &#34;&#34;&#34;Gets the distributor_code of this AccountInformation.  # noqa: E501
+
+    The code that identifies the billing plan groups and plans for the new account.  # noqa: E501
+
+    :return: The distributor_code of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._distributor_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.docu_sign_landing_url"><code class="name">var <span class="ident">docu_sign_landing_url</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the docu_sign_landing_url of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The docu_sign_landing_url of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def docu_sign_landing_url(self):
+    &#34;&#34;&#34;Gets the docu_sign_landing_url of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The docu_sign_landing_url of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._docu_sign_landing_url</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.dss_values"><code class="name">var <span class="ident">dss_values</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the dss_values of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The dss_values of this AccountInformation.
+# noqa: E501
+:rtype: dict(str, str)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def dss_values(self):
+    &#34;&#34;&#34;Gets the dss_values of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The dss_values of this AccountInformation.  # noqa: E501
+    :rtype: dict(str, str)
+    &#34;&#34;&#34;
+    return self._dss_values</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.envelope_sending_blocked"><code class="name">var <span class="ident">envelope_sending_blocked</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_sending_blocked of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The envelope_sending_blocked of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_sending_blocked(self):
+    &#34;&#34;&#34;Gets the envelope_sending_blocked of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The envelope_sending_blocked of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._envelope_sending_blocked</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.envelope_unit_price"><code class="name">var <span class="ident">envelope_unit_price</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_unit_price of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The envelope_unit_price of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_unit_price(self):
+    &#34;&#34;&#34;Gets the envelope_unit_price of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The envelope_unit_price of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._envelope_unit_price</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.external_account_id"><code class="name">var <span class="ident">external_account_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the external_account_id of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The external_account_id of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def external_account_id(self):
+    &#34;&#34;&#34;Gets the external_account_id of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The external_account_id of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._external_account_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.forgotten_password_questions_count"><code class="name">var <span class="ident">forgotten_password_questions_count</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the forgotten_password_questions_count of this AccountInformation.
+# noqa: E501</p>
+<p>A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.
+# noqa: E501</p>
+<p>:return: The forgotten_password_questions_count of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def forgotten_password_questions_count(self):
+    &#34;&#34;&#34;Gets the forgotten_password_questions_count of this AccountInformation.  # noqa: E501
+
+     A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.  # noqa: E501
+
+    :return: The forgotten_password_questions_count of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._forgotten_password_questions_count</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.is_downgrade"><code class="name">var <span class="ident">is_downgrade</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the is_downgrade of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The is_downgrade of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is_downgrade(self):
+    &#34;&#34;&#34;Gets the is_downgrade of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The is_downgrade of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._is_downgrade</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.payment_method"><code class="name">var <span class="ident">payment_method</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the payment_method of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The payment_method of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def payment_method(self):
+    &#34;&#34;&#34;Gets the payment_method of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The payment_method of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._payment_method</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.plan_classification"><code class="name">var <span class="ident">plan_classification</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the plan_classification of this AccountInformation.
+# noqa: E501</p>
+<p>Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
+# noqa: E501</p>
+<p>:return: The plan_classification of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def plan_classification(self):
+    &#34;&#34;&#34;Gets the plan_classification of this AccountInformation.  # noqa: E501
+
+    Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.  # noqa: E501
+
+    :return: The plan_classification of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._plan_classification</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.plan_end_date"><code class="name">var <span class="ident">plan_end_date</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the plan_end_date of this AccountInformation.
+# noqa: E501</p>
+<p>The date that the current plan will end.
+# noqa: E501</p>
+<p>:return: The plan_end_date of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def plan_end_date(self):
+    &#34;&#34;&#34;Gets the plan_end_date of this AccountInformation.  # noqa: E501
+
+    The date that the current plan will end.  # noqa: E501
+
+    :return: The plan_end_date of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._plan_end_date</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.plan_name"><code class="name">var <span class="ident">plan_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the plan_name of this AccountInformation.
+# noqa: E501</p>
+<p>The name of the Billing Plan.
+# noqa: E501</p>
+<p>:return: The plan_name of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def plan_name(self):
+    &#34;&#34;&#34;Gets the plan_name of this AccountInformation.  # noqa: E501
+
+    The name of the Billing Plan.  # noqa: E501
+
+    :return: The plan_name of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._plan_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.plan_start_date"><code class="name">var <span class="ident">plan_start_date</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the plan_start_date of this AccountInformation.
+# noqa: E501</p>
+<p>The date that the Account started using the current plan.
+# noqa: E501</p>
+<p>:return: The plan_start_date of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def plan_start_date(self):
+    &#34;&#34;&#34;Gets the plan_start_date of this AccountInformation.  # noqa: E501
+
+    The date that the Account started using the current plan.  # noqa: E501
+
+    :return: The plan_start_date of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._plan_start_date</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.recipient_domains"><code class="name">var <span class="ident">recipient_domains</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the recipient_domains of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The recipient_domains of this AccountInformation.
+# noqa: E501
+:rtype: list[RecipientDomain]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def recipient_domains(self):
+    &#34;&#34;&#34;Gets the recipient_domains of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The recipient_domains of this AccountInformation.  # noqa: E501
+    :rtype: list[RecipientDomain]
+    &#34;&#34;&#34;
+    return self._recipient_domains</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.seats_allowed"><code class="name">var <span class="ident">seats_allowed</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the seats_allowed of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The seats_allowed of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def seats_allowed(self):
+    &#34;&#34;&#34;Gets the seats_allowed of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The seats_allowed of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._seats_allowed</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.seats_in_use"><code class="name">var <span class="ident">seats_in_use</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the seats_in_use of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The seats_in_use of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def seats_in_use(self):
+    &#34;&#34;&#34;Gets the seats_in_use of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The seats_in_use of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._seats_in_use</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.status21_cfr_part11"><code class="name">var <span class="ident">status21_cfr_part11</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the status21_cfr_part11 of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The status21_cfr_part11 of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def status21_cfr_part11(self):
+    &#34;&#34;&#34;Gets the status21_cfr_part11 of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The status21_cfr_part11 of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._status21_cfr_part11</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.suspension_date"><code class="name">var <span class="ident">suspension_date</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the suspension_date of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The suspension_date of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def suspension_date(self):
+    &#34;&#34;&#34;Gets the suspension_date of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The suspension_date of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._suspension_date</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.suspension_status"><code class="name">var <span class="ident">suspension_status</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the suspension_status of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The suspension_status of this AccountInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def suspension_status(self):
+    &#34;&#34;&#34;Gets the suspension_status of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The suspension_status of this AccountInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._suspension_status</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.use_display_appliance"><code class="name">var <span class="ident">use_display_appliance</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the use_display_appliance of this AccountInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The use_display_appliance of this AccountInformation.
+# noqa: E501
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def use_display_appliance(self):
+    &#34;&#34;&#34;Gets the use_display_appliance of this AccountInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The use_display_appliance of this AccountInformation.  # noqa: E501
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._use_display_appliance</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.account_information.AccountInformation.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(AccountInformation, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.account_information.AccountInformation.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.account_information.AccountInformation" href="#docusign_esign.models.account_information.AccountInformation">AccountInformation</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.account_id_guid" href="#docusign_esign.models.account_information.AccountInformation.account_id_guid">account_id_guid</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.account_name" href="#docusign_esign.models.account_information.AccountInformation.account_name">account_name</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.account_settings" href="#docusign_esign.models.account_information.AccountInformation.account_settings">account_settings</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.allow_transaction_rooms" href="#docusign_esign.models.account_information.AccountInformation.allow_transaction_rooms">allow_transaction_rooms</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.attribute_map" href="#docusign_esign.models.account_information.AccountInformation.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.billing_period_days_remaining" href="#docusign_esign.models.account_information.AccountInformation.billing_period_days_remaining">billing_period_days_remaining</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.billing_period_end_date" href="#docusign_esign.models.account_information.AccountInformation.billing_period_end_date">billing_period_end_date</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.billing_period_envelopes_allowed" href="#docusign_esign.models.account_information.AccountInformation.billing_period_envelopes_allowed">billing_period_envelopes_allowed</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.billing_period_envelopes_sent" href="#docusign_esign.models.account_information.AccountInformation.billing_period_envelopes_sent">billing_period_envelopes_sent</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.billing_period_start_date" href="#docusign_esign.models.account_information.AccountInformation.billing_period_start_date">billing_period_start_date</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.billing_profile" href="#docusign_esign.models.account_information.AccountInformation.billing_profile">billing_profile</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.can_upgrade" href="#docusign_esign.models.account_information.AccountInformation.can_upgrade">can_upgrade</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.connect_permission" href="#docusign_esign.models.account_information.AccountInformation.connect_permission">connect_permission</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.created_date" href="#docusign_esign.models.account_information.AccountInformation.created_date">created_date</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.currency_code" href="#docusign_esign.models.account_information.AccountInformation.currency_code">currency_code</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.current_plan_id" href="#docusign_esign.models.account_information.AccountInformation.current_plan_id">current_plan_id</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.display_appliance_start_url" href="#docusign_esign.models.account_information.AccountInformation.display_appliance_start_url">display_appliance_start_url</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.display_appliance_url" href="#docusign_esign.models.account_information.AccountInformation.display_appliance_url">display_appliance_url</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.distributor_code" href="#docusign_esign.models.account_information.AccountInformation.distributor_code">distributor_code</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.docu_sign_landing_url" href="#docusign_esign.models.account_information.AccountInformation.docu_sign_landing_url">docu_sign_landing_url</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.dss_values" href="#docusign_esign.models.account_information.AccountInformation.dss_values">dss_values</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.envelope_sending_blocked" href="#docusign_esign.models.account_information.AccountInformation.envelope_sending_blocked">envelope_sending_blocked</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.envelope_unit_price" href="#docusign_esign.models.account_information.AccountInformation.envelope_unit_price">envelope_unit_price</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.external_account_id" href="#docusign_esign.models.account_information.AccountInformation.external_account_id">external_account_id</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.forgotten_password_questions_count" href="#docusign_esign.models.account_information.AccountInformation.forgotten_password_questions_count">forgotten_password_questions_count</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.is_downgrade" href="#docusign_esign.models.account_information.AccountInformation.is_downgrade">is_downgrade</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.payment_method" href="#docusign_esign.models.account_information.AccountInformation.payment_method">payment_method</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.plan_classification" href="#docusign_esign.models.account_information.AccountInformation.plan_classification">plan_classification</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.plan_end_date" href="#docusign_esign.models.account_information.AccountInformation.plan_end_date">plan_end_date</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.plan_name" href="#docusign_esign.models.account_information.AccountInformation.plan_name">plan_name</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.plan_start_date" href="#docusign_esign.models.account_information.AccountInformation.plan_start_date">plan_start_date</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.recipient_domains" href="#docusign_esign.models.account_information.AccountInformation.recipient_domains">recipient_domains</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.seats_allowed" href="#docusign_esign.models.account_information.AccountInformation.seats_allowed">seats_allowed</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.seats_in_use" href="#docusign_esign.models.account_information.AccountInformation.seats_in_use">seats_in_use</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.status21_cfr_part11" href="#docusign_esign.models.account_information.AccountInformation.status21_cfr_part11">status21_cfr_part11</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.suspension_date" href="#docusign_esign.models.account_information.AccountInformation.suspension_date">suspension_date</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.suspension_status" href="#docusign_esign.models.account_information.AccountInformation.suspension_status">suspension_status</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.swagger_types" href="#docusign_esign.models.account_information.AccountInformation.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.to_dict" href="#docusign_esign.models.account_information.AccountInformation.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.to_str" href="#docusign_esign.models.account_information.AccountInformation.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.account_information.AccountInformation.use_display_appliance" href="#docusign_esign.models.account_information.AccountInformation.use_display_appliance">use_display_appliance</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

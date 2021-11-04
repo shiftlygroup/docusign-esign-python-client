@@ -1,0 +1,1382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.power_form_recipient API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.power_form_recipient</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class PowerFormRecipient(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;access_code&#39;: &#39;str&#39;,
+        &#39;access_code_locked&#39;: &#39;str&#39;,
+        &#39;access_code_required&#39;: &#39;str&#39;,
+        &#39;email&#39;: &#39;str&#39;,
+        &#39;email_locked&#39;: &#39;str&#39;,
+        &#39;id_check_configuration_name&#39;: &#39;str&#39;,
+        &#39;id_check_required&#39;: &#39;str&#39;,
+        &#39;name&#39;: &#39;str&#39;,
+        &#39;recipient_type&#39;: &#39;str&#39;,
+        &#39;role_name&#39;: &#39;str&#39;,
+        &#39;routing_order&#39;: &#39;str&#39;,
+        &#39;template_requires_id_lookup&#39;: &#39;str&#39;,
+        &#39;user_name_locked&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;access_code&#39;: &#39;accessCode&#39;,
+        &#39;access_code_locked&#39;: &#39;accessCodeLocked&#39;,
+        &#39;access_code_required&#39;: &#39;accessCodeRequired&#39;,
+        &#39;email&#39;: &#39;email&#39;,
+        &#39;email_locked&#39;: &#39;emailLocked&#39;,
+        &#39;id_check_configuration_name&#39;: &#39;idCheckConfigurationName&#39;,
+        &#39;id_check_required&#39;: &#39;idCheckRequired&#39;,
+        &#39;name&#39;: &#39;name&#39;,
+        &#39;recipient_type&#39;: &#39;recipientType&#39;,
+        &#39;role_name&#39;: &#39;roleName&#39;,
+        &#39;routing_order&#39;: &#39;routingOrder&#39;,
+        &#39;template_requires_id_lookup&#39;: &#39;templateRequiresIdLookup&#39;,
+        &#39;user_name_locked&#39;: &#39;userNameLocked&#39;
+    }
+
+    def __init__(self, access_code=None, access_code_locked=None, access_code_required=None, email=None, email_locked=None, id_check_configuration_name=None, id_check_required=None, name=None, recipient_type=None, role_name=None, routing_order=None, template_requires_id_lookup=None, user_name_locked=None):  # noqa: E501
+        &#34;&#34;&#34;PowerFormRecipient - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._access_code = None
+        self._access_code_locked = None
+        self._access_code_required = None
+        self._email = None
+        self._email_locked = None
+        self._id_check_configuration_name = None
+        self._id_check_required = None
+        self._name = None
+        self._recipient_type = None
+        self._role_name = None
+        self._routing_order = None
+        self._template_requires_id_lookup = None
+        self._user_name_locked = None
+        self.discriminator = None
+
+        if access_code is not None:
+            self.access_code = access_code
+        if access_code_locked is not None:
+            self.access_code_locked = access_code_locked
+        if access_code_required is not None:
+            self.access_code_required = access_code_required
+        if email is not None:
+            self.email = email
+        if email_locked is not None:
+            self.email_locked = email_locked
+        if id_check_configuration_name is not None:
+            self.id_check_configuration_name = id_check_configuration_name
+        if id_check_required is not None:
+            self.id_check_required = id_check_required
+        if name is not None:
+            self.name = name
+        if recipient_type is not None:
+            self.recipient_type = recipient_type
+        if role_name is not None:
+            self.role_name = role_name
+        if routing_order is not None:
+            self.routing_order = routing_order
+        if template_requires_id_lookup is not None:
+            self.template_requires_id_lookup = template_requires_id_lookup
+        if user_name_locked is not None:
+            self.user_name_locked = user_name_locked
+
+    @property
+    def access_code(self):
+        &#34;&#34;&#34;Gets the access_code of this PowerFormRecipient.  # noqa: E501
+
+        If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+        :return: The access_code of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._access_code
+
+    @access_code.setter
+    def access_code(self, access_code):
+        &#34;&#34;&#34;Sets the access_code of this PowerFormRecipient.
+
+        If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+        :param access_code: The access_code of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._access_code = access_code
+
+    @property
+    def access_code_locked(self):
+        &#34;&#34;&#34;Gets the access_code_locked of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The access_code_locked of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._access_code_locked
+
+    @access_code_locked.setter
+    def access_code_locked(self, access_code_locked):
+        &#34;&#34;&#34;Sets the access_code_locked of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param access_code_locked: The access_code_locked of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._access_code_locked = access_code_locked
+
+    @property
+    def access_code_required(self):
+        &#34;&#34;&#34;Gets the access_code_required of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The access_code_required of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._access_code_required
+
+    @access_code_required.setter
+    def access_code_required(self, access_code_required):
+        &#34;&#34;&#34;Sets the access_code_required of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param access_code_required: The access_code_required of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._access_code_required = access_code_required
+
+    @property
+    def email(self):
+        &#34;&#34;&#34;Gets the email of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The email of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        &#34;&#34;&#34;Sets the email of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param email: The email of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._email = email
+
+    @property
+    def email_locked(self):
+        &#34;&#34;&#34;Gets the email_locked of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The email_locked of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._email_locked
+
+    @email_locked.setter
+    def email_locked(self, email_locked):
+        &#34;&#34;&#34;Sets the email_locked of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param email_locked: The email_locked of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._email_locked = email_locked
+
+    @property
+    def id_check_configuration_name(self):
+        &#34;&#34;&#34;Gets the id_check_configuration_name of this PowerFormRecipient.  # noqa: E501
+
+        Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as &#39;ID Check $&#39; and &#39;SMS Auth $&#39;. To use ID check in an envelope, the idCheckConfigurationName should be &#39;ID Check &#39;. If you wanted to use SMS, it would be &#39;SMS Auth $&#39; and you would need to add you would need to add phone number information to the `smsAuthentication` node.  # noqa: E501
+
+        :return: The id_check_configuration_name of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._id_check_configuration_name
+
+    @id_check_configuration_name.setter
+    def id_check_configuration_name(self, id_check_configuration_name):
+        &#34;&#34;&#34;Sets the id_check_configuration_name of this PowerFormRecipient.
+
+        Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as &#39;ID Check $&#39; and &#39;SMS Auth $&#39;. To use ID check in an envelope, the idCheckConfigurationName should be &#39;ID Check &#39;. If you wanted to use SMS, it would be &#39;SMS Auth $&#39; and you would need to add you would need to add phone number information to the `smsAuthentication` node.  # noqa: E501
+
+        :param id_check_configuration_name: The id_check_configuration_name of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._id_check_configuration_name = id_check_configuration_name
+
+    @property
+    def id_check_required(self):
+        &#34;&#34;&#34;Gets the id_check_required of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The id_check_required of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._id_check_required
+
+    @id_check_required.setter
+    def id_check_required(self, id_check_required):
+        &#34;&#34;&#34;Sets the id_check_required of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param id_check_required: The id_check_required of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._id_check_required = id_check_required
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;Gets the name of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The name of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;Sets the name of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param name: The name of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def recipient_type(self):
+        &#34;&#34;&#34;Gets the recipient_type of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The recipient_type of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_type
+
+    @recipient_type.setter
+    def recipient_type(self, recipient_type):
+        &#34;&#34;&#34;Sets the recipient_type of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param recipient_type: The recipient_type of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_type = recipient_type
+
+    @property
+    def role_name(self):
+        &#34;&#34;&#34;Gets the role_name of this PowerFormRecipient.  # noqa: E501
+
+        Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+        :return: The role_name of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._role_name
+
+    @role_name.setter
+    def role_name(self, role_name):
+        &#34;&#34;&#34;Sets the role_name of this PowerFormRecipient.
+
+        Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+        :param role_name: The role_name of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._role_name = role_name
+
+    @property
+    def routing_order(self):
+        &#34;&#34;&#34;Gets the routing_order of this PowerFormRecipient.  # noqa: E501
+
+        Specifies the routing order of the recipient in the envelope.   # noqa: E501
+
+        :return: The routing_order of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._routing_order
+
+    @routing_order.setter
+    def routing_order(self, routing_order):
+        &#34;&#34;&#34;Sets the routing_order of this PowerFormRecipient.
+
+        Specifies the routing order of the recipient in the envelope.   # noqa: E501
+
+        :param routing_order: The routing_order of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._routing_order = routing_order
+
+    @property
+    def template_requires_id_lookup(self):
+        &#34;&#34;&#34;Gets the template_requires_id_lookup of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The template_requires_id_lookup of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._template_requires_id_lookup
+
+    @template_requires_id_lookup.setter
+    def template_requires_id_lookup(self, template_requires_id_lookup):
+        &#34;&#34;&#34;Sets the template_requires_id_lookup of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param template_requires_id_lookup: The template_requires_id_lookup of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._template_requires_id_lookup = template_requires_id_lookup
+
+    @property
+    def user_name_locked(self):
+        &#34;&#34;&#34;Gets the user_name_locked of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_name_locked of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_name_locked
+
+    @user_name_locked.setter
+    def user_name_locked(self, user_name_locked):
+        &#34;&#34;&#34;Sets the user_name_locked of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param user_name_locked: The user_name_locked of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_name_locked = user_name_locked
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(PowerFormRecipient, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, PowerFormRecipient):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient"><code class="flex name class">
+<span>class <span class="ident">PowerFormRecipient</span></span>
+<span>(</span><span>access_code=None, access_code_locked=None, access_code_required=None, email=None, email_locked=None, id_check_configuration_name=None, id_check_required=None, name=None, recipient_type=None, role_name=None, routing_order=None, template_requires_id_lookup=None, user_name_locked=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>PowerFormRecipient - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PowerFormRecipient(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;access_code&#39;: &#39;str&#39;,
+        &#39;access_code_locked&#39;: &#39;str&#39;,
+        &#39;access_code_required&#39;: &#39;str&#39;,
+        &#39;email&#39;: &#39;str&#39;,
+        &#39;email_locked&#39;: &#39;str&#39;,
+        &#39;id_check_configuration_name&#39;: &#39;str&#39;,
+        &#39;id_check_required&#39;: &#39;str&#39;,
+        &#39;name&#39;: &#39;str&#39;,
+        &#39;recipient_type&#39;: &#39;str&#39;,
+        &#39;role_name&#39;: &#39;str&#39;,
+        &#39;routing_order&#39;: &#39;str&#39;,
+        &#39;template_requires_id_lookup&#39;: &#39;str&#39;,
+        &#39;user_name_locked&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;access_code&#39;: &#39;accessCode&#39;,
+        &#39;access_code_locked&#39;: &#39;accessCodeLocked&#39;,
+        &#39;access_code_required&#39;: &#39;accessCodeRequired&#39;,
+        &#39;email&#39;: &#39;email&#39;,
+        &#39;email_locked&#39;: &#39;emailLocked&#39;,
+        &#39;id_check_configuration_name&#39;: &#39;idCheckConfigurationName&#39;,
+        &#39;id_check_required&#39;: &#39;idCheckRequired&#39;,
+        &#39;name&#39;: &#39;name&#39;,
+        &#39;recipient_type&#39;: &#39;recipientType&#39;,
+        &#39;role_name&#39;: &#39;roleName&#39;,
+        &#39;routing_order&#39;: &#39;routingOrder&#39;,
+        &#39;template_requires_id_lookup&#39;: &#39;templateRequiresIdLookup&#39;,
+        &#39;user_name_locked&#39;: &#39;userNameLocked&#39;
+    }
+
+    def __init__(self, access_code=None, access_code_locked=None, access_code_required=None, email=None, email_locked=None, id_check_configuration_name=None, id_check_required=None, name=None, recipient_type=None, role_name=None, routing_order=None, template_requires_id_lookup=None, user_name_locked=None):  # noqa: E501
+        &#34;&#34;&#34;PowerFormRecipient - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._access_code = None
+        self._access_code_locked = None
+        self._access_code_required = None
+        self._email = None
+        self._email_locked = None
+        self._id_check_configuration_name = None
+        self._id_check_required = None
+        self._name = None
+        self._recipient_type = None
+        self._role_name = None
+        self._routing_order = None
+        self._template_requires_id_lookup = None
+        self._user_name_locked = None
+        self.discriminator = None
+
+        if access_code is not None:
+            self.access_code = access_code
+        if access_code_locked is not None:
+            self.access_code_locked = access_code_locked
+        if access_code_required is not None:
+            self.access_code_required = access_code_required
+        if email is not None:
+            self.email = email
+        if email_locked is not None:
+            self.email_locked = email_locked
+        if id_check_configuration_name is not None:
+            self.id_check_configuration_name = id_check_configuration_name
+        if id_check_required is not None:
+            self.id_check_required = id_check_required
+        if name is not None:
+            self.name = name
+        if recipient_type is not None:
+            self.recipient_type = recipient_type
+        if role_name is not None:
+            self.role_name = role_name
+        if routing_order is not None:
+            self.routing_order = routing_order
+        if template_requires_id_lookup is not None:
+            self.template_requires_id_lookup = template_requires_id_lookup
+        if user_name_locked is not None:
+            self.user_name_locked = user_name_locked
+
+    @property
+    def access_code(self):
+        &#34;&#34;&#34;Gets the access_code of this PowerFormRecipient.  # noqa: E501
+
+        If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+        :return: The access_code of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._access_code
+
+    @access_code.setter
+    def access_code(self, access_code):
+        &#34;&#34;&#34;Sets the access_code of this PowerFormRecipient.
+
+        If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+        :param access_code: The access_code of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._access_code = access_code
+
+    @property
+    def access_code_locked(self):
+        &#34;&#34;&#34;Gets the access_code_locked of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The access_code_locked of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._access_code_locked
+
+    @access_code_locked.setter
+    def access_code_locked(self, access_code_locked):
+        &#34;&#34;&#34;Sets the access_code_locked of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param access_code_locked: The access_code_locked of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._access_code_locked = access_code_locked
+
+    @property
+    def access_code_required(self):
+        &#34;&#34;&#34;Gets the access_code_required of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The access_code_required of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._access_code_required
+
+    @access_code_required.setter
+    def access_code_required(self, access_code_required):
+        &#34;&#34;&#34;Sets the access_code_required of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param access_code_required: The access_code_required of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._access_code_required = access_code_required
+
+    @property
+    def email(self):
+        &#34;&#34;&#34;Gets the email of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The email of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        &#34;&#34;&#34;Sets the email of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param email: The email of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._email = email
+
+    @property
+    def email_locked(self):
+        &#34;&#34;&#34;Gets the email_locked of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The email_locked of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._email_locked
+
+    @email_locked.setter
+    def email_locked(self, email_locked):
+        &#34;&#34;&#34;Sets the email_locked of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param email_locked: The email_locked of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._email_locked = email_locked
+
+    @property
+    def id_check_configuration_name(self):
+        &#34;&#34;&#34;Gets the id_check_configuration_name of this PowerFormRecipient.  # noqa: E501
+
+        Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as &#39;ID Check $&#39; and &#39;SMS Auth $&#39;. To use ID check in an envelope, the idCheckConfigurationName should be &#39;ID Check &#39;. If you wanted to use SMS, it would be &#39;SMS Auth $&#39; and you would need to add you would need to add phone number information to the `smsAuthentication` node.  # noqa: E501
+
+        :return: The id_check_configuration_name of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._id_check_configuration_name
+
+    @id_check_configuration_name.setter
+    def id_check_configuration_name(self, id_check_configuration_name):
+        &#34;&#34;&#34;Sets the id_check_configuration_name of this PowerFormRecipient.
+
+        Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as &#39;ID Check $&#39; and &#39;SMS Auth $&#39;. To use ID check in an envelope, the idCheckConfigurationName should be &#39;ID Check &#39;. If you wanted to use SMS, it would be &#39;SMS Auth $&#39; and you would need to add you would need to add phone number information to the `smsAuthentication` node.  # noqa: E501
+
+        :param id_check_configuration_name: The id_check_configuration_name of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._id_check_configuration_name = id_check_configuration_name
+
+    @property
+    def id_check_required(self):
+        &#34;&#34;&#34;Gets the id_check_required of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The id_check_required of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._id_check_required
+
+    @id_check_required.setter
+    def id_check_required(self, id_check_required):
+        &#34;&#34;&#34;Sets the id_check_required of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param id_check_required: The id_check_required of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._id_check_required = id_check_required
+
+    @property
+    def name(self):
+        &#34;&#34;&#34;Gets the name of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The name of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        &#34;&#34;&#34;Sets the name of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param name: The name of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._name = name
+
+    @property
+    def recipient_type(self):
+        &#34;&#34;&#34;Gets the recipient_type of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The recipient_type of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_type
+
+    @recipient_type.setter
+    def recipient_type(self, recipient_type):
+        &#34;&#34;&#34;Sets the recipient_type of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param recipient_type: The recipient_type of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_type = recipient_type
+
+    @property
+    def role_name(self):
+        &#34;&#34;&#34;Gets the role_name of this PowerFormRecipient.  # noqa: E501
+
+        Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+        :return: The role_name of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._role_name
+
+    @role_name.setter
+    def role_name(self, role_name):
+        &#34;&#34;&#34;Sets the role_name of this PowerFormRecipient.
+
+        Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+        :param role_name: The role_name of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._role_name = role_name
+
+    @property
+    def routing_order(self):
+        &#34;&#34;&#34;Gets the routing_order of this PowerFormRecipient.  # noqa: E501
+
+        Specifies the routing order of the recipient in the envelope.   # noqa: E501
+
+        :return: The routing_order of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._routing_order
+
+    @routing_order.setter
+    def routing_order(self, routing_order):
+        &#34;&#34;&#34;Sets the routing_order of this PowerFormRecipient.
+
+        Specifies the routing order of the recipient in the envelope.   # noqa: E501
+
+        :param routing_order: The routing_order of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._routing_order = routing_order
+
+    @property
+    def template_requires_id_lookup(self):
+        &#34;&#34;&#34;Gets the template_requires_id_lookup of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The template_requires_id_lookup of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._template_requires_id_lookup
+
+    @template_requires_id_lookup.setter
+    def template_requires_id_lookup(self, template_requires_id_lookup):
+        &#34;&#34;&#34;Sets the template_requires_id_lookup of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param template_requires_id_lookup: The template_requires_id_lookup of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._template_requires_id_lookup = template_requires_id_lookup
+
+    @property
+    def user_name_locked(self):
+        &#34;&#34;&#34;Gets the user_name_locked of this PowerFormRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_name_locked of this PowerFormRecipient.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_name_locked
+
+    @user_name_locked.setter
+    def user_name_locked(self, user_name_locked):
+        &#34;&#34;&#34;Sets the user_name_locked of this PowerFormRecipient.
+
+          # noqa: E501
+
+        :param user_name_locked: The user_name_locked of this PowerFormRecipient.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_name_locked = user_name_locked
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(PowerFormRecipient, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, PowerFormRecipient):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.access_code"><code class="name">var <span class="ident">access_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the access_code of this PowerFormRecipient.
+# noqa: E501</p>
+<p>If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.
+Maximum Length: 50 characters and it must conform to the account's access code format setting.
+If blank, but the signer <code>accessCode</code> property is set in the envelope, then that value is used.
+If blank and the signer <code>accessCode</code> property is not set, then the access code is not required.
+# noqa: E501</p>
+<p>:return: The access_code of this PowerFormRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def access_code(self):
+    &#34;&#34;&#34;Gets the access_code of this PowerFormRecipient.  # noqa: E501
+
+    If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account&#39;s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.  # noqa: E501
+
+    :return: The access_code of this PowerFormRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._access_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.access_code_locked"><code class="name">var <span class="ident">access_code_locked</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the access_code_locked of this PowerFormRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The access_code_locked of this PowerFormRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def access_code_locked(self):
+    &#34;&#34;&#34;Gets the access_code_locked of this PowerFormRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The access_code_locked of this PowerFormRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._access_code_locked</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.access_code_required"><code class="name">var <span class="ident">access_code_required</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the access_code_required of this PowerFormRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The access_code_required of this PowerFormRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def access_code_required(self):
+    &#34;&#34;&#34;Gets the access_code_required of this PowerFormRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The access_code_required of this PowerFormRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._access_code_required</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.email"><code class="name">var <span class="ident">email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the email of this PowerFormRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The email of this PowerFormRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def email(self):
+    &#34;&#34;&#34;Gets the email of this PowerFormRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The email of this PowerFormRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.email_locked"><code class="name">var <span class="ident">email_locked</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the email_locked of this PowerFormRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The email_locked of this PowerFormRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def email_locked(self):
+    &#34;&#34;&#34;Gets the email_locked of this PowerFormRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The email_locked of this PowerFormRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._email_locked</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.id_check_configuration_name"><code class="name">var <span class="ident">id_check_configuration_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the id_check_configuration_name of this PowerFormRecipient.
+# noqa: E501</p>
+<p>Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.
+<em>Example</em>: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the <code>smsAuthentication</code> node.
+# noqa: E501</p>
+<p>:return: The id_check_configuration_name of this PowerFormRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def id_check_configuration_name(self):
+    &#34;&#34;&#34;Gets the id_check_configuration_name of this PowerFormRecipient.  # noqa: E501
+
+    Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as &#39;ID Check $&#39; and &#39;SMS Auth $&#39;. To use ID check in an envelope, the idCheckConfigurationName should be &#39;ID Check &#39;. If you wanted to use SMS, it would be &#39;SMS Auth $&#39; and you would need to add you would need to add phone number information to the `smsAuthentication` node.  # noqa: E501
+
+    :return: The id_check_configuration_name of this PowerFormRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._id_check_configuration_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.id_check_required"><code class="name">var <span class="ident">id_check_required</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the id_check_required of this PowerFormRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The id_check_required of this PowerFormRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def id_check_required(self):
+    &#34;&#34;&#34;Gets the id_check_required of this PowerFormRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The id_check_required of this PowerFormRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._id_check_required</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the name of this PowerFormRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The name of this PowerFormRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name(self):
+    &#34;&#34;&#34;Gets the name of this PowerFormRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The name of this PowerFormRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.recipient_type"><code class="name">var <span class="ident">recipient_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the recipient_type of this PowerFormRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The recipient_type of this PowerFormRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def recipient_type(self):
+    &#34;&#34;&#34;Gets the recipient_type of this PowerFormRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The recipient_type of this PowerFormRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._recipient_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.role_name"><code class="name">var <span class="ident">role_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the role_name of this PowerFormRecipient.
+# noqa: E501</p>
+<p>Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
+# noqa: E501</p>
+<p>:return: The role_name of this PowerFormRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def role_name(self):
+    &#34;&#34;&#34;Gets the role_name of this PowerFormRecipient.  # noqa: E501
+
+    Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients.  # noqa: E501
+
+    :return: The role_name of this PowerFormRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._role_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.routing_order"><code class="name">var <span class="ident">routing_order</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the routing_order of this PowerFormRecipient.
+# noqa: E501</p>
+<p>Specifies the routing order of the recipient in the envelope.
+# noqa: E501</p>
+<p>:return: The routing_order of this PowerFormRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def routing_order(self):
+    &#34;&#34;&#34;Gets the routing_order of this PowerFormRecipient.  # noqa: E501
+
+    Specifies the routing order of the recipient in the envelope.   # noqa: E501
+
+    :return: The routing_order of this PowerFormRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._routing_order</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.template_requires_id_lookup"><code class="name">var <span class="ident">template_requires_id_lookup</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the template_requires_id_lookup of this PowerFormRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The template_requires_id_lookup of this PowerFormRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def template_requires_id_lookup(self):
+    &#34;&#34;&#34;Gets the template_requires_id_lookup of this PowerFormRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The template_requires_id_lookup of this PowerFormRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._template_requires_id_lookup</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.user_name_locked"><code class="name">var <span class="ident">user_name_locked</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_name_locked of this PowerFormRecipient.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The user_name_locked of this PowerFormRecipient.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_name_locked(self):
+    &#34;&#34;&#34;Gets the user_name_locked of this PowerFormRecipient.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The user_name_locked of this PowerFormRecipient.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._user_name_locked</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(PowerFormRecipient, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.power_form_recipient.PowerFormRecipient.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient">PowerFormRecipient</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.access_code" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.access_code">access_code</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.access_code_locked" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.access_code_locked">access_code_locked</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.access_code_required" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.access_code_required">access_code_required</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.attribute_map" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.email" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.email">email</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.email_locked" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.email_locked">email_locked</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.id_check_configuration_name" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.id_check_configuration_name">id_check_configuration_name</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.id_check_required" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.id_check_required">id_check_required</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.name" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.name">name</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.recipient_type" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.recipient_type">recipient_type</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.role_name" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.role_name">role_name</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.routing_order" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.routing_order">routing_order</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.swagger_types" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.template_requires_id_lookup" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.template_requires_id_lookup">template_requires_id_lookup</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.to_dict" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.to_str" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.power_form_recipient.PowerFormRecipient.user_name_locked" href="#docusign_esign.models.power_form_recipient.PowerFormRecipient.user_name_locked">user_name_locked</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

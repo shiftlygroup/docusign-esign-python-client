@@ -1,0 +1,3797 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.user_information API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.user_information</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class UserInformation(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;activation_access_code&#39;: &#39;str&#39;,
+        &#39;company&#39;: &#39;str&#39;,
+        &#39;connect_configurations&#39;: &#39;list[ConnectUserObject]&#39;,
+        &#39;country_code&#39;: &#39;str&#39;,
+        &#39;created_date_time&#39;: &#39;str&#39;,
+        &#39;custom_settings&#39;: &#39;list[NameValue]&#39;,
+        &#39;default_account_id&#39;: &#39;str&#39;,
+        &#39;email&#39;: &#39;str&#39;,
+        &#39;enable_connect_for_user&#39;: &#39;str&#39;,
+        &#39;error_details&#39;: &#39;ErrorDetails&#39;,
+        &#39;first_name&#39;: &#39;str&#39;,
+        &#39;forgotten_password_info&#39;: &#39;ForgottenPasswordInformation&#39;,
+        &#39;group_list&#39;: &#39;list[Group]&#39;,
+        &#39;has_remote_notary&#39;: &#39;bool&#39;,
+        &#39;home_address&#39;: &#39;AddressInformation&#39;,
+        &#39;initials_image_uri&#39;: &#39;str&#39;,
+        &#39;is_admin&#39;: &#39;str&#39;,
+        &#39;is_nar_enabled&#39;: &#39;str&#39;,
+        &#39;job_title&#39;: &#39;str&#39;,
+        &#39;last_login&#39;: &#39;str&#39;,
+        &#39;last_name&#39;: &#39;str&#39;,
+        &#39;login_status&#39;: &#39;str&#39;,
+        &#39;middle_name&#39;: &#39;str&#39;,
+        &#39;password&#39;: &#39;str&#39;,
+        &#39;password_expiration&#39;: &#39;str&#39;,
+        &#39;permission_profile_id&#39;: &#39;str&#39;,
+        &#39;permission_profile_name&#39;: &#39;str&#39;,
+        &#39;profile_image_uri&#39;: &#39;str&#39;,
+        &#39;send_activation_email&#39;: &#39;str&#39;,
+        &#39;send_activation_on_invalid_login&#39;: &#39;str&#39;,
+        &#39;signature_image_uri&#39;: &#39;str&#39;,
+        &#39;subscribe&#39;: &#39;str&#39;,
+        &#39;suffix_name&#39;: &#39;str&#39;,
+        &#39;title&#39;: &#39;str&#39;,
+        &#39;uri&#39;: &#39;str&#39;,
+        &#39;user_added_to_account_date_time&#39;: &#39;str&#39;,
+        &#39;user_id&#39;: &#39;str&#39;,
+        &#39;user_name&#39;: &#39;str&#39;,
+        &#39;user_profile_last_modified_date&#39;: &#39;str&#39;,
+        &#39;user_settings&#39;: &#39;UserSettingsInformation&#39;,
+        &#39;user_status&#39;: &#39;str&#39;,
+        &#39;user_type&#39;: &#39;str&#39;,
+        &#39;work_address&#39;: &#39;AddressInformation&#39;
+    }
+
+    attribute_map = {
+        &#39;activation_access_code&#39;: &#39;activationAccessCode&#39;,
+        &#39;company&#39;: &#39;company&#39;,
+        &#39;connect_configurations&#39;: &#39;connectConfigurations&#39;,
+        &#39;country_code&#39;: &#39;countryCode&#39;,
+        &#39;created_date_time&#39;: &#39;createdDateTime&#39;,
+        &#39;custom_settings&#39;: &#39;customSettings&#39;,
+        &#39;default_account_id&#39;: &#39;defaultAccountId&#39;,
+        &#39;email&#39;: &#39;email&#39;,
+        &#39;enable_connect_for_user&#39;: &#39;enableConnectForUser&#39;,
+        &#39;error_details&#39;: &#39;errorDetails&#39;,
+        &#39;first_name&#39;: &#39;firstName&#39;,
+        &#39;forgotten_password_info&#39;: &#39;forgottenPasswordInfo&#39;,
+        &#39;group_list&#39;: &#39;groupList&#39;,
+        &#39;has_remote_notary&#39;: &#39;hasRemoteNotary&#39;,
+        &#39;home_address&#39;: &#39;homeAddress&#39;,
+        &#39;initials_image_uri&#39;: &#39;initialsImageUri&#39;,
+        &#39;is_admin&#39;: &#39;isAdmin&#39;,
+        &#39;is_nar_enabled&#39;: &#39;isNAREnabled&#39;,
+        &#39;job_title&#39;: &#39;jobTitle&#39;,
+        &#39;last_login&#39;: &#39;lastLogin&#39;,
+        &#39;last_name&#39;: &#39;lastName&#39;,
+        &#39;login_status&#39;: &#39;loginStatus&#39;,
+        &#39;middle_name&#39;: &#39;middleName&#39;,
+        &#39;password&#39;: &#39;password&#39;,
+        &#39;password_expiration&#39;: &#39;passwordExpiration&#39;,
+        &#39;permission_profile_id&#39;: &#39;permissionProfileId&#39;,
+        &#39;permission_profile_name&#39;: &#39;permissionProfileName&#39;,
+        &#39;profile_image_uri&#39;: &#39;profileImageUri&#39;,
+        &#39;send_activation_email&#39;: &#39;sendActivationEmail&#39;,
+        &#39;send_activation_on_invalid_login&#39;: &#39;sendActivationOnInvalidLogin&#39;,
+        &#39;signature_image_uri&#39;: &#39;signatureImageUri&#39;,
+        &#39;subscribe&#39;: &#39;subscribe&#39;,
+        &#39;suffix_name&#39;: &#39;suffixName&#39;,
+        &#39;title&#39;: &#39;title&#39;,
+        &#39;uri&#39;: &#39;uri&#39;,
+        &#39;user_added_to_account_date_time&#39;: &#39;userAddedToAccountDateTime&#39;,
+        &#39;user_id&#39;: &#39;userId&#39;,
+        &#39;user_name&#39;: &#39;userName&#39;,
+        &#39;user_profile_last_modified_date&#39;: &#39;userProfileLastModifiedDate&#39;,
+        &#39;user_settings&#39;: &#39;userSettings&#39;,
+        &#39;user_status&#39;: &#39;userStatus&#39;,
+        &#39;user_type&#39;: &#39;userType&#39;,
+        &#39;work_address&#39;: &#39;workAddress&#39;
+    }
+
+    def __init__(self, activation_access_code=None, company=None, connect_configurations=None, country_code=None, created_date_time=None, custom_settings=None, default_account_id=None, email=None, enable_connect_for_user=None, error_details=None, first_name=None, forgotten_password_info=None, group_list=None, has_remote_notary=None, home_address=None, initials_image_uri=None, is_admin=None, is_nar_enabled=None, job_title=None, last_login=None, last_name=None, login_status=None, middle_name=None, password=None, password_expiration=None, permission_profile_id=None, permission_profile_name=None, profile_image_uri=None, send_activation_email=None, send_activation_on_invalid_login=None, signature_image_uri=None, subscribe=None, suffix_name=None, title=None, uri=None, user_added_to_account_date_time=None, user_id=None, user_name=None, user_profile_last_modified_date=None, user_settings=None, user_status=None, user_type=None, work_address=None):  # noqa: E501
+        &#34;&#34;&#34;UserInformation - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._activation_access_code = None
+        self._company = None
+        self._connect_configurations = None
+        self._country_code = None
+        self._created_date_time = None
+        self._custom_settings = None
+        self._default_account_id = None
+        self._email = None
+        self._enable_connect_for_user = None
+        self._error_details = None
+        self._first_name = None
+        self._forgotten_password_info = None
+        self._group_list = None
+        self._has_remote_notary = None
+        self._home_address = None
+        self._initials_image_uri = None
+        self._is_admin = None
+        self._is_nar_enabled = None
+        self._job_title = None
+        self._last_login = None
+        self._last_name = None
+        self._login_status = None
+        self._middle_name = None
+        self._password = None
+        self._password_expiration = None
+        self._permission_profile_id = None
+        self._permission_profile_name = None
+        self._profile_image_uri = None
+        self._send_activation_email = None
+        self._send_activation_on_invalid_login = None
+        self._signature_image_uri = None
+        self._subscribe = None
+        self._suffix_name = None
+        self._title = None
+        self._uri = None
+        self._user_added_to_account_date_time = None
+        self._user_id = None
+        self._user_name = None
+        self._user_profile_last_modified_date = None
+        self._user_settings = None
+        self._user_status = None
+        self._user_type = None
+        self._work_address = None
+        self.discriminator = None
+
+        if activation_access_code is not None:
+            self.activation_access_code = activation_access_code
+        if company is not None:
+            self.company = company
+        if connect_configurations is not None:
+            self.connect_configurations = connect_configurations
+        if country_code is not None:
+            self.country_code = country_code
+        if created_date_time is not None:
+            self.created_date_time = created_date_time
+        if custom_settings is not None:
+            self.custom_settings = custom_settings
+        if default_account_id is not None:
+            self.default_account_id = default_account_id
+        if email is not None:
+            self.email = email
+        if enable_connect_for_user is not None:
+            self.enable_connect_for_user = enable_connect_for_user
+        if error_details is not None:
+            self.error_details = error_details
+        if first_name is not None:
+            self.first_name = first_name
+        if forgotten_password_info is not None:
+            self.forgotten_password_info = forgotten_password_info
+        if group_list is not None:
+            self.group_list = group_list
+        if has_remote_notary is not None:
+            self.has_remote_notary = has_remote_notary
+        if home_address is not None:
+            self.home_address = home_address
+        if initials_image_uri is not None:
+            self.initials_image_uri = initials_image_uri
+        if is_admin is not None:
+            self.is_admin = is_admin
+        if is_nar_enabled is not None:
+            self.is_nar_enabled = is_nar_enabled
+        if job_title is not None:
+            self.job_title = job_title
+        if last_login is not None:
+            self.last_login = last_login
+        if last_name is not None:
+            self.last_name = last_name
+        if login_status is not None:
+            self.login_status = login_status
+        if middle_name is not None:
+            self.middle_name = middle_name
+        if password is not None:
+            self.password = password
+        if password_expiration is not None:
+            self.password_expiration = password_expiration
+        if permission_profile_id is not None:
+            self.permission_profile_id = permission_profile_id
+        if permission_profile_name is not None:
+            self.permission_profile_name = permission_profile_name
+        if profile_image_uri is not None:
+            self.profile_image_uri = profile_image_uri
+        if send_activation_email is not None:
+            self.send_activation_email = send_activation_email
+        if send_activation_on_invalid_login is not None:
+            self.send_activation_on_invalid_login = send_activation_on_invalid_login
+        if signature_image_uri is not None:
+            self.signature_image_uri = signature_image_uri
+        if subscribe is not None:
+            self.subscribe = subscribe
+        if suffix_name is not None:
+            self.suffix_name = suffix_name
+        if title is not None:
+            self.title = title
+        if uri is not None:
+            self.uri = uri
+        if user_added_to_account_date_time is not None:
+            self.user_added_to_account_date_time = user_added_to_account_date_time
+        if user_id is not None:
+            self.user_id = user_id
+        if user_name is not None:
+            self.user_name = user_name
+        if user_profile_last_modified_date is not None:
+            self.user_profile_last_modified_date = user_profile_last_modified_date
+        if user_settings is not None:
+            self.user_settings = user_settings
+        if user_status is not None:
+            self.user_status = user_status
+        if user_type is not None:
+            self.user_type = user_type
+        if work_address is not None:
+            self.work_address = work_address
+
+    @property
+    def activation_access_code(self):
+        &#34;&#34;&#34;Gets the activation_access_code of this UserInformation.  # noqa: E501
+
+        The activation code the new user must enter when activating their account.  # noqa: E501
+
+        :return: The activation_access_code of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._activation_access_code
+
+    @activation_access_code.setter
+    def activation_access_code(self, activation_access_code):
+        &#34;&#34;&#34;Sets the activation_access_code of this UserInformation.
+
+        The activation code the new user must enter when activating their account.  # noqa: E501
+
+        :param activation_access_code: The activation_access_code of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._activation_access_code = activation_access_code
+
+    @property
+    def company(self):
+        &#34;&#34;&#34;Gets the company of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The company of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._company
+
+    @company.setter
+    def company(self, company):
+        &#34;&#34;&#34;Sets the company of this UserInformation.
+
+          # noqa: E501
+
+        :param company: The company of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._company = company
+
+    @property
+    def connect_configurations(self):
+        &#34;&#34;&#34;Gets the connect_configurations of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The connect_configurations of this UserInformation.  # noqa: E501
+        :rtype: list[ConnectUserObject]
+        &#34;&#34;&#34;
+        return self._connect_configurations
+
+    @connect_configurations.setter
+    def connect_configurations(self, connect_configurations):
+        &#34;&#34;&#34;Sets the connect_configurations of this UserInformation.
+
+          # noqa: E501
+
+        :param connect_configurations: The connect_configurations of this UserInformation.  # noqa: E501
+        :type: list[ConnectUserObject]
+        &#34;&#34;&#34;
+
+        self._connect_configurations = connect_configurations
+
+    @property
+    def country_code(self):
+        &#34;&#34;&#34;Gets the country_code of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The country_code of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._country_code
+
+    @country_code.setter
+    def country_code(self, country_code):
+        &#34;&#34;&#34;Sets the country_code of this UserInformation.
+
+          # noqa: E501
+
+        :param country_code: The country_code of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._country_code = country_code
+
+    @property
+    def created_date_time(self):
+        &#34;&#34;&#34;Gets the created_date_time of this UserInformation.  # noqa: E501
+
+        Indicates the date and time the item was created.  # noqa: E501
+
+        :return: The created_date_time of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_date_time
+
+    @created_date_time.setter
+    def created_date_time(self, created_date_time):
+        &#34;&#34;&#34;Sets the created_date_time of this UserInformation.
+
+        Indicates the date and time the item was created.  # noqa: E501
+
+        :param created_date_time: The created_date_time of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_date_time = created_date_time
+
+    @property
+    def custom_settings(self):
+        &#34;&#34;&#34;Gets the custom_settings of this UserInformation.  # noqa: E501
+
+        The name/value pair information for the user custom setting.  # noqa: E501
+
+        :return: The custom_settings of this UserInformation.  # noqa: E501
+        :rtype: list[NameValue]
+        &#34;&#34;&#34;
+        return self._custom_settings
+
+    @custom_settings.setter
+    def custom_settings(self, custom_settings):
+        &#34;&#34;&#34;Sets the custom_settings of this UserInformation.
+
+        The name/value pair information for the user custom setting.  # noqa: E501
+
+        :param custom_settings: The custom_settings of this UserInformation.  # noqa: E501
+        :type: list[NameValue]
+        &#34;&#34;&#34;
+
+        self._custom_settings = custom_settings
+
+    @property
+    def default_account_id(self):
+        &#34;&#34;&#34;Gets the default_account_id of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The default_account_id of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._default_account_id
+
+    @default_account_id.setter
+    def default_account_id(self, default_account_id):
+        &#34;&#34;&#34;Sets the default_account_id of this UserInformation.
+
+          # noqa: E501
+
+        :param default_account_id: The default_account_id of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._default_account_id = default_account_id
+
+    @property
+    def email(self):
+        &#34;&#34;&#34;Gets the email of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The email of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        &#34;&#34;&#34;Sets the email of this UserInformation.
+
+          # noqa: E501
+
+        :param email: The email of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._email = email
+
+    @property
+    def enable_connect_for_user(self):
+        &#34;&#34;&#34;Gets the enable_connect_for_user of this UserInformation.  # noqa: E501
+
+        Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.  # noqa: E501
+
+        :return: The enable_connect_for_user of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._enable_connect_for_user
+
+    @enable_connect_for_user.setter
+    def enable_connect_for_user(self, enable_connect_for_user):
+        &#34;&#34;&#34;Sets the enable_connect_for_user of this UserInformation.
+
+        Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.  # noqa: E501
+
+        :param enable_connect_for_user: The enable_connect_for_user of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._enable_connect_for_user = enable_connect_for_user
+
+    @property
+    def error_details(self):
+        &#34;&#34;&#34;Gets the error_details of this UserInformation.  # noqa: E501
+
+
+        :return: The error_details of this UserInformation.  # noqa: E501
+        :rtype: ErrorDetails
+        &#34;&#34;&#34;
+        return self._error_details
+
+    @error_details.setter
+    def error_details(self, error_details):
+        &#34;&#34;&#34;Sets the error_details of this UserInformation.
+
+
+        :param error_details: The error_details of this UserInformation.  # noqa: E501
+        :type: ErrorDetails
+        &#34;&#34;&#34;
+
+        self._error_details = error_details
+
+    @property
+    def first_name(self):
+        &#34;&#34;&#34;Gets the first_name of this UserInformation.  # noqa: E501
+
+        The user&#39;s first name.  Maximum Length: 50 characters.  # noqa: E501
+
+        :return: The first_name of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._first_name
+
+    @first_name.setter
+    def first_name(self, first_name):
+        &#34;&#34;&#34;Sets the first_name of this UserInformation.
+
+        The user&#39;s first name.  Maximum Length: 50 characters.  # noqa: E501
+
+        :param first_name: The first_name of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._first_name = first_name
+
+    @property
+    def forgotten_password_info(self):
+        &#34;&#34;&#34;Gets the forgotten_password_info of this UserInformation.  # noqa: E501
+
+
+        :return: The forgotten_password_info of this UserInformation.  # noqa: E501
+        :rtype: ForgottenPasswordInformation
+        &#34;&#34;&#34;
+        return self._forgotten_password_info
+
+    @forgotten_password_info.setter
+    def forgotten_password_info(self, forgotten_password_info):
+        &#34;&#34;&#34;Sets the forgotten_password_info of this UserInformation.
+
+
+        :param forgotten_password_info: The forgotten_password_info of this UserInformation.  # noqa: E501
+        :type: ForgottenPasswordInformation
+        &#34;&#34;&#34;
+
+        self._forgotten_password_info = forgotten_password_info
+
+    @property
+    def group_list(self):
+        &#34;&#34;&#34;Gets the group_list of this UserInformation.  # noqa: E501
+
+        A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type.   # noqa: E501
+
+        :return: The group_list of this UserInformation.  # noqa: E501
+        :rtype: list[Group]
+        &#34;&#34;&#34;
+        return self._group_list
+
+    @group_list.setter
+    def group_list(self, group_list):
+        &#34;&#34;&#34;Sets the group_list of this UserInformation.
+
+        A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type.   # noqa: E501
+
+        :param group_list: The group_list of this UserInformation.  # noqa: E501
+        :type: list[Group]
+        &#34;&#34;&#34;
+
+        self._group_list = group_list
+
+    @property
+    def has_remote_notary(self):
+        &#34;&#34;&#34;Gets the has_remote_notary of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The has_remote_notary of this UserInformation.  # noqa: E501
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._has_remote_notary
+
+    @has_remote_notary.setter
+    def has_remote_notary(self, has_remote_notary):
+        &#34;&#34;&#34;Sets the has_remote_notary of this UserInformation.
+
+          # noqa: E501
+
+        :param has_remote_notary: The has_remote_notary of this UserInformation.  # noqa: E501
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._has_remote_notary = has_remote_notary
+
+    @property
+    def home_address(self):
+        &#34;&#34;&#34;Gets the home_address of this UserInformation.  # noqa: E501
+
+
+        :return: The home_address of this UserInformation.  # noqa: E501
+        :rtype: AddressInformation
+        &#34;&#34;&#34;
+        return self._home_address
+
+    @home_address.setter
+    def home_address(self, home_address):
+        &#34;&#34;&#34;Sets the home_address of this UserInformation.
+
+
+        :param home_address: The home_address of this UserInformation.  # noqa: E501
+        :type: AddressInformation
+        &#34;&#34;&#34;
+
+        self._home_address = home_address
+
+    @property
+    def initials_image_uri(self):
+        &#34;&#34;&#34;Gets the initials_image_uri of this UserInformation.  # noqa: E501
+
+        Contains the URI for an endpoint that you can use to retrieve the initials image.  # noqa: E501
+
+        :return: The initials_image_uri of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._initials_image_uri
+
+    @initials_image_uri.setter
+    def initials_image_uri(self, initials_image_uri):
+        &#34;&#34;&#34;Sets the initials_image_uri of this UserInformation.
+
+        Contains the URI for an endpoint that you can use to retrieve the initials image.  # noqa: E501
+
+        :param initials_image_uri: The initials_image_uri of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._initials_image_uri = initials_image_uri
+
+    @property
+    def is_admin(self):
+        &#34;&#34;&#34;Gets the is_admin of this UserInformation.  # noqa: E501
+
+        Determines if the feature set is actively set as part of the plan.  # noqa: E501
+
+        :return: The is_admin of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is_admin
+
+    @is_admin.setter
+    def is_admin(self, is_admin):
+        &#34;&#34;&#34;Sets the is_admin of this UserInformation.
+
+        Determines if the feature set is actively set as part of the plan.  # noqa: E501
+
+        :param is_admin: The is_admin of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is_admin = is_admin
+
+    @property
+    def is_nar_enabled(self):
+        &#34;&#34;&#34;Gets the is_nar_enabled of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_nar_enabled of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is_nar_enabled
+
+    @is_nar_enabled.setter
+    def is_nar_enabled(self, is_nar_enabled):
+        &#34;&#34;&#34;Sets the is_nar_enabled of this UserInformation.
+
+          # noqa: E501
+
+        :param is_nar_enabled: The is_nar_enabled of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is_nar_enabled = is_nar_enabled
+
+    @property
+    def job_title(self):
+        &#34;&#34;&#34;Gets the job_title of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The job_title of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._job_title
+
+    @job_title.setter
+    def job_title(self, job_title):
+        &#34;&#34;&#34;Sets the job_title of this UserInformation.
+
+          # noqa: E501
+
+        :param job_title: The job_title of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._job_title = job_title
+
+    @property
+    def last_login(self):
+        &#34;&#34;&#34;Gets the last_login of this UserInformation.  # noqa: E501
+
+        Shows the date-time when the user last logged on to the system.  # noqa: E501
+
+        :return: The last_login of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_login
+
+    @last_login.setter
+    def last_login(self, last_login):
+        &#34;&#34;&#34;Sets the last_login of this UserInformation.
+
+        Shows the date-time when the user last logged on to the system.  # noqa: E501
+
+        :param last_login: The last_login of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_login = last_login
+
+    @property
+    def last_name(self):
+        &#34;&#34;&#34;Gets the last_name of this UserInformation.  # noqa: E501
+
+        The user&#39;s last name.  Maximum Length: 50 characters.  # noqa: E501
+
+        :return: The last_name of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_name
+
+    @last_name.setter
+    def last_name(self, last_name):
+        &#34;&#34;&#34;Sets the last_name of this UserInformation.
+
+        The user&#39;s last name.  Maximum Length: 50 characters.  # noqa: E501
+
+        :param last_name: The last_name of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_name = last_name
+
+    @property
+    def login_status(self):
+        &#34;&#34;&#34;Gets the login_status of this UserInformation.  # noqa: E501
+
+        Shows the current status of the user&#39;s password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed    # noqa: E501
+
+        :return: The login_status of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._login_status
+
+    @login_status.setter
+    def login_status(self, login_status):
+        &#34;&#34;&#34;Sets the login_status of this UserInformation.
+
+        Shows the current status of the user&#39;s password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed    # noqa: E501
+
+        :param login_status: The login_status of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._login_status = login_status
+
+    @property
+    def middle_name(self):
+        &#34;&#34;&#34;Gets the middle_name of this UserInformation.  # noqa: E501
+
+        The user&#39;s middle name.  Maximum Length: 50 characters.  # noqa: E501
+
+        :return: The middle_name of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._middle_name
+
+    @middle_name.setter
+    def middle_name(self, middle_name):
+        &#34;&#34;&#34;Sets the middle_name of this UserInformation.
+
+        The user&#39;s middle name.  Maximum Length: 50 characters.  # noqa: E501
+
+        :param middle_name: The middle_name of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._middle_name = middle_name
+
+    @property
+    def password(self):
+        &#34;&#34;&#34;Gets the password of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The password of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        &#34;&#34;&#34;Sets the password of this UserInformation.
+
+          # noqa: E501
+
+        :param password: The password of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._password = password
+
+    @property
+    def password_expiration(self):
+        &#34;&#34;&#34;Gets the password_expiration of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The password_expiration of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._password_expiration
+
+    @password_expiration.setter
+    def password_expiration(self, password_expiration):
+        &#34;&#34;&#34;Sets the password_expiration of this UserInformation.
+
+          # noqa: E501
+
+        :param password_expiration: The password_expiration of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._password_expiration = password_expiration
+
+    @property
+    def permission_profile_id(self):
+        &#34;&#34;&#34;Gets the permission_profile_id of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The permission_profile_id of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._permission_profile_id
+
+    @permission_profile_id.setter
+    def permission_profile_id(self, permission_profile_id):
+        &#34;&#34;&#34;Sets the permission_profile_id of this UserInformation.
+
+          # noqa: E501
+
+        :param permission_profile_id: The permission_profile_id of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._permission_profile_id = permission_profile_id
+
+    @property
+    def permission_profile_name(self):
+        &#34;&#34;&#34;Gets the permission_profile_name of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The permission_profile_name of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._permission_profile_name
+
+    @permission_profile_name.setter
+    def permission_profile_name(self, permission_profile_name):
+        &#34;&#34;&#34;Sets the permission_profile_name of this UserInformation.
+
+          # noqa: E501
+
+        :param permission_profile_name: The permission_profile_name of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._permission_profile_name = permission_profile_name
+
+    @property
+    def profile_image_uri(self):
+        &#34;&#34;&#34;Gets the profile_image_uri of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The profile_image_uri of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._profile_image_uri
+
+    @profile_image_uri.setter
+    def profile_image_uri(self, profile_image_uri):
+        &#34;&#34;&#34;Sets the profile_image_uri of this UserInformation.
+
+          # noqa: E501
+
+        :param profile_image_uri: The profile_image_uri of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._profile_image_uri = profile_image_uri
+
+    @property
+    def send_activation_email(self):
+        &#34;&#34;&#34;Gets the send_activation_email of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The send_activation_email of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._send_activation_email
+
+    @send_activation_email.setter
+    def send_activation_email(self, send_activation_email):
+        &#34;&#34;&#34;Sets the send_activation_email of this UserInformation.
+
+          # noqa: E501
+
+        :param send_activation_email: The send_activation_email of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._send_activation_email = send_activation_email
+
+    @property
+    def send_activation_on_invalid_login(self):
+        &#34;&#34;&#34;Gets the send_activation_on_invalid_login of this UserInformation.  # noqa: E501
+
+        When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account.   # noqa: E501
+
+        :return: The send_activation_on_invalid_login of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._send_activation_on_invalid_login
+
+    @send_activation_on_invalid_login.setter
+    def send_activation_on_invalid_login(self, send_activation_on_invalid_login):
+        &#34;&#34;&#34;Sets the send_activation_on_invalid_login of this UserInformation.
+
+        When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account.   # noqa: E501
+
+        :param send_activation_on_invalid_login: The send_activation_on_invalid_login of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._send_activation_on_invalid_login = send_activation_on_invalid_login
+
+    @property
+    def signature_image_uri(self):
+        &#34;&#34;&#34;Gets the signature_image_uri of this UserInformation.  # noqa: E501
+
+        Contains the URI for an endpoint that you can use to retrieve the signature image.  # noqa: E501
+
+        :return: The signature_image_uri of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_image_uri
+
+    @signature_image_uri.setter
+    def signature_image_uri(self, signature_image_uri):
+        &#34;&#34;&#34;Sets the signature_image_uri of this UserInformation.
+
+        Contains the URI for an endpoint that you can use to retrieve the signature image.  # noqa: E501
+
+        :param signature_image_uri: The signature_image_uri of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_image_uri = signature_image_uri
+
+    @property
+    def subscribe(self):
+        &#34;&#34;&#34;Gets the subscribe of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The subscribe of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._subscribe
+
+    @subscribe.setter
+    def subscribe(self, subscribe):
+        &#34;&#34;&#34;Sets the subscribe of this UserInformation.
+
+          # noqa: E501
+
+        :param subscribe: The subscribe of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._subscribe = subscribe
+
+    @property
+    def suffix_name(self):
+        &#34;&#34;&#34;Gets the suffix_name of this UserInformation.  # noqa: E501
+
+        The suffix for the user&#39;s name.   Maximum Length: 50 characters.   # noqa: E501
+
+        :return: The suffix_name of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._suffix_name
+
+    @suffix_name.setter
+    def suffix_name(self, suffix_name):
+        &#34;&#34;&#34;Sets the suffix_name of this UserInformation.
+
+        The suffix for the user&#39;s name.   Maximum Length: 50 characters.   # noqa: E501
+
+        :param suffix_name: The suffix_name of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._suffix_name = suffix_name
+
+    @property
+    def title(self):
+        &#34;&#34;&#34;Gets the title of this UserInformation.  # noqa: E501
+
+        The title of the user.  # noqa: E501
+
+        :return: The title of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        &#34;&#34;&#34;Sets the title of this UserInformation.
+
+        The title of the user.  # noqa: E501
+
+        :param title: The title of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._title = title
+
+    @property
+    def uri(self):
+        &#34;&#34;&#34;Gets the uri of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The uri of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._uri
+
+    @uri.setter
+    def uri(self, uri):
+        &#34;&#34;&#34;Sets the uri of this UserInformation.
+
+          # noqa: E501
+
+        :param uri: The uri of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._uri = uri
+
+    @property
+    def user_added_to_account_date_time(self):
+        &#34;&#34;&#34;Gets the user_added_to_account_date_time of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_added_to_account_date_time of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_added_to_account_date_time
+
+    @user_added_to_account_date_time.setter
+    def user_added_to_account_date_time(self, user_added_to_account_date_time):
+        &#34;&#34;&#34;Sets the user_added_to_account_date_time of this UserInformation.
+
+          # noqa: E501
+
+        :param user_added_to_account_date_time: The user_added_to_account_date_time of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_added_to_account_date_time = user_added_to_account_date_time
+
+    @property
+    def user_id(self):
+        &#34;&#34;&#34;Gets the user_id of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_id of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        &#34;&#34;&#34;Sets the user_id of this UserInformation.
+
+          # noqa: E501
+
+        :param user_id: The user_id of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_id = user_id
+
+    @property
+    def user_name(self):
+        &#34;&#34;&#34;Gets the user_name of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_name of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_name
+
+    @user_name.setter
+    def user_name(self, user_name):
+        &#34;&#34;&#34;Sets the user_name of this UserInformation.
+
+          # noqa: E501
+
+        :param user_name: The user_name of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_name = user_name
+
+    @property
+    def user_profile_last_modified_date(self):
+        &#34;&#34;&#34;Gets the user_profile_last_modified_date of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_profile_last_modified_date of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_profile_last_modified_date
+
+    @user_profile_last_modified_date.setter
+    def user_profile_last_modified_date(self, user_profile_last_modified_date):
+        &#34;&#34;&#34;Sets the user_profile_last_modified_date of this UserInformation.
+
+          # noqa: E501
+
+        :param user_profile_last_modified_date: The user_profile_last_modified_date of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_profile_last_modified_date = user_profile_last_modified_date
+
+    @property
+    def user_settings(self):
+        &#34;&#34;&#34;Gets the user_settings of this UserInformation.  # noqa: E501
+
+
+        :return: The user_settings of this UserInformation.  # noqa: E501
+        :rtype: UserSettingsInformation
+        &#34;&#34;&#34;
+        return self._user_settings
+
+    @user_settings.setter
+    def user_settings(self, user_settings):
+        &#34;&#34;&#34;Sets the user_settings of this UserInformation.
+
+
+        :param user_settings: The user_settings of this UserInformation.  # noqa: E501
+        :type: UserSettingsInformation
+        &#34;&#34;&#34;
+
+        self._user_settings = user_settings
+
+    @property
+    def user_status(self):
+        &#34;&#34;&#34;Gets the user_status of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_status of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_status
+
+    @user_status.setter
+    def user_status(self, user_status):
+        &#34;&#34;&#34;Sets the user_status of this UserInformation.
+
+          # noqa: E501
+
+        :param user_status: The user_status of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_status = user_status
+
+    @property
+    def user_type(self):
+        &#34;&#34;&#34;Gets the user_type of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_type of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_type
+
+    @user_type.setter
+    def user_type(self, user_type):
+        &#34;&#34;&#34;Sets the user_type of this UserInformation.
+
+          # noqa: E501
+
+        :param user_type: The user_type of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_type = user_type
+
+    @property
+    def work_address(self):
+        &#34;&#34;&#34;Gets the work_address of this UserInformation.  # noqa: E501
+
+
+        :return: The work_address of this UserInformation.  # noqa: E501
+        :rtype: AddressInformation
+        &#34;&#34;&#34;
+        return self._work_address
+
+    @work_address.setter
+    def work_address(self, work_address):
+        &#34;&#34;&#34;Sets the work_address of this UserInformation.
+
+
+        :param work_address: The work_address of this UserInformation.  # noqa: E501
+        :type: AddressInformation
+        &#34;&#34;&#34;
+
+        self._work_address = work_address
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(UserInformation, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, UserInformation):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.user_information.UserInformation"><code class="flex name class">
+<span>class <span class="ident">UserInformation</span></span>
+<span>(</span><span>activation_access_code=None, company=None, connect_configurations=None, country_code=None, created_date_time=None, custom_settings=None, default_account_id=None, email=None, enable_connect_for_user=None, error_details=None, first_name=None, forgotten_password_info=None, group_list=None, has_remote_notary=None, home_address=None, initials_image_uri=None, is_admin=None, is_nar_enabled=None, job_title=None, last_login=None, last_name=None, login_status=None, middle_name=None, password=None, password_expiration=None, permission_profile_id=None, permission_profile_name=None, profile_image_uri=None, send_activation_email=None, send_activation_on_invalid_login=None, signature_image_uri=None, subscribe=None, suffix_name=None, title=None, uri=None, user_added_to_account_date_time=None, user_id=None, user_name=None, user_profile_last_modified_date=None, user_settings=None, user_status=None, user_type=None, work_address=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>UserInformation - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class UserInformation(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;activation_access_code&#39;: &#39;str&#39;,
+        &#39;company&#39;: &#39;str&#39;,
+        &#39;connect_configurations&#39;: &#39;list[ConnectUserObject]&#39;,
+        &#39;country_code&#39;: &#39;str&#39;,
+        &#39;created_date_time&#39;: &#39;str&#39;,
+        &#39;custom_settings&#39;: &#39;list[NameValue]&#39;,
+        &#39;default_account_id&#39;: &#39;str&#39;,
+        &#39;email&#39;: &#39;str&#39;,
+        &#39;enable_connect_for_user&#39;: &#39;str&#39;,
+        &#39;error_details&#39;: &#39;ErrorDetails&#39;,
+        &#39;first_name&#39;: &#39;str&#39;,
+        &#39;forgotten_password_info&#39;: &#39;ForgottenPasswordInformation&#39;,
+        &#39;group_list&#39;: &#39;list[Group]&#39;,
+        &#39;has_remote_notary&#39;: &#39;bool&#39;,
+        &#39;home_address&#39;: &#39;AddressInformation&#39;,
+        &#39;initials_image_uri&#39;: &#39;str&#39;,
+        &#39;is_admin&#39;: &#39;str&#39;,
+        &#39;is_nar_enabled&#39;: &#39;str&#39;,
+        &#39;job_title&#39;: &#39;str&#39;,
+        &#39;last_login&#39;: &#39;str&#39;,
+        &#39;last_name&#39;: &#39;str&#39;,
+        &#39;login_status&#39;: &#39;str&#39;,
+        &#39;middle_name&#39;: &#39;str&#39;,
+        &#39;password&#39;: &#39;str&#39;,
+        &#39;password_expiration&#39;: &#39;str&#39;,
+        &#39;permission_profile_id&#39;: &#39;str&#39;,
+        &#39;permission_profile_name&#39;: &#39;str&#39;,
+        &#39;profile_image_uri&#39;: &#39;str&#39;,
+        &#39;send_activation_email&#39;: &#39;str&#39;,
+        &#39;send_activation_on_invalid_login&#39;: &#39;str&#39;,
+        &#39;signature_image_uri&#39;: &#39;str&#39;,
+        &#39;subscribe&#39;: &#39;str&#39;,
+        &#39;suffix_name&#39;: &#39;str&#39;,
+        &#39;title&#39;: &#39;str&#39;,
+        &#39;uri&#39;: &#39;str&#39;,
+        &#39;user_added_to_account_date_time&#39;: &#39;str&#39;,
+        &#39;user_id&#39;: &#39;str&#39;,
+        &#39;user_name&#39;: &#39;str&#39;,
+        &#39;user_profile_last_modified_date&#39;: &#39;str&#39;,
+        &#39;user_settings&#39;: &#39;UserSettingsInformation&#39;,
+        &#39;user_status&#39;: &#39;str&#39;,
+        &#39;user_type&#39;: &#39;str&#39;,
+        &#39;work_address&#39;: &#39;AddressInformation&#39;
+    }
+
+    attribute_map = {
+        &#39;activation_access_code&#39;: &#39;activationAccessCode&#39;,
+        &#39;company&#39;: &#39;company&#39;,
+        &#39;connect_configurations&#39;: &#39;connectConfigurations&#39;,
+        &#39;country_code&#39;: &#39;countryCode&#39;,
+        &#39;created_date_time&#39;: &#39;createdDateTime&#39;,
+        &#39;custom_settings&#39;: &#39;customSettings&#39;,
+        &#39;default_account_id&#39;: &#39;defaultAccountId&#39;,
+        &#39;email&#39;: &#39;email&#39;,
+        &#39;enable_connect_for_user&#39;: &#39;enableConnectForUser&#39;,
+        &#39;error_details&#39;: &#39;errorDetails&#39;,
+        &#39;first_name&#39;: &#39;firstName&#39;,
+        &#39;forgotten_password_info&#39;: &#39;forgottenPasswordInfo&#39;,
+        &#39;group_list&#39;: &#39;groupList&#39;,
+        &#39;has_remote_notary&#39;: &#39;hasRemoteNotary&#39;,
+        &#39;home_address&#39;: &#39;homeAddress&#39;,
+        &#39;initials_image_uri&#39;: &#39;initialsImageUri&#39;,
+        &#39;is_admin&#39;: &#39;isAdmin&#39;,
+        &#39;is_nar_enabled&#39;: &#39;isNAREnabled&#39;,
+        &#39;job_title&#39;: &#39;jobTitle&#39;,
+        &#39;last_login&#39;: &#39;lastLogin&#39;,
+        &#39;last_name&#39;: &#39;lastName&#39;,
+        &#39;login_status&#39;: &#39;loginStatus&#39;,
+        &#39;middle_name&#39;: &#39;middleName&#39;,
+        &#39;password&#39;: &#39;password&#39;,
+        &#39;password_expiration&#39;: &#39;passwordExpiration&#39;,
+        &#39;permission_profile_id&#39;: &#39;permissionProfileId&#39;,
+        &#39;permission_profile_name&#39;: &#39;permissionProfileName&#39;,
+        &#39;profile_image_uri&#39;: &#39;profileImageUri&#39;,
+        &#39;send_activation_email&#39;: &#39;sendActivationEmail&#39;,
+        &#39;send_activation_on_invalid_login&#39;: &#39;sendActivationOnInvalidLogin&#39;,
+        &#39;signature_image_uri&#39;: &#39;signatureImageUri&#39;,
+        &#39;subscribe&#39;: &#39;subscribe&#39;,
+        &#39;suffix_name&#39;: &#39;suffixName&#39;,
+        &#39;title&#39;: &#39;title&#39;,
+        &#39;uri&#39;: &#39;uri&#39;,
+        &#39;user_added_to_account_date_time&#39;: &#39;userAddedToAccountDateTime&#39;,
+        &#39;user_id&#39;: &#39;userId&#39;,
+        &#39;user_name&#39;: &#39;userName&#39;,
+        &#39;user_profile_last_modified_date&#39;: &#39;userProfileLastModifiedDate&#39;,
+        &#39;user_settings&#39;: &#39;userSettings&#39;,
+        &#39;user_status&#39;: &#39;userStatus&#39;,
+        &#39;user_type&#39;: &#39;userType&#39;,
+        &#39;work_address&#39;: &#39;workAddress&#39;
+    }
+
+    def __init__(self, activation_access_code=None, company=None, connect_configurations=None, country_code=None, created_date_time=None, custom_settings=None, default_account_id=None, email=None, enable_connect_for_user=None, error_details=None, first_name=None, forgotten_password_info=None, group_list=None, has_remote_notary=None, home_address=None, initials_image_uri=None, is_admin=None, is_nar_enabled=None, job_title=None, last_login=None, last_name=None, login_status=None, middle_name=None, password=None, password_expiration=None, permission_profile_id=None, permission_profile_name=None, profile_image_uri=None, send_activation_email=None, send_activation_on_invalid_login=None, signature_image_uri=None, subscribe=None, suffix_name=None, title=None, uri=None, user_added_to_account_date_time=None, user_id=None, user_name=None, user_profile_last_modified_date=None, user_settings=None, user_status=None, user_type=None, work_address=None):  # noqa: E501
+        &#34;&#34;&#34;UserInformation - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._activation_access_code = None
+        self._company = None
+        self._connect_configurations = None
+        self._country_code = None
+        self._created_date_time = None
+        self._custom_settings = None
+        self._default_account_id = None
+        self._email = None
+        self._enable_connect_for_user = None
+        self._error_details = None
+        self._first_name = None
+        self._forgotten_password_info = None
+        self._group_list = None
+        self._has_remote_notary = None
+        self._home_address = None
+        self._initials_image_uri = None
+        self._is_admin = None
+        self._is_nar_enabled = None
+        self._job_title = None
+        self._last_login = None
+        self._last_name = None
+        self._login_status = None
+        self._middle_name = None
+        self._password = None
+        self._password_expiration = None
+        self._permission_profile_id = None
+        self._permission_profile_name = None
+        self._profile_image_uri = None
+        self._send_activation_email = None
+        self._send_activation_on_invalid_login = None
+        self._signature_image_uri = None
+        self._subscribe = None
+        self._suffix_name = None
+        self._title = None
+        self._uri = None
+        self._user_added_to_account_date_time = None
+        self._user_id = None
+        self._user_name = None
+        self._user_profile_last_modified_date = None
+        self._user_settings = None
+        self._user_status = None
+        self._user_type = None
+        self._work_address = None
+        self.discriminator = None
+
+        if activation_access_code is not None:
+            self.activation_access_code = activation_access_code
+        if company is not None:
+            self.company = company
+        if connect_configurations is not None:
+            self.connect_configurations = connect_configurations
+        if country_code is not None:
+            self.country_code = country_code
+        if created_date_time is not None:
+            self.created_date_time = created_date_time
+        if custom_settings is not None:
+            self.custom_settings = custom_settings
+        if default_account_id is not None:
+            self.default_account_id = default_account_id
+        if email is not None:
+            self.email = email
+        if enable_connect_for_user is not None:
+            self.enable_connect_for_user = enable_connect_for_user
+        if error_details is not None:
+            self.error_details = error_details
+        if first_name is not None:
+            self.first_name = first_name
+        if forgotten_password_info is not None:
+            self.forgotten_password_info = forgotten_password_info
+        if group_list is not None:
+            self.group_list = group_list
+        if has_remote_notary is not None:
+            self.has_remote_notary = has_remote_notary
+        if home_address is not None:
+            self.home_address = home_address
+        if initials_image_uri is not None:
+            self.initials_image_uri = initials_image_uri
+        if is_admin is not None:
+            self.is_admin = is_admin
+        if is_nar_enabled is not None:
+            self.is_nar_enabled = is_nar_enabled
+        if job_title is not None:
+            self.job_title = job_title
+        if last_login is not None:
+            self.last_login = last_login
+        if last_name is not None:
+            self.last_name = last_name
+        if login_status is not None:
+            self.login_status = login_status
+        if middle_name is not None:
+            self.middle_name = middle_name
+        if password is not None:
+            self.password = password
+        if password_expiration is not None:
+            self.password_expiration = password_expiration
+        if permission_profile_id is not None:
+            self.permission_profile_id = permission_profile_id
+        if permission_profile_name is not None:
+            self.permission_profile_name = permission_profile_name
+        if profile_image_uri is not None:
+            self.profile_image_uri = profile_image_uri
+        if send_activation_email is not None:
+            self.send_activation_email = send_activation_email
+        if send_activation_on_invalid_login is not None:
+            self.send_activation_on_invalid_login = send_activation_on_invalid_login
+        if signature_image_uri is not None:
+            self.signature_image_uri = signature_image_uri
+        if subscribe is not None:
+            self.subscribe = subscribe
+        if suffix_name is not None:
+            self.suffix_name = suffix_name
+        if title is not None:
+            self.title = title
+        if uri is not None:
+            self.uri = uri
+        if user_added_to_account_date_time is not None:
+            self.user_added_to_account_date_time = user_added_to_account_date_time
+        if user_id is not None:
+            self.user_id = user_id
+        if user_name is not None:
+            self.user_name = user_name
+        if user_profile_last_modified_date is not None:
+            self.user_profile_last_modified_date = user_profile_last_modified_date
+        if user_settings is not None:
+            self.user_settings = user_settings
+        if user_status is not None:
+            self.user_status = user_status
+        if user_type is not None:
+            self.user_type = user_type
+        if work_address is not None:
+            self.work_address = work_address
+
+    @property
+    def activation_access_code(self):
+        &#34;&#34;&#34;Gets the activation_access_code of this UserInformation.  # noqa: E501
+
+        The activation code the new user must enter when activating their account.  # noqa: E501
+
+        :return: The activation_access_code of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._activation_access_code
+
+    @activation_access_code.setter
+    def activation_access_code(self, activation_access_code):
+        &#34;&#34;&#34;Sets the activation_access_code of this UserInformation.
+
+        The activation code the new user must enter when activating their account.  # noqa: E501
+
+        :param activation_access_code: The activation_access_code of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._activation_access_code = activation_access_code
+
+    @property
+    def company(self):
+        &#34;&#34;&#34;Gets the company of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The company of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._company
+
+    @company.setter
+    def company(self, company):
+        &#34;&#34;&#34;Sets the company of this UserInformation.
+
+          # noqa: E501
+
+        :param company: The company of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._company = company
+
+    @property
+    def connect_configurations(self):
+        &#34;&#34;&#34;Gets the connect_configurations of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The connect_configurations of this UserInformation.  # noqa: E501
+        :rtype: list[ConnectUserObject]
+        &#34;&#34;&#34;
+        return self._connect_configurations
+
+    @connect_configurations.setter
+    def connect_configurations(self, connect_configurations):
+        &#34;&#34;&#34;Sets the connect_configurations of this UserInformation.
+
+          # noqa: E501
+
+        :param connect_configurations: The connect_configurations of this UserInformation.  # noqa: E501
+        :type: list[ConnectUserObject]
+        &#34;&#34;&#34;
+
+        self._connect_configurations = connect_configurations
+
+    @property
+    def country_code(self):
+        &#34;&#34;&#34;Gets the country_code of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The country_code of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._country_code
+
+    @country_code.setter
+    def country_code(self, country_code):
+        &#34;&#34;&#34;Sets the country_code of this UserInformation.
+
+          # noqa: E501
+
+        :param country_code: The country_code of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._country_code = country_code
+
+    @property
+    def created_date_time(self):
+        &#34;&#34;&#34;Gets the created_date_time of this UserInformation.  # noqa: E501
+
+        Indicates the date and time the item was created.  # noqa: E501
+
+        :return: The created_date_time of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._created_date_time
+
+    @created_date_time.setter
+    def created_date_time(self, created_date_time):
+        &#34;&#34;&#34;Sets the created_date_time of this UserInformation.
+
+        Indicates the date and time the item was created.  # noqa: E501
+
+        :param created_date_time: The created_date_time of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._created_date_time = created_date_time
+
+    @property
+    def custom_settings(self):
+        &#34;&#34;&#34;Gets the custom_settings of this UserInformation.  # noqa: E501
+
+        The name/value pair information for the user custom setting.  # noqa: E501
+
+        :return: The custom_settings of this UserInformation.  # noqa: E501
+        :rtype: list[NameValue]
+        &#34;&#34;&#34;
+        return self._custom_settings
+
+    @custom_settings.setter
+    def custom_settings(self, custom_settings):
+        &#34;&#34;&#34;Sets the custom_settings of this UserInformation.
+
+        The name/value pair information for the user custom setting.  # noqa: E501
+
+        :param custom_settings: The custom_settings of this UserInformation.  # noqa: E501
+        :type: list[NameValue]
+        &#34;&#34;&#34;
+
+        self._custom_settings = custom_settings
+
+    @property
+    def default_account_id(self):
+        &#34;&#34;&#34;Gets the default_account_id of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The default_account_id of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._default_account_id
+
+    @default_account_id.setter
+    def default_account_id(self, default_account_id):
+        &#34;&#34;&#34;Sets the default_account_id of this UserInformation.
+
+          # noqa: E501
+
+        :param default_account_id: The default_account_id of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._default_account_id = default_account_id
+
+    @property
+    def email(self):
+        &#34;&#34;&#34;Gets the email of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The email of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        &#34;&#34;&#34;Sets the email of this UserInformation.
+
+          # noqa: E501
+
+        :param email: The email of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._email = email
+
+    @property
+    def enable_connect_for_user(self):
+        &#34;&#34;&#34;Gets the enable_connect_for_user of this UserInformation.  # noqa: E501
+
+        Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.  # noqa: E501
+
+        :return: The enable_connect_for_user of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._enable_connect_for_user
+
+    @enable_connect_for_user.setter
+    def enable_connect_for_user(self, enable_connect_for_user):
+        &#34;&#34;&#34;Sets the enable_connect_for_user of this UserInformation.
+
+        Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.  # noqa: E501
+
+        :param enable_connect_for_user: The enable_connect_for_user of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._enable_connect_for_user = enable_connect_for_user
+
+    @property
+    def error_details(self):
+        &#34;&#34;&#34;Gets the error_details of this UserInformation.  # noqa: E501
+
+
+        :return: The error_details of this UserInformation.  # noqa: E501
+        :rtype: ErrorDetails
+        &#34;&#34;&#34;
+        return self._error_details
+
+    @error_details.setter
+    def error_details(self, error_details):
+        &#34;&#34;&#34;Sets the error_details of this UserInformation.
+
+
+        :param error_details: The error_details of this UserInformation.  # noqa: E501
+        :type: ErrorDetails
+        &#34;&#34;&#34;
+
+        self._error_details = error_details
+
+    @property
+    def first_name(self):
+        &#34;&#34;&#34;Gets the first_name of this UserInformation.  # noqa: E501
+
+        The user&#39;s first name.  Maximum Length: 50 characters.  # noqa: E501
+
+        :return: The first_name of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._first_name
+
+    @first_name.setter
+    def first_name(self, first_name):
+        &#34;&#34;&#34;Sets the first_name of this UserInformation.
+
+        The user&#39;s first name.  Maximum Length: 50 characters.  # noqa: E501
+
+        :param first_name: The first_name of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._first_name = first_name
+
+    @property
+    def forgotten_password_info(self):
+        &#34;&#34;&#34;Gets the forgotten_password_info of this UserInformation.  # noqa: E501
+
+
+        :return: The forgotten_password_info of this UserInformation.  # noqa: E501
+        :rtype: ForgottenPasswordInformation
+        &#34;&#34;&#34;
+        return self._forgotten_password_info
+
+    @forgotten_password_info.setter
+    def forgotten_password_info(self, forgotten_password_info):
+        &#34;&#34;&#34;Sets the forgotten_password_info of this UserInformation.
+
+
+        :param forgotten_password_info: The forgotten_password_info of this UserInformation.  # noqa: E501
+        :type: ForgottenPasswordInformation
+        &#34;&#34;&#34;
+
+        self._forgotten_password_info = forgotten_password_info
+
+    @property
+    def group_list(self):
+        &#34;&#34;&#34;Gets the group_list of this UserInformation.  # noqa: E501
+
+        A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type.   # noqa: E501
+
+        :return: The group_list of this UserInformation.  # noqa: E501
+        :rtype: list[Group]
+        &#34;&#34;&#34;
+        return self._group_list
+
+    @group_list.setter
+    def group_list(self, group_list):
+        &#34;&#34;&#34;Sets the group_list of this UserInformation.
+
+        A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type.   # noqa: E501
+
+        :param group_list: The group_list of this UserInformation.  # noqa: E501
+        :type: list[Group]
+        &#34;&#34;&#34;
+
+        self._group_list = group_list
+
+    @property
+    def has_remote_notary(self):
+        &#34;&#34;&#34;Gets the has_remote_notary of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The has_remote_notary of this UserInformation.  # noqa: E501
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._has_remote_notary
+
+    @has_remote_notary.setter
+    def has_remote_notary(self, has_remote_notary):
+        &#34;&#34;&#34;Sets the has_remote_notary of this UserInformation.
+
+          # noqa: E501
+
+        :param has_remote_notary: The has_remote_notary of this UserInformation.  # noqa: E501
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._has_remote_notary = has_remote_notary
+
+    @property
+    def home_address(self):
+        &#34;&#34;&#34;Gets the home_address of this UserInformation.  # noqa: E501
+
+
+        :return: The home_address of this UserInformation.  # noqa: E501
+        :rtype: AddressInformation
+        &#34;&#34;&#34;
+        return self._home_address
+
+    @home_address.setter
+    def home_address(self, home_address):
+        &#34;&#34;&#34;Sets the home_address of this UserInformation.
+
+
+        :param home_address: The home_address of this UserInformation.  # noqa: E501
+        :type: AddressInformation
+        &#34;&#34;&#34;
+
+        self._home_address = home_address
+
+    @property
+    def initials_image_uri(self):
+        &#34;&#34;&#34;Gets the initials_image_uri of this UserInformation.  # noqa: E501
+
+        Contains the URI for an endpoint that you can use to retrieve the initials image.  # noqa: E501
+
+        :return: The initials_image_uri of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._initials_image_uri
+
+    @initials_image_uri.setter
+    def initials_image_uri(self, initials_image_uri):
+        &#34;&#34;&#34;Sets the initials_image_uri of this UserInformation.
+
+        Contains the URI for an endpoint that you can use to retrieve the initials image.  # noqa: E501
+
+        :param initials_image_uri: The initials_image_uri of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._initials_image_uri = initials_image_uri
+
+    @property
+    def is_admin(self):
+        &#34;&#34;&#34;Gets the is_admin of this UserInformation.  # noqa: E501
+
+        Determines if the feature set is actively set as part of the plan.  # noqa: E501
+
+        :return: The is_admin of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is_admin
+
+    @is_admin.setter
+    def is_admin(self, is_admin):
+        &#34;&#34;&#34;Sets the is_admin of this UserInformation.
+
+        Determines if the feature set is actively set as part of the plan.  # noqa: E501
+
+        :param is_admin: The is_admin of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is_admin = is_admin
+
+    @property
+    def is_nar_enabled(self):
+        &#34;&#34;&#34;Gets the is_nar_enabled of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_nar_enabled of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._is_nar_enabled
+
+    @is_nar_enabled.setter
+    def is_nar_enabled(self, is_nar_enabled):
+        &#34;&#34;&#34;Sets the is_nar_enabled of this UserInformation.
+
+          # noqa: E501
+
+        :param is_nar_enabled: The is_nar_enabled of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._is_nar_enabled = is_nar_enabled
+
+    @property
+    def job_title(self):
+        &#34;&#34;&#34;Gets the job_title of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The job_title of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._job_title
+
+    @job_title.setter
+    def job_title(self, job_title):
+        &#34;&#34;&#34;Sets the job_title of this UserInformation.
+
+          # noqa: E501
+
+        :param job_title: The job_title of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._job_title = job_title
+
+    @property
+    def last_login(self):
+        &#34;&#34;&#34;Gets the last_login of this UserInformation.  # noqa: E501
+
+        Shows the date-time when the user last logged on to the system.  # noqa: E501
+
+        :return: The last_login of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_login
+
+    @last_login.setter
+    def last_login(self, last_login):
+        &#34;&#34;&#34;Sets the last_login of this UserInformation.
+
+        Shows the date-time when the user last logged on to the system.  # noqa: E501
+
+        :param last_login: The last_login of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_login = last_login
+
+    @property
+    def last_name(self):
+        &#34;&#34;&#34;Gets the last_name of this UserInformation.  # noqa: E501
+
+        The user&#39;s last name.  Maximum Length: 50 characters.  # noqa: E501
+
+        :return: The last_name of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_name
+
+    @last_name.setter
+    def last_name(self, last_name):
+        &#34;&#34;&#34;Sets the last_name of this UserInformation.
+
+        The user&#39;s last name.  Maximum Length: 50 characters.  # noqa: E501
+
+        :param last_name: The last_name of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_name = last_name
+
+    @property
+    def login_status(self):
+        &#34;&#34;&#34;Gets the login_status of this UserInformation.  # noqa: E501
+
+        Shows the current status of the user&#39;s password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed    # noqa: E501
+
+        :return: The login_status of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._login_status
+
+    @login_status.setter
+    def login_status(self, login_status):
+        &#34;&#34;&#34;Sets the login_status of this UserInformation.
+
+        Shows the current status of the user&#39;s password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed    # noqa: E501
+
+        :param login_status: The login_status of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._login_status = login_status
+
+    @property
+    def middle_name(self):
+        &#34;&#34;&#34;Gets the middle_name of this UserInformation.  # noqa: E501
+
+        The user&#39;s middle name.  Maximum Length: 50 characters.  # noqa: E501
+
+        :return: The middle_name of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._middle_name
+
+    @middle_name.setter
+    def middle_name(self, middle_name):
+        &#34;&#34;&#34;Sets the middle_name of this UserInformation.
+
+        The user&#39;s middle name.  Maximum Length: 50 characters.  # noqa: E501
+
+        :param middle_name: The middle_name of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._middle_name = middle_name
+
+    @property
+    def password(self):
+        &#34;&#34;&#34;Gets the password of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The password of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        &#34;&#34;&#34;Sets the password of this UserInformation.
+
+          # noqa: E501
+
+        :param password: The password of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._password = password
+
+    @property
+    def password_expiration(self):
+        &#34;&#34;&#34;Gets the password_expiration of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The password_expiration of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._password_expiration
+
+    @password_expiration.setter
+    def password_expiration(self, password_expiration):
+        &#34;&#34;&#34;Sets the password_expiration of this UserInformation.
+
+          # noqa: E501
+
+        :param password_expiration: The password_expiration of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._password_expiration = password_expiration
+
+    @property
+    def permission_profile_id(self):
+        &#34;&#34;&#34;Gets the permission_profile_id of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The permission_profile_id of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._permission_profile_id
+
+    @permission_profile_id.setter
+    def permission_profile_id(self, permission_profile_id):
+        &#34;&#34;&#34;Sets the permission_profile_id of this UserInformation.
+
+          # noqa: E501
+
+        :param permission_profile_id: The permission_profile_id of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._permission_profile_id = permission_profile_id
+
+    @property
+    def permission_profile_name(self):
+        &#34;&#34;&#34;Gets the permission_profile_name of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The permission_profile_name of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._permission_profile_name
+
+    @permission_profile_name.setter
+    def permission_profile_name(self, permission_profile_name):
+        &#34;&#34;&#34;Sets the permission_profile_name of this UserInformation.
+
+          # noqa: E501
+
+        :param permission_profile_name: The permission_profile_name of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._permission_profile_name = permission_profile_name
+
+    @property
+    def profile_image_uri(self):
+        &#34;&#34;&#34;Gets the profile_image_uri of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The profile_image_uri of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._profile_image_uri
+
+    @profile_image_uri.setter
+    def profile_image_uri(self, profile_image_uri):
+        &#34;&#34;&#34;Sets the profile_image_uri of this UserInformation.
+
+          # noqa: E501
+
+        :param profile_image_uri: The profile_image_uri of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._profile_image_uri = profile_image_uri
+
+    @property
+    def send_activation_email(self):
+        &#34;&#34;&#34;Gets the send_activation_email of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The send_activation_email of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._send_activation_email
+
+    @send_activation_email.setter
+    def send_activation_email(self, send_activation_email):
+        &#34;&#34;&#34;Sets the send_activation_email of this UserInformation.
+
+          # noqa: E501
+
+        :param send_activation_email: The send_activation_email of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._send_activation_email = send_activation_email
+
+    @property
+    def send_activation_on_invalid_login(self):
+        &#34;&#34;&#34;Gets the send_activation_on_invalid_login of this UserInformation.  # noqa: E501
+
+        When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account.   # noqa: E501
+
+        :return: The send_activation_on_invalid_login of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._send_activation_on_invalid_login
+
+    @send_activation_on_invalid_login.setter
+    def send_activation_on_invalid_login(self, send_activation_on_invalid_login):
+        &#34;&#34;&#34;Sets the send_activation_on_invalid_login of this UserInformation.
+
+        When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account.   # noqa: E501
+
+        :param send_activation_on_invalid_login: The send_activation_on_invalid_login of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._send_activation_on_invalid_login = send_activation_on_invalid_login
+
+    @property
+    def signature_image_uri(self):
+        &#34;&#34;&#34;Gets the signature_image_uri of this UserInformation.  # noqa: E501
+
+        Contains the URI for an endpoint that you can use to retrieve the signature image.  # noqa: E501
+
+        :return: The signature_image_uri of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_image_uri
+
+    @signature_image_uri.setter
+    def signature_image_uri(self, signature_image_uri):
+        &#34;&#34;&#34;Sets the signature_image_uri of this UserInformation.
+
+        Contains the URI for an endpoint that you can use to retrieve the signature image.  # noqa: E501
+
+        :param signature_image_uri: The signature_image_uri of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_image_uri = signature_image_uri
+
+    @property
+    def subscribe(self):
+        &#34;&#34;&#34;Gets the subscribe of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The subscribe of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._subscribe
+
+    @subscribe.setter
+    def subscribe(self, subscribe):
+        &#34;&#34;&#34;Sets the subscribe of this UserInformation.
+
+          # noqa: E501
+
+        :param subscribe: The subscribe of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._subscribe = subscribe
+
+    @property
+    def suffix_name(self):
+        &#34;&#34;&#34;Gets the suffix_name of this UserInformation.  # noqa: E501
+
+        The suffix for the user&#39;s name.   Maximum Length: 50 characters.   # noqa: E501
+
+        :return: The suffix_name of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._suffix_name
+
+    @suffix_name.setter
+    def suffix_name(self, suffix_name):
+        &#34;&#34;&#34;Sets the suffix_name of this UserInformation.
+
+        The suffix for the user&#39;s name.   Maximum Length: 50 characters.   # noqa: E501
+
+        :param suffix_name: The suffix_name of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._suffix_name = suffix_name
+
+    @property
+    def title(self):
+        &#34;&#34;&#34;Gets the title of this UserInformation.  # noqa: E501
+
+        The title of the user.  # noqa: E501
+
+        :return: The title of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        &#34;&#34;&#34;Sets the title of this UserInformation.
+
+        The title of the user.  # noqa: E501
+
+        :param title: The title of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._title = title
+
+    @property
+    def uri(self):
+        &#34;&#34;&#34;Gets the uri of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The uri of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._uri
+
+    @uri.setter
+    def uri(self, uri):
+        &#34;&#34;&#34;Sets the uri of this UserInformation.
+
+          # noqa: E501
+
+        :param uri: The uri of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._uri = uri
+
+    @property
+    def user_added_to_account_date_time(self):
+        &#34;&#34;&#34;Gets the user_added_to_account_date_time of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_added_to_account_date_time of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_added_to_account_date_time
+
+    @user_added_to_account_date_time.setter
+    def user_added_to_account_date_time(self, user_added_to_account_date_time):
+        &#34;&#34;&#34;Sets the user_added_to_account_date_time of this UserInformation.
+
+          # noqa: E501
+
+        :param user_added_to_account_date_time: The user_added_to_account_date_time of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_added_to_account_date_time = user_added_to_account_date_time
+
+    @property
+    def user_id(self):
+        &#34;&#34;&#34;Gets the user_id of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_id of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        &#34;&#34;&#34;Sets the user_id of this UserInformation.
+
+          # noqa: E501
+
+        :param user_id: The user_id of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_id = user_id
+
+    @property
+    def user_name(self):
+        &#34;&#34;&#34;Gets the user_name of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_name of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_name
+
+    @user_name.setter
+    def user_name(self, user_name):
+        &#34;&#34;&#34;Sets the user_name of this UserInformation.
+
+          # noqa: E501
+
+        :param user_name: The user_name of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_name = user_name
+
+    @property
+    def user_profile_last_modified_date(self):
+        &#34;&#34;&#34;Gets the user_profile_last_modified_date of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_profile_last_modified_date of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_profile_last_modified_date
+
+    @user_profile_last_modified_date.setter
+    def user_profile_last_modified_date(self, user_profile_last_modified_date):
+        &#34;&#34;&#34;Sets the user_profile_last_modified_date of this UserInformation.
+
+          # noqa: E501
+
+        :param user_profile_last_modified_date: The user_profile_last_modified_date of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_profile_last_modified_date = user_profile_last_modified_date
+
+    @property
+    def user_settings(self):
+        &#34;&#34;&#34;Gets the user_settings of this UserInformation.  # noqa: E501
+
+
+        :return: The user_settings of this UserInformation.  # noqa: E501
+        :rtype: UserSettingsInformation
+        &#34;&#34;&#34;
+        return self._user_settings
+
+    @user_settings.setter
+    def user_settings(self, user_settings):
+        &#34;&#34;&#34;Sets the user_settings of this UserInformation.
+
+
+        :param user_settings: The user_settings of this UserInformation.  # noqa: E501
+        :type: UserSettingsInformation
+        &#34;&#34;&#34;
+
+        self._user_settings = user_settings
+
+    @property
+    def user_status(self):
+        &#34;&#34;&#34;Gets the user_status of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_status of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_status
+
+    @user_status.setter
+    def user_status(self, user_status):
+        &#34;&#34;&#34;Sets the user_status of this UserInformation.
+
+          # noqa: E501
+
+        :param user_status: The user_status of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_status = user_status
+
+    @property
+    def user_type(self):
+        &#34;&#34;&#34;Gets the user_type of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_type of this UserInformation.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_type
+
+    @user_type.setter
+    def user_type(self, user_type):
+        &#34;&#34;&#34;Sets the user_type of this UserInformation.
+
+          # noqa: E501
+
+        :param user_type: The user_type of this UserInformation.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_type = user_type
+
+    @property
+    def work_address(self):
+        &#34;&#34;&#34;Gets the work_address of this UserInformation.  # noqa: E501
+
+
+        :return: The work_address of this UserInformation.  # noqa: E501
+        :rtype: AddressInformation
+        &#34;&#34;&#34;
+        return self._work_address
+
+    @work_address.setter
+    def work_address(self, work_address):
+        &#34;&#34;&#34;Sets the work_address of this UserInformation.
+
+
+        :param work_address: The work_address of this UserInformation.  # noqa: E501
+        :type: AddressInformation
+        &#34;&#34;&#34;
+
+        self._work_address = work_address
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(UserInformation, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, UserInformation):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.user_information.UserInformation.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.user_information.UserInformation.activation_access_code"><code class="name">var <span class="ident">activation_access_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the activation_access_code of this UserInformation.
+# noqa: E501</p>
+<p>The activation code the new user must enter when activating their account.
+# noqa: E501</p>
+<p>:return: The activation_access_code of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def activation_access_code(self):
+    &#34;&#34;&#34;Gets the activation_access_code of this UserInformation.  # noqa: E501
+
+    The activation code the new user must enter when activating their account.  # noqa: E501
+
+    :return: The activation_access_code of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._activation_access_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.company"><code class="name">var <span class="ident">company</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the company of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The company of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def company(self):
+    &#34;&#34;&#34;Gets the company of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The company of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._company</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.connect_configurations"><code class="name">var <span class="ident">connect_configurations</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the connect_configurations of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The connect_configurations of this UserInformation.
+# noqa: E501
+:rtype: list[ConnectUserObject]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def connect_configurations(self):
+    &#34;&#34;&#34;Gets the connect_configurations of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The connect_configurations of this UserInformation.  # noqa: E501
+    :rtype: list[ConnectUserObject]
+    &#34;&#34;&#34;
+    return self._connect_configurations</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.country_code"><code class="name">var <span class="ident">country_code</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the country_code of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The country_code of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def country_code(self):
+    &#34;&#34;&#34;Gets the country_code of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The country_code of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._country_code</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.created_date_time"><code class="name">var <span class="ident">created_date_time</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the created_date_time of this UserInformation.
+# noqa: E501</p>
+<p>Indicates the date and time the item was created.
+# noqa: E501</p>
+<p>:return: The created_date_time of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def created_date_time(self):
+    &#34;&#34;&#34;Gets the created_date_time of this UserInformation.  # noqa: E501
+
+    Indicates the date and time the item was created.  # noqa: E501
+
+    :return: The created_date_time of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._created_date_time</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.custom_settings"><code class="name">var <span class="ident">custom_settings</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the custom_settings of this UserInformation.
+# noqa: E501</p>
+<p>The name/value pair information for the user custom setting.
+# noqa: E501</p>
+<p>:return: The custom_settings of this UserInformation.
+# noqa: E501
+:rtype: list[NameValue]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def custom_settings(self):
+    &#34;&#34;&#34;Gets the custom_settings of this UserInformation.  # noqa: E501
+
+    The name/value pair information for the user custom setting.  # noqa: E501
+
+    :return: The custom_settings of this UserInformation.  # noqa: E501
+    :rtype: list[NameValue]
+    &#34;&#34;&#34;
+    return self._custom_settings</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.default_account_id"><code class="name">var <span class="ident">default_account_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the default_account_id of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The default_account_id of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def default_account_id(self):
+    &#34;&#34;&#34;Gets the default_account_id of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The default_account_id of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._default_account_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.email"><code class="name">var <span class="ident">email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the email of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The email of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def email(self):
+    &#34;&#34;&#34;Gets the email of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The email of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.enable_connect_for_user"><code class="name">var <span class="ident">enable_connect_for_user</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the enable_connect_for_user of this UserInformation.
+# noqa: E501</p>
+<p>Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.
+# noqa: E501</p>
+<p>:return: The enable_connect_for_user of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def enable_connect_for_user(self):
+    &#34;&#34;&#34;Gets the enable_connect_for_user of this UserInformation.  # noqa: E501
+
+    Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.  # noqa: E501
+
+    :return: The enable_connect_for_user of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._enable_connect_for_user</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.error_details"><code class="name">var <span class="ident">error_details</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the error_details of this UserInformation.
+# noqa: E501</p>
+<p>:return: The error_details of this UserInformation.
+# noqa: E501
+:rtype: ErrorDetails</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def error_details(self):
+    &#34;&#34;&#34;Gets the error_details of this UserInformation.  # noqa: E501
+
+
+    :return: The error_details of this UserInformation.  # noqa: E501
+    :rtype: ErrorDetails
+    &#34;&#34;&#34;
+    return self._error_details</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.first_name"><code class="name">var <span class="ident">first_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the first_name of this UserInformation.
+# noqa: E501</p>
+<p>The user's first name.
+Maximum Length: 50 characters.
+# noqa: E501</p>
+<p>:return: The first_name of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def first_name(self):
+    &#34;&#34;&#34;Gets the first_name of this UserInformation.  # noqa: E501
+
+    The user&#39;s first name.  Maximum Length: 50 characters.  # noqa: E501
+
+    :return: The first_name of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._first_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.forgotten_password_info"><code class="name">var <span class="ident">forgotten_password_info</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the forgotten_password_info of this UserInformation.
+# noqa: E501</p>
+<p>:return: The forgotten_password_info of this UserInformation.
+# noqa: E501
+:rtype: ForgottenPasswordInformation</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def forgotten_password_info(self):
+    &#34;&#34;&#34;Gets the forgotten_password_info of this UserInformation.  # noqa: E501
+
+
+    :return: The forgotten_password_info of this UserInformation.  # noqa: E501
+    :rtype: ForgottenPasswordInformation
+    &#34;&#34;&#34;
+    return self._forgotten_password_info</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.group_list"><code class="name">var <span class="ident">group_list</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the group_list of this UserInformation.
+# noqa: E501</p>
+<p>A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.
+The parameters are:
+* groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type.
+# noqa: E501</p>
+<p>:return: The group_list of this UserInformation.
+# noqa: E501
+:rtype: list[Group]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def group_list(self):
+    &#34;&#34;&#34;Gets the group_list of this UserInformation.  # noqa: E501
+
+    A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type.   # noqa: E501
+
+    :return: The group_list of this UserInformation.  # noqa: E501
+    :rtype: list[Group]
+    &#34;&#34;&#34;
+    return self._group_list</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.has_remote_notary"><code class="name">var <span class="ident">has_remote_notary</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the has_remote_notary of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The has_remote_notary of this UserInformation.
+# noqa: E501
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def has_remote_notary(self):
+    &#34;&#34;&#34;Gets the has_remote_notary of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The has_remote_notary of this UserInformation.  # noqa: E501
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._has_remote_notary</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.home_address"><code class="name">var <span class="ident">home_address</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the home_address of this UserInformation.
+# noqa: E501</p>
+<p>:return: The home_address of this UserInformation.
+# noqa: E501
+:rtype: AddressInformation</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def home_address(self):
+    &#34;&#34;&#34;Gets the home_address of this UserInformation.  # noqa: E501
+
+
+    :return: The home_address of this UserInformation.  # noqa: E501
+    :rtype: AddressInformation
+    &#34;&#34;&#34;
+    return self._home_address</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.initials_image_uri"><code class="name">var <span class="ident">initials_image_uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the initials_image_uri of this UserInformation.
+# noqa: E501</p>
+<p>Contains the URI for an endpoint that you can use to retrieve the initials image.
+# noqa: E501</p>
+<p>:return: The initials_image_uri of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def initials_image_uri(self):
+    &#34;&#34;&#34;Gets the initials_image_uri of this UserInformation.  # noqa: E501
+
+    Contains the URI for an endpoint that you can use to retrieve the initials image.  # noqa: E501
+
+    :return: The initials_image_uri of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._initials_image_uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.is_admin"><code class="name">var <span class="ident">is_admin</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the is_admin of this UserInformation.
+# noqa: E501</p>
+<p>Determines if the feature set is actively set as part of the plan.
+# noqa: E501</p>
+<p>:return: The is_admin of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is_admin(self):
+    &#34;&#34;&#34;Gets the is_admin of this UserInformation.  # noqa: E501
+
+    Determines if the feature set is actively set as part of the plan.  # noqa: E501
+
+    :return: The is_admin of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._is_admin</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.is_nar_enabled"><code class="name">var <span class="ident">is_nar_enabled</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the is_nar_enabled of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The is_nar_enabled of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is_nar_enabled(self):
+    &#34;&#34;&#34;Gets the is_nar_enabled of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The is_nar_enabled of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._is_nar_enabled</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.job_title"><code class="name">var <span class="ident">job_title</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the job_title of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The job_title of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def job_title(self):
+    &#34;&#34;&#34;Gets the job_title of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The job_title of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._job_title</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.last_login"><code class="name">var <span class="ident">last_login</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_login of this UserInformation.
+# noqa: E501</p>
+<p>Shows the date-time when the user last logged on to the system.
+# noqa: E501</p>
+<p>:return: The last_login of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_login(self):
+    &#34;&#34;&#34;Gets the last_login of this UserInformation.  # noqa: E501
+
+    Shows the date-time when the user last logged on to the system.  # noqa: E501
+
+    :return: The last_login of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._last_login</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.last_name"><code class="name">var <span class="ident">last_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_name of this UserInformation.
+# noqa: E501</p>
+<p>The user's last name.
+Maximum Length: 50 characters.
+# noqa: E501</p>
+<p>:return: The last_name of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_name(self):
+    &#34;&#34;&#34;Gets the last_name of this UserInformation.  # noqa: E501
+
+    The user&#39;s last name.  Maximum Length: 50 characters.  # noqa: E501
+
+    :return: The last_name of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._last_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.login_status"><code class="name">var <span class="ident">login_status</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the login_status of this UserInformation.
+# noqa: E501</p>
+<p>Shows the current status of the user's password. Possible values are:
+* password_reset * password_active * password_expired * password_locked * password_reset_failed
+# noqa: E501</p>
+<p>:return: The login_status of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def login_status(self):
+    &#34;&#34;&#34;Gets the login_status of this UserInformation.  # noqa: E501
+
+    Shows the current status of the user&#39;s password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed    # noqa: E501
+
+    :return: The login_status of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._login_status</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.middle_name"><code class="name">var <span class="ident">middle_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the middle_name of this UserInformation.
+# noqa: E501</p>
+<p>The user's middle name.
+Maximum Length: 50 characters.
+# noqa: E501</p>
+<p>:return: The middle_name of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def middle_name(self):
+    &#34;&#34;&#34;Gets the middle_name of this UserInformation.  # noqa: E501
+
+    The user&#39;s middle name.  Maximum Length: 50 characters.  # noqa: E501
+
+    :return: The middle_name of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._middle_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.password"><code class="name">var <span class="ident">password</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the password of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The password of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def password(self):
+    &#34;&#34;&#34;Gets the password of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The password of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._password</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.password_expiration"><code class="name">var <span class="ident">password_expiration</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the password_expiration of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The password_expiration of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def password_expiration(self):
+    &#34;&#34;&#34;Gets the password_expiration of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The password_expiration of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._password_expiration</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.permission_profile_id"><code class="name">var <span class="ident">permission_profile_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the permission_profile_id of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The permission_profile_id of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def permission_profile_id(self):
+    &#34;&#34;&#34;Gets the permission_profile_id of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The permission_profile_id of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._permission_profile_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.permission_profile_name"><code class="name">var <span class="ident">permission_profile_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the permission_profile_name of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The permission_profile_name of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def permission_profile_name(self):
+    &#34;&#34;&#34;Gets the permission_profile_name of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The permission_profile_name of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._permission_profile_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.profile_image_uri"><code class="name">var <span class="ident">profile_image_uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the profile_image_uri of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The profile_image_uri of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def profile_image_uri(self):
+    &#34;&#34;&#34;Gets the profile_image_uri of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The profile_image_uri of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._profile_image_uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.send_activation_email"><code class="name">var <span class="ident">send_activation_email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the send_activation_email of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The send_activation_email of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def send_activation_email(self):
+    &#34;&#34;&#34;Gets the send_activation_email of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The send_activation_email of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._send_activation_email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.send_activation_on_invalid_login"><code class="name">var <span class="ident">send_activation_on_invalid_login</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the send_activation_on_invalid_login of this UserInformation.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, specifies that an additional activation email is sent to the user if they fail a log on before activating their account.
+# noqa: E501</p>
+<p>:return: The send_activation_on_invalid_login of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def send_activation_on_invalid_login(self):
+    &#34;&#34;&#34;Gets the send_activation_on_invalid_login of this UserInformation.  # noqa: E501
+
+    When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account.   # noqa: E501
+
+    :return: The send_activation_on_invalid_login of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._send_activation_on_invalid_login</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.signature_image_uri"><code class="name">var <span class="ident">signature_image_uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signature_image_uri of this UserInformation.
+# noqa: E501</p>
+<p>Contains the URI for an endpoint that you can use to retrieve the signature image.
+# noqa: E501</p>
+<p>:return: The signature_image_uri of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signature_image_uri(self):
+    &#34;&#34;&#34;Gets the signature_image_uri of this UserInformation.  # noqa: E501
+
+    Contains the URI for an endpoint that you can use to retrieve the signature image.  # noqa: E501
+
+    :return: The signature_image_uri of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signature_image_uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.subscribe"><code class="name">var <span class="ident">subscribe</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the subscribe of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The subscribe of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def subscribe(self):
+    &#34;&#34;&#34;Gets the subscribe of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The subscribe of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._subscribe</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.suffix_name"><code class="name">var <span class="ident">suffix_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the suffix_name of this UserInformation.
+# noqa: E501</p>
+<p>The suffix for the user's name.
+Maximum Length: 50 characters.
+# noqa: E501</p>
+<p>:return: The suffix_name of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def suffix_name(self):
+    &#34;&#34;&#34;Gets the suffix_name of this UserInformation.  # noqa: E501
+
+    The suffix for the user&#39;s name.   Maximum Length: 50 characters.   # noqa: E501
+
+    :return: The suffix_name of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._suffix_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.title"><code class="name">var <span class="ident">title</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the title of this UserInformation.
+# noqa: E501</p>
+<p>The title of the user.
+# noqa: E501</p>
+<p>:return: The title of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def title(self):
+    &#34;&#34;&#34;Gets the title of this UserInformation.  # noqa: E501
+
+    The title of the user.  # noqa: E501
+
+    :return: The title of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._title</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.uri"><code class="name">var <span class="ident">uri</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the uri of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The uri of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def uri(self):
+    &#34;&#34;&#34;Gets the uri of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The uri of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._uri</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.user_added_to_account_date_time"><code class="name">var <span class="ident">user_added_to_account_date_time</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_added_to_account_date_time of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The user_added_to_account_date_time of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_added_to_account_date_time(self):
+    &#34;&#34;&#34;Gets the user_added_to_account_date_time of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The user_added_to_account_date_time of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._user_added_to_account_date_time</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.user_id"><code class="name">var <span class="ident">user_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_id of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The user_id of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_id(self):
+    &#34;&#34;&#34;Gets the user_id of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The user_id of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._user_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.user_name"><code class="name">var <span class="ident">user_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_name of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The user_name of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_name(self):
+    &#34;&#34;&#34;Gets the user_name of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The user_name of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._user_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.user_profile_last_modified_date"><code class="name">var <span class="ident">user_profile_last_modified_date</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_profile_last_modified_date of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The user_profile_last_modified_date of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_profile_last_modified_date(self):
+    &#34;&#34;&#34;Gets the user_profile_last_modified_date of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The user_profile_last_modified_date of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._user_profile_last_modified_date</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.user_settings"><code class="name">var <span class="ident">user_settings</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_settings of this UserInformation.
+# noqa: E501</p>
+<p>:return: The user_settings of this UserInformation.
+# noqa: E501
+:rtype: UserSettingsInformation</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_settings(self):
+    &#34;&#34;&#34;Gets the user_settings of this UserInformation.  # noqa: E501
+
+
+    :return: The user_settings of this UserInformation.  # noqa: E501
+    :rtype: UserSettingsInformation
+    &#34;&#34;&#34;
+    return self._user_settings</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.user_status"><code class="name">var <span class="ident">user_status</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_status of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The user_status of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_status(self):
+    &#34;&#34;&#34;Gets the user_status of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The user_status of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._user_status</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.user_type"><code class="name">var <span class="ident">user_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_type of this UserInformation.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The user_type of this UserInformation.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_type(self):
+    &#34;&#34;&#34;Gets the user_type of this UserInformation.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The user_type of this UserInformation.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._user_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.work_address"><code class="name">var <span class="ident">work_address</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the work_address of this UserInformation.
+# noqa: E501</p>
+<p>:return: The work_address of this UserInformation.
+# noqa: E501
+:rtype: AddressInformation</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def work_address(self):
+    &#34;&#34;&#34;Gets the work_address of this UserInformation.  # noqa: E501
+
+
+    :return: The work_address of this UserInformation.  # noqa: E501
+    :rtype: AddressInformation
+    &#34;&#34;&#34;
+    return self._work_address</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.user_information.UserInformation.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(UserInformation, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.user_information.UserInformation.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.user_information.UserInformation" href="#docusign_esign.models.user_information.UserInformation">UserInformation</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.user_information.UserInformation.activation_access_code" href="#docusign_esign.models.user_information.UserInformation.activation_access_code">activation_access_code</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.attribute_map" href="#docusign_esign.models.user_information.UserInformation.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.company" href="#docusign_esign.models.user_information.UserInformation.company">company</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.connect_configurations" href="#docusign_esign.models.user_information.UserInformation.connect_configurations">connect_configurations</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.country_code" href="#docusign_esign.models.user_information.UserInformation.country_code">country_code</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.created_date_time" href="#docusign_esign.models.user_information.UserInformation.created_date_time">created_date_time</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.custom_settings" href="#docusign_esign.models.user_information.UserInformation.custom_settings">custom_settings</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.default_account_id" href="#docusign_esign.models.user_information.UserInformation.default_account_id">default_account_id</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.email" href="#docusign_esign.models.user_information.UserInformation.email">email</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.enable_connect_for_user" href="#docusign_esign.models.user_information.UserInformation.enable_connect_for_user">enable_connect_for_user</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.error_details" href="#docusign_esign.models.user_information.UserInformation.error_details">error_details</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.first_name" href="#docusign_esign.models.user_information.UserInformation.first_name">first_name</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.forgotten_password_info" href="#docusign_esign.models.user_information.UserInformation.forgotten_password_info">forgotten_password_info</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.group_list" href="#docusign_esign.models.user_information.UserInformation.group_list">group_list</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.has_remote_notary" href="#docusign_esign.models.user_information.UserInformation.has_remote_notary">has_remote_notary</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.home_address" href="#docusign_esign.models.user_information.UserInformation.home_address">home_address</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.initials_image_uri" href="#docusign_esign.models.user_information.UserInformation.initials_image_uri">initials_image_uri</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.is_admin" href="#docusign_esign.models.user_information.UserInformation.is_admin">is_admin</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.is_nar_enabled" href="#docusign_esign.models.user_information.UserInformation.is_nar_enabled">is_nar_enabled</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.job_title" href="#docusign_esign.models.user_information.UserInformation.job_title">job_title</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.last_login" href="#docusign_esign.models.user_information.UserInformation.last_login">last_login</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.last_name" href="#docusign_esign.models.user_information.UserInformation.last_name">last_name</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.login_status" href="#docusign_esign.models.user_information.UserInformation.login_status">login_status</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.middle_name" href="#docusign_esign.models.user_information.UserInformation.middle_name">middle_name</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.password" href="#docusign_esign.models.user_information.UserInformation.password">password</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.password_expiration" href="#docusign_esign.models.user_information.UserInformation.password_expiration">password_expiration</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.permission_profile_id" href="#docusign_esign.models.user_information.UserInformation.permission_profile_id">permission_profile_id</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.permission_profile_name" href="#docusign_esign.models.user_information.UserInformation.permission_profile_name">permission_profile_name</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.profile_image_uri" href="#docusign_esign.models.user_information.UserInformation.profile_image_uri">profile_image_uri</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.send_activation_email" href="#docusign_esign.models.user_information.UserInformation.send_activation_email">send_activation_email</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.send_activation_on_invalid_login" href="#docusign_esign.models.user_information.UserInformation.send_activation_on_invalid_login">send_activation_on_invalid_login</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.signature_image_uri" href="#docusign_esign.models.user_information.UserInformation.signature_image_uri">signature_image_uri</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.subscribe" href="#docusign_esign.models.user_information.UserInformation.subscribe">subscribe</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.suffix_name" href="#docusign_esign.models.user_information.UserInformation.suffix_name">suffix_name</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.swagger_types" href="#docusign_esign.models.user_information.UserInformation.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.title" href="#docusign_esign.models.user_information.UserInformation.title">title</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.to_dict" href="#docusign_esign.models.user_information.UserInformation.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.to_str" href="#docusign_esign.models.user_information.UserInformation.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.uri" href="#docusign_esign.models.user_information.UserInformation.uri">uri</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.user_added_to_account_date_time" href="#docusign_esign.models.user_information.UserInformation.user_added_to_account_date_time">user_added_to_account_date_time</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.user_id" href="#docusign_esign.models.user_information.UserInformation.user_id">user_id</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.user_name" href="#docusign_esign.models.user_information.UserInformation.user_name">user_name</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.user_profile_last_modified_date" href="#docusign_esign.models.user_information.UserInformation.user_profile_last_modified_date">user_profile_last_modified_date</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.user_settings" href="#docusign_esign.models.user_information.UserInformation.user_settings">user_settings</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.user_status" href="#docusign_esign.models.user_information.UserInformation.user_status">user_status</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.user_type" href="#docusign_esign.models.user_information.UserInformation.user_type">user_type</a></code></li>
+<li><code><a title="docusign_esign.models.user_information.UserInformation.work_address" href="#docusign_esign.models.user_information.UserInformation.work_address">work_address</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

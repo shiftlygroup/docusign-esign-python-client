@@ -1,0 +1,2534 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.display_appliance_recipient API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.display_appliance_recipient</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+from pprint import pformat
+from six import iteritems
+import re
+
+
+class DisplayApplianceRecipient(object):
+    &#34;&#34;&#34;
+    NOTE: This class is auto generated by the swagger code generator program.
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+    def __init__(self, cfr_part11=None, company=None, custom_field2=None, digital_signature_base64=None, digital_signatures_pending=None, email=None, first_name=None, full_name=None, initials_base64=None, in_person_email=None, is_notary=None, is_notary_transaction=None, job_title=None, last_name=None, notary_seal_base64=None, phone_number=None, recipient_complete_count=None, recipient_guid_id=None, recipient_id=None, recipient_status=None, recipient_type=None, require_signer_certificate=None, row_state=None, signature_base64=None, signature_image_id=None, signed=None, signer_apply_tabs=None, signer_attachment_base64=None, user_id=None, user_name=None):
+        &#34;&#34;&#34;
+        DisplayApplianceRecipient - a model defined in Swagger
+
+        :param dict swaggerTypes: The key is attribute name
+                                  and the value is attribute type.
+        :param dict attributeMap: The key is attribute name
+                                  and the value is json key in definition.
+        &#34;&#34;&#34;
+        self.swagger_types = {
+            &#39;cfr_part11&#39;: &#39;bool&#39;,
+            &#39;company&#39;: &#39;str&#39;,
+            &#39;custom_field2&#39;: &#39;str&#39;,
+            &#39;digital_signature_base64&#39;: &#39;str&#39;,
+            &#39;digital_signatures_pending&#39;: &#39;str&#39;,
+            &#39;email&#39;: &#39;str&#39;,
+            &#39;first_name&#39;: &#39;str&#39;,
+            &#39;full_name&#39;: &#39;str&#39;,
+            &#39;initials_base64&#39;: &#39;str&#39;,
+            &#39;in_person_email&#39;: &#39;str&#39;,
+            &#39;is_notary&#39;: &#39;bool&#39;,
+            &#39;is_notary_transaction&#39;: &#39;bool&#39;,
+            &#39;job_title&#39;: &#39;str&#39;,
+            &#39;last_name&#39;: &#39;str&#39;,
+            &#39;notary_seal_base64&#39;: &#39;str&#39;,
+            &#39;phone_number&#39;: &#39;str&#39;,
+            &#39;recipient_complete_count&#39;: &#39;int&#39;,
+            &#39;recipient_guid_id&#39;: &#39;str&#39;,
+            &#39;recipient_id&#39;: &#39;str&#39;,
+            &#39;recipient_status&#39;: &#39;str&#39;,
+            &#39;recipient_type&#39;: &#39;str&#39;,
+            &#39;require_signer_certificate&#39;: &#39;str&#39;,
+            &#39;row_state&#39;: &#39;str&#39;,
+            &#39;signature_base64&#39;: &#39;str&#39;,
+            &#39;signature_image_id&#39;: &#39;str&#39;,
+            &#39;signed&#39;: &#39;bool&#39;,
+            &#39;signer_apply_tabs&#39;: &#39;bool&#39;,
+            &#39;signer_attachment_base64&#39;: &#39;str&#39;,
+            &#39;user_id&#39;: &#39;str&#39;,
+            &#39;user_name&#39;: &#39;str&#39;
+        }
+
+        self.attribute_map = {
+            &#39;cfr_part11&#39;: &#39;cfrPart11&#39;,
+            &#39;company&#39;: &#39;company&#39;,
+            &#39;custom_field2&#39;: &#39;customField2&#39;,
+            &#39;digital_signature_base64&#39;: &#39;digitalSignatureBase64&#39;,
+            &#39;digital_signatures_pending&#39;: &#39;digitalSignaturesPending&#39;,
+            &#39;email&#39;: &#39;email&#39;,
+            &#39;first_name&#39;: &#39;firstName&#39;,
+            &#39;full_name&#39;: &#39;fullName&#39;,
+            &#39;initials_base64&#39;: &#39;initialsBase64&#39;,
+            &#39;in_person_email&#39;: &#39;inPersonEmail&#39;,
+            &#39;is_notary&#39;: &#39;isNotary&#39;,
+            &#39;is_notary_transaction&#39;: &#39;isNotaryTransaction&#39;,
+            &#39;job_title&#39;: &#39;jobTitle&#39;,
+            &#39;last_name&#39;: &#39;lastName&#39;,
+            &#39;notary_seal_base64&#39;: &#39;notarySealBase64&#39;,
+            &#39;phone_number&#39;: &#39;phoneNumber&#39;,
+            &#39;recipient_complete_count&#39;: &#39;recipientCompleteCount&#39;,
+            &#39;recipient_guid_id&#39;: &#39;recipientGuidId&#39;,
+            &#39;recipient_id&#39;: &#39;recipientId&#39;,
+            &#39;recipient_status&#39;: &#39;recipientStatus&#39;,
+            &#39;recipient_type&#39;: &#39;recipientType&#39;,
+            &#39;require_signer_certificate&#39;: &#39;requireSignerCertificate&#39;,
+            &#39;row_state&#39;: &#39;rowState&#39;,
+            &#39;signature_base64&#39;: &#39;signatureBase64&#39;,
+            &#39;signature_image_id&#39;: &#39;signatureImageId&#39;,
+            &#39;signed&#39;: &#39;signed&#39;,
+            &#39;signer_apply_tabs&#39;: &#39;signerApplyTabs&#39;,
+            &#39;signer_attachment_base64&#39;: &#39;signerAttachmentBase64&#39;,
+            &#39;user_id&#39;: &#39;userId&#39;,
+            &#39;user_name&#39;: &#39;userName&#39;
+        }
+
+        self._cfr_part11 = cfr_part11
+        self._company = company
+        self._custom_field2 = custom_field2
+        self._digital_signature_base64 = digital_signature_base64
+        self._digital_signatures_pending = digital_signatures_pending
+        self._email = email
+        self._first_name = first_name
+        self._full_name = full_name
+        self._initials_base64 = initials_base64
+        self._in_person_email = in_person_email
+        self._is_notary = is_notary
+        self._is_notary_transaction = is_notary_transaction
+        self._job_title = job_title
+        self._last_name = last_name
+        self._notary_seal_base64 = notary_seal_base64
+        self._phone_number = phone_number
+        self._recipient_complete_count = recipient_complete_count
+        self._recipient_guid_id = recipient_guid_id
+        self._recipient_id = recipient_id
+        self._recipient_status = recipient_status
+        self._recipient_type = recipient_type
+        self._require_signer_certificate = require_signer_certificate
+        self._row_state = row_state
+        self._signature_base64 = signature_base64
+        self._signature_image_id = signature_image_id
+        self._signed = signed
+        self._signer_apply_tabs = signer_apply_tabs
+        self._signer_attachment_base64 = signer_attachment_base64
+        self._user_id = user_id
+        self._user_name = user_name
+
+    @property
+    def cfr_part11(self):
+        &#34;&#34;&#34;
+        Gets the cfr_part11 of this DisplayApplianceRecipient.
+        
+
+        :return: The cfr_part11 of this DisplayApplianceRecipient.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._cfr_part11
+
+    @cfr_part11.setter
+    def cfr_part11(self, cfr_part11):
+        &#34;&#34;&#34;
+        Sets the cfr_part11 of this DisplayApplianceRecipient.
+        
+
+        :param cfr_part11: The cfr_part11 of this DisplayApplianceRecipient.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._cfr_part11 = cfr_part11
+
+    @property
+    def company(self):
+        &#34;&#34;&#34;
+        Gets the company of this DisplayApplianceRecipient.
+        
+
+        :return: The company of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._company
+
+    @company.setter
+    def company(self, company):
+        &#34;&#34;&#34;
+        Sets the company of this DisplayApplianceRecipient.
+        
+
+        :param company: The company of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._company = company
+
+    @property
+    def custom_field2(self):
+        &#34;&#34;&#34;
+        Gets the custom_field2 of this DisplayApplianceRecipient.
+        
+
+        :return: The custom_field2 of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_field2
+
+    @custom_field2.setter
+    def custom_field2(self, custom_field2):
+        &#34;&#34;&#34;
+        Sets the custom_field2 of this DisplayApplianceRecipient.
+        
+
+        :param custom_field2: The custom_field2 of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_field2 = custom_field2
+
+    @property
+    def digital_signature_base64(self):
+        &#34;&#34;&#34;
+        Gets the digital_signature_base64 of this DisplayApplianceRecipient.
+        
+
+        :return: The digital_signature_base64 of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._digital_signature_base64
+
+    @digital_signature_base64.setter
+    def digital_signature_base64(self, digital_signature_base64):
+        &#34;&#34;&#34;
+        Sets the digital_signature_base64 of this DisplayApplianceRecipient.
+        
+
+        :param digital_signature_base64: The digital_signature_base64 of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._digital_signature_base64 = digital_signature_base64
+
+    @property
+    def digital_signatures_pending(self):
+        &#34;&#34;&#34;
+        Gets the digital_signatures_pending of this DisplayApplianceRecipient.
+        
+
+        :return: The digital_signatures_pending of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._digital_signatures_pending
+
+    @digital_signatures_pending.setter
+    def digital_signatures_pending(self, digital_signatures_pending):
+        &#34;&#34;&#34;
+        Sets the digital_signatures_pending of this DisplayApplianceRecipient.
+        
+
+        :param digital_signatures_pending: The digital_signatures_pending of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._digital_signatures_pending = digital_signatures_pending
+
+    @property
+    def email(self):
+        &#34;&#34;&#34;
+        Gets the email of this DisplayApplianceRecipient.
+        
+
+        :return: The email of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        &#34;&#34;&#34;
+        Sets the email of this DisplayApplianceRecipient.
+        
+
+        :param email: The email of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._email = email
+
+    @property
+    def first_name(self):
+        &#34;&#34;&#34;
+        Gets the first_name of this DisplayApplianceRecipient.
+        The user&#39;s first name.  Maximum Length: 50 characters.
+
+        :return: The first_name of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._first_name
+
+    @first_name.setter
+    def first_name(self, first_name):
+        &#34;&#34;&#34;
+        Sets the first_name of this DisplayApplianceRecipient.
+        The user&#39;s first name.  Maximum Length: 50 characters.
+
+        :param first_name: The first_name of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._first_name = first_name
+
+    @property
+    def full_name(self):
+        &#34;&#34;&#34;
+        Gets the full_name of this DisplayApplianceRecipient.
+        
+
+        :return: The full_name of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._full_name
+
+    @full_name.setter
+    def full_name(self, full_name):
+        &#34;&#34;&#34;
+        Sets the full_name of this DisplayApplianceRecipient.
+        
+
+        :param full_name: The full_name of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._full_name = full_name
+
+    @property
+    def initials_base64(self):
+        &#34;&#34;&#34;
+        Gets the initials_base64 of this DisplayApplianceRecipient.
+        
+
+        :return: The initials_base64 of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._initials_base64
+
+    @initials_base64.setter
+    def initials_base64(self, initials_base64):
+        &#34;&#34;&#34;
+        Sets the initials_base64 of this DisplayApplianceRecipient.
+        
+
+        :param initials_base64: The initials_base64 of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._initials_base64 = initials_base64
+
+    @property
+    def in_person_email(self):
+        &#34;&#34;&#34;
+        Gets the in_person_email of this DisplayApplianceRecipient.
+        
+
+        :return: The in_person_email of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._in_person_email
+
+    @in_person_email.setter
+    def in_person_email(self, in_person_email):
+        &#34;&#34;&#34;
+        Sets the in_person_email of this DisplayApplianceRecipient.
+        
+
+        :param in_person_email: The in_person_email of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._in_person_email = in_person_email
+
+    @property
+    def is_notary(self):
+        &#34;&#34;&#34;
+        Gets the is_notary of this DisplayApplianceRecipient.
+        
+
+        :return: The is_notary of this DisplayApplianceRecipient.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._is_notary
+
+    @is_notary.setter
+    def is_notary(self, is_notary):
+        &#34;&#34;&#34;
+        Sets the is_notary of this DisplayApplianceRecipient.
+        
+
+        :param is_notary: The is_notary of this DisplayApplianceRecipient.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._is_notary = is_notary
+
+    @property
+    def is_notary_transaction(self):
+        &#34;&#34;&#34;
+        Gets the is_notary_transaction of this DisplayApplianceRecipient.
+        
+
+        :return: The is_notary_transaction of this DisplayApplianceRecipient.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._is_notary_transaction
+
+    @is_notary_transaction.setter
+    def is_notary_transaction(self, is_notary_transaction):
+        &#34;&#34;&#34;
+        Sets the is_notary_transaction of this DisplayApplianceRecipient.
+        
+
+        :param is_notary_transaction: The is_notary_transaction of this DisplayApplianceRecipient.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._is_notary_transaction = is_notary_transaction
+
+    @property
+    def job_title(self):
+        &#34;&#34;&#34;
+        Gets the job_title of this DisplayApplianceRecipient.
+        
+
+        :return: The job_title of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._job_title
+
+    @job_title.setter
+    def job_title(self, job_title):
+        &#34;&#34;&#34;
+        Sets the job_title of this DisplayApplianceRecipient.
+        
+
+        :param job_title: The job_title of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._job_title = job_title
+
+    @property
+    def last_name(self):
+        &#34;&#34;&#34;
+        Gets the last_name of this DisplayApplianceRecipient.
+        
+
+        :return: The last_name of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_name
+
+    @last_name.setter
+    def last_name(self, last_name):
+        &#34;&#34;&#34;
+        Sets the last_name of this DisplayApplianceRecipient.
+        
+
+        :param last_name: The last_name of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_name = last_name
+
+    @property
+    def notary_seal_base64(self):
+        &#34;&#34;&#34;
+        Gets the notary_seal_base64 of this DisplayApplianceRecipient.
+        
+
+        :return: The notary_seal_base64 of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._notary_seal_base64
+
+    @notary_seal_base64.setter
+    def notary_seal_base64(self, notary_seal_base64):
+        &#34;&#34;&#34;
+        Sets the notary_seal_base64 of this DisplayApplianceRecipient.
+        
+
+        :param notary_seal_base64: The notary_seal_base64 of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._notary_seal_base64 = notary_seal_base64
+
+    @property
+    def phone_number(self):
+        &#34;&#34;&#34;
+        Gets the phone_number of this DisplayApplianceRecipient.
+        
+
+        :return: The phone_number of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._phone_number
+
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        &#34;&#34;&#34;
+        Sets the phone_number of this DisplayApplianceRecipient.
+        
+
+        :param phone_number: The phone_number of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._phone_number = phone_number
+
+    @property
+    def recipient_complete_count(self):
+        &#34;&#34;&#34;
+        Gets the recipient_complete_count of this DisplayApplianceRecipient.
+        
+
+        :return: The recipient_complete_count of this DisplayApplianceRecipient.
+        :rtype: int
+        &#34;&#34;&#34;
+        return self._recipient_complete_count
+
+    @recipient_complete_count.setter
+    def recipient_complete_count(self, recipient_complete_count):
+        &#34;&#34;&#34;
+        Sets the recipient_complete_count of this DisplayApplianceRecipient.
+        
+
+        :param recipient_complete_count: The recipient_complete_count of this DisplayApplianceRecipient.
+        :type: int
+        &#34;&#34;&#34;
+
+        self._recipient_complete_count = recipient_complete_count
+
+    @property
+    def recipient_guid_id(self):
+        &#34;&#34;&#34;
+        Gets the recipient_guid_id of this DisplayApplianceRecipient.
+        
+
+        :return: The recipient_guid_id of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_guid_id
+
+    @recipient_guid_id.setter
+    def recipient_guid_id(self, recipient_guid_id):
+        &#34;&#34;&#34;
+        Sets the recipient_guid_id of this DisplayApplianceRecipient.
+        
+
+        :param recipient_guid_id: The recipient_guid_id of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_guid_id = recipient_guid_id
+
+    @property
+    def recipient_id(self):
+        &#34;&#34;&#34;
+        Gets the recipient_id of this DisplayApplianceRecipient.
+        Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+
+        :return: The recipient_id of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_id
+
+    @recipient_id.setter
+    def recipient_id(self, recipient_id):
+        &#34;&#34;&#34;
+        Sets the recipient_id of this DisplayApplianceRecipient.
+        Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+
+        :param recipient_id: The recipient_id of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_id = recipient_id
+
+    @property
+    def recipient_status(self):
+        &#34;&#34;&#34;
+        Gets the recipient_status of this DisplayApplianceRecipient.
+        
+
+        :return: The recipient_status of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_status
+
+    @recipient_status.setter
+    def recipient_status(self, recipient_status):
+        &#34;&#34;&#34;
+        Sets the recipient_status of this DisplayApplianceRecipient.
+        
+
+        :param recipient_status: The recipient_status of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_status = recipient_status
+
+    @property
+    def recipient_type(self):
+        &#34;&#34;&#34;
+        Gets the recipient_type of this DisplayApplianceRecipient.
+        
+
+        :return: The recipient_type of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_type
+
+    @recipient_type.setter
+    def recipient_type(self, recipient_type):
+        &#34;&#34;&#34;
+        Sets the recipient_type of this DisplayApplianceRecipient.
+        
+
+        :param recipient_type: The recipient_type of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_type = recipient_type
+
+    @property
+    def require_signer_certificate(self):
+        &#34;&#34;&#34;
+        Gets the require_signer_certificate of this DisplayApplianceRecipient.
+        
+
+        :return: The require_signer_certificate of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._require_signer_certificate
+
+    @require_signer_certificate.setter
+    def require_signer_certificate(self, require_signer_certificate):
+        &#34;&#34;&#34;
+        Sets the require_signer_certificate of this DisplayApplianceRecipient.
+        
+
+        :param require_signer_certificate: The require_signer_certificate of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._require_signer_certificate = require_signer_certificate
+
+    @property
+    def row_state(self):
+        &#34;&#34;&#34;
+        Gets the row_state of this DisplayApplianceRecipient.
+        
+
+        :return: The row_state of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._row_state
+
+    @row_state.setter
+    def row_state(self, row_state):
+        &#34;&#34;&#34;
+        Sets the row_state of this DisplayApplianceRecipient.
+        
+
+        :param row_state: The row_state of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._row_state = row_state
+
+    @property
+    def signature_base64(self):
+        &#34;&#34;&#34;
+        Gets the signature_base64 of this DisplayApplianceRecipient.
+        
+
+        :return: The signature_base64 of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_base64
+
+    @signature_base64.setter
+    def signature_base64(self, signature_base64):
+        &#34;&#34;&#34;
+        Sets the signature_base64 of this DisplayApplianceRecipient.
+        
+
+        :param signature_base64: The signature_base64 of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_base64 = signature_base64
+
+    @property
+    def signature_image_id(self):
+        &#34;&#34;&#34;
+        Gets the signature_image_id of this DisplayApplianceRecipient.
+        
+
+        :return: The signature_image_id of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_image_id
+
+    @signature_image_id.setter
+    def signature_image_id(self, signature_image_id):
+        &#34;&#34;&#34;
+        Sets the signature_image_id of this DisplayApplianceRecipient.
+        
+
+        :param signature_image_id: The signature_image_id of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_image_id = signature_image_id
+
+    @property
+    def signed(self):
+        &#34;&#34;&#34;
+        Gets the signed of this DisplayApplianceRecipient.
+        
+
+        :return: The signed of this DisplayApplianceRecipient.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._signed
+
+    @signed.setter
+    def signed(self, signed):
+        &#34;&#34;&#34;
+        Sets the signed of this DisplayApplianceRecipient.
+        
+
+        :param signed: The signed of this DisplayApplianceRecipient.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._signed = signed
+
+    @property
+    def signer_apply_tabs(self):
+        &#34;&#34;&#34;
+        Gets the signer_apply_tabs of this DisplayApplianceRecipient.
+        
+
+        :return: The signer_apply_tabs of this DisplayApplianceRecipient.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._signer_apply_tabs
+
+    @signer_apply_tabs.setter
+    def signer_apply_tabs(self, signer_apply_tabs):
+        &#34;&#34;&#34;
+        Sets the signer_apply_tabs of this DisplayApplianceRecipient.
+        
+
+        :param signer_apply_tabs: The signer_apply_tabs of this DisplayApplianceRecipient.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._signer_apply_tabs = signer_apply_tabs
+
+    @property
+    def signer_attachment_base64(self):
+        &#34;&#34;&#34;
+        Gets the signer_attachment_base64 of this DisplayApplianceRecipient.
+        
+
+        :return: The signer_attachment_base64 of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signer_attachment_base64
+
+    @signer_attachment_base64.setter
+    def signer_attachment_base64(self, signer_attachment_base64):
+        &#34;&#34;&#34;
+        Sets the signer_attachment_base64 of this DisplayApplianceRecipient.
+        
+
+        :param signer_attachment_base64: The signer_attachment_base64 of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signer_attachment_base64 = signer_attachment_base64
+
+    @property
+    def user_id(self):
+        &#34;&#34;&#34;
+        Gets the user_id of this DisplayApplianceRecipient.
+        
+
+        :return: The user_id of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        &#34;&#34;&#34;
+        Sets the user_id of this DisplayApplianceRecipient.
+        
+
+        :param user_id: The user_id of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_id = user_id
+
+    @property
+    def user_name(self):
+        &#34;&#34;&#34;
+        Gets the user_name of this DisplayApplianceRecipient.
+        
+
+        :return: The user_name of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_name
+
+    @user_name.setter
+    def user_name(self, user_name):
+        &#34;&#34;&#34;
+        Sets the user_name of this DisplayApplianceRecipient.
+        
+
+        :param user_name: The user_name of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_name = user_name
+
+    def to_dict(self):
+        &#34;&#34;&#34;
+        Returns the model properties as a dict
+        &#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;
+        Returns the string representation of the model
+        &#34;&#34;&#34;
+        return pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;
+        For `print` and `pprint`
+        &#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are equal
+        &#34;&#34;&#34;
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are not equal
+        &#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient"><code class="flex name class">
+<span>class <span class="ident">DisplayApplianceRecipient</span></span>
+<span>(</span><span>cfr_part11=None, company=None, custom_field2=None, digital_signature_base64=None, digital_signatures_pending=None, email=None, first_name=None, full_name=None, initials_base64=None, in_person_email=None, is_notary=None, is_notary_transaction=None, job_title=None, last_name=None, notary_seal_base64=None, phone_number=None, recipient_complete_count=None, recipient_guid_id=None, recipient_id=None, recipient_status=None, recipient_type=None, require_signer_certificate=None, row_state=None, signature_base64=None, signature_image_id=None, signed=None, signer_apply_tabs=None, signer_attachment_base64=None, user_id=None, user_name=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.
+Do not edit the class manually.</p>
+<p>DisplayApplianceRecipient - a model defined in Swagger</p>
+<p>:param dict swaggerTypes: The key is attribute name
+and the value is attribute type.
+:param dict attributeMap: The key is attribute name
+and the value is json key in definition.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DisplayApplianceRecipient(object):
+    &#34;&#34;&#34;
+    NOTE: This class is auto generated by the swagger code generator program.
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+    def __init__(self, cfr_part11=None, company=None, custom_field2=None, digital_signature_base64=None, digital_signatures_pending=None, email=None, first_name=None, full_name=None, initials_base64=None, in_person_email=None, is_notary=None, is_notary_transaction=None, job_title=None, last_name=None, notary_seal_base64=None, phone_number=None, recipient_complete_count=None, recipient_guid_id=None, recipient_id=None, recipient_status=None, recipient_type=None, require_signer_certificate=None, row_state=None, signature_base64=None, signature_image_id=None, signed=None, signer_apply_tabs=None, signer_attachment_base64=None, user_id=None, user_name=None):
+        &#34;&#34;&#34;
+        DisplayApplianceRecipient - a model defined in Swagger
+
+        :param dict swaggerTypes: The key is attribute name
+                                  and the value is attribute type.
+        :param dict attributeMap: The key is attribute name
+                                  and the value is json key in definition.
+        &#34;&#34;&#34;
+        self.swagger_types = {
+            &#39;cfr_part11&#39;: &#39;bool&#39;,
+            &#39;company&#39;: &#39;str&#39;,
+            &#39;custom_field2&#39;: &#39;str&#39;,
+            &#39;digital_signature_base64&#39;: &#39;str&#39;,
+            &#39;digital_signatures_pending&#39;: &#39;str&#39;,
+            &#39;email&#39;: &#39;str&#39;,
+            &#39;first_name&#39;: &#39;str&#39;,
+            &#39;full_name&#39;: &#39;str&#39;,
+            &#39;initials_base64&#39;: &#39;str&#39;,
+            &#39;in_person_email&#39;: &#39;str&#39;,
+            &#39;is_notary&#39;: &#39;bool&#39;,
+            &#39;is_notary_transaction&#39;: &#39;bool&#39;,
+            &#39;job_title&#39;: &#39;str&#39;,
+            &#39;last_name&#39;: &#39;str&#39;,
+            &#39;notary_seal_base64&#39;: &#39;str&#39;,
+            &#39;phone_number&#39;: &#39;str&#39;,
+            &#39;recipient_complete_count&#39;: &#39;int&#39;,
+            &#39;recipient_guid_id&#39;: &#39;str&#39;,
+            &#39;recipient_id&#39;: &#39;str&#39;,
+            &#39;recipient_status&#39;: &#39;str&#39;,
+            &#39;recipient_type&#39;: &#39;str&#39;,
+            &#39;require_signer_certificate&#39;: &#39;str&#39;,
+            &#39;row_state&#39;: &#39;str&#39;,
+            &#39;signature_base64&#39;: &#39;str&#39;,
+            &#39;signature_image_id&#39;: &#39;str&#39;,
+            &#39;signed&#39;: &#39;bool&#39;,
+            &#39;signer_apply_tabs&#39;: &#39;bool&#39;,
+            &#39;signer_attachment_base64&#39;: &#39;str&#39;,
+            &#39;user_id&#39;: &#39;str&#39;,
+            &#39;user_name&#39;: &#39;str&#39;
+        }
+
+        self.attribute_map = {
+            &#39;cfr_part11&#39;: &#39;cfrPart11&#39;,
+            &#39;company&#39;: &#39;company&#39;,
+            &#39;custom_field2&#39;: &#39;customField2&#39;,
+            &#39;digital_signature_base64&#39;: &#39;digitalSignatureBase64&#39;,
+            &#39;digital_signatures_pending&#39;: &#39;digitalSignaturesPending&#39;,
+            &#39;email&#39;: &#39;email&#39;,
+            &#39;first_name&#39;: &#39;firstName&#39;,
+            &#39;full_name&#39;: &#39;fullName&#39;,
+            &#39;initials_base64&#39;: &#39;initialsBase64&#39;,
+            &#39;in_person_email&#39;: &#39;inPersonEmail&#39;,
+            &#39;is_notary&#39;: &#39;isNotary&#39;,
+            &#39;is_notary_transaction&#39;: &#39;isNotaryTransaction&#39;,
+            &#39;job_title&#39;: &#39;jobTitle&#39;,
+            &#39;last_name&#39;: &#39;lastName&#39;,
+            &#39;notary_seal_base64&#39;: &#39;notarySealBase64&#39;,
+            &#39;phone_number&#39;: &#39;phoneNumber&#39;,
+            &#39;recipient_complete_count&#39;: &#39;recipientCompleteCount&#39;,
+            &#39;recipient_guid_id&#39;: &#39;recipientGuidId&#39;,
+            &#39;recipient_id&#39;: &#39;recipientId&#39;,
+            &#39;recipient_status&#39;: &#39;recipientStatus&#39;,
+            &#39;recipient_type&#39;: &#39;recipientType&#39;,
+            &#39;require_signer_certificate&#39;: &#39;requireSignerCertificate&#39;,
+            &#39;row_state&#39;: &#39;rowState&#39;,
+            &#39;signature_base64&#39;: &#39;signatureBase64&#39;,
+            &#39;signature_image_id&#39;: &#39;signatureImageId&#39;,
+            &#39;signed&#39;: &#39;signed&#39;,
+            &#39;signer_apply_tabs&#39;: &#39;signerApplyTabs&#39;,
+            &#39;signer_attachment_base64&#39;: &#39;signerAttachmentBase64&#39;,
+            &#39;user_id&#39;: &#39;userId&#39;,
+            &#39;user_name&#39;: &#39;userName&#39;
+        }
+
+        self._cfr_part11 = cfr_part11
+        self._company = company
+        self._custom_field2 = custom_field2
+        self._digital_signature_base64 = digital_signature_base64
+        self._digital_signatures_pending = digital_signatures_pending
+        self._email = email
+        self._first_name = first_name
+        self._full_name = full_name
+        self._initials_base64 = initials_base64
+        self._in_person_email = in_person_email
+        self._is_notary = is_notary
+        self._is_notary_transaction = is_notary_transaction
+        self._job_title = job_title
+        self._last_name = last_name
+        self._notary_seal_base64 = notary_seal_base64
+        self._phone_number = phone_number
+        self._recipient_complete_count = recipient_complete_count
+        self._recipient_guid_id = recipient_guid_id
+        self._recipient_id = recipient_id
+        self._recipient_status = recipient_status
+        self._recipient_type = recipient_type
+        self._require_signer_certificate = require_signer_certificate
+        self._row_state = row_state
+        self._signature_base64 = signature_base64
+        self._signature_image_id = signature_image_id
+        self._signed = signed
+        self._signer_apply_tabs = signer_apply_tabs
+        self._signer_attachment_base64 = signer_attachment_base64
+        self._user_id = user_id
+        self._user_name = user_name
+
+    @property
+    def cfr_part11(self):
+        &#34;&#34;&#34;
+        Gets the cfr_part11 of this DisplayApplianceRecipient.
+        
+
+        :return: The cfr_part11 of this DisplayApplianceRecipient.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._cfr_part11
+
+    @cfr_part11.setter
+    def cfr_part11(self, cfr_part11):
+        &#34;&#34;&#34;
+        Sets the cfr_part11 of this DisplayApplianceRecipient.
+        
+
+        :param cfr_part11: The cfr_part11 of this DisplayApplianceRecipient.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._cfr_part11 = cfr_part11
+
+    @property
+    def company(self):
+        &#34;&#34;&#34;
+        Gets the company of this DisplayApplianceRecipient.
+        
+
+        :return: The company of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._company
+
+    @company.setter
+    def company(self, company):
+        &#34;&#34;&#34;
+        Sets the company of this DisplayApplianceRecipient.
+        
+
+        :param company: The company of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._company = company
+
+    @property
+    def custom_field2(self):
+        &#34;&#34;&#34;
+        Gets the custom_field2 of this DisplayApplianceRecipient.
+        
+
+        :return: The custom_field2 of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._custom_field2
+
+    @custom_field2.setter
+    def custom_field2(self, custom_field2):
+        &#34;&#34;&#34;
+        Sets the custom_field2 of this DisplayApplianceRecipient.
+        
+
+        :param custom_field2: The custom_field2 of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._custom_field2 = custom_field2
+
+    @property
+    def digital_signature_base64(self):
+        &#34;&#34;&#34;
+        Gets the digital_signature_base64 of this DisplayApplianceRecipient.
+        
+
+        :return: The digital_signature_base64 of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._digital_signature_base64
+
+    @digital_signature_base64.setter
+    def digital_signature_base64(self, digital_signature_base64):
+        &#34;&#34;&#34;
+        Sets the digital_signature_base64 of this DisplayApplianceRecipient.
+        
+
+        :param digital_signature_base64: The digital_signature_base64 of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._digital_signature_base64 = digital_signature_base64
+
+    @property
+    def digital_signatures_pending(self):
+        &#34;&#34;&#34;
+        Gets the digital_signatures_pending of this DisplayApplianceRecipient.
+        
+
+        :return: The digital_signatures_pending of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._digital_signatures_pending
+
+    @digital_signatures_pending.setter
+    def digital_signatures_pending(self, digital_signatures_pending):
+        &#34;&#34;&#34;
+        Sets the digital_signatures_pending of this DisplayApplianceRecipient.
+        
+
+        :param digital_signatures_pending: The digital_signatures_pending of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._digital_signatures_pending = digital_signatures_pending
+
+    @property
+    def email(self):
+        &#34;&#34;&#34;
+        Gets the email of this DisplayApplianceRecipient.
+        
+
+        :return: The email of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        &#34;&#34;&#34;
+        Sets the email of this DisplayApplianceRecipient.
+        
+
+        :param email: The email of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._email = email
+
+    @property
+    def first_name(self):
+        &#34;&#34;&#34;
+        Gets the first_name of this DisplayApplianceRecipient.
+        The user&#39;s first name.  Maximum Length: 50 characters.
+
+        :return: The first_name of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._first_name
+
+    @first_name.setter
+    def first_name(self, first_name):
+        &#34;&#34;&#34;
+        Sets the first_name of this DisplayApplianceRecipient.
+        The user&#39;s first name.  Maximum Length: 50 characters.
+
+        :param first_name: The first_name of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._first_name = first_name
+
+    @property
+    def full_name(self):
+        &#34;&#34;&#34;
+        Gets the full_name of this DisplayApplianceRecipient.
+        
+
+        :return: The full_name of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._full_name
+
+    @full_name.setter
+    def full_name(self, full_name):
+        &#34;&#34;&#34;
+        Sets the full_name of this DisplayApplianceRecipient.
+        
+
+        :param full_name: The full_name of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._full_name = full_name
+
+    @property
+    def initials_base64(self):
+        &#34;&#34;&#34;
+        Gets the initials_base64 of this DisplayApplianceRecipient.
+        
+
+        :return: The initials_base64 of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._initials_base64
+
+    @initials_base64.setter
+    def initials_base64(self, initials_base64):
+        &#34;&#34;&#34;
+        Sets the initials_base64 of this DisplayApplianceRecipient.
+        
+
+        :param initials_base64: The initials_base64 of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._initials_base64 = initials_base64
+
+    @property
+    def in_person_email(self):
+        &#34;&#34;&#34;
+        Gets the in_person_email of this DisplayApplianceRecipient.
+        
+
+        :return: The in_person_email of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._in_person_email
+
+    @in_person_email.setter
+    def in_person_email(self, in_person_email):
+        &#34;&#34;&#34;
+        Sets the in_person_email of this DisplayApplianceRecipient.
+        
+
+        :param in_person_email: The in_person_email of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._in_person_email = in_person_email
+
+    @property
+    def is_notary(self):
+        &#34;&#34;&#34;
+        Gets the is_notary of this DisplayApplianceRecipient.
+        
+
+        :return: The is_notary of this DisplayApplianceRecipient.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._is_notary
+
+    @is_notary.setter
+    def is_notary(self, is_notary):
+        &#34;&#34;&#34;
+        Sets the is_notary of this DisplayApplianceRecipient.
+        
+
+        :param is_notary: The is_notary of this DisplayApplianceRecipient.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._is_notary = is_notary
+
+    @property
+    def is_notary_transaction(self):
+        &#34;&#34;&#34;
+        Gets the is_notary_transaction of this DisplayApplianceRecipient.
+        
+
+        :return: The is_notary_transaction of this DisplayApplianceRecipient.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._is_notary_transaction
+
+    @is_notary_transaction.setter
+    def is_notary_transaction(self, is_notary_transaction):
+        &#34;&#34;&#34;
+        Sets the is_notary_transaction of this DisplayApplianceRecipient.
+        
+
+        :param is_notary_transaction: The is_notary_transaction of this DisplayApplianceRecipient.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._is_notary_transaction = is_notary_transaction
+
+    @property
+    def job_title(self):
+        &#34;&#34;&#34;
+        Gets the job_title of this DisplayApplianceRecipient.
+        
+
+        :return: The job_title of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._job_title
+
+    @job_title.setter
+    def job_title(self, job_title):
+        &#34;&#34;&#34;
+        Sets the job_title of this DisplayApplianceRecipient.
+        
+
+        :param job_title: The job_title of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._job_title = job_title
+
+    @property
+    def last_name(self):
+        &#34;&#34;&#34;
+        Gets the last_name of this DisplayApplianceRecipient.
+        
+
+        :return: The last_name of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._last_name
+
+    @last_name.setter
+    def last_name(self, last_name):
+        &#34;&#34;&#34;
+        Sets the last_name of this DisplayApplianceRecipient.
+        
+
+        :param last_name: The last_name of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._last_name = last_name
+
+    @property
+    def notary_seal_base64(self):
+        &#34;&#34;&#34;
+        Gets the notary_seal_base64 of this DisplayApplianceRecipient.
+        
+
+        :return: The notary_seal_base64 of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._notary_seal_base64
+
+    @notary_seal_base64.setter
+    def notary_seal_base64(self, notary_seal_base64):
+        &#34;&#34;&#34;
+        Sets the notary_seal_base64 of this DisplayApplianceRecipient.
+        
+
+        :param notary_seal_base64: The notary_seal_base64 of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._notary_seal_base64 = notary_seal_base64
+
+    @property
+    def phone_number(self):
+        &#34;&#34;&#34;
+        Gets the phone_number of this DisplayApplianceRecipient.
+        
+
+        :return: The phone_number of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._phone_number
+
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        &#34;&#34;&#34;
+        Sets the phone_number of this DisplayApplianceRecipient.
+        
+
+        :param phone_number: The phone_number of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._phone_number = phone_number
+
+    @property
+    def recipient_complete_count(self):
+        &#34;&#34;&#34;
+        Gets the recipient_complete_count of this DisplayApplianceRecipient.
+        
+
+        :return: The recipient_complete_count of this DisplayApplianceRecipient.
+        :rtype: int
+        &#34;&#34;&#34;
+        return self._recipient_complete_count
+
+    @recipient_complete_count.setter
+    def recipient_complete_count(self, recipient_complete_count):
+        &#34;&#34;&#34;
+        Sets the recipient_complete_count of this DisplayApplianceRecipient.
+        
+
+        :param recipient_complete_count: The recipient_complete_count of this DisplayApplianceRecipient.
+        :type: int
+        &#34;&#34;&#34;
+
+        self._recipient_complete_count = recipient_complete_count
+
+    @property
+    def recipient_guid_id(self):
+        &#34;&#34;&#34;
+        Gets the recipient_guid_id of this DisplayApplianceRecipient.
+        
+
+        :return: The recipient_guid_id of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_guid_id
+
+    @recipient_guid_id.setter
+    def recipient_guid_id(self, recipient_guid_id):
+        &#34;&#34;&#34;
+        Sets the recipient_guid_id of this DisplayApplianceRecipient.
+        
+
+        :param recipient_guid_id: The recipient_guid_id of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_guid_id = recipient_guid_id
+
+    @property
+    def recipient_id(self):
+        &#34;&#34;&#34;
+        Gets the recipient_id of this DisplayApplianceRecipient.
+        Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+
+        :return: The recipient_id of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_id
+
+    @recipient_id.setter
+    def recipient_id(self, recipient_id):
+        &#34;&#34;&#34;
+        Sets the recipient_id of this DisplayApplianceRecipient.
+        Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+
+        :param recipient_id: The recipient_id of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_id = recipient_id
+
+    @property
+    def recipient_status(self):
+        &#34;&#34;&#34;
+        Gets the recipient_status of this DisplayApplianceRecipient.
+        
+
+        :return: The recipient_status of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_status
+
+    @recipient_status.setter
+    def recipient_status(self, recipient_status):
+        &#34;&#34;&#34;
+        Sets the recipient_status of this DisplayApplianceRecipient.
+        
+
+        :param recipient_status: The recipient_status of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_status = recipient_status
+
+    @property
+    def recipient_type(self):
+        &#34;&#34;&#34;
+        Gets the recipient_type of this DisplayApplianceRecipient.
+        
+
+        :return: The recipient_type of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._recipient_type
+
+    @recipient_type.setter
+    def recipient_type(self, recipient_type):
+        &#34;&#34;&#34;
+        Sets the recipient_type of this DisplayApplianceRecipient.
+        
+
+        :param recipient_type: The recipient_type of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._recipient_type = recipient_type
+
+    @property
+    def require_signer_certificate(self):
+        &#34;&#34;&#34;
+        Gets the require_signer_certificate of this DisplayApplianceRecipient.
+        
+
+        :return: The require_signer_certificate of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._require_signer_certificate
+
+    @require_signer_certificate.setter
+    def require_signer_certificate(self, require_signer_certificate):
+        &#34;&#34;&#34;
+        Sets the require_signer_certificate of this DisplayApplianceRecipient.
+        
+
+        :param require_signer_certificate: The require_signer_certificate of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._require_signer_certificate = require_signer_certificate
+
+    @property
+    def row_state(self):
+        &#34;&#34;&#34;
+        Gets the row_state of this DisplayApplianceRecipient.
+        
+
+        :return: The row_state of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._row_state
+
+    @row_state.setter
+    def row_state(self, row_state):
+        &#34;&#34;&#34;
+        Sets the row_state of this DisplayApplianceRecipient.
+        
+
+        :param row_state: The row_state of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._row_state = row_state
+
+    @property
+    def signature_base64(self):
+        &#34;&#34;&#34;
+        Gets the signature_base64 of this DisplayApplianceRecipient.
+        
+
+        :return: The signature_base64 of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_base64
+
+    @signature_base64.setter
+    def signature_base64(self, signature_base64):
+        &#34;&#34;&#34;
+        Sets the signature_base64 of this DisplayApplianceRecipient.
+        
+
+        :param signature_base64: The signature_base64 of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_base64 = signature_base64
+
+    @property
+    def signature_image_id(self):
+        &#34;&#34;&#34;
+        Gets the signature_image_id of this DisplayApplianceRecipient.
+        
+
+        :return: The signature_image_id of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signature_image_id
+
+    @signature_image_id.setter
+    def signature_image_id(self, signature_image_id):
+        &#34;&#34;&#34;
+        Sets the signature_image_id of this DisplayApplianceRecipient.
+        
+
+        :param signature_image_id: The signature_image_id of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signature_image_id = signature_image_id
+
+    @property
+    def signed(self):
+        &#34;&#34;&#34;
+        Gets the signed of this DisplayApplianceRecipient.
+        
+
+        :return: The signed of this DisplayApplianceRecipient.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._signed
+
+    @signed.setter
+    def signed(self, signed):
+        &#34;&#34;&#34;
+        Sets the signed of this DisplayApplianceRecipient.
+        
+
+        :param signed: The signed of this DisplayApplianceRecipient.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._signed = signed
+
+    @property
+    def signer_apply_tabs(self):
+        &#34;&#34;&#34;
+        Gets the signer_apply_tabs of this DisplayApplianceRecipient.
+        
+
+        :return: The signer_apply_tabs of this DisplayApplianceRecipient.
+        :rtype: bool
+        &#34;&#34;&#34;
+        return self._signer_apply_tabs
+
+    @signer_apply_tabs.setter
+    def signer_apply_tabs(self, signer_apply_tabs):
+        &#34;&#34;&#34;
+        Sets the signer_apply_tabs of this DisplayApplianceRecipient.
+        
+
+        :param signer_apply_tabs: The signer_apply_tabs of this DisplayApplianceRecipient.
+        :type: bool
+        &#34;&#34;&#34;
+
+        self._signer_apply_tabs = signer_apply_tabs
+
+    @property
+    def signer_attachment_base64(self):
+        &#34;&#34;&#34;
+        Gets the signer_attachment_base64 of this DisplayApplianceRecipient.
+        
+
+        :return: The signer_attachment_base64 of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._signer_attachment_base64
+
+    @signer_attachment_base64.setter
+    def signer_attachment_base64(self, signer_attachment_base64):
+        &#34;&#34;&#34;
+        Sets the signer_attachment_base64 of this DisplayApplianceRecipient.
+        
+
+        :param signer_attachment_base64: The signer_attachment_base64 of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._signer_attachment_base64 = signer_attachment_base64
+
+    @property
+    def user_id(self):
+        &#34;&#34;&#34;
+        Gets the user_id of this DisplayApplianceRecipient.
+        
+
+        :return: The user_id of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        &#34;&#34;&#34;
+        Sets the user_id of this DisplayApplianceRecipient.
+        
+
+        :param user_id: The user_id of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_id = user_id
+
+    @property
+    def user_name(self):
+        &#34;&#34;&#34;
+        Gets the user_name of this DisplayApplianceRecipient.
+        
+
+        :return: The user_name of this DisplayApplianceRecipient.
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._user_name
+
+    @user_name.setter
+    def user_name(self, user_name):
+        &#34;&#34;&#34;
+        Sets the user_name of this DisplayApplianceRecipient.
+        
+
+        :param user_name: The user_name of this DisplayApplianceRecipient.
+        :type: str
+        &#34;&#34;&#34;
+
+        self._user_name = user_name
+
+    def to_dict(self):
+        &#34;&#34;&#34;
+        Returns the model properties as a dict
+        &#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;
+        Returns the string representation of the model
+        &#34;&#34;&#34;
+        return pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;
+        For `print` and `pprint`
+        &#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are equal
+        &#34;&#34;&#34;
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;
+        Returns true if both objects are not equal
+        &#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.cfr_part11"><code class="name">var <span class="ident">cfr_part11</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the cfr_part11 of this DisplayApplianceRecipient.</p>
+<p>:return: The cfr_part11 of this DisplayApplianceRecipient.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def cfr_part11(self):
+    &#34;&#34;&#34;
+    Gets the cfr_part11 of this DisplayApplianceRecipient.
+    
+
+    :return: The cfr_part11 of this DisplayApplianceRecipient.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._cfr_part11</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.company"><code class="name">var <span class="ident">company</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the company of this DisplayApplianceRecipient.</p>
+<p>:return: The company of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def company(self):
+    &#34;&#34;&#34;
+    Gets the company of this DisplayApplianceRecipient.
+    
+
+    :return: The company of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._company</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.custom_field2"><code class="name">var <span class="ident">custom_field2</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the custom_field2 of this DisplayApplianceRecipient.</p>
+<p>:return: The custom_field2 of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def custom_field2(self):
+    &#34;&#34;&#34;
+    Gets the custom_field2 of this DisplayApplianceRecipient.
+    
+
+    :return: The custom_field2 of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._custom_field2</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.digital_signature_base64"><code class="name">var <span class="ident">digital_signature_base64</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the digital_signature_base64 of this DisplayApplianceRecipient.</p>
+<p>:return: The digital_signature_base64 of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def digital_signature_base64(self):
+    &#34;&#34;&#34;
+    Gets the digital_signature_base64 of this DisplayApplianceRecipient.
+    
+
+    :return: The digital_signature_base64 of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._digital_signature_base64</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.digital_signatures_pending"><code class="name">var <span class="ident">digital_signatures_pending</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the digital_signatures_pending of this DisplayApplianceRecipient.</p>
+<p>:return: The digital_signatures_pending of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def digital_signatures_pending(self):
+    &#34;&#34;&#34;
+    Gets the digital_signatures_pending of this DisplayApplianceRecipient.
+    
+
+    :return: The digital_signatures_pending of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._digital_signatures_pending</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.email"><code class="name">var <span class="ident">email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the email of this DisplayApplianceRecipient.</p>
+<p>:return: The email of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def email(self):
+    &#34;&#34;&#34;
+    Gets the email of this DisplayApplianceRecipient.
+    
+
+    :return: The email of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.first_name"><code class="name">var <span class="ident">first_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the first_name of this DisplayApplianceRecipient.
+The user's first name.
+Maximum Length: 50 characters.</p>
+<p>:return: The first_name of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def first_name(self):
+    &#34;&#34;&#34;
+    Gets the first_name of this DisplayApplianceRecipient.
+    The user&#39;s first name.  Maximum Length: 50 characters.
+
+    :return: The first_name of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._first_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.full_name"><code class="name">var <span class="ident">full_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the full_name of this DisplayApplianceRecipient.</p>
+<p>:return: The full_name of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def full_name(self):
+    &#34;&#34;&#34;
+    Gets the full_name of this DisplayApplianceRecipient.
+    
+
+    :return: The full_name of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._full_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.in_person_email"><code class="name">var <span class="ident">in_person_email</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the in_person_email of this DisplayApplianceRecipient.</p>
+<p>:return: The in_person_email of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def in_person_email(self):
+    &#34;&#34;&#34;
+    Gets the in_person_email of this DisplayApplianceRecipient.
+    
+
+    :return: The in_person_email of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._in_person_email</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.initials_base64"><code class="name">var <span class="ident">initials_base64</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the initials_base64 of this DisplayApplianceRecipient.</p>
+<p>:return: The initials_base64 of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def initials_base64(self):
+    &#34;&#34;&#34;
+    Gets the initials_base64 of this DisplayApplianceRecipient.
+    
+
+    :return: The initials_base64 of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._initials_base64</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.is_notary"><code class="name">var <span class="ident">is_notary</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the is_notary of this DisplayApplianceRecipient.</p>
+<p>:return: The is_notary of this DisplayApplianceRecipient.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is_notary(self):
+    &#34;&#34;&#34;
+    Gets the is_notary of this DisplayApplianceRecipient.
+    
+
+    :return: The is_notary of this DisplayApplianceRecipient.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._is_notary</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.is_notary_transaction"><code class="name">var <span class="ident">is_notary_transaction</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the is_notary_transaction of this DisplayApplianceRecipient.</p>
+<p>:return: The is_notary_transaction of this DisplayApplianceRecipient.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is_notary_transaction(self):
+    &#34;&#34;&#34;
+    Gets the is_notary_transaction of this DisplayApplianceRecipient.
+    
+
+    :return: The is_notary_transaction of this DisplayApplianceRecipient.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._is_notary_transaction</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.job_title"><code class="name">var <span class="ident">job_title</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the job_title of this DisplayApplianceRecipient.</p>
+<p>:return: The job_title of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def job_title(self):
+    &#34;&#34;&#34;
+    Gets the job_title of this DisplayApplianceRecipient.
+    
+
+    :return: The job_title of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._job_title</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.last_name"><code class="name">var <span class="ident">last_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the last_name of this DisplayApplianceRecipient.</p>
+<p>:return: The last_name of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def last_name(self):
+    &#34;&#34;&#34;
+    Gets the last_name of this DisplayApplianceRecipient.
+    
+
+    :return: The last_name of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._last_name</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.notary_seal_base64"><code class="name">var <span class="ident">notary_seal_base64</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the notary_seal_base64 of this DisplayApplianceRecipient.</p>
+<p>:return: The notary_seal_base64 of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def notary_seal_base64(self):
+    &#34;&#34;&#34;
+    Gets the notary_seal_base64 of this DisplayApplianceRecipient.
+    
+
+    :return: The notary_seal_base64 of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._notary_seal_base64</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.phone_number"><code class="name">var <span class="ident">phone_number</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the phone_number of this DisplayApplianceRecipient.</p>
+<p>:return: The phone_number of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def phone_number(self):
+    &#34;&#34;&#34;
+    Gets the phone_number of this DisplayApplianceRecipient.
+    
+
+    :return: The phone_number of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._phone_number</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_complete_count"><code class="name">var <span class="ident">recipient_complete_count</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the recipient_complete_count of this DisplayApplianceRecipient.</p>
+<p>:return: The recipient_complete_count of this DisplayApplianceRecipient.
+:rtype: int</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def recipient_complete_count(self):
+    &#34;&#34;&#34;
+    Gets the recipient_complete_count of this DisplayApplianceRecipient.
+    
+
+    :return: The recipient_complete_count of this DisplayApplianceRecipient.
+    :rtype: int
+    &#34;&#34;&#34;
+    return self._recipient_complete_count</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_guid_id"><code class="name">var <span class="ident">recipient_guid_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the recipient_guid_id of this DisplayApplianceRecipient.</p>
+<p>:return: The recipient_guid_id of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def recipient_guid_id(self):
+    &#34;&#34;&#34;
+    Gets the recipient_guid_id of this DisplayApplianceRecipient.
+    
+
+    :return: The recipient_guid_id of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._recipient_guid_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_id"><code class="name">var <span class="ident">recipient_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the recipient_id of this DisplayApplianceRecipient.
+Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.</p>
+<p>:return: The recipient_id of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def recipient_id(self):
+    &#34;&#34;&#34;
+    Gets the recipient_id of this DisplayApplianceRecipient.
+    Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+
+    :return: The recipient_id of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._recipient_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_status"><code class="name">var <span class="ident">recipient_status</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the recipient_status of this DisplayApplianceRecipient.</p>
+<p>:return: The recipient_status of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def recipient_status(self):
+    &#34;&#34;&#34;
+    Gets the recipient_status of this DisplayApplianceRecipient.
+    
+
+    :return: The recipient_status of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._recipient_status</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_type"><code class="name">var <span class="ident">recipient_type</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the recipient_type of this DisplayApplianceRecipient.</p>
+<p>:return: The recipient_type of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def recipient_type(self):
+    &#34;&#34;&#34;
+    Gets the recipient_type of this DisplayApplianceRecipient.
+    
+
+    :return: The recipient_type of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._recipient_type</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.require_signer_certificate"><code class="name">var <span class="ident">require_signer_certificate</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the require_signer_certificate of this DisplayApplianceRecipient.</p>
+<p>:return: The require_signer_certificate of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def require_signer_certificate(self):
+    &#34;&#34;&#34;
+    Gets the require_signer_certificate of this DisplayApplianceRecipient.
+    
+
+    :return: The require_signer_certificate of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._require_signer_certificate</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.row_state"><code class="name">var <span class="ident">row_state</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the row_state of this DisplayApplianceRecipient.</p>
+<p>:return: The row_state of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def row_state(self):
+    &#34;&#34;&#34;
+    Gets the row_state of this DisplayApplianceRecipient.
+    
+
+    :return: The row_state of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._row_state</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signature_base64"><code class="name">var <span class="ident">signature_base64</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signature_base64 of this DisplayApplianceRecipient.</p>
+<p>:return: The signature_base64 of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signature_base64(self):
+    &#34;&#34;&#34;
+    Gets the signature_base64 of this DisplayApplianceRecipient.
+    
+
+    :return: The signature_base64 of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signature_base64</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signature_image_id"><code class="name">var <span class="ident">signature_image_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signature_image_id of this DisplayApplianceRecipient.</p>
+<p>:return: The signature_image_id of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signature_image_id(self):
+    &#34;&#34;&#34;
+    Gets the signature_image_id of this DisplayApplianceRecipient.
+    
+
+    :return: The signature_image_id of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signature_image_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signed"><code class="name">var <span class="ident">signed</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signed of this DisplayApplianceRecipient.</p>
+<p>:return: The signed of this DisplayApplianceRecipient.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signed(self):
+    &#34;&#34;&#34;
+    Gets the signed of this DisplayApplianceRecipient.
+    
+
+    :return: The signed of this DisplayApplianceRecipient.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._signed</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signer_apply_tabs"><code class="name">var <span class="ident">signer_apply_tabs</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signer_apply_tabs of this DisplayApplianceRecipient.</p>
+<p>:return: The signer_apply_tabs of this DisplayApplianceRecipient.
+:rtype: bool</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signer_apply_tabs(self):
+    &#34;&#34;&#34;
+    Gets the signer_apply_tabs of this DisplayApplianceRecipient.
+    
+
+    :return: The signer_apply_tabs of this DisplayApplianceRecipient.
+    :rtype: bool
+    &#34;&#34;&#34;
+    return self._signer_apply_tabs</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signer_attachment_base64"><code class="name">var <span class="ident">signer_attachment_base64</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the signer_attachment_base64 of this DisplayApplianceRecipient.</p>
+<p>:return: The signer_attachment_base64 of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def signer_attachment_base64(self):
+    &#34;&#34;&#34;
+    Gets the signer_attachment_base64 of this DisplayApplianceRecipient.
+    
+
+    :return: The signer_attachment_base64 of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._signer_attachment_base64</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.user_id"><code class="name">var <span class="ident">user_id</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_id of this DisplayApplianceRecipient.</p>
+<p>:return: The user_id of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_id(self):
+    &#34;&#34;&#34;
+    Gets the user_id of this DisplayApplianceRecipient.
+    
+
+    :return: The user_id of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._user_id</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.user_name"><code class="name">var <span class="ident">user_name</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the user_name of this DisplayApplianceRecipient.</p>
+<p>:return: The user_name of this DisplayApplianceRecipient.
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def user_name(self):
+    &#34;&#34;&#34;
+    Gets the user_name of this DisplayApplianceRecipient.
+    
+
+    :return: The user_name of this DisplayApplianceRecipient.
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._user_name</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;
+    Returns the model properties as a dict
+    &#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;
+    Returns the string representation of the model
+    &#34;&#34;&#34;
+    return pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient">DisplayApplianceRecipient</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.cfr_part11" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.cfr_part11">cfr_part11</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.company" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.company">company</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.custom_field2" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.custom_field2">custom_field2</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.digital_signature_base64" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.digital_signature_base64">digital_signature_base64</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.digital_signatures_pending" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.digital_signatures_pending">digital_signatures_pending</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.email" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.email">email</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.first_name" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.first_name">first_name</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.full_name" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.full_name">full_name</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.in_person_email" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.in_person_email">in_person_email</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.initials_base64" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.initials_base64">initials_base64</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.is_notary" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.is_notary">is_notary</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.is_notary_transaction" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.is_notary_transaction">is_notary_transaction</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.job_title" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.job_title">job_title</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.last_name" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.last_name">last_name</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.notary_seal_base64" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.notary_seal_base64">notary_seal_base64</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.phone_number" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.phone_number">phone_number</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_complete_count" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_complete_count">recipient_complete_count</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_guid_id" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_guid_id">recipient_guid_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_id" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_id">recipient_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_status" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_status">recipient_status</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_type" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.recipient_type">recipient_type</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.require_signer_certificate" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.require_signer_certificate">require_signer_certificate</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.row_state" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.row_state">row_state</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signature_base64" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signature_base64">signature_base64</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signature_image_id" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signature_image_id">signature_image_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signed" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signed">signed</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signer_apply_tabs" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signer_apply_tabs">signer_apply_tabs</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signer_attachment_base64" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.signer_attachment_base64">signer_attachment_base64</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.to_dict" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.to_str" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.user_id" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.user_id">user_id</a></code></li>
+<li><code><a title="docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.user_name" href="#docusign_esign.models.display_appliance_recipient.DisplayApplianceRecipient.user_name">user_name</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

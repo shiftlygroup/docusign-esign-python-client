@@ -1,0 +1,1710 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>docusign_esign.models.event_notification API documentation</title>
+<meta name="description" content="DocuSign REST API …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>docusign_esign.models.event_notification</code></h1>
+</header>
+<section id="section-intro">
+<p>DocuSign REST API</p>
+<p>The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+# noqa: E501</p>
+<p>OpenAPI spec version: v2.1
+Contact: devcenter@docusign.com
+Generated by: <a href="https://github.com/swagger-api/swagger-codegen.git">https://github.com/swagger-api/swagger-codegen.git</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding: utf-8
+
+&#34;&#34;&#34;
+    DocuSign REST API
+
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+
+    OpenAPI spec version: v2.1
+    Contact: devcenter@docusign.com
+    Generated by: https://github.com/swagger-api/swagger-codegen.git
+&#34;&#34;&#34;
+
+
+import pprint
+import re  # noqa: F401
+
+import six
+
+
+class EventNotification(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;envelope_events&#39;: &#39;list[EnvelopeEvent]&#39;,
+        &#39;event_data&#39;: &#39;ConnectEventData&#39;,
+        &#39;include_certificate_of_completion&#39;: &#39;str&#39;,
+        &#39;include_certificate_with_soap&#39;: &#39;str&#39;,
+        &#39;include_document_fields&#39;: &#39;str&#39;,
+        &#39;include_documents&#39;: &#39;str&#39;,
+        &#39;include_envelope_void_reason&#39;: &#39;str&#39;,
+        &#39;include_hmac&#39;: &#39;str&#39;,
+        &#39;include_sender_account_as_custom_field&#39;: &#39;str&#39;,
+        &#39;include_time_zone&#39;: &#39;str&#39;,
+        &#39;logging_enabled&#39;: &#39;str&#39;,
+        &#39;recipient_events&#39;: &#39;list[RecipientEvent]&#39;,
+        &#39;require_acknowledgment&#39;: &#39;str&#39;,
+        &#39;sign_message_with_x509_cert&#39;: &#39;str&#39;,
+        &#39;soap_name_space&#39;: &#39;str&#39;,
+        &#39;url&#39;: &#39;str&#39;,
+        &#39;use_soap_interface&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;envelope_events&#39;: &#39;envelopeEvents&#39;,
+        &#39;event_data&#39;: &#39;eventData&#39;,
+        &#39;include_certificate_of_completion&#39;: &#39;includeCertificateOfCompletion&#39;,
+        &#39;include_certificate_with_soap&#39;: &#39;includeCertificateWithSoap&#39;,
+        &#39;include_document_fields&#39;: &#39;includeDocumentFields&#39;,
+        &#39;include_documents&#39;: &#39;includeDocuments&#39;,
+        &#39;include_envelope_void_reason&#39;: &#39;includeEnvelopeVoidReason&#39;,
+        &#39;include_hmac&#39;: &#39;includeHMAC&#39;,
+        &#39;include_sender_account_as_custom_field&#39;: &#39;includeSenderAccountAsCustomField&#39;,
+        &#39;include_time_zone&#39;: &#39;includeTimeZone&#39;,
+        &#39;logging_enabled&#39;: &#39;loggingEnabled&#39;,
+        &#39;recipient_events&#39;: &#39;recipientEvents&#39;,
+        &#39;require_acknowledgment&#39;: &#39;requireAcknowledgment&#39;,
+        &#39;sign_message_with_x509_cert&#39;: &#39;signMessageWithX509Cert&#39;,
+        &#39;soap_name_space&#39;: &#39;soapNameSpace&#39;,
+        &#39;url&#39;: &#39;url&#39;,
+        &#39;use_soap_interface&#39;: &#39;useSoapInterface&#39;
+    }
+
+    def __init__(self, envelope_events=None, event_data=None, include_certificate_of_completion=None, include_certificate_with_soap=None, include_document_fields=None, include_documents=None, include_envelope_void_reason=None, include_hmac=None, include_sender_account_as_custom_field=None, include_time_zone=None, logging_enabled=None, recipient_events=None, require_acknowledgment=None, sign_message_with_x509_cert=None, soap_name_space=None, url=None, use_soap_interface=None):  # noqa: E501
+        &#34;&#34;&#34;EventNotification - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._envelope_events = None
+        self._event_data = None
+        self._include_certificate_of_completion = None
+        self._include_certificate_with_soap = None
+        self._include_document_fields = None
+        self._include_documents = None
+        self._include_envelope_void_reason = None
+        self._include_hmac = None
+        self._include_sender_account_as_custom_field = None
+        self._include_time_zone = None
+        self._logging_enabled = None
+        self._recipient_events = None
+        self._require_acknowledgment = None
+        self._sign_message_with_x509_cert = None
+        self._soap_name_space = None
+        self._url = None
+        self._use_soap_interface = None
+        self.discriminator = None
+
+        if envelope_events is not None:
+            self.envelope_events = envelope_events
+        if event_data is not None:
+            self.event_data = event_data
+        if include_certificate_of_completion is not None:
+            self.include_certificate_of_completion = include_certificate_of_completion
+        if include_certificate_with_soap is not None:
+            self.include_certificate_with_soap = include_certificate_with_soap
+        if include_document_fields is not None:
+            self.include_document_fields = include_document_fields
+        if include_documents is not None:
+            self.include_documents = include_documents
+        if include_envelope_void_reason is not None:
+            self.include_envelope_void_reason = include_envelope_void_reason
+        if include_hmac is not None:
+            self.include_hmac = include_hmac
+        if include_sender_account_as_custom_field is not None:
+            self.include_sender_account_as_custom_field = include_sender_account_as_custom_field
+        if include_time_zone is not None:
+            self.include_time_zone = include_time_zone
+        if logging_enabled is not None:
+            self.logging_enabled = logging_enabled
+        if recipient_events is not None:
+            self.recipient_events = recipient_events
+        if require_acknowledgment is not None:
+            self.require_acknowledgment = require_acknowledgment
+        if sign_message_with_x509_cert is not None:
+            self.sign_message_with_x509_cert = sign_message_with_x509_cert
+        if soap_name_space is not None:
+            self.soap_name_space = soap_name_space
+        if url is not None:
+            self.url = url
+        if use_soap_interface is not None:
+            self.use_soap_interface = use_soap_interface
+
+    @property
+    def envelope_events(self):
+        &#34;&#34;&#34;Gets the envelope_events of this EventNotification.  # noqa: E501
+
+        A list of envelope-level event statuses that will trigger Connect to send updates to the endpoint specified in the `url` property.   To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.  # noqa: E501
+
+        :return: The envelope_events of this EventNotification.  # noqa: E501
+        :rtype: list[EnvelopeEvent]
+        &#34;&#34;&#34;
+        return self._envelope_events
+
+    @envelope_events.setter
+    def envelope_events(self, envelope_events):
+        &#34;&#34;&#34;Sets the envelope_events of this EventNotification.
+
+        A list of envelope-level event statuses that will trigger Connect to send updates to the endpoint specified in the `url` property.   To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.  # noqa: E501
+
+        :param envelope_events: The envelope_events of this EventNotification.  # noqa: E501
+        :type: list[EnvelopeEvent]
+        &#34;&#34;&#34;
+
+        self._envelope_events = envelope_events
+
+    @property
+    def event_data(self):
+        &#34;&#34;&#34;Gets the event_data of this EventNotification.  # noqa: E501
+
+
+        :return: The event_data of this EventNotification.  # noqa: E501
+        :rtype: ConnectEventData
+        &#34;&#34;&#34;
+        return self._event_data
+
+    @event_data.setter
+    def event_data(self, event_data):
+        &#34;&#34;&#34;Sets the event_data of this EventNotification.
+
+
+        :param event_data: The event_data of this EventNotification.  # noqa: E501
+        :type: ConnectEventData
+        &#34;&#34;&#34;
+
+        self._event_data = event_data
+
+    @property
+    def include_certificate_of_completion(self):
+        &#34;&#34;&#34;Gets the include_certificate_of_completion of this EventNotification.  # noqa: E501
+
+        When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes.   # noqa: E501
+
+        :return: The include_certificate_of_completion of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_certificate_of_completion
+
+    @include_certificate_of_completion.setter
+    def include_certificate_of_completion(self, include_certificate_of_completion):
+        &#34;&#34;&#34;Sets the include_certificate_of_completion of this EventNotification.
+
+        When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes.   # noqa: E501
+
+        :param include_certificate_of_completion: The include_certificate_of_completion of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_certificate_of_completion = include_certificate_of_completion
+
+    @property
+    def include_certificate_with_soap(self):
+        &#34;&#34;&#34;Gets the include_certificate_with_soap of this EventNotification.  # noqa: E501
+
+        When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.  # noqa: E501
+
+        :return: The include_certificate_with_soap of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_certificate_with_soap
+
+    @include_certificate_with_soap.setter
+    def include_certificate_with_soap(self, include_certificate_with_soap):
+        &#34;&#34;&#34;Sets the include_certificate_with_soap of this EventNotification.
+
+        When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.  # noqa: E501
+
+        :param include_certificate_with_soap: The include_certificate_with_soap of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_certificate_with_soap = include_certificate_with_soap
+
+    @property
+    def include_document_fields(self):
+        &#34;&#34;&#34;Gets the include_document_fields of this EventNotification.  # noqa: E501
+
+        When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API.   # noqa: E501
+
+        :return: The include_document_fields of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_document_fields
+
+    @include_document_fields.setter
+    def include_document_fields(self, include_document_fields):
+        &#34;&#34;&#34;Sets the include_document_fields of this EventNotification.
+
+        When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API.   # noqa: E501
+
+        :param include_document_fields: The include_document_fields of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_document_fields = include_document_fields
+
+    @property
+    def include_documents(self):
+        &#34;&#34;&#34;Gets the include_documents of this EventNotification.  # noqa: E501
+
+        When set to **true**, the PDF documents are included in the message along with the updated XML.   # noqa: E501
+
+        :return: The include_documents of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_documents
+
+    @include_documents.setter
+    def include_documents(self, include_documents):
+        &#34;&#34;&#34;Sets the include_documents of this EventNotification.
+
+        When set to **true**, the PDF documents are included in the message along with the updated XML.   # noqa: E501
+
+        :param include_documents: The include_documents of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_documents = include_documents
+
+    @property
+    def include_envelope_void_reason(self):
+        &#34;&#34;&#34;Gets the include_envelope_void_reason of this EventNotification.  # noqa: E501
+
+        When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message.   # noqa: E501
+
+        :return: The include_envelope_void_reason of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_envelope_void_reason
+
+    @include_envelope_void_reason.setter
+    def include_envelope_void_reason(self, include_envelope_void_reason):
+        &#34;&#34;&#34;Sets the include_envelope_void_reason of this EventNotification.
+
+        When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message.   # noqa: E501
+
+        :param include_envelope_void_reason: The include_envelope_void_reason of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_envelope_void_reason = include_envelope_void_reason
+
+    @property
+    def include_hmac(self):
+        &#34;&#34;&#34;Gets the include_hmac of this EventNotification.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The include_hmac of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_hmac
+
+    @include_hmac.setter
+    def include_hmac(self, include_hmac):
+        &#34;&#34;&#34;Sets the include_hmac of this EventNotification.
+
+          # noqa: E501
+
+        :param include_hmac: The include_hmac of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_hmac = include_hmac
+
+    @property
+    def include_sender_account_as_custom_field(self):
+        &#34;&#34;&#34;Gets the include_sender_account_as_custom_field of this EventNotification.  # noqa: E501
+
+        When set to **true**, the sender account ID is included as a envelope custom field in the data.   # noqa: E501
+
+        :return: The include_sender_account_as_custom_field of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_sender_account_as_custom_field
+
+    @include_sender_account_as_custom_field.setter
+    def include_sender_account_as_custom_field(self, include_sender_account_as_custom_field):
+        &#34;&#34;&#34;Sets the include_sender_account_as_custom_field of this EventNotification.
+
+        When set to **true**, the sender account ID is included as a envelope custom field in the data.   # noqa: E501
+
+        :param include_sender_account_as_custom_field: The include_sender_account_as_custom_field of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_sender_account_as_custom_field = include_sender_account_as_custom_field
+
+    @property
+    def include_time_zone(self):
+        &#34;&#34;&#34;Gets the include_time_zone of this EventNotification.  # noqa: E501
+
+        When set to **true**, the envelope time zone information is included in the message.   # noqa: E501
+
+        :return: The include_time_zone of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_time_zone
+
+    @include_time_zone.setter
+    def include_time_zone(self, include_time_zone):
+        &#34;&#34;&#34;Sets the include_time_zone of this EventNotification.
+
+        When set to **true**, the envelope time zone information is included in the message.   # noqa: E501
+
+        :param include_time_zone: The include_time_zone of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_time_zone = include_time_zone
+
+    @property
+    def logging_enabled(self):
+        &#34;&#34;&#34;Gets the logging_enabled of this EventNotification.  # noqa: E501
+
+        When set to **true**, logging is turned on for envelope events on the Web Console Connect page.   # noqa: E501
+
+        :return: The logging_enabled of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._logging_enabled
+
+    @logging_enabled.setter
+    def logging_enabled(self, logging_enabled):
+        &#34;&#34;&#34;Sets the logging_enabled of this EventNotification.
+
+        When set to **true**, logging is turned on for envelope events on the Web Console Connect page.   # noqa: E501
+
+        :param logging_enabled: The logging_enabled of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._logging_enabled = logging_enabled
+
+    @property
+    def recipient_events(self):
+        &#34;&#34;&#34;Gets the recipient_events of this EventNotification.  # noqa: E501
+
+        A list of recipient event statuses that will trigger Connect to send updates to   the endpoint specified in the url property.  To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.  # noqa: E501
+
+        :return: The recipient_events of this EventNotification.  # noqa: E501
+        :rtype: list[RecipientEvent]
+        &#34;&#34;&#34;
+        return self._recipient_events
+
+    @recipient_events.setter
+    def recipient_events(self, recipient_events):
+        &#34;&#34;&#34;Sets the recipient_events of this EventNotification.
+
+        A list of recipient event statuses that will trigger Connect to send updates to   the endpoint specified in the url property.  To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.  # noqa: E501
+
+        :param recipient_events: The recipient_events of this EventNotification.  # noqa: E501
+        :type: list[RecipientEvent]
+        &#34;&#34;&#34;
+
+        self._recipient_events = recipient_events
+
+    @property
+    def require_acknowledgment(self):
+        &#34;&#34;&#34;Gets the require_acknowledgment of this EventNotification.  # noqa: E501
+
+        When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures.   # noqa: E501
+
+        :return: The require_acknowledgment of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._require_acknowledgment
+
+    @require_acknowledgment.setter
+    def require_acknowledgment(self, require_acknowledgment):
+        &#34;&#34;&#34;Sets the require_acknowledgment of this EventNotification.
+
+        When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures.   # noqa: E501
+
+        :param require_acknowledgment: The require_acknowledgment of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._require_acknowledgment = require_acknowledgment
+
+    @property
+    def sign_message_with_x509_cert(self):
+        &#34;&#34;&#34;Gets the sign_message_with_x509_cert of this EventNotification.  # noqa: E501
+
+        When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope.   # noqa: E501
+
+        :return: The sign_message_with_x509_cert of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sign_message_with_x509_cert
+
+    @sign_message_with_x509_cert.setter
+    def sign_message_with_x509_cert(self, sign_message_with_x509_cert):
+        &#34;&#34;&#34;Sets the sign_message_with_x509_cert of this EventNotification.
+
+        When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope.   # noqa: E501
+
+        :param sign_message_with_x509_cert: The sign_message_with_x509_cert of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sign_message_with_x509_cert = sign_message_with_x509_cert
+
+    @property
+    def soap_name_space(self):
+        &#34;&#34;&#34;Gets the soap_name_space of this EventNotification.  # noqa: E501
+
+        This lists the namespace in the SOAP listener provided.  # noqa: E501
+
+        :return: The soap_name_space of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._soap_name_space
+
+    @soap_name_space.setter
+    def soap_name_space(self, soap_name_space):
+        &#34;&#34;&#34;Sets the soap_name_space of this EventNotification.
+
+        This lists the namespace in the SOAP listener provided.  # noqa: E501
+
+        :param soap_name_space: The soap_name_space of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._soap_name_space = soap_name_space
+
+    @property
+    def url(self):
+        &#34;&#34;&#34;Gets the url of this EventNotification.  # noqa: E501
+
+        Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.  # noqa: E501
+
+        :return: The url of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        &#34;&#34;&#34;Sets the url of this EventNotification.
+
+        Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.  # noqa: E501
+
+        :param url: The url of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._url = url
+
+    @property
+    def use_soap_interface(self):
+        &#34;&#34;&#34;Gets the use_soap_interface of this EventNotification.  # noqa: E501
+
+        When set to **true**, this tells the Connect service that the user&#39;s endpoint has implemented a SOAP interface.   # noqa: E501
+
+        :return: The use_soap_interface of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._use_soap_interface
+
+    @use_soap_interface.setter
+    def use_soap_interface(self, use_soap_interface):
+        &#34;&#34;&#34;Sets the use_soap_interface of this EventNotification.
+
+        When set to **true**, this tells the Connect service that the user&#39;s endpoint has implemented a SOAP interface.   # noqa: E501
+
+        :param use_soap_interface: The use_soap_interface of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._use_soap_interface = use_soap_interface
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(EventNotification, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, EventNotification):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="docusign_esign.models.event_notification.EventNotification"><code class="flex name class">
+<span>class <span class="ident">EventNotification</span></span>
+<span>(</span><span>envelope_events=None, event_data=None, include_certificate_of_completion=None, include_certificate_with_soap=None, include_document_fields=None, include_documents=None, include_envelope_void_reason=None, include_hmac=None, include_sender_account_as_custom_field=None, include_time_zone=None, logging_enabled=None, recipient_events=None, require_acknowledgment=None, sign_message_with_x509_cert=None, soap_name_space=None, url=None, use_soap_interface=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>NOTE: This class is auto generated by the swagger code generator program.</p>
+<p>Do not edit the class manually.</p>
+<p>EventNotification - a model defined in Swagger</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class EventNotification(object):
+    &#34;&#34;&#34;NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    &#34;&#34;&#34;
+
+    &#34;&#34;&#34;
+    Attributes:
+      swagger_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    &#34;&#34;&#34;
+    swagger_types = {
+        &#39;envelope_events&#39;: &#39;list[EnvelopeEvent]&#39;,
+        &#39;event_data&#39;: &#39;ConnectEventData&#39;,
+        &#39;include_certificate_of_completion&#39;: &#39;str&#39;,
+        &#39;include_certificate_with_soap&#39;: &#39;str&#39;,
+        &#39;include_document_fields&#39;: &#39;str&#39;,
+        &#39;include_documents&#39;: &#39;str&#39;,
+        &#39;include_envelope_void_reason&#39;: &#39;str&#39;,
+        &#39;include_hmac&#39;: &#39;str&#39;,
+        &#39;include_sender_account_as_custom_field&#39;: &#39;str&#39;,
+        &#39;include_time_zone&#39;: &#39;str&#39;,
+        &#39;logging_enabled&#39;: &#39;str&#39;,
+        &#39;recipient_events&#39;: &#39;list[RecipientEvent]&#39;,
+        &#39;require_acknowledgment&#39;: &#39;str&#39;,
+        &#39;sign_message_with_x509_cert&#39;: &#39;str&#39;,
+        &#39;soap_name_space&#39;: &#39;str&#39;,
+        &#39;url&#39;: &#39;str&#39;,
+        &#39;use_soap_interface&#39;: &#39;str&#39;
+    }
+
+    attribute_map = {
+        &#39;envelope_events&#39;: &#39;envelopeEvents&#39;,
+        &#39;event_data&#39;: &#39;eventData&#39;,
+        &#39;include_certificate_of_completion&#39;: &#39;includeCertificateOfCompletion&#39;,
+        &#39;include_certificate_with_soap&#39;: &#39;includeCertificateWithSoap&#39;,
+        &#39;include_document_fields&#39;: &#39;includeDocumentFields&#39;,
+        &#39;include_documents&#39;: &#39;includeDocuments&#39;,
+        &#39;include_envelope_void_reason&#39;: &#39;includeEnvelopeVoidReason&#39;,
+        &#39;include_hmac&#39;: &#39;includeHMAC&#39;,
+        &#39;include_sender_account_as_custom_field&#39;: &#39;includeSenderAccountAsCustomField&#39;,
+        &#39;include_time_zone&#39;: &#39;includeTimeZone&#39;,
+        &#39;logging_enabled&#39;: &#39;loggingEnabled&#39;,
+        &#39;recipient_events&#39;: &#39;recipientEvents&#39;,
+        &#39;require_acknowledgment&#39;: &#39;requireAcknowledgment&#39;,
+        &#39;sign_message_with_x509_cert&#39;: &#39;signMessageWithX509Cert&#39;,
+        &#39;soap_name_space&#39;: &#39;soapNameSpace&#39;,
+        &#39;url&#39;: &#39;url&#39;,
+        &#39;use_soap_interface&#39;: &#39;useSoapInterface&#39;
+    }
+
+    def __init__(self, envelope_events=None, event_data=None, include_certificate_of_completion=None, include_certificate_with_soap=None, include_document_fields=None, include_documents=None, include_envelope_void_reason=None, include_hmac=None, include_sender_account_as_custom_field=None, include_time_zone=None, logging_enabled=None, recipient_events=None, require_acknowledgment=None, sign_message_with_x509_cert=None, soap_name_space=None, url=None, use_soap_interface=None):  # noqa: E501
+        &#34;&#34;&#34;EventNotification - a model defined in Swagger&#34;&#34;&#34;  # noqa: E501
+
+        self._envelope_events = None
+        self._event_data = None
+        self._include_certificate_of_completion = None
+        self._include_certificate_with_soap = None
+        self._include_document_fields = None
+        self._include_documents = None
+        self._include_envelope_void_reason = None
+        self._include_hmac = None
+        self._include_sender_account_as_custom_field = None
+        self._include_time_zone = None
+        self._logging_enabled = None
+        self._recipient_events = None
+        self._require_acknowledgment = None
+        self._sign_message_with_x509_cert = None
+        self._soap_name_space = None
+        self._url = None
+        self._use_soap_interface = None
+        self.discriminator = None
+
+        if envelope_events is not None:
+            self.envelope_events = envelope_events
+        if event_data is not None:
+            self.event_data = event_data
+        if include_certificate_of_completion is not None:
+            self.include_certificate_of_completion = include_certificate_of_completion
+        if include_certificate_with_soap is not None:
+            self.include_certificate_with_soap = include_certificate_with_soap
+        if include_document_fields is not None:
+            self.include_document_fields = include_document_fields
+        if include_documents is not None:
+            self.include_documents = include_documents
+        if include_envelope_void_reason is not None:
+            self.include_envelope_void_reason = include_envelope_void_reason
+        if include_hmac is not None:
+            self.include_hmac = include_hmac
+        if include_sender_account_as_custom_field is not None:
+            self.include_sender_account_as_custom_field = include_sender_account_as_custom_field
+        if include_time_zone is not None:
+            self.include_time_zone = include_time_zone
+        if logging_enabled is not None:
+            self.logging_enabled = logging_enabled
+        if recipient_events is not None:
+            self.recipient_events = recipient_events
+        if require_acknowledgment is not None:
+            self.require_acknowledgment = require_acknowledgment
+        if sign_message_with_x509_cert is not None:
+            self.sign_message_with_x509_cert = sign_message_with_x509_cert
+        if soap_name_space is not None:
+            self.soap_name_space = soap_name_space
+        if url is not None:
+            self.url = url
+        if use_soap_interface is not None:
+            self.use_soap_interface = use_soap_interface
+
+    @property
+    def envelope_events(self):
+        &#34;&#34;&#34;Gets the envelope_events of this EventNotification.  # noqa: E501
+
+        A list of envelope-level event statuses that will trigger Connect to send updates to the endpoint specified in the `url` property.   To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.  # noqa: E501
+
+        :return: The envelope_events of this EventNotification.  # noqa: E501
+        :rtype: list[EnvelopeEvent]
+        &#34;&#34;&#34;
+        return self._envelope_events
+
+    @envelope_events.setter
+    def envelope_events(self, envelope_events):
+        &#34;&#34;&#34;Sets the envelope_events of this EventNotification.
+
+        A list of envelope-level event statuses that will trigger Connect to send updates to the endpoint specified in the `url` property.   To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.  # noqa: E501
+
+        :param envelope_events: The envelope_events of this EventNotification.  # noqa: E501
+        :type: list[EnvelopeEvent]
+        &#34;&#34;&#34;
+
+        self._envelope_events = envelope_events
+
+    @property
+    def event_data(self):
+        &#34;&#34;&#34;Gets the event_data of this EventNotification.  # noqa: E501
+
+
+        :return: The event_data of this EventNotification.  # noqa: E501
+        :rtype: ConnectEventData
+        &#34;&#34;&#34;
+        return self._event_data
+
+    @event_data.setter
+    def event_data(self, event_data):
+        &#34;&#34;&#34;Sets the event_data of this EventNotification.
+
+
+        :param event_data: The event_data of this EventNotification.  # noqa: E501
+        :type: ConnectEventData
+        &#34;&#34;&#34;
+
+        self._event_data = event_data
+
+    @property
+    def include_certificate_of_completion(self):
+        &#34;&#34;&#34;Gets the include_certificate_of_completion of this EventNotification.  # noqa: E501
+
+        When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes.   # noqa: E501
+
+        :return: The include_certificate_of_completion of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_certificate_of_completion
+
+    @include_certificate_of_completion.setter
+    def include_certificate_of_completion(self, include_certificate_of_completion):
+        &#34;&#34;&#34;Sets the include_certificate_of_completion of this EventNotification.
+
+        When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes.   # noqa: E501
+
+        :param include_certificate_of_completion: The include_certificate_of_completion of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_certificate_of_completion = include_certificate_of_completion
+
+    @property
+    def include_certificate_with_soap(self):
+        &#34;&#34;&#34;Gets the include_certificate_with_soap of this EventNotification.  # noqa: E501
+
+        When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.  # noqa: E501
+
+        :return: The include_certificate_with_soap of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_certificate_with_soap
+
+    @include_certificate_with_soap.setter
+    def include_certificate_with_soap(self, include_certificate_with_soap):
+        &#34;&#34;&#34;Sets the include_certificate_with_soap of this EventNotification.
+
+        When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.  # noqa: E501
+
+        :param include_certificate_with_soap: The include_certificate_with_soap of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_certificate_with_soap = include_certificate_with_soap
+
+    @property
+    def include_document_fields(self):
+        &#34;&#34;&#34;Gets the include_document_fields of this EventNotification.  # noqa: E501
+
+        When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API.   # noqa: E501
+
+        :return: The include_document_fields of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_document_fields
+
+    @include_document_fields.setter
+    def include_document_fields(self, include_document_fields):
+        &#34;&#34;&#34;Sets the include_document_fields of this EventNotification.
+
+        When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API.   # noqa: E501
+
+        :param include_document_fields: The include_document_fields of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_document_fields = include_document_fields
+
+    @property
+    def include_documents(self):
+        &#34;&#34;&#34;Gets the include_documents of this EventNotification.  # noqa: E501
+
+        When set to **true**, the PDF documents are included in the message along with the updated XML.   # noqa: E501
+
+        :return: The include_documents of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_documents
+
+    @include_documents.setter
+    def include_documents(self, include_documents):
+        &#34;&#34;&#34;Sets the include_documents of this EventNotification.
+
+        When set to **true**, the PDF documents are included in the message along with the updated XML.   # noqa: E501
+
+        :param include_documents: The include_documents of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_documents = include_documents
+
+    @property
+    def include_envelope_void_reason(self):
+        &#34;&#34;&#34;Gets the include_envelope_void_reason of this EventNotification.  # noqa: E501
+
+        When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message.   # noqa: E501
+
+        :return: The include_envelope_void_reason of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_envelope_void_reason
+
+    @include_envelope_void_reason.setter
+    def include_envelope_void_reason(self, include_envelope_void_reason):
+        &#34;&#34;&#34;Sets the include_envelope_void_reason of this EventNotification.
+
+        When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message.   # noqa: E501
+
+        :param include_envelope_void_reason: The include_envelope_void_reason of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_envelope_void_reason = include_envelope_void_reason
+
+    @property
+    def include_hmac(self):
+        &#34;&#34;&#34;Gets the include_hmac of this EventNotification.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The include_hmac of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_hmac
+
+    @include_hmac.setter
+    def include_hmac(self, include_hmac):
+        &#34;&#34;&#34;Sets the include_hmac of this EventNotification.
+
+          # noqa: E501
+
+        :param include_hmac: The include_hmac of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_hmac = include_hmac
+
+    @property
+    def include_sender_account_as_custom_field(self):
+        &#34;&#34;&#34;Gets the include_sender_account_as_custom_field of this EventNotification.  # noqa: E501
+
+        When set to **true**, the sender account ID is included as a envelope custom field in the data.   # noqa: E501
+
+        :return: The include_sender_account_as_custom_field of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_sender_account_as_custom_field
+
+    @include_sender_account_as_custom_field.setter
+    def include_sender_account_as_custom_field(self, include_sender_account_as_custom_field):
+        &#34;&#34;&#34;Sets the include_sender_account_as_custom_field of this EventNotification.
+
+        When set to **true**, the sender account ID is included as a envelope custom field in the data.   # noqa: E501
+
+        :param include_sender_account_as_custom_field: The include_sender_account_as_custom_field of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_sender_account_as_custom_field = include_sender_account_as_custom_field
+
+    @property
+    def include_time_zone(self):
+        &#34;&#34;&#34;Gets the include_time_zone of this EventNotification.  # noqa: E501
+
+        When set to **true**, the envelope time zone information is included in the message.   # noqa: E501
+
+        :return: The include_time_zone of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._include_time_zone
+
+    @include_time_zone.setter
+    def include_time_zone(self, include_time_zone):
+        &#34;&#34;&#34;Sets the include_time_zone of this EventNotification.
+
+        When set to **true**, the envelope time zone information is included in the message.   # noqa: E501
+
+        :param include_time_zone: The include_time_zone of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._include_time_zone = include_time_zone
+
+    @property
+    def logging_enabled(self):
+        &#34;&#34;&#34;Gets the logging_enabled of this EventNotification.  # noqa: E501
+
+        When set to **true**, logging is turned on for envelope events on the Web Console Connect page.   # noqa: E501
+
+        :return: The logging_enabled of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._logging_enabled
+
+    @logging_enabled.setter
+    def logging_enabled(self, logging_enabled):
+        &#34;&#34;&#34;Sets the logging_enabled of this EventNotification.
+
+        When set to **true**, logging is turned on for envelope events on the Web Console Connect page.   # noqa: E501
+
+        :param logging_enabled: The logging_enabled of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._logging_enabled = logging_enabled
+
+    @property
+    def recipient_events(self):
+        &#34;&#34;&#34;Gets the recipient_events of this EventNotification.  # noqa: E501
+
+        A list of recipient event statuses that will trigger Connect to send updates to   the endpoint specified in the url property.  To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.  # noqa: E501
+
+        :return: The recipient_events of this EventNotification.  # noqa: E501
+        :rtype: list[RecipientEvent]
+        &#34;&#34;&#34;
+        return self._recipient_events
+
+    @recipient_events.setter
+    def recipient_events(self, recipient_events):
+        &#34;&#34;&#34;Sets the recipient_events of this EventNotification.
+
+        A list of recipient event statuses that will trigger Connect to send updates to   the endpoint specified in the url property.  To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.  # noqa: E501
+
+        :param recipient_events: The recipient_events of this EventNotification.  # noqa: E501
+        :type: list[RecipientEvent]
+        &#34;&#34;&#34;
+
+        self._recipient_events = recipient_events
+
+    @property
+    def require_acknowledgment(self):
+        &#34;&#34;&#34;Gets the require_acknowledgment of this EventNotification.  # noqa: E501
+
+        When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures.   # noqa: E501
+
+        :return: The require_acknowledgment of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._require_acknowledgment
+
+    @require_acknowledgment.setter
+    def require_acknowledgment(self, require_acknowledgment):
+        &#34;&#34;&#34;Sets the require_acknowledgment of this EventNotification.
+
+        When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures.   # noqa: E501
+
+        :param require_acknowledgment: The require_acknowledgment of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._require_acknowledgment = require_acknowledgment
+
+    @property
+    def sign_message_with_x509_cert(self):
+        &#34;&#34;&#34;Gets the sign_message_with_x509_cert of this EventNotification.  # noqa: E501
+
+        When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope.   # noqa: E501
+
+        :return: The sign_message_with_x509_cert of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._sign_message_with_x509_cert
+
+    @sign_message_with_x509_cert.setter
+    def sign_message_with_x509_cert(self, sign_message_with_x509_cert):
+        &#34;&#34;&#34;Sets the sign_message_with_x509_cert of this EventNotification.
+
+        When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope.   # noqa: E501
+
+        :param sign_message_with_x509_cert: The sign_message_with_x509_cert of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._sign_message_with_x509_cert = sign_message_with_x509_cert
+
+    @property
+    def soap_name_space(self):
+        &#34;&#34;&#34;Gets the soap_name_space of this EventNotification.  # noqa: E501
+
+        This lists the namespace in the SOAP listener provided.  # noqa: E501
+
+        :return: The soap_name_space of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._soap_name_space
+
+    @soap_name_space.setter
+    def soap_name_space(self, soap_name_space):
+        &#34;&#34;&#34;Sets the soap_name_space of this EventNotification.
+
+        This lists the namespace in the SOAP listener provided.  # noqa: E501
+
+        :param soap_name_space: The soap_name_space of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._soap_name_space = soap_name_space
+
+    @property
+    def url(self):
+        &#34;&#34;&#34;Gets the url of this EventNotification.  # noqa: E501
+
+        Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.  # noqa: E501
+
+        :return: The url of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        &#34;&#34;&#34;Sets the url of this EventNotification.
+
+        Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.  # noqa: E501
+
+        :param url: The url of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._url = url
+
+    @property
+    def use_soap_interface(self):
+        &#34;&#34;&#34;Gets the use_soap_interface of this EventNotification.  # noqa: E501
+
+        When set to **true**, this tells the Connect service that the user&#39;s endpoint has implemented a SOAP interface.   # noqa: E501
+
+        :return: The use_soap_interface of this EventNotification.  # noqa: E501
+        :rtype: str
+        &#34;&#34;&#34;
+        return self._use_soap_interface
+
+    @use_soap_interface.setter
+    def use_soap_interface(self, use_soap_interface):
+        &#34;&#34;&#34;Sets the use_soap_interface of this EventNotification.
+
+        When set to **true**, this tells the Connect service that the user&#39;s endpoint has implemented a SOAP interface.   # noqa: E501
+
+        :param use_soap_interface: The use_soap_interface of this EventNotification.  # noqa: E501
+        :type: str
+        &#34;&#34;&#34;
+
+        self._use_soap_interface = use_soap_interface
+
+    def to_dict(self):
+        &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+        result = {}
+
+        for attr, _ in six.iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                    value
+                ))
+            elif hasattr(value, &#34;to_dict&#34;):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], &#34;to_dict&#34;) else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
+        if issubclass(EventNotification, dict):
+            for key, value in self.items():
+                result[key] = value
+
+        return result
+
+    def to_str(self):
+        &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        &#34;&#34;&#34;For `print` and `pprint`&#34;&#34;&#34;
+        return self.to_str()
+
+    def __eq__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are equal&#34;&#34;&#34;
+        if not isinstance(other, EventNotification):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        &#34;&#34;&#34;Returns true if both objects are not equal&#34;&#34;&#34;
+        return not self == other</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="docusign_esign.models.event_notification.EventNotification.attribute_map"><code class="name">var <span class="ident">attribute_map</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.swagger_types"><code class="name">var <span class="ident">swagger_types</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="docusign_esign.models.event_notification.EventNotification.envelope_events"><code class="name">var <span class="ident">envelope_events</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the envelope_events of this EventNotification.
+# noqa: E501</p>
+<p>A list of envelope-level event statuses that will trigger Connect to send updates to the endpoint specified in the <code>url</code> property.
+To receive notifications, you must include either an <code>envelopeEvents</code> node or a <code>recipientEvents</code> node. You do not need to specify both.
+# noqa: E501</p>
+<p>:return: The envelope_events of this EventNotification.
+# noqa: E501
+:rtype: list[EnvelopeEvent]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def envelope_events(self):
+    &#34;&#34;&#34;Gets the envelope_events of this EventNotification.  # noqa: E501
+
+    A list of envelope-level event statuses that will trigger Connect to send updates to the endpoint specified in the `url` property.   To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.  # noqa: E501
+
+    :return: The envelope_events of this EventNotification.  # noqa: E501
+    :rtype: list[EnvelopeEvent]
+    &#34;&#34;&#34;
+    return self._envelope_events</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.event_data"><code class="name">var <span class="ident">event_data</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the event_data of this EventNotification.
+# noqa: E501</p>
+<p>:return: The event_data of this EventNotification.
+# noqa: E501
+:rtype: ConnectEventData</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def event_data(self):
+    &#34;&#34;&#34;Gets the event_data of this EventNotification.  # noqa: E501
+
+
+    :return: The event_data of this EventNotification.  # noqa: E501
+    :rtype: ConnectEventData
+    &#34;&#34;&#34;
+    return self._event_data</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.include_certificate_of_completion"><code class="name">var <span class="ident">include_certificate_of_completion</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the include_certificate_of_completion of this EventNotification.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the Connect Service includes the Certificate of Completion with completed envelopes.
+# noqa: E501</p>
+<p>:return: The include_certificate_of_completion of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def include_certificate_of_completion(self):
+    &#34;&#34;&#34;Gets the include_certificate_of_completion of this EventNotification.  # noqa: E501
+
+    When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes.   # noqa: E501
+
+    :return: The include_certificate_of_completion of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._include_certificate_of_completion</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.include_certificate_with_soap"><code class="name">var <span class="ident">include_certificate_with_soap</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the include_certificate_with_soap of this EventNotification.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.
+# noqa: E501</p>
+<p>:return: The include_certificate_with_soap of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def include_certificate_with_soap(self):
+    &#34;&#34;&#34;Gets the include_certificate_with_soap of this EventNotification.  # noqa: E501
+
+    When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.  # noqa: E501
+
+    :return: The include_certificate_with_soap of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._include_certificate_with_soap</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.include_document_fields"><code class="name">var <span class="ident">include_document_fields</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the include_document_fields of this EventNotification.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API.
+# noqa: E501</p>
+<p>:return: The include_document_fields of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def include_document_fields(self):
+    &#34;&#34;&#34;Gets the include_document_fields of this EventNotification.  # noqa: E501
+
+    When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API.   # noqa: E501
+
+    :return: The include_document_fields of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._include_document_fields</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.include_documents"><code class="name">var <span class="ident">include_documents</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the include_documents of this EventNotification.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the PDF documents are included in the message along with the updated XML.
+# noqa: E501</p>
+<p>:return: The include_documents of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def include_documents(self):
+    &#34;&#34;&#34;Gets the include_documents of this EventNotification.  # noqa: E501
+
+    When set to **true**, the PDF documents are included in the message along with the updated XML.   # noqa: E501
+
+    :return: The include_documents of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._include_documents</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.include_envelope_void_reason"><code class="name">var <span class="ident">include_envelope_void_reason</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the include_envelope_void_reason of this EventNotification.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message.
+# noqa: E501</p>
+<p>:return: The include_envelope_void_reason of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def include_envelope_void_reason(self):
+    &#34;&#34;&#34;Gets the include_envelope_void_reason of this EventNotification.  # noqa: E501
+
+    When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message.   # noqa: E501
+
+    :return: The include_envelope_void_reason of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._include_envelope_void_reason</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.include_hmac"><code class="name">var <span class="ident">include_hmac</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the include_hmac of this EventNotification.
+# noqa: E501</p>
+<p># noqa: E501</p>
+<p>:return: The include_hmac of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def include_hmac(self):
+    &#34;&#34;&#34;Gets the include_hmac of this EventNotification.  # noqa: E501
+
+      # noqa: E501
+
+    :return: The include_hmac of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._include_hmac</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.include_sender_account_as_custom_field"><code class="name">var <span class="ident">include_sender_account_as_custom_field</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the include_sender_account_as_custom_field of this EventNotification.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the sender account ID is included as a envelope custom field in the data.
+# noqa: E501</p>
+<p>:return: The include_sender_account_as_custom_field of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def include_sender_account_as_custom_field(self):
+    &#34;&#34;&#34;Gets the include_sender_account_as_custom_field of this EventNotification.  # noqa: E501
+
+    When set to **true**, the sender account ID is included as a envelope custom field in the data.   # noqa: E501
+
+    :return: The include_sender_account_as_custom_field of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._include_sender_account_as_custom_field</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.include_time_zone"><code class="name">var <span class="ident">include_time_zone</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the include_time_zone of this EventNotification.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the envelope time zone information is included in the message.
+# noqa: E501</p>
+<p>:return: The include_time_zone of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def include_time_zone(self):
+    &#34;&#34;&#34;Gets the include_time_zone of this EventNotification.  # noqa: E501
+
+    When set to **true**, the envelope time zone information is included in the message.   # noqa: E501
+
+    :return: The include_time_zone of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._include_time_zone</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.logging_enabled"><code class="name">var <span class="ident">logging_enabled</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the logging_enabled of this EventNotification.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, logging is turned on for envelope events on the Web Console Connect page.
+# noqa: E501</p>
+<p>:return: The logging_enabled of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def logging_enabled(self):
+    &#34;&#34;&#34;Gets the logging_enabled of this EventNotification.  # noqa: E501
+
+    When set to **true**, logging is turned on for envelope events on the Web Console Connect page.   # noqa: E501
+
+    :return: The logging_enabled of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._logging_enabled</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.recipient_events"><code class="name">var <span class="ident">recipient_events</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the recipient_events of this EventNotification.
+# noqa: E501</p>
+<p>A list of recipient event statuses that will trigger Connect to send updates to
+the endpoint specified in the url property.
+To receive notifications, you must include either an <code>envelopeEvents</code> node or a <code>recipientEvents</code> node. You do not need to specify both.
+# noqa: E501</p>
+<p>:return: The recipient_events of this EventNotification.
+# noqa: E501
+:rtype: list[RecipientEvent]</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def recipient_events(self):
+    &#34;&#34;&#34;Gets the recipient_events of this EventNotification.  # noqa: E501
+
+    A list of recipient event statuses that will trigger Connect to send updates to   the endpoint specified in the url property.  To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.  # noqa: E501
+
+    :return: The recipient_events of this EventNotification.  # noqa: E501
+    :rtype: list[RecipientEvent]
+    &#34;&#34;&#34;
+    return self._recipient_events</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.require_acknowledgment"><code class="name">var <span class="ident">require_acknowledgment</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the require_acknowledgment of this EventNotification.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, the DocuSign Connect service checks that the message was received and retries on failures.
+# noqa: E501</p>
+<p>:return: The require_acknowledgment of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def require_acknowledgment(self):
+    &#34;&#34;&#34;Gets the require_acknowledgment of this EventNotification.  # noqa: E501
+
+    When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures.   # noqa: E501
+
+    :return: The require_acknowledgment of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._require_acknowledgment</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.sign_message_with_x509_cert"><code class="name">var <span class="ident">sign_message_with_x509_cert</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the sign_message_with_x509_cert of this EventNotification.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope.
+# noqa: E501</p>
+<p>:return: The sign_message_with_x509_cert of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def sign_message_with_x509_cert(self):
+    &#34;&#34;&#34;Gets the sign_message_with_x509_cert of this EventNotification.  # noqa: E501
+
+    When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope.   # noqa: E501
+
+    :return: The sign_message_with_x509_cert of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._sign_message_with_x509_cert</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.soap_name_space"><code class="name">var <span class="ident">soap_name_space</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the soap_name_space of this EventNotification.
+# noqa: E501</p>
+<p>This lists the namespace in the SOAP listener provided.
+# noqa: E501</p>
+<p>:return: The soap_name_space of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def soap_name_space(self):
+    &#34;&#34;&#34;Gets the soap_name_space of this EventNotification.  # noqa: E501
+
+    This lists the namespace in the SOAP listener provided.  # noqa: E501
+
+    :return: The soap_name_space of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._soap_name_space</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.url"><code class="name">var <span class="ident">url</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the url of this EventNotification.
+# noqa: E501</p>
+<p>Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless <code>useSoapInterface</code> property is set to <strong>true</strong>.
+# noqa: E501</p>
+<p>:return: The url of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def url(self):
+    &#34;&#34;&#34;Gets the url of this EventNotification.  # noqa: E501
+
+    Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.  # noqa: E501
+
+    :return: The url of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._url</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.use_soap_interface"><code class="name">var <span class="ident">use_soap_interface</span></code></dt>
+<dd>
+<div class="desc"><p>Gets the use_soap_interface of this EventNotification.
+# noqa: E501</p>
+<p>When set to <strong>true</strong>, this tells the Connect service that the user's endpoint has implemented a SOAP interface.
+# noqa: E501</p>
+<p>:return: The use_soap_interface of this EventNotification.
+# noqa: E501
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def use_soap_interface(self):
+    &#34;&#34;&#34;Gets the use_soap_interface of this EventNotification.  # noqa: E501
+
+    When set to **true**, this tells the Connect service that the user&#39;s endpoint has implemented a SOAP interface.   # noqa: E501
+
+    :return: The use_soap_interface of this EventNotification.  # noqa: E501
+    :rtype: str
+    &#34;&#34;&#34;
+    return self._use_soap_interface</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="docusign_esign.models.event_notification.EventNotification.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the model properties as a dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self):
+    &#34;&#34;&#34;Returns the model properties as a dict&#34;&#34;&#34;
+    result = {}
+
+    for attr, _ in six.iteritems(self.swagger_types):
+        value = getattr(self, attr)
+        if isinstance(value, list):
+            result[attr] = list(map(
+                lambda x: x.to_dict() if hasattr(x, &#34;to_dict&#34;) else x,
+                value
+            ))
+        elif hasattr(value, &#34;to_dict&#34;):
+            result[attr] = value.to_dict()
+        elif isinstance(value, dict):
+            result[attr] = dict(map(
+                lambda item: (item[0], item[1].to_dict())
+                if hasattr(item[1], &#34;to_dict&#34;) else item,
+                value.items()
+            ))
+        else:
+            result[attr] = value
+    if issubclass(EventNotification, dict):
+        for key, value in self.items():
+            result[key] = value
+
+    return result</code></pre>
+</details>
+</dd>
+<dt id="docusign_esign.models.event_notification.EventNotification.to_str"><code class="name flex">
+<span>def <span class="ident">to_str</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the string representation of the model</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_str(self):
+    &#34;&#34;&#34;Returns the string representation of the model&#34;&#34;&#34;
+    return pprint.pformat(self.to_dict())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="docusign_esign.models" href="index.html">docusign_esign.models</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="docusign_esign.models.event_notification.EventNotification" href="#docusign_esign.models.event_notification.EventNotification">EventNotification</a></code></h4>
+<ul class="">
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.attribute_map" href="#docusign_esign.models.event_notification.EventNotification.attribute_map">attribute_map</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.envelope_events" href="#docusign_esign.models.event_notification.EventNotification.envelope_events">envelope_events</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.event_data" href="#docusign_esign.models.event_notification.EventNotification.event_data">event_data</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.include_certificate_of_completion" href="#docusign_esign.models.event_notification.EventNotification.include_certificate_of_completion">include_certificate_of_completion</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.include_certificate_with_soap" href="#docusign_esign.models.event_notification.EventNotification.include_certificate_with_soap">include_certificate_with_soap</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.include_document_fields" href="#docusign_esign.models.event_notification.EventNotification.include_document_fields">include_document_fields</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.include_documents" href="#docusign_esign.models.event_notification.EventNotification.include_documents">include_documents</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.include_envelope_void_reason" href="#docusign_esign.models.event_notification.EventNotification.include_envelope_void_reason">include_envelope_void_reason</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.include_hmac" href="#docusign_esign.models.event_notification.EventNotification.include_hmac">include_hmac</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.include_sender_account_as_custom_field" href="#docusign_esign.models.event_notification.EventNotification.include_sender_account_as_custom_field">include_sender_account_as_custom_field</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.include_time_zone" href="#docusign_esign.models.event_notification.EventNotification.include_time_zone">include_time_zone</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.logging_enabled" href="#docusign_esign.models.event_notification.EventNotification.logging_enabled">logging_enabled</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.recipient_events" href="#docusign_esign.models.event_notification.EventNotification.recipient_events">recipient_events</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.require_acknowledgment" href="#docusign_esign.models.event_notification.EventNotification.require_acknowledgment">require_acknowledgment</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.sign_message_with_x509_cert" href="#docusign_esign.models.event_notification.EventNotification.sign_message_with_x509_cert">sign_message_with_x509_cert</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.soap_name_space" href="#docusign_esign.models.event_notification.EventNotification.soap_name_space">soap_name_space</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.swagger_types" href="#docusign_esign.models.event_notification.EventNotification.swagger_types">swagger_types</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.to_dict" href="#docusign_esign.models.event_notification.EventNotification.to_dict">to_dict</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.to_str" href="#docusign_esign.models.event_notification.EventNotification.to_str">to_str</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.url" href="#docusign_esign.models.event_notification.EventNotification.url">url</a></code></li>
+<li><code><a title="docusign_esign.models.event_notification.EventNotification.use_soap_interface" href="#docusign_esign.models.event_notification.EventNotification.use_soap_interface">use_soap_interface</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>
